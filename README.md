@@ -99,9 +99,9 @@ and all available themes and all other custom modules.
 This section documents installation instructions for this module.
 
 1. Make a database backup
-2. Download the [latest release](https://github.com/hartenthaler/hh_legal_notice/releases/latest)
-3. Unzip the package into your `webtrees/modules_v4` directory of your web server
-4. Rename the folder to `hh_legal_notice`
+2. Download the [latest release](https://github.com/hartenthaler/hh_legal_notice/releases/latest).
+3. Unzip the package into your `webtrees/modules_v4` directory of your web server.
+4. Rename the folder to `hh_legal_notice`.
 5. Login to **webtrees** as administrator, go to <span class="pointer">Control Panel/Modules/Website/Footers</span>, and find the module. It will be called "Legal Notice and Privacy Policy". Check if it has a tick for "Enabled".
 6. Click at the wrench symbol and add all desired information fields.
 7. Maybe you like to deactivate the module "contact information" (depending whether you have activated this in the "Legal Notice" module).
@@ -115,13 +115,13 @@ with the new ones from the latest release.
 
 ### Upgrading from the former hh_imprint module
 + Do NOT delete the module settings of the former `hh_imprint` module before the installation of `hh_legal_notice`.
++ Delete the folder `hh_imprint`in your `webtrees/modules_v4` directory.
 + Install the `hh_legal_notice` module like described in chapter [Installation](#installation).
-+ During the first boot within webtrees, `hh_legal_notice` will takeover the existing settings from `hh_imprint`.
++ Open the Control Panel of this footer module; `hh_legal_notice` will takeover the existing settings from `hh_imprint`. You should see a notice.
 + After `hh_legal_notice` has migrated the settings, `hh_imprint` can be removed and the related settings can be deleted (follow the message in the control panel after deletion of the module).
 
-
 <a name="contributing"></a>
-## Contributinging
+## Contributing
 
 If you'd like to contribute to this module, great! You can contribute by
 
