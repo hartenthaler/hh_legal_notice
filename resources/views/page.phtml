@@ -54,7 +54,7 @@ use Illuminate\Support\Collection;
  * @var array                       $trackingServices
  * @var array                       $thirdPartyServices
  * @var array                       $cookiesServices
- * // @var array                       $usercentricsLanguages
+ * // @var array                       $usercentricsLanguages       ???
  *
  * @var bool                        $https                  host URL starts with https
  * @var string                      $hostingDomain          domain name of host
@@ -62,6 +62,7 @@ use Illuminate\Support\Collection;
  * @var string                      $hostingCompanyName     name of hosting company
  * @var string                      $hostingCompanyUrl      URL of hosting company
  * @var string                      $hostingPrivacyNotice   URL of privacy notice of hosting company
+ * @var bool                        $orderProcessing        option if Auftragsverarbeitung is used
  * @var string                      $hostingStartDate       date of first agreement Auftragsdatenverarbeitung with hosting company
  * @var string                      $hostingEndDate         date of last agreement Auftragsdatenverarbeitung with hosting company
  */
@@ -450,36 +451,39 @@ use Illuminate\Support\Collection;
         wie verwendeter Browser, Betriebssystem, Verweisseite, IP-Adresse, Uhrzeit des Zugriffs usw.
         Diese Daten können ohne Hinzuziehung weiterer Datenquellen keinen bestimmten Personen zugeordnet werden und
         <?php if ($singular) : ?>
-            ich werte diese Daten auch nicht weiter aus, solange keine rechtswidrige Nutzung dieser Webseiten vorliegt.
+            ich werte diese Daten auch nicht weiter aus,
         <?php else : ?>
-            wir werten diese Daten auch nicht weiter aus, solange keine rechtswidrige Nutzung dieser Webseiten vorliegt.
+            wir werten diese Daten auch nicht weiter aus,
         <?php endif ?>
+        solange keine rechtswidrige Nutzung dieser Webseiten vorliegt.
     </p>
 
-    <h5>Auftragsdatenverarbeitung</h5>
+    <?php if ($orderProcessing) : ?>
+        <h5>Auftragsverarbeitung</h5>
 
-    <p>Mit dem Hosting-Anbieter wurde eine Vereinbarung über die Auftragsdatenverarbeitung geschlossen.
-        <?php if ($hostingStartDate !== '' || $hostingEndDate !== '') : ?>
-            Dies erfolgte
-            <?php if ($hostingStartDate !== '') : ?>
-                erstmalig am <?= e($hostingStartDate) ?>
-                <?php if ($hostingEndDate !== '') : ?>
-                    und
+        <p>Mit dem Hosting-Anbieter wurde eine Vereinbarung über die Auftragsverarbeitung geschlossen.
+            <?php if ($hostingStartDate !== '' || $hostingEndDate !== '') : ?>
+                Dies erfolgte
+                <?php if ($hostingStartDate !== '') : ?>
+                    erstmalig am <?= e($hostingStartDate) ?>
+                    <?php if ($hostingEndDate !== '') : ?>
+                        und
+                    <?php endif ?>
                 <?php endif ?>
+                <?php if ($hostingEndDate !== '') : ?>
+                    letztmalig am <?= e($hostingEndDate) ?>
+                <?php endif ?>.
             <?php endif ?>
-            <?php if ($hostingEndDate !== '') : ?>
-                letztmalig am <?= e($hostingEndDate) ?>
-            <?php endif ?>.
-        <?php endif ?>
-        Hierbei handelt es sich um eine datenschutzrechtlich vorgeschriebenen Vereinbarung, die gewährleistet,
-        <?php if ($singular) : ?>
-            dass der Hosting-Anbieter die personenbezogenen Daten dieser Website nur nach meinen Weisungen und
-            unter Einhaltung der DSGVO verarbeitet.
-        <?php else : ?>
-            dass der Hosting-Anbieter die personenbezogenen Daten dieser Website nur nach unseren Weisungen und
-            unter Einhaltung der DSGVO verarbeitet.
-        <?php endif ?>
-    </p>
+            Hierbei handelt es sich um eine nach Artikel 28 DSGVO datenschutzrechtlich vorgeschriebenen Vereinbarung,
+            die gewährleistet, dass der Hosting-Anbieter die personenbezogenen Daten dieser Website
+            <?php if ($singular) : ?>
+                 nur nach meinen Weisungen
+            <?php else : ?>
+                nur nach unseren Weisungen
+            <?php endif ?>
+            und unter Einhaltung der DSGVO verarbeitet.
+        </p>
+    <?php endif ?>
 
     <h4>Protokoll der Anwendung</h4>
 
@@ -498,20 +502,20 @@ use Illuminate\Support\Collection;
     </p>
 
     <p>
-        Sie haben nach Maßgabe des Art. 17 DSGVO das Recht zu verlangen,
+        Sie haben nach Maßgabe des Artikel 17 DSGVO das Recht zu verlangen,
         dass betreffende Daten unverzüglich gelöscht werden,
-        bzw. alternativ nach Maßgabe des Art. 18 DSGVO eine Einschränkung der Verarbeitung der Daten zu verlangen.
+        bzw. alternativ nach Maßgabe des Artikel 18 DSGVO eine Einschränkung der Verarbeitung der Daten zu verlangen.
     </p>
 
     <p>
-        Sie haben ferner gem. Art. 77 DSGVO das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen.
+        Sie haben ferner gem. Artikel 77 DSGVO das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen.
     </p>
 
     <h4>DSGVO im Zusammenhang mit Online-Genealogien</h4>
 
     <p>
         Ich bin ein ausgesprochener Befürworter des Datenschutzes und möchte betonen,
-        dass ich selbstverständlich bemüht bin, diese Verordnung einzuhalten.
+        dass ich selbstverständlich bemüht bin, die DSGVO einzuhalten.
         Aber eine in allen Fällen eindeutig rechtskonforme Umsetzung
         ist auf dem Gebiet der Online-Genealogie vermutlich gar nicht möglich.
         Zu viele Fragen sind strittig, die juristischen Spielraum offen lassen.

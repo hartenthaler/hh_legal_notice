@@ -34,7 +34,7 @@ use Psr\Http\Message\ServerRequestInterface;
 /**
  * class ContactsList
  *
- * support methods for module hh_imprint
+ * support methods for module hh_legal_notice
  *
  * generate lists of additional contacts to be displayed in the footer "Legal Notice" page
  *      - list of contact persons for a tree (genealogical and technical)

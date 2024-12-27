@@ -36,27 +36,39 @@
  */
 
 /*
- * tbd for next release 2.1.15.4
+ * tbd for next release 2.2.1.0
  * ==============================================================
- * Modul in "hh_legal_notice" umbenennen; dazu Repository auf GitHub umbenennen
+ * falls alle Optionen leer: Optionen aus hh_imprint einlesen und Merker setzen
+ * alles neu übersetzen
+ *
+ * tbd for next release 2.2.1.1
+ * ==============================================================
  * alle offenen issues aus GitHub
+ * zwei Zwecke definieren: (1) private Forschung zu eigenen Ahnen/Familie (2) OFB zu Ort oder Thema
+ * bei "Persönliche Daten zu Ahnen" und "Abgestufte Zugangsrechte": unterschiedliche Formulierung in Abhängigkeit von (1) und (2)
+ * bei Hinweis auf Auskunftsrecht auch Hinweis auf Schiedsstellen mit Link wie bei der CompGen-Datenschutzerklärung
+ *    "Eine Liste der Aufsichtsbehörden mit Anschrift finden Sie unter: https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html."
+ * Auftragsverarbeitung agreement first/last date/time in zwei Elemente zerlegen (Datum dd.mm.yyyy und Zeit hh:mm) und validieren
+ * Nutzeraccount: wird Module oAuth2 verwendet? Darauf hinweisen: wo liegen die Nutzeraccountdaten?
  * "kein tree" Fehler:
  *    Funktion useSingularStyle
  *    Vorbelegung der verantwortlichen Person aus den Angaben für den ersten Website-Administrator (Vor-, Nachname, E-Mail)
  * Zeilenabstände in page.phtml und settings.phtml über CSS statt Leerzeilen realisieren
- * Auftragsdatenverarbeitung agreement first/last date/time in zwei Elemente zerlegen (Datum dd.mm.yyyy und Zeit hh:mm)
  * cookie Warnung einbauen, testen und dokumentieren (falls keine externe Cookie-Managementanwendung verwendet wird)
  * READme: Referenzen aus dieser Datei (ganz oben) prüfen und dann übernehmen; ggf. ergänzen um wichtige Artikel
  * Dokumentation in Deutsch im GenWiki für webtrees-Handbuch überarbeiten und dann README anpassen (Rückportierung)
+ * neuer Abschnitt: Vereinbarung zu digitalem Nachlass liegt vor
+ * neuer Abschnitt: Weitergabe der genealogischen Daten (an GEDBAS, MyHeritage, Ancestry, ...)
+ * Angaben wie viele Nutzer welcher Kategorien
+ * Angabe wie viele Stammbäume in welcher Größe (sichtbar/unsichtbar für Gäste)
+ * Angaben wie die aktuellen webtrees-Einstellungen zum Datenschutz sind
  *
  * tbd later on
  * ==============================================================
+ * neue Art der Versionsverwaltung ohne Datei latest-version.txt
  * alle restlichen Konstanten aus diesem Modul als Option in das Verwaltungsmenü in den zugehörigen Abschnitt verschieben
  * Verwaltungsmenü: hierarchische Gestaltung des Menüs für die Datenschutzerklärung (settings)
- * alle Texte aus dem alten Modul "Datenschutzerklärung" überarbeiten
- *      entsprechend der handschriftlichen Korrekturen
- *      entsprechend der vorhandenen Vorlagen
- *      in englischer Sprache als übersetzbare Textelemente
+ * alle Texte zur "Datenschutzerklärung" in die englische Sprache übersetzen
  * Validierung
  *      "copyright start year" auf "4 digits" und Wert "1970..aktuelles Jahr"
  *      Base_URL
@@ -88,6 +100,7 @@ use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\UserService;
 use Fisharebest\Webtrees\Validator;
 use Fisharebest\Webtrees\View;
+use Illuminate\Database\Capsule\Manager as DB;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -106,13 +119,16 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      * list of const for module administration
      */
     public const CUSTOM_TITLE       = 'Legal Notice and Privacy Policy';
-    public const CUSTOM_MODULE      = 'hh_imprint';             // tbd change to "hh_legal_notice"
+    public const CUSTOM_MODULE      = 'hh_legal_notice';
     public const CUSTOM_AUTHOR      = 'Hermann Hartenthaler';
     public const GITHUB_USER        = 'hartenthaler';
     public const CUSTOM_WEBSITE     = 'https://github.com/' . self::GITHUB_USER . '/' . self::CUSTOM_MODULE . '/';
-    public const CUSTOM_VERSION     = '2.1.15.3';
+    public const CUSTOM_VERSION     = '2.2.1.0';
     public const CUSTOM_LAST        = 'https://raw.githubusercontent.com/' . self::GITHUB_USER . '/' .
                                             self::CUSTOM_MODULE . '/main/latest-version.txt';
+
+    // old module name
+    public const OLD_MODULE_NAME_FOR_PREFERENCES = 'hh_imprint';
 
     // tbd move the following 3 const to control panel where they can be changed by an administrator
 
@@ -255,6 +271,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     /**
      * generate list of preferences (control panel options)
+     * there are more options like order of chapters or options to show or not to show a chapter
      *
      * @return array<int,string>
      */
@@ -284,6 +301,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingCompanyName',
             'hostingCompanyUrl',
             'hostingPrivacyNotice',
+            'orderProcessing',
             'hostingStartDate',
             'hostingEndDate',
         ];
@@ -331,6 +349,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function checkOptions(ServerRequestInterface $request, array & $response): void
     {
+        // check if this module is called the first time; then transfer the preferences from the former module hh_imprint
+        $this->checkModuleVersionUpdate();
+
+        // modify some elements with default values if they are not set
         if (false && $response['responsibleFirst'] == '' && $response['responsibleSurname'] == '') {    // tbd Fehlermeldung: "tree" fehlt
             $contactsListObject = new ContactsList($this->userService, $request);
             // there is always at least one administrator; use this first one to initialize the responsible person
@@ -346,6 +368,85 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         if ($response['responsibleSex'] == '') {
             $response['responsibleSex'] = 'U';
         }
+    }
+
+    /**
+     * Check if module is started the first time and then start update activities
+     *
+     * @return void
+     */
+    public function checkModuleVersionUpdate(): void
+    {
+        // if started for the very first time, try to migrate preferences of former module
+        if ($this->getPreference('versionImprintLegalNotice', '') === '') {
+            $this->migratePreferencesFromFormerModule();
+            $this->setPreference('versionImprintLegalNotice', self::CUSTOM_VERSION);
+        }
+    }
+
+    /**
+     * Migration from former module hh_imprint to current module hh_legal_notice
+     * Transfer the user preferences for all settings if the new module is called the first time
+     *
+     * @return void
+     */
+    public function migratePreferencesFromFormerModule(): void {
+
+        $updated_settings = false;
+
+        // set new values for preferences based on old values
+        $preferences = $this->listOfPreferences();
+        foreach($preferences as $preference) {
+            $setting_value = $this->getPreferenceForModule(self::OLD_MODULE_NAME_FOR_PREFERENCES, $preference, '');
+
+            if ($setting_value !== '') {
+                $this->setPreference($preference, $setting_value);
+                $updated_settings = true;
+            }
+        }
+
+        // set new value for order of chapters based on old values
+        $setting_value = $this->getPreferenceForModule(self::OLD_MODULE_NAME_FOR_PREFERENCES, 'order', '');
+        if ($setting_value !== '') {
+            $this->setPreference('order', $setting_value);
+            $updated_settings = true;
+        }
+
+        $chapterKeys = LegalNoticeSupport::listChapterKeys();
+        foreach ($chapterKeys as $chapterKey) {
+            $this->setPreference('status-' . $chapterKey, '0');
+            $setting_value = $this->getPreferenceForModule(self::OLD_MODULE_NAME_FOR_PREFERENCES, 'status-' . $chapterKey, '');
+            if ($setting_value !== '') {
+                $this->setPreference('status-' . $chapterKey, $setting_value);
+                $updated_settings = true;
+            }
+        }
+
+        // inform user
+        if ($updated_settings) {
+            //Show flash message for update of preferences
+            $message = I18N::translate('The preferences for the custom module "%s" were imported from the earlier custom module "%s".',
+                                    $this->title(), self::OLD_MODULE_NAME_FOR_PREFERENCES);
+            FlashMessages::addMessage($message, 'success');
+        }
+    }
+
+    /**
+     * Get a module setting for a module. Return a default if the setting is not set.
+     *
+     * @param string $module_name (without '_' at the beginning and end of the name)
+     * @param string $setting_name name of setting
+     * @param string $default default value
+     *
+     * @return string
+     */
+    final public function getPreferenceForModule(string $module_name, string $setting_name, string $default = ''): string
+    {
+        //Code from: webtrees AbstractModule->getPreference
+        return DB::table('module_setting')
+            ->where('module_name', '=', '_' . $module_name . '_')
+            ->where('setting_name', '=', $setting_name)
+            ->value('setting_value') ?? $default;
     }
 
     /**
@@ -499,8 +600,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'countAdministrators'       => count($contactsAdministrators),
             'contactsAdministrators'    => $contactsAdministrators,
             'chapters'                  => $this->getChapters($request),
-            'showDataProtection'        => $this->isChapterEnabled('DataProtection', $request),                                            // tbd
-            'showLegalRegulations'      => $this->isChapterEnabled('LegalRegulations', $request),                                          // tbd
+            'showDataProtection'        => $this->isChapterEnabled('DataProtection', $request),         // tbd
+            'showLegalRegulations'      => $this->isChapterEnabled('LegalRegulations', $request),       // tbd
             'singular'                  => $this->useSingularStyle($request),
             'analytics'                 => $this->analyticsModules($tree, $user),
             'trackingServices'          => self::TRACKING_SERVICES,
@@ -513,6 +614,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingCompanyName'        => $this->hostingCompanyName(),
             'hostingCompanyUrl'         => $this->hostingCompanyUrl(),
             'hostingPrivacyNotice'      => $this->hostingPrivacyNotice(),
+            'orderProcessing'           => $this->isOrderProcessingUsed(),
             'hostingStartDate'          => $this->hostingStartDate(),
             'hostingEndDate'            => $this->hostingEndDate(),
         ]);
@@ -811,6 +913,16 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function hostingPrivacyNotice(): string
     {
         return $this->getPreference('hostingPrivacyNotice', '');
+    }
+
+    /**
+     * is a Order Processing (Auftragsverarbeitung) agreement used?
+     *
+     * @return bool
+     */
+    private function isOrderProcessingUsed(): bool
+    {
+        return ($this->getPreference('orderProcessing') !== '0');
     }
 
     /**

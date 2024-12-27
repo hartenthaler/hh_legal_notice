@@ -40,7 +40,7 @@ use function md5;
 /**
  * class LegalNoticeSupport
  *
- * static support methods for legal notice module
+ * static support methods for module hh_legal_notice
  */
 class LegalNoticeSupport
 {
@@ -219,7 +219,7 @@ class LegalNoticeSupport
     }
 
     /**
-     * list of parts of extended family
+     * list of chapter keys
      *
      * @return array<int,string>
      */
