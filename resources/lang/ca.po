@@ -1,184 +1,123 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: Legal Notice for webtrees 2\n"
+"POT-Creation-Date: 2024-12-28 01:21+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: Legal Notice for webtrees 2\n"
-"Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: LegalNoticeFooterModule.php\n"
+"X-Poedit-SearchPath-1: src\n"
+"X-Poedit-SearchPathExcluded-0: .git\n"
 
-#: LegalNoticeFooterModule.php:473 resources/views/settings.phtml:101
+#: LegalNoticeFooterModule.php:183
+msgid "Legal notice as a footer element for this site."
+msgstr "Avís legal com a element de peu de pàgina d'aquest lloc."
+
+#: LegalNoticeFooterModule.php:428
+#, php-format
+msgid ""
+"The preferences for the custom module \"%s\" were imported from the earlier "
+"custom module \"%s\"."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:462
+#, php-format
+msgid "The preferences for the module “%s” have been updated."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:520 LegalNoticeFooterModule.php:573
+msgid "Legal Notice"
+msgstr "Avís Legal"
+
+#: LegalNoticeFooterModule.php:522
+msgid "and Privacy Policy"
+msgstr "i Política de privacitat"
+
+#: LegalNoticeFooterModule.php:539
+msgid "This website uses cookies."
+msgstr "Aquest lloc web utilitza cookies."
+
+#: LegalNoticeFooterModule.php:574 resources/views/settings.phtml:102
 msgid "Responsible person"
 msgstr "Persona responsable"
 
-#: resources/views/settings.phtml:106
-msgid "First name(s)"
-msgstr "Nom(s)"
-
-#: resources/views/settings.phtml:115
-msgid "Surname(s)"
-msgstr "Cognom(s)"
-
-#: resources/views/settings.phtml:131
-msgid "male"
-msgstr "Masculí"
-
-#: resources/views/settings.phtml:132
-msgid "female"
-msgstr "Femení"
-
-#: resources/views/settings.phtml:245
-msgid "Registration data"
-msgstr "Dades registrals"
-
-#: resources/views/settings.phtml:199
-msgid "Communication data"
-msgstr "Dades de comunicació"
-
-#: resources/views/settings.phtml:183
-msgid "Street name and house number"
-msgstr "Nom del carrer i número de casa"
-
-#: resources/views/settings.phtml:124
-msgid "Sex"
-msgstr "Sexe"
-
-#: resources/views/settings.phtml:220
-msgid "eMail address"
-msgstr "Adreça de correu electrònic"
-
-#: LegalNoticeFooterModule.php:487
-msgid "eMail"
-msgstr "Correu electrònic"
-
-#: LegalNoticeFooterModule.php:474
+#: LegalNoticeFooterModule.php:575
 msgid "This website is operated by:"
 msgstr "Aquest lloc web està operat per:"
 
-#: LegalNoticeFooterModule.php:697
-msgid "Dear Mr. %s"
-msgstr "Benvolgut Sr. %s"
-
-#: LegalNoticeFooterModule.php:700
-msgid "Dear Mrs. %s"
-msgstr "Benvolguda senyora %s"
-
-#: LegalNoticeFooterModule.php:703
-msgid "Dear %s"
-msgstr "Benvolguts %s"
-
-#: LegalNoticeFooterModule.php:483
-msgid "Phone"
-msgstr "Telèfon"
-
-#: LegalNoticeFooterModule.php:485
-msgid "Fax"
-msgstr "Fax"
-
-#: resources/views/settings.phtml:101 resources/views/settings.phtml:170
-msgid "mandatory"
-msgstr "obligatori"
-
-#: resources/views/settings.phtml:157
-msgid "Club or Organization"
-msgstr "Club o Organització"
-
-#: resources/views/settings.phtml:61 resources/views/settings.phtml:157
-#: resources/views/settings.phtml:175 resources/views/settings.phtml:199
-#: resources/views/settings.phtml:245 resources/views/settings.phtml:305
-msgid "optional"
-msgstr "opcional"
-
-#: resources/views/settings.phtml:162
-msgid "Name of club or organization"
-msgstr "Nom del club o d l'organització"
-
-#: resources/views/settings.phtml:170
-msgid "Address data"
-msgstr "Dades de l'adreça"
-
-#: resources/views/settings.phtml:191
-msgid "City including zip code"
-msgstr "Ciutat, inclòs el codi postal"
-
-#: resources/views/settings.phtml:258
-msgid "Registration number"
-msgstr "Número de registre"
-
-#: LegalNoticeFooterModule.php:479
+#: LegalNoticeFooterModule.php:580
 msgid "Represented by:"
 msgstr "Representat per:"
 
-#: LegalNoticeFooterModule.php:492
+#: LegalNoticeFooterModule.php:584
+msgid "Phone"
+msgstr "Telèfon"
+
+#: LegalNoticeFooterModule.php:586
+msgid "Fax"
+msgstr "Fax"
+
+#: LegalNoticeFooterModule.php:588
+msgid "eMail"
+msgstr "Correu electrònic"
+
+#: LegalNoticeFooterModule.php:593
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Contacte addicional"
 msgstr[1] "Contactes addicionals"
 
-#: LegalNoticeFooterModule.php:496
+#: LegalNoticeFooterModule.php:597
 msgid "Website administrator"
 msgid_plural "Website administrators"
 msgstr[0] "Administrador de la pàgina web"
 msgstr[1] "Administradors de la pàgina web"
 
-#: LegalNoticeFooterModule.php:497
-msgid "The webtrees administrator is responsible to manage users and to set the preferences for this website."
-msgid_plural "The webtrees administrators are responsible to manage users and to set the preferences for this website."
-msgstr[0] "L'administrador de webtrees és el responsable de gestionar els usuaris i d'establir les preferències d'aquest lloc web."
-msgstr[1] "Els administradors de webtrees són els responsables de gestionar els usuaris i d'establir les preferències d'aquest lloc web."
+#: LegalNoticeFooterModule.php:598
+msgid ""
+"The webtrees administrator is responsible to manage users and to set the "
+"preferences for this website."
+msgid_plural ""
+"The webtrees administrators are responsible to manage users and to set the "
+"preferences for this website."
+msgstr[0] ""
+"L'administrador de webtrees és el responsable de gestionar els usuaris i "
+"d'establir les preferències d'aquest lloc web."
+msgstr[1] ""
+"Els administradors de webtrees són els responsables de gestionar els usuaris "
+"i d'establir les preferències d'aquest lloc web."
 
-#: resources/views/settings.phtml:266
-msgid "Additional contacts to be shown"
-msgstr "Contactes addicionals que es mostraran"
+#: LegalNoticeFooterModule.php:630
+msgid "Legal Notice and Privacy Policy"
+msgstr "Avís Legal i Política de Privacitat"
 
-#: resources/views/settings.phtml:143
-msgid "Should a gravatar image be shown (see www.gravatar.com)?"
-msgstr "S'ha de mostrar una imatge gravada (vegeu www.gravatar.com)?"
-
-#: resources/views/settings.phtml:175
-msgid "Additional address line"
-msgstr "Línia d'adreça addicional"
-
-#: resources/views/settings.phtml:204
-msgid "Phone number (including country prefix, e.g. \"+49 30 123456\")"
-msgstr "Número de telèfon (inclòs el prefix del país, p. ex., \"+34 999123456\")"
-
-#: resources/views/settings.phtml:212
-msgid "Fax number (including country prefix, e.g. \"+49 30 654321\")"
-msgstr "Número de fax (inclòs el prefix del país, p. ex., \"+34 999123456\")"
-
-#: resources/views/settings.phtml:230
-msgid "Should a simple eMail link be used (if \"no\": subject and body of eMail are generated, too)?"
-msgstr "S'ha d'utilitzar un simple enllaç de correu electrònic (si \"no\": tema i cos del correu electrònic, també)?"
-
-#: resources/views/settings.phtml:250
-msgid "Label like \"VAT ID No.\" or other registration number label"
-msgstr "Etiqueta com ara \"NÚMERO D'IDENTIFICACIÓ FISCAL\" o una altra etiqueta de número de registre"
-
-#: resources/views/settings.phtml:273
-msgid "Should the tree contacts be shown (there are maybe genealogical and technical contacts defined)?"
-msgstr "S'han de mostrar els contactes de l'arbre (potser hi ha contactes genealògics i tècnics definits)?"
-
-#: resources/views/settings.phtml:290
-msgid "Should the administrators of this website be shown?"
-msgstr "S'han de mostrar els administradors d'aquest lloc web?"
-
-#: resources/views/settings.phtml:133
-msgid "other sex"
-msgstr "altres sexes"
-
-#: LegalNoticeFooterModule.php:167
-msgid "Legal notice as a footer element for this site."
-msgstr "Avís legal com a element de peu de pàgina d'aquest lloc."
-
-#: LegalNoticeFooterModule.php:438
-msgid "This website uses cookies."
-msgstr "Aquest lloc web utilitza cookies."
-
-#: LegalNoticeFooterModule.php:694
+#: LegalNoticeFooterModule.php:796
+#, php-format
 msgid "message via legal notice of site %s"
 msgstr "missatge a través de l'avís legal del lloc %s"
+
+#: LegalNoticeFooterModule.php:799
+#, php-format
+msgid "Dear Mr. %s"
+msgstr "Benvolgut Sr. %s"
+
+#: LegalNoticeFooterModule.php:802
+#, php-format
+msgid "Dear Mrs. %s"
+msgstr "Benvolguda senyora %s"
+
+#: LegalNoticeFooterModule.php:805
+#, php-format
+msgid "Dear %s"
+msgstr "Benvolguts %s"
 
 #: src/LegalNoticeSupport.php:149
 msgctxt "heading"
@@ -225,108 +164,6 @@ msgctxt "heading"
 msgid "Legal regulations"
 msgstr "Normes legals"
 
-#: src/LegalNoticeSupport.php:162
-msgctxt "heading"
-msgid "Duty to mitigate damages"
-msgstr "Deure de mitigar els danys"
-
-#: src/LegalNoticeSupport.php:163
-msgctxt "heading"
-msgid "Open-source and License"
-msgstr "Codi obert i llicència"
-
-#: resources/views/page.phtml:368
-msgid "This website uses third-party services to manage cookies."
-msgstr "Aquest lloc web utilitza serveis de tercers per gestionar les cookies."
-
-#: resources/views/page.phtml:378
-msgid "Tracking and analytics"
-msgstr "Seguiment i anàlisi"
-
-#: resources/views/page.phtml:382
-msgid "This website uses third-party services to learn about visitor behavior."
-msgstr "Aquest lloc web utilitza serveis de tercers per conèixer el comportament dels visitants."
-
-#: resources/views/page.phtml:403
-msgid "These services may use cookies or other tracking technology."
-msgstr "Aquests serveis poden utilitzar cookies o una altra tecnologia de seguiment."
-
-#: resources/views/page.phtml:407
-msgid "You can opt out of tracking by setting the “Do Not Track” header in your browser preferences."
-msgstr "Podeu desactivar el seguiment establint la capçalera \"No rastrejar\" a les preferències del navegador."
-
-#: resources/views/page.phtml:414
-msgid "Third party services"
-msgstr "Serveis de tercers"
-
-#: resources/views/page.phtml:418
-msgid "This website uses additional third-party services."
-msgstr "Aquest lloc web utilitza serveis addicionals de tercers."
-
-#: resources/views/settings.phtml:305
-msgid "Hosting service"
-msgstr "Servei de hosting"
-
-#: resources/views/settings.phtml:318
-msgid "Name of hosting service company"
-msgstr "Nom de l'empresa de serveis d'allotjament"
-
-#: resources/views/settings.phtml:326
-msgid "Hosting service link (URL)"
-msgstr "Enllaç al servei d'allotjament (URL)"
-
-#: resources/views/settings.phtml:334
-msgid "Hosting service link to privacy notice (URL)"
-msgstr "Servei d'allotjament enllaç a avís de privacitat (URL)"
-
-#: resources/views/settings.phtml:363
-msgid "In which sequence should the main chapters be shown?"
-msgstr "En quina seqüència s'han de mostrar els capítols principals?"
-
-#: resources/views/settings.phtml:367
-msgid "Chapter"
-msgstr "Capítol"
-
-#: LegalNoticeFooterModule.php:528
-msgid "Legal Notice and Privacy Policy"
-msgstr "Avís Legal i Política de Privacitat"
-
-#: resources/views/settings.phtml:310
-msgid "Country of the webtrees server location (in English language, e.g. \"Germany\")"
-msgstr "País de la ubicació del servidor webtrees (en anglès, p. ex. \"Germany\")"
-
-#: resources/views/settings.phtml:342
-msgid "First date of Auftragsverarbeitung agreement"
-msgstr "Primera data de l'acord Processament de comandes"
-
-#: resources/views/settings.phtml:350
-msgid "Last date of Auftragsdatenverarbeitung agreement"
-msgstr "Última data de l'acord Processament de comandes"
-
-#: LegalNoticeFooterModule.php:419 LegalNoticeFooterModule.php:472
-msgid "Legal Notice"
-msgstr "Avís Legal"
-
-#: LegalNoticeFooterModule.php:421
-msgid "and Privacy Policy"
-msgstr "i Política de privacitat"
-
-#: resources/views/settings.phtml:61
-msgid "Copyright"
-msgstr "Drets d’autor"
-
-#: resources/views/settings.phtml:68
-msgid "Should a copyright notice be included in this page footer element?"
-msgstr "S'ha d'incloure un avís de drets d'autor en aquest element de peu de pàgina?"
-
-#: resources/views/settings.phtml:83
-msgid "Start year of copyright (e.g. \"2020\")"
-msgstr "Any d'inici dels drets d'autor (p. ex., \"2020\")"
-
-#: resources/views/settings.phtml:92
-msgid "Name of holder of copyright"
-msgstr "Nom del titular dels drets d'autor"
-
 #: src/LegalNoticeSupport.php:158
 msgctxt "heading"
 msgid "Liability for the content of these websites"
@@ -347,96 +184,649 @@ msgctxt "heading"
 msgid "Use of the address data in the Legal Notice"
 msgstr "Ús de les dades de l'adreça en l'Avís Legal"
 
+#: src/LegalNoticeSupport.php:162
+msgctxt "heading"
+msgid "Duty to mitigate damages"
+msgstr "Deure de mitigar els danys"
+
+#: src/LegalNoticeSupport.php:163
+msgctxt "heading"
+msgid "Open-source and License"
+msgstr "Codi obert i llicència"
+
 #: src/LegalNoticeSupport.php:164
 msgctxt "heading"
 msgid "Severability Clause"
 msgstr "Clàusula de divisibilitat"
 
 #: src/LegalNoticeSupport.php:192
-msgid "The contents of my pages were created with great care. However, I cannot guarantee that the content is correct, complete or up-to-date. I am responsible for my own content on these pages according to general laws; However, I am not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. An obligation to remove or block the use of information according to general laws remains unaffected. However, liability in this regard is only possible from the point in time at which knowledge of a specific infringement of the law is known. As soon as I become aware of any legal violations, I will remove this content immediately."
-msgstr "Els continguts de les meves pàgines van ser creats amb molta cura. No obstant això, no puc garantir que el contingut sigui correcte, complet o actualitzat. Sóc responsable del meu propi contingut en aquestes pàgines d'acord amb les lleis generals; No obstant això, no estic obligat a controlar la informació transmesa o emmagatzemada de tercers ni a investigar circumstàncies que indiquin activitat il·legal. L'obligació d'eliminar o bloquejar l'ús de la informació d'acord amb les lleis generals no es veu afectada. No obstant això, la responsabilitat en aquest sentit només és possible des del moment en què es coneix el coneixement d'una infracció específica de la llei. Tan aviat com tingui coneixement de qualsevol infracció legal, eliminaré aquest contingut immediatament."
+msgid ""
+"The contents of my pages were created with great care. However, I cannot "
+"guarantee that the content is correct, complete or up-to-date. I am "
+"responsible for my own content on these pages according to general laws; "
+"However, I am not obliged to monitor transmitted or stored third-party "
+"information or to investigate circumstances that indicate illegal activity. "
+"An obligation to remove or block the use of information according to general "
+"laws remains unaffected. However, liability in this regard is only possible "
+"from the point in time at which knowledge of a specific infringement of the "
+"law is known. As soon as I become aware of any legal violations, I will "
+"remove this content immediately."
+msgstr ""
+"Els continguts de les meves pàgines van ser creats amb molta cura. No "
+"obstant això, no puc garantir que el contingut sigui correcte, complet o "
+"actualitzat. Sóc responsable del meu propi contingut en aquestes pàgines "
+"d'acord amb les lleis generals; No obstant això, no estic obligat a "
+"controlar la informació transmesa o emmagatzemada de tercers ni a investigar "
+"circumstàncies que indiquin activitat il·legal. L'obligació d'eliminar o "
+"bloquejar l'ús de la informació d'acord amb les lleis generals no es veu "
+"afectada. No obstant això, la responsabilitat en aquest sentit només és "
+"possible des del moment en què es coneix el coneixement d'una infracció "
+"específica de la llei. Tan aviat com tingui coneixement de qualsevol "
+"infracció legal, eliminaré aquest contingut immediatament."
 
 #: src/LegalNoticeSupport.php:193
-msgid "If you, as a user of this site, are entitled to create content yourself or upload files, you are obliged to comply with all legal requirements and to protect personal data by using the mechanisms of webtrees. If in doubt, please feel free to contact me."
-msgstr "Si vostè, com a usuari d'aquest lloc, té dret a crear continguts vostè mateix o pujar arxius, està obligat a complir amb tots els requisits legals i a protegir les dades de caràcter personal mitjançant l'ús dels mecanismes de webtrees. En cas de dubte, no dubteu a posar-vos en contacte amb mi."
+msgid ""
+"If you, as a user of this site, are entitled to create content yourself or "
+"upload files, you are obliged to comply with all legal requirements and to "
+"protect personal data by using the mechanisms of webtrees. If in doubt, "
+"please feel free to contact me."
+msgstr ""
+"Si vostè, com a usuari d'aquest lloc, té dret a crear continguts vostè "
+"mateix o pujar arxius, està obligat a complir amb tots els requisits legals "
+"i a protegir les dades de caràcter personal mitjançant l'ús dels mecanismes "
+"de webtrees. En cas de dubte, no dubteu a posar-vos en contacte amb mi."
 
 #: src/LegalNoticeSupport.php:194
-msgid "The contents of our pages were created with great care. However, we cannot guarantee that the content is correct, complete or up-to-date. We are responsible for our own content on these pages according to general laws; however, we are not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. An obligation to remove or block the use of information according to general laws remains unaffected. However, liability in this regard is only possible from the point in time at which knowledge of a specific infringement of the law is known. As soon as we become aware of any legal violations, we will remove this content immediately."
-msgstr "Els continguts de les nostres pàgines van ser creats amb molta cura. No obstant això, no podem garantir que el contingut sigui correcte, complet o actualitzat. Som responsables del nostre propi contingut en aquestes pàgines d'acord amb les lleis generals; no obstant això, no estem obligats a controlar la informació de tercers transmesa o emmagatzemada ni a investigar circumstàncies que indiquin activitat il·legal. L'obligació d'eliminar o bloquejar l'ús de la informació d'acord amb les lleis generals no es veu afectada. No obstant això, la responsabilitat en aquest sentit només és possible des del moment en què es coneix el coneixement d'una infracció específica de la llei. Tan bon punt tinguem coneixement de qualsevol infracció legal, eliminarem aquest contingut immediatament."
+msgid ""
+"The contents of our pages were created with great care. However, we cannot "
+"guarantee that the content is correct, complete or up-to-date. We are "
+"responsible for our own content on these pages according to general laws; "
+"however, we are not obliged to monitor transmitted or stored third-party "
+"information or to investigate circumstances that indicate illegal activity. "
+"An obligation to remove or block the use of information according to general "
+"laws remains unaffected. However, liability in this regard is only possible "
+"from the point in time at which knowledge of a specific infringement of the "
+"law is known. As soon as we become aware of any legal violations, we will "
+"remove this content immediately."
+msgstr ""
+"Els continguts de les nostres pàgines van ser creats amb molta cura. No "
+"obstant això, no podem garantir que el contingut sigui correcte, complet o "
+"actualitzat. Som responsables del nostre propi contingut en aquestes pàgines "
+"d'acord amb les lleis generals; no obstant això, no estem obligats a "
+"controlar la informació de tercers transmesa o emmagatzemada ni a investigar "
+"circumstàncies que indiquin activitat il·legal. L'obligació d'eliminar o "
+"bloquejar l'ús de la informació d'acord amb les lleis generals no es veu "
+"afectada. No obstant això, la responsabilitat en aquest sentit només és "
+"possible des del moment en què es coneix el coneixement d'una infracció "
+"específica de la llei. Tan bon punt tinguem coneixement de qualsevol "
+"infracció legal, eliminarem aquest contingut immediatament."
 
 #: src/LegalNoticeSupport.php:195
-msgid "If you, as a user of this site, are entitled to create content yourself or upload files, you are obliged to comply with all legal requirements and to protect personal data by using the mechanisms of webtrees. If in doubt, please feel free to contact us."
-msgstr "Si vostè, com a usuari d'aquest lloc, té dret a crear continguts vostè mateix o pujar arxius, està obligat a complir amb tots els requisits legals i a protegir les dades de caràcter personal mitjançant l'ús dels mecanismes de webtrees. En cas de dubte, no dubteu a posar-vos en contacte amb nosaltres."
+msgid ""
+"If you, as a user of this site, are entitled to create content yourself or "
+"upload files, you are obliged to comply with all legal requirements and to "
+"protect personal data by using the mechanisms of webtrees. If in doubt, "
+"please feel free to contact us."
+msgstr ""
+"Si vostè, com a usuari d'aquest lloc, té dret a crear continguts vostè "
+"mateix o pujar arxius, està obligat a complir amb tots els requisits legals "
+"i a protegir les dades de caràcter personal mitjançant l'ús dels mecanismes "
+"de webtrees. En cas de dubte, no dubteu a posar-vos en contacte amb "
+"nosaltres."
 
 #: src/LegalNoticeSupport.php:196
-msgid "This web application contains links to external websites over which I have no control. Therefore I cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, a permanent control of the content of the linked pages is not reasonable without concrete evidence of an infringement. As soon as I become aware of legal violations, I will remove such links immediately."
-msgstr "Aquesta aplicació web conté enllaços a llocs web externs sobre els quals no tinc cap control. Per tant, no puc assumir cap responsabilitat per aquest contingut extern. El proveïdor o operador respectiu de les pàgines és sempre responsable del contingut de les pàgines enllaçades. Les pàgines enllaçades es van comprovar si hi havia possibles infraccions legals en el moment de l'enllaç. El contingut il·legal no era recognoscible en el moment de l'enllaç. No obstant això, un control permanent del contingut de les pàgines enllaçades no és raonable sense proves concretes d'una infracció. Tan aviat com tingui coneixement de violacions legals, eliminaré aquests enllaços immediatament."
+msgid ""
+"This web application contains links to external websites over which I have "
+"no control. Therefore I cannot assume any liability for this external "
+"content. The respective provider or operator of the pages is always "
+"responsible for the content of the linked pages. The linked pages were "
+"checked for possible legal violations at the time of linking. Illegal "
+"content was not recognizable at the time of linking. However, a permanent "
+"control of the content of the linked pages is not reasonable without "
+"concrete evidence of an infringement. As soon as I become aware of legal "
+"violations, I will remove such links immediately."
+msgstr ""
+"Aquesta aplicació web conté enllaços a llocs web externs sobre els quals no "
+"tinc cap control. Per tant, no puc assumir cap responsabilitat per aquest "
+"contingut extern. El proveïdor o operador respectiu de les pàgines és sempre "
+"responsable del contingut de les pàgines enllaçades. Les pàgines enllaçades "
+"es van comprovar si hi havia possibles infraccions legals en el moment de "
+"l'enllaç. El contingut il·legal no era recognoscible en el moment de "
+"l'enllaç. No obstant això, un control permanent del contingut de les pàgines "
+"enllaçades no és raonable sense proves concretes d'una infracció. Tan aviat "
+"com tingui coneixement de violacions legals, eliminaré aquests enllaços "
+"immediatament."
 
 #: src/LegalNoticeSupport.php:197
-msgid "This web application contains links to external websites over which we have no control. Therefore we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, a permanent control of the content of the linked pages is not reasonable without concrete evidence of an infringement. As soon as we become aware of legal violations, we will remove such links immediately."
-msgstr "Aquesta aplicació web conté enllaços a llocs web externs sobre els quals no tenim cap control. Per tant, no podem assumir cap responsabilitat per aquest contingut extern. El proveïdor o operador respectiu de les pàgines és sempre responsable del contingut de les pàgines enllaçades. Les pàgines enllaçades es van comprovar si hi havia possibles infraccions legals en el moment de l'enllaç. El contingut il·legal no era recognoscible en el moment de l'enllaç. No obstant això, un control permanent del contingut de les pàgines enllaçades no és raonable sense proves concretes d'una infracció. Tan aviat com tinguem coneixement d'infraccions legals, eliminarem aquests enllaços immediatament."
+msgid ""
+"This web application contains links to external websites over which we have "
+"no control. Therefore we cannot assume any liability for this external "
+"content. The respective provider or operator of the pages is always "
+"responsible for the content of the linked pages. The linked pages were "
+"checked for possible legal violations at the time of linking. Illegal "
+"content was not recognizable at the time of linking. However, a permanent "
+"control of the content of the linked pages is not reasonable without "
+"concrete evidence of an infringement. As soon as we become aware of legal "
+"violations, we will remove such links immediately."
+msgstr ""
+"Aquesta aplicació web conté enllaços a llocs web externs sobre els quals no "
+"tenim cap control. Per tant, no podem assumir cap responsabilitat per aquest "
+"contingut extern. El proveïdor o operador respectiu de les pàgines és sempre "
+"responsable del contingut de les pàgines enllaçades. Les pàgines enllaçades "
+"es van comprovar si hi havia possibles infraccions legals en el moment de "
+"l'enllaç. El contingut il·legal no era recognoscible en el moment de "
+"l'enllaç. No obstant això, un control permanent del contingut de les pàgines "
+"enllaçades no és raonable sense proves concretes d'una infracció. Tan aviat "
+"com tinguem coneixement d'infraccions legals, eliminarem aquests enllaços "
+"immediatament."
 
 #: src/LegalNoticeSupport.php:198
-msgid "I always endeavor to observe the copyrights of others or to use self-created and license-free works. Third-party contributions to this website are marked as such by naming a source if they cannot be used freely. Should you nevertheless become aware of a copyright infringement, please inform me accordingly. As soon as I become aware of legal violations, I will remove such content immediately."
-msgstr "Sempre m'esforço per observar els drets d'autor d'altres persones o per utilitzar obres creades per si mateixes i sense llicència. Les contribucions de tercers a aquest lloc web es marquen com a tals anomenant una font si no es poden utilitzar lliurement. Tanmateix, si teniu coneixement d'una infracció dels drets d'autor, informeu-me en conseqüència. Tan aviat com tingui coneixement de les infraccions legals, eliminaré aquest contingut immediatament."
+msgid ""
+"I always endeavor to observe the copyrights of others or to use self-created "
+"and license-free works. Third-party contributions to this website are marked "
+"as such by naming a source if they cannot be used freely. Should you "
+"nevertheless become aware of a copyright infringement, please inform me "
+"accordingly. As soon as I become aware of legal violations, I will remove "
+"such content immediately."
+msgstr ""
+"Sempre m'esforço per observar els drets d'autor d'altres persones o per "
+"utilitzar obres creades per si mateixes i sense llicència. Les contribucions "
+"de tercers a aquest lloc web es marquen com a tals anomenant una font si no "
+"es poden utilitzar lliurement. Tanmateix, si teniu coneixement d'una "
+"infracció dels drets d'autor, informeu-me en conseqüència. Tan aviat com "
+"tingui coneixement de les infraccions legals, eliminaré aquest contingut "
+"immediatament."
 
 #: src/LegalNoticeSupport.php:200
-msgid "The content and works created by me and the registered users on this website are subject to copyright. If you contribute content as a registered user of this website, you transfer all rights to it to me. The distribution and any kind of exploitation of the content of this website outside the limits of copyright require my written consent. Commercial use of the information provided here is generally prohibited."
-msgstr "El contingut i les obres creades per mi i els usuaris registrats en aquest lloc web estan subjectes a drets d'autor. Si aportes contingut com a usuari registrat d'aquest lloc web, em cedeixes tots els drets. La distribució i qualsevol tipus d'explotació del contingut d'aquest lloc web fora dels límits dels drets d'autor requereixen el meu consentiment per escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació aquí facilitada."
+msgid ""
+"The content and works created by me and the registered users on this website "
+"are subject to copyright. If you contribute content as a registered user of "
+"this website, you transfer all rights to it to me. The distribution and any "
+"kind of exploitation of the content of this website outside the limits of "
+"copyright require my written consent. Commercial use of the information "
+"provided here is generally prohibited."
+msgstr ""
+"El contingut i les obres creades per mi i els usuaris registrats en aquest "
+"lloc web estan subjectes a drets d'autor. Si aportes contingut com a usuari "
+"registrat d'aquest lloc web, em cedeixes tots els drets. La distribució i "
+"qualsevol tipus d'explotació del contingut d'aquest lloc web fora dels "
+"límits dels drets d'autor requereixen el meu consentiment per escrit. Amb "
+"caràcter general, queda prohibit l'ús comercial de la informació aquí "
+"facilitada."
 
 #: src/LegalNoticeSupport.php:202
-msgid "The content and works created by me and the registered users on this website are subject to copyright in %s. If you contribute content as a registered user of this website, you transfer all rights to it to me. The distribution and any kind of exploitation of the content of this website outside the limits of copyright require my written consent. Commercial use of the information provided here is generally prohibited."
-msgstr "El contingut i les obres creades per mi i els usuaris registrats en aquest lloc web estan subjectes a drets d'autor en %s. Si aportes contingut com a usuari registrat d'aquest lloc web, em cedeixes tots els drets. La distribució i qualsevol tipus d'explotació del contingut d'aquest lloc web fora dels límits dels drets d'autor requereixen el meu consentiment per escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació aquí facilitada."
+#, php-format
+msgid ""
+"The content and works created by me and the registered users on this website "
+"are subject to copyright in %s. If you contribute content as a registered "
+"user of this website, you transfer all rights to it to me. The distribution "
+"and any kind of exploitation of the content of this website outside the "
+"limits of copyright require my written consent. Commercial use of the "
+"information provided here is generally prohibited."
+msgstr ""
+"El contingut i les obres creades per mi i els usuaris registrats en aquest "
+"lloc web estan subjectes a drets d'autor en %s. Si aportes contingut com a "
+"usuari registrat d'aquest lloc web, em cedeixes tots els drets. La "
+"distribució i qualsevol tipus d'explotació del contingut d'aquest lloc web "
+"fora dels límits dels drets d'autor requereixen el meu consentiment per "
+"escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació "
+"aquí facilitada."
 
 #: src/LegalNoticeSupport.php:204
-msgid "Copying or downloading genealogical data for private use is permitted. Anyone who wants to use parts of our data in their own family trees is obliged to name %s as the source. In particular, the protected images may only be accessible there for family members. The information on living people must not be copied to other websites where the privacy of these people cannot be guaranteed. A lot of time and effort was put into the webtrees database. I don't want others to simply copy our work together. I expect you to follow these guidelines as well. This database remains my property and will not be sold, donated or rented in any way."
-msgstr "Es permet la còpia o descàrrega de dades genealògiques per a ús privat. Qualsevol persona que vulgui utilitzar parts de les nostres dades en els seus propis arbres genealògics està obligada a nomenar %s com a font. En particular, les imatges protegides només hi poden ser accessibles per als membres de la família. La informació sobre persones vives no s'ha de copiar a altres llocs web on no es pugui garantir la privacitat d'aquestes persones. Es va dedicar molt de temps i esforç a la base de dades webtrees. No vull que els altres simplement copiïn el nostre treball junts. Espero que també seguiu aquestes directrius. Aquesta base de dades segueix sent la meva propietat i no es vendrà, donarà ni llogarà de cap manera."
+#, php-format
+msgid ""
+"Copying or downloading genealogical data for private use is permitted. "
+"Anyone who wants to use parts of our data in their own family trees is "
+"obliged to name %s as the source. In particular, the protected images may "
+"only be accessible there for family members. The information on living "
+"people must not be copied to other websites where the privacy of these "
+"people cannot be guaranteed. A lot of time and effort was put into the "
+"webtrees database. I don't want others to simply copy our work together. I "
+"expect you to follow these guidelines as well. This database remains my "
+"property and will not be sold, donated or rented in any way."
+msgstr ""
+"Es permet la còpia o descàrrega de dades genealògiques per a ús privat. "
+"Qualsevol persona que vulgui utilitzar parts de les nostres dades en els "
+"seus propis arbres genealògics està obligada a nomenar %s com a font. En "
+"particular, les imatges protegides només hi poden ser accessibles per als "
+"membres de la família. La informació sobre persones vives no s'ha de copiar "
+"a altres llocs web on no es pugui garantir la privacitat d'aquestes "
+"persones. Es va dedicar molt de temps i esforç a la base de dades webtrees. "
+"No vull que els altres simplement copiïn el nostre treball junts. Espero que "
+"també seguiu aquestes directrius. Aquesta base de dades segueix sent la meva "
+"propietat i no es vendrà, donarà ni llogarà de cap manera."
 
 #: src/LegalNoticeSupport.php:205
-msgid "We always endeavor to observe the copyrights of others or to use self-created and license-free works. Third-party contributions to this website are marked as such by naming a source if they cannot be used freely. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become aware of legal violations, we will remove such content immediately."
-msgstr "Sempre ens esforcem per observar els drets d'autor d'altres persones o per utilitzar obres creades per si mateixes i lliures de llicències. Les contribucions de tercers a aquest lloc web es marquen com a tals anomenant una font si no es poden utilitzar lliurement. No obstant això, si teniu coneixement d'una infracció dels drets d'autor, informeu-nos-en conseqüència. Tan bon punt tinguem coneixement d'infraccions legals, suprimirem aquest contingut immediatament."
+msgid ""
+"We always endeavor to observe the copyrights of others or to use self-"
+"created and license-free works. Third-party contributions to this website "
+"are marked as such by naming a source if they cannot be used freely. Should "
+"you nevertheless become aware of a copyright infringement, please inform us "
+"accordingly. As soon as we become aware of legal violations, we will remove "
+"such content immediately."
+msgstr ""
+"Sempre ens esforcem per observar els drets d'autor d'altres persones o per "
+"utilitzar obres creades per si mateixes i lliures de llicències. Les "
+"contribucions de tercers a aquest lloc web es marquen com a tals anomenant "
+"una font si no es poden utilitzar lliurement. No obstant això, si teniu "
+"coneixement d'una infracció dels drets d'autor, informeu-nos-en "
+"conseqüència. Tan bon punt tinguem coneixement d'infraccions legals, "
+"suprimirem aquest contingut immediatament."
 
 #: src/LegalNoticeSupport.php:207
-msgid "The content and works created by us and by the registered users on this website are subject to copyright. If you contribute content as a registered user of this website, you transfer all rights to it to us. The distribution and any kind of exploitation of the content of this website outside the limits of copyright require our written consent. Commercial use of the information provided here is generally prohibited."
-msgstr "El contingut i les obres creades per nosaltres i pels usuaris registrats en aquest lloc web estan subjectes a drets d'autor. Si aportes contingut com a usuari registrat d'aquest lloc web, ens cedeixes tots els drets. La distribució i qualsevol tipus d'explotació del contingut d'aquest lloc web fora dels límits dels drets d'autor requereixen el nostre consentiment per escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació aquí facilitada."
+msgid ""
+"The content and works created by us and by the registered users on this "
+"website are subject to copyright. If you contribute content as a registered "
+"user of this website, you transfer all rights to it to us. The distribution "
+"and any kind of exploitation of the content of this website outside the "
+"limits of copyright require our written consent. Commercial use of the "
+"information provided here is generally prohibited."
+msgstr ""
+"El contingut i les obres creades per nosaltres i pels usuaris registrats en "
+"aquest lloc web estan subjectes a drets d'autor. Si aportes contingut com a "
+"usuari registrat d'aquest lloc web, ens cedeixes tots els drets. La "
+"distribució i qualsevol tipus d'explotació del contingut d'aquest lloc web "
+"fora dels límits dels drets d'autor requereixen el nostre consentiment per "
+"escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació "
+"aquí facilitada."
 
 #: src/LegalNoticeSupport.php:209
-msgid "The content and works created by us and by the registered users on this website are subject to copyright in %s. If you contribute content as a registered user of this website, you transfer all rights to it to us. The distribution and any kind of exploitation of the content of this website outside the limits of copyright require our written consent. Commercial use of the information provided here is generally prohibited."
-msgstr "Els continguts i les obres creats per nosaltres i pels usuaris registrats en aquest lloc web estan subjectes a drets d'autor en %s. Si aportes contingut com a usuari registrat d'aquest lloc web, ens cedeixes tots els drets. La distribució i qualsevol tipus d'explotació del contingut d'aquest lloc web fora dels límits dels drets d'autor requereixen el nostre consentiment per escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació aquí facilitada."
+#, php-format
+msgid ""
+"The content and works created by us and by the registered users on this "
+"website are subject to copyright in %s. If you contribute content as a "
+"registered user of this website, you transfer all rights to it to us. The "
+"distribution and any kind of exploitation of the content of this website "
+"outside the limits of copyright require our written consent. Commercial use "
+"of the information provided here is generally prohibited."
+msgstr ""
+"Els continguts i les obres creats per nosaltres i pels usuaris registrats en "
+"aquest lloc web estan subjectes a drets d'autor en %s. Si aportes contingut "
+"com a usuari registrat d'aquest lloc web, ens cedeixes tots els drets. La "
+"distribució i qualsevol tipus d'explotació del contingut d'aquest lloc web "
+"fora dels límits dels drets d'autor requereixen el nostre consentiment per "
+"escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació "
+"aquí facilitada."
 
 #: src/LegalNoticeSupport.php:211
-msgid "Copying or downloading genealogical data for private use is permitted. Anyone who wants to use parts of our data in their own family trees is obliged to name %s as the source. In particular, the protected images may only be accessible there for family members. The information on living people must not be copied to other websites where the privacy of these people cannot be guaranteed. A lot of time and effort was put into the webtrees database. We don't want others to simply copy our work together. We expect you to follow these guidelines as well. This database remains our property and will not be sold, donated or rented in any way."
-msgstr "Es permet la còpia o descàrrega de dades genealògiques per a ús privat. Qualsevol persona que vulgui utilitzar parts de les nostres dades en els seus propis arbres genealògics està obligada a nomenar %s com a font. En particular, les imatges protegides només hi poden ser accessibles per als membres de la família. La informació sobre persones vives no s'ha de copiar a altres llocs web on no es pugui garantir la privacitat d'aquestes persones. Es va dedicar molt de temps i esforç a la base de dades webtrees. No volem que els altres simplement copiïn el nostre treball junts. Esperem que també seguiu aquestes directrius. Aquesta base de dades segueix sent de la nostra propietat i no serà venuda, donada o llogada de cap manera."
+#, php-format
+msgid ""
+"Copying or downloading genealogical data for private use is permitted. "
+"Anyone who wants to use parts of our data in their own family trees is "
+"obliged to name %s as the source. In particular, the protected images may "
+"only be accessible there for family members. The information on living "
+"people must not be copied to other websites where the privacy of these "
+"people cannot be guaranteed. A lot of time and effort was put into the "
+"webtrees database. We don't want others to simply copy our work together. We "
+"expect you to follow these guidelines as well. This database remains our "
+"property and will not be sold, donated or rented in any way."
+msgstr ""
+"Es permet la còpia o descàrrega de dades genealògiques per a ús privat. "
+"Qualsevol persona que vulgui utilitzar parts de les nostres dades en els "
+"seus propis arbres genealògics està obligada a nomenar %s com a font. En "
+"particular, les imatges protegides només hi poden ser accessibles per als "
+"membres de la família. La informació sobre persones vives no s'ha de copiar "
+"a altres llocs web on no es pugui garantir la privacitat d'aquestes "
+"persones. Es va dedicar molt de temps i esforç a la base de dades webtrees. "
+"No volem que els altres simplement copiïn el nostre treball junts. Esperem "
+"que també seguiu aquestes directrius. Aquesta base de dades segueix sent de "
+"la nostra propietat i no serà venuda, donada o llogada de cap manera."
 
 #: src/LegalNoticeSupport.php:212
-msgid "The use of the contact data published by us as part of the imprint obligation by third parties for the purpose of sending unsolicited advertising and information material is hereby expressly prohibited. I expressly reserve the right to take legal action in the event of unsolicited advertising being sent, such as spam e-mails."
-msgstr "Queda expressament prohibit l'ús de les dades de contacte publicades per nosaltres com a part de l'obligació d'impressió per part de tercers amb la finalitat d'enviar material publicitari i informatiu no sol·licitat. Em reservo expressament el dret d'emprendre accions legals en cas d'enviament de publicitat no sol·licitada, com ara correus electrònics de correu brossa."
+msgid ""
+"The use of the contact data published by us as part of the imprint "
+"obligation by third parties for the purpose of sending unsolicited "
+"advertising and information material is hereby expressly prohibited. I "
+"expressly reserve the right to take legal action in the event of unsolicited "
+"advertising being sent, such as spam e-mails."
+msgstr ""
+"Queda expressament prohibit l'ús de les dades de contacte publicades per "
+"nosaltres com a part de l'obligació d'impressió per part de tercers amb la "
+"finalitat d'enviar material publicitari i informatiu no sol·licitat. Em "
+"reservo expressament el dret d'emprendre accions legals en cas d'enviament "
+"de publicitat no sol·licitada, com ara correus electrònics de correu brossa."
 
 #: src/LegalNoticeSupport.php:213
-msgid "The use of the contact data published by us as part of the imprint obligation by third parties for the purpose of sending unsolicited advertising and information material is hereby expressly prohibited. We expressly reserve the right to take legal action in the event of unsolicited advertising being sent, such as spam e-mails."
-msgstr "Queda expressament prohibit l'ús de les dades de contacte publicades per nosaltres com a part de l'obligació d'impressió per part de tercers amb la finalitat d'enviar material publicitari i informatiu no sol·licitat. Ens reservem expressament el dret d'emprendre accions legals en cas d'enviament de publicitat no sol·licitada, com ara correus electrònics de correu brossa."
+msgid ""
+"The use of the contact data published by us as part of the imprint "
+"obligation by third parties for the purpose of sending unsolicited "
+"advertising and information material is hereby expressly prohibited. We "
+"expressly reserve the right to take legal action in the event of unsolicited "
+"advertising being sent, such as spam e-mails."
+msgstr ""
+"Queda expressament prohibit l'ús de les dades de contacte publicades per "
+"nosaltres com a part de l'obligació d'impressió per part de tercers amb la "
+"finalitat d'enviar material publicitari i informatiu no sol·licitat. Ens "
+"reservem expressament el dret d'emprendre accions legals en cas d'enviament "
+"de publicitat no sol·licitada, com ara correus electrònics de correu brossa."
 
 #: src/LegalNoticeSupport.php:214
-msgid "Should you notice any irregularities on our website, please contact me beforehand to avoid unnecessary legal disputes and costs. I am sure that we will come to an amicable and informal solution. The cost note of a legal warning will therefore be rejected as unfounded in the sense of the obligation to mitigate the damage if I have not been contacted via my e-mail address beforehand and have been informed of this possible grievance."
-msgstr "Si observeu alguna irregularitat al nostre lloc web, poseu-vos en contacte amb mi prèviament per evitar disputes legals i costos innecessaris. Estic segur que arribarem a una solució amistosa i informal. Per tant, la nota de cost d'un avís legal serà rebutjada com a infundada en el sentit de l'obligació de mitigar el dany si no m'han contactat prèviament a través de la meva adreça de correu electrònic i he estat informat d'aquest possible greuge."
+msgid ""
+"Should you notice any irregularities on our website, please contact me "
+"beforehand to avoid unnecessary legal disputes and costs. I am sure that we "
+"will come to an amicable and informal solution. The cost note of a legal "
+"warning will therefore be rejected as unfounded in the sense of the "
+"obligation to mitigate the damage if I have not been contacted via my e-mail "
+"address beforehand and have been informed of this possible grievance."
+msgstr ""
+"Si observeu alguna irregularitat al nostre lloc web, poseu-vos en contacte "
+"amb mi prèviament per evitar disputes legals i costos innecessaris. Estic "
+"segur que arribarem a una solució amistosa i informal. Per tant, la nota de "
+"cost d'un avís legal serà rebutjada com a infundada en el sentit de "
+"l'obligació de mitigar el dany si no m'han contactat prèviament a través de "
+"la meva adreça de correu electrònic i he estat informat d'aquest possible "
+"greuge."
 
 #: src/LegalNoticeSupport.php:215
-msgid "Should you notice any irregularities on our website, we ask you to contact us beforehand to avoid unnecessary legal disputes and costs. We are sure that we will come to an amicable and informal solution. The cost note of a legal warning will therefore be rejected as unfounded in the sense of the obligation to mitigate the damage if we have not been contacted beforehand via one of our e-mail addresses and have been informed of this possible grievance."
-msgstr "Si observeu alguna irregularitat al nostre lloc web, us demanem que us poseu en contacte amb nosaltres prèviament per evitar disputes i costos legals innecessaris. Estem segurs que arribarem a una solució amistosa i informal. Per tant, la nota de cost d'un avís legal serà rebutjada com a infundada en el sentit de l'obligació de mitigar el dany si no ens han contactat prèviament a través d'una de les nostres adreces de correu electrònic i se'ns ha informat d'aquest possible greuge."
+msgid ""
+"Should you notice any irregularities on our website, we ask you to contact "
+"us beforehand to avoid unnecessary legal disputes and costs. We are sure "
+"that we will come to an amicable and informal solution. The cost note of a "
+"legal warning will therefore be rejected as unfounded in the sense of the "
+"obligation to mitigate the damage if we have not been contacted beforehand "
+"via one of our e-mail addresses and have been informed of this possible "
+"grievance."
+msgstr ""
+"Si observeu alguna irregularitat al nostre lloc web, us demanem que us poseu "
+"en contacte amb nosaltres prèviament per evitar disputes i costos legals "
+"innecessaris. Estem segurs que arribarem a una solució amistosa i informal. "
+"Per tant, la nota de cost d'un avís legal serà rebutjada com a infundada en "
+"el sentit de l'obligació de mitigar el dany si no ens han contactat "
+"prèviament a través d'una de les nostres adreces de correu electrònic i "
+"se'ns ha informat d'aquest possible greuge."
 
 #: src/LegalNoticeSupport.php:216
-msgid "This website uses the genealogy program webtrees - an open source software. The source code is publicly available on GitHub and can be changed by anyone. Usage is free. This program was developed by people from many countries and is provided under the terms of the GNU General Public License Version 3 or a later version. The developers and the entire webtrees community are volunteering their time and skills to the project. Apart from the few donations from users, the developers receive no compensation for the time they invest in the project. There are also no external sources of income to support the project."
-msgstr "Aquest lloc web utilitza el programa de genealogia webtrees - un programari de codi obert. El codi font està disponible públicament a GitHub i el pot canviar qualsevol persona. L'ús és gratuït. Aquest programa va ser desenvolupat per gent de molts països i es proporciona sota els termes de la Llicència Pública General de GNU versió 3 o una versió posterior. Els desenvolupadors i tota la comunitat de webtrees estan oferint el seu temps i habilitats al projecte. A part de les poques donacions dels usuaris, els desenvolupadors no reben cap compensació pel temps que inverteixen en el projecte. Tampoc hi ha fonts d'ingressos externes per donar suport al projecte."
+msgid ""
+"This website uses the genealogy program webtrees - an open source software. "
+"The source code is publicly available on GitHub and can be changed by "
+"anyone. Usage is free. This program was developed by people from many "
+"countries and is provided under the terms of the GNU General Public License "
+"Version 3 or a later version. The developers and the entire webtrees "
+"community are volunteering their time and skills to the project. Apart from "
+"the few donations from users, the developers receive no compensation for the "
+"time they invest in the project. There are also no external sources of "
+"income to support the project."
+msgstr ""
+"Aquest lloc web utilitza el programa de genealogia webtrees - un programari "
+"de codi obert. El codi font està disponible públicament a GitHub i el pot "
+"canviar qualsevol persona. L'ús és gratuït. Aquest programa va ser "
+"desenvolupat per gent de molts països i es proporciona sota els termes de la "
+"Llicència Pública General de GNU versió 3 o una versió posterior. Els "
+"desenvolupadors i tota la comunitat de webtrees estan oferint el seu temps i "
+"habilitats al projecte. A part de les poques donacions dels usuaris, els "
+"desenvolupadors no reben cap compensació pel temps que inverteixen en el "
+"projecte. Tampoc hi ha fonts d'ingressos externes per donar suport al "
+"projecte."
 
 #: src/LegalNoticeSupport.php:217
-msgid "If parts or individual formulations of this text do not, no longer or not completely correspond to the applicable legal situation, the remaining parts of the text remain unaffected in their content and validity."
-msgstr "Si les parts o formulacions individuals d'aquest text no es corresponen o no del tot amb la situació jurídica aplicable, la resta de parts del text queden sense veure's afectades pel seu contingut i validesa."
+msgid ""
+"If parts or individual formulations of this text do not, no longer or not "
+"completely correspond to the applicable legal situation, the remaining parts "
+"of the text remain unaffected in their content and validity."
+msgstr ""
+"Si les parts o formulacions individuals d'aquest text no es corresponen o no "
+"del tot amb la situació jurídica aplicable, la resta de parts del text "
+"queden sense veure's afectades pel seu contingut i validesa."
 
-#: resources/views/settings.phtml:412
-msgid "In which sequence should the sections of the chapter \"Legal Regulations\" be shown?"
-msgstr "En quina seqüència s'han de mostrar els apartats del capítol \"Normes jurídiques\"?"
+#: resources/views/footer.phtml:35
+msgid "close"
+msgstr ""
 
-#: resources/views/settings.phtml:416
+#: resources/views/page.phtml:369
+msgid "This website uses third-party services to manage cookies."
+msgstr "Aquest lloc web utilitza serveis de tercers per gestionar les cookies."
+
+#: resources/views/page.phtml:379
+msgid "Tracking and analytics"
+msgstr "Seguiment i anàlisi"
+
+#: resources/views/page.phtml:383
+msgid "This website uses third-party services to learn about visitor behavior."
+msgstr ""
+"Aquest lloc web utilitza serveis de tercers per conèixer el comportament "
+"dels visitants."
+
+#: resources/views/page.phtml:404
+msgid "These services may use cookies or other tracking technology."
+msgstr ""
+"Aquests serveis poden utilitzar cookies o una altra tecnologia de seguiment."
+
+#: resources/views/page.phtml:408
+msgid ""
+"You can opt out of tracking by setting the “Do Not Track” header in your "
+"browser preferences."
+msgstr ""
+"Podeu desactivar el seguiment establint la capçalera \"No rastrejar\" a les "
+"preferències del navegador."
+
+#: resources/views/page.phtml:415
+msgid "Third party services"
+msgstr "Serveis de tercers"
+
+#: resources/views/page.phtml:419
+msgid "This website uses additional third-party services."
+msgstr "Aquest lloc web utilitza serveis addicionals de tercers."
+
+#: resources/views/settings.phtml:51
+msgid "Control panel"
+msgstr ""
+
+#: resources/views/settings.phtml:62
+msgid "Copyright"
+msgstr "Drets d’autor"
+
+#: resources/views/settings.phtml:62 resources/views/settings.phtml:158
+#: resources/views/settings.phtml:176 resources/views/settings.phtml:200
+#: resources/views/settings.phtml:246 resources/views/settings.phtml:306
+msgid "optional"
+msgstr "opcional"
+
+#: resources/views/settings.phtml:69
+msgid "Should a copyright notice be included in this page footer element?"
+msgstr ""
+"S'ha d'incloure un avís de drets d'autor en aquest element de peu de pàgina?"
+
+#: resources/views/settings.phtml:75 resources/views/settings.phtml:150
+#: resources/views/settings.phtml:237 resources/views/settings.phtml:280
+#: resources/views/settings.phtml:297 resources/views/settings.phtml:350
+msgid "no"
+msgstr ""
+
+#: resources/views/settings.phtml:75 resources/views/settings.phtml:150
+#: resources/views/settings.phtml:237 resources/views/settings.phtml:280
+#: resources/views/settings.phtml:297 resources/views/settings.phtml:350
+msgid "yes"
+msgstr ""
+
+#: resources/views/settings.phtml:84
+msgid "Start year of copyright (e.g. \"2020\")"
+msgstr "Any d'inici dels drets d'autor (p. ex., \"2020\")"
+
+#: resources/views/settings.phtml:93
+msgid "Name of holder of copyright"
+msgstr "Nom del titular dels drets d'autor"
+
+#: resources/views/settings.phtml:102 resources/views/settings.phtml:171
+msgid "mandatory"
+msgstr "obligatori"
+
+#: resources/views/settings.phtml:107
+msgid "First name(s)"
+msgstr "Nom(s)"
+
+#: resources/views/settings.phtml:116
+msgid "Surname(s)"
+msgstr "Cognom(s)"
+
+#: resources/views/settings.phtml:125
+msgid "Sex"
+msgstr "Sexe"
+
+#: resources/views/settings.phtml:132
+msgid "male"
+msgstr "Masculí"
+
+#: resources/views/settings.phtml:133
+msgid "female"
+msgstr "Femení"
+
+#: resources/views/settings.phtml:134
+msgid "other sex"
+msgstr "altres sexes"
+
+#: resources/views/settings.phtml:144
+msgid "Should a gravatar image be shown (see www.gravatar.com)?"
+msgstr "S'ha de mostrar una imatge gravada (vegeu www.gravatar.com)?"
+
+#: resources/views/settings.phtml:158
+msgid "Club or Organization"
+msgstr "Club o Organització"
+
+#: resources/views/settings.phtml:163
+msgid "Name of club or organization"
+msgstr "Nom del club o d l'organització"
+
+#: resources/views/settings.phtml:171
+msgid "Address data"
+msgstr "Dades de l'adreça"
+
+#: resources/views/settings.phtml:176
+msgid "Additional address line"
+msgstr "Línia d'adreça addicional"
+
+#: resources/views/settings.phtml:184
+msgid "Street name and house number"
+msgstr "Nom del carrer i número de casa"
+
+#: resources/views/settings.phtml:192
+msgid "City including zip code"
+msgstr "Ciutat, inclòs el codi postal"
+
+#: resources/views/settings.phtml:200
+msgid "Communication data"
+msgstr "Dades de comunicació"
+
+#: resources/views/settings.phtml:205
+msgid "Phone number (including country prefix, e.g. \"+49 30 123456\")"
+msgstr ""
+"Número de telèfon (inclòs el prefix del país, p. ex., \"+34 999123456\")"
+
+#: resources/views/settings.phtml:213
+msgid "Fax number (including country prefix, e.g. \"+49 30 654321\")"
+msgstr "Número de fax (inclòs el prefix del país, p. ex., \"+34 999123456\")"
+
+#: resources/views/settings.phtml:221
+msgid "eMail address"
+msgstr "Adreça de correu electrònic"
+
+#: resources/views/settings.phtml:231
+msgid ""
+"Should a simple eMail link be used (if \"no\": subject and body of eMail are "
+"generated, too)?"
+msgstr ""
+"S'ha d'utilitzar un simple enllaç de correu electrònic (si \"no\": tema i "
+"cos del correu electrònic, també)?"
+
+#: resources/views/settings.phtml:246
+msgid "Registration data"
+msgstr "Dades registrals"
+
+#: resources/views/settings.phtml:251
+msgid "Label like \"VAT ID No.\" or other registration number label"
+msgstr ""
+"Etiqueta com ara \"NÚMERO D'IDENTIFICACIÓ FISCAL\" o una altra etiqueta de "
+"número de registre"
+
+#: resources/views/settings.phtml:259
+msgid "Registration number"
+msgstr "Número de registre"
+
+#: resources/views/settings.phtml:267
+msgid "Additional contacts to be shown"
+msgstr "Contactes addicionals que es mostraran"
+
+#: resources/views/settings.phtml:274
+msgid ""
+"Should the tree contacts be shown (there are maybe genealogical and "
+"technical contacts defined)?"
+msgstr ""
+"S'han de mostrar els contactes de l'arbre (potser hi ha contactes "
+"genealògics i tècnics definits)?"
+
+#: resources/views/settings.phtml:291
+msgid "Should the administrators of this website be shown?"
+msgstr "S'han de mostrar els administradors d'aquest lloc web?"
+
+#: resources/views/settings.phtml:306
+msgid "Hosting service"
+msgstr "Servei de hosting"
+
+#: resources/views/settings.phtml:311
+msgid ""
+"Country of the webtrees server location (in English language, e.g. "
+"\"Germany\")"
+msgstr ""
+"País de la ubicació del servidor webtrees (en anglès, p. ex. \"Germany\")"
+
+#: resources/views/settings.phtml:319
+msgid "Name of hosting service company"
+msgstr "Nom de l'empresa de serveis d'allotjament"
+
+#: resources/views/settings.phtml:327
+msgid "Hosting service link (URL)"
+msgstr "Enllaç al servei d'allotjament (URL)"
+
+#: resources/views/settings.phtml:335
+msgid "Hosting service link to privacy notice (URL)"
+msgstr "Servei d'allotjament enllaç a avís de privacitat (URL)"
+
+#: resources/views/settings.phtml:344
+msgid "Should a section about Order Processing agreement be shown?"
+msgstr ""
+
+#: resources/views/settings.phtml:357
+msgid "First date of Order Processing agreement"
+msgstr "Primera data de l'acord Processament de comandes"
+
+#: resources/views/settings.phtml:365
+msgid "Last date of Order Processing agreement"
+msgstr "Última data de l'acord Processament de comandes"
+
+#: resources/views/settings.phtml:378
+msgid "In which sequence should the main chapters be shown?"
+msgstr "En quina seqüència s'han de mostrar els capítols principals?"
+
+#: resources/views/settings.phtml:382
+msgid "Chapter"
+msgstr "Capítol"
+
+#: resources/views/settings.phtml:383 resources/views/settings.phtml:404
+#: resources/views/settings.phtml:432 resources/views/settings.phtml:453
+msgid "Enabled"
+msgstr ""
+
+#: resources/views/settings.phtml:384 resources/views/settings.phtml:410
+#: resources/views/settings.phtml:433 resources/views/settings.phtml:459
+msgid "Move up"
+msgstr ""
+
+#: resources/views/settings.phtml:385 resources/views/settings.phtml:415
+#: resources/views/settings.phtml:434 resources/views/settings.phtml:464
+msgid "Move down"
+msgstr ""
+
+#: resources/views/settings.phtml:427
+msgid ""
+"In which sequence should the sections of the chapter \"Legal Regulations\" "
+"be shown?"
+msgstr ""
+"En quina seqüència s'han de mostrar els apartats del capítol \"Normes "
+"jurídiques\"?"
+
+#: resources/views/settings.phtml:431
 msgid "Section"
 msgstr "Secció"
 
+#: resources/views/settings.phtml:478
+msgid "save"
+msgstr ""

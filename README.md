@@ -132,10 +132,7 @@ If you'd like to contribute to this module, great! You can contribute by
 <a name="translation"></a>
 ## Translation
 
-You can translate into a language you are fluent in by joining the
-[PO Editor project](https://poeditor.com/join/project/zscMiujN1m).
-
-But you can also use a local editor,
+You can use a local editor,
 like Poedit or Notepad++ to make the translations and send them back to me.
 You can do this via a pull request (if you know how) or by e-mail.
 
@@ -143,7 +140,12 @@ Discussion on translating can be done by creating an [issue](https://github.com/
 
 Updated translations will be included in the next release of this module.
 
-There are now, beside English, Dutch (by TheDutchJewel) and German, no other translations available.
+There are now, beside English the following languages available
+- Dutch (by TheDutchJewel)
+- Catalan (by Bernat Josep Banyuls i Sala)
+- German (by Hermann Hartenthaler)
+
+The [PO Editor project](https://poeditor.com/join/project/zscMiujN1m) is not supported any longer (costs too high).
 
 <a name="support"></a>
 ## Support
