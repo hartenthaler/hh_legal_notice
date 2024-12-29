@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "POT-Creation-Date: 2024-12-28 01:44+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -29,11 +29,13 @@ msgid ""
 "The preferences for the custom module \"%s\" were imported from the earlier "
 "custom module \"%s\"."
 msgstr ""
+"De voorkeuren voor de aangepaste module “%s” zijn geïmporteerd uit de "
+"eerdere aangepaste module “%s”."
 
 #: LegalNoticeFooterModule.php:462
 #, php-format
 msgid "The preferences for the module “%s” have been updated."
-msgstr ""
+msgstr "De voorkeuren voor de module “%s” zijn bijgewerkt."
 
 #: LegalNoticeFooterModule.php:520 LegalNoticeFooterModule.php:573
 msgid "Legal Notice"
@@ -571,7 +573,7 @@ msgstr ""
 
 #: resources/views/footer.phtml:35
 msgid "close"
-msgstr ""
+msgstr "sluiten"
 
 #: resources/views/page.phtml:369
 msgid "This website uses third-party services to manage cookies."
@@ -611,7 +613,7 @@ msgstr "Deze website maakt gebruik van aanvullende diensten van derden."
 
 #: resources/views/settings.phtml:51
 msgid "Control panel"
-msgstr ""
+msgstr "Controlepaneel"
 
 #: resources/views/settings.phtml:62
 msgid "Copyright"
@@ -632,13 +634,13 @@ msgstr ""
 #: resources/views/settings.phtml:237 resources/views/settings.phtml:280
 #: resources/views/settings.phtml:297 resources/views/settings.phtml:350
 msgid "no"
-msgstr ""
+msgstr "nee"
 
 #: resources/views/settings.phtml:75 resources/views/settings.phtml:150
 #: resources/views/settings.phtml:237 resources/views/settings.phtml:280
 #: resources/views/settings.phtml:297 resources/views/settings.phtml:350
 msgid "yes"
-msgstr ""
+msgstr "ja"
 
 #: resources/views/settings.phtml:84
 msgid "Start year of copyright (e.g. \"2020\")"
@@ -728,8 +730,8 @@ msgid ""
 "Should a simple eMail link be used (if \"no\": subject and body of eMail are "
 "generated, too)?"
 msgstr ""
-"Moet een eenvoudige e-maillink worden gebruikt (indien \"nee\": onderwerp en "
-"inhoud van het bericht worden ook gegenereerd)?"
+"Moet een eenvoudige e-maillink worden gebruikt? (indien \"nee\", dan worden "
+"onderwerp en inhoud van het bericht ook gegenereerd)"
 
 #: resources/views/settings.phtml:246
 msgid "Registration data"
@@ -752,8 +754,8 @@ msgid ""
 "Should the tree contacts be shown (there are maybe genealogical and "
 "technical contacts defined)?"
 msgstr ""
-"Moeten de stamboomcontactpersonen worden getoond (er zijn misschien "
-"genealogische en technische contactpersonen gedefinieerd)?"
+"Moeten de stamboomcontactpersonen worden getoond (omdat er misschien "
+"genealogische en technische contactpersonen zijn gedefinieerd)?"
 
 #: resources/views/settings.phtml:291
 msgid "Should the administrators of this website be shown?"
@@ -785,19 +787,15 @@ msgstr "Link naar privacyverklaring van hostingbedrijf (URL)"
 
 #: resources/views/settings.phtml:344
 msgid "Should a section about Order Processing agreement be shown?"
-msgstr ""
+msgstr "Moet er een sectie over de verwerkersovereenkomst worden weergegeven?"
 
 #: resources/views/settings.phtml:357
-#, fuzzy
-#| msgid "First date of Auftragsverarbeitung agreement"
 msgid "First date of Order Processing agreement"
-msgstr "Eerste datum van orderverwerkingsovereenkomst"
+msgstr "Eerste datum van verwerkersovereenkomst"
 
 #: resources/views/settings.phtml:365
-#, fuzzy
-#| msgid "Last date of Auftragsdatenverarbeitung agreement"
 msgid "Last date of Order Processing agreement"
-msgstr "Laatste datum van de opdracht tot gegevensverwerking"
+msgstr "Laatste datum van verwerkersovereenkomst"
 
 #: resources/views/settings.phtml:378
 msgid "In which sequence should the main chapters be shown?"
@@ -810,17 +808,17 @@ msgstr "Hoofdstuk"
 #: resources/views/settings.phtml:383 resources/views/settings.phtml:404
 #: resources/views/settings.phtml:432 resources/views/settings.phtml:453
 msgid "Enabled"
-msgstr ""
+msgstr "Ingeschakeld"
 
 #: resources/views/settings.phtml:384 resources/views/settings.phtml:410
 #: resources/views/settings.phtml:433 resources/views/settings.phtml:459
 msgid "Move up"
-msgstr ""
+msgstr "Omhoog"
 
 #: resources/views/settings.phtml:385 resources/views/settings.phtml:415
 #: resources/views/settings.phtml:434 resources/views/settings.phtml:464
 msgid "Move down"
-msgstr ""
+msgstr "Omlaag"
 
 #: resources/views/settings.phtml:427
 msgid ""
@@ -836,4 +834,4 @@ msgstr "Onderdeel"
 
 #: resources/views/settings.phtml:478
 msgid "save"
-msgstr ""
+msgstr "opslaan"
