@@ -787,16 +787,15 @@ msgstr "Link naar privacyverklaring van hostingbedrijf (URL)"
 
 #: resources/views/settings.phtml:344
 msgid "Should a section about Order Processing agreement be shown?"
-msgstr ""
-"Moet er een sectie over de orderverwerkingsovereenkomst worden weergegeven?"
+msgstr "Moet er een sectie over de verwerkersovereenkomst worden weergegeven?"
 
 #: resources/views/settings.phtml:357
 msgid "First date of Order Processing agreement"
-msgstr "Eerste datum van orderverwerkingsovereenkomst"
+msgstr "Eerste datum van verwerkersovereenkomst"
 
 #: resources/views/settings.phtml:365
 msgid "Last date of Order Processing agreement"
-msgstr "Laatste datum van de orderverwerkingsovereenkomst"
+msgstr "Laatste datum van verwerkersovereenkomst"
 
 #: resources/views/settings.phtml:378
 msgid "In which sequence should the main chapters be shown?"
