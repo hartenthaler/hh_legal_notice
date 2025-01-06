@@ -117,8 +117,9 @@ with the new ones from the latest release.
 + Do NOT delete the module settings of the former `hh_imprint` module before the installation of `hh_legal_notice`.
 + Delete the folder `hh_imprint`in your `webtrees/modules_v4` directory.
 + Install the `hh_legal_notice` module like described in chapter [Installation](#installation).
-+ Open the Control Panel of this footer module; `hh_legal_notice` will takeover the existing settings from `hh_imprint`. You should see a notice.
-+ After `hh_legal_notice` has migrated the settings, `hh_imprint` can be removed and the related settings can be deleted (follow the message in the control panel after deletion of the module).
++ Open the Control Panel of this footer module; `hh_legal_notice` will takeover the existing settings from `hh_imprint`.
++ You should see a notice. Click on "save". Now you should see all settings. Modify them and save them again.
++ After `hh_legal_notice` has migrated the settings, the old settings of `hh_imprint` can be removed (follow the message in the control panel after deletion of the module).
 
 <a name="contributing"></a>
 ## Contributing
