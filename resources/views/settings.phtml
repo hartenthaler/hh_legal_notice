@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
+use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
 /**
  * @var string                  $title                  title of this custom module
@@ -48,7 +49,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
 ?>
 
 <?= view('components/breadcrumbs', [
-        'links' => [route(ControlPanel::class) => I18N::translate('Control panel'), $title]]) ?>
+        'links' => [route(ControlPanel::class) => MoreI18N::xlate('Control panel'), $title]]) ?>
 
 <h1><?= e($title) ?></h1>
 <p><?= e($description) ?></p>
@@ -59,7 +60,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
         <input type="hidden" name="save" id="save" value="1">
 
         <p>&nbsp;</p>
-        <h4><?= I18N::translate('Copyright') . ' (' . I18N::translate('optional') . ')'  ?></h4>
+        <h4><?= MoreI18N::xlate('Copyright') . ' (' . MoreI18N::xlate('optional') . ')'  ?></h4>
 
         <div class="row">
             <!-- show copyright -->
@@ -72,7 +73,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
                         <?= view('components/radios-inline', [
                             'id' => 'showCopyRight',
                             'name' => 'showCopyRight',
-                            'options' => [I18N::translate('no'), I18N::translate('yes')],
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
                             'selected' => (int)$showCopyRight
                         ]) ?>
                     </div>
@@ -99,7 +100,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
         </div>
 
         <p>&nbsp;</p>
-        <h4><?= I18N::translate('Responsible person') . ' (' . I18N::translate('mandatory') . ')' ?></h4>
+        <h4><?= MoreI18N::xlate('Responsible person') . ' (' . MoreI18N::xlate('mandatory') . ')' ?></h4>
 
         <div class="row">
             <!-- first names of responsible person -->
@@ -122,15 +123,15 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
 
             <!-- sex of responsible person -->
             <label class="col-sm-3 col-form-label wt-page-options-label" for="responsibleSex">
-                <?= I18N::translate('Sex') ?>
+                <?= MoreI18N::xlate('Sex') ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
                 <?= view('components/radios-inline', [
                     'id' => 'responsibleSex',
                     'name' => 'responsibleSex',
                     'options' => [
-                        'M' => I18N::translate('male'),
-                        'F' => I18N::translate('female'),
+                        'M' => MoreI18N::xlate('male'),
+                        'F' => MoreI18N::xlate('female'),
                         'X' => I18N::translate('other sex'),
                     ],
                     'selected' => $responsibleSex,
@@ -147,7 +148,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
                         <?= view('components/radios-inline', [
                             'id' => 'showGravatar',
                             'name' => 'showGravatar',
-                            'options' => [I18N::translate('no'), I18N::translate('yes')],
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
                             'selected' => (int)$showGravatar
                         ]) ?>
                     </div>
@@ -155,7 +156,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
             </fieldset>
 
         <p>&nbsp;</p>
-        <h4><?= I18N::translate('Club or Organization') . ' (' . I18N::translate('optional') . ')' ?></h4>
+        <h4><?= I18N::translate('Club or Organization') . ' (' . MoreI18N::xlate('optional') . ')' ?></h4>
 
         <div class="row">
             <!-- name of organization -->
@@ -168,12 +169,12 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
         </div>
 
         <p>&nbsp;</p>
-        <h4><?= I18N::translate('Address data') . ' (' . I18N::translate('mandatory') . ')'  ?></h4>
+        <h4><?= I18N::translate('Address data') . ' (' . MoreI18N::xlate('mandatory') . ')'  ?></h4>
 
         <div class="row">
             <!-- additional address line -->
             <label class="col-sm-3 col-form-label wt-page-options-label" for="additionalAddress">
-                <?= I18N::translate('Additional address line') . ' (' . I18N::translate('optional') . ')' ?>
+                <?= I18N::translate('Additional address line') . ' (' . MoreI18N::xlate('optional') . ')' ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
                 <input class="form-control" id="additionalAddress" name="additionalAddress" type="text" value="<?= $additionalAddress ?>">
@@ -197,7 +198,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
         </div>
 
         <p>&nbsp;</p>
-        <h4><?= I18N::translate('Communication data') . ' (' . I18N::translate('optional') . ')'   ?></h4>
+        <h4><?= I18N::translate('Communication data') . ' (' . MoreI18N::xlate('optional') . ')'   ?></h4>
 
         <div class="row">
             <!-- phone number -->
@@ -234,7 +235,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
                         <?= view('components/radios-inline', [
                             'id' => 'simpleEmail',
                             'name' => 'simpleEmail',
-                            'options' => [I18N::translate('no'), I18N::translate('yes')],
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
                             'selected' => (int)$simpleEmail
                         ]) ?>
                     </div>
@@ -243,7 +244,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
         </div>
 
         <p>&nbsp;</p>
-        <h4><?= I18N::translate('Registration data') . ' (' . I18N::translate('optional') . ')'  ?></h4>
+        <h4><?= I18N::translate('Registration data') . ' (' . MoreI18N::xlate('optional') . ')'  ?></h4>
 
         <div class="row">
             <!-- label for VAT ID or other registration number -->
@@ -277,7 +278,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
                         <?= view('components/radios-inline', [
                             'id' => 'showTreeContacts',
                             'name' => 'showTreeContacts',
-                            'options' => [I18N::translate('no'), I18N::translate('yes')],
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
                             'selected' => (int)$showTreeContacts
                         ]) ?>
                     </div>
@@ -294,7 +295,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
                         <?= view('components/radios-inline', [
                             'id' => 'showAdministrators',
                             'name' => 'showAdministrators',
-                            'options' => [I18N::translate('no'), I18N::translate('yes')],
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
                             'selected' => (int)$showAdministrators
                         ]) ?>
                     </div>
@@ -303,7 +304,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
         </div>
 
         <p>&nbsp;</p>
-        <h4><?= I18N::translate('Hosting service') . ' (' . I18N::translate('optional') . ')'  ?></h4>
+        <h4><?= I18N::translate('Hosting service') . ' (' . MoreI18N::xlate('optional') . ')'  ?></h4>
 
         <div class="row">
             <!-- country of the webtrees server location -->
@@ -347,7 +348,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
                 <?= view('components/radios-inline', [
                     'id' => 'orderProcessing',
                     'name' => 'orderProcessing',
-                    'options' => [I18N::translate('no'), I18N::translate('yes')],
+                    'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
                     'selected' => (int)$orderProcessing
                 ]) ?>
             </div>
@@ -379,10 +380,10 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
         <table class="table table-bordered wt-table-menu">
             <thead>
                 <tr>
-                    <th><?= I18N::translate('Chapter') ?></th>
-                    <th class="text-center"><?= I18N::translate('Enabled') ?></th>
-                    <th class="text-center"><?= I18N::translate('Move up') ?></th>
-                    <th class="text-center"><?= I18N::translate('Move down') ?></th>
+                    <th><?= MoreI18N::xlate('Chapter') ?></th>
+                    <th class="text-center"><?= MoreI18N::xlate('Enabled') ?></th>
+                    <th class="text-center"><?= MoreI18N::xlate('Move up') ?></th>
+                    <th class="text-center"><?= MoreI18N::xlate('Move down') ?></th>
                 </tr>
             </thead>
 
@@ -401,18 +402,18 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
                                 <label class="d-block">
                                     <input type="checkbox" name="status-<?= $chapter->getKey() ?>" id="status-<?= $chapter->getKey() ?>" <?= ($chapter->getEnabled()) ? 'checked' : '' ?>>
                                     <span class="sr-only">
-                                        <?= I18N::translate('Enabled') ?>
+                                        <?= MoreI18N::xlate('Enabled') ?>
                                     </span>
                                 </label>
                             </td>
 
                             <td class="move up text-center">
-                                <a href="#" title="<?= I18N::translate('Move up') ?>">
+                                <a href="#" title="<?= MoreI18N::xlate('Move up') ?>">
                                     <?= view('icons/arrow-up') ?>
                                 </a>
                             </td>
                             <td class="move down text-center">
-                                <a href="#" title="<?= I18N::translate('Move down') ?>">
+                                <a href="#" title="<?= MoreI18N::xlate('Move down') ?>">
                                     <?= view('icons/arrow-down') ?>
                                 </a>
                             </td>
@@ -428,10 +429,10 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
         <table class="table table-bordered wt-table-menu">
             <thead>
             <tr>
-                <th><?= I18N::translate('Section') ?></th>
-                <th class="text-center"><?= I18N::translate('Enabled') ?></th>
-                <th class="text-center"><?= I18N::translate('Move up') ?></th>
-                <th class="text-center"><?= I18N::translate('Move down') ?></th>
+                <th><?= MoreI18N::xlate('Section') ?></th>
+                <th class="text-center"><?= MoreI18N::xlate('Enabled') ?></th>
+                <th class="text-center"><?= MoreI18N::xlate('Move up') ?></th>
+                <th class="text-center"><?= MoreI18N::xlate('Move down') ?></th>
             </tr>
             </thead>
 
@@ -450,18 +451,18 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
                             <label class="d-block">
                                 <input type="checkbox" name="status-<?= $chapter->getKey() ?>" id="status-<?= $chapter->getKey() ?>" <?= ($chapter->getEnabled()) ? 'checked' : '' ?>>
                                 <span class="sr-only">
-                                    <?= I18N::translate('Enabled') ?>
+                                    <?= MoreI18N::xlate('Enabled') ?>
                                 </span>
                             </label>
                         </td>
 
                         <td class="move up text-center">
-                            <a href="#" title="<?= I18N::translate('Move up') ?>">
+                            <a href="#" title="<?= MoreI18N::xlate('Move up') ?>">
                                 <?= view('icons/arrow-up') ?>
                             </a>
                         </td>
                         <td class="move down text-center">
-                            <a href="#" title="<?= I18N::translate('Move down') ?>">
+                            <a href="#" title="<?= MoreI18N::xlate('Move down') ?>">
                                 <?= view('icons/arrow-down') ?>
                             </a>
                         </td>
@@ -475,7 +476,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
 
         <button type="submit" class="btn btn-primary">
             <?= view('icons/save') ?>
-            <?= I18N::translate('save') ?>
+            <?= MoreI18N::xlate('save') ?>
         </button>
     </form>
 </div>

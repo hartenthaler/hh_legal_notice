@@ -100,6 +100,7 @@ use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\UserService;
 use Fisharebest\Webtrees\Validator;
 use Fisharebest\Webtrees\View;
+use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 use Illuminate\Database\Capsule\Manager as DB;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -463,7 +464,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     {
         if (Validator::parsedBody($request)->string('save') === '1') {
             $this->postAdminActionSave($request);
-            FlashMessages::addMessage(I18N::translate('The preferences for the module “%s” have been updated.',
+            FlashMessages::addMessage(MoreI18N::xlate('The preferences for the module “%s” have been updated.',
                 $this->title()), 'success');
         }
         return redirect($this->getConfigLink());
@@ -521,7 +522,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $user = $request->getAttribute('user');
         assert($user instanceof UserInterface);
 
-        $title = I18N::translate('Legal Notice');
+        $title = MoreI18N::xlate('Legal Notice');
         if ($this->isChapterEnabled('DataProtection', $request)) {
             $title .= ' ' . I18N::translate('and Privacy Policy');
         }
@@ -574,8 +575,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return $this->viewResponse($this->name() . '::page', [
             'title'                     => $this->title(),
             'tree'                      => $tree,
-            'legalNoticeTitle'          => I18N::translate('Legal Notice'),
-            'legalNoticeHead1'          => I18N::translate('Responsible person'),
+            'legalNoticeTitle'          => MoreI18N::xlate('Legal Notice'),
+            'legalNoticeHead1'          => MoreI18N::xlate('Responsible person'),
             'legalNoticeHead2'          => I18N::translate('This website is operated by:'),
             'responsibleName'           => $this->responsibleName(),
             'showGravatar'              => $this->showGravatar(),
@@ -585,21 +586,21 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'additionalAddress'         => $this->additionalAddress(),
             'street'                    => $this->street(),
             'city'                      => $this->city(),
-            'phoneLabel'                => I18N::translate('Phone'),
+            'phoneLabel'                => MoreI18N::xlate('Phone'),
             'phone'                     => $this->phone(),
-            'faxLabel'                  => I18N::translate('Fax'),
+            'faxLabel'                  => MoreI18N::xlate('Fax'),
             'fax'                       => $this->fax(),
-            'emailLabel'                => I18N::translate('eMail'),
+            'emailLabel'                => MoreI18N::xlate('eMail'),
             'email'                     => $this->email($request),
             'vatNumberLabel'            => $this->vatNumberLabel(),
             'vatNumber'                 => $this->vatNumber(),
             'showTreeContacts'          => $this->showTreeContacts(),
-            'headTreeContacts'          => I18N::plural('Additional contact','Additional contacts', count($contactsTreeContacts)),
+            'headTreeContacts'          => MoreI18N::xlatePlural('Additional contact','Additional contacts', count($contactsTreeContacts)),
             'countTreeContacts'         => count($contactsTreeContacts),
             'contactsTreeContacts'      => $contactsTreeContacts,
             'showAdministrators'        => $this->showAdministrators(),
-            'headAdministrators'        => I18N::plural('Website administrator','Website administrators', count($contactsAdministrators)),
-            'commentAdministrators'     => I18N::plural('The webtrees administrator is responsible to manage users and to set the preferences for this website.',
+            'headAdministrators'        => MoreI18N::xlatePlural('Website administrator','Website administrators', count($contactsAdministrators)),
+            'commentAdministrators'     => MoreI18N::xlatePlural('The webtrees administrator is responsible to manage users and to set the preferences for this website.',
                                             'The webtrees administrators are responsible to manage users and to set the preferences for this website.', count($contactsAdministrators)),
             'countAdministrators'       => count($contactsAdministrators),
             'contactsAdministrators'    => $contactsAdministrators,
