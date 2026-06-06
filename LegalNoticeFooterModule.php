@@ -618,7 +618,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function postAdminActionChapter(ServerRequestInterface $request)
     {
         $params = (array) $request->getParsedBody();
-        $order = Validator::parsedBody($request)->string('resetOrder') === '1'
+        $order = Validator::parsedBody($request)->string('resetOrder', '') === '1'
             ? $this->defaultChapterOrder()
             : $this->validatedChapterOrder($params['order'] ?? []);
 
