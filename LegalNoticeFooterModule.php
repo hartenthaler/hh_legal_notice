@@ -107,8 +107,13 @@ use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
 
 use function class_exists;
+use function count;
+use function date;
+use function filter_var;
 use function is_array;
+use function in_array;
 use function method_exists;
+use function preg_match;
 use function trim;
 use function file_exists;
 use function assert;
@@ -478,11 +483,129 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function postAdminActionSave(ServerRequestInterface $request)
     {
+        $body = Validator::parsedBody($request);
         $preferences = $this->listOfPreferences();
+
         foreach ($preferences as $preference) {
-            $this->setPreference($preference, trim(Validator::parsedBody($request)->string($preference)));
+            $this->setPreference($preference, $this->validatedPreference($preference, $body->string($preference, '')));
         }
+
         $this->postAdminActionChapter($request);
+    }
+
+    private function validatedPreference(string $preference, string $value): string
+    {
+        $value = trim($value);
+
+        return match ($preference) {
+            'showCopyRight',
+            'showGravatar',
+            'simpleEmail',
+            'showTreeContacts',
+            'showAdministrators',
+            'orderProcessing',
+            'showGoogleCharts' => $value === '1' ? '1' : '0',
+
+            'responsibleSex' => in_array($value, ['M', 'F', 'X', 'U'], true) ? $value : 'U',
+
+            'copyRightStartYear' => $this->validatedYear($value),
+
+            'email' => $this->validatedEmail($value),
+
+            'hostingCompanyUrl',
+            'hostingPrivacyNotice' => $this->validatedUrl($value, $preference),
+
+            'additionalThirdPartyServices' => $this->validatedThirdPartyServices($value),
+
+            default => $value,
+        };
+    }
+
+    private function validatedYear(string $value): string
+    {
+        if ($value === '') {
+            return '';
+        }
+
+        $year = (int) $value;
+        $current_year = (int) date('Y');
+
+        if (preg_match('/^\d{4}$/', $value) === 1 && $year >= 1970 && $year <= $current_year) {
+            return $value;
+        }
+
+        FlashMessages::addMessage(I18N::translate('Invalid copyright start year. The value was ignored.'), 'warning');
+
+        return '';
+    }
+
+    private function validatedEmail(string $value): string
+    {
+        if ($value === '' || filter_var($value, FILTER_VALIDATE_EMAIL) !== false) {
+            return $value;
+        }
+
+        FlashMessages::addMessage(I18N::translate('Invalid e-mail address. The value was ignored.'), 'warning');
+
+        return '';
+    }
+
+    private function validatedUrl(string $value, string $preference): string
+    {
+        if ($value === '' || $this->isValidHttpUrl($value)) {
+            return $value;
+        }
+
+        FlashMessages::addMessage(I18N::translate('Invalid URL in setting “%s”. The value was ignored.', $preference), 'warning');
+
+        return '';
+    }
+
+    private function validatedThirdPartyServices(string $value): string
+    {
+        $valid_lines = [];
+        $invalid_lines = 0;
+        $lines = preg_split('/\R/', $value) ?: [];
+
+        foreach ($lines as $line) {
+            $line = trim($line);
+
+            if ($line === '') {
+                continue;
+            }
+
+            $parts = preg_split('/\s*\|\s*/', $line, 2);
+
+            if ($parts === false || count($parts) !== 2) {
+                $invalid_lines++;
+                continue;
+            }
+
+            $name = trim($parts[0]);
+            $url = trim($parts[1]);
+
+            if ($name === '' || !$this->isValidHttpUrl($url)) {
+                $invalid_lines++;
+                continue;
+            }
+
+            $valid_lines[] = $name . ' | ' . $url;
+        }
+
+        if ($invalid_lines > 0) {
+            FlashMessages::addMessage(I18N::plural('One invalid third-party service entry was ignored.', '%s invalid third-party service entries were ignored.', $invalid_lines, I18N::number($invalid_lines)), 'warning');
+        }
+
+        return implode("\n", $valid_lines);
+    }
+
+    private function isValidHttpUrl(string $url): bool
+    {
+        if (filter_var($url, FILTER_VALIDATE_URL) === false) {
+            return false;
+        }
+
+        return preg_match('/^https?:\/\//i', $url) === 1;
     }
 
     /**

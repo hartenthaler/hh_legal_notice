@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 19:10+0200\n"
+"POT-Creation-Date: 2026-06-06 19:19+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -21,71 +21,91 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: .git\n"
 
 #. I18N: Description of this module
-#: LegalNoticeFooterModule.php:176
+#: LegalNoticeFooterModule.php:181
 msgid "Legal notice as a footer element for this site."
 msgstr "Juridische kennisgeving als voettekstelement voor deze site."
 
-#: LegalNoticeFooterModule.php:427
+#: LegalNoticeFooterModule.php:439
 #, php-format
 msgid ""
 "The preferences for the custom module \"%s\" were imported from the earlier "
 "custom module \"%s\"."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:519 LegalNoticeFooterModule.php:572
+#: LegalNoticeFooterModule.php:537
+msgid "Invalid copyright start year. The value was ignored."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:548
+msgid "Invalid e-mail address. The value was ignored."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:559
+#, php-format
+msgid "Invalid URL in setting “%s”. The value was ignored."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:596
+#, php-format
+msgid "One invalid third-party service entry was ignored."
+msgid_plural "%s invalid third-party service entries were ignored."
+msgstr[0] ""
+msgstr[1] ""
+
+#: LegalNoticeFooterModule.php:649 LegalNoticeFooterModule.php:702
 msgid "Legal Notice"
 msgstr "Juridische kennisgeving"
 
-#: LegalNoticeFooterModule.php:521
+#: LegalNoticeFooterModule.php:651
 msgid "and Privacy Policy"
 msgstr "en privacybeleid"
 
-#: LegalNoticeFooterModule.php:538
+#: LegalNoticeFooterModule.php:668
 msgid "This website uses cookies."
 msgstr "Deze website maakt gebruik van cookies."
 
-#: LegalNoticeFooterModule.php:573
+#: LegalNoticeFooterModule.php:703
 msgid "Responsible person"
 msgstr "Verantwoordelijk persoon"
 
-#: LegalNoticeFooterModule.php:574
+#: LegalNoticeFooterModule.php:704
 msgid "This website is operated by:"
 msgstr "Deze website wordt beheerd door:"
 
-#: LegalNoticeFooterModule.php:579
+#: LegalNoticeFooterModule.php:709
 msgid "Represented by:"
 msgstr "Vertegenwoordigd door:"
 
-#: LegalNoticeFooterModule.php:592
+#: LegalNoticeFooterModule.php:722
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Extra contactpersoon"
 msgstr[1] "Extra contactpersonen"
 
-#: LegalNoticeFooterModule.php:699
+#: LegalNoticeFooterModule.php:829
 msgid "Legal Notice and Privacy Policy"
 msgstr "Juridische kennisgeving en privacybeleid"
 
 #. I18N: subject of e-mail
-#: LegalNoticeFooterModule.php:865
+#: LegalNoticeFooterModule.php:995
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "bericht via juridische kennisgeving van site %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:868
+#: LegalNoticeFooterModule.php:998
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Geachte heer %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:871
+#: LegalNoticeFooterModule.php:1001
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Geachte mevrouw %s"
 
 #. I18N: first line of body of e-mail using full name
-#: LegalNoticeFooterModule.php:874
+#: LegalNoticeFooterModule.php:1004
 #, php-format
 msgid "Dear %s"
 msgstr "Geachte %s"
