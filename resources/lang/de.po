@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 21:47+0200\n"
+"POT-Creation-Date: 2026-06-07 00:26+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Hermann Hartenthaler <hermann@hartenthaler.de>\n"
 "Language-Team: \n"
@@ -103,30 +103,30 @@ msgstr[1] ""
 "Die Webtrees-Administratoren sind für die Verwaltung der Benutzer und die "
 "Einstellung der Optionen dieser Website zuständig."
 
-#: LegalNoticeFooterModule.php:863
+#: LegalNoticeFooterModule.php:867
 msgid "Legal Notice and Privacy Policy"
 msgstr "Impressum und Datenschutzerklärung"
 
 #. I18N: subject of e-mail
-#: LegalNoticeFooterModule.php:1029
+#: LegalNoticeFooterModule.php:1033
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "Nachricht über das Impressum der Website %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1032
+#: LegalNoticeFooterModule.php:1036
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Sehr geehrter Herr %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1035
+#: LegalNoticeFooterModule.php:1039
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Sehr geehrte Frau %s"
 
 #. I18N: first line of body of e-mail using full name
-#: LegalNoticeFooterModule.php:1038
+#: LegalNoticeFooterModule.php:1042
 #, php-format
 msgid "Dear %s"
 msgstr "Sehr geehrte/r %s"
@@ -462,15 +462,15 @@ msgstr ""
 msgid "Third party services"
 msgstr "Drittanbieter"
 
-#: resources\views\page\sections\data-categories.phtml:143
+#: resources\views\page\sections\data-categories.phtml:142
 msgid "This website uses additional third-party services."
 msgstr "Diese Website verwendet zusätzliche Dienste von Drittanbietern."
 
-#: resources\views\page\sections\data-categories.phtml:157
+#: resources\views\page\sections\data-categories.phtml:154
 msgid "External transcription providers"
 msgstr "Externe Transkriptionsdienstleister"
 
-#: resources\views\page\sections\data-categories.phtml:160
+#: resources\views\page\sections\data-categories.phtml:157
 msgid ""
 "This website may use external transcription providers when a registered user "
 "explicitly starts such a workflow."
@@ -478,31 +478,31 @@ msgstr ""
 "Diese Website kann externe Transkriptionsanbieter nutzen, wenn ein "
 "registrierter Nutzer einen solchen Arbeitsablauf ausdrücklich in Gang setzt."
 
-#: resources\views\page\sections\data-categories.phtml:161
+#: resources\views\page\sections\data-categories.phtml:158
 msgid ""
 "In that case, the following provider services and data categories may be "
 "involved:"
 msgstr ""
 "In diesem Fall können folgende Dienste und Datenkategorien betroffen sein:"
 
-#: resources\views\page\sections\data-categories.phtml:175
+#: resources\views\page\sections\data-categories.phtml:172
 msgid "Data that may be exchanged:"
 msgstr "Daten, die ausgetauscht werden können:"
 
-#: resources\views\page\sections\data-categories.phtml:187
+#: resources\views\page\sections\data-categories.phtml:185
 msgid "Hosting for the webtrees server"
 msgstr "Hosting für den webtrees-Server"
 
-#: resources\views\page\sections\data-categories.phtml:191
+#: resources\views\page\sections\data-categories.phtml:189
 msgid "This website is operated by the hosting provider"
 msgstr "Diese Website wird beim Hosting-Anbieter"
 
-#: resources\views\page\sections\data-categories.phtml:199
+#: resources\views\page\sections\data-categories.phtml:197
 #, php-format
 msgid "For details, please refer to the privacy notice of %s."
 msgstr "Details entnehmen Sie bitte der Datenschutzerklärung von %s."
 
-#: resources\views\page\sections\data-categories.phtml:206
+#: resources\views\page\sections\data-categories.phtml:204
 msgid ""
 "The hosting provider automatically collects and stores information when this "
 "website is accessed, such as browser used, operating system, referring page, "
@@ -512,7 +512,7 @@ msgstr ""
 "Zugriffen auf diese Website wie verwendeter Browser, Betriebssystem, "
 "Verweisseite, IP-Adresse, Uhrzeit des Zugriffs usw."
 
-#: resources\views\page\sections\data-categories.phtml:207
+#: resources\views\page\sections\data-categories.phtml:205
 msgid ""
 "This data cannot be assigned to specific persons without consulting "
 "additional data sources, and"
@@ -520,21 +520,21 @@ msgstr ""
 "Diese Daten können ohne Hinzuziehung weiterer Datenquellen keinen bestimmten "
 "Personen zugeordnet werden und"
 
-#: resources\views\page\sections\data-categories.phtml:208
+#: resources\views\page\sections\data-categories.phtml:206
 msgid "I do not evaluate this data further"
 msgid_plural "we do not evaluate this data further"
 msgstr[0] "ich werte diese Daten auch nicht weiter aus,"
 msgstr[1] "wir werten diese Daten auch nicht weiter aus,"
 
-#: resources\views\page\sections\data-categories.phtml:209
+#: resources\views\page\sections\data-categories.phtml:207
 msgid "unless there is unlawful use of these web pages."
 msgstr "solange keine rechtswidrige Nutzung dieser Webseiten vorliegt."
 
-#: resources\views\page\sections\data-categories.phtml:213
+#: resources\views\page\sections\data-categories.phtml:211
 msgid "Order processing"
 msgstr "Auftragsverarbeitung"
 
-#: resources\views\page\sections\data-categories.phtml:215
+#: resources\views\page\sections\data-categories.phtml:213
 msgid ""
 "An agreement on order processing has been concluded with the hosting "
 "provider."
@@ -542,25 +542,25 @@ msgstr ""
 "Mit dem Hosting-Anbieter wurde eine Vereinbarung über die "
 "Auftragsverarbeitung geschlossen."
 
-#: resources\views\page\sections\data-categories.phtml:217
+#: resources\views\page\sections\data-categories.phtml:215
 msgid "This took place"
 msgstr "Dies erfolgte"
 
-#: resources\views\page\sections\data-categories.phtml:219
+#: resources\views\page\sections\data-categories.phtml:217
 #, php-format
 msgid "for the first time on %s"
 msgstr "erstmalig am %s"
 
-#: resources\views\page\sections\data-categories.phtml:221
+#: resources\views\page\sections\data-categories.phtml:219
 msgid "and"
 msgstr "und"
 
-#: resources\views\page\sections\data-categories.phtml:225
+#: resources\views\page\sections\data-categories.phtml:223
 #, php-format
 msgid "most recently on %s"
 msgstr "letztmalig am %s"
 
-#: resources\views\page\sections\data-categories.phtml:228
+#: resources\views\page\sections\data-categories.phtml:226
 msgid ""
 "This is an agreement required by data protection law under Article 28 GDPR, "
 "which ensures that the hosting provider processes the personal data of this "
@@ -570,21 +570,21 @@ msgstr ""
 "vorgeschriebenen Vereinbarung, die gewährleistet, dass der Hosting-Anbieter "
 "die personenbezogenen Daten dieser Website"
 
-#: resources\views\page\sections\data-categories.phtml:229
+#: resources\views\page\sections\data-categories.phtml:227
 msgid "only according to my instructions"
 msgid_plural "only according to our instructions"
 msgstr[0] "nur nach meinen Weisungen"
 msgstr[1] "nur nach unseren Weisungen"
 
-#: resources\views\page\sections\data-categories.phtml:230
+#: resources\views\page\sections\data-categories.phtml:228
 msgid "and in compliance with the GDPR."
 msgstr "und unter Einhaltung der DSGVO verarbeitet."
 
-#: resources\views\page\sections\data-categories.phtml:234
+#: resources\views\page\sections\data-categories.phtml:232
 msgid "Application log"
 msgstr "Protokoll der Anwendung"
 
-#: resources\views\page\sections\data-categories.phtml:237
+#: resources\views\page\sections\data-categories.phtml:235
 msgid ""
 "The application used (webtrees) logs all user actions so that, among other "
 "things, changes to the data can be traced and approved."
@@ -733,8 +733,8 @@ msgid_plural ""
 "Although we accept a certain risk, we are leaving our data online for the "
 "time being."
 msgstr[0] ""
-"Obwohl ich ein gewisses Risiko eingehe, lasse ich daher unsere Daten "
-"vorerst online."
+"Obwohl ich ein gewisses Risiko eingehe, lasse ich daher unsere Daten vorerst "
+"online."
 msgstr[1] ""
 "Obwohl wir ein gewisses Risiko eingehen, lassen wir daher unsere Daten "
 "vorerst online."
@@ -779,11 +779,11 @@ msgid_plural ""
 "We will then try as quickly as possible to obtain consent, remove "
 "visibility, or delete the data."
 msgstr[0] ""
-"Ich werde dann schnellstmöglich versuchen die Einwilligung nachzuholen, "
-"die Sichtbarkeit aufzuheben oder die Daten löschen."
+"Ich werde dann schnellstmöglich versuchen die Einwilligung nachzuholen, die "
+"Sichtbarkeit aufzuheben oder die Daten löschen."
 msgstr[1] ""
-"Wir werden dann schnellstmöglich versuchen die Einwilligung nachzuholen, "
-"die Sichtbarkeit aufzuheben oder die Daten löschen."
+"Wir werden dann schnellstmöglich versuchen die Einwilligung nachzuholen, die "
+"Sichtbarkeit aufzuheben oder die Daten löschen."
 
 #: resources\views\page\sections\data-rights.phtml:47
 msgid ""

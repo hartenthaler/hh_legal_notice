@@ -66,11 +66,9 @@ Those sections can be reordered and individually enabled or disabled.
 There are two styles provided for those sections: "I" style and "We" style,
 depending on the number of website administrators.
 
-The chapter "Datenschutzerklärung" is a first draft.
-It is only available in German.
-The administrator can enable or disable this chapter, but the sequence cannot be chosen at the moment.
-It is intended to add more content to this chapter
-and to make the content translatable.
+The chapter "Privacy Policy" is a first draft.
+The administrator can enable or disable this chapter and configure the order of its sections.
+It is intended to add more content to this chapter over time.
 
 <a name="Screenshots"></a>
 ## 🖼 Screenshots

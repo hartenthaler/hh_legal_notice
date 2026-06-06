@@ -791,6 +791,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     {
         $services = $this->showGoogleCharts() ? self::GOOGLE_CHARTS_SERVICE : [];
 
+        if ($this->showGravatar()) {
+            $services['Gravatar'] = 'https://gravatar.com/';
+        }
+
         return $services + $this->additionalThirdPartyServices();
     }
 
