@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 20:28+0200\n"
+"POT-Creation-Date: 2026-06-06 20:57+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -101,30 +101,30 @@ msgstr[1] ""
 "Els administradors de webtrees són els responsables de gestionar els usuaris "
 "i d'establir les preferències d'aquest lloc web."
 
-#: LegalNoticeFooterModule.php:862
+#: LegalNoticeFooterModule.php:863
 msgid "Legal Notice and Privacy Policy"
 msgstr "Avís Legal i Política de Privacitat"
 
 #. I18N: subject of e-mail
-#: LegalNoticeFooterModule.php:1028
+#: LegalNoticeFooterModule.php:1029
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "missatge a través de l'avís legal del lloc %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1031
+#: LegalNoticeFooterModule.php:1032
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Benvolgut Sr. %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1034
+#: LegalNoticeFooterModule.php:1035
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Benvolguda senyora %s"
 
 #. I18N: first line of body of e-mail using full name
-#: LegalNoticeFooterModule.php:1037
+#: LegalNoticeFooterModule.php:1038
 #, php-format
 msgid "Dear %s"
 msgstr "Benvolguts %s"
@@ -184,88 +184,88 @@ msgstr ""
 msgid "Data that may be exchanged:"
 msgstr ""
 
-#: resources\views\settings.phtml:66 resources\views\settings.phtml:162
-#: resources\views\settings.phtml:180 resources\views\settings.phtml:204
-#: resources\views\settings.phtml:250 resources\views\settings.phtml:310
-#: resources\views\settings.phtml:377
+#: resources\views\settings.phtml:64 resources\views\settings.phtml:156
+#: resources\views\settings.phtml:172 resources\views\settings.phtml:194
+#: resources\views\settings.phtml:238 resources\views\settings.phtml:294
+#: resources\views\settings.phtml:359
 msgid "optional"
 msgstr "opcional"
 
-#: resources\views\settings.phtml:73
+#: resources\views\settings.phtml:71
 msgid "Should a copyright notice be included in this page footer element?"
 msgstr ""
 "S'ha d'incloure un avís de drets d'autor en aquest element de peu de pàgina?"
 
-#: resources\views\settings.phtml:88
+#: resources\views\settings.phtml:86
 msgid "Start year of copyright (e.g. \"2020\")"
 msgstr "Any d'inici dels drets d'autor (p. ex., \"2020\")"
 
-#: resources\views\settings.phtml:97
+#: resources\views\settings.phtml:95
 msgid "Name of holder of copyright"
 msgstr "Nom del titular dels drets d'autor"
 
-#: resources\views\settings.phtml:106 resources\views\settings.phtml:175
+#: resources\views\settings.phtml:102 resources\views\settings.phtml:167
 msgid "mandatory"
 msgstr "obligatori"
 
-#: resources\views\settings.phtml:111
+#: resources\views\settings.phtml:107
 msgid "First name(s)"
 msgstr "Nom(s)"
 
-#: resources\views\settings.phtml:120
+#: resources\views\settings.phtml:116
 msgid "Surname(s)"
 msgstr "Cognom(s)"
 
-#: resources\views\settings.phtml:138
+#: resources\views\settings.phtml:134
 msgid "other sex"
 msgstr "altres sexes"
 
-#: resources\views\settings.phtml:148
+#: resources\views\settings.phtml:144
 msgid "Should a gravatar image be shown (see www.gravatar.com)?"
 msgstr "S'ha de mostrar una imatge gravada (vegeu www.gravatar.com)?"
 
-#: resources\views\settings.phtml:162
+#: resources\views\settings.phtml:156
 msgid "Club or Organization"
 msgstr "Club o Organització"
 
-#: resources\views\settings.phtml:167
+#: resources\views\settings.phtml:161
 msgid "Name of club or organization"
 msgstr "Nom del club o d l'organització"
 
-#: resources\views\settings.phtml:175
+#: resources\views\settings.phtml:167
 msgid "Address data"
 msgstr "Dades de l'adreça"
 
-#: resources\views\settings.phtml:180
+#: resources\views\settings.phtml:172
 msgid "Additional address line"
 msgstr "Línia d'adreça addicional"
 
-#: resources\views\settings.phtml:188
+#: resources\views\settings.phtml:180
 msgid "Street name and house number"
 msgstr "Nom del carrer i número de casa"
 
-#: resources\views\settings.phtml:196
+#: resources\views\settings.phtml:188
 msgid "City including zip code"
 msgstr "Ciutat, inclòs el codi postal"
 
-#: resources\views\settings.phtml:204
+#: resources\views\settings.phtml:194
 msgid "Communication data"
 msgstr "Dades de comunicació"
 
-#: resources\views\settings.phtml:209
+#: resources\views\settings.phtml:199
 msgid "Phone number (including country prefix, e.g. \"+49 30 123456\")"
 msgstr ""
 "Número de telèfon (inclòs el prefix del país, p. ex., \"+34 999123456\")"
 
-#: resources\views\settings.phtml:217
+#: resources\views\settings.phtml:207
 msgid "Fax number (including country prefix, e.g. \"+49 30 654321\")"
 msgstr "Número de fax (inclòs el prefix del país, p. ex., \"+34 999123456\")"
 
-#: resources\views\settings.phtml:225
+#: resources\views\settings.phtml:215
 msgid "eMail address"
 msgstr "Adreça de correu electrònic"
 
-#: resources\views\settings.phtml:235
+#: resources\views\settings.phtml:225
 msgid ""
 "Should a simple eMail link be used (if \"no\": subject and body of eMail are "
 "generated, too)?"
@@ -273,25 +273,25 @@ msgstr ""
 "S'ha d'utilitzar un simple enllaç de correu electrònic (si \"no\": tema i "
 "cos del correu electrònic, també)?"
 
-#: resources\views\settings.phtml:250
+#: resources\views\settings.phtml:238
 msgid "Registration data"
 msgstr "Dades registrals"
 
-#: resources\views\settings.phtml:255
+#: resources\views\settings.phtml:243
 msgid "Label like \"VAT ID No.\" or other registration number label"
 msgstr ""
 "Etiqueta com ara \"NÚMERO D'IDENTIFICACIÓ FISCAL\" o una altra etiqueta de "
 "número de registre"
 
-#: resources\views\settings.phtml:263
+#: resources\views\settings.phtml:251
 msgid "Registration number"
 msgstr "Número de registre"
 
-#: resources\views\settings.phtml:271
+#: resources\views\settings.phtml:257
 msgid "Additional contacts to be shown"
 msgstr "Contactes addicionals que es mostraran"
 
-#: resources\views\settings.phtml:278
+#: resources\views\settings.phtml:264
 msgid ""
 "Should the tree contacts be shown (there are maybe genealogical and "
 "technical contacts defined)?"
@@ -299,72 +299,76 @@ msgstr ""
 "S'han de mostrar els contactes de l'arbre (potser hi ha contactes "
 "genealògics i tècnics definits)?"
 
-#: resources\views\settings.phtml:295
+#: resources\views\settings.phtml:281
 msgid "Should the administrators of this website be shown?"
 msgstr "S'han de mostrar els administradors d'aquest lloc web?"
 
-#: resources\views\settings.phtml:310
+#: resources\views\settings.phtml:294
 msgid "Hosting service"
 msgstr "Servei de hosting"
 
-#: resources\views\settings.phtml:315
+#: resources\views\settings.phtml:299
 msgid ""
 "Country of the webtrees server location (in English language, e.g. "
 "\"Germany\")"
 msgstr ""
 "País de la ubicació del servidor webtrees (en anglès, p. ex. \"Germany\")"
 
-#: resources\views\settings.phtml:323
+#: resources\views\settings.phtml:307
 msgid "Name of hosting service company"
 msgstr "Nom de l'empresa de serveis d'allotjament"
 
-#: resources\views\settings.phtml:331
+#: resources\views\settings.phtml:315
 msgid "Hosting service link (URL)"
 msgstr "Enllaç al servei d'allotjament (URL)"
 
-#: resources\views\settings.phtml:339
+#: resources\views\settings.phtml:323
 msgid "Hosting service link to privacy notice (URL)"
 msgstr "Servei d'allotjament enllaç a avís de privacitat (URL)"
 
-#: resources\views\settings.phtml:348
+#: resources\views\settings.phtml:332
 msgid "Should a section about Order Processing agreement be shown?"
 msgstr ""
 
-#: resources\views\settings.phtml:361
+#: resources\views\settings.phtml:345
 msgid "First date of Order Processing agreement"
 msgstr "Primera data de l'acord Processament de comandes"
 
-#: resources\views\settings.phtml:369
+#: resources\views\settings.phtml:353
 msgid "Last date of Order Processing agreement"
 msgstr "Última data de l'acord Processament de comandes"
 
-#: resources\views\settings.phtml:377
+#: resources\views\settings.phtml:359
 msgid "External services"
 msgstr ""
 
-#: resources\views\settings.phtml:383
+#: resources\views\settings.phtml:365
 msgid "Should Google Charts be mentioned as an external service?"
 msgstr ""
 
-#: resources\views\settings.phtml:393
+#: resources\views\settings.phtml:375
 #, php-format
 msgid "webtrees statistics pages can load Google Charts from %s."
 msgstr ""
 
-#: resources\views\settings.phtml:400
+#: resources\views\settings.phtml:382
 msgid "Additional third-party services"
 msgstr ""
 
-#: resources\views\settings.phtml:405
+#: resources\views\settings.phtml:387
 #, php-format
 msgid "Enter one service per line using the format “Name | URL”. Example: %s"
 msgstr ""
 
-#: resources\views\settings.phtml:416
+#: resources\views\settings.phtml:394
 msgid "In which sequence should the main chapters be shown?"
 msgstr "En quina seqüència s'han de mostrar els capítols principals?"
 
-#: resources\views\settings.phtml:465
+#: resources\views\settings.phtml:398
+msgid "Chapter"
+msgstr "Capítol"
+
+#: resources\views\settings.phtml:441
 msgid ""
 "In which sequence should the sections of the chapter \"Data protection\" be "
 "shown?"
@@ -372,7 +376,11 @@ msgstr ""
 "En quina seqüència s'han de mostrar els apartats del capítol \"Protecció de "
 "dades\"?"
 
-#: resources\views\settings.phtml:514
+#: resources\views\settings.phtml:445 resources\views\settings.phtml:492
+msgid "Section"
+msgstr "Apartat"
+
+#: resources\views\settings.phtml:488
 msgid ""
 "In which sequence should the sections of the chapter \"Legal Regulations\" "
 "be shown?"
@@ -380,9 +388,10 @@ msgstr ""
 "En quina seqüència s'han de mostrar els apartats del capítol \"Normes "
 "jurídiques\"?"
 
-#: resources\views\settings.phtml:568
-msgid "Restore default sorting"
-msgstr "Restaura l'ordenació predeterminada"
+#: resources\views\settings.phtml:536
+#, fuzzy
+msgid "Restore default sorting for all chapters and sections"
+msgstr "Restaura l'ordenació predeterminada de tots els capítols i apartats"
 
 #: src\LegalNoticeSupport.php:149
 msgctxt "heading"
@@ -414,7 +423,8 @@ msgctxt "heading"
 msgid ""
 "Right of providing information, correction or deletion of personal data, and "
 "appeal"
-msgstr "Dret d'informació, rectificació o supressió de dades personals i recurs"
+msgstr ""
+"Dret d'informació, rectificació o supressió de dades personals i recurs"
 
 #: src\LegalNoticeSupport.php:155
 msgctxt "heading"

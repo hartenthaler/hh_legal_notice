@@ -389,15 +389,13 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </div>
         </div>
 
-        <!-- tbd einen Block für die Hauptüberschriften Datenschutzerklärung/Rechtliche Regelungen -->
             <!-- tbd rekursiv je einen Block mit den Unterkapiteln pro Hauptüberschrift -->
             <!-- falls Hauptüberschrift abgewählt werden, soll der Unterblock ausgegraut werden -->
-            <!-- die Optionen sollen den passenden Abschnitten zugeordnet werden in denen sie verwendet werden -->
         <h3><?= I18N::translate('In which sequence should the main chapters be shown?') ?></h3>
         <table class="table table-bordered wt-table-menu">
             <thead>
                 <tr>
-                    <th><?= MoreI18N::xlate('Chapter') ?></th>
+                    <th><?= I18N::translate('Chapter') ?></th>
                     <th class="text-center"><?= MoreI18N::xlate('Enabled') ?></th>
                     <th class="text-center"><?= MoreI18N::xlate('Move up') ?></th>
                     <th class="text-center"><?= MoreI18N::xlate('Move down') ?></th>
@@ -444,7 +442,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
         <table class="table table-bordered wt-table-menu">
             <thead>
             <tr>
-                <th><?= MoreI18N::xlate('Section') ?></th>
+                <th><?= I18N::translate('Section') ?></th>
                 <th class="text-center"><?= MoreI18N::xlate('Enabled') ?></th>
                 <th class="text-center"><?= MoreI18N::xlate('Move up') ?></th>
                 <th class="text-center"><?= MoreI18N::xlate('Move down') ?></th>
@@ -491,7 +489,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
         <table class="table table-bordered wt-table-menu">
             <thead>
             <tr>
-                <th><?= MoreI18N::xlate('Section') ?></th>
+                <th><?= I18N::translate('Section') ?></th>
                 <th class="text-center"><?= MoreI18N::xlate('Enabled') ?></th>
                 <th class="text-center"><?= MoreI18N::xlate('Move up') ?></th>
                 <th class="text-center"><?= MoreI18N::xlate('Move down') ?></th>
@@ -534,12 +532,12 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </tbody>
         </table>
 
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-secondary d-block mb-3" name="resetOrder" value="1">
+            <?= I18N::translate('Restore default sorting for all chapters and sections') ?>
+        </button>
+        <button type="submit" class="btn btn-primary d-block">
             <?= view('icons/save') ?>
             <?= MoreI18N::xlate('save') ?>
-        </button>
-        <button type="submit" class="btn btn-secondary" name="resetOrder" value="1">
-            <?= I18N::translate('Restore default sorting') ?>
         </button>
     </form>
 </div>
@@ -574,4 +572,3 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
         }
     </style>
 <?php View::endpush() ?>
-
