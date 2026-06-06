@@ -1,0 +1,37 @@
+    <h3><?= e($chapter->getHeading()) ?></h3>
+
+    <p>
+        <?php if ($singular) : ?>
+            Ich nehme den Schutz der hier gespeicherten Daten sehr ernst.
+        <?php else : ?>
+            Wir nehmen den Schutz der hier gespeicherten Daten sehr ernst.
+        <?php endif ?>
+
+        <?php if ($hostingCountry !== '') : ?>
+            Der Host für diese Anwendung steht in <?= e($hostingCountry) ?>.
+        <?php endif ?>
+
+        <?php if ($https) : ?>
+            Die Übertragung zum Browser eines Nutzers ist verschlüsselt (https).
+        <?php endif ?>
+
+        Die verwendete Software (webtrees) bietet sehr viele Schutzmechanismen.
+    </p>
+
+    <p>
+        Es werden sowohl Daten verarbeitet, die den Nutzern dieses Angebotes zuzuordnen sind,
+        als auch Daten über lebende und bereits verstorbene Personen.
+    </p>
+
+    <ul>
+        <li>Bestandsdaten (Namen, Geburts-, Heirats- und Todesdaten, ...)</li>
+        <li>Inhaltsdaten (Nachrichten, Geschichten zum Leben von Personen, Fotografien, Videos, ...)</li>
+        <li>Kontaktdaten (Adressen, E-Mail, Telefonnummern, ...)</li>
+        <li>Nutzungsdaten (besuchte Webseiten, Zugriffszeiten, durchgeführte Änderungen, ...)</li>
+        <li>Kommunikationsdaten (Geräte-Informationen, verwendeter Browser, IP-Adressen, ...)</li>
+    </ul>
+
+    <p>
+        Um Sie in vollem Umfang über die Verwendung personenbezogener Daten zu informieren,
+        werden Sie gebeten, die folgenden Datenschutzhinweise zur Kenntnis zu nehmen.
+    </p>

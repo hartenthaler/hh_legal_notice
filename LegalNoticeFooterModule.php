@@ -338,6 +338,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $response['title'] = $this->moduleTitle();
         $response['description'] = $this->description();
         $response['chapters'] = $this->getChapters($request);
+        $response['dataProtectionSectionKeys'] = LegalNoticeSupport::listDataProtectionSectionKeys();
 
         $preferences = $this->listOfPreferences();
         foreach ($preferences as $preference) {
@@ -727,6 +728,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         assert($user instanceof UserInterface);
 
         return $this->viewResponse($this->name() . '::page', [
+            'moduleName'                => $this->name(),
             'title'                     => $this->title(),
             'tree'                      => $tree,
             'legalNoticeTitle'          => I18N::translate('Legal Notice'),
@@ -759,8 +761,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'countAdministrators'       => count($contactsAdministrators),
             'contactsAdministrators'    => $contactsAdministrators,
             'chapters'                  => $this->getChapters($request),
-            'showDataProtection'        => $this->isChapterEnabled('DataProtection', $request),         // tbd
-            'showLegalRegulations'      => $this->isChapterEnabled('LegalRegulations', $request),       // tbd
+            'dataProtectionSectionKeys' => LegalNoticeSupport::listDataProtectionSectionKeys(),
+            'showDataProtection'        => $this->isChapterEnabled('DataProtection', $request),
+            'showLegalRegulations'      => $this->isChapterEnabled('LegalRegulations', $request),
             'singular'                  => $this->useSingularStyle($request),
             'analytics'                 => $this->analyticsModules($tree, $user),
             'trackingServices'          => [],

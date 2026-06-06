@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 20:04+0200\n"
+"POT-Creation-Date: 2026-06-06 20:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,70 +23,70 @@ msgstr ""
 msgid "Legal notice as a footer element for this site."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:439
+#: LegalNoticeFooterModule.php:440
 #, php-format
 msgid ""
 "The preferences for the custom module \"%s\" were imported from the earlier "
 "custom module \"%s\"."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:537
+#: LegalNoticeFooterModule.php:538
 msgid "Invalid copyright start year. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:548
+#: LegalNoticeFooterModule.php:549
 msgid "Invalid e-mail address. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:559
+#: LegalNoticeFooterModule.php:560
 #, php-format
 msgid "Invalid URL in setting “%s”. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:596
+#: LegalNoticeFooterModule.php:597
 #, php-format
 msgid "One invalid third-party service entry was ignored."
 msgid_plural "%s invalid third-party service entries were ignored."
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:678 LegalNoticeFooterModule.php:731
+#: LegalNoticeFooterModule.php:680 LegalNoticeFooterModule.php:734
 msgid "Legal Notice"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:680
+#: LegalNoticeFooterModule.php:682
 msgid "and Privacy Policy"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:697
+#: LegalNoticeFooterModule.php:699
 msgid "This website uses cookies."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:732
+#: LegalNoticeFooterModule.php:735
 msgid "Responsible person"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:733
+#: LegalNoticeFooterModule.php:736
 msgid "This website is operated by:"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:738
+#: LegalNoticeFooterModule.php:741
 msgid "Represented by:"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:751
+#: LegalNoticeFooterModule.php:754
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:755
+#: LegalNoticeFooterModule.php:758
 msgid "Website administrator"
 msgid_plural "Website administrators"
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:756
+#: LegalNoticeFooterModule.php:759
 msgid ""
 "The webtrees administrator is responsible to manage users and to set the "
 "preferences for this website."
@@ -96,262 +96,268 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:858
+#: LegalNoticeFooterModule.php:862
 msgid "Legal Notice and Privacy Policy"
 msgstr ""
 
 #. I18N: subject of e-mail
-#: LegalNoticeFooterModule.php:1024
+#: LegalNoticeFooterModule.php:1028
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr ""
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1027
+#: LegalNoticeFooterModule.php:1031
 #, php-format
 msgid "Dear Mr. %s"
 msgstr ""
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1030
+#: LegalNoticeFooterModule.php:1034
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr ""
 
 #. I18N: first line of body of e-mail using full name
-#: LegalNoticeFooterModule.php:1033
+#: LegalNoticeFooterModule.php:1037
 #, php-format
 msgid "Dear %s"
 msgstr ""
 
-#: resources\views\page.phtml:370
+#: resources\views\page\sections\data-categories.phtml:129
 msgid "This website uses third-party services to manage cookies."
 msgstr ""
 
-#: resources\views\page.phtml:380
+#: resources\views\page\sections\data-categories.phtml:139
 msgid "Tracking and analytics"
 msgstr ""
 
-#: resources\views\page.phtml:384
+#: resources\views\page\sections\data-categories.phtml:143
 msgid "This website uses third-party services to learn about visitor behavior."
 msgstr ""
 
-#: resources\views\page.phtml:405
+#: resources\views\page\sections\data-categories.phtml:164
 msgid "These services may use cookies or other tracking technology."
 msgstr ""
 
-#: resources\views\page.phtml:409
+#: resources\views\page\sections\data-categories.phtml:168
 msgid ""
 "You can opt out of tracking by setting the “Do Not Track” header in your "
 "browser preferences."
 msgstr ""
 
-#: resources\views\page.phtml:416
+#: resources\views\page\sections\data-categories.phtml:175
 msgid "Third party services"
 msgstr ""
 
-#: resources\views\page.phtml:420
+#: resources\views\page\sections\data-categories.phtml:179
 msgid "This website uses additional third-party services."
 msgstr ""
 
-#: resources\views\page.phtml:434
+#: resources\views\page\sections\data-categories.phtml:193
 msgid "External transcription providers"
 msgstr ""
 
-#: resources\views\page.phtml:437
+#: resources\views\page\sections\data-categories.phtml:196
 msgid ""
 "This website may use external transcription providers when a registered user "
 "explicitly starts such a workflow."
 msgstr ""
 
-#: resources\views\page.phtml:438
+#: resources\views\page\sections\data-categories.phtml:197
 msgid ""
 "In that case, the following provider services and data categories may be "
 "involved:"
 msgstr ""
 
-#: resources\views\page.phtml:452
+#: resources\views\page\sections\data-categories.phtml:211
 msgid "Data that may be exchanged:"
 msgstr ""
 
-#: resources\views\settings.phtml:65 resources\views\settings.phtml:161
-#: resources\views\settings.phtml:179 resources\views\settings.phtml:203
-#: resources\views\settings.phtml:249 resources\views\settings.phtml:309
-#: resources\views\settings.phtml:376
+#: resources\views\settings.phtml:66 resources\views\settings.phtml:162
+#: resources\views\settings.phtml:180 resources\views\settings.phtml:204
+#: resources\views\settings.phtml:250 resources\views\settings.phtml:310
+#: resources\views\settings.phtml:377
 msgid "optional"
 msgstr ""
 
-#: resources\views\settings.phtml:72
+#: resources\views\settings.phtml:73
 msgid "Should a copyright notice be included in this page footer element?"
 msgstr ""
 
-#: resources\views\settings.phtml:87
+#: resources\views\settings.phtml:88
 msgid "Start year of copyright (e.g. \"2020\")"
 msgstr ""
 
-#: resources\views\settings.phtml:96
+#: resources\views\settings.phtml:97
 msgid "Name of holder of copyright"
 msgstr ""
 
-#: resources\views\settings.phtml:105 resources\views\settings.phtml:174
+#: resources\views\settings.phtml:106 resources\views\settings.phtml:175
 msgid "mandatory"
 msgstr ""
 
-#: resources\views\settings.phtml:110
+#: resources\views\settings.phtml:111
 msgid "First name(s)"
 msgstr ""
 
-#: resources\views\settings.phtml:119
+#: resources\views\settings.phtml:120
 msgid "Surname(s)"
 msgstr ""
 
-#: resources\views\settings.phtml:137
+#: resources\views\settings.phtml:138
 msgid "other sex"
 msgstr ""
 
-#: resources\views\settings.phtml:147
+#: resources\views\settings.phtml:148
 msgid "Should a gravatar image be shown (see www.gravatar.com)?"
 msgstr ""
 
-#: resources\views\settings.phtml:161
+#: resources\views\settings.phtml:162
 msgid "Club or Organization"
 msgstr ""
 
-#: resources\views\settings.phtml:166
+#: resources\views\settings.phtml:167
 msgid "Name of club or organization"
 msgstr ""
 
-#: resources\views\settings.phtml:174
+#: resources\views\settings.phtml:175
 msgid "Address data"
 msgstr ""
 
-#: resources\views\settings.phtml:179
+#: resources\views\settings.phtml:180
 msgid "Additional address line"
 msgstr ""
 
-#: resources\views\settings.phtml:187
+#: resources\views\settings.phtml:188
 msgid "Street name and house number"
 msgstr ""
 
-#: resources\views\settings.phtml:195
+#: resources\views\settings.phtml:196
 msgid "City including zip code"
 msgstr ""
 
-#: resources\views\settings.phtml:203
+#: resources\views\settings.phtml:204
 msgid "Communication data"
 msgstr ""
 
-#: resources\views\settings.phtml:208
+#: resources\views\settings.phtml:209
 msgid "Phone number (including country prefix, e.g. \"+49 30 123456\")"
 msgstr ""
 
-#: resources\views\settings.phtml:216
+#: resources\views\settings.phtml:217
 msgid "Fax number (including country prefix, e.g. \"+49 30 654321\")"
 msgstr ""
 
-#: resources\views\settings.phtml:224
+#: resources\views\settings.phtml:225
 msgid "eMail address"
 msgstr ""
 
-#: resources\views\settings.phtml:234
+#: resources\views\settings.phtml:235
 msgid ""
 "Should a simple eMail link be used (if \"no\": subject and body of eMail are "
 "generated, too)?"
 msgstr ""
 
-#: resources\views\settings.phtml:249
+#: resources\views\settings.phtml:250
 msgid "Registration data"
 msgstr ""
 
-#: resources\views\settings.phtml:254
+#: resources\views\settings.phtml:255
 msgid "Label like \"VAT ID No.\" or other registration number label"
 msgstr ""
 
-#: resources\views\settings.phtml:262
+#: resources\views\settings.phtml:263
 msgid "Registration number"
 msgstr ""
 
-#: resources\views\settings.phtml:270
+#: resources\views\settings.phtml:271
 msgid "Additional contacts to be shown"
 msgstr ""
 
-#: resources\views\settings.phtml:277
+#: resources\views\settings.phtml:278
 msgid ""
 "Should the tree contacts be shown (there are maybe genealogical and "
 "technical contacts defined)?"
 msgstr ""
 
-#: resources\views\settings.phtml:294
+#: resources\views\settings.phtml:295
 msgid "Should the administrators of this website be shown?"
 msgstr ""
 
-#: resources\views\settings.phtml:309
+#: resources\views\settings.phtml:310
 msgid "Hosting service"
 msgstr ""
 
-#: resources\views\settings.phtml:314
+#: resources\views\settings.phtml:315
 msgid ""
 "Country of the webtrees server location (in English language, e.g. "
 "\"Germany\")"
 msgstr ""
 
-#: resources\views\settings.phtml:322
+#: resources\views\settings.phtml:323
 msgid "Name of hosting service company"
 msgstr ""
 
-#: resources\views\settings.phtml:330
+#: resources\views\settings.phtml:331
 msgid "Hosting service link (URL)"
 msgstr ""
 
-#: resources\views\settings.phtml:338
+#: resources\views\settings.phtml:339
 msgid "Hosting service link to privacy notice (URL)"
 msgstr ""
 
-#: resources\views\settings.phtml:347
+#: resources\views\settings.phtml:348
 msgid "Should a section about Order Processing agreement be shown?"
 msgstr ""
 
-#: resources\views\settings.phtml:360
+#: resources\views\settings.phtml:361
 msgid "First date of Order Processing agreement"
 msgstr ""
 
-#: resources\views\settings.phtml:368
+#: resources\views\settings.phtml:369
 msgid "Last date of Order Processing agreement"
 msgstr ""
 
-#: resources\views\settings.phtml:376
+#: resources\views\settings.phtml:377
 msgid "External services"
 msgstr ""
 
-#: resources\views\settings.phtml:382
+#: resources\views\settings.phtml:383
 msgid "Should Google Charts be mentioned as an external service?"
 msgstr ""
 
-#: resources\views\settings.phtml:392
+#: resources\views\settings.phtml:393
 #, php-format
 msgid "webtrees statistics pages can load Google Charts from %s."
 msgstr ""
 
-#: resources\views\settings.phtml:399
+#: resources\views\settings.phtml:400
 msgid "Additional third-party services"
 msgstr ""
 
-#: resources\views\settings.phtml:404
+#: resources\views\settings.phtml:405
 #, php-format
 msgid "Enter one service per line using the format “Name | URL”. Example: %s"
 msgstr ""
 
-#: resources\views\settings.phtml:415
+#: resources\views\settings.phtml:416
 msgid "In which sequence should the main chapters be shown?"
 msgstr ""
 
-#: resources\views\settings.phtml:464
+#: resources\views\settings.phtml:465
+msgid ""
+"In which sequence should the sections of the chapter \"Data protection\" be "
+"shown?"
+msgstr ""
+
+#: resources\views\settings.phtml:514
 msgid ""
 "In which sequence should the sections of the chapter \"Legal Regulations\" "
 "be shown?"
 msgstr ""
 
-#: resources\views\settings.phtml:518
+#: resources\views\settings.phtml:568
 msgid "Restore default sorting"
 msgstr ""
 
@@ -367,7 +373,7 @@ msgstr ""
 
 #: src\LegalNoticeSupport.php:151
 msgctxt "heading"
-msgid "Privacy"
+msgid "Used terminology"
 msgstr ""
 
 #: src\LegalNoticeSupport.php:152
@@ -377,12 +383,14 @@ msgstr ""
 
 #: src\LegalNoticeSupport.php:153
 msgctxt "heading"
-msgid "GDPR in connection with online genealogies"
+msgid "Categories of data"
 msgstr ""
 
 #: src\LegalNoticeSupport.php:154
 msgctxt "heading"
-msgid "Right of providing information"
+msgid ""
+"Right of providing information, correction or deletion of personal data, and "
+"appeal"
 msgstr ""
 
 #: src\LegalNoticeSupport.php:155

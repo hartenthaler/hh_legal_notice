@@ -37,6 +37,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
  * @var string                  $showAdministrators     option whether to show administrators of webtrees
  *
  * @var array<object>           $chapters               list of chapter objects
+ * @var array<int,string>       $dataProtectionSectionKeys keys of the data protection sections rendered on the page
  *
  * @var string                  $hostingCountry         country of the webtrees server location
  * @var string                  $hostingCompanyName     hosting service company name
@@ -456,6 +457,55 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                         </tr>
                     <?php endif ?>
                 <?php endforeach ?>
+            </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <h3><?= I18N::translate('In which sequence should the sections of the chapter "Data protection" be shown?') ?></h3>
+        <table class="table table-bordered wt-table-menu">
+            <thead>
+            <tr>
+                <th><?= MoreI18N::xlate('Section') ?></th>
+                <th class="text-center"><?= MoreI18N::xlate('Enabled') ?></th>
+                <th class="text-center"><?= MoreI18N::xlate('Move up') ?></th>
+                <th class="text-center"><?= MoreI18N::xlate('Move down') ?></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <?php foreach ($chapters as $chapter) : ?>
+                <?php if (in_array($chapter->getKey(), $dataProtectionSectionKeys, true)): ?>
+                    <tr>
+                        <th scope="col">
+                            <input type="hidden" name="order[]" value="<?= $chapter->getKey() ?>">
+                            <span title="<?= $chapter->getHeading() ?>">
+                                <?= $chapter->getHeading() ?>
+                            </span>
+                        </th>
+
+                        <td class="text-center">
+                            <label class="d-block">
+                                <input type="checkbox" name="status-<?= $chapter->getKey() ?>" id="status-<?= $chapter->getKey() ?>" <?= ($chapter->getEnabled()) ? 'checked' : '' ?>>
+                                <span class="sr-only">
+                                    <?= MoreI18N::xlate('Enabled') ?>
+                                </span>
+                            </label>
+                        </td>
+
+                        <td class="move up text-center">
+                            <a href="#" title="<?= MoreI18N::xlate('Move up') ?>">
+                                <?= view('icons/arrow-up') ?>
+                            </a>
+                        </td>
+                        <td class="move down text-center">
+                            <a href="#" title="<?= MoreI18N::xlate('Move down') ?>">
+                                <?= view('icons/arrow-down') ?>
+                            </a>
+                        </td>
+                    </tr>
+                <?php endif ?>
+            <?php endforeach ?>
             </tbody>
         </table>
 

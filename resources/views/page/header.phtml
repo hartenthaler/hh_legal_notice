@@ -1,0 +1,88 @@
+    <h2><?= e($legalNoticeTitle) ?></h2>
+    <p>&nbsp;</p>
+    <h4><?= e($legalNoticeHead1) ?></h4>
+
+    <p><?= e($legalNoticeHead2) ?></p>
+
+    <?php if ($organization <> ''): ?>
+        <i><?= e($organization) ?></i><br /><br />
+        <?= e($representedBy) ?>
+    <?php endif ?>
+
+    <table cellpadding="5" valign="top">
+        <tbody>
+            <tr>
+                <td valign="top">
+                    <b><?= e($responsibleName) ?></b>
+                    <?php if ($showGravatar): ?>
+                        <br />
+                        <?= $image ?>
+                    <?php endif ?>
+                </td>
+                <?php if ($additionalAddress <> '' || $street <> '' || $city <> ''): ?>
+                    <td valign="top">
+                        <?php if ($additionalAddress <> ''): ?>
+                            <?= e($additionalAddress) ?>
+                        <?php endif ?>
+                        <?php if ($street <> ''): ?>
+                            <?php if ($additionalAddress <> ''): ?>
+                                <br />
+                            <?php endif ?>
+                            <?= e($street) ?>
+                        <?php endif ?>
+                        <?php if ($city <> ''): ?>
+                            <?php if ($street <> '' || $additionalAddress <> ''): ?>
+                                <br />
+                            <?php endif ?>
+                            <?= e($city) ?>
+                        <?php endif ?>
+                    </td>
+                <?php endif ?>
+            </tr>
+            <?php if ($phone <> ''): ?>
+                <tr>
+                    <td><?= e($phoneLabel) ?>:</td>
+                    <td><?= e($phone) ?></td>
+                </tr>
+            <?php endif ?>
+            <?php if ($fax <> ''): ?>
+                <tr>
+                    <td><?= e($faxLabel) ?>:</td>
+                    <td><?= e($fax) ?></td>
+                </tr>
+            <?php endif ?>
+            <?php if ($email <> ''): ?>
+                <tr>
+                    <td><?= e($emailLabel) ?>:</td>
+                    <td><?= $email ?></td>
+                </tr>
+            <?php endif ?>
+            <?php if ($vatNumberLabel <> '' && $vatNumber <> ''): ?>
+                <tr>
+                    <td><?= e($vatNumberLabel) ?>:</td>
+                    <td><?= e($vatNumber) ?></td>
+                </tr>
+            <?php endif ?>
+        </tbody>
+    </table>
+
+    <?php if ($showTreeContacts && $countTreeContacts > 0): ?>
+        <p>&nbsp;</p>
+        <h4><?= e($headTreeContacts) ?></h4>
+        <ul>
+            <?php foreach ($contactsTreeContacts as $link): ?>
+                <li><?= $link ?></li>
+            <?php endforeach ?>
+        </ul>
+    <?php endif ?>
+
+    <?php if ($showAdministrators): ?>
+        <p>&nbsp;</p>
+        <h4><?= e($headAdministrators) ?></h4>
+        <p><?= e($commentAdministrators) ?></p>
+        <ul>
+            <?php foreach ($contactsAdministrators as $link): ?>
+                <li><?= $link ?></li>
+            <?php endforeach ?>
+        </ul>
+    <?php endif ?>

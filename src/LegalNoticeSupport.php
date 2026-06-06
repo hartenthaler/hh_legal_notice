@@ -148,10 +148,10 @@ class LegalNoticeSupport
         return [
             'DataProtection'        => ['level' => 1, 'id' =>  1, 'link' => 0, 'heading' => I18N::translateContext('heading','Data protection')],
             'Purpose'               => ['level' => 2, 'id' =>  2, 'link' => 1, 'heading' => I18N::translateContext('heading','Purpose')],
-            'Privacy'               => ['level' => 2, 'id' =>  3, 'link' => 1, 'heading' => I18N::translateContext('heading','Privacy')],
+            'Privacy'               => ['level' => 2, 'id' =>  3, 'link' => 1, 'heading' => I18N::translateContext('heading','Used terminology')],
             'PersonalData'          => ['level' => 2, 'id' =>  4, 'link' => 1, 'heading' => I18N::translateContext('heading','Processing of personal data')],
-            'GDPR'                  => ['level' => 2, 'id' =>  5, 'link' => 1, 'heading' => I18N::translateContext('heading','GDPR in connection with online genealogies')],
-            'ProvidingInformation'  => ['level' => 2, 'id' =>  6, 'link' => 1, 'heading' => I18N::translateContext('heading','Right of providing information')],
+            'GDPR'                  => ['level' => 2, 'id' =>  5, 'link' => 1, 'heading' => I18N::translateContext('heading','Categories of data')],
+            'ProvidingInformation'  => ['level' => 2, 'id' =>  6, 'link' => 1, 'heading' => I18N::translateContext('heading','Right of providing information, correction or deletion of personal data, and appeal')],
             'CorrectionDeletion'    => ['level' => 2, 'id' =>  7, 'link' => 1, 'heading' => I18N::translateContext('heading','Right to correction or deletion of personal data')],
             'Appeal'                => ['level' => 2, 'id' =>  8, 'link' => 1, 'heading' => I18N::translateContext('heading','Right of appeal')],
             'LegalRegulations'      => ['level' => 1, 'id' =>  9, 'link' => 0, 'heading' => I18N::translateContext('heading','Legal regulations')],
@@ -226,6 +226,20 @@ class LegalNoticeSupport
     public static function listChapterKeys(): array
     {
         return array_keys(self::getChapterParameters());
+    }
+
+    /**
+     * @return array<int,string>
+     */
+    public static function listDataProtectionSectionKeys(): array
+    {
+        return [
+            'Purpose',
+            'PersonalData',
+            'Privacy',
+            'GDPR',
+            'ProvidingInformation',
+        ];
     }
 
     /**

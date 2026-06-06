@@ -1,0 +1,284 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
+    <h3><?= e($chapter->getHeading()) ?></h3>
+
+    <h4>Persönliche Daten zu Ahnen, Familienmitgliedern und weiteren Personen</h4>
+
+    <p>
+        Es werden persönliche Daten auch von lebenden Personen zum Zweck der Familien- und Ahnenforschung gespeichert
+        (siehe oben: Bestandsdaten und Inhaltsdaten).
+        Die Familien- und Ahnenforschung ist ein <b>„berechtigtes Interesse“</b> gemäß
+        Artikel 6&nbsp;(f) der Datenschutzgrundverordnung (EU-DSGVO).
+        Persönliche Daten, die Sie auf dieser Website finden, wie zum Beispiel Namen, E-Mail-Adressen,
+        Fotos, Adressen oder Lebensdaten
+        werden nur zum Zweck der Familien- und Ahnenforschung verwendet und sicher verwahrt.
+        Sie werden zeitlich unbeschränkt aufbewahrt, da sie von historischem Wert für die Genealogie sind.
+    </p>
+
+    <h4>Abgestufte Zugangsrechte zu den Personendaten</h4>
+
+    <p>
+        Große Teile der Inhalte dieser Website sind frei zugänglich.
+        Nicht so die Daten von noch lebenden Personen.
+        Auf diese haben nur registrierte Nutzer Zugriff,
+        denen abgestufte Rechte zugeordnet werden.
+        Zu diesen Nutzern werden weitere Daten gespeichert, etwa ihr Name und ihre E-Mail-Adresse.
+        <?php if ($singular) : ?>
+            Registrierte Nutzer sind nur mit mir verwandte oder verschwägerte Personen.
+        <?php else : ?>
+            Registrierte Nutzer sind nur mit uns verwandte oder verschwägerte Personen.
+        <?php endif ?>
+        Die Inhalte hier sind zu einem guten Teil innerhalb der Familie 'vertraulich' weitergegeben worden.
+        Das müssen sie auch bleiben; deshalb sind wir alle darauf angewiesen,
+        dass jeder Einzelne diese Daten vertraulich behandelt.
+    </p>
+
+    <h4>Persönliche Daten zu Nutzern mit einem Benutzerkonto</h4>
+
+    <p>
+        Die personenbezogenen Daten, die Sie zur Einrichtung eines Kontos selbst zur Verfügung stellen,
+        werden gespeichert und verarbeitet (siehe: Kontaktdaten)
+    </p>
+
+    <ul>
+        <li>Name</li>
+        <li>E-Mail Adresse</li>
+        <li>Passwort</li>
+    </ul>
+
+    <p>
+        Andere personenbezogene Daten, die Sie aktiv zur Verfügung stellen, werden ebenfalls gespeichert und verwendet.
+        Dazu gehören etwa Daten durch die Vervollständigung Ihrer persönlichen Daten auf Ihrer persönlichen Seite
+        oder durch die Herstellung von Familienbeziehungen.
+    </p>
+
+    <p>
+        Des weiteren werden Daten mit Bezug zu Ihrem Benutzerkonto erfasst,
+        die durch Ihre Aktivitäten auf unserer Website entstehen, etwa beim Bearbeiten von Datensätzen.
+    </p>
+
+    <p>
+        <?php if ($singular) : ?>
+            Ich verwende Ihre E-Mail-Adresse gelegentlich,
+        <?php else : ?>
+            Wir verwenden Ihre E-Mail-Adresse gelegentlich,
+        <?php endif ?>
+        um Sie per E-Mail über wichtige Angelegenheiten im Zusammenhang mit der Website zu informieren
+        oder um Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen zu kontaktieren.
+    </p>
+
+    <p>
+        Wenn Sie Ihr Benutzerkonto hier deaktivieren lassen,
+        bleiben die von Ihnen eingegebenen genealogischen Daten zum Nutzen unserer genealogischen Forschung erhalten.
+        Die Daten zu Ihrer Person bleiben ebenfalls erhalten,
+        nur Ihr Zugang zu den hier speziell geschützten Bereichen wird gesperrt.
+    </p>
+
+    <h4>Persönliche Daten zu Besuchern dieser Website</h4>
+
+    <p>Darüber hinaus werden im Prinzip personenbeziehbare Daten der nicht angemeldeten Nutzer dieses Angebotes
+        (Besucher) gespeichert (siehe: Nutzungsdaten und Kommunikationsdaten).</p>
+
+    <h4>Sicherheitsmaßnahmen</h4>
+
+    <p>
+        Es werden nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik,
+        der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung
+        sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung
+        der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen getroffen,
+        um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.
+    </p>
+
+    <p>
+        Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit,
+        Integrität und Verfügbarkeit von Daten unter anderem durch die Kontrolle des Zugangs zu den Daten.
+    </p>
+
+    <h4>Generelles Risiko</h4>
+
+    <p>
+        <?php if ($singular) : ?>
+            Ich weise darauf hin,
+        <?php else : ?>
+            Wir weisen darauf hin,
+        <?php endif ?>
+        dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann.
+        Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist ebenfalls nicht möglich.
+    </p>
+
+    <h4>Cookies</h4>
+
+    <p>
+        Diese Website verwendet Cookies,
+        um Benutzeranmeldungen zu ermöglichen und Einstellungen wie die von Ihnen gewählte Sprache zu speichern.
+        Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.
+        Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.
+        Diese Cookies sind für das ordnungsgemäße Funktionieren der Website unbedingt notwendig.
+        Sie können Ihren Browser so einstellen,
+        dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben,
+        die Annahme von Cookies für bestimmte Fälle oder generell ausschließen
+        sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren.
+        Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
+    </p>
+
+    <p>
+        <?php if (count($cookiesServices) > 0) : ?>
+            <?= I18N::translate('This website uses third-party services to manage cookies.') ?>
+            <?php foreach ($cookiesServices as $service => $url) : ?>
+                <li>
+                    <?= $service ?> — <a href="<?= e($url) ?>"><?= e($url) ?></a>
+                </li>
+            <?php endforeach ?>
+        <?php endif ?>
+    </p>
+
+    <?php if ($analytics->isNotEmpty() || count($trackingServices) > 0) : ?>
+        <h4><?= I18N::translate('Tracking and analytics') ?></h4>
+        <p>
+            <ul>
+                <li>
+                    <?= I18N::translate('This website uses third-party services to learn about visitor behavior.') ?>
+                    <ul>
+                        <?php if ($analytics->isNotEmpty()) : ?>
+                            <?php foreach ($analytics as $module) : ?>
+                                <li>
+                                    <?= $module->title() ?> —
+                                    <a href="<?= e($module->externalUrl()) ?>"><?= e($module->externalUrl()) ?></a>
+                                </li>
+                            <?php endforeach ?>
+                        <?php endif ?>
+                        <?php if (count($trackingServices) > 0) : ?>
+                            <?php foreach ($trackingServices as $service => $url) : ?>
+                                <li>
+                                    <?= $service ?> — <a href="<?= e($url) ?>"><?= e($url) ?></a>
+                                </li>
+                            <?php endforeach ?>
+                        <?php endif ?>
+                    </ul>
+                </li>
+
+                <li>
+                    <?= I18N::translate('These services may use cookies or other tracking technology.') ?>
+                </li>
+
+                <li>
+                    <?= I18N::translate('You can opt out of tracking by setting the “Do Not Track” header in your browser preferences.') ?>
+                </li>
+            </ul>
+        </p>
+    <?php endif ?>
+
+    <?php if (count($thirdPartyServices) > 0) : ?>
+        <h4><?= I18N::translate('Third party services') ?></h4>
+        <p>
+            <ul>
+                <li>
+                    <?= I18N::translate('This website uses additional third-party services.') ?>
+                    <ul>
+                        <?php foreach ($thirdPartyServices as $service => $url) : ?>
+                            <li>
+                                <?= $service ?> — <a href="<?= e($url) ?>"><?= e($url) ?></a>
+                            </li>
+                        <?php endforeach ?>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+    <?php endif ?>
+
+    <?php if (count($externalTranscriptionProviders) > 0) : ?>
+        <h4><?= I18N::translate('External transcription providers') ?></h4>
+
+        <p>
+            <?= I18N::translate('This website may use external transcription providers when a registered user explicitly starts such a workflow.') ?>
+            <?= I18N::translate('In that case, the following provider services and data categories may be involved:') ?>
+        </p>
+
+        <ul>
+            <?php foreach ($externalTranscriptionProviders as $provider) : ?>
+                <li>
+                    <strong><?= e($provider['name'] ?? '') ?></strong>
+                    <?php if (($provider['url'] ?? '') !== '') : ?>
+                        —
+                        <a href="<?= e($provider['url']) ?>"><?= e($provider['url']) ?></a>
+                    <?php endif ?>
+
+                    <?php if (count($provider['data'] ?? []) > 0) : ?>
+                        <br>
+                        <?= I18N::translate('Data that may be exchanged:') ?>
+                        <ul>
+                            <?php foreach ($provider['data'] as $dataCategory) : ?>
+                                <li><?= e($dataCategory) ?></li>
+                            <?php endforeach ?>
+                        </ul>
+                    <?php endif ?>
+                </li>
+            <?php endforeach ?>
+        </ul>
+    <?php endif ?>
+
+    <h4>Hosting für den webtrees-Server</h4>
+
+    <p>
+        <?php if ($hostingCompanyName !== '') : ?>
+            Diese Website wird beim Hosting-Anbieter
+            <?php if ($hostingCompanyUrl !== '') : ?>
+                <a href="<?= e($hostingCompanyUrl) ?>"><?= e($hostingCompanyName) ?></a>
+            <?php else : ?>
+                <?= e($hostingCompanyName) ?>
+            <?php endif ?>
+            betrieben.
+            <?php if ($hostingPrivacyNotice !== '' && $hostingCompanyName !== '') : ?>
+                Details entnehmen Sie bitte der <a href="<?= e($hostingPrivacyNotice) ?>">Datenschutzerklärung</a> von <?= e($hostingCompanyName) ?>.
+            <?php endif ?>
+        <?php endif ?>
+    </p>
+
+    <p>
+        Der Hosting-Anbieter erhebt und speichert automatisch Informationen bei Zugriffen auf diese Website
+        wie verwendeter Browser, Betriebssystem, Verweisseite, IP-Adresse, Uhrzeit des Zugriffs usw.
+        Diese Daten können ohne Hinzuziehung weiterer Datenquellen keinen bestimmten Personen zugeordnet werden und
+        <?php if ($singular) : ?>
+            ich werte diese Daten auch nicht weiter aus,
+        <?php else : ?>
+            wir werten diese Daten auch nicht weiter aus,
+        <?php endif ?>
+        solange keine rechtswidrige Nutzung dieser Webseiten vorliegt.
+    </p>
+
+    <?php if ($orderProcessing) : ?>
+        <h5>Auftragsverarbeitung</h5>
+
+        <p>Mit dem Hosting-Anbieter wurde eine Vereinbarung über die Auftragsverarbeitung geschlossen.
+            <?php if ($hostingStartDate !== '' || $hostingEndDate !== '') : ?>
+                Dies erfolgte
+                <?php if ($hostingStartDate !== '') : ?>
+                    erstmalig am <?= e($hostingStartDate) ?>
+                    <?php if ($hostingEndDate !== '') : ?>
+                        und
+                    <?php endif ?>
+                <?php endif ?>
+                <?php if ($hostingEndDate !== '') : ?>
+                    letztmalig am <?= e($hostingEndDate) ?>
+                <?php endif ?>.
+            <?php endif ?>
+            Hierbei handelt es sich um eine nach Artikel 28 DSGVO datenschutzrechtlich vorgeschriebenen Vereinbarung,
+            die gewährleistet, dass der Hosting-Anbieter die personenbezogenen Daten dieser Website
+            <?php if ($singular) : ?>
+                 nur nach meinen Weisungen
+            <?php else : ?>
+                nur nach unseren Weisungen
+            <?php endif ?>
+            und unter Einhaltung der DSGVO verarbeitet.
+        </p>
+    <?php endif ?>
+
+    <h4>Protokoll der Anwendung</h4>
+
+    <p>
+        Die verwendete Anwendung (webtrees) protokolliert alle Aktionen der Nutzer,
+        damit u.a. die Änderungen am Datenbestand nachvollzogen und freigegeben werden können.
+    </p>
