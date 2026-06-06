@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 19:24+0200\n"
+"POT-Creation-Date: 2026-06-06 20:01+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -80,6 +80,12 @@ msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Contacte addicional"
 msgstr[1] "Contactes addicionals"
+
+#: LegalNoticeFooterModule.php:726
+msgid "Website administrator"
+msgid_plural "Website administrators"
+msgstr[0] "Administrador del lloc web"
+msgstr[1] "Administradors del lloc web"
 
 #: LegalNoticeFooterModule.php:727
 msgid ""
@@ -178,6 +184,13 @@ msgstr ""
 msgid "Data that may be exchanged:"
 msgstr ""
 
+#: resources\views\settings.phtml:65 resources\views\settings.phtml:161
+#: resources\views\settings.phtml:179 resources\views\settings.phtml:203
+#: resources\views\settings.phtml:249 resources\views\settings.phtml:309
+#: resources\views\settings.phtml:376
+msgid "optional"
+msgstr "opcional"
+
 #: resources\views\settings.phtml:72
 msgid "Should a copyright notice be included in this page footer element?"
 msgstr ""
@@ -190,6 +203,10 @@ msgstr "Any d'inici dels drets d'autor (p. ex., \"2020\")"
 #: resources\views\settings.phtml:96
 msgid "Name of holder of copyright"
 msgstr "Nom del titular dels drets d'autor"
+
+#: resources\views\settings.phtml:105 resources\views\settings.phtml:174
+msgid "mandatory"
+msgstr "obligatori"
 
 #: resources\views\settings.phtml:110
 msgid "First name(s)"

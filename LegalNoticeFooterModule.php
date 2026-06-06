@@ -723,7 +723,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'countTreeContacts'         => count($contactsTreeContacts),
             'contactsTreeContacts'      => $contactsTreeContacts,
             'showAdministrators'        => $this->showAdministrators(),
-            'headAdministrators'        => MoreI18N::xlatePlural('Website administrator','Website administrators', count($contactsAdministrators)),
+            'headAdministrators'        => I18N::plural('Website administrator','Website administrators', count($contactsAdministrators)),
             'commentAdministrators'     => I18N::plural('The webtrees administrator is responsible to manage users and to set the preferences for this website.',
                                             'The webtrees administrators are responsible to manage users and to set the preferences for this website.', count($contactsAdministrators)),
             'countAdministrators'       => count($contactsAdministrators),
