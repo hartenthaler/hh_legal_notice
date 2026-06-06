@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 20:57+0200\n"
+"POT-Creation-Date: 2026-06-06 21:47+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Hermann Hartenthaler <hermann@hartenthaler.de>\n"
 "Language-Team: \n"
@@ -65,6 +65,7 @@ msgid "This website uses cookies."
 msgstr "Diese Website verwendet Cookies."
 
 #: LegalNoticeFooterModule.php:735
+#: resources\views\page\sections\terminology.phtml:21
 msgid "Responsible person"
 msgstr "Verantwortliche Person"
 
@@ -130,47 +131,346 @@ msgstr "Sehr geehrte Frau %s"
 msgid "Dear %s"
 msgstr "Sehr geehrte/r %s"
 
-#: resources\views\page\sections\data-categories.phtml:129
+#: resources\views\page\sections\data-categories.phtml:8
+msgid "Personal data about ancestors, family members, and other persons"
+msgstr "Persönliche Daten zu Ahnen, Familienmitgliedern und weiteren Personen"
+
+#: resources\views\page\sections\data-categories.phtml:11
+msgid ""
+"Personal data about living persons is also stored for the purpose of family "
+"history and genealogical research; see inventory data and content data above."
+msgstr ""
+"Es werden persönliche Daten auch von lebenden Personen zum Zweck der "
+"Familien- und Ahnenforschung gespeichert (siehe oben: Bestandsdaten und "
+"Inhaltsdaten)."
+
+#: resources\views\page\sections\data-categories.phtml:12
+msgid ""
+"Family history and genealogical research is a legitimate interest under "
+"Article 6(f) of the General Data Protection Regulation (EU GDPR)."
+msgstr ""
+"Die Familien- und Ahnenforschung ist ein „berechtigtes Interesse“ gemäß "
+"Artikel 6 (f) der Datenschutzgrundverordnung (EU-DSGVO)."
+
+#: resources\views\page\sections\data-categories.phtml:13
+msgid ""
+"Personal data that you find on this website, such as names, e-mail "
+"addresses, photos, addresses, or life dates, is used only for family history "
+"and genealogical research and is kept securely."
+msgstr ""
+"Persönliche Daten, die Sie auf dieser Website finden, wie zum Beispiel "
+"Namen, E-Mail-Adressen, Fotos, Adressen oder Lebensdaten werden nur zum "
+"Zweck der Familien- und Ahnenforschung verwendet und sicher verwahrt."
+
+#: resources\views\page\sections\data-categories.phtml:14
+msgid ""
+"It is stored indefinitely because it has historical value for genealogy."
+msgstr ""
+"Sie werden zeitlich unbeschränkt aufbewahrt, da sie von historischem Wert "
+"für die Genealogie sind."
+
+#: resources\views\page\sections\data-categories.phtml:17
+msgid "Graduated access rights to personal data"
+msgstr "Abgestufte Zugangsrechte zu den Personendaten"
+
+#: resources\views\page\sections\data-categories.phtml:20
+msgid "Large parts of the content of this website are freely accessible."
+msgstr "Große Teile der Inhalte dieser Website sind frei zugänglich."
+
+#: resources\views\page\sections\data-categories.phtml:21
+msgid "This does not apply to data about persons who are still living."
+msgstr "Nicht so die Daten von noch lebenden Personen."
+
+#: resources\views\page\sections\data-categories.phtml:22
+msgid ""
+"Only registered users who have been assigned graduated rights have access to "
+"this data."
+msgstr ""
+"Auf diese haben nur registrierte Nutzer Zugriff, denen abgestufte Rechte "
+"zugeordnet werden."
+
+#: resources\views\page\sections\data-categories.phtml:23
+msgid ""
+"Additional data is stored about these users, such as their name and e-mail "
+"address."
+msgstr ""
+"Zu diesen Nutzern werden weitere Daten gespeichert, etwa ihr Name und ihre E-"
+"Mail-Adresse."
+
+#: resources\views\page\sections\data-categories.phtml:24
+msgid "Registered users are only persons related to me by blood or marriage."
+msgid_plural ""
+"Registered users are only persons related to us by blood or marriage."
+msgstr[0] ""
+"Registrierte Nutzer sind nur mit mir verwandte oder verschwägerte Personen."
+msgstr[1] ""
+"Registrierte Nutzer sind nur mit uns verwandte oder verschwägerte Personen."
+
+#: resources\views\page\sections\data-categories.phtml:25
+msgid ""
+"A substantial part of the content here has been shared confidentially within "
+"the family."
+msgstr ""
+"Die Inhalte hier sind zu einem guten Teil innerhalb der Familie vertraulich "
+"weitergegeben worden."
+
+#: resources\views\page\sections\data-categories.phtml:26
+msgid ""
+"It must remain confidential; therefore we all depend on every individual "
+"treating this data confidentially."
+msgstr ""
+"Das müssen sie auch bleiben; deshalb sind wir alle darauf angewiesen, dass "
+"jeder Einzelne diese Daten vertraulich behandelt."
+
+#: resources\views\page\sections\data-categories.phtml:29
+msgid "Personal data about users with a user account"
+msgstr "Persönliche Daten zu Nutzern mit einem Benutzerkonto"
+
+#: resources\views\page\sections\data-categories.phtml:32
+msgid ""
+"The personal data that you provide yourself when creating an account is "
+"stored and processed; see contact data."
+msgstr ""
+"Die personenbezogenen Daten, die Sie zur Einrichtung eines Kontos selbst zur "
+"Verfügung stellen, werden gespeichert und verarbeitet (siehe: Kontaktdaten)"
+
+#: resources\views\page\sections\data-categories.phtml:36
+msgid "Name"
+msgstr "Name"
+
+#: resources\views\page\sections\data-categories.phtml:37
+msgid "E-mail address"
+msgstr "E-Mail Adresse"
+
+#: resources\views\page\sections\data-categories.phtml:38
+msgid "Password"
+msgstr "Passwort"
+
+#: resources\views\page\sections\data-categories.phtml:42
+msgid "Other personal data that you actively provide is also stored and used."
+msgstr ""
+"Andere personenbezogene Daten, die Sie aktiv zur Verfügung stellen, werden "
+"ebenfalls gespeichert und verwendet."
+
+#: resources\views\page\sections\data-categories.phtml:43
+msgid ""
+"This includes, for example, data created by completing your personal details "
+"on your personal page or by creating family relationships."
+msgstr ""
+"Dazu gehören etwa Daten durch die Vervollständigung Ihrer persönlichen Daten "
+"auf Ihrer persönlichen Seite oder durch die Herstellung von "
+"Familienbeziehungen."
+
+#: resources\views\page\sections\data-categories.phtml:47
+msgid ""
+"Furthermore, data relating to your user account is recorded as a result of "
+"your activities on our website, for example when editing records."
+msgstr ""
+"Des weiteren werden Daten mit Bezug zu Ihrem Benutzerkonto erfasst, die "
+"durch Ihre Aktivitäten auf unserer Website entstehen, etwa beim Bearbeiten "
+"von Datensätzen."
+
+#: resources\views\page\sections\data-categories.phtml:51
+msgid ""
+"I occasionally use your e-mail address to inform you by e-mail about "
+"important matters relating to the website or, if necessary, to contact you "
+"with questions about changes you have made."
+msgid_plural ""
+"We occasionally use your e-mail address to inform you by e-mail about "
+"important matters relating to the website or, if necessary, to contact you "
+"with questions about changes you have made."
+msgstr[0] ""
+"Ich verwende Ihre E-Mail-Adresse gelegentlich, um Sie per E-Mail über "
+"wichtige Angelegenheiten im Zusammenhang mit der Website zu informieren oder "
+"um Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen "
+"zu kontaktieren."
+msgstr[1] ""
+"Wir verwenden Ihre E-Mail-Adresse gelegentlich, um Sie per E-Mail über "
+"wichtige Angelegenheiten im Zusammenhang mit der Website zu informieren oder "
+"um Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen "
+"zu kontaktieren."
+
+#: resources\views\page\sections\data-categories.phtml:55
+msgid ""
+"If you have your user account disabled here, the genealogical data you "
+"entered will remain available for the benefit of our genealogical research."
+msgstr ""
+"Wenn Sie Ihr Benutzerkonto hier deaktivieren lassen, bleiben die von Ihnen "
+"eingegebenen genealogischen Daten zum Nutzen unserer genealogischen "
+"Forschung erhalten."
+
+#: resources\views\page\sections\data-categories.phtml:56
+msgid ""
+"The data about your person will also be retained; only your access to the "
+"specially protected areas here will be blocked."
+msgstr ""
+"Die Daten zu Ihrer Person bleiben ebenfalls erhalten, nur Ihr Zugang zu den "
+"hier speziell geschützten Bereichen wird gesperrt."
+
+#: resources\views\page\sections\data-categories.phtml:59
+msgid "Personal data about visitors to this website"
+msgstr "Persönliche Daten zu Besuchern dieser Website"
+
+#: resources\views\page\sections\data-categories.phtml:61
+msgid ""
+"In principle, data that can be related to non-logged-in users of this "
+"service, visitors, is also stored; see usage data and communication data."
+msgstr ""
+"Darüber hinaus werden im Prinzip personenbeziehbare Daten der nicht "
+"angemeldeten Nutzer dieses Angebotes (Besucher) gespeichert (siehe: "
+"Nutzungsdaten und Kommunikationsdaten)."
+
+#: resources\views\page\sections\data-categories.phtml:63
+msgid "Security measures"
+msgstr "Sicherheitsmaßnahmen"
+
+#: resources\views\page\sections\data-categories.phtml:66
+msgid ""
+"Appropriate technical and organizational measures are taken in accordance "
+"with legal requirements, taking into account the state of the art, "
+"implementation costs, the nature, scope, circumstances, and purposes of "
+"processing, and the varying likelihood and severity of the risk to the "
+"rights and freedoms of natural persons, in order to ensure a level of "
+"security appropriate to the risk."
+msgstr ""
+"Es werden nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des "
+"Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der "
+"Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen "
+"Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und "
+"Freiheiten natürlicher Personen geeignete technische und organisatorische "
+"Maßnahmen getroffen, um ein dem Risiko angemessenes Schutzniveau zu "
+"gewährleisten."
+
+#: resources\views\page\sections\data-categories.phtml:70
+msgid ""
+"These measures include, in particular, securing the confidentiality, "
+"integrity, and availability of data, including by controlling access to the "
+"data."
+msgstr ""
+"Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, "
+"Integrität und Verfügbarkeit von Daten unter anderem durch die Kontrolle des "
+"Zugangs zu den Daten."
+
+#: resources\views\page\sections\data-categories.phtml:73
+msgid "General risk"
+msgstr "Generelles Risiko"
+
+#: resources\views\page\sections\data-categories.phtml:76
+msgid ""
+"I point out that data transmission on the Internet, for example when "
+"communicating by e-mail, may have security gaps."
+msgid_plural ""
+"We point out that data transmission on the Internet, for example when "
+"communicating by e-mail, may have security gaps."
+msgstr[0] ""
+"Ich weise darauf hin, dass die Datenübertragung im Internet (z.B. bei der "
+"Kommunikation per E-Mail) Sicherheitslücken aufweisen kann."
+msgstr[1] ""
+"Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der "
+"Kommunikation per E-Mail) Sicherheitslücken aufweisen kann."
+
+#: resources\views\page\sections\data-categories.phtml:77
+msgid ""
+"Complete protection of data against access by third parties is also not "
+"possible."
+msgstr ""
+"Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist ebenfalls "
+"nicht möglich."
+
+#: resources\views\page\sections\data-categories.phtml:80
+msgid "Cookies"
+msgstr "Cookies"
+
+#: resources\views\page\sections\data-categories.phtml:83
+msgid ""
+"This website uses cookies to enable user logins and to store settings such "
+"as your selected language."
+msgstr ""
+"Diese Website verwendet Cookies, um Benutzeranmeldungen zu ermöglichen und "
+"Einstellungen wie die von Ihnen gewählte Sprache zu speichern."
+
+#: resources\views\page\sections\data-categories.phtml:84
+msgid ""
+"Cookies help make our service more user-friendly, effective, and secure."
+msgstr ""
+"Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und "
+"sicherer zu machen."
+
+#: resources\views\page\sections\data-categories.phtml:85
+msgid ""
+"Cookies are small text files that are stored on your computer and saved by "
+"your browser."
+msgstr ""
+"Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und "
+"die Ihr Browser speichert."
+
+#: resources\views\page\sections\data-categories.phtml:86
+msgid ""
+"These cookies are strictly necessary for the website to function properly."
+msgstr ""
+"Diese Cookies sind für das ordnungsgemäße Funktionieren der Website "
+"unbedingt notwendig."
+
+#: resources\views\page\sections\data-categories.phtml:87
+msgid ""
+"You can configure your browser so that you are informed when cookies are "
+"set, allow cookies only in individual cases, exclude the acceptance of "
+"cookies in certain cases or in general, and enable automatic deletion of "
+"cookies when closing the browser."
+msgstr ""
+"Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies "
+"informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von "
+"Cookies für bestimmte Fälle oder generell ausschließen sowie das "
+"automatische Löschen der Cookies beim Schließen des Browser aktivieren."
+
+#: resources\views\page\sections\data-categories.phtml:88
+msgid ""
+"If cookies are disabled, the functionality of this website may be restricted."
+msgstr ""
+"Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website "
+"eingeschränkt sein."
+
+#: resources\views\page\sections\data-categories.phtml:93
 msgid "This website uses third-party services to manage cookies."
 msgstr ""
 "Diese Website verwendet Dienste von Drittanbietern zum Management der "
 "Cookies."
 
-#: resources\views\page\sections\data-categories.phtml:139
+#: resources\views\page\sections\data-categories.phtml:103
 msgid "Tracking and analytics"
 msgstr "Tracking und Analyse"
 
-#: resources\views\page\sections\data-categories.phtml:143
+#: resources\views\page\sections\data-categories.phtml:107
 msgid "This website uses third-party services to learn about visitor behavior."
 msgstr ""
 "Diese Website verwendet Dienste von Drittanbietern, um Erkenntnisse über das "
 "Verhalten der Nutzer zu gewinnen."
 
-#: resources\views\page\sections\data-categories.phtml:164
+#: resources\views\page\sections\data-categories.phtml:128
 msgid "These services may use cookies or other tracking technology."
 msgstr "Diese Dienste können Cookies oder andere Tracking-Techniken verwenden."
 
-#: resources\views\page\sections\data-categories.phtml:168
+#: resources\views\page\sections\data-categories.phtml:132
 msgid ""
-"You can opt out of tracking by setting the “Do Not Track” header in your "
+"You can opt out of tracking by setting the \"Do Not Track\" header in your "
 "browser preferences."
 msgstr ""
 "Sie können sich vom Tracking abmelden, indem Sie in ihren "
 "Browsereinstellungen \"Nicht nachverfolgen\" auswählen."
 
-#: resources\views\page\sections\data-categories.phtml:175
+#: resources\views\page\sections\data-categories.phtml:139
 msgid "Third party services"
 msgstr "Drittanbieter"
 
-#: resources\views\page\sections\data-categories.phtml:179
+#: resources\views\page\sections\data-categories.phtml:143
 msgid "This website uses additional third-party services."
 msgstr "Diese Website verwendet zusätzliche Dienste von Drittanbietern."
 
-#: resources\views\page\sections\data-categories.phtml:193
+#: resources\views\page\sections\data-categories.phtml:157
 msgid "External transcription providers"
 msgstr "Externe Transkriptionsdienstleister"
 
-#: resources\views\page\sections\data-categories.phtml:196
+#: resources\views\page\sections\data-categories.phtml:160
 msgid ""
 "This website may use external transcription providers when a registered user "
 "explicitly starts such a workflow."
@@ -178,16 +478,492 @@ msgstr ""
 "Diese Website kann externe Transkriptionsanbieter nutzen, wenn ein "
 "registrierter Nutzer einen solchen Arbeitsablauf ausdrücklich in Gang setzt."
 
-#: resources\views\page\sections\data-categories.phtml:197
+#: resources\views\page\sections\data-categories.phtml:161
 msgid ""
 "In that case, the following provider services and data categories may be "
 "involved:"
 msgstr ""
 "In diesem Fall können folgende Dienste und Datenkategorien betroffen sein:"
 
-#: resources\views\page\sections\data-categories.phtml:211
+#: resources\views\page\sections\data-categories.phtml:175
 msgid "Data that may be exchanged:"
 msgstr "Daten, die ausgetauscht werden können:"
+
+#: resources\views\page\sections\data-categories.phtml:187
+msgid "Hosting for the webtrees server"
+msgstr "Hosting für den webtrees-Server"
+
+#: resources\views\page\sections\data-categories.phtml:191
+msgid "This website is operated by the hosting provider"
+msgstr "Diese Website wird beim Hosting-Anbieter"
+
+#: resources\views\page\sections\data-categories.phtml:199
+#, php-format
+msgid "For details, please refer to the privacy notice of %s."
+msgstr "Details entnehmen Sie bitte der Datenschutzerklärung von %s."
+
+#: resources\views\page\sections\data-categories.phtml:206
+msgid ""
+"The hosting provider automatically collects and stores information when this "
+"website is accessed, such as browser used, operating system, referring page, "
+"IP address, time of access, and similar data."
+msgstr ""
+"Der Hosting-Anbieter erhebt und speichert automatisch Informationen bei "
+"Zugriffen auf diese Website wie verwendeter Browser, Betriebssystem, "
+"Verweisseite, IP-Adresse, Uhrzeit des Zugriffs usw."
+
+#: resources\views\page\sections\data-categories.phtml:207
+msgid ""
+"This data cannot be assigned to specific persons without consulting "
+"additional data sources, and"
+msgstr ""
+"Diese Daten können ohne Hinzuziehung weiterer Datenquellen keinen bestimmten "
+"Personen zugeordnet werden und"
+
+#: resources\views\page\sections\data-categories.phtml:208
+msgid "I do not evaluate this data further"
+msgid_plural "we do not evaluate this data further"
+msgstr[0] "ich werte diese Daten auch nicht weiter aus,"
+msgstr[1] "wir werten diese Daten auch nicht weiter aus,"
+
+#: resources\views\page\sections\data-categories.phtml:209
+msgid "unless there is unlawful use of these web pages."
+msgstr "solange keine rechtswidrige Nutzung dieser Webseiten vorliegt."
+
+#: resources\views\page\sections\data-categories.phtml:213
+msgid "Order processing"
+msgstr "Auftragsverarbeitung"
+
+#: resources\views\page\sections\data-categories.phtml:215
+msgid ""
+"An agreement on order processing has been concluded with the hosting "
+"provider."
+msgstr ""
+"Mit dem Hosting-Anbieter wurde eine Vereinbarung über die "
+"Auftragsverarbeitung geschlossen."
+
+#: resources\views\page\sections\data-categories.phtml:217
+msgid "This took place"
+msgstr "Dies erfolgte"
+
+#: resources\views\page\sections\data-categories.phtml:219
+#, php-format
+msgid "for the first time on %s"
+msgstr "erstmalig am %s"
+
+#: resources\views\page\sections\data-categories.phtml:221
+msgid "and"
+msgstr "und"
+
+#: resources\views\page\sections\data-categories.phtml:225
+#, php-format
+msgid "most recently on %s"
+msgstr "letztmalig am %s"
+
+#: resources\views\page\sections\data-categories.phtml:228
+msgid ""
+"This is an agreement required by data protection law under Article 28 GDPR, "
+"which ensures that the hosting provider processes the personal data of this "
+"website"
+msgstr ""
+"Hierbei handelt es sich um eine nach Artikel 28 DSGVO datenschutzrechtlich "
+"vorgeschriebenen Vereinbarung, die gewährleistet, dass der Hosting-Anbieter "
+"die personenbezogenen Daten dieser Website"
+
+#: resources\views\page\sections\data-categories.phtml:229
+msgid "only according to my instructions"
+msgid_plural "only according to our instructions"
+msgstr[0] "nur nach meinen Weisungen"
+msgstr[1] "nur nach unseren Weisungen"
+
+#: resources\views\page\sections\data-categories.phtml:230
+msgid "and in compliance with the GDPR."
+msgstr "und unter Einhaltung der DSGVO verarbeitet."
+
+#: resources\views\page\sections\data-categories.phtml:234
+msgid "Application log"
+msgstr "Protokoll der Anwendung"
+
+#: resources\views\page\sections\data-categories.phtml:237
+msgid ""
+"The application used (webtrees) logs all user actions so that, among other "
+"things, changes to the data can be traced and approved."
+msgstr ""
+"Die verwendete Anwendung (webtrees) protokolliert alle Aktionen der Nutzer, "
+"damit u.a. die Änderungen am Datenbestand nachvollzogen und freigegeben "
+"werden können."
+
+#: resources\views\page\sections\data-rights.phtml:9
+msgid ""
+"You have the right at any time to obtain information about the data stored "
+"about you, its origin, and the purpose of storage."
+msgstr ""
+"Sie haben jederzeit das Recht auf Auskunft über die bezüglich Ihrer Person "
+"gespeicherten Daten, deren Herkunft und den Zweck der Speicherung."
+
+#: resources\views\page\sections\data-rights.phtml:10
+msgid ""
+"You also have the right to request completion of the data concerning you or "
+"correction of inaccurate data concerning you."
+msgstr ""
+"Sie haben auch das Recht, die Vervollständigung der Sie betreffenden Daten "
+"oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen."
+
+#: resources\views\page\sections\data-rights.phtml:14
+msgid ""
+"In accordance with Article 17 GDPR, you have the right to request that "
+"relevant data be deleted without undue delay, or alternatively, in "
+"accordance with Article 18 GDPR, to request restriction of the processing of "
+"the data."
+msgstr ""
+"Sie haben nach Maßgabe des Artikel 17 DSGVO das Recht zu verlangen, dass "
+"betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe "
+"des Artikel 18 DSGVO eine Einschränkung der Verarbeitung der Daten zu "
+"verlangen."
+
+#: resources\views\page\sections\data-rights.phtml:18
+msgid ""
+"Furthermore, under Article 77 GDPR, you have the right to lodge a complaint "
+"with the competent supervisory authority."
+msgstr ""
+"Sie haben ferner gem. Artikel 77 DSGVO das Recht, eine Beschwerde bei der "
+"zuständigen Aufsichtsbehörde einzureichen."
+
+#: resources\views\page\sections\data-rights.phtml:21
+msgid "GDPR in connection with online genealogies"
+msgstr "DSGVO im Zusammenhang mit Online-Genealogien"
+
+#: resources\views\page\sections\data-rights.phtml:24
+msgid ""
+"I am a strong advocate of data protection and would like to emphasize that I "
+"naturally make every effort to comply with the GDPR."
+msgid_plural ""
+"We are strong advocates of data protection and would like to emphasize that "
+"we naturally make every effort to comply with the GDPR."
+msgstr[0] ""
+"Ich bin ein ausgesprochener Befürworter des Datenschutzes und möchte "
+"betonen, dass ich selbstverständlich bemüht bin, die DSGVO einzuhalten."
+msgstr[1] ""
+"Wir sind ausgesprochene Befürworter des Datenschutzes und möchten betonen, "
+"dass wir selbstverständlich bemüht sind, die DSGVO einzuhalten."
+
+#: resources\views\page\sections\data-rights.phtml:25
+msgid ""
+"However, fully and clearly legally compliant implementation in all cases is "
+"probably not possible in the field of online genealogy."
+msgstr ""
+"Aber eine in allen Fällen eindeutig rechtskonforme Umsetzung ist auf dem "
+"Gebiet der Online-Genealogie vermutlich gar nicht möglich."
+
+#: resources\views\page\sections\data-rights.phtml:26
+msgid ""
+"Too many questions are disputed and leave room for legal interpretation."
+msgstr ""
+"Zu viele Fragen sind strittig, die juristischen Spielraum offen lassen."
+
+#: resources\views\page\sections\data-rights.phtml:30
+msgid ""
+"However, I can rule out with certainty that everyone entered in this family "
+"tree knows about it."
+msgid_plural ""
+"However, we can rule out with certainty that everyone entered in this family "
+"tree knows about it."
+msgstr[0] ""
+"Ich kann aber mit Sicherheit ausschließen, dass jeder, der in diesem "
+"Stammbaum eingetragen ist, auch davon weiß!"
+msgstr[1] ""
+"Wir können aber mit Sicherheit ausschließen, dass jeder, der in diesem "
+"Stammbaum eingetragen ist, auch davon weiß!"
+
+#: resources\views\page\sections\data-rights.phtml:31
+msgid "Creating a family tree works differently."
+msgstr "Die Erstellung eines Stammbaumes funktioniert anders."
+
+#: resources\views\page\sections\data-rights.phtml:32
+msgid ""
+"Usually, information about a branch of the family is obtained from one "
+"person in that branch."
+msgstr ""
+"Meistens bekommt man von einer Person eines Familienzweiges Informationen zu "
+"diesem Teil der Verwandtschaft."
+
+#: resources\views\page\sections\data-rights.phtml:33
+msgid ""
+"I have not obtained verifiable consent from our relatives to enter the "
+"respective family in this family tree."
+msgid_plural ""
+"We have not obtained verifiable consent from our relatives to enter the "
+"respective family in this family tree."
+msgstr[0] ""
+"Ich habe von unseren Verwandten nicht die nachweisbare Einwilligung zur "
+"Eintragung der jeweiligen Familie in diesen Stammbaum eingeholt."
+msgstr[1] ""
+"Wir haben von unseren Verwandten nicht die nachweisbare Einwilligung zur "
+"Eintragung der jeweiligen Familie in diesen Stammbaum eingeholt."
+
+#: resources\views\page\sections\data-rights.phtml:37
+msgid ""
+"In my opinion, full compliance with the GDPR would therefore only be "
+"possible if I took large parts of this family tree offline again."
+msgid_plural ""
+"In our opinion, full compliance with the GDPR would therefore only be "
+"possible if we took large parts of this family tree offline again."
+msgstr[0] ""
+"Eine vollumfängliche Erfüllung der DSGVO wäre also meines Erachtens nur "
+"möglich, wenn ich diesen Stammbaum in weiten Teilen wieder vom Netz nehmen "
+"würde."
+msgstr[1] ""
+"Eine vollumfängliche Erfüllung der DSGVO wäre also unseres Erachtens nur "
+"möglich, wenn wir diesen Stammbaum in weiten Teilen wieder vom Netz nehmen "
+"würden."
+
+#: resources\views\page\sections\data-rights.phtml:38
+msgid ""
+"This, however, would remove the ability of the target group to use it and "
+"find their own paths through the extended kinship network."
+msgstr ""
+"Damit aber entfiele für die Zielgruppe die Möglichkeit ihn zu nutzen und "
+"eigene Pfade in die verzweigte Verwandtschaft zu finden."
+
+#: resources\views\page\sections\data-rights.phtml:39
+msgid ""
+"Although I accept a certain risk, I am leaving our data online for the time "
+"being."
+msgid_plural ""
+"Although we accept a certain risk, we are leaving our data online for the "
+"time being."
+msgstr[0] ""
+"Obwohl ich ein gewisses Risiko eingehe, lasse ich daher unsere Daten "
+"vorerst online."
+msgstr[1] ""
+"Obwohl wir ein gewisses Risiko eingehen, lassen wir daher unsere Daten "
+"vorerst online."
+
+#: resources\views\page\sections\data-rights.phtml:40
+msgid "The will to handle the data carefully is present."
+msgstr "Der Wille mit den Daten sorgsam umzugehen ist vorhanden."
+
+#: resources\views\page\sections\data-rights.phtml:41
+msgid ""
+"I would therefore like to agree on the following procedure with all users of "
+"our website, hoping that this will satisfy the law:"
+msgid_plural ""
+"We would therefore like to agree on the following procedure with all users "
+"of our website, hoping that this will satisfy the law:"
+msgstr[0] ""
+"Ich möchte daher mit allen Nutzern unserer Website folgendes Vorgehen "
+"vereinbaren - in der Hoffnung damit dem Gesetz genüge zu tun:"
+msgstr[1] ""
+"Wir möchten daher mit allen Nutzern unserer Website folgendes Vorgehen "
+"vereinbaren - in der Hoffnung damit dem Gesetz genüge zu tun:"
+
+#: resources\views\page\sections\data-rights.phtml:45
+msgid ""
+"If you discover data that you believe is unlawfully visible, please inform "
+"me."
+msgid_plural ""
+"If you discover data that you believe is unlawfully visible, please inform "
+"us."
+msgstr[0] ""
+"Sollten Sie Daten entdecken, von denen Sie annehmen, dass diese "
+"widerrechtlich frei sichtbar sind, dann teilen Sie mir das bitte mit."
+msgstr[1] ""
+"Sollten Sie Daten entdecken, von denen Sie annehmen, dass diese "
+"widerrechtlich frei sichtbar sind, dann teilen Sie uns das bitte mit."
+
+#: resources\views\page\sections\data-rights.phtml:46
+msgid ""
+"I will then try as quickly as possible to obtain consent, remove visibility, "
+"or delete the data."
+msgid_plural ""
+"We will then try as quickly as possible to obtain consent, remove "
+"visibility, or delete the data."
+msgstr[0] ""
+"Ich werde dann schnellstmöglich versuchen die Einwilligung nachzuholen, "
+"die Sichtbarkeit aufzuheben oder die Daten löschen."
+msgstr[1] ""
+"Wir werden dann schnellstmöglich versuchen die Einwilligung nachzuholen, "
+"die Sichtbarkeit aufzuheben oder die Daten löschen."
+
+#: resources\views\page\sections\data-rights.phtml:47
+msgid ""
+"If, for specific reasons, you want to prevent your data from being visible "
+"even within the group of authorized registered users, please inform me so "
+"that I can further restrict visibility here as well."
+msgid_plural ""
+"If, for specific reasons, you want to prevent your data from being visible "
+"even within the group of authorized registered users, please inform us so "
+"that we can further restrict visibility here as well."
+msgstr[0] ""
+"Wenn Sie aus bestimmten Gründen die Sichtbarkeit von ihren Daten auch im "
+"Kreis der berechtigten, registrierten Nutzer verhindern wollen, dann bitte "
+"ich darum mir das mitzuteilen, damit ich auch hier die Sichtbarkeit weiter "
+"einschränken kann."
+msgstr[1] ""
+"Wenn Sie aus bestimmten Gründen die Sichtbarkeit von ihren Daten auch im "
+"Kreis der berechtigten, registrierten Nutzer verhindern wollen, dann bitten "
+"wir darum uns das mitzuteilen, damit wir auch hier die Sichtbarkeit weiter "
+"einschränken können."
+
+#: resources\views\page\sections\personal-data-processing.phtml:9
+msgid "I take the protection of the data stored here very seriously."
+msgid_plural "We take the protection of the data stored here very seriously."
+msgstr[0] "Ich nehme den Schutz der hier gespeicherten Daten sehr ernst."
+msgstr[1] "Wir nehmen den Schutz der hier gespeicherten Daten sehr ernst."
+
+#: resources\views\page\sections\personal-data-processing.phtml:12
+#, php-format
+msgid "The host for this application is located in %s."
+msgstr "Der Host für diese Anwendung steht in %s."
+
+#: resources\views\page\sections\personal-data-processing.phtml:16
+msgid "Transmission to a user browser is encrypted (https)."
+msgstr "Die Übertragung zum Browser eines Nutzers ist verschlüsselt (https)."
+
+#: resources\views\page\sections\personal-data-processing.phtml:19
+msgid "The software used (webtrees) offers many protection mechanisms."
+msgstr ""
+"Die verwendete Software (webtrees) bietet sehr viele Schutzmechanismen."
+
+#: resources\views\page\sections\personal-data-processing.phtml:23
+msgid ""
+"Data assigned to users of this service is processed, as well as data about "
+"living and deceased persons."
+msgstr ""
+"Es werden sowohl Daten verarbeitet, die den Nutzern dieses Angebotes "
+"zuzuordnen sind, als auch Daten über lebende und bereits verstorbene "
+"Personen."
+
+#: resources\views\page\sections\personal-data-processing.phtml:27
+msgid "Inventory data (names, birth, marriage, and death data, ...)"
+msgstr "Bestandsdaten (Namen, Geburts-, Heirats- und Todesdaten, ...)"
+
+#: resources\views\page\sections\personal-data-processing.phtml:28
+msgid ""
+"Content data (messages, life stories of individuals, photographs, "
+"videos, ...)"
+msgstr ""
+"Inhaltsdaten (Nachrichten, Geschichten zum Leben von Personen, Fotografien, "
+"Videos, ...)"
+
+#: resources\views\page\sections\personal-data-processing.phtml:29
+msgid "Contact data (addresses, e-mail, telephone numbers, ...)"
+msgstr "Kontaktdaten (Adressen, E-Mail, Telefonnummern, ...)"
+
+#: resources\views\page\sections\personal-data-processing.phtml:30
+msgid "Usage data (visited web pages, access times, changes made, ...)"
+msgstr ""
+"Nutzungsdaten (besuchte Webseiten, Zugriffszeiten, durchgeführte "
+"Änderungen, ...)"
+
+#: resources\views\page\sections\personal-data-processing.phtml:31
+msgid ""
+"Communication data (device information, browser used, IP addresses, ...)"
+msgstr ""
+"Kommunikationsdaten (Geräte-Informationen, verwendeter Browser, IP-"
+"Adressen, ...)"
+
+#: resources\views\page\sections\personal-data-processing.phtml:35
+msgid ""
+"To inform you fully about the use of personal data, you are asked to take "
+"note of the following privacy information."
+msgstr ""
+"Um Sie in vollem Umfang über die Verwendung personenbezogener Daten zu "
+"informieren, werden Sie gebeten, die folgenden Datenschutzhinweise zur "
+"Kenntnis zu nehmen."
+
+#: resources\views\page\sections\purpose.phtml:9
+msgid ""
+"This website processes personal data for the purposes of historical and "
+"genealogical research."
+msgstr ""
+"Diese Website verarbeitet personenbezogene Daten zum Zwecke der historischen "
+"und genealogischen Forschung."
+
+#: resources\views\page\sections\purpose.phtml:10
+msgid ""
+"It deals with family history research into my own family, more distant "
+"relatives by marriage, and the research of other persons, such as bearers of "
+"my family name."
+msgstr ""
+"Sie beschäftigt sich mit der Familien- und Ahnenforschung meiner eigenen "
+"Familie, der angeheirateten entfernteren Verwandtschaft und der Erforschung "
+"von weiteren Personen, etwa Trägern meines Familiennamens."
+
+#: resources\views\page\sections\purpose.phtml:14
+msgid "This includes:"
+msgstr "Dazu gehören"
+
+#: resources\views\page\sections\purpose.phtml:17
+msgid "Providing the online service, its functions, and its content"
+msgstr ""
+"Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte"
+
+#: resources\views\page\sections\purpose.phtml:18
+msgid "Answering contact requests and communicating with users"
+msgstr "Beantwortung von Kontaktanfragen und Kommunikation mit den Nutzern"
+
+#: resources\views\page\sections\purpose.phtml:19
+msgid ""
+"Security measures, reach measurement, and improvement of the online presence"
+msgstr ""
+"Sicherheitsmaßnahmen, Reichweitenmessung, Verbesserung des Online-Auftritts"
+
+#: resources\views\page\sections\terminology.phtml:9
+msgid "Personal data"
+msgstr "Personenbezogene Daten"
+
+#: resources\views\page\sections\terminology.phtml:10
+msgid ""
+"means any information relating to an identified or identifiable natural "
+"person, hereinafter referred to as the data subject."
+msgstr ""
+"sind alle Informationen, die sich auf eine identifizierte oder "
+"identifizierbare natürliche Person (im Folgenden „betroffene Person“) "
+"beziehen;"
+
+#: resources\views\page\sections\terminology.phtml:11
+msgid ""
+"An identifiable natural person is one who can be identified, directly or "
+"indirectly, in particular by reference to an identifier such as a name, an "
+"identification number, location data, an online identifier, such as a "
+"cookie, or to one or more special characteristics that express the physical, "
+"physiological, genetic, mental, economic, cultural, or social identity of "
+"that data subject."
+msgstr ""
+"als identifizierbar wird eine natürliche Person angesehen, die direkt oder "
+"indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, "
+"zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung (z.B. Cookie) "
+"oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, "
+"die Ausdruck der physischen, physiologischen, genetischen, psychischen, "
+"wirtschaftlichen, kulturellen oder sozialen Identität dieser betroffenen "
+"Person sind."
+
+#: resources\views\page\sections\terminology.phtml:15
+msgid "Processing"
+msgstr "Verarbeitung"
+
+#: resources\views\page\sections\terminology.phtml:16
+msgid ""
+"means any operation performed on personal data, whether or not by automated "
+"means."
+msgstr ""
+"ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang "
+"im Zusammenhang mit personenbezogenen Daten."
+
+#: resources\views\page\sections\terminology.phtml:17
+msgid "The term is broad and includes practically any handling of such data."
+msgstr ""
+"Der Begriff reicht weit und umfasst praktisch jeden Umgang mit diesen Daten."
+
+#: resources\views\page\sections\terminology.phtml:22
+msgid ""
+"means the natural person who, alone or jointly with others, determines the "
+"purposes and means of the processing of personal data."
+msgstr ""
+"wird hier die natürliche Person bezeichnet, die allein oder gemeinsam mit "
+"anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen "
+"Daten entscheidet."
 
 #: resources\views\settings.phtml:64 resources\views\settings.phtml:156
 #: resources\views\settings.phtml:172 resources\views\settings.phtml:194
@@ -394,7 +1170,6 @@ msgstr ""
 "Regelungen\" angezeigt werden?"
 
 #: resources\views\settings.phtml:536
-#, fuzzy
 msgid "Restore default sorting for all chapters and sections"
 msgstr "Standardsortierung für alle Kapitel und Abschnitte wiederherstellen"
 

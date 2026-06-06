@@ -1,17 +1,20 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
     <h3><?= e($chapter->getHeading()) ?></h3>
 
     <p>
-        Diese Website verarbeitet personenbezogene Daten zum Zwecke der historischen und genealogischen Forschung.
-        Sie beschäftigt sich mit der Familien- und Ahnenforschung meiner eigenen Familie,
-        der angeheirateten entfernteren Verwandtschaft und der Erforschung von weiteren Personen,
-        etwa Trägern meines Familiennamens.
+        <?= I18N::translate('This website processes personal data for the purposes of historical and genealogical research.') ?>
+        <?= I18N::translate('It deals with family history research into my own family, more distant relatives by marriage, and the research of other persons, such as bearers of my family name.') ?>
     </p>
 
     <p>
-        Dazu gehören
+        <?= I18N::translate('This includes:') ?>
     </p>
     <ul>
-        <li>Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte</li>
-        <li>Beantwortung von Kontaktanfragen und Kommunikation mit den Nutzern</li>
-        <li>Sicherheitsmaßnahmen, Reichweitenmessung, Verbesserung des Online-Auftritts</li>
+        <li><?= I18N::translate('Providing the online service, its functions, and its content') ?></li>
+        <li><?= I18N::translate('Answering contact requests and communicating with users') ?></li>
+        <li><?= I18N::translate('Security measures, reach measurement, and improvement of the online presence') ?></li>
     </ul>

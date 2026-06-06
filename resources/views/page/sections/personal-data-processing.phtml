@@ -1,37 +1,36 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
     <h3><?= e($chapter->getHeading()) ?></h3>
 
     <p>
-        <?php if ($singular) : ?>
-            Ich nehme den Schutz der hier gespeicherten Daten sehr ernst.
-        <?php else : ?>
-            Wir nehmen den Schutz der hier gespeicherten Daten sehr ernst.
-        <?php endif ?>
+        <?= I18N::plural('I take the protection of the data stored here very seriously.', 'We take the protection of the data stored here very seriously.', $singular ? 1 : 2) ?>
 
         <?php if ($hostingCountry !== '') : ?>
-            Der Host für diese Anwendung steht in <?= e($hostingCountry) ?>.
+            <?= I18N::translate('The host for this application is located in %s.', e($hostingCountry)) ?>
         <?php endif ?>
 
         <?php if ($https) : ?>
-            Die Übertragung zum Browser eines Nutzers ist verschlüsselt (https).
+            <?= I18N::translate('Transmission to a user browser is encrypted (https).') ?>
         <?php endif ?>
 
-        Die verwendete Software (webtrees) bietet sehr viele Schutzmechanismen.
+        <?= I18N::translate('The software used (webtrees) offers many protection mechanisms.') ?>
     </p>
 
     <p>
-        Es werden sowohl Daten verarbeitet, die den Nutzern dieses Angebotes zuzuordnen sind,
-        als auch Daten über lebende und bereits verstorbene Personen.
+        <?= I18N::translate('Data assigned to users of this service is processed, as well as data about living and deceased persons.') ?>
     </p>
 
     <ul>
-        <li>Bestandsdaten (Namen, Geburts-, Heirats- und Todesdaten, ...)</li>
-        <li>Inhaltsdaten (Nachrichten, Geschichten zum Leben von Personen, Fotografien, Videos, ...)</li>
-        <li>Kontaktdaten (Adressen, E-Mail, Telefonnummern, ...)</li>
-        <li>Nutzungsdaten (besuchte Webseiten, Zugriffszeiten, durchgeführte Änderungen, ...)</li>
-        <li>Kommunikationsdaten (Geräte-Informationen, verwendeter Browser, IP-Adressen, ...)</li>
+        <li><?= I18N::translate('Inventory data (names, birth, marriage, and death data, ...)') ?></li>
+        <li><?= I18N::translate('Content data (messages, life stories of individuals, photographs, videos, ...)') ?></li>
+        <li><?= I18N::translate('Contact data (addresses, e-mail, telephone numbers, ...)') ?></li>
+        <li><?= I18N::translate('Usage data (visited web pages, access times, changes made, ...)') ?></li>
+        <li><?= I18N::translate('Communication data (device information, browser used, IP addresses, ...)') ?></li>
     </ul>
 
     <p>
-        Um Sie in vollem Umfang über die Verwendung personenbezogener Daten zu informieren,
-        werden Sie gebeten, die folgenden Datenschutzhinweise zur Kenntnis zu nehmen.
+        <?= I18N::translate('To inform you fully about the use of personal data, you are asked to take note of the following privacy information.') ?>
     </p>

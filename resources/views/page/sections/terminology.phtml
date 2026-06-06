@@ -1,23 +1,23 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
     <h3><?= e($chapter->getHeading()) ?></h3>
 
     <p>
-        <b>„Personenbezogene Daten“</b> sind alle Informationen,
-        die sich auf eine identifizierte oder identifizierbare natürliche Person
-        (im Folgenden <b>„betroffene Person“</b>) beziehen;
-        als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt,
-        insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten,
-        zu einer Online-Kennung (z.B. Cookie)
-        oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann,
-        die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder
-        sozialen Identität dieser betroffenen Person sind.
+        <strong><?= I18N::translate('Personal data') ?></strong>
+        <?= I18N::translate('means any information relating to an identified or identifiable natural person, hereinafter referred to as the data subject.') ?>
+        <?= I18N::translate('An identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier, such as a cookie, or to one or more special characteristics that express the physical, physiological, genetic, mental, economic, cultural, or social identity of that data subject.') ?>
     </p>
 
     <p>
-        <b>„Verarbeitung“</b> ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte
-        Vorgang im Zusammenhang mit personenbezogenen Daten.
-        Der Begriff reicht weit und umfasst praktisch jeden Umgang mit diesen Daten.
+        <strong><?= I18N::translate('Processing') ?></strong>
+        <?= I18N::translate('means any operation performed on personal data, whether or not by automated means.') ?>
+        <?= I18N::translate('The term is broad and includes practically any handling of such data.') ?>
     </p>
 
-    <p>Als <b>„Verantwortliche Person“</b> wird hier die natürliche Person bezeichnet, die allein oder gemeinsam mit
-        anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.
+    <p>
+        <strong><?= I18N::translate('Responsible person') ?></strong>
+        <?= I18N::translate('means the natural person who, alone or jointly with others, determines the purposes and means of the processing of personal data.') ?>
     </p>

@@ -5,123 +5,87 @@ use Fisharebest\Webtrees\I18N;
 
     <h3><?= e($chapter->getHeading()) ?></h3>
 
-    <h4>Persönliche Daten zu Ahnen, Familienmitgliedern und weiteren Personen</h4>
+    <h4><?= I18N::translate('Personal data about ancestors, family members, and other persons') ?></h4>
 
     <p>
-        Es werden persönliche Daten auch von lebenden Personen zum Zweck der Familien- und Ahnenforschung gespeichert
-        (siehe oben: Bestandsdaten und Inhaltsdaten).
-        Die Familien- und Ahnenforschung ist ein <b>„berechtigtes Interesse“</b> gemäß
-        Artikel 6&nbsp;(f) der Datenschutzgrundverordnung (EU-DSGVO).
-        Persönliche Daten, die Sie auf dieser Website finden, wie zum Beispiel Namen, E-Mail-Adressen,
-        Fotos, Adressen oder Lebensdaten
-        werden nur zum Zweck der Familien- und Ahnenforschung verwendet und sicher verwahrt.
-        Sie werden zeitlich unbeschränkt aufbewahrt, da sie von historischem Wert für die Genealogie sind.
+        <?= I18N::translate('Personal data about living persons is also stored for the purpose of family history and genealogical research; see inventory data and content data above.') ?>
+        <?= I18N::translate('Family history and genealogical research is a legitimate interest under Article 6(f) of the General Data Protection Regulation (EU GDPR).') ?>
+        <?= I18N::translate('Personal data that you find on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely.') ?>
+        <?= I18N::translate('It is stored indefinitely because it has historical value for genealogy.') ?>
     </p>
 
-    <h4>Abgestufte Zugangsrechte zu den Personendaten</h4>
+    <h4><?= I18N::translate('Graduated access rights to personal data') ?></h4>
 
     <p>
-        Große Teile der Inhalte dieser Website sind frei zugänglich.
-        Nicht so die Daten von noch lebenden Personen.
-        Auf diese haben nur registrierte Nutzer Zugriff,
-        denen abgestufte Rechte zugeordnet werden.
-        Zu diesen Nutzern werden weitere Daten gespeichert, etwa ihr Name und ihre E-Mail-Adresse.
-        <?php if ($singular) : ?>
-            Registrierte Nutzer sind nur mit mir verwandte oder verschwägerte Personen.
-        <?php else : ?>
-            Registrierte Nutzer sind nur mit uns verwandte oder verschwägerte Personen.
-        <?php endif ?>
-        Die Inhalte hier sind zu einem guten Teil innerhalb der Familie 'vertraulich' weitergegeben worden.
-        Das müssen sie auch bleiben; deshalb sind wir alle darauf angewiesen,
-        dass jeder Einzelne diese Daten vertraulich behandelt.
+        <?= I18N::translate('Large parts of the content of this website are freely accessible.') ?>
+        <?= I18N::translate('This does not apply to data about persons who are still living.') ?>
+        <?= I18N::translate('Only registered users who have been assigned graduated rights have access to this data.') ?>
+        <?= I18N::translate('Additional data is stored about these users, such as their name and e-mail address.') ?>
+        <?= I18N::plural('Registered users are only persons related to me by blood or marriage.', 'Registered users are only persons related to us by blood or marriage.', $singular ? 1 : 2) ?>
+        <?= I18N::translate('A substantial part of the content here has been shared confidentially within the family.') ?>
+        <?= I18N::translate('It must remain confidential; therefore we all depend on every individual treating this data confidentially.') ?>
     </p>
 
-    <h4>Persönliche Daten zu Nutzern mit einem Benutzerkonto</h4>
+    <h4><?= I18N::translate('Personal data about users with a user account') ?></h4>
 
     <p>
-        Die personenbezogenen Daten, die Sie zur Einrichtung eines Kontos selbst zur Verfügung stellen,
-        werden gespeichert und verarbeitet (siehe: Kontaktdaten)
+        <?= I18N::translate('The personal data that you provide yourself when creating an account is stored and processed; see contact data.') ?>
     </p>
 
     <ul>
-        <li>Name</li>
-        <li>E-Mail Adresse</li>
-        <li>Passwort</li>
+        <li><?= I18N::translate('Name') ?></li>
+        <li><?= I18N::translate('E-mail address') ?></li>
+        <li><?= I18N::translate('Password') ?></li>
     </ul>
 
     <p>
-        Andere personenbezogene Daten, die Sie aktiv zur Verfügung stellen, werden ebenfalls gespeichert und verwendet.
-        Dazu gehören etwa Daten durch die Vervollständigung Ihrer persönlichen Daten auf Ihrer persönlichen Seite
-        oder durch die Herstellung von Familienbeziehungen.
+        <?= I18N::translate('Other personal data that you actively provide is also stored and used.') ?>
+        <?= I18N::translate('This includes, for example, data created by completing your personal details on your personal page or by creating family relationships.') ?>
     </p>
 
     <p>
-        Des weiteren werden Daten mit Bezug zu Ihrem Benutzerkonto erfasst,
-        die durch Ihre Aktivitäten auf unserer Website entstehen, etwa beim Bearbeiten von Datensätzen.
+        <?= I18N::translate('Furthermore, data relating to your user account is recorded as a result of your activities on our website, for example when editing records.') ?>
     </p>
 
     <p>
-        <?php if ($singular) : ?>
-            Ich verwende Ihre E-Mail-Adresse gelegentlich,
-        <?php else : ?>
-            Wir verwenden Ihre E-Mail-Adresse gelegentlich,
-        <?php endif ?>
-        um Sie per E-Mail über wichtige Angelegenheiten im Zusammenhang mit der Website zu informieren
-        oder um Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen zu kontaktieren.
+        <?= I18N::plural('I occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made.', 'We occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made.', $singular ? 1 : 2) ?>
     </p>
 
     <p>
-        Wenn Sie Ihr Benutzerkonto hier deaktivieren lassen,
-        bleiben die von Ihnen eingegebenen genealogischen Daten zum Nutzen unserer genealogischen Forschung erhalten.
-        Die Daten zu Ihrer Person bleiben ebenfalls erhalten,
-        nur Ihr Zugang zu den hier speziell geschützten Bereichen wird gesperrt.
+        <?= I18N::translate('If you have your user account disabled here, the genealogical data you entered will remain available for the benefit of our genealogical research.') ?>
+        <?= I18N::translate('The data about your person will also be retained; only your access to the specially protected areas here will be blocked.') ?>
     </p>
 
-    <h4>Persönliche Daten zu Besuchern dieser Website</h4>
+    <h4><?= I18N::translate('Personal data about visitors to this website') ?></h4>
 
-    <p>Darüber hinaus werden im Prinzip personenbeziehbare Daten der nicht angemeldeten Nutzer dieses Angebotes
-        (Besucher) gespeichert (siehe: Nutzungsdaten und Kommunikationsdaten).</p>
+    <p><?= I18N::translate('In principle, data that can be related to non-logged-in users of this service, visitors, is also stored; see usage data and communication data.') ?></p>
 
-    <h4>Sicherheitsmaßnahmen</h4>
+    <h4><?= I18N::translate('Security measures') ?></h4>
 
     <p>
-        Es werden nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik,
-        der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung
-        sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung
-        der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen getroffen,
-        um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.
+        <?= I18N::translate('Appropriate technical and organizational measures are taken in accordance with legal requirements, taking into account the state of the art, implementation costs, the nature, scope, circumstances, and purposes of processing, and the varying likelihood and severity of the risk to the rights and freedoms of natural persons, in order to ensure a level of security appropriate to the risk.') ?>
     </p>
 
     <p>
-        Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit,
-        Integrität und Verfügbarkeit von Daten unter anderem durch die Kontrolle des Zugangs zu den Daten.
+        <?= I18N::translate('These measures include, in particular, securing the confidentiality, integrity, and availability of data, including by controlling access to the data.') ?>
     </p>
 
-    <h4>Generelles Risiko</h4>
+    <h4><?= I18N::translate('General risk') ?></h4>
 
     <p>
-        <?php if ($singular) : ?>
-            Ich weise darauf hin,
-        <?php else : ?>
-            Wir weisen darauf hin,
-        <?php endif ?>
-        dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann.
-        Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist ebenfalls nicht möglich.
+        <?= I18N::plural('I point out that data transmission on the Internet, for example when communicating by e-mail, may have security gaps.', 'We point out that data transmission on the Internet, for example when communicating by e-mail, may have security gaps.', $singular ? 1 : 2) ?>
+        <?= I18N::translate('Complete protection of data against access by third parties is also not possible.') ?>
     </p>
 
-    <h4>Cookies</h4>
+    <h4><?= I18N::translate('Cookies') ?></h4>
 
     <p>
-        Diese Website verwendet Cookies,
-        um Benutzeranmeldungen zu ermöglichen und Einstellungen wie die von Ihnen gewählte Sprache zu speichern.
-        Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.
-        Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.
-        Diese Cookies sind für das ordnungsgemäße Funktionieren der Website unbedingt notwendig.
-        Sie können Ihren Browser so einstellen,
-        dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben,
-        die Annahme von Cookies für bestimmte Fälle oder generell ausschließen
-        sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren.
-        Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
+        <?= I18N::translate('This website uses cookies to enable user logins and to store settings such as your selected language.') ?>
+        <?= I18N::translate('Cookies help make our service more user-friendly, effective, and secure.') ?>
+        <?= I18N::translate('Cookies are small text files that are stored on your computer and saved by your browser.') ?>
+        <?= I18N::translate('These cookies are strictly necessary for the website to function properly.') ?>
+        <?= I18N::translate('You can configure your browser so that you are informed when cookies are set, allow cookies only in individual cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of cookies when closing the browser.') ?>
+        <?= I18N::translate('If cookies are disabled, the functionality of this website may be restricted.') ?>
     </p>
 
     <p>
@@ -129,7 +93,7 @@ use Fisharebest\Webtrees\I18N;
             <?= I18N::translate('This website uses third-party services to manage cookies.') ?>
             <?php foreach ($cookiesServices as $service => $url) : ?>
                 <li>
-                    <?= $service ?> — <a href="<?= e($url) ?>"><?= e($url) ?></a>
+                    <?= $service ?> - <a href="<?= e($url) ?>"><?= e($url) ?></a>
                 </li>
             <?php endforeach ?>
         <?php endif ?>
@@ -145,7 +109,7 @@ use Fisharebest\Webtrees\I18N;
                         <?php if ($analytics->isNotEmpty()) : ?>
                             <?php foreach ($analytics as $module) : ?>
                                 <li>
-                                    <?= $module->title() ?> —
+                                    <?= $module->title() ?> -
                                     <a href="<?= e($module->externalUrl()) ?>"><?= e($module->externalUrl()) ?></a>
                                 </li>
                             <?php endforeach ?>
@@ -153,7 +117,7 @@ use Fisharebest\Webtrees\I18N;
                         <?php if (count($trackingServices) > 0) : ?>
                             <?php foreach ($trackingServices as $service => $url) : ?>
                                 <li>
-                                    <?= $service ?> — <a href="<?= e($url) ?>"><?= e($url) ?></a>
+                                    <?= $service ?> - <a href="<?= e($url) ?>"><?= e($url) ?></a>
                                 </li>
                             <?php endforeach ?>
                         <?php endif ?>
@@ -165,7 +129,7 @@ use Fisharebest\Webtrees\I18N;
                 </li>
 
                 <li>
-                    <?= I18N::translate('You can opt out of tracking by setting the “Do Not Track” header in your browser preferences.') ?>
+                    <?= I18N::translate('You can opt out of tracking by setting the "Do Not Track" header in your browser preferences.') ?>
                 </li>
             </ul>
         </p>
@@ -180,7 +144,7 @@ use Fisharebest\Webtrees\I18N;
                     <ul>
                         <?php foreach ($thirdPartyServices as $service => $url) : ?>
                             <li>
-                                <?= $service ?> — <a href="<?= e($url) ?>"><?= e($url) ?></a>
+                                <?= $service ?> - <a href="<?= e($url) ?>"><?= e($url) ?></a>
                             </li>
                         <?php endforeach ?>
                     </ul>
@@ -202,7 +166,7 @@ use Fisharebest\Webtrees\I18N;
                 <li>
                     <strong><?= e($provider['name'] ?? '') ?></strong>
                     <?php if (($provider['url'] ?? '') !== '') : ?>
-                        —
+                        -
                         <a href="<?= e($provider['url']) ?>"><?= e($provider['url']) ?></a>
                     <?php endif ?>
 
@@ -220,65 +184,55 @@ use Fisharebest\Webtrees\I18N;
         </ul>
     <?php endif ?>
 
-    <h4>Hosting für den webtrees-Server</h4>
+    <h4><?= I18N::translate('Hosting for the webtrees server') ?></h4>
 
     <p>
         <?php if ($hostingCompanyName !== '') : ?>
-            Diese Website wird beim Hosting-Anbieter
+            <?= I18N::translate('This website is operated by the hosting provider') ?>
             <?php if ($hostingCompanyUrl !== '') : ?>
                 <a href="<?= e($hostingCompanyUrl) ?>"><?= e($hostingCompanyName) ?></a>
             <?php else : ?>
                 <?= e($hostingCompanyName) ?>
             <?php endif ?>
-            betrieben.
+            .
             <?php if ($hostingPrivacyNotice !== '' && $hostingCompanyName !== '') : ?>
-                Details entnehmen Sie bitte der <a href="<?= e($hostingPrivacyNotice) ?>">Datenschutzerklärung</a> von <?= e($hostingCompanyName) ?>.
+                <?= I18N::translate('For details, please refer to the privacy notice of %s.', e($hostingCompanyName)) ?>
+                <a href="<?= e($hostingPrivacyNotice) ?>"><?= e($hostingPrivacyNotice) ?></a>.
             <?php endif ?>
         <?php endif ?>
     </p>
 
     <p>
-        Der Hosting-Anbieter erhebt und speichert automatisch Informationen bei Zugriffen auf diese Website
-        wie verwendeter Browser, Betriebssystem, Verweisseite, IP-Adresse, Uhrzeit des Zugriffs usw.
-        Diese Daten können ohne Hinzuziehung weiterer Datenquellen keinen bestimmten Personen zugeordnet werden und
-        <?php if ($singular) : ?>
-            ich werte diese Daten auch nicht weiter aus,
-        <?php else : ?>
-            wir werten diese Daten auch nicht weiter aus,
-        <?php endif ?>
-        solange keine rechtswidrige Nutzung dieser Webseiten vorliegt.
+        <?= I18N::translate('The hosting provider automatically collects and stores information when this website is accessed, such as browser used, operating system, referring page, IP address, time of access, and similar data.') ?>
+        <?= I18N::translate('This data cannot be assigned to specific persons without consulting additional data sources, and') ?>
+        <?= I18N::plural('I do not evaluate this data further', 'we do not evaluate this data further', $singular ? 1 : 2) ?>
+        <?= I18N::translate('unless there is unlawful use of these web pages.') ?>
     </p>
 
     <?php if ($orderProcessing) : ?>
-        <h5>Auftragsverarbeitung</h5>
+        <h5><?= I18N::translate('Order processing') ?></h5>
 
-        <p>Mit dem Hosting-Anbieter wurde eine Vereinbarung über die Auftragsverarbeitung geschlossen.
+        <p><?= I18N::translate('An agreement on order processing has been concluded with the hosting provider.') ?>
             <?php if ($hostingStartDate !== '' || $hostingEndDate !== '') : ?>
-                Dies erfolgte
+                <?= I18N::translate('This took place') ?>
                 <?php if ($hostingStartDate !== '') : ?>
-                    erstmalig am <?= e($hostingStartDate) ?>
+                    <?= I18N::translate('for the first time on %s', e($hostingStartDate)) ?>
                     <?php if ($hostingEndDate !== '') : ?>
-                        und
+                        <?= I18N::translate('and') ?>
                     <?php endif ?>
                 <?php endif ?>
                 <?php if ($hostingEndDate !== '') : ?>
-                    letztmalig am <?= e($hostingEndDate) ?>
+                    <?= I18N::translate('most recently on %s', e($hostingEndDate)) ?>
                 <?php endif ?>.
             <?php endif ?>
-            Hierbei handelt es sich um eine nach Artikel 28 DSGVO datenschutzrechtlich vorgeschriebenen Vereinbarung,
-            die gewährleistet, dass der Hosting-Anbieter die personenbezogenen Daten dieser Website
-            <?php if ($singular) : ?>
-                 nur nach meinen Weisungen
-            <?php else : ?>
-                nur nach unseren Weisungen
-            <?php endif ?>
-            und unter Einhaltung der DSGVO verarbeitet.
+            <?= I18N::translate('This is an agreement required by data protection law under Article 28 GDPR, which ensures that the hosting provider processes the personal data of this website') ?>
+            <?= I18N::plural('only according to my instructions', 'only according to our instructions', $singular ? 1 : 2) ?>
+            <?= I18N::translate('and in compliance with the GDPR.') ?>
         </p>
     <?php endif ?>
 
-    <h4>Protokoll der Anwendung</h4>
+    <h4><?= I18N::translate('Application log') ?></h4>
 
     <p>
-        Die verwendete Anwendung (webtrees) protokolliert alle Aktionen der Nutzer,
-        damit u.a. die Änderungen am Datenbestand nachvollzogen und freigegeben werden können.
+        <?= I18N::translate('The application used (webtrees) logs all user actions so that, among other things, changes to the data can be traced and approved.') ?>
     </p>
