@@ -522,7 +522,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $user = $request->getAttribute('user');
         assert($user instanceof UserInterface);
 
-        $title = MoreI18N::xlate('Legal Notice');
+        $title = I18N::translate('Legal Notice');
         if ($this->isChapterEnabled('DataProtection', $request)) {
             $title .= ' ' . I18N::translate('and Privacy Policy');
         }
@@ -575,8 +575,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return $this->viewResponse($this->name() . '::page', [
             'title'                     => $this->title(),
             'tree'                      => $tree,
-            'legalNoticeTitle'          => MoreI18N::xlate('Legal Notice'),
-            'legalNoticeHead1'          => MoreI18N::xlate('Responsible person'),
+            'legalNoticeTitle'          => I18N::translate('Legal Notice'),
+            'legalNoticeHead1'          => I18N::translate('Responsible person'),
             'legalNoticeHead2'          => I18N::translate('This website is operated by:'),
             'responsibleName'           => $this->responsibleName(),
             'showGravatar'              => $this->showGravatar(),
@@ -595,7 +595,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'vatNumberLabel'            => $this->vatNumberLabel(),
             'vatNumber'                 => $this->vatNumber(),
             'showTreeContacts'          => $this->showTreeContacts(),
-            'headTreeContacts'          => MoreI18N::xlatePlural('Additional contact','Additional contacts', count($contactsTreeContacts)),
+            'headTreeContacts'          => I18N::plural('Additional contact','Additional contacts', count($contactsTreeContacts)),
             'countTreeContacts'         => count($contactsTreeContacts),
             'contactsTreeContacts'      => $contactsTreeContacts,
             'showAdministrators'        => $this->showAdministrators(),

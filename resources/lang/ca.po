@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 16:53+0200\n"
+"POT-Creation-Date: 2026-06-06 17:03+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -30,6 +30,10 @@ msgid ""
 "custom module \"%s\"."
 msgstr ""
 
+#: LegalNoticeFooterModule.php:525 LegalNoticeFooterModule.php:578
+msgid "Legal Notice"
+msgstr "Avís Legal"
+
 #: LegalNoticeFooterModule.php:527
 msgid "and Privacy Policy"
 msgstr "i Política de privacitat"
@@ -38,6 +42,10 @@ msgstr "i Política de privacitat"
 msgid "This website uses cookies."
 msgstr "Aquest lloc web utilitza cookies."
 
+#: LegalNoticeFooterModule.php:579
+msgid "Responsible person"
+msgstr "Persona responsable"
+
 #: LegalNoticeFooterModule.php:580
 msgid "This website is operated by:"
 msgstr "Aquest lloc web està operat per:"
@@ -45,6 +53,13 @@ msgstr "Aquest lloc web està operat per:"
 #: LegalNoticeFooterModule.php:585
 msgid "Represented by:"
 msgstr "Representat per:"
+
+#: LegalNoticeFooterModule.php:598
+#, fuzzy
+msgid "Additional contact"
+msgid_plural "Additional contacts"
+msgstr[0] "Contacte addicional"
+msgstr[1] "Contactes addicionals"
 
 #: LegalNoticeFooterModule.php:658
 msgid "Legal Notice and Privacy Policy"
