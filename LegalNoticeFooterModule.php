@@ -762,6 +762,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'contactsAdministrators'    => $contactsAdministrators,
             'chapters'                  => $this->getChapters($request),
             'dataProtectionSectionKeys' => LegalNoticeSupport::listDataProtectionSectionKeys(),
+            'sectionViewByChapterKey'   => LegalNoticeSupport::sectionViewByChapterKey(),
             'showDataProtection'        => $this->isChapterEnabled('DataProtection', $request),
             'showLegalRegulations'      => $this->isChapterEnabled('LegalRegulations', $request),
             'singular'                  => $this->useSingularStyle($request),

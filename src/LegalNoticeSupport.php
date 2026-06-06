@@ -233,12 +233,20 @@ class LegalNoticeSupport
      */
     public static function listDataProtectionSectionKeys(): array
     {
+        return array_keys(self::sectionViewByChapterKey());
+    }
+
+    /**
+     * @return array<string,string>
+     */
+    public static function sectionViewByChapterKey(): array
+    {
         return [
-            'Purpose',
-            'PersonalData',
-            'Privacy',
-            'GDPR',
-            'ProvidingInformation',
+            'Purpose'              => 'purpose',
+            'PersonalData'         => 'personal-data-processing',
+            'Privacy'              => 'terminology',
+            'GDPR'                 => 'data-categories',
+            'ProvidingInformation' => 'data-rights',
         ];
     }
 

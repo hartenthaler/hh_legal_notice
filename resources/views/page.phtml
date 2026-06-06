@@ -47,6 +47,7 @@ use Illuminate\Support\Collection;
  *
  * @var array<object>               $chapters               list of chapter objects
  * @var array<int,string>           $dataProtectionSectionKeys keys of the data protection sections rendered on the page
+ * @var array<string,string>        $sectionViewByChapterKey partial view names keyed by chapter key
  * @var bool                        $showDataProtection     option whether to show the data protection chapter
  * @var bool                        $showLegalRegulations   option whether to show the legal regulations chapter
  *
@@ -78,11 +79,15 @@ use Illuminate\Support\Collection;
             <?php continue; ?>
         <?php endif ?>
 
-        <?php if ($chapter->getKey() === 'DataProtection' && $showDataProtection) : ?>
-            <?= view($moduleName . '::page/data-protection', get_defined_vars()) ?>
-        <?php elseif ($chapter->getKey() === 'LegalRegulations' && $showLegalRegulations) : ?>
-            <?= view($moduleName . '::page/legal-regulations', get_defined_vars()) ?>
+        <?php if ($chapter->getKey() === 'DataProtection' && !$showDataProtection) : ?>
+            <?php continue; ?>
         <?php endif ?>
+
+        <?php if ($chapter->getKey() === 'LegalRegulations' && !$showLegalRegulations) : ?>
+            <?php continue; ?>
+        <?php endif ?>
+
+        <?= view($moduleName . '::page/chapter', array_merge(get_defined_vars(), ['mainChapter' => $chapter])) ?>
     <?php endforeach ?>
 </div>
 
