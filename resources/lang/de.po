@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 17:03+0200\n"
+"POT-Creation-Date: 2026-06-06 19:10+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Hermann Hartenthaler <hermann@hartenthaler.de>\n"
 "Language-Team: \n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: .git\n"
 
 #. I18N: Description of this module
-#: LegalNoticeFooterModule.php:188
+#: LegalNoticeFooterModule.php:176
 msgid "Legal notice as a footer element for this site."
 msgstr "Impressum und Datenschutzerklärung als Element im Fußzeilenbereich."
 
-#: LegalNoticeFooterModule.php:433
+#: LegalNoticeFooterModule.php:427
 #, php-format
 msgid ""
 "The preferences for the custom module \"%s\" were imported from the earlier "
@@ -33,61 +33,60 @@ msgstr ""
 "Die Einstellungen für das Erweiterungsmodul \"%s\" wurden aus dem "
 "Vorgängermodul \"%s\" übernommen."
 
-#: LegalNoticeFooterModule.php:525 LegalNoticeFooterModule.php:578
+#: LegalNoticeFooterModule.php:519 LegalNoticeFooterModule.php:572
 msgid "Legal Notice"
 msgstr "Impressum"
 
-#: LegalNoticeFooterModule.php:527
+#: LegalNoticeFooterModule.php:521
 msgid "and Privacy Policy"
 msgstr "und Datenschutzerklärung"
 
-#: LegalNoticeFooterModule.php:544
+#: LegalNoticeFooterModule.php:538
 msgid "This website uses cookies."
 msgstr "Diese Website verwendet Cookies."
 
-#: LegalNoticeFooterModule.php:579
+#: LegalNoticeFooterModule.php:573
 msgid "Responsible person"
 msgstr "Verantwortliche Person"
 
-#: LegalNoticeFooterModule.php:580
+#: LegalNoticeFooterModule.php:574
 msgid "This website is operated by:"
 msgstr "Diese Website wird betrieben von:"
 
-#: LegalNoticeFooterModule.php:585
+#: LegalNoticeFooterModule.php:579
 msgid "Represented by:"
 msgstr "vertreten durch:"
 
-#: LegalNoticeFooterModule.php:598
-#, fuzzy
+#: LegalNoticeFooterModule.php:592
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Weiterer Kontakt"
 msgstr[1] "Weitere Kontakte"
 
-#: LegalNoticeFooterModule.php:658
+#: LegalNoticeFooterModule.php:699
 msgid "Legal Notice and Privacy Policy"
 msgstr "Impressum und Datenschutzerklärung"
 
 #. I18N: subject of e-mail
-#: LegalNoticeFooterModule.php:824
+#: LegalNoticeFooterModule.php:865
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "Nachricht über das Impressum der Website %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:827
+#: LegalNoticeFooterModule.php:868
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Sehr geehrter Herr %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:830
+#: LegalNoticeFooterModule.php:871
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Sehr geehrte Frau %s"
 
 #. I18N: first line of body of e-mail using full name
-#: LegalNoticeFooterModule.php:833
+#: LegalNoticeFooterModule.php:874
 #, php-format
 msgid "Dear %s"
 msgstr "Sehr geehrte/r %s"
@@ -148,75 +147,75 @@ msgstr ""
 msgid "Data that may be exchanged:"
 msgstr ""
 
-#: resources\views\settings.phtml:70
+#: resources\views\settings.phtml:72
 msgid "Should a copyright notice be included in this page footer element?"
 msgstr "Soll ein Copyright-Hinweis im Fußzeilenelement eingefügt werden?"
 
-#: resources\views\settings.phtml:85
+#: resources\views\settings.phtml:87
 msgid "Start year of copyright (e.g. \"2020\")"
 msgstr "Startjahr des Copyrights (z.B. \"2020\")"
 
-#: resources\views\settings.phtml:94
+#: resources\views\settings.phtml:96
 msgid "Name of holder of copyright"
 msgstr "Inhaber des Copyrights"
 
-#: resources\views\settings.phtml:108
+#: resources\views\settings.phtml:110
 msgid "First name(s)"
 msgstr "Vorname(n)"
 
-#: resources\views\settings.phtml:117
+#: resources\views\settings.phtml:119
 msgid "Surname(s)"
 msgstr "Nachname(n)"
 
-#: resources\views\settings.phtml:135
+#: resources\views\settings.phtml:137
 msgid "other sex"
 msgstr "divers"
 
-#: resources\views\settings.phtml:145
+#: resources\views\settings.phtml:147
 msgid "Should a gravatar image be shown (see www.gravatar.com)?"
 msgstr "Soll ein Gravatar-Bild angezeigt werden (siehe www.gravatar.com)?"
 
-#: resources\views\settings.phtml:159
+#: resources\views\settings.phtml:161
 msgid "Club or Organization"
 msgstr "Verein oder Organisation"
 
-#: resources\views\settings.phtml:164
+#: resources\views\settings.phtml:166
 msgid "Name of club or organization"
 msgstr "Name des Vereins oder der Organisation"
 
-#: resources\views\settings.phtml:172
+#: resources\views\settings.phtml:174
 msgid "Address data"
 msgstr "Adressdaten"
 
-#: resources\views\settings.phtml:177
+#: resources\views\settings.phtml:179
 msgid "Additional address line"
 msgstr "Adresszusatz"
 
-#: resources\views\settings.phtml:185
+#: resources\views\settings.phtml:187
 msgid "Street name and house number"
 msgstr "Straße und Hausnummer"
 
-#: resources\views\settings.phtml:193
+#: resources\views\settings.phtml:195
 msgid "City including zip code"
 msgstr "Ort mit Postleitzahl"
 
-#: resources\views\settings.phtml:201
+#: resources\views\settings.phtml:203
 msgid "Communication data"
 msgstr "Kommunikationsdaten"
 
-#: resources\views\settings.phtml:206
+#: resources\views\settings.phtml:208
 msgid "Phone number (including country prefix, e.g. \"+49 30 123456\")"
 msgstr "Telefonnummer (inkl. Landesvorwahl, z.B. \"+49 30 123456\")"
 
-#: resources\views\settings.phtml:214
+#: resources\views\settings.phtml:216
 msgid "Fax number (including country prefix, e.g. \"+49 30 654321\")"
 msgstr "Telefaxnummer (inkl. Landesvorwahl, z.B. \"+49 30 654321\")"
 
-#: resources\views\settings.phtml:222
+#: resources\views\settings.phtml:224
 msgid "eMail address"
 msgstr "E-Mail-Adresse"
 
-#: resources\views\settings.phtml:232
+#: resources\views\settings.phtml:234
 msgid ""
 "Should a simple eMail link be used (if \"no\": subject and body of eMail are "
 "generated, too)?"
@@ -224,25 +223,25 @@ msgstr ""
 "Soll ein einfacher E-Mail-Link verwendet werden (falls \"nein\": Betreff und "
 "Inhalt der E-Mail werden auch erzeugt)?"
 
-#: resources\views\settings.phtml:247
+#: resources\views\settings.phtml:249
 msgid "Registration data"
 msgstr "Registrierungsdaten"
 
-#: resources\views\settings.phtml:252
+#: resources\views\settings.phtml:254
 msgid "Label like \"VAT ID No.\" or other registration number label"
 msgstr ""
 "Bezeichnung wie \"Umsatzsteuer-Identifikationsnummer\" oder andere "
 "Registrierungsnummer-Bezeichnung"
 
-#: resources\views\settings.phtml:260
+#: resources\views\settings.phtml:262
 msgid "Registration number"
 msgstr "Registrierungsnummer"
 
-#: resources\views\settings.phtml:268
+#: resources\views\settings.phtml:270
 msgid "Additional contacts to be shown"
 msgstr "Zusätzlich anzuzeigende Ansprechpartner"
 
-#: resources\views\settings.phtml:275
+#: resources\views\settings.phtml:277
 msgid ""
 "Should the tree contacts be shown (there are maybe genealogical and "
 "technical contacts defined)?"
@@ -250,15 +249,15 @@ msgstr ""
 "Sollen die Kontaktpersonen des Stammbaums angezeigt werden (eventuell sind "
 "genealogische und technische Ansprechpartner definiert)?"
 
-#: resources\views\settings.phtml:292
+#: resources\views\settings.phtml:294
 msgid "Should the administrators of this website be shown?"
 msgstr "Sollen die Administratoren dieser Website angezeigt werden?"
 
-#: resources\views\settings.phtml:307
+#: resources\views\settings.phtml:309
 msgid "Hosting service"
 msgstr "Hosting-Anbieter"
 
-#: resources\views\settings.phtml:312
+#: resources\views\settings.phtml:314
 msgid ""
 "Country of the webtrees server location (in English language, e.g. "
 "\"Germany\")"
@@ -266,35 +265,57 @@ msgstr ""
 "Land in dem der webtrees-Server steht (in englischer Sprache, z.B. "
 "\"Germany\")"
 
-#: resources\views\settings.phtml:320
+#: resources\views\settings.phtml:322
 msgid "Name of hosting service company"
 msgstr "Hosting-Anbieter"
 
-#: resources\views\settings.phtml:328
+#: resources\views\settings.phtml:330
 msgid "Hosting service link (URL)"
 msgstr "Verweis zum Hosting-Anbieter (URL)"
 
-#: resources\views\settings.phtml:336
+#: resources\views\settings.phtml:338
 msgid "Hosting service link to privacy notice (URL)"
 msgstr "Verweis zur Datenschutzerklärung des Hosting-Anbieters (URL)"
 
-#: resources\views\settings.phtml:345
+#: resources\views\settings.phtml:347
 msgid "Should a section about Order Processing agreement be shown?"
 msgstr "Soll ein Abschnitt zur Auftragsverarbeitung angezeigt werden?"
 
-#: resources\views\settings.phtml:358
+#: resources\views\settings.phtml:360
 msgid "First date of Order Processing agreement"
 msgstr "Datum der erstmaligen Vereinbarung zur Auftragsverarbeitung"
 
-#: resources\views\settings.phtml:366
+#: resources\views\settings.phtml:368
 msgid "Last date of Order Processing agreement"
 msgstr "Datum der letztmaligen Vereinbarung zur Auftragsverarbeitung"
 
-#: resources\views\settings.phtml:379
+#: resources\views\settings.phtml:376
+msgid "External services"
+msgstr "Externe Dienste"
+
+#: resources\views\settings.phtml:382
+msgid "Should Google Charts be mentioned as an external service?"
+msgstr "Soll Google Charts als externer Dienst erwähnt werden?"
+
+#: resources\views\settings.phtml:392
+#, php-format
+msgid "webtrees statistics pages can load Google Charts from %s."
+msgstr "webtrees-Statistikseiten können Google Charts von %s laden."
+
+#: resources\views\settings.phtml:399
+msgid "Additional third-party services"
+msgstr "Weitere Drittanbieter-Dienste"
+
+#: resources\views\settings.phtml:404
+#, php-format
+msgid "Enter one service per line using the format “Name | URL”. Example: %s"
+msgstr "Geben Sie einen Dienst pro Zeile im Format „Name | URL“ ein. Beispiel: %s"
+
+#: resources\views\settings.phtml:415
 msgid "In which sequence should the main chapters be shown?"
 msgstr "In welcher Reihenfolge sollen die Kapitel angezeigt werden?"
 
-#: resources\views\settings.phtml:428
+#: resources\views\settings.phtml:464
 msgid ""
 "In which sequence should the sections of the chapter \"Legal Regulations\" "
 "be shown?"

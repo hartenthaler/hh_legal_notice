@@ -45,6 +45,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
  * @var bool                    $orderProcessing        option if Auftragsverarbeitung is used
  * @var string                  $hostingStartDate       hosting Auftragsverarbeitung agreement first date / time
  * @var string                  $hostingEndDate         hosting Auftragsverarbeitung agreement last date / time
+ * @var string                  $showGoogleCharts       option whether Google Charts should be mentioned as third-party service
+ * @var string                  $additionalThirdPartyServices additional third-party services, one service per line
  */
 ?>
 
@@ -367,6 +369,40 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </label>
             <div class="col-sm-9 wt-page-options-value">
                 <input class="form-control" id="hostingEndDate" name="hostingEndDate" type="text" value="<?= $hostingEndDate ?>">
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
+        <h4><?= I18N::translate('External services') . ' (' . MoreI18N::xlate('optional') . ')' ?></h4>
+
+        <div class="row">
+            <fieldset class="form-group mb-3">
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 wt-page-options-label">
+                        <?= I18N::translate('Should Google Charts be mentioned as an external service?') ?>
+                    </legend>
+                    <div class="col-sm-9 wt-page-options-value">
+                        <?= view('components/radios-inline', [
+                            'id' => 'showGoogleCharts',
+                            'name' => 'showGoogleCharts',
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
+                            'selected' => (int)$showGoogleCharts,
+                        ]) ?>
+                        <p class="small text-muted">
+                            <?= I18N::translate('webtrees statistics pages can load Google Charts from %s.', 'https://www.gstatic.com/charts/loader.js') ?>
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <label class="col-sm-3 col-form-label wt-page-options-label" for="additionalThirdPartyServices">
+                <?= I18N::translate('Additional third-party services') ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <textarea class="form-control" id="additionalThirdPartyServices" name="additionalThirdPartyServices" rows="4"><?= e($additionalThirdPartyServices) ?></textarea>
+                <p class="small text-muted">
+                    <?= I18N::translate('Enter one service per line using the format “Name | URL”. Example: %s', 'Usercentrics | https://usercentrics.com/') ?>
+                </p>
             </div>
         </div>
 

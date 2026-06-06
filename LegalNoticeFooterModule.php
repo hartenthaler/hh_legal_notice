@@ -128,28 +128,16 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     public const CUSTOM_AUTHOR      = 'Hermann Hartenthaler';
     public const GITHUB_USER        = 'hartenthaler';
     public const CUSTOM_WEBSITE     = 'https://github.com/' . self::GITHUB_USER . '/' . self::CUSTOM_MODULE . '/';
-    public const CUSTOM_VERSION     = '2.2.1.0';
+    public const CUSTOM_VERSION     = '2.2.6.0';
     public const CUSTOM_LAST        = 'https://raw.githubusercontent.com/' . self::GITHUB_USER . '/' .
                                             self::CUSTOM_MODULE . '/main/latest-version.txt';
 
     // old module name
     public const OLD_MODULE_NAME_FOR_PREFERENCES = 'hh_imprint';
 
-    // tbd move the following 3 const to control panel where they can be changed by an administrator
-
-    // used third party services
-    private const THIRD_PARTY_SERVICES = [
-        'Google charts' => 'https://developers.google.com/',
-    ];
-
-    // used tracking and analysis services (beside the services offered by webtrees)
-    private const TRACKING_SERVICES = [
-        //'ClustrMaps™' => 'https://clustrmaps.com/',
-    ];
-
-    // used external cookies services (keyword and URL (including "/" at the end))
-    private const COOKIES_SERVICES = [
-        //'Usercentrics' => 'https://usercentrics.com/',
+    // Google Charts is loaded by webtrees statistics pages when these charts are viewed.
+    private const GOOGLE_CHARTS_SERVICE = [
+        'Google Charts' => 'https://www.gstatic.com/charts/loader.js',
     ];
 
     /** @var ModuleService */
@@ -248,17 +236,24 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * Additional/updated translations.
-     * This module uses the po/mo system. It needs a .mo file.
+     * {@inheritDoc}
      *
      * @param string $language
      *
-     * @return string[]         // array<string,string>
+     * @return array
+     *
+     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customTranslations()
      */
     public function customTranslations(string $language): array
     {
-        $file = $this->resourcesFolder() . 'lang' . DIRECTORY_SEPARATOR . $language . '.mo';
-        return file_exists($file) ? (new Translation($file))->asArray() : [];
+        $lang_dir = $this->resourcesFolder() . 'lang' . DIRECTORY_SEPARATOR;
+        $file = $lang_dir . $language . '.mo';
+
+        if (file_exists($file)) {
+            return (new Translation($file))->asArray();
+        } else {
+            return [];
+        }
     }
 
     /**
@@ -309,6 +304,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'orderProcessing',
             'hostingStartDate',
             'hostingEndDate',
+            'showGoogleCharts',
+            'additionalThirdPartyServices',
         ];
     }
 
@@ -372,6 +369,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         if ($response['responsibleSex'] == '') {
             $response['responsibleSex'] = 'U';
+        }
+
+        if ($response['showGoogleCharts'] === '') {
+            $response['showGoogleCharts'] = '1';
         }
     }
 
@@ -540,7 +541,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'copyRightStartYear' => $this->copyRightStartYear(),
             'copyRightName'      => $this->copyRightName(),
             'cookiesWarning'     => LegalNoticeSupport::useBuildInCookiesWarning(
-                $tree, $user, self::TRACKING_SERVICES, self::COOKIES_SERVICES),
+                $tree, $user, [], []),
             'cookiesMessage'     => I18N::translate('This website uses cookies.'),
         ]);
     }
@@ -609,9 +610,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showLegalRegulations'      => $this->isChapterEnabled('LegalRegulations', $request),       // tbd
             'singular'                  => $this->useSingularStyle($request),
             'analytics'                 => $this->analyticsModules($tree, $user),
-            'trackingServices'          => self::TRACKING_SERVICES,
-            'thirdPartyServices'        => self::THIRD_PARTY_SERVICES,
-            'cookiesServices'           => self::COOKIES_SERVICES,
+            'trackingServices'          => [],
+            'thirdPartyServices'        => $this->thirdPartyServices(),
+            'cookiesServices'           => [],
             'externalTranscriptionProviders' => $this->externalTranscriptionProviders(),
             //'usercentricsLanguages' => self::USERCENTRICS_LANGUAGES,
             'https'                     => legalNoticeSupport::getHttps($request),
@@ -624,6 +625,53 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingStartDate'          => $this->hostingStartDate(),
             'hostingEndDate'            => $this->hostingEndDate(),
         ]);
+    }
+
+    /**
+     * @return array<string,string>
+     */
+    private function thirdPartyServices(): array
+    {
+        $services = $this->showGoogleCharts() ? self::GOOGLE_CHARTS_SERVICE : [];
+
+        return $services + $this->additionalThirdPartyServices();
+    }
+
+    private function showGoogleCharts(): bool
+    {
+        return $this->getPreference('showGoogleCharts', '1') !== '0';
+    }
+
+    /**
+     * @return array<string,string>
+     */
+    private function additionalThirdPartyServices(): array
+    {
+        $services = [];
+        $lines = preg_split('/\R/', $this->getPreference('additionalThirdPartyServices', '')) ?: [];
+
+        foreach ($lines as $line) {
+            $line = trim($line);
+
+            if ($line === '') {
+                continue;
+            }
+
+            $parts = preg_split('/\s*\|\s*/', $line, 2);
+
+            if ($parts === false || count($parts) !== 2) {
+                continue;
+            }
+
+            $name = trim($parts[0]);
+            $url = trim($parts[1]);
+
+            if ($name !== '' && $url !== '') {
+                $services[$name] = $url;
+            }
+        }
+
+        return $services;
     }
 
     /**
