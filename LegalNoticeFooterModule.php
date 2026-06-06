@@ -103,7 +103,11 @@ use Fisharebest\Webtrees\View;
 use Illuminate\Database\Capsule\Manager as DB;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Throwable;
 
+use function class_exists;
+use function is_array;
+use function method_exists;
 use function trim;
 use function file_exists;
 use function assert;
@@ -266,7 +270,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     public function boot(): void
     {
         // Register a namespace for our views.
-        View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
+        View::registerNamespace($this->name(), strtr($this->resourcesFolder() . 'views' . DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR, '/'));
     }
 
     /**
@@ -607,6 +611,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'trackingServices'          => self::TRACKING_SERVICES,
             'thirdPartyServices'        => self::THIRD_PARTY_SERVICES,
             'cookiesServices'           => self::COOKIES_SERVICES,
+            'externalTranscriptionProviders' => $this->externalTranscriptionProviders(),
             //'usercentricsLanguages' => self::USERCENTRICS_LANGUAGES,
             'https'                     => legalNoticeSupport::getHttps($request),
             'hostingDomain'             => LegalNoticeSupport::getHostName($request),
@@ -618,6 +623,28 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingStartDate'          => $this->hostingStartDate(),
             'hostingEndDate'            => $this->hostingEndDate(),
         ]);
+    }
+
+    /**
+     * External transcription providers announced by hh_source_transcription, if installed.
+     *
+     * @return list<array{name:string,url:string,data:list<string>}>
+     */
+    private function externalTranscriptionProviders(): array
+    {
+        $sourceTranscription = '\Hartenthaler\Webtrees\Module\SourceTranscription\SourceTranscription';
+
+        if (!class_exists($sourceTranscription) || !method_exists($sourceTranscription, 'externalProviderPrivacyNotices')) {
+            return [];
+        }
+
+        try {
+            $providers = $sourceTranscription::externalProviderPrivacyNotices();
+        } catch (Throwable) {
+            return [];
+        }
+
+        return is_array($providers) ? $providers : [];
     }
 
     /**
