@@ -514,6 +514,9 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <?= view('icons/save') ?>
             <?= MoreI18N::xlate('save') ?>
         </button>
+        <button type="submit" class="btn btn-secondary" name="resetOrder" value="1">
+            <?= I18N::translate('Restore default sorting') ?>
+        </button>
     </form>
 </div>
 

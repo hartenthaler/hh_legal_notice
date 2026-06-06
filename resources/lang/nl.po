@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 20:01+0200\n"
+"POT-Creation-Date: 2026-06-06 20:04+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Hermann Hartenthaler <hermann@hartenthaler.de>\n"
 "Language-Team: \n"
@@ -52,43 +52,43 @@ msgid_plural "%s invalid third-party service entries were ignored."
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:649 LegalNoticeFooterModule.php:702
+#: LegalNoticeFooterModule.php:678 LegalNoticeFooterModule.php:731
 msgid "Legal Notice"
 msgstr "Juridische kennisgeving"
 
-#: LegalNoticeFooterModule.php:651
+#: LegalNoticeFooterModule.php:680
 msgid "and Privacy Policy"
 msgstr "en privacybeleid"
 
-#: LegalNoticeFooterModule.php:668
+#: LegalNoticeFooterModule.php:697
 msgid "This website uses cookies."
 msgstr "Deze website maakt gebruik van cookies."
 
-#: LegalNoticeFooterModule.php:703
+#: LegalNoticeFooterModule.php:732
 msgid "Responsible person"
 msgstr "Verantwoordelijk persoon"
 
-#: LegalNoticeFooterModule.php:704
+#: LegalNoticeFooterModule.php:733
 msgid "This website is operated by:"
 msgstr "Deze website wordt beheerd door:"
 
-#: LegalNoticeFooterModule.php:709
+#: LegalNoticeFooterModule.php:738
 msgid "Represented by:"
 msgstr "Vertegenwoordigd door:"
 
-#: LegalNoticeFooterModule.php:722
+#: LegalNoticeFooterModule.php:751
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Extra contactpersoon"
 msgstr[1] "Extra contactpersonen"
 
-#: LegalNoticeFooterModule.php:726
+#: LegalNoticeFooterModule.php:755
 msgid "Website administrator"
 msgid_plural "Website administrators"
 msgstr[0] "Websitebeheerder"
 msgstr[1] "Websitebeheerders"
 
-#: LegalNoticeFooterModule.php:727
+#: LegalNoticeFooterModule.php:756
 msgid ""
 "The webtrees administrator is responsible to manage users and to set the "
 "preferences for this website."
@@ -102,30 +102,30 @@ msgstr[1] ""
 "De websitebeheerders zijn verantwoordelijk voor het gebruikersbeheer en de "
 "voorkeursinstellingen van deze website."
 
-#: LegalNoticeFooterModule.php:829
+#: LegalNoticeFooterModule.php:858
 msgid "Legal Notice and Privacy Policy"
 msgstr "Juridische kennisgeving en privacybeleid"
 
 #. I18N: subject of e-mail
-#: LegalNoticeFooterModule.php:995
+#: LegalNoticeFooterModule.php:1024
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "bericht via juridische kennisgeving van site %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:998
+#: LegalNoticeFooterModule.php:1027
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Geachte heer %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1001
+#: LegalNoticeFooterModule.php:1030
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Geachte mevrouw %s"
 
 #. I18N: first line of body of e-mail using full name
-#: LegalNoticeFooterModule.php:1004
+#: LegalNoticeFooterModule.php:1033
 #, php-format
 msgid "Dear %s"
 msgstr "Geachte %s"
@@ -376,6 +376,10 @@ msgid ""
 msgstr ""
 "In welke volgorde moeten de onderdelen van het hoofdstuk \"Wettelijke "
 "bepalingen\" worden getoond?"
+
+#: resources\views\settings.phtml:518
+msgid "Restore default sorting"
+msgstr "Standaardsortering herstellen"
 
 #: src\LegalNoticeSupport.php:149
 msgctxt "heading"

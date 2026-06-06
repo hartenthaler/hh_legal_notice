@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 20:01+0200\n"
+"POT-Creation-Date: 2026-06-06 20:04+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -51,43 +51,43 @@ msgid_plural "%s invalid third-party service entries were ignored."
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:649 LegalNoticeFooterModule.php:702
+#: LegalNoticeFooterModule.php:678 LegalNoticeFooterModule.php:731
 msgid "Legal Notice"
 msgstr "Avís Legal"
 
-#: LegalNoticeFooterModule.php:651
+#: LegalNoticeFooterModule.php:680
 msgid "and Privacy Policy"
 msgstr "i Política de privacitat"
 
-#: LegalNoticeFooterModule.php:668
+#: LegalNoticeFooterModule.php:697
 msgid "This website uses cookies."
 msgstr "Aquest lloc web utilitza cookies."
 
-#: LegalNoticeFooterModule.php:703
+#: LegalNoticeFooterModule.php:732
 msgid "Responsible person"
 msgstr "Persona responsable"
 
-#: LegalNoticeFooterModule.php:704
+#: LegalNoticeFooterModule.php:733
 msgid "This website is operated by:"
 msgstr "Aquest lloc web està operat per:"
 
-#: LegalNoticeFooterModule.php:709
+#: LegalNoticeFooterModule.php:738
 msgid "Represented by:"
 msgstr "Representat per:"
 
-#: LegalNoticeFooterModule.php:722
+#: LegalNoticeFooterModule.php:751
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Contacte addicional"
 msgstr[1] "Contactes addicionals"
 
-#: LegalNoticeFooterModule.php:726
+#: LegalNoticeFooterModule.php:755
 msgid "Website administrator"
 msgid_plural "Website administrators"
 msgstr[0] "Administrador del lloc web"
 msgstr[1] "Administradors del lloc web"
 
-#: LegalNoticeFooterModule.php:727
+#: LegalNoticeFooterModule.php:756
 msgid ""
 "The webtrees administrator is responsible to manage users and to set the "
 "preferences for this website."
@@ -101,30 +101,30 @@ msgstr[1] ""
 "Els administradors de webtrees són els responsables de gestionar els usuaris "
 "i d'establir les preferències d'aquest lloc web."
 
-#: LegalNoticeFooterModule.php:829
+#: LegalNoticeFooterModule.php:858
 msgid "Legal Notice and Privacy Policy"
 msgstr "Avís Legal i Política de Privacitat"
 
 #. I18N: subject of e-mail
-#: LegalNoticeFooterModule.php:995
+#: LegalNoticeFooterModule.php:1024
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "missatge a través de l'avís legal del lloc %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:998
+#: LegalNoticeFooterModule.php:1027
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Benvolgut Sr. %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1001
+#: LegalNoticeFooterModule.php:1030
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Benvolguda senyora %s"
 
 #. I18N: first line of body of e-mail using full name
-#: LegalNoticeFooterModule.php:1004
+#: LegalNoticeFooterModule.php:1033
 #, php-format
 msgid "Dear %s"
 msgstr "Benvolguts %s"
@@ -371,6 +371,10 @@ msgid ""
 msgstr ""
 "En quina seqüència s'han de mostrar els apartats del capítol \"Normes "
 "jurídiques\"?"
+
+#: resources\views\settings.phtml:518
+msgid "Restore default sorting"
+msgstr "Restaura l'ordenació predeterminada"
 
 #: src\LegalNoticeSupport.php:149
 msgctxt "heading"

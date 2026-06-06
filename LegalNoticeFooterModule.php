@@ -616,17 +616,47 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function postAdminActionChapter(ServerRequestInterface $request)
     {
-        $params = (array) $request->getParsedBody();                    // tbd use Validator
-        $order = implode(",", $params['order']);
-        $this->setPreference('order', $order);
+        $params = (array) $request->getParsedBody();
+        $order = Validator::parsedBody($request)->string('resetOrder') === '1'
+            ? $this->defaultChapterOrder()
+            : $this->validatedChapterOrder($params['order'] ?? []);
+
+        $this->setPreference('order', implode(',', $order));
         foreach (LegalNoticeSupport::listChapterKeys() as $chapterKey) {
             $this->setPreference('status-' . $chapterKey, '0');
         }
         foreach ($params as $key => $value) {
-            if (str_starts_with($key, 'status-')) {
+            if (str_starts_with($key, 'status-') && in_array(substr($key, 7), LegalNoticeSupport::listChapterKeys(), true)) {
                 $this->setPreference($key, $value);
             }
         }
+    }
+
+    /**
+     * @return array<int,string>
+     */
+    private function defaultChapterOrder(): array
+    {
+        return LegalNoticeSupport::listChapterKeys();
+    }
+
+    /**
+     * @param mixed $submittedOrder
+     *
+     * @return array<int,string>
+     */
+    private function validatedChapterOrder(mixed $submittedOrder): array
+    {
+        $defaultOrder = $this->defaultChapterOrder();
+
+        if (!is_array($submittedOrder)) {
+            return $defaultOrder;
+        }
+
+        $submittedOrder = array_filter($submittedOrder, static fn (mixed $chapterKey): bool => is_string($chapterKey));
+        $order = array_values(array_intersect($submittedOrder, $defaultOrder));
+
+        return array_values(array_unique([...$order, ...$defaultOrder]));
     }
 
     /**
