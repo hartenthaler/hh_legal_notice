@@ -1,12 +1,13 @@
     <h2><?= e($legalNoticeTitle) ?></h2>
-    <p>&nbsp;</p>
-    <h4><?= e($legalNoticeHead1) ?></h4>
+    <h4 class="hh-legal-notice-page-heading"><?= e($legalNoticeHead1) ?></h4>
 
     <p><?= e($legalNoticeHead2) ?></p>
 
     <?php if ($organization <> ''): ?>
-        <i><?= e($organization) ?></i><br /><br />
-        <?= e($representedBy) ?>
+        <div class="hh-legal-notice-organization">
+            <i><?= e($organization) ?></i>
+            <div><?= e($representedBy) ?></div>
+        </div>
     <?php endif ?>
 
     <table cellpadding="5" valign="top">
@@ -67,8 +68,7 @@
     </table>
 
     <?php if ($showTreeContacts && $countTreeContacts > 0): ?>
-        <p>&nbsp;</p>
-        <h4><?= e($headTreeContacts) ?></h4>
+        <h4 class="hh-legal-notice-contact-section"><?= e($headTreeContacts) ?></h4>
         <ul>
             <?php foreach ($contactsTreeContacts as $link): ?>
                 <li><?= $link ?></li>
@@ -77,8 +77,7 @@
     <?php endif ?>
 
     <?php if ($showAdministrators): ?>
-        <p>&nbsp;</p>
-        <h4><?= e($headAdministrators) ?></h4>
+        <h4 class="hh-legal-notice-contact-section"><?= e($headAdministrators) ?></h4>
         <p><?= e($commentAdministrators) ?></p>
         <ul>
             <?php foreach ($contactsAdministrators as $link): ?>
@@ -86,3 +85,4 @@
             <?php endforeach ?>
         </ul>
     <?php endif ?>
+

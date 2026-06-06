@@ -1,6 +1,4 @@
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h2><?= e($chapters['DataProtection']->getHeading()) ?></h2>
+    <h2 class="hh-legal-notice-chapter"><?= e($chapters['DataProtection']->getHeading()) ?></h2>
 
     <?php $sectionViews = [
         'Purpose' => 'purpose',
@@ -17,3 +15,4 @@
 
         <?= view($moduleName . '::page/sections/' . $sectionViews[$chapter->getKey()], get_defined_vars()) ?>
     <?php endforeach ?>
+

@@ -1,6 +1,4 @@
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <h2><?= e($chapters['LegalRegulations']->getHeading()) ?></h2>
+        <h2 class="hh-legal-notice-chapter"><?= e($chapters['LegalRegulations']->getHeading()) ?></h2>
         <?php foreach ($chapters as $chapter): ?>
             <?php if ($chapter->getLink() == $chapters['LegalRegulations']->getId() && $chapter->getEnabled()) : ?>
                 <?php $paragraphs = $chapter->getContent() ?>
@@ -12,3 +10,4 @@
                 <?php endif ?>
             <?php endif ?>
         <?php endforeach ?>
+

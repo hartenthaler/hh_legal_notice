@@ -57,12 +57,10 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 <h1><?= e($title) ?></h1>
 <p><?= e($description) ?></p>
 
-<div class="hh-legal-notice mb-5">
+<div class="hh-legal-notice hh-legal-notice-settings mb-5">
     <form method="post">
         <?= csrf_field() ?>
         <input type="hidden" name="save" id="save" value="1">
-
-        <p>&nbsp;</p>
         <h4><?= MoreI18N::xlate('Copyright') . ' (' . I18N::translate('optional') . ')'  ?></h4>
 
         <div class="row">
@@ -101,8 +99,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                        value="<?= $copyRightName ?>">
             </div>
         </div>
-
-        <p>&nbsp;</p>
         <h4><?= MoreI18N::xlate('Responsible person') . ' (' . I18N::translate('mandatory') . ')' ?></h4>
 
         <div class="row">
@@ -157,8 +153,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     </div>
                 </div>
             </fieldset>
-
-        <p>&nbsp;</p>
         <h4><?= I18N::translate('Club or Organization') . ' (' . I18N::translate('optional') . ')' ?></h4>
 
         <div class="row">
@@ -170,8 +164,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <input class="form-control" id="organization" name="organization" type="text" value="<?= $organization ?>">
             </div>
         </div>
-
-        <p>&nbsp;</p>
         <h4><?= I18N::translate('Address data') . ' (' . I18N::translate('mandatory') . ')'  ?></h4>
 
         <div class="row">
@@ -199,8 +191,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <input class="form-control" id="city" name="city" type="text" value="<?= $city ?>">
             </div>
         </div>
-
-        <p>&nbsp;</p>
         <h4><?= I18N::translate('Communication data') . ' (' . I18N::translate('optional') . ')'   ?></h4>
 
         <div class="row">
@@ -245,8 +235,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 </div>
             </fieldset>
         </div>
-
-        <p>&nbsp;</p>
         <h4><?= I18N::translate('Registration data') . ' (' . I18N::translate('optional') . ')'  ?></h4>
 
         <div class="row">
@@ -266,8 +254,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <input class="form-control" id="vatNumber" name="vatNumber" type="text" value="<?= $vatNumber ?>">
             </div>
         </div>
-
-        <p>&nbsp;</p>
         <h4><?= I18N::translate('Additional contacts to be shown') ?></h4>
 
         <div class="row">
@@ -305,8 +291,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 </div>
             </fieldset>
         </div>
-
-        <p>&nbsp;</p>
         <h4><?= I18N::translate('Hosting service') . ' (' . I18N::translate('optional') . ')'  ?></h4>
 
         <div class="row">
@@ -372,8 +356,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <input class="form-control" id="hostingEndDate" name="hostingEndDate" type="text" value="<?= $hostingEndDate ?>">
             </div>
         </div>
-
-        <p>&nbsp;</p>
         <h4><?= I18N::translate('External services') . ' (' . I18N::translate('optional') . ')' ?></h4>
 
         <div class="row">
@@ -406,8 +388,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 </p>
             </div>
         </div>
-
-        <p>&nbsp;</p>
 
         <!-- tbd einen Block für die Hauptüberschriften Datenschutzerklärung/Rechtliche Regelungen -->
             <!-- tbd rekursiv je einen Block mit den Unterkapiteln pro Hauptüberschrift -->
@@ -460,8 +440,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </tbody>
         </table>
 
-        <p>&nbsp;</p>
-
         <h3><?= I18N::translate('In which sequence should the sections of the chapter "Data protection" be shown?') ?></h3>
         <table class="table table-bordered wt-table-menu">
             <thead>
@@ -508,8 +486,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <?php endforeach ?>
             </tbody>
         </table>
-
-        <p>&nbsp;</p>
 
         <h3><?= I18N::translate('In which sequence should the sections of the chapter "Legal Regulations" be shown?') ?></h3>
         <table class="table table-bordered wt-table-menu">
@@ -558,8 +534,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </tbody>
         </table>
 
-        <p>&nbsp;</p>
-
         <button type="submit" class="btn btn-primary">
             <?= view('icons/save') ?>
             <?= MoreI18N::xlate('save') ?>
@@ -594,5 +568,10 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
         .wt-table-menu tr:last-child .wt-icon-arrow-down {
             display:none;
         }
+        .hh-legal-notice-settings h3,
+        .hh-legal-notice-settings h4 {
+            margin-top: 2rem;
+        }
     </style>
 <?php View::endpush() ?>
+

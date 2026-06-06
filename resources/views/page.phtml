@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Fisharebest\Webtrees\View;
 use Illuminate\Support\Collection;
 
 /**
@@ -69,7 +70,7 @@ use Illuminate\Support\Collection;
  */
 ?>
 
-<div class="wt-footer wt-footer-contact hh-legal-notice my-2">
+<div class="wt-footer wt-footer-contact hh-legal-notice hh-legal-notice-page my-2">
     <?= view($moduleName . '::page/header', get_defined_vars()) ?>
 
     <?php foreach ($chapters as $chapter) : ?>
@@ -84,3 +85,21 @@ use Illuminate\Support\Collection;
         <?php endif ?>
     <?php endforeach ?>
 </div>
+
+<?php View::push('styles') ?>
+    <style>
+        .hh-legal-notice-page .hh-legal-notice-page-heading,
+        .hh-legal-notice-page .hh-legal-notice-contact-section,
+        .hh-legal-notice-page .hh-legal-notice-chapter {
+            margin-top: 2rem;
+        }
+
+        .hh-legal-notice-page h3 {
+            margin-top: 1.75rem;
+        }
+
+        .hh-legal-notice-page h4 {
+            margin-top: 1.25rem;
+        }
+    </style>
+<?php View::endpush() ?>
