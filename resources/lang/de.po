@@ -2006,12 +2006,8 @@ msgid "Legal notice options"
 msgstr "Impressumsoptionen"
 
 #: resources/views/settings.phtml:270
-msgid ""
-"If the server is located in the European Union, should a section about "
-"consumer dispute resolution be shown?"
-msgstr ""
-"Soll ein Abschnitt zur Verbraucherstreitbeilegung angezeigt werden, falls "
-"der Serverstandort in der Europäischen Union liegt?"
+msgid "Should a section about consumer dispute resolution be shown?"
+msgstr "Soll ein Abschnitt zur Verbraucherstreitbeilegung angezeigt werden?"
 
 #: resources/views/settings.phtml:280
 msgid ""
@@ -2019,9 +2015,7 @@ msgid ""
 "server location is in the European Union."
 msgstr ""
 "Der Hinweis wird nur angezeigt, wenn diese Option aktiviert ist und der "
-"konfigurierte Serverstandort in der Europäischen Union liegt.Google Charts "
-"wird nur aufgeführt, wenn diese Option aktiviert ist und das webtrees-"
-"Statistikdiagramm-Modul aktiviert ist."
+"konfigurierte Serverstandort in der Europäischen Union liegt."
 
 #: resources/views/settings.phtml:287
 msgid "Name of the competent supervisory authority"

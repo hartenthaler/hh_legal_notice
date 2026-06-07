@@ -1936,9 +1936,7 @@ msgid "Legal notice options"
 msgstr "Juridische kennisgeving"
 
 #: resources/views/settings.phtml:270
-msgid ""
-"If the server is located in the European Union, should a section about "
-"consumer dispute resolution be shown?"
+msgid "Should a section about consumer dispute resolution be shown?"
 msgstr ""
 
 #: resources/views/settings.phtml:280
