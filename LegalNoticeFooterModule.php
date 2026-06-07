@@ -136,13 +136,38 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     public const CUSTOM_VERSION     = '2.2.6.0';
     public const CUSTOM_LAST        = 'https://raw.githubusercontent.com/' . self::GITHUB_USER . '/' .
                                             self::CUSTOM_MODULE . '/main/latest-version.txt';
+    public const PRIVACY_POLICY_DATE = '2026-06-07';
+
+    private const PRIVACY_POLICY_DATE_SOURCE_RELEASE = 'release';
+    private const PRIVACY_POLICY_DATE_SOURCE_MANUAL = 'manual';
+    private const PRIVACY_POLICY_DATE_SOURCE_CURRENT = 'current';
 
     // old module name
     public const OLD_MODULE_NAME_FOR_PREFERENCES = 'hh_imprint';
 
     // Google Charts is loaded by webtrees statistics pages when these charts are viewed.
     private const GOOGLE_CHARTS_SERVICE = [
-        'Google Charts' => 'https://www.gstatic.com/charts/loader.js',
+        'name' => 'Google Charts',
+        'url' => 'https://www.gstatic.com/charts/loader.js',
+        'country' => 'United States',
+    ];
+
+    private const GRAVATAR_SERVICE = [
+        'name' => 'Gravatar',
+        'url' => 'https://gravatar.com/',
+        'country' => 'United States',
+    ];
+
+    private const OPENSTREETMAP_SERVICE = [
+        'name' => 'OpenStreetMap',
+        'url' => 'https://www.openstreetmap.org/',
+        'country' => 'United Kingdom',
+        'privacy_url' => 'https://wiki.openstreetmap.org/wiki/Privacy_Policy',
+        'data' => [
+            'IP addresses',
+            'Location data shown on maps',
+            'Map display settings',
+        ],
     ];
 
     private const PRIVACY_LAW_GERMANY = 'germany';
@@ -344,6 +369,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'orderProcessing',
             'hostingStartDate',
             'hostingEndDate',
+            'privacyPolicyDateSource',
+            'privacyPolicyManualDate',
             'showGoogleCharts',
             'additionalThirdPartyServices',
         ];
@@ -414,6 +441,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         if ($response['showGoogleCharts'] === '') {
             $response['showGoogleCharts'] = '1';
+        }
+
+        if ($response['privacyPolicyDateSource'] === '') {
+            $response['privacyPolicyDateSource'] = self::PRIVACY_POLICY_DATE_SOURCE_RELEASE;
         }
     }
 
@@ -546,6 +577,14 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
             'copyRightStartYear' => $this->validatedYear($value),
 
+            'privacyPolicyDateSource' => in_array($value, [
+                self::PRIVACY_POLICY_DATE_SOURCE_RELEASE,
+                self::PRIVACY_POLICY_DATE_SOURCE_MANUAL,
+                self::PRIVACY_POLICY_DATE_SOURCE_CURRENT,
+            ], true) ? $value : self::PRIVACY_POLICY_DATE_SOURCE_RELEASE,
+
+            'privacyPolicyManualDate' => $this->validatedIsoDate($value, $preference),
+
             'email' => $this->validatedEmail($value),
 
             'hostingCompanyUrl',
@@ -571,6 +610,25 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         FlashMessages::addMessage(I18N::translate('Invalid copyright start year. The value was ignored.'), 'warning');
+
+        return '';
+    }
+
+    private function validatedIsoDate(string $value, string $preference): string
+    {
+        if ($value === '') {
+            return '';
+        }
+
+        if (preg_match('/^\d{4}-\d{2}-\d{2}$/', $value) === 1) {
+            [$year, $month, $day] = array_map('intval', explode('-', $value));
+
+            if (checkdate($month, $day, $year)) {
+                return $value;
+            }
+        }
+
+        FlashMessages::addMessage(I18N::translate('Invalid date in setting “%s”. Use the format YYYY-MM-DD. The value was ignored.', $preference), 'warning');
 
         return '';
     }
@@ -610,22 +668,25 @@ class LegalNoticeFooterModule extends PrivacyPolicy
                 continue;
             }
 
-            $parts = preg_split('/\s*\|\s*/', $line, 2);
+            $parts = preg_split('/\s*\|\s*/', $line, 3);
 
-            if ($parts === false || count($parts) !== 2) {
+            if ($parts === false || count($parts) < 2) {
                 $invalid_lines++;
                 continue;
             }
 
             $name = trim($parts[0]);
             $url = trim($parts[1]);
+            $country = trim($parts[2] ?? '');
 
             if ($name === '' || !$this->isValidHttpUrl($url)) {
                 $invalid_lines++;
                 continue;
             }
 
-            $valid_lines[] = $name . ' | ' . $url;
+            $valid_lines[] = $country === ''
+                ? $name . ' | ' . $url
+                : $name . ' | ' . $url . ' | ' . $country;
         }
 
         if ($invalid_lines > 0) {
@@ -770,6 +831,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'legalNoticeTitle'          => I18N::translate('Legal Notice'),
             'legalNoticeHead1'          => I18N::translate('Responsible person'),
             'legalNoticeHead2'          => I18N::translate('This website is operated by:'),
+            'privacyPolicyDate'         => $this->privacyPolicyDate(),
             'responsibleName'           => $this->responsibleName(),
             'showGravatar'              => $this->showGravatar(),
             'image'                     => LegalNoticeSupport::getGravatar($this->getPreference('email', ''),'40'),
@@ -824,26 +886,38 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * @return array<string,string>
+     * @return list<array{name:string,url:string,country:string,thirdCountryTransfer:bool}>
      */
     private function thirdPartyServices(): array
     {
-        $services = $this->showGoogleCharts() ? self::GOOGLE_CHARTS_SERVICE : [];
+        $services = $this->showGoogleCharts() ? [self::GOOGLE_CHARTS_SERVICE] : [];
 
         if ($this->showGravatar()) {
-            $services['Gravatar'] = 'https://gravatar.com/';
+            $services[] = self::GRAVATAR_SERVICE;
         }
 
-        return $services + $this->additionalThirdPartyServices();
+        if ($this->isModuleEnabled('openstreetmap')) {
+            $services[] = self::OPENSTREETMAP_SERVICE;
+        }
+
+        return array_map(fn (array $service): array => $this->withThirdCountryTransferFlag($service), [
+            ...$services,
+            ...$this->additionalThirdPartyServices(),
+        ]);
     }
 
     private function showGoogleCharts(): bool
     {
-        return $this->getPreference('showGoogleCharts', '1') !== '0';
+        return $this->getPreference('showGoogleCharts', '1') !== '0' && $this->isModuleEnabled('statistics_chart');
+    }
+
+    private function isModuleEnabled(string $moduleName): bool
+    {
+        return $this->moduleService->findByName($moduleName) !== null;
     }
 
     /**
-     * @return array<string,string>
+     * @return list<array{name:string,url:string,country:string}>
      */
     private function additionalThirdPartyServices(): array
     {
@@ -857,17 +931,22 @@ class LegalNoticeFooterModule extends PrivacyPolicy
                 continue;
             }
 
-            $parts = preg_split('/\s*\|\s*/', $line, 2);
+            $parts = preg_split('/\s*\|\s*/', $line, 3);
 
-            if ($parts === false || count($parts) !== 2) {
+            if ($parts === false || count($parts) < 2) {
                 continue;
             }
 
             $name = trim($parts[0]);
             $url = trim($parts[1]);
+            $country = trim($parts[2] ?? '');
 
             if ($name !== '' && $url !== '') {
-                $services[$name] = $url;
+                $services[] = [
+                    'name' => $name,
+                    'url' => $url,
+                    'country' => $country,
+                ];
             }
         }
 
@@ -877,7 +956,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     /**
      * External transcription providers announced by hh_source_transcription, if installed.
      *
-     * @return list<array{name:string,url:string,data:list<string>}>
+     * @return list<array{name:string,url:string,country:string,data:list<string>,thirdCountryTransfer:bool}>
      */
     private function externalTranscriptionProviders(): array
     {
@@ -893,7 +972,28 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             return [];
         }
 
-        return is_array($providers) ? $providers : [];
+        if (!is_array($providers)) {
+            return [];
+        }
+
+        return array_map(fn (array $provider): array => $this->withThirdCountryTransferFlag($provider), $providers);
+    }
+
+    private function withThirdCountryTransferFlag(array $service): array
+    {
+        $service['country'] = (string) ($service['country'] ?? '');
+        $service['thirdCountryTransfer'] = $this->isThirdCountryTransfer($service['country']);
+
+        return $service;
+    }
+
+    private function isThirdCountryTransfer(string $country): bool
+    {
+        if ($this->privacyLawRegion() === self::PRIVACY_LAW_OTHER || trim($country) === '') {
+            return false;
+        }
+
+        return !$this->isEuPrivacyCountry($country);
     }
 
     /**
@@ -1158,6 +1258,22 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return $this->getPreference('hostingCountry', '');
     }
 
+    private function privacyPolicyDate(): string
+    {
+        return match ($this->getPreference('privacyPolicyDateSource', self::PRIVACY_POLICY_DATE_SOURCE_RELEASE)) {
+            self::PRIVACY_POLICY_DATE_SOURCE_MANUAL => $this->privacyPolicyManualDate() !== ''
+                ? $this->privacyPolicyManualDate()
+                : self::PRIVACY_POLICY_DATE,
+            self::PRIVACY_POLICY_DATE_SOURCE_CURRENT => date('Y-m-d'),
+            default => self::PRIVACY_POLICY_DATE,
+        };
+    }
+
+    private function privacyPolicyManualDate(): string
+    {
+        return $this->getPreference('privacyPolicyManualDate', '');
+    }
+
     private function privacyLawRegion(): string
     {
         $country = strtolower(trim($this->hostingCountry()));
@@ -1166,13 +1282,25 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             return self::PRIVACY_LAW_OTHER;
         }
 
-        if (in_array($country, ['germany', 'deutschland'], true)) {
+        if ($this->isGermany($country)) {
             return self::PRIVACY_LAW_GERMANY;
         }
 
-        return in_array($country, self::EU_COUNTRIES, true)
+        return $this->isEuPrivacyCountry($country)
             ? self::PRIVACY_LAW_EU
             : self::PRIVACY_LAW_OTHER;
+    }
+
+    private function isEuPrivacyCountry(string $country): bool
+    {
+        $country = strtolower(trim($country));
+
+        return $this->isGermany($country) || in_array($country, self::EU_COUNTRIES, true);
+    }
+
+    private function isGermany(string $country): bool
+    {
+        return in_array(strtolower(trim($country)), ['germany', 'deutschland'], true);
     }
 
     /**

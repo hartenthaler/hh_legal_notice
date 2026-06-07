@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-07 18:05+0200\n"
+"POT-Creation-Date: 2026-06-07 18:54+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,75 +20,82 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #. I18N: Description of this module
-#: LegalNoticeFooterModule.php:233
+#: LegalNoticeFooterModule.php:241
 msgid "Legal notice as a footer element for this site."
 msgstr "Avís legal com a element de peu de pàgina d'aquest lloc."
 
-#: LegalNoticeFooterModule.php:492
+#: LegalNoticeFooterModule.php:506
 #, php-format
 msgid ""
 "The preferences for the custom module \"%s\" were imported from the earlier "
 "custom module \"%s\"."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:590
+#: LegalNoticeFooterModule.php:612
 msgid "Invalid copyright start year. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:601
+#: LegalNoticeFooterModule.php:631
+#, php-format
+msgid ""
+"Invalid date in setting “%s”. Use the format YYYY-MM-DD. The value was "
+"ignored."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:642
 msgid "Invalid e-mail address. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:612
+#: LegalNoticeFooterModule.php:653
 #, php-format
 msgid "Invalid URL in setting “%s”. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:649
+#: LegalNoticeFooterModule.php:693
 #, php-format
 msgid "One invalid third-party service entry was ignored."
 msgid_plural "%s invalid third-party service entries were ignored."
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:732 LegalNoticeFooterModule.php:787
+#: LegalNoticeFooterModule.php:776 LegalNoticeFooterModule.php:831
 msgid "Legal Notice"
 msgstr "Avís Legal"
 
-#: LegalNoticeFooterModule.php:734
+#: LegalNoticeFooterModule.php:778
 msgid "and Privacy Policy"
 msgstr "i Política de privacitat"
 
-#: LegalNoticeFooterModule.php:751
+#: LegalNoticeFooterModule.php:795
 msgid "This website uses cookies."
 msgstr "Aquest lloc web utilitza cookies."
 
-#: LegalNoticeFooterModule.php:788
+#: LegalNoticeFooterModule.php:832
 #: resources\views\page\sections\terminology.phtml:21
 msgid "Responsible person"
 msgstr "Persona responsable"
 
-#: LegalNoticeFooterModule.php:789
+#: LegalNoticeFooterModule.php:833
 msgid "This website is operated by:"
 msgstr "Aquest lloc web està operat per:"
 
-#: LegalNoticeFooterModule.php:794
+#: LegalNoticeFooterModule.php:839
 msgid "Represented by:"
 msgstr "Representat per:"
 
-#: LegalNoticeFooterModule.php:807
+#: LegalNoticeFooterModule.php:852
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Contacte addicional"
 msgstr[1] "Contactes addicionals"
 
-#: LegalNoticeFooterModule.php:811
+#: LegalNoticeFooterModule.php:856
 msgid "Website administrator"
 msgid_plural "Website administrators"
 msgstr[0] "Administrador del lloc web"
 msgstr[1] "Administradors del lloc web"
 
-#: LegalNoticeFooterModule.php:812
+#: LegalNoticeFooterModule.php:857
 msgid ""
 "The webtrees administrator is responsible to manage users and to set the "
 "preferences for this website."
@@ -102,33 +109,38 @@ msgstr[1] ""
 "Els administradors de webtrees són els responsables de gestionar els usuaris "
 "i d'establir les preferències d'aquest lloc web."
 
-#: LegalNoticeFooterModule.php:923
+#: LegalNoticeFooterModule.php:1006
 msgid "Legal Notice and Privacy Policy"
 msgstr "Avís Legal i Política de Privacitat"
 
 #. I18N: subject of e-mail
-#: LegalNoticeFooterModule.php:1089
+#: LegalNoticeFooterModule.php:1172
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "missatge a través de l'avís legal del lloc %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1092
+#: LegalNoticeFooterModule.php:1175
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Benvolgut Sr. %s"
 
 #. I18N: first line of body of e-mail using surname
-#: LegalNoticeFooterModule.php:1095
+#: LegalNoticeFooterModule.php:1178
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Benvolguda senyora %s"
 
 #. I18N: first line of body of e-mail using full name
-#: LegalNoticeFooterModule.php:1098
+#: LegalNoticeFooterModule.php:1181
 #, php-format
 msgid "Dear %s"
 msgstr "Benvolguts %s"
+
+#: resources\views\page\chapter.phtml:18
+#, fuzzy, php-format
+msgid "Privacy policy date: %s"
+msgstr "i Política de privacitat"
 
 #: resources\views\page\sections\data-categories.phtml:8
 msgid "Personal data about ancestors, family members, and other persons"
@@ -143,7 +155,8 @@ msgstr ""
 #: resources\views\page\sections\data-categories.phtml:13
 msgid ""
 "Family history and genealogical research is a legitimate interest under "
-"Article 6(f) of the General Data Protection Regulation (EU GDPR)."
+"Article 6(1), first sentence, point (f) of the General Data Protection "
+"Regulation (EU GDPR)."
 msgstr ""
 
 #: resources\views\page\sections\data-categories.phtml:15
@@ -171,91 +184,127 @@ msgid ""
 "Protection Act (BDSG)."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:27
+#: resources\views\page\sections\data-categories.phtml:28
+msgid "Legal bases for processing"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:31
+msgid ""
+"The legal bases for processing personal data depend on the respective "
+"processing operation."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:32
+msgid ""
+"The provision and secure operation of this website, the protection of living "
+"persons, and family history research are based on legitimate interests under "
+"Article 6(1), first sentence, point (f) GDPR."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:33
+msgid ""
+"Processing related to user accounts, registered access, and communication "
+"with registered users may also be based on contractual or pre-contractual "
+"relationships under Article 6(1), first sentence, point (b) GDPR."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:34
+msgid ""
+"If consent is requested for individual processing operations, the legal "
+"basis is Article 6(1), first sentence, point (a) GDPR."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:35
+msgid ""
+"Where legal obligations require processing or retention, the legal basis is "
+"Article 6(1), first sentence, point (c) GDPR."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:39
 #, fuzzy
 msgid "Graduated access rights to personal data"
 msgstr "Tractament de dades personals"
 
-#: resources\views\page\sections\data-categories.phtml:30
+#: resources\views\page\sections\data-categories.phtml:42
 #, fuzzy
 msgid "Large parts of the content of this website are freely accessible."
 msgstr "Responsabilitat pel contingut d'aquests llocs web"
 
-#: resources\views\page\sections\data-categories.phtml:31
+#: resources\views\page\sections\data-categories.phtml:43
 msgid "This does not apply to data about persons who are still living."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:32
+#: resources\views\page\sections\data-categories.phtml:44
 msgid ""
 "Only registered users who have been assigned graduated rights have access to "
 "this data."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:33
+#: resources\views\page\sections\data-categories.phtml:45
 msgid ""
 "Additional data is stored about these users, such as their name and e-mail "
 "address."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:34
+#: resources\views\page\sections\data-categories.phtml:46
 msgid "Registered users are only persons related to me by blood or marriage."
 msgid_plural ""
 "Registered users are only persons related to us by blood or marriage."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-categories.phtml:35
+#: resources\views\page\sections\data-categories.phtml:47
 msgid ""
 "A substantial part of the content here has been shared confidentially within "
 "the family."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:36
+#: resources\views\page\sections\data-categories.phtml:48
 msgid ""
 "It must remain confidential; therefore we all depend on every individual "
 "treating this data confidentially."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:39
+#: resources\views\page\sections\data-categories.phtml:51
 msgid "Personal data about users with a user account"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:42
+#: resources\views\page\sections\data-categories.phtml:54
 msgid ""
 "The personal data that you provide yourself when creating an account is "
 "stored and processed; see contact data."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:46
+#: resources\views\page\sections\data-categories.phtml:58
 msgid "Name"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:47
+#: resources\views\page\sections\data-categories.phtml:59
 #, fuzzy
 msgid "E-mail address"
 msgstr "Adreça de correu electrònic"
 
-#: resources\views\page\sections\data-categories.phtml:48
+#: resources\views\page\sections\data-categories.phtml:60
 msgid "Password"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:52
+#: resources\views\page\sections\data-categories.phtml:64
 msgid "Other personal data that you actively provide is also stored and used."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:53
+#: resources\views\page\sections\data-categories.phtml:65
 msgid ""
 "This includes, for example, data created by completing your personal details "
 "on your personal page or by creating family relationships."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:57
+#: resources\views\page\sections\data-categories.phtml:69
 msgid ""
 "Furthermore, data relating to your user account is recorded as a result of "
 "your activities on our website, for example when editing records."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:61
+#: resources\views\page\sections\data-categories.phtml:73
 msgid ""
 "I occasionally use your e-mail address to inform you by e-mail about "
 "important matters relating to the website or, if necessary, to contact you "
@@ -267,33 +316,33 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-categories.phtml:65
+#: resources\views\page\sections\data-categories.phtml:77
 msgid ""
 "If you have your user account disabled here, the genealogical data you "
 "entered will remain available for the benefit of our genealogical research."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:66
+#: resources\views\page\sections\data-categories.phtml:78
 msgid ""
 "The data about your person will also be retained; only your access to the "
 "specially protected areas here will be blocked."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:69
+#: resources\views\page\sections\data-categories.phtml:81
 msgid "Personal data about visitors to this website"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:71
+#: resources\views\page\sections\data-categories.phtml:83
 msgid ""
 "In principle, data that can be related to non-logged-in users of this "
 "service, visitors, is also stored; see usage data and communication data."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:73
+#: resources\views\page\sections\data-categories.phtml:85
 msgid "Security measures"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:76
+#: resources\views\page\sections\data-categories.phtml:88
 msgid ""
 "Appropriate technical and organizational measures are taken in accordance "
 "with legal requirements, taking into account the state of the art, "
@@ -303,18 +352,18 @@ msgid ""
 "security appropriate to the risk."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:80
+#: resources\views\page\sections\data-categories.phtml:92
 msgid ""
 "These measures include, in particular, securing the confidentiality, "
 "integrity, and availability of data, including by controlling access to the "
 "data."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:83
+#: resources\views\page\sections\data-categories.phtml:95
 msgid "General risk"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:86
+#: resources\views\page\sections\data-categories.phtml:98
 msgid ""
 "I point out that data transmission on the Internet, for example when "
 "communicating by e-mail, may have security gaps."
@@ -324,39 +373,50 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-categories.phtml:87
+#: resources\views\page\sections\data-categories.phtml:99
 msgid ""
 "Complete protection of data against access by third parties is also not "
 "possible."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:90
+#: resources\views\page\sections\data-categories.phtml:102
 msgid "Cookies"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:93
+#: resources\views\page\sections\data-categories.phtml:105
 msgid ""
 "This website uses cookies to enable user logins and to store settings such "
 "as your selected language."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:94
+#: resources\views\page\sections\data-categories.phtml:106
 msgid ""
 "Cookies help make our service more user-friendly, effective, and secure."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:95
+#: resources\views\page\sections\data-categories.phtml:107
 msgid ""
 "Cookies are small text files that are stored on your computer and saved by "
 "your browser."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:96
+#: resources\views\page\sections\data-categories.phtml:108
 msgid ""
 "These cookies are strictly necessary for the website to function properly."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:97
+#: resources\views\page\sections\data-categories.phtml:109
+msgid ""
+"Session cookies are deleted when you leave the website or close your browser."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:110
+msgid ""
+"Persistent cookies can remain stored after the browser is closed, for "
+"example to preserve selected settings for a later visit."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:111
 msgid ""
 "You can configure your browser so that you are informed when cookies are "
 "set, allow cookies only in individual cases, exclude the acceptance of "
@@ -364,31 +424,31 @@ msgid ""
 "cookies when closing the browser."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:98
+#: resources\views\page\sections\data-categories.phtml:112
 msgid ""
 "If cookies are disabled, the functionality of this website may be restricted."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:103
+#: resources\views\page\sections\data-categories.phtml:117
 msgid "This website uses third-party services to manage cookies."
 msgstr "Aquest lloc web utilitza serveis de tercers per gestionar les cookies."
 
-#: resources\views\page\sections\data-categories.phtml:113
+#: resources\views\page\sections\data-categories.phtml:127
 msgid "Tracking and analytics"
 msgstr "Seguiment i anàlisi"
 
-#: resources\views\page\sections\data-categories.phtml:117
+#: resources\views\page\sections\data-categories.phtml:131
 msgid "This website uses third-party services to learn about visitor behavior."
 msgstr ""
 "Aquest lloc web utilitza serveis de tercers per conèixer el comportament "
 "dels visitants."
 
-#: resources\views\page\sections\data-categories.phtml:138
+#: resources\views\page\sections\data-categories.phtml:152
 msgid "These services may use cookies or other tracking technology."
 msgstr ""
 "Aquests serveis poden utilitzar cookies o una altra tecnologia de seguiment."
 
-#: resources\views\page\sections\data-categories.phtml:142
+#: resources\views\page\sections\data-categories.phtml:156
 #, fuzzy
 msgid ""
 "You can opt out of tracking by setting the \"Do Not Track\" header in your "
@@ -397,131 +457,218 @@ msgstr ""
 "Podeu desactivar el seguiment establint la capçalera \"No rastrejar\" a les "
 "preferències del navegador."
 
-#: resources\views\page\sections\data-categories.phtml:149
+#: resources\views\page\sections\data-categories.phtml:163
 msgid "Third party services"
 msgstr "Serveis de tercers"
 
-#: resources\views\page\sections\data-categories.phtml:152
-msgid "This website uses additional third-party services."
-msgstr "Aquest lloc web utilitza serveis addicionals de tercers."
-
-#: resources\views\page\sections\data-categories.phtml:164
-msgid "External transcription providers"
+#: resources\views\page\sections\data-categories.phtml:166
+msgid ""
+"When external services are used, personal data may be transferred to or "
+"disclosed to other providers, companies, or persons where this is necessary "
+"for the respective service."
 msgstr ""
 
 #: resources\views\page\sections\data-categories.phtml:167
+msgid ""
+"Only those services that are configured or actually used by this website are "
+"listed here."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:171
+msgid "This website uses additional third-party services."
+msgstr "Aquest lloc web utilitza serveis addicionals de tercers."
+
+#: resources\views\page\sections\data-categories.phtml:176
+msgid "Service"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:177
+msgid "URL"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:178
+#, fuzzy
+msgid "Location"
+msgstr "Apartat"
+
+#: resources\views\page\sections\data-categories.phtml:186
+msgid "not specified"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:199
+msgid ""
+"This website may embed maps from OpenStreetMap. The map content is loaded "
+"from OpenStreetMap servers, and OpenStreetMap may process data such as IP "
+"addresses, displayed location data, and selected map settings to provide and "
+"cache the map functions."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:203
+msgid "Data that may be processed by this service:"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:207
+#, fuzzy
+msgid "IP addresses"
+msgstr "Adreça de correu electrònic"
+
+#: resources\views\page\sections\data-categories.phtml:208
+msgid "Location data shown on maps"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:209
+msgid "Map display settings"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:217
+#, fuzzy
+msgid "Privacy notice:"
+msgstr "i Política de privacitat"
+
+#: resources\views\page\sections\data-categories.phtml:227
+msgid "External transcription providers"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:230
 msgid ""
 "This website may use external transcription providers when a registered user "
 "explicitly starts such a workflow."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:168
+#: resources\views\page\sections\data-categories.phtml:231
 msgid ""
 "In that case, the following provider services and data categories may be "
 "involved:"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:182
+#: resources\views\page\sections\data-categories.phtml:239
+#, php-format
+msgid "Location: %s"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:248
 msgid "Data that may be exchanged:"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:195
+#: resources\views\page\sections\data-categories.phtml:262
+msgid "Data transfer to third countries"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:265
+msgid ""
+"Some third-party services are provided from countries outside the European "
+"Union."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:266
+msgid ""
+"If personal data is transferred to such third countries, this is done only "
+"in accordance with the legal requirements of Articles 44 to 49 GDPR, for "
+"example on the basis of an adequacy decision, standard contractual clauses, "
+"or another legally permitted safeguard."
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:270
+msgid "This may apply to the following services:"
+msgstr ""
+
+#: resources\views\page\sections\data-categories.phtml:278
 msgid "Hosting for the webtrees server"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:199
+#: resources\views\page\sections\data-categories.phtml:282
 #, fuzzy
 msgid "This website is operated by the hosting provider"
 msgstr "Aquest lloc web està operat per:"
 
-#: resources\views\page\sections\data-categories.phtml:207
+#: resources\views\page\sections\data-categories.phtml:290
 #, php-format
 msgid "For details, please refer to the privacy notice of %s."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:214
+#: resources\views\page\sections\data-categories.phtml:297
 msgid ""
 "The hosting provider automatically collects and stores information when this "
 "website is accessed, such as browser used, operating system, referring page, "
 "IP address, time of access, and similar data."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:215
+#: resources\views\page\sections\data-categories.phtml:298
 msgid ""
 "This data cannot be assigned to specific persons without consulting "
 "additional data sources, and"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:216
+#: resources\views\page\sections\data-categories.phtml:299
 msgid "I do not evaluate this data further"
 msgid_plural "we do not evaluate this data further"
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-categories.phtml:217
+#: resources\views\page\sections\data-categories.phtml:300
 msgid "unless there is unlawful use of these web pages."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:221
+#: resources\views\page\sections\data-categories.phtml:304
 msgid "Order processing"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:223
+#: resources\views\page\sections\data-categories.phtml:306
 msgid ""
 "An agreement on order processing has been concluded with the hosting "
 "provider."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:225
+#: resources\views\page\sections\data-categories.phtml:308
 msgid "This took place"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:227
+#: resources\views\page\sections\data-categories.phtml:310
 #, php-format
 msgid "for the first time on %s"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:229
+#: resources\views\page\sections\data-categories.phtml:312
 msgid "and"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:233
+#: resources\views\page\sections\data-categories.phtml:316
 #, php-format
 msgid "most recently on %s"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:237
+#: resources\views\page\sections\data-categories.phtml:320
 msgid ""
 "This is an agreement required by data protection law under Article 28 GDPR, "
 "which ensures that the hosting provider processes the personal data of this "
 "website"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:239
+#: resources\views\page\sections\data-categories.phtml:322
 msgid ""
 "This agreement ensures that the hosting provider processes the personal data "
 "of this website"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:241
+#: resources\views\page\sections\data-categories.phtml:324
 msgid "only according to my instructions"
 msgid_plural "only according to our instructions"
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-categories.phtml:243
+#: resources\views\page\sections\data-categories.phtml:326
 msgid "and in compliance with the GDPR."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:245
+#: resources\views\page\sections\data-categories.phtml:328
 msgid "and in compliance with the applicable data protection requirements."
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:250
+#: resources\views\page\sections\data-categories.phtml:333
 msgid "Application log"
 msgstr ""
 
-#: resources\views\page\sections\data-categories.phtml:253
+#: resources\views\page\sections\data-categories.phtml:336
 msgid ""
 "The application used (webtrees) logs all user actions so that, among other "
 "things, changes to the data can be traced and approved."
@@ -560,15 +707,50 @@ msgid ""
 "with the competent supervisory authority."
 msgstr ""
 
-#: resources\views\page\sections\data-rights.phtml:29
-msgid "GDPR in connection with online genealogies"
+#: resources\views\page\sections\data-rights.phtml:26
+msgid "Right to data portability"
 msgstr ""
 
-#: resources\views\page\sections\data-rights.phtml:31
-msgid "Data protection in connection with online genealogies"
+#: resources\views\page\sections\data-rights.phtml:29
+msgid ""
+"Under Article 20 GDPR, you have the right to receive personal data that you "
+"have provided in a structured, commonly used, and machine-readable format, "
+"and to transmit that data to another controller where the legal requirements "
+"are met."
+msgstr ""
+
+#: resources\views\page\sections\data-rights.phtml:32
+msgid "Right to object"
+msgstr ""
+
+#: resources\views\page\sections\data-rights.phtml:35
+msgid ""
+"Under Article 21 GDPR, you have the right to object at any time, on grounds "
+"relating to your particular situation, to the processing of personal data "
+"concerning you that is based on Article 6(1), first sentence, point (e) or "
+"Article 6(1), first sentence, point (f) GDPR."
+msgstr ""
+
+#: resources\views\page\sections\data-rights.phtml:36
+msgid "This also applies to profiling based on those provisions."
 msgstr ""
 
 #: resources\views\page\sections\data-rights.phtml:37
+msgid ""
+"If personal data concerning you is processed for direct marketing purposes, "
+"you have the right to object at any time to such processing, including "
+"profiling related to direct marketing."
+msgstr ""
+
+#: resources\views\page\sections\data-rights.phtml:43
+msgid "GDPR in connection with online genealogies"
+msgstr ""
+
+#: resources\views\page\sections\data-rights.phtml:45
+msgid "Data protection in connection with online genealogies"
+msgstr ""
+
+#: resources\views\page\sections\data-rights.phtml:51
 msgid ""
 "I am a strong advocate of data protection and would like to emphasize that I "
 "naturally make every effort to comply with the GDPR."
@@ -578,7 +760,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:39
+#: resources\views\page\sections\data-rights.phtml:53
 msgid ""
 "I am a strong advocate of data protection and would like to emphasize that I "
 "naturally make every effort to comply with applicable data protection "
@@ -590,18 +772,18 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:41
+#: resources\views\page\sections\data-rights.phtml:55
 msgid ""
 "However, fully and clearly legally compliant implementation in all cases is "
 "probably not possible in the field of online genealogy."
 msgstr ""
 
-#: resources\views\page\sections\data-rights.phtml:42
+#: resources\views\page\sections\data-rights.phtml:56
 msgid ""
 "Too many questions are disputed and leave room for legal interpretation."
 msgstr ""
 
-#: resources\views\page\sections\data-rights.phtml:46
+#: resources\views\page\sections\data-rights.phtml:60
 msgid ""
 "However, I can rule out with certainty that everyone entered in this family "
 "tree knows about it."
@@ -611,17 +793,17 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:47
+#: resources\views\page\sections\data-rights.phtml:61
 msgid "Creating a family tree works differently."
 msgstr ""
 
-#: resources\views\page\sections\data-rights.phtml:48
+#: resources\views\page\sections\data-rights.phtml:62
 msgid ""
 "Usually, information about a branch of the family is obtained from one "
 "person in that branch."
 msgstr ""
 
-#: resources\views\page\sections\data-rights.phtml:49
+#: resources\views\page\sections\data-rights.phtml:63
 msgid ""
 "I have not obtained verifiable consent from our relatives to enter the "
 "respective family in this family tree."
@@ -631,7 +813,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:54
+#: resources\views\page\sections\data-rights.phtml:68
 msgid ""
 "In my opinion, full compliance with the GDPR would therefore only be "
 "possible if I took large parts of this family tree offline again."
@@ -641,7 +823,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:56
+#: resources\views\page\sections\data-rights.phtml:70
 msgid ""
 "In my opinion, full compliance with every possible privacy expectation would "
 "therefore only be possible if I took large parts of this family tree offline "
@@ -653,13 +835,13 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:58
+#: resources\views\page\sections\data-rights.phtml:72
 msgid ""
 "This, however, would remove the ability of the target group to use it and "
 "find their own paths through the extended kinship network."
 msgstr ""
 
-#: resources\views\page\sections\data-rights.phtml:59
+#: resources\views\page\sections\data-rights.phtml:73
 msgid ""
 "Although I accept a certain risk, I am leaving our data online for the time "
 "being."
@@ -669,11 +851,11 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:60
+#: resources\views\page\sections\data-rights.phtml:74
 msgid "The will to handle the data carefully is present."
 msgstr ""
 
-#: resources\views\page\sections\data-rights.phtml:61
+#: resources\views\page\sections\data-rights.phtml:75
 msgid ""
 "I would therefore like to agree on the following procedure with all users of "
 "our website, hoping that this will satisfy the law:"
@@ -683,7 +865,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:65
+#: resources\views\page\sections\data-rights.phtml:79
 msgid ""
 "If you discover data that you believe is unlawfully visible, please inform "
 "me."
@@ -693,7 +875,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:66
+#: resources\views\page\sections\data-rights.phtml:80
 msgid ""
 "I will then try as quickly as possible to obtain consent, remove visibility, "
 "or delete the data."
@@ -703,7 +885,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources\views\page\sections\data-rights.phtml:67
+#: resources\views\page\sections\data-rights.phtml:81
 msgid ""
 "If, for specific reasons, you want to prevent your data from being visible "
 "even within the group of authorized registered users, please inform me so "
@@ -840,88 +1022,88 @@ msgid ""
 "purposes and means of the processing of personal data."
 msgstr ""
 
-#: resources\views\settings.phtml:64 resources\views\settings.phtml:156
-#: resources\views\settings.phtml:172 resources\views\settings.phtml:194
-#: resources\views\settings.phtml:238 resources\views\settings.phtml:294
-#: resources\views\settings.phtml:359
+#: resources\views\settings.phtml:66 resources\views\settings.phtml:158
+#: resources\views\settings.phtml:174 resources\views\settings.phtml:196
+#: resources\views\settings.phtml:240 resources\views\settings.phtml:296
+#: resources\views\settings.phtml:329 resources\views\settings.phtml:394
 msgid "optional"
 msgstr "opcional"
 
-#: resources\views\settings.phtml:71
+#: resources\views\settings.phtml:73
 msgid "Should a copyright notice be included in this page footer element?"
 msgstr ""
 "S'ha d'incloure un avís de drets d'autor en aquest element de peu de pàgina?"
 
-#: resources\views\settings.phtml:86
+#: resources\views\settings.phtml:88
 msgid "Start year of copyright (e.g. \"2020\")"
 msgstr "Any d'inici dels drets d'autor (p. ex., \"2020\")"
 
-#: resources\views\settings.phtml:95
+#: resources\views\settings.phtml:97
 msgid "Name of holder of copyright"
 msgstr "Nom del titular dels drets d'autor"
 
-#: resources\views\settings.phtml:102 resources\views\settings.phtml:167
+#: resources\views\settings.phtml:104 resources\views\settings.phtml:169
 msgid "mandatory"
 msgstr "obligatori"
 
-#: resources\views\settings.phtml:107
+#: resources\views\settings.phtml:109
 msgid "First name(s)"
 msgstr "Nom(s)"
 
-#: resources\views\settings.phtml:116
+#: resources\views\settings.phtml:118
 msgid "Surname(s)"
 msgstr "Cognom(s)"
 
-#: resources\views\settings.phtml:134
+#: resources\views\settings.phtml:136
 msgid "other sex"
 msgstr "altres sexes"
 
-#: resources\views\settings.phtml:144
+#: resources\views\settings.phtml:146
 msgid "Should a gravatar image be shown (see www.gravatar.com)?"
 msgstr "S'ha de mostrar una imatge gravada (vegeu www.gravatar.com)?"
 
-#: resources\views\settings.phtml:156
+#: resources\views\settings.phtml:158
 msgid "Club or Organization"
 msgstr "Club o Organització"
 
-#: resources\views\settings.phtml:161
+#: resources\views\settings.phtml:163
 msgid "Name of club or organization"
 msgstr "Nom del club o d l'organització"
 
-#: resources\views\settings.phtml:167
+#: resources\views\settings.phtml:169
 msgid "Address data"
 msgstr "Dades de l'adreça"
 
-#: resources\views\settings.phtml:172
+#: resources\views\settings.phtml:174
 msgid "Additional address line"
 msgstr "Línia d'adreça addicional"
 
-#: resources\views\settings.phtml:180
+#: resources\views\settings.phtml:182
 msgid "Street name and house number"
 msgstr "Nom del carrer i número de casa"
 
-#: resources\views\settings.phtml:188
+#: resources\views\settings.phtml:190
 msgid "City including zip code"
 msgstr "Ciutat, inclòs el codi postal"
 
-#: resources\views\settings.phtml:194
+#: resources\views\settings.phtml:196
 msgid "Communication data"
 msgstr "Dades de comunicació"
 
-#: resources\views\settings.phtml:199
+#: resources\views\settings.phtml:201
 msgid "Phone number (including country prefix, e.g. \"+49 30 123456\")"
 msgstr ""
 "Número de telèfon (inclòs el prefix del país, p. ex., \"+34 999123456\")"
 
-#: resources\views\settings.phtml:207
+#: resources\views\settings.phtml:209
 msgid "Fax number (including country prefix, e.g. \"+49 30 654321\")"
 msgstr "Número de fax (inclòs el prefix del país, p. ex., \"+34 999123456\")"
 
-#: resources\views\settings.phtml:215
+#: resources\views\settings.phtml:217
 msgid "eMail address"
 msgstr "Adreça de correu electrònic"
 
-#: resources\views\settings.phtml:225
+#: resources\views\settings.phtml:227
 msgid ""
 "Should a simple eMail link be used (if \"no\": subject and body of eMail are "
 "generated, too)?"
@@ -929,25 +1111,25 @@ msgstr ""
 "S'ha d'utilitzar un simple enllaç de correu electrònic (si \"no\": tema i "
 "cos del correu electrònic, també)?"
 
-#: resources\views\settings.phtml:238
+#: resources\views\settings.phtml:240
 msgid "Registration data"
 msgstr "Dades registrals"
 
-#: resources\views\settings.phtml:243
+#: resources\views\settings.phtml:245
 msgid "Label like \"VAT ID No.\" or other registration number label"
 msgstr ""
 "Etiqueta com ara \"NÚMERO D'IDENTIFICACIÓ FISCAL\" o una altra etiqueta de "
 "número de registre"
 
-#: resources\views\settings.phtml:251
+#: resources\views\settings.phtml:253
 msgid "Registration number"
 msgstr "Número de registre"
 
-#: resources\views\settings.phtml:257
+#: resources\views\settings.phtml:259
 msgid "Additional contacts to be shown"
 msgstr "Contactes addicionals que es mostraran"
 
-#: resources\views\settings.phtml:264
+#: resources\views\settings.phtml:266
 msgid ""
 "Should the tree contacts be shown (there are maybe genealogical and "
 "technical contacts defined)?"
@@ -955,76 +1137,120 @@ msgstr ""
 "S'han de mostrar els contactes de l'arbre (potser hi ha contactes "
 "genealògics i tècnics definits)?"
 
-#: resources\views\settings.phtml:281
+#: resources\views\settings.phtml:283
 msgid "Should the administrators of this website be shown?"
 msgstr "S'han de mostrar els administradors d'aquest lloc web?"
 
-#: resources\views\settings.phtml:294
+#: resources\views\settings.phtml:296
+#, fuzzy
+msgid "Privacy policy reference date"
+msgstr "i Política de privacitat"
+
+#: resources\views\settings.phtml:300
+msgid "Which date should be shown in the privacy policy?"
+msgstr ""
+
+#: resources\views\settings.phtml:307
+msgid "Module release date"
+msgstr ""
+
+#: resources\views\settings.phtml:308
+msgid "Manually configured date"
+msgstr ""
+
+#: resources\views\settings.phtml:309
+msgid "Current date"
+msgstr ""
+
+#: resources\views\settings.phtml:314
+msgid ""
+"Use the current date only if you want the dynamically generated privacy "
+"policy to always show the day on which it is viewed."
+msgstr ""
+
+#: resources\views\settings.phtml:319
+#, fuzzy
+msgid "Manual privacy policy date"
+msgstr "i Política de privacitat"
+
+#: resources\views\settings.phtml:324
+msgid "Used only when the manually configured date option is selected."
+msgstr ""
+
+#: resources\views\settings.phtml:329
 msgid "Hosting service"
 msgstr "Servei de hosting"
 
-#: resources\views\settings.phtml:299
+#: resources\views\settings.phtml:334
 msgid ""
 "Country of the webtrees server location (in English language, e.g. "
 "\"Germany\")"
 msgstr ""
 "País de la ubicació del servidor webtrees (en anglès, p. ex. \"Germany\")"
 
-#: resources\views\settings.phtml:307
+#: resources\views\settings.phtml:342
 msgid "Name of hosting service company"
 msgstr "Nom de l'empresa de serveis d'allotjament"
 
-#: resources\views\settings.phtml:315
+#: resources\views\settings.phtml:350
 msgid "Hosting service link (URL)"
 msgstr "Enllaç al servei d'allotjament (URL)"
 
-#: resources\views\settings.phtml:323
+#: resources\views\settings.phtml:358
 msgid "Hosting service link to privacy notice (URL)"
 msgstr "Servei d'allotjament enllaç a avís de privacitat (URL)"
 
-#: resources\views\settings.phtml:332
+#: resources\views\settings.phtml:367
 msgid "Should a section about Order Processing agreement be shown?"
 msgstr ""
 
-#: resources\views\settings.phtml:345
+#: resources\views\settings.phtml:380
 msgid "First date of Order Processing agreement"
 msgstr "Primera data de l'acord Processament de comandes"
 
-#: resources\views\settings.phtml:353
+#: resources\views\settings.phtml:388
 msgid "Last date of Order Processing agreement"
 msgstr "Última data de l'acord Processament de comandes"
 
-#: resources\views\settings.phtml:359
+#: resources\views\settings.phtml:394
 msgid "External services"
 msgstr ""
 
-#: resources\views\settings.phtml:365
+#: resources\views\settings.phtml:400
 msgid "Should Google Charts be mentioned as an external service?"
 msgstr ""
 
-#: resources\views\settings.phtml:375
+#: resources\views\settings.phtml:410
 #, php-format
 msgid "webtrees statistics pages can load Google Charts from %s."
 msgstr ""
 
-#: resources\views\settings.phtml:382
+#: resources\views\settings.phtml:411
+msgid ""
+"Google Charts is only listed when this option is enabled and the webtrees "
+"statistics chart module is enabled."
+msgstr ""
+
+#: resources\views\settings.phtml:418
 msgid "Additional third-party services"
 msgstr ""
 
-#: resources\views\settings.phtml:387
+#: resources\views\settings.phtml:423
 #, php-format
-msgid "Enter one service per line using the format “Name | URL”. Example: %s"
+msgid ""
+"Enter one service per line using the format “Name | URL | Country”. The "
+"country is optional, but should be provided when known. Example: %s"
 msgstr ""
 
-#: resources\views\settings.phtml:394
+#: resources\views\settings.phtml:430
 msgid "In which sequence should the main chapters be shown?"
 msgstr "En quina seqüència s'han de mostrar els capítols principals?"
 
-#: resources\views\settings.phtml:398
+#: resources\views\settings.phtml:434
 msgid "Chapter"
 msgstr "Capítol"
 
-#: resources\views\settings.phtml:441
+#: resources\views\settings.phtml:477
 msgid ""
 "In which sequence should the sections of the chapter \"Data protection\" be "
 "shown?"
@@ -1032,11 +1258,11 @@ msgstr ""
 "En quina seqüència s'han de mostrar els apartats del capítol \"Protecció de "
 "dades\"?"
 
-#: resources\views\settings.phtml:445 resources\views\settings.phtml:492
+#: resources\views\settings.phtml:481 resources\views\settings.phtml:528
 msgid "Section"
 msgstr "Apartat"
 
-#: resources\views\settings.phtml:488
+#: resources\views\settings.phtml:524
 msgid ""
 "In which sequence should the sections of the chapter \"Legal Regulations\" "
 "be shown?"
@@ -1044,7 +1270,7 @@ msgstr ""
 "En quina seqüència s'han de mostrar els apartats del capítol \"Normes "
 "jurídiques\"?"
 
-#: resources\views\settings.phtml:536
+#: resources\views\settings.phtml:572
 #, fuzzy
 msgid "Restore default sorting for all chapters and sections"
 msgstr "Restaura l'ordenació predeterminada de tots els capítols i apartats"

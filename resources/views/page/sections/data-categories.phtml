@@ -10,7 +10,7 @@ use Fisharebest\Webtrees\I18N;
     <p>
         <?= I18N::translate('Personal data about living persons is also stored for the purpose of family history and genealogical research; see inventory data and content data above.') ?>
         <?php if ($useEuPrivacyLaw) : ?>
-            <?= I18N::translate('Family history and genealogical research is a legitimate interest under Article 6(f) of the General Data Protection Regulation (EU GDPR).') ?>
+            <?= I18N::translate('Family history and genealogical research is a legitimate interest under Article 6(1), first sentence, point (f) of the General Data Protection Regulation (EU GDPR).') ?>
         <?php else : ?>
             <?= I18N::translate('Family history and genealogical research is the legitimate purpose for processing this data.') ?>
         <?php endif ?>
@@ -21,6 +21,18 @@ use Fisharebest\Webtrees\I18N;
     <?php if ($useGermanPrivacyLaw) : ?>
         <p>
             <?= I18N::translate('In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular the Federal Data Protection Act (BDSG).') ?>
+        </p>
+    <?php endif ?>
+
+    <?php if ($useEuPrivacyLaw) : ?>
+        <h4><?= I18N::translate('Legal bases for processing') ?></h4>
+
+        <p>
+            <?= I18N::translate('The legal bases for processing personal data depend on the respective processing operation.') ?>
+            <?= I18N::translate('The provision and secure operation of this website, the protection of living persons, and family history research are based on legitimate interests under Article 6(1), first sentence, point (f) GDPR.') ?>
+            <?= I18N::translate('Processing related to user accounts, registered access, and communication with registered users may also be based on contractual or pre-contractual relationships under Article 6(1), first sentence, point (b) GDPR.') ?>
+            <?= I18N::translate('If consent is requested for individual processing operations, the legal basis is Article 6(1), first sentence, point (a) GDPR.') ?>
+            <?= I18N::translate('Where legal obligations require processing or retention, the legal basis is Article 6(1), first sentence, point (c) GDPR.') ?>
         </p>
     <?php endif ?>
 
@@ -94,6 +106,8 @@ use Fisharebest\Webtrees\I18N;
         <?= I18N::translate('Cookies help make our service more user-friendly, effective, and secure.') ?>
         <?= I18N::translate('Cookies are small text files that are stored on your computer and saved by your browser.') ?>
         <?= I18N::translate('These cookies are strictly necessary for the website to function properly.') ?>
+        <?= I18N::translate('Session cookies are deleted when you leave the website or close your browser.') ?>
+        <?= I18N::translate('Persistent cookies can remain stored after the browser is closed, for example to preserve selected settings for a later visit.') ?>
         <?= I18N::translate('You can configure your browser so that you are informed when cookies are set, allow cookies only in individual cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of cookies when closing the browser.') ?>
         <?= I18N::translate('If cookies are disabled, the functionality of this website may be restricted.') ?>
     </p>
@@ -148,16 +162,65 @@ use Fisharebest\Webtrees\I18N;
     <?php if (count($thirdPartyServices) > 0 || count($externalTranscriptionProviders) > 0) : ?>
         <h4><?= I18N::translate('Third party services') ?></h4>
 
+        <p>
+            <?= I18N::translate('When external services are used, personal data may be transferred to or disclosed to other providers, companies, or persons where this is necessary for the respective service.') ?>
+            <?= I18N::translate('Only those services that are configured or actually used by this website are listed here.') ?>
+        </p>
+
         <?php if (count($thirdPartyServices) > 0) : ?>
             <p><?= I18N::translate('This website uses additional third-party services.') ?></p>
 
-            <ul>
-                <?php foreach ($thirdPartyServices as $service => $url) : ?>
-                    <li>
-                        <?= $service ?> - <a href="<?= e($url) ?>"><?= e($url) ?></a>
-                    </li>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th><?= I18N::translate('Service') ?></th>
+                        <th><?= I18N::translate('URL') ?></th>
+                        <th><?= I18N::translate('Location') ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($thirdPartyServices as $service) : ?>
+                    <tr>
+                        <td><strong><?= e($service['name']) ?></strong></td>
+                        <td><a href="<?= e($service['url']) ?>"><?= e($service['url']) ?></a></td>
+                        <td><?= $service['country'] !== '' ? e($service['country']) : I18N::translate('not specified') ?></td>
+                    </tr>
                 <?php endforeach ?>
-            </ul>
+                </tbody>
+            </table>
+
+            <?php $thirdPartyServicesWithData = array_filter($thirdPartyServices, static fn (array $service): bool => count($service['data'] ?? []) > 0 || ($service['privacy_url'] ?? '') !== '') ?>
+            <?php if (count($thirdPartyServicesWithData) > 0) : ?>
+                <ul>
+                    <?php foreach ($thirdPartyServicesWithData as $service) : ?>
+                        <li>
+                            <strong><?= e($service['name']) ?></strong>
+                            <?php if (($service['name'] ?? '') === 'OpenStreetMap') : ?>
+                                <?= I18N::translate('This website may embed maps from OpenStreetMap. The map content is loaded from OpenStreetMap servers, and OpenStreetMap may process data such as IP addresses, displayed location data, and selected map settings to provide and cache the map functions.') ?>
+                            <?php endif ?>
+                            <?php if (count($service['data'] ?? []) > 0) : ?>
+                                <br>
+                                <?= I18N::translate('Data that may be processed by this service:') ?>
+                                <ul>
+                                    <?php foreach ($service['data'] as $dataCategory) : ?>
+                                        <?php $dataCategoryLabel = match ($dataCategory) {
+                                            'IP addresses' => I18N::translate('IP addresses'),
+                                            'Location data shown on maps' => I18N::translate('Location data shown on maps'),
+                                            'Map display settings' => I18N::translate('Map display settings'),
+                                            default => I18N::translate($dataCategory),
+                                        } ?>
+                                        <li><?= e($dataCategoryLabel) ?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                            <?php endif ?>
+                            <?php if (($service['privacy_url'] ?? '') !== '') : ?>
+                                <?= I18N::translate('Privacy notice:') ?>
+                                <a href="<?= e($service['privacy_url']) ?>"><?= e($service['privacy_url']) ?></a>
+                            <?php endif ?>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            <?php endif ?>
         <?php endif ?>
 
         <?php if (count($externalTranscriptionProviders) > 0) : ?>
@@ -172,6 +235,9 @@ use Fisharebest\Webtrees\I18N;
                 <?php foreach ($externalTranscriptionProviders as $provider) : ?>
                     <li>
                         <strong><?= e($provider['name'] ?? '') ?></strong>
+                        <?php if (($provider['country'] ?? '') !== '') : ?>
+                            (<?= I18N::translate('Location: %s', e($provider['country'])) ?>)
+                        <?php endif ?>
                         <?php if (($provider['url'] ?? '') !== '') : ?>
                             -
                             <a href="<?= e($provider['url']) ?>"><?= e($provider['url']) ?></a>
@@ -189,6 +255,23 @@ use Fisharebest\Webtrees\I18N;
                     </li>
                 <?php endforeach ?>
             </ul>
+        <?php endif ?>
+
+        <?php $thirdCountryTransferServices = array_filter([...$thirdPartyServices, ...$externalTranscriptionProviders], static fn (array $service): bool => (bool) ($service['thirdCountryTransfer'] ?? false)) ?>
+        <?php if ($useEuPrivacyLaw && count($thirdCountryTransferServices) > 0) : ?>
+            <h5><?= I18N::translate('Data transfer to third countries') ?></h5>
+
+            <p>
+                <?= I18N::translate('Some third-party services are provided from countries outside the European Union.') ?>
+                <?= I18N::translate('If personal data is transferred to such third countries, this is done only in accordance with the legal requirements of Articles 44 to 49 GDPR, for example on the basis of an adequacy decision, standard contractual clauses, or another legally permitted safeguard.') ?>
+            </p>
+
+            <p>
+                <?= I18N::translate('This may apply to the following services:') ?>
+                <?php foreach (array_values($thirdCountryTransferServices) as $index => $service) : ?>
+                    <?= $index > 0 ? ', ' : '' ?><strong><?= e($service['name'] ?? '') ?></strong>
+                <?php endforeach ?>.
+            </p>
         <?php endif ?>
     <?php endif ?>
 

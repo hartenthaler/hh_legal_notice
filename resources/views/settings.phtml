@@ -38,6 +38,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
  *
  * @var array<object>           $chapters               list of chapter objects
  * @var array<int,string>       $dataProtectionSectionKeys keys of the data protection sections rendered on the page
+ * @var string                  $privacyPolicyDateSource source used for the privacy policy reference date
+ * @var string                  $privacyPolicyManualDate manually configured privacy policy reference date
  *
  * @var string                  $hostingCountry         country of the webtrees server location
  * @var string                  $hostingCompanyName     hosting service company name
@@ -291,6 +293,39 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 </div>
             </fieldset>
         </div>
+        <h4><?= I18N::translate('Privacy policy reference date') . ' (' . I18N::translate('optional') . ')' ?></h4>
+
+        <div class="row">
+            <label class="col-sm-3 col-form-label wt-page-options-label" for="privacyPolicyDateSource">
+                <?= I18N::translate('Which date should be shown in the privacy policy?') ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <?= view('components/select', [
+                    'id' => 'privacyPolicyDateSource',
+                    'name' => 'privacyPolicyDateSource',
+                    'options' => [
+                        'release' => I18N::translate('Module release date'),
+                        'manual' => I18N::translate('Manually configured date'),
+                        'current' => I18N::translate('Current date'),
+                    ],
+                    'selected' => $privacyPolicyDateSource,
+                ]) ?>
+                <p class="small text-muted">
+                    <?= I18N::translate('Use the current date only if you want the dynamically generated privacy policy to always show the day on which it is viewed.') ?>
+                </p>
+            </div>
+
+            <label class="col-sm-3 col-form-label wt-page-options-label" for="privacyPolicyManualDate">
+                <?= I18N::translate('Manual privacy policy date') ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <input class="form-control" id="privacyPolicyManualDate" name="privacyPolicyManualDate" type="date" value="<?= e($privacyPolicyManualDate) ?>">
+                <p class="small text-muted">
+                    <?= I18N::translate('Used only when the manually configured date option is selected.') ?>
+                </p>
+            </div>
+        </div>
+
         <h4><?= I18N::translate('Hosting service') . ' (' . I18N::translate('optional') . ')'  ?></h4>
 
         <div class="row">
@@ -373,6 +408,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                         ]) ?>
                         <p class="small text-muted">
                             <?= I18N::translate('webtrees statistics pages can load Google Charts from %s.', 'https://www.gstatic.com/charts/loader.js') ?>
+                            <?= I18N::translate('Google Charts is only listed when this option is enabled and the webtrees statistics chart module is enabled.') ?>
                         </p>
                     </div>
                 </div>
@@ -384,7 +420,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <div class="col-sm-9 wt-page-options-value">
                 <textarea class="form-control" id="additionalThirdPartyServices" name="additionalThirdPartyServices" rows="4"><?= e($additionalThirdPartyServices) ?></textarea>
                 <p class="small text-muted">
-                    <?= I18N::translate('Enter one service per line using the format “Name | URL”. Example: %s', 'Usercentrics | https://usercentrics.com/') ?>
+                    <?= I18N::translate('Enter one service per line using the format “Name | URL | Country”. The country is optional, but should be provided when known. Example: %s', 'Usercentrics | https://usercentrics.com/ | Germany') ?>
                 </p>
             </div>
         </div>

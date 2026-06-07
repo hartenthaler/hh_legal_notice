@@ -1,14 +1,23 @@
 <?php
 
+use Fisharebest\Webtrees\I18N;
+
 /**
  * @var array<object>        $chapters
  * @var object               $mainChapter
  * @var string               $moduleName
+ * @var string               $privacyPolicyDate
  * @var array<string,string> $sectionViewByChapterKey
  */
 ?>
 
     <h2 class="hh-legal-notice-chapter"><?= e($mainChapter->getHeading()) ?></h2>
+
+    <?php if ($mainChapter->getKey() === 'DataProtection') : ?>
+        <p class="hh-legal-notice-reference-date">
+            <?= I18N::translate('Privacy policy date: %s', e($privacyPolicyDate)) ?>
+        </p>
+    <?php endif ?>
 
     <?php foreach ($chapters as $section) : ?>
         <?php if ($section->getLink() !== $mainChapter->getId() || !$section->getEnabled()) : ?>
