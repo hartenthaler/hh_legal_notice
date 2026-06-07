@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-07 20:37+0200\n"
+"POT-Creation-Date: 2026-06-07 21:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1024,10 +1024,6 @@ msgstr ""
 
 #: resources\views\settings.phtml:120
 msgid "Surname(s)"
-msgstr ""
-
-#: resources\views\settings.phtml:138
-msgid "other sex"
 msgstr ""
 
 #: resources\views\settings.phtml:148
