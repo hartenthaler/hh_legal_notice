@@ -96,6 +96,7 @@ use Fisharebest\Webtrees\Module\ModuleFooterTrait;
 use Fisharebest\Webtrees\Module\ModuleConfigInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigTrait;
 use Fisharebest\Webtrees\Module\PrivacyPolicy;
+use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\UserService;
 use Fisharebest\Webtrees\Validator;
@@ -117,6 +118,7 @@ use function preg_match;
 use function trim;
 use function file_exists;
 use function assert;
+use function array_map;
 use function view;
 
 class LegalNoticeFooterModule extends PrivacyPolicy
@@ -362,6 +364,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'vatNumber',
             'showTreeContacts',
             'showAdministrators',
+            'registeredUsersAreRelatives',
             'hostingCountry',
             'hostingCompanyName',
             'hostingCompanyUrl',
@@ -401,6 +404,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $response['description'] = $this->description();
         $response['chapters'] = $this->getChapters($request);
         $response['dataProtectionSectionKeys'] = LegalNoticeSupport::listDataProtectionSectionKeys();
+        $response['registeredUserNames'] = $this->registeredUserNames();
 
         $preferences = $this->listOfPreferences();
         foreach ($preferences as $preference) {
@@ -571,6 +575,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showTreeContacts',
             'showAdministrators',
             'orderProcessing',
+            'registeredUsersAreRelatives',
             'showGoogleCharts' => $value === '1' ? '1' : '0',
 
             'responsibleSex' => in_array($value, ['M', 'F', 'X', 'U'], true) ? $value : 'U',
@@ -831,7 +836,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'legalNoticeTitle'          => I18N::translate('Legal Notice'),
             'legalNoticeHead1'          => I18N::translate('Responsible person'),
             'legalNoticeHead2'          => I18N::translate('This website is operated by:'),
-            'privacyPolicyDate'         => $this->privacyPolicyDate(),
+            'privacyPolicyDate'         => $this->formattedPrivacyPolicyDate(),
             'responsibleName'           => $this->responsibleName(),
             'showGravatar'              => $this->showGravatar(),
             'image'                     => LegalNoticeSupport::getGravatar($this->getPreference('email', ''),'40'),
@@ -858,6 +863,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
                                             'The webtrees administrators are responsible to manage users and to set the preferences for this website.', count($contactsAdministrators)),
             'countAdministrators'       => count($contactsAdministrators),
             'contactsAdministrators'    => $contactsAdministrators,
+            'registeredUsersAreRelatives' => $this->registeredUsersAreRelatives(),
             'chapters'                  => $this->getChapters($request),
             'dataProtectionSectionKeys' => LegalNoticeSupport::listDataProtectionSectionKeys(),
             'sectionViewByChapterKey'   => LegalNoticeSupport::sectionViewByChapterKey(),
@@ -868,7 +874,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'trackingServices'          => [],
             'thirdPartyServices'        => $this->thirdPartyServices(),
             'cookiesServices'           => [],
-            'externalTranscriptionProviders' => $this->externalTranscriptionProviders(),
+            'externalTranscriptionProviders' => [],
             //'usercentricsLanguages' => self::USERCENTRICS_LANGUAGES,
             'https'                     => legalNoticeSupport::getHttps($request),
             'hostingDomain'             => LegalNoticeSupport::getHostName($request),
@@ -899,6 +905,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         if ($this->isModuleEnabled('openstreetmap')) {
             $services[] = self::OPENSTREETMAP_SERVICE;
         }
+
+        $services = [
+            ...$services,
+            ...$this->externalTranscriptionProviders(),
+        ];
 
         return array_map(fn (array $service): array => $this->withThirdCountryTransferFlag($service), [
             ...$services,
@@ -977,6 +988,18 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         return array_map(fn (array $provider): array => $this->withThirdCountryTransferFlag($provider), $providers);
+    }
+
+    private function registeredUsersAreRelatives(): bool
+    {
+        return $this->getPreference('registeredUsersAreRelatives', '0') === '1';
+    }
+
+    private function registeredUserNames(): string
+    {
+        return implode(', ', $this->userService->all()
+            ->map(static fn (UserInterface $user): string => $user->realName() !== '' ? $user->realName() : $user->userName())
+            ->all());
     }
 
     private function withThirdCountryTransferFlag(array $service): array
@@ -1267,6 +1290,17 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             self::PRIVACY_POLICY_DATE_SOURCE_CURRENT => date('Y-m-d'),
             default => self::PRIVACY_POLICY_DATE,
         };
+    }
+
+    private function formattedPrivacyPolicyDate(): string
+    {
+        $date = $this->privacyPolicyDate();
+
+        if ($date === '') {
+            return '';
+        }
+
+        return Registry::timestampFactory()->fromString($date, 'Y-m-d')->isoFormat('L');
     }
 
     private function privacyPolicyManualDate(): string

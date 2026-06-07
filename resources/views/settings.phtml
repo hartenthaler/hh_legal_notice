@@ -35,6 +35,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
  *
  * @var string                  $showTreeContacts       option whether to show tree contacts
  * @var string                  $showAdministrators     option whether to show administrators of webtrees
+ * @var string                  $registeredUsersAreRelatives option whether registered users are relatives or relatives by marriage
+ * @var string                  $registeredUserNames    compact list of registered users
  *
  * @var array<object>           $chapters               list of chapter objects
  * @var array<int,string>       $dataProtectionSectionKeys keys of the data protection sections rendered on the page
@@ -289,6 +291,29 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                             'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
                             'selected' => (int)$showAdministrators
                         ]) ?>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-group mb-3">
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 wt-page-options-label">
+                        <?= I18N::translate('Are the registered users relatives or relatives by marriage?') ?>
+                    </legend>
+                    <div class="col-sm-9 wt-page-options-value">
+                        <?= view('components/radios-inline', [
+                            'id' => 'registeredUsersAreRelatives',
+                            'name' => 'registeredUsersAreRelatives',
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
+                            'selected' => (int)$registeredUsersAreRelatives
+                        ]) ?>
+                        <p class="small text-muted">
+                            <?= I18N::translate('Select this only if registered users are limited to relatives or relatives by marriage and family-internal confidentiality should be stated in the privacy policy.') ?>
+                            <?php if ($registeredUserNames !== '') : ?>
+                                <br>
+                                <?= I18N::translate('Registered users: %s', e($registeredUserNames)) ?>
+                            <?php endif ?>
+                        </p>
                     </div>
                 </div>
             </fieldset>
