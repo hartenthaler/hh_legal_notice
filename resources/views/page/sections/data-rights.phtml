@@ -11,21 +11,21 @@ use Fisharebest\Webtrees\I18N;
     </p>
 
     <p>
-        <?php if ($useEuropeanPrivacyLaw) : ?>
+        <?php if ($useEuPrivacyLaw) : ?>
             <?= I18N::translate('In accordance with Article 17 GDPR, you have the right to request that relevant data be deleted without undue delay, or alternatively, in accordance with Article 18 GDPR, to request restriction of the processing of the data.') ?>
         <?php else : ?>
             <?= I18N::translate('You may request that relevant data be deleted without undue delay or that the processing of the data be restricted, subject to the applicable legal requirements.') ?>
         <?php endif ?>
     </p>
 
-    <?php if ($useEuropeanPrivacyLaw) : ?>
+    <?php if ($useEuPrivacyLaw) : ?>
         <p>
             <?= I18N::translate('Furthermore, under Article 77 GDPR, you have the right to lodge a complaint with the competent supervisory authority.') ?>
         </p>
     <?php endif ?>
 
     <h4>
-        <?php if ($useEuropeanPrivacyLaw) : ?>
+        <?php if ($useEuPrivacyLaw) : ?>
             <?= I18N::translate('GDPR in connection with online genealogies') ?>
         <?php else : ?>
             <?= I18N::translate('Data protection in connection with online genealogies') ?>
@@ -33,7 +33,7 @@ use Fisharebest\Webtrees\I18N;
     </h4>
 
     <p>
-        <?php if ($useEuropeanPrivacyLaw) : ?>
+        <?php if ($useEuPrivacyLaw) : ?>
             <?= I18N::plural('I am a strong advocate of data protection and would like to emphasize that I naturally make every effort to comply with the GDPR.', 'We are strong advocates of data protection and would like to emphasize that we naturally make every effort to comply with the GDPR.', $singular ? 1 : 2) ?>
         <?php else : ?>
             <?= I18N::plural('I am a strong advocate of data protection and would like to emphasize that I naturally make every effort to comply with applicable data protection requirements.', 'We are strong advocates of data protection and would like to emphasize that we naturally make every effort to comply with applicable data protection requirements.', $singular ? 1 : 2) ?>
@@ -50,7 +50,7 @@ use Fisharebest\Webtrees\I18N;
     </p>
 
     <p>
-        <?php if ($useEuropeanPrivacyLaw) : ?>
+        <?php if ($useEuPrivacyLaw) : ?>
             <?= I18N::plural('In my opinion, full compliance with the GDPR would therefore only be possible if I took large parts of this family tree offline again.', 'In our opinion, full compliance with the GDPR would therefore only be possible if we took large parts of this family tree offline again.', $singular ? 1 : 2) ?>
         <?php else : ?>
             <?= I18N::plural('In my opinion, full compliance with every possible privacy expectation would therefore only be possible if I took large parts of this family tree offline again.', 'In our opinion, full compliance with every possible privacy expectation would therefore only be possible if we took large parts of this family tree offline again.', $singular ? 1 : 2) ?>

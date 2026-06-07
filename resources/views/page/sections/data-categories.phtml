@@ -9,7 +9,7 @@ use Fisharebest\Webtrees\I18N;
 
     <p>
         <?= I18N::translate('Personal data about living persons is also stored for the purpose of family history and genealogical research; see inventory data and content data above.') ?>
-        <?php if ($useEuropeanPrivacyLaw) : ?>
+        <?php if ($useEuPrivacyLaw) : ?>
             <?= I18N::translate('Family history and genealogical research is a legitimate interest under Article 6(f) of the General Data Protection Regulation (EU GDPR).') ?>
         <?php else : ?>
             <?= I18N::translate('Family history and genealogical research is the legitimate purpose for processing this data.') ?>
@@ -233,13 +233,13 @@ use Fisharebest\Webtrees\I18N;
                     <?= I18N::translate('most recently on %s', e($hostingEndDate)) ?>
                 <?php endif ?>.
             <?php endif ?>
-            <?php if ($useEuropeanPrivacyLaw) : ?>
+            <?php if ($useEuPrivacyLaw) : ?>
                 <?= I18N::translate('This is an agreement required by data protection law under Article 28 GDPR, which ensures that the hosting provider processes the personal data of this website') ?>
             <?php else : ?>
                 <?= I18N::translate('This agreement ensures that the hosting provider processes the personal data of this website') ?>
             <?php endif ?>
             <?= I18N::plural('only according to my instructions', 'only according to our instructions', $singular ? 1 : 2) ?>
-            <?php if ($useEuropeanPrivacyLaw) : ?>
+            <?php if ($useEuPrivacyLaw) : ?>
                 <?= I18N::translate('and in compliance with the GDPR.') ?>
             <?php else : ?>
                 <?= I18N::translate('and in compliance with the applicable data protection requirements.') ?>

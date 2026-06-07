@@ -146,16 +146,12 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     ];
 
     private const PRIVACY_LAW_GERMANY = 'germany';
-    private const PRIVACY_LAW_EUROPE = 'europe';
+    private const PRIVACY_LAW_EU = 'eu';
     private const PRIVACY_LAW_OTHER = 'other';
 
-    private const EUROPEAN_COUNTRIES = [
-        'albania',
-        'andorra',
+    private const EU_COUNTRIES = [
         'austria',
-        'belarus',
         'belgium',
-        'bosnia and herzegovina',
         'bulgaria',
         'croatia',
         'cyprus',
@@ -165,36 +161,23 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         'estonia',
         'finland',
         'france',
+        'germany',
         'greece',
         'hungary',
-        'iceland',
         'ireland',
         'italy',
-        'kosovo',
         'latvia',
-        'liechtenstein',
         'lithuania',
         'luxembourg',
         'malta',
-        'moldova',
-        'monaco',
-        'montenegro',
         'netherlands',
-        'north macedonia',
-        'norway',
         'poland',
         'portugal',
         'romania',
-        'san marino',
-        'serbia',
         'slovakia',
         'slovenia',
         'spain',
         'sweden',
-        'switzerland',
-        'ukraine',
-        'united kingdom',
-        'vatican city',
     ];
 
     /** @var ModuleService */
@@ -830,7 +813,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingCountry'            => I18N::translate($this->hostingCountry()),
             'privacyLawRegion'          => $privacyLawRegion,
             'useGermanPrivacyLaw'        => $privacyLawRegion === self::PRIVACY_LAW_GERMANY,
-            'useEuropeanPrivacyLaw'      => $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
+            'useEuPrivacyLaw'            => $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
             'hostingCompanyName'        => $this->hostingCompanyName(),
             'hostingCompanyUrl'         => $this->hostingCompanyUrl(),
             'hostingPrivacyNotice'      => $this->hostingPrivacyNotice(),
@@ -1187,8 +1170,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             return self::PRIVACY_LAW_GERMANY;
         }
 
-        return in_array($country, self::EUROPEAN_COUNTRIES, true)
-            ? self::PRIVACY_LAW_EUROPE
+        return in_array($country, self::EU_COUNTRIES, true)
+            ? self::PRIVACY_LAW_EU
             : self::PRIVACY_LAW_OTHER;
     }
 
