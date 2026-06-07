@@ -105,8 +105,7 @@ Screenshot of control panel page (in German language)
 This module requires **webtrees** version 2.1 or 2.2.
 This module has the same requirements as [webtrees#system-requirements](https://github.com/fisharebest/webtrees#system-requirements).
 
-This module was tested with **webtrees** versions 2.1.22 and 2.2.6
-and all available themes and all other custom modules.
+This module was tested with **webtrees** version 2.2.6.
 
 <a name="Installation"></a>
 ## 📥 Installation
@@ -124,8 +123,9 @@ Install and use [Custom Module Manager](https://github.com/Jefferson49/CustomMod
 1. Rename the folder to `hh_legal_notice`.
 1. Login to **webtrees** as administrator, go to <span class="pointer">Control Panel/Modules/Website/Footers</span>, and find the module. It will be called "Legal Notice and Privacy Policy". Check if it has a tick for "Enabled".
 1. Click at the wrench symbol and add all desired information fields.
-1. Maybe you like to deactivate the module "contact information" (depending whether you have activated this in the "Legal Notice" module).
 1. Finally, click SAVE, to complete the installation.
+
+After installation, you may want to deactivate the core footer module "contact information" if this module already shows the desired contact information.
 
 <a name="Upgrade"></a>
 ## ⬆️ Upgrade
