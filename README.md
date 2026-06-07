@@ -60,15 +60,30 @@ The webtrees admin can choose if the following additional parts should be shown
 * image of the responsible person using the [Gravatar](https://gravatar.com/)
 * list of contact persons for a tree (genealogical and technical)
 * list of administrators of this site with their contact links
+* optional consumer dispute resolution notice for websites whose server is located in the European Union
 * chapter about "Legal Regulations" with several sections
 
 Those sections can be reordered and individually enabled or disabled.
 There are two styles provided for those sections: "I" style and "We" style,
 depending on the number of website administrators.
 
-The chapter "Privacy Policy" is a first draft.
+If a tree contact or website administrator is the same person as the responsible person named in the legal notice,
+the module avoids showing this person as a separate additional contact.
+Instead, the relevant contact role is shown directly below the responsible person.
+
+The chapter "Privacy Policy" is a structured draft that can be adapted by the administrator.
 The administrator can enable or disable this chapter and configure the order of its sections.
-It is intended to add more content to this chapter over time.
+The administrator can also configure the server location, hosting provider, supervisory authority,
+third-party services, and whether registered users are relatives or relatives by marriage.
+
+The generated privacy policy can include, depending on the configuration and server location:
+* references to German, European, or no specific regional data-protection law
+* legal bases for processing under the GDPR where EU law applies
+* a named competent supervisory authority with URL
+* data protection contact information referring to the responsible person named in the legal notice
+* information about hosting, order processing, application logs, third-party services, and third-country transfers
+* information about the long-term preservation of genealogical data as historically relevant material
+* information about external transcription providers when compatible modules provide such notices
 
 <a name="Screenshots"></a>
 ## 🖼 Screenshots
@@ -162,9 +177,15 @@ This module does not collect analytics data, does not track users, and does not 
 
 When the **webtrees** control panel is opened, the module checks whether a newer version is available. This version check requests only the module's public latest-version URL on `github.com`.
 
-The module can optionally show an image of the responsible person through [Gravatar](https://gravatar.com/). If this option is enabled, the visitor's browser requests an image from `www.gravatar.com`; the configured e-mail address is used only as a hash in the Gravatar image URL. Gravatar may process the visitor's IP address and normal browser request metadata.
+The module can optionally show an image of the responsible person through [Gravatar](https://gravatar.com/). If this option is enabled, the visitor's browser requests an image from `www.gravatar.com`; the configured e-mail address is used only as a hash in the Gravatar image URL. Gravatar may process the visitor's IP address and normal browser request metadata. The generated privacy policy can list Gravatar as a third-party service and can mention possible third-country transfer where EU data-protection law applies.
+
+The generated privacy policy can also mention [Google Charts](https://developers.google.com/chart) when the administrator enables this option and the webtrees statistics chart module is active. Google Charts may be loaded from Google servers when statistics charts are viewed.
+
+Additional third-party services can be configured by the administrator using service name, URL, and optional country of service provision. If the website is subject to EU data-protection law and a configured service is provided from outside the European Union, the generated privacy policy can include a third-country-transfer notice.
 
 The privacy-policy page can also include information from other installed modules. For example, if `hh_source_transcription` is installed, this module can show privacy information about external transcription providers such as Transkribus or Discourse.
+
+The wording for the webtrees core cookie behavior is being clarified separately; see issue [#48](https://github.com/hartenthaler/hh_legal_notice/issues/48).
 
 <a name="Support"></a>
 ## ❓ Support
