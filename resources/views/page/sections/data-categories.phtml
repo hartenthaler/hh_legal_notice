@@ -15,7 +15,11 @@ use Fisharebest\Webtrees\I18N;
             <?= I18N::translate('Family history and genealogical research is the legitimate purpose for processing this data.') ?>
         <?php endif ?>
         <?= I18N::translate('Personal data that you find on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely.') ?>
-        <?= I18N::translate('It is stored indefinitely because it has historical value for genealogy.') ?>
+        <?= I18N::translate('Genealogical data is stored for the long term because it is historically relevant and should remain preserved and accessible for future generations.') ?>
+        <?= I18N::translate('Requests for deletion are reviewed individually.') ?>
+        <?php if ($useEuPrivacyLaw) : ?>
+            <?= I18N::translate('Deletion may be restricted if further processing is necessary for historical research purposes and deletion would likely make these purposes impossible or seriously impair them, in accordance with Article 17(3)(d) GDPR.') ?>
+        <?php endif ?>
     </p>
 
     <?php if ($useGermanPrivacyLaw) : ?>
@@ -228,9 +232,47 @@ use Fisharebest\Webtrees\I18N;
                     <?php endforeach ?>
                 </ul>
             <?php endif ?>
+
+            <?php $otherThirdPartyServicesWithData = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => in_array(($service['name'] ?? ''), ['Google Charts', 'Gravatar'], true)) ?>
+            <?php if (count($otherThirdPartyServicesWithData) > 0) : ?>
+                <h5><?= I18N::translate('Additional third-party service details') ?></h5>
+
+                <ul>
+                    <?php foreach ($otherThirdPartyServicesWithData as $service) : ?>
+                        <li>
+                            <strong><?= e($service['name']) ?></strong>
+                            <?php if (($service['name'] ?? '') === 'Google Charts') : ?>
+                                <?= I18N::translate('Google Charts may be loaded from Google servers when statistics charts are viewed.') ?>
+                            <?php elseif (($service['name'] ?? '') === 'Gravatar') : ?>
+                                <?= I18N::translate('Gravatar may be loaded from Automattic servers when the responsible person image is displayed.') ?>
+                            <?php endif ?>
+                            <?php if (count($service['data'] ?? []) > 0) : ?>
+                                <br>
+                                <?= I18N::translate('Data that may be processed by this service:') ?>
+                                <ul>
+                                    <?php foreach ($service['data'] as $dataCategory) : ?>
+                                        <?php $dataCategoryLabel = match ($dataCategory) {
+                                            'IP addresses' => I18N::translate('IP addresses'),
+                                            'Browser request metadata' => I18N::translate('Browser request metadata'),
+                                            'Chart data shown on statistics pages' => I18N::translate('Chart data shown on statistics pages'),
+                                            'E-mail address hash' => I18N::translate('E-mail address hash'),
+                                            default => I18N::translate($dataCategory),
+                                        } ?>
+                                        <li><?= e($dataCategoryLabel) ?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                            <?php endif ?>
+                            <?php if (($service['privacy_url'] ?? '') !== '') : ?>
+                                <?= I18N::translate('Privacy notice:') ?>
+                                <a href="<?= e($service['privacy_url']) ?>"><?= e($service['privacy_url']) ?></a>
+                            <?php endif ?>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            <?php endif ?>
         <?php endif ?>
 
-        <?php $transcriptionProviders = array_filter($thirdPartyServices, static fn (array $service): bool => count($service['data'] ?? []) > 0 && ($service['name'] ?? '') !== 'OpenStreetMap') ?>
+        <?php $transcriptionProviders = array_filter($thirdPartyServices, static fn (array $service): bool => count($service['data'] ?? []) > 0 && !in_array(($service['name'] ?? ''), ['OpenStreetMap', 'Google Charts', 'Gravatar'], true)) ?>
         <?php if (count($transcriptionProviders) > 0) : ?>
             <h5><?= I18N::translate('External transcription providers') ?></h5>
 

@@ -15,6 +15,7 @@ use Illuminate\Support\Collection;
  * @var string                      $legalNoticeHead2       subtitle of this page
  *
  * @var string                      $responsibleName        name of responsible person
+ * @var array<int,string>           $responsibleContactNotices contact notices for responsible person roles
  * @var bool                        $showGravatar           option whether to show image from www.gravatar.com site for this user
  * @var string                      $image                  image from Gravatar (string containing complete html tag)
  * @var string                      $organization           name of club or organization
@@ -53,6 +54,8 @@ use Illuminate\Support\Collection;
  * @var string                      $privacyLawRegion       privacy law region inferred from the configured hosting country
  * @var bool                        $useGermanPrivacyLaw    whether German privacy law references should be shown
  * @var bool                        $useEuPrivacyLaw  whether EU privacy law references should be shown
+ * @var string                      $supervisoryAuthorityName name of the competent supervisory authority
+ * @var string                      $supervisoryAuthorityUrl URL of the competent supervisory authority
  * @var bool                        $registeredUsersAreRelatives whether registered users are relatives or relatives by marriage
  *
  * // tbd die folgenden Parameter sollten alle entfallen, da diese Informationen in die Chapter einfliessen

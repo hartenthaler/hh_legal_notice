@@ -115,6 +115,7 @@ use function is_array;
 use function in_array;
 use function method_exists;
 use function preg_match;
+use function preg_replace;
 use function trim;
 use function file_exists;
 use function assert;
@@ -135,7 +136,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     public const CUSTOM_AUTHOR      = 'Hermann Hartenthaler';
     public const GITHUB_USER        = 'hartenthaler';
     public const CUSTOM_WEBSITE     = 'https://github.com/' . self::GITHUB_USER . '/' . self::CUSTOM_MODULE . '/';
-    public const CUSTOM_VERSION     = '2.2.6.0';
+    public const CUSTOM_VERSION     = '2.2.6.1';
     public const CUSTOM_LAST        = 'https://raw.githubusercontent.com/' . self::GITHUB_USER . '/' .
                                             self::CUSTOM_MODULE . '/main/latest-version.txt';
     public const PRIVACY_POLICY_DATE = '2026-06-07';
@@ -152,12 +153,24 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         'name' => 'Google Charts',
         'url' => 'https://www.gstatic.com/charts/loader.js',
         'country' => 'United States',
+        'privacy_url' => 'https://developers.google.com/chart/interactive/docs/security_privacy',
+        'data' => [
+            'IP addresses',
+            'Browser request metadata',
+            'Chart data shown on statistics pages',
+        ],
     ];
 
     private const GRAVATAR_SERVICE = [
         'name' => 'Gravatar',
         'url' => 'https://gravatar.com/',
         'country' => 'United States',
+        'privacy_url' => 'https://automattic.com/privacy/',
+        'data' => [
+            'IP addresses',
+            'Browser request metadata',
+            'E-mail address hash',
+        ],
     ];
 
     private const OPENSTREETMAP_SERVICE = [
@@ -364,7 +377,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'vatNumber',
             'showTreeContacts',
             'showAdministrators',
+            'showDisputeResolution',
             'registeredUsersAreRelatives',
+            'supervisoryAuthorityName',
+            'supervisoryAuthorityUrl',
             'hostingCountry',
             'hostingCompanyName',
             'hostingCompanyUrl',
@@ -574,6 +590,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'simpleEmail',
             'showTreeContacts',
             'showAdministrators',
+            'showDisputeResolution',
             'orderProcessing',
             'registeredUsersAreRelatives',
             'showGoogleCharts' => $value === '1' ? '1' : '0',
@@ -594,6 +611,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
             'hostingCompanyUrl',
             'hostingPrivacyNotice' => $this->validatedUrl($value, $preference),
+            'supervisoryAuthorityUrl' => $this->validatedUrl($value, $preference),
 
             'additionalThirdPartyServices' => $this->validatedThirdPartyServices($value),
 
@@ -811,17 +829,31 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     public function getPageAction(ServerRequestInterface $request): ResponseInterface
     {
         $contactsListObject = new ContactsList($this->userService, $request);
+        $responsibleName = $this->responsibleName();
+        $responsibleContactNotices = [];
+        $contactsTreeContacts = [];
+        $contactsAdministrators = [];
+
         if ($this->showTreeContacts()) {
-            $contactsTreeContacts = $contactsListObject->getTreeContactsList();
-        } else {
-            $contactsTreeContacts = [];
+            foreach ($contactsListObject->getTreeContactsList() as $contact) {
+                if ($this->isResponsibleContactName($contact->realName, $responsibleName)) {
+                    $responsibleContactNotices[] = $this->treeContactNotice($contact->role, $contact->contactLink);
+                    continue;
+                }
+
+                $contactsTreeContacts[] = $contact->contact;
+            }
         }
+
         if ($this->showAdministrators()) {
             foreach ($contactsListObject->getAdministratorsList() as $admin) {
+                if ($this->isResponsibleContactName($admin->realName, $responsibleName)) {
+                    $responsibleContactNotices[] = $this->administratorContactNotice($admin->contact);
+                    continue;
+                }
+
                 $contactsAdministrators[] = $admin->contact;
             }
-        } else {
-            $contactsAdministrators = [];
         }
 
         $tree = Validator::attributes($request)->treeOptional();
@@ -837,7 +869,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'legalNoticeHead1'          => I18N::translate('Responsible person'),
             'legalNoticeHead2'          => I18N::translate('This website is operated by:'),
             'privacyPolicyDate'         => $this->formattedPrivacyPolicyDate(),
-            'responsibleName'           => $this->responsibleName(),
+            'responsibleName'           => $responsibleName,
+            'responsibleContactNotices' => array_values(array_unique($responsibleContactNotices)),
             'showGravatar'              => $this->showGravatar(),
             'image'                     => LegalNoticeSupport::getGravatar($this->getPreference('email', ''),'40'),
             'organization'              => $this->organization(),
@@ -864,6 +897,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'countAdministrators'       => count($contactsAdministrators),
             'contactsAdministrators'    => $contactsAdministrators,
             'registeredUsersAreRelatives' => $this->registeredUsersAreRelatives(),
+            'supervisoryAuthorityName' => $this->supervisoryAuthorityName(),
+            'supervisoryAuthorityUrl' => $this->supervisoryAuthorityUrl(),
             'chapters'                  => $this->getChapters($request),
             'dataProtectionSectionKeys' => LegalNoticeSupport::listDataProtectionSectionKeys(),
             'sectionViewByChapterKey'   => LegalNoticeSupport::sectionViewByChapterKey(),
@@ -1000,6 +1035,49 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return implode(', ', $this->userService->all()
             ->map(static fn (UserInterface $user): string => $user->realName() !== '' ? $user->realName() : $user->userName())
             ->all());
+    }
+
+    private function isResponsibleContactName(string $contactName, string $responsibleName): bool
+    {
+        return $this->normalizedContactName($contactName) !== ''
+            && $this->normalizedContactName($contactName) === $this->normalizedContactName($responsibleName);
+    }
+
+    private function normalizedContactName(string $name): string
+    {
+        return strtolower(trim((string) preg_replace('/\s+/', ' ', $name)));
+    }
+
+    private function treeContactNotice(string $role, string $contactLink): string
+    {
+        return match ($role) {
+            'genealogy' => I18N::translate('%1$s is %2$s for genealogy questions.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
+            'technical' => I18N::translate('%1$s is %2$s for technical support.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
+            default => I18N::translate('%1$s is %2$s for technical support or genealogy questions.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
+        };
+    }
+
+    private function administratorContactNotice(string $contactLink): string
+    {
+        return I18N::translate('%1$s is %2$s as website administrator and is responsible for managing users and setting the options for this website.', $this->responsiblePronoun(), $this->contactActionLink($contactLink));
+    }
+
+    private function contactActionLink(string $contactLink): string
+    {
+        if (preg_match('/href="([^"]+)"/', $contactLink, $match) !== 1) {
+            return I18N::translate('available');
+        }
+
+        return '<a href="' . e($match[1]) . '" rel="nofollow">' . I18N::translate('available') . '</a>';
+    }
+
+    private function responsiblePronoun(): string
+    {
+        return match ($this->responsibleSex()) {
+            'M' => I18N::translate('He'),
+            'F' => I18N::translate('She'),
+            default => I18N::translate('This person'),
+        };
     }
 
     private function withThirdCountryTransferFlag(array $service): array
@@ -1271,6 +1349,26 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
+     * should a consumer dispute resolution notice be shown for EU server locations?
+     *
+     * @return bool
+     */
+    private function showDisputeResolution(): bool
+    {
+        return $this->getPreference('showDisputeResolution', '0') === '1';
+    }
+
+    private function supervisoryAuthorityName(): string
+    {
+        return $this->getPreference('supervisoryAuthorityName', '');
+    }
+
+    private function supervisoryAuthorityUrl(): string
+    {
+        return $this->getPreference('supervisoryAuthorityUrl', '');
+    }
+
+    /**
      * country of the webtrees server location (in English language)
      * e.g. Germany
      *
@@ -1420,7 +1518,13 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         $parameters = LegalNoticeSupport::getChapterParameters();
-        $chapterTexts = LegalNoticeSupport::getChapterContent(LegalNoticeSupport::getHostName($request),I18N::translate($this->hostingCountry()));
+        $privacyLawRegion = $this->privacyLawRegion();
+        $chapterTexts = LegalNoticeSupport::getChapterContent(
+            LegalNoticeSupport::getHostName($request),
+            I18N::translate($this->hostingCountry()),
+            $this->showDisputeResolution() && $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
+            $privacyLawRegion === self::PRIVACY_LAW_GERMANY
+        );
 
         $chaptersList = [];
         foreach ($order as $chapterKey) {

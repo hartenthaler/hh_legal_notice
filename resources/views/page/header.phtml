@@ -67,6 +67,14 @@
         </tbody>
     </table>
 
+    <?php if ($responsibleContactNotices !== []): ?>
+        <div class="hh-legal-notice-responsible-contact-notices">
+            <?php foreach ($responsibleContactNotices as $notice): ?>
+                <p><?= $notice ?></p>
+            <?php endforeach ?>
+        </div>
+    <?php endif ?>
+
     <?php if ($showTreeContacts && $countTreeContacts > 0): ?>
         <h4 class="hh-legal-notice-contact-section"><?= e($headTreeContacts) ?></h4>
         <ul>
@@ -76,7 +84,7 @@
         </ul>
     <?php endif ?>
 
-    <?php if ($showAdministrators): ?>
+    <?php if ($showAdministrators && $countAdministrators > 0): ?>
         <h4 class="hh-legal-notice-contact-section"><?= e($headAdministrators) ?></h4>
         <p><?= e($commentAdministrators) ?></p>
         <ul>

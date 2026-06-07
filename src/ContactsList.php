@@ -44,7 +44,7 @@ class ContactsList
 {
     // ------------ definition of data structures
 
-    /** @var array<int|string> $treeContactsList */
+    /** @var array<int|object> $treeContactsList */
     private array $treeContactsList;
 
     /** @var array<int|object> $administratorsList */
@@ -67,7 +67,7 @@ class ContactsList
     /**
      * get list of contact persons for a tree (genealogical and technical)
      *
-     * @return array<int|string>
+     * @return array<int|object>
      */
     public function getTreeContactsList(): array
     {
@@ -106,15 +106,51 @@ class ContactsList
         $webmasterUser = $userService->find((int) $tree->getPreference('WEBMASTER_USER_ID'));
 
         if ($contactUser instanceof User && $contactUser === $webmasterUser) {
-            $this->treeContactsList[] = $footerClass->contactLinkEverything($contactUser, $request);
+            $this->treeContactsList[] = $this->treeContact(
+                $contactUser,
+                'everything',
+                $footerClass->contactLinkEverything($contactUser, $request),
+                $userService->contactLink($contactUser, $request)
+            );
         } elseif ($contactUser instanceof User && $webmasterUser instanceof User) {
-            $this->treeContactsList[] = $footerClass->contactLinkGenealogy($contactUser, $request);
-            $this->treeContactsList[] = $footerClass->contactLinkTechnical($webmasterUser, $request);
+            $this->treeContactsList[] = $this->treeContact(
+                $contactUser,
+                'genealogy',
+                $footerClass->contactLinkGenealogy($contactUser, $request),
+                $userService->contactLink($contactUser, $request)
+            );
+            $this->treeContactsList[] = $this->treeContact(
+                $webmasterUser,
+                'technical',
+                $footerClass->contactLinkTechnical($webmasterUser, $request),
+                $userService->contactLink($webmasterUser, $request)
+            );
         } elseif ($contactUser instanceof User) {
-            $this->treeContactsList[] = $footerClass->contactLinkGenealogy($contactUser, $request);
+            $this->treeContactsList[] = $this->treeContact(
+                $contactUser,
+                'genealogy',
+                $footerClass->contactLinkGenealogy($contactUser, $request),
+                $userService->contactLink($contactUser, $request)
+            );
         } elseif ($webmasterUser instanceof User) {
-            $this->treeContactsList[] = $footerClass->contactLinkTechnical($webmasterUser, $request);
+            $this->treeContactsList[] = $this->treeContact(
+                $webmasterUser,
+                'technical',
+                $footerClass->contactLinkTechnical($webmasterUser, $request),
+                $userService->contactLink($webmasterUser, $request)
+            );
         }
+    }
+
+    private function treeContact(User $user, string $role, string $contactText, string $contactLink): object
+    {
+        return (object) [
+            'userId' => $user->id(),
+            'realName' => $user->realName(),
+            'role' => $role,
+            'contact' => $contactText,
+            'contactLink' => $contactLink,
+        ];
     }
 
     /**
