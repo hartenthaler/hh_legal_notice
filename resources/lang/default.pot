@@ -1583,6 +1583,10 @@ msgstr ""
 msgid "Should the administrators of this website be shown?"
 msgstr ""
 
+#: resources/views/settings.phtml:346
+msgid "Relationship of registered users to the responsible person"
+msgstr ""
+
 #: resources/views/settings.phtml:348
 msgid "Are the registered users relatives or relatives by marriage?"
 msgstr ""

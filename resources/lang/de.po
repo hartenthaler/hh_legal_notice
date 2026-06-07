@@ -2057,6 +2057,10 @@ msgstr ""
 msgid "Should the administrators of this website be shown?"
 msgstr "Sollen die Administratoren dieser Website angezeigt werden?"
 
+#: resources/views/settings.phtml:346
+msgid "Relationship of registered users to the responsible person"
+msgstr "Beziehung der registrierten Nutzer zum Verantwortlichen"
+
 #: resources/views/settings.phtml:348
 msgid "Are the registered users relatives or relatives by marriage?"
 msgstr "Sind die registrierten Nutzer Verwandte oder verschwägerte Personen?"
