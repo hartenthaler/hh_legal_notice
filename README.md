@@ -61,9 +61,13 @@ The webtrees admin can choose if the following additional parts should be shown
 * list of contact persons for a tree (genealogical and technical)
 * list of administrators of this site with their contact links
 * optional consumer dispute resolution notice for websites whose server is located in the European Union
-* chapter about "Legal Regulations" with several sections
 
-Those sections can be reordered and individually enabled or disabled.
+The generated page is structured into three parts:
+* **Legal Notice** with the responsible person and contact details; this part is always shown.
+* **Privacy Policy** with several configurable sections; this chapter is optional.
+* **Legal Regulations** with several configurable sections; this chapter is optional.
+
+The optional chapters and their sections can be reordered and individually enabled or disabled.
 There are two styles provided for those sections: "I" style and "We" style,
 depending on the number of website administrators.
 
