@@ -9,10 +9,20 @@ use Fisharebest\Webtrees\I18N;
 
     <p>
         <?= I18N::translate('Personal data about living persons is also stored for the purpose of family history and genealogical research; see inventory data and content data above.') ?>
-        <?= I18N::translate('Family history and genealogical research is a legitimate interest under Article 6(f) of the General Data Protection Regulation (EU GDPR).') ?>
+        <?php if ($useEuropeanPrivacyLaw) : ?>
+            <?= I18N::translate('Family history and genealogical research is a legitimate interest under Article 6(f) of the General Data Protection Regulation (EU GDPR).') ?>
+        <?php else : ?>
+            <?= I18N::translate('Family history and genealogical research is the legitimate purpose for processing this data.') ?>
+        <?php endif ?>
         <?= I18N::translate('Personal data that you find on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely.') ?>
         <?= I18N::translate('It is stored indefinitely because it has historical value for genealogy.') ?>
     </p>
+
+    <?php if ($useGermanPrivacyLaw) : ?>
+        <p>
+            <?= I18N::translate('In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular the Federal Data Protection Act (BDSG).') ?>
+        </p>
+    <?php endif ?>
 
     <h4><?= I18N::translate('Graduated access rights to personal data') ?></h4>
 
@@ -223,9 +233,17 @@ use Fisharebest\Webtrees\I18N;
                     <?= I18N::translate('most recently on %s', e($hostingEndDate)) ?>
                 <?php endif ?>.
             <?php endif ?>
-            <?= I18N::translate('This is an agreement required by data protection law under Article 28 GDPR, which ensures that the hosting provider processes the personal data of this website') ?>
+            <?php if ($useEuropeanPrivacyLaw) : ?>
+                <?= I18N::translate('This is an agreement required by data protection law under Article 28 GDPR, which ensures that the hosting provider processes the personal data of this website') ?>
+            <?php else : ?>
+                <?= I18N::translate('This agreement ensures that the hosting provider processes the personal data of this website') ?>
+            <?php endif ?>
             <?= I18N::plural('only according to my instructions', 'only according to our instructions', $singular ? 1 : 2) ?>
-            <?= I18N::translate('and in compliance with the GDPR.') ?>
+            <?php if ($useEuropeanPrivacyLaw) : ?>
+                <?= I18N::translate('and in compliance with the GDPR.') ?>
+            <?php else : ?>
+                <?= I18N::translate('and in compliance with the applicable data protection requirements.') ?>
+            <?php endif ?>
         </p>
     <?php endif ?>
 

@@ -145,6 +145,58 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         'Google Charts' => 'https://www.gstatic.com/charts/loader.js',
     ];
 
+    private const PRIVACY_LAW_GERMANY = 'germany';
+    private const PRIVACY_LAW_EUROPE = 'europe';
+    private const PRIVACY_LAW_OTHER = 'other';
+
+    private const EUROPEAN_COUNTRIES = [
+        'albania',
+        'andorra',
+        'austria',
+        'belarus',
+        'belgium',
+        'bosnia and herzegovina',
+        'bulgaria',
+        'croatia',
+        'cyprus',
+        'czech republic',
+        'czechia',
+        'denmark',
+        'estonia',
+        'finland',
+        'france',
+        'greece',
+        'hungary',
+        'iceland',
+        'ireland',
+        'italy',
+        'kosovo',
+        'latvia',
+        'liechtenstein',
+        'lithuania',
+        'luxembourg',
+        'malta',
+        'moldova',
+        'monaco',
+        'montenegro',
+        'netherlands',
+        'north macedonia',
+        'norway',
+        'poland',
+        'portugal',
+        'romania',
+        'san marino',
+        'serbia',
+        'slovakia',
+        'slovenia',
+        'spain',
+        'sweden',
+        'switzerland',
+        'ukraine',
+        'united kingdom',
+        'vatican city',
+    ];
+
     /** @var ModuleService */
     private ModuleService $moduleService;
 
@@ -726,6 +778,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $tree = Validator::attributes($request)->treeOptional();
         $user = $request->getAttribute('user');         // tbd: replace by Validator::attributes($request)->user()
         assert($user instanceof UserInterface);
+        $privacyLawRegion = $this->privacyLawRegion();
 
         return $this->viewResponse($this->name() . '::page', [
             'moduleName'                => $this->name(),
@@ -775,6 +828,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'https'                     => legalNoticeSupport::getHttps($request),
             'hostingDomain'             => LegalNoticeSupport::getHostName($request),
             'hostingCountry'            => I18N::translate($this->hostingCountry()),
+            'privacyLawRegion'          => $privacyLawRegion,
+            'useGermanPrivacyLaw'        => $privacyLawRegion === self::PRIVACY_LAW_GERMANY,
+            'useEuropeanPrivacyLaw'      => $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
             'hostingCompanyName'        => $this->hostingCompanyName(),
             'hostingCompanyUrl'         => $this->hostingCompanyUrl(),
             'hostingPrivacyNotice'      => $this->hostingPrivacyNotice(),
@@ -1117,6 +1173,23 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function hostingCountry(): string
     {
         return $this->getPreference('hostingCountry', '');
+    }
+
+    private function privacyLawRegion(): string
+    {
+        $country = strtolower(trim($this->hostingCountry()));
+
+        if ($country === '') {
+            return self::PRIVACY_LAW_OTHER;
+        }
+
+        if (in_array($country, ['germany', 'deutschland'], true)) {
+            return self::PRIVACY_LAW_GERMANY;
+        }
+
+        return in_array($country, self::EUROPEAN_COUNTRIES, true)
+            ? self::PRIVACY_LAW_EUROPE
+            : self::PRIVACY_LAW_OTHER;
     }
 
     /**
