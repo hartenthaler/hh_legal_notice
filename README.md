@@ -75,8 +75,6 @@ If a tree contact or website administrator is the same person as the responsible
 the module avoids showing this person as a separate additional contact.
 Instead, the relevant contact role is shown directly below the responsible person.
 
-The chapter "Privacy Policy" is a structured draft that can be adapted by the administrator.
-The administrator can enable or disable this chapter and configure the order of its sections.
 The administrator can also configure the server location, hosting provider, supervisory authority,
 third-party services, and whether registered users are relatives or relatives by marriage.
 
