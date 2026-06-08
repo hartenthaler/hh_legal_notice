@@ -1,6 +1,7 @@
 <?php
 
 use Fisharebest\Webtrees\I18N;
+use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 ?>
 
     <h3><?= e($chapter->getHeading()) ?></h3>
@@ -92,6 +93,9 @@ use Fisharebest\Webtrees\I18N;
 
     <p>
         <?= I18N::translate('Appropriate technical and organizational measures are taken in accordance with legal requirements, taking into account the state of the art, implementation costs, the nature, scope, circumstances, and purposes of processing, and the varying likelihood and severity of the risk to the rights and freedoms of natural persons, in order to ensure a level of security appropriate to the risk.') ?>
+        <?php if ($https) : ?>
+            <?= I18N::translate('Transmission to a user browser is encrypted (https).') ?>
+        <?php endif ?>
     </p>
 
     <p>
@@ -189,7 +193,7 @@ use Fisharebest\Webtrees\I18N;
                     <tr>
                         <td><strong><?= e($service['name']) ?></strong></td>
                         <td><a href="<?= e($service['url']) ?>"><?= e($service['url']) ?></a></td>
-                        <td><?= $service['country'] !== '' ? e($service['country']) : I18N::translate('not specified') ?></td>
+                        <td><?= $service['country'] !== '' ? e(MoreI18N::xlate($service['country'])) : I18N::translate('not specified') ?></td>
                     </tr>
                 <?php endforeach ?>
                 </tbody>

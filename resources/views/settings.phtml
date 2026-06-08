@@ -35,7 +35,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
  *
  * @var string                  $showTreeContacts       option whether to show tree contacts
  * @var string                  $showAdministrators     option whether to show administrators of webtrees
- * @var string                  $showDisputeResolution  option whether to show consumer dispute resolution notice for EU server locations
  * @var string                  $supervisoryAuthorityName name of the competent supervisory authority
  * @var string                  $supervisoryAuthorityUrl URL of the competent supervisory authority
  * @var string                  $registeredUsersAreRelatives option whether registered users are relatives or relatives by marriage
@@ -261,49 +260,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <input class="form-control" id="vatNumber" name="vatNumber" type="text" value="<?= $vatNumber ?>">
             </div>
         </div>
-        <h4><?= I18N::translate('Legal notice options') . ' (' . I18N::translate('optional') . ')' ?></h4>
-
-        <div class="row">
-            <fieldset class="form-group mb-3">
-                <div class="row">
-                    <legend class="col-form-label col-sm-3 wt-page-options-label">
-                        <?= I18N::translate('Should a section about consumer dispute resolution be shown?') ?>
-                    </legend>
-                    <div class="col-sm-9 wt-page-options-value">
-                        <?= view('components/radios-inline', [
-                            'id' => 'showDisputeResolution',
-                            'name' => 'showDisputeResolution',
-                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
-                            'selected' => (int)$showDisputeResolution
-                        ]) ?>
-                        <p class="small text-muted">
-                            <?= I18N::translate('The notice is only shown when this option is enabled and the configured server location is in the European Union.') ?>
-                        </p>
-                    </div>
-                </div>
-            </fieldset>
-
-            <label class="col-sm-3 col-form-label wt-page-options-label" for="supervisoryAuthorityName">
-                <?= I18N::translate('Name of the competent supervisory authority') ?>
-            </label>
-            <div class="col-sm-9 wt-page-options-value">
-                <input class="form-control" id="supervisoryAuthorityName" name="supervisoryAuthorityName" type="text" value="<?= e($supervisoryAuthorityName) ?>">
-                <p class="small text-muted">
-                    <?= I18N::translate('If this field is empty, no specific supervisory authority is named in the privacy policy.') ?>
-                </p>
-            </div>
-
-            <label class="col-sm-3 col-form-label wt-page-options-label" for="supervisoryAuthorityUrl">
-                <?= I18N::translate('URL of the competent supervisory authority') ?>
-            </label>
-            <div class="col-sm-9 wt-page-options-value">
-                <input class="form-control" id="supervisoryAuthorityUrl" name="supervisoryAuthorityUrl" type="text" value="<?= e($supervisoryAuthorityUrl) ?>">
-                <p class="small text-muted">
-                    <?= I18N::translate('The specific supervisory authority is linked only when both name and URL are configured.') ?>
-                </p>
-            </div>
-        </div>
-
         <h4><?= I18N::translate('Additional contacts to be shown') ?></h4>
 
         <div class="row">
@@ -343,7 +299,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </fieldset>
         </div>
 
-        <h4><?= I18N::translate('Relationship of registered users to the responsible person') ?></h4>
+        <h4><?= I18N::translate('Relationship of registered users to the responsible person') . ' (' . I18N::translate('optional') . ')' ?></h4>
 
         <div class="row">
             <fieldset class="form-group mb-3">
@@ -467,6 +423,31 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <input class="form-control" id="hostingEndDate" name="hostingEndDate" type="text" value="<?= $hostingEndDate ?>">
             </div>
         </div>
+
+        <h4><?= I18N::translate('Supervisory authority') . ' (' . I18N::translate('optional') . ')' ?></h4>
+
+        <div class="row">
+            <label class="col-sm-3 col-form-label wt-page-options-label" for="supervisoryAuthorityName">
+                <?= I18N::translate('Name of the competent supervisory authority') ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <input class="form-control" id="supervisoryAuthorityName" name="supervisoryAuthorityName" type="text" value="<?= e($supervisoryAuthorityName) ?>">
+                <p class="small text-muted">
+                    <?= I18N::translate('If this field is empty, no specific supervisory authority is named in the privacy policy.') ?>
+                </p>
+            </div>
+
+            <label class="col-sm-3 col-form-label wt-page-options-label" for="supervisoryAuthorityUrl">
+                <?= I18N::translate('URL of the competent supervisory authority') ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <input class="form-control" id="supervisoryAuthorityUrl" name="supervisoryAuthorityUrl" type="text" value="<?= e($supervisoryAuthorityUrl) ?>">
+                <p class="small text-muted">
+                    <?= I18N::translate('The specific supervisory authority is linked only when both name and URL are configured.') ?>
+                </p>
+            </div>
+        </div>
+
         <h4><?= I18N::translate('External services') . ' (' . I18N::translate('optional') . ')' ?></h4>
 
         <div class="row">
@@ -501,7 +482,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </div>
         </div>
 
-            <!-- tbd rekursiv je einen Block mit den Unterkapiteln pro Hauptüberschrift -->
             <!-- falls Hauptüberschrift abgewählt werden, soll der Unterblock ausgegraut werden -->
         <h3><?= I18N::translate('In which sequence should the main chapters be shown?') ?></h3>
         <table class="table table-bordered wt-table-menu">

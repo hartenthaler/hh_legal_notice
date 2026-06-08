@@ -6,8 +6,8 @@ use Fisharebest\Webtrees\View;
 use Illuminate\Support\Collection;
 
 /**
- * @var string                      $title                  // tbd wird nicht verwendet muss aber vorhanden sein (Vesta-Error)
- * @var \Fisharebest\Webtrees\Tree  $tree                   // tbd wird nicht verwendet muss aber vorhanden sein (Vesta-Error)
+ * @var string                      $title                  required for view compatibility
+ * @var \Fisharebest\Webtrees\Tree  $tree                   required for view compatibility
  * @var string                      $moduleName             registered view namespace of this module
  *
  * @var string                      $legalNoticeTitle       title of this module
@@ -58,7 +58,6 @@ use Illuminate\Support\Collection;
  * @var string                      $supervisoryAuthorityUrl URL of the competent supervisory authority
  * @var bool                        $registeredUsersAreRelatives whether registered users are relatives or relatives by marriage
  *
- * // tbd die folgenden Parameter sollten alle entfallen, da diese Informationen in die Chapter einfliessen
  * @var bool                        $singular               is the report written using "I" or "We"?
  * @var Collection                  $analytics
  * @var array                       $trackingServices
@@ -110,6 +109,20 @@ use Illuminate\Support\Collection;
             color: #555;
             font-size: 0.95rem;
             margin-top: -0.25rem;
+        }
+
+        .hh-legal-notice-page a {
+            color: #005ea8;
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.15em;
+        }
+
+        .hh-legal-notice-page a:hover,
+        .hh-legal-notice-page a:focus {
+            color: #b00020;
+            text-decoration-thickness: 0.12em;
         }
 
         .hh-legal-notice-page h3 {

@@ -35,48 +35,6 @@
  * along with this program; If not, see <https://www.gnu.org/licenses/>.
  */
 
-/*
- * tbd for next release 2.2.1.0
- * ==============================================================
- * falls alle Optionen leer: Optionen aus hh_imprint einlesen und Merker setzen
- * alles neu übersetzen
- *
- * tbd for next release 2.2.1.1
- * ==============================================================
- * alle offenen issues aus GitHub
- * zwei Zwecke definieren: (1) private Forschung zu eigenen Ahnen/Familie (2) OFB zu Ort oder Thema
- * bei "Persönliche Daten zu Ahnen" und "Abgestufte Zugangsrechte": unterschiedliche Formulierung in Abhängigkeit von (1) und (2)
- * bei Hinweis auf Auskunftsrecht auch Hinweis auf Schiedsstellen mit Link wie bei der CompGen-Datenschutzerklärung
- *    "Eine Liste der Aufsichtsbehörden mit Anschrift finden Sie unter: https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html."
- * Auftragsverarbeitung agreement first/last date/time in zwei Elemente zerlegen (Datum dd.mm.yyyy und Zeit hh:mm) und validieren
- * Nutzeraccount: wird Module oAuth2 verwendet? Darauf hinweisen: wo liegen die Nutzeraccountdaten?
- * "kein tree" Fehler:
- *    Funktion useSingularStyle
- *    Vorbelegung der verantwortlichen Person aus den Angaben für den ersten Website-Administrator (Vor-, Nachname, E-Mail)
- * Zeilenabstände in page.phtml und settings.phtml über CSS statt Leerzeilen realisieren
- * cookie Warnung einbauen, testen und dokumentieren (falls keine externe Cookie-Managementanwendung verwendet wird)
- * READme: Referenzen aus dieser Datei (ganz oben) prüfen und dann übernehmen; ggf. ergänzen um wichtige Artikel
- * Dokumentation in Deutsch im GenWiki für webtrees-Handbuch überarbeiten und dann README anpassen (Rückportierung)
- * neuer Abschnitt: Vereinbarung zu digitalem Nachlass liegt vor
- * neuer Abschnitt: Weitergabe der genealogischen Daten (an GEDBAS, MyHeritage, Ancestry, ...)
- * Angaben wie viele Nutzer welcher Kategorien
- * Angabe wie viele Stammbäume in welcher Größe (sichtbar/unsichtbar für Gäste)
- * Angaben wie die aktuellen webtrees-Einstellungen zum Datenschutz sind
- *
- * tbd later on
- * ==============================================================
- * neue Art der Versionsverwaltung ohne Datei latest-version.txt
- * alle restlichen Konstanten aus diesem Modul als Option in das Verwaltungsmenü in den zugehörigen Abschnitt verschieben
- * Verwaltungsmenü: hierarchische Gestaltung des Menüs für die Datenschutzerklärung (settings)
- * alle Texte zur "Datenschutzerklärung" in die englische Sprache übersetzen
- * Validierung
- *      "copyright start year" auf "4 digits" und Wert "1970..aktuelles Jahr"
- *      Base_URL
- *      postAdminActionChapter
- *      E-Mail-Funktion: check if there is one @ inside emailAddress and no blanks; if address is not correct: use it as simple eMail
- * Code review und Refactoring
- */
-
 /**
  * footer with a link to a "Legal Notice" page
  */
@@ -139,7 +97,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     public const CUSTOM_VERSION     = '2.2.6.1';
     public const CUSTOM_LAST        = 'https://raw.githubusercontent.com/' . self::GITHUB_USER . '/' .
                                             self::CUSTOM_MODULE . '/main/latest-version.txt';
-    public const PRIVACY_POLICY_DATE = '2026-06-07';
+    public const CUSTOM_RELEASE_DATE = '2026-06-08';
 
     private const PRIVACY_POLICY_DATE_SOURCE_RELEASE = 'release';
     private const PRIVACY_POLICY_DATE_SOURCE_MANUAL = 'manual';
@@ -177,7 +135,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         'name' => 'OpenStreetMap',
         'url' => 'https://www.openstreetmap.org/',
         'country' => 'United Kingdom',
-        'privacy_url' => 'https://wiki.openstreetmap.org/wiki/Privacy_Policy',
+        'privacy_url' => 'https://osmfoundation.org/wiki/Privacy_Policy',
         'data' => [
             'IP addresses',
             'Location data shown on maps',
@@ -377,7 +335,6 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'vatNumber',
             'showTreeContacts',
             'showAdministrators',
-            'showDisputeResolution',
             'registeredUsersAreRelatives',
             'supervisoryAuthorityName',
             'supervisoryAuthorityUrl',
@@ -441,19 +398,6 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     {
         // check if this module is called the first time; then transfer the preferences from the former module hh_imprint
         $this->checkModuleVersionUpdate();
-
-        // modify some elements with default values if they are not set
-        if (false && $response['responsibleFirst'] == '' && $response['responsibleSurname'] == '') {    // tbd Fehlermeldung: "tree" fehlt
-            $contactsListObject = new ContactsList($this->userService, $request);
-            // there is always at least one administrator; use this first one to initialize the responsible person
-            $defaultAdministrator = $contactsListObject->getAdministratorsList()[0];
-            $response['responsibleFirst'] = $defaultAdministrator->realName;     // tbd split in first name and surname
-            $response['responsibleSurname'] = $defaultAdministrator->realName;   // tbd split in first name and surname
-
-            if ($response['email'] == '') {
-                $response['email'] = $defaultAdministrator->email;
-            }
-        }
 
         if ($response['responsibleSex'] == '') {
             $response['responsibleSex'] = 'U';
@@ -590,7 +534,6 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'simpleEmail',
             'showTreeContacts',
             'showAdministrators',
-            'showDisputeResolution',
             'orderProcessing',
             'registeredUsersAreRelatives',
             'showGoogleCharts' => $value === '1' ? '1' : '0',
@@ -857,7 +800,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         $tree = Validator::attributes($request)->treeOptional();
-        $user = $request->getAttribute('user');         // tbd: replace by Validator::attributes($request)->user()
+        $user = $request->getAttribute('user');
         assert($user instanceof UserInterface);
         $privacyLawRegion = $this->privacyLawRegion();
 
@@ -1118,7 +1061,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * show copy right start year               // tbd check "4 digits" and value "1970..aktuelles Jahr"
+     * show copy right start year
      *
      * @return string
      */
@@ -1348,16 +1291,6 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return ($this->getPreference('showAdministrators', '0') !== '0');
     }
 
-    /**
-     * should a consumer dispute resolution notice be shown for EU server locations?
-     *
-     * @return bool
-     */
-    private function showDisputeResolution(): bool
-    {
-        return $this->getPreference('showDisputeResolution', '0') === '1';
-    }
-
     private function supervisoryAuthorityName(): string
     {
         return $this->getPreference('supervisoryAuthorityName', '');
@@ -1384,9 +1317,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return match ($this->getPreference('privacyPolicyDateSource', self::PRIVACY_POLICY_DATE_SOURCE_RELEASE)) {
             self::PRIVACY_POLICY_DATE_SOURCE_MANUAL => $this->privacyPolicyManualDate() !== ''
                 ? $this->privacyPolicyManualDate()
-                : self::PRIVACY_POLICY_DATE,
+                : self::CUSTOM_RELEASE_DATE,
             self::PRIVACY_POLICY_DATE_SOURCE_CURRENT => date('Y-m-d'),
-            default => self::PRIVACY_POLICY_DATE,
+            default => self::CUSTOM_RELEASE_DATE,
         };
     }
 
@@ -1479,7 +1412,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * hosting Auftragsverarbeitung agreement first date / time             // tbd should be 2 elements date + time
+     * hosting Auftragsverarbeitung agreement first date / time
      * e.g. 26.11.2018 um 00:12 Uhr
      *
      * @return string
@@ -1490,7 +1423,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * hosting Auftragsverarbeitung agreement last date / time             // tbd should be 2 elements date + time
+     * hosting Auftragsverarbeitung agreement last date / time
      * e.g. 25.11.2022 um 00:33 Uhr
      *
      * @return string
@@ -1522,7 +1455,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $chapterTexts = LegalNoticeSupport::getChapterContent(
             LegalNoticeSupport::getHostName($request),
             I18N::translate($this->hostingCountry()),
-            $this->showDisputeResolution() && $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
+            $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
             $privacyLawRegion === self::PRIVACY_LAW_GERMANY
         );
 
@@ -1549,8 +1482,6 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     /**
      * add chapters, which are newly defined
-     * tbd: it is not possible to delete chapters, only add new ones
-     *
      * @param array $listChapters list of chapters defined by this module
      * @param array $order list of ordered chapters out of parameters
      */
@@ -1591,15 +1522,6 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     public function useSingularStyle(ServerRequestInterface $request): bool
     {
-        return false;                // tbd
-        $contactsListObject = new ContactsList($this->userService, $request);
-        $count = 0;
-        foreach ($contactsListObject->getAdministratorsList() as $admin) {
-            $count++;
-            if ($count >= 1) {
-                return false;
-            }
-        }
-        return true;
+        return $this->organization() === '' && count($this->userService->administrators()) <= 1;
     }
 };
