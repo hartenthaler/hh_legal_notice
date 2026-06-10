@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 02:51+0200\n"
-"PO-Revision-Date: 2026-06-08 02:51+0200\n"
-"Last-Translator: Hermann Hartenthaler <hermann@hartenthaler.de>\n"
+"POT-Creation-Date: 2026-06-08 02:50+0200\n"
+"PO-Revision-Date: 2026-06-07 21:56+0200\n"
+"Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -128,12 +128,6 @@ msgstr ""
 
 #: LegalNoticeFooterModule.php:1005
 #, fuzzy, php-format
-#| msgid ""
-#| "The webtrees administrator is responsible to manage users and to set the "
-#| "preferences for this website."
-#| msgid_plural ""
-#| "The webtrees administrators are responsible to manage users and to set "
-#| "the preferences for this website."
 msgid ""
 "%1$s is %2$s as website administrator and is responsible for managing users "
 "and setting the options for this website."
@@ -434,6 +428,7 @@ msgstr ""
 "dergelijke inhoud onmiddellijk verwijderen."
 
 #: src/LegalNoticeSupport.php:212
+#, fuzzy
 msgid ""
 "The content and works created by me and the registered users on this website "
 "are subject to copyright. If you contribute content as a registered user of "
@@ -451,7 +446,7 @@ msgstr ""
 "van de hier verstrekte informatie is in het algemeen verboden."
 
 #: src/LegalNoticeSupport.php:214
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "The content and works created by me and the registered users on this website "
 "are subject to copyright in %s. If you contribute content as a registered "
@@ -518,6 +513,7 @@ msgstr ""
 "wij dergelijke inhoud onmiddellijk verwijderen."
 
 #: src/LegalNoticeSupport.php:220
+#, fuzzy
 msgid ""
 "The content and works created by us and by the registered users on this "
 "website are subject to copyright. If you contribute content as a registered "
@@ -536,7 +532,7 @@ msgstr ""
 "van de hier verstrekte informatie is in het algemeen verboden."
 
 #: src/LegalNoticeSupport.php:222
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "The content and works created by us and by the registered users on this "
 "website are subject to copyright in %s. If you contribute content as a "
@@ -579,6 +575,7 @@ msgstr ""
 "op geen enkele wijze worden verkocht, geschonken of verhuurd."
 
 #: src/LegalNoticeSupport.php:226
+#, fuzzy
 msgid ""
 "The use of the contact data published by me as part of the imprint "
 "obligation by third parties for the purpose of sending unsolicited "
@@ -586,6 +583,12 @@ msgid ""
 "expressly reserve the right to take legal action in the event of unsolicited "
 "advertising being sent, such as spam e-mails."
 msgstr ""
+"Het gebruik door derden van de door ons in het kader van de wettelijke "
+"publicatieplicht gepubliceerde contactgegevens voor het toezenden van "
+"ongevraagd reclame- en informatiemateriaal is hierbij uitdrukkelijk "
+"verboden. Ik behoud mij uitdrukkelijk het recht voor om juridische stappen "
+"te ondernemen in geval van ongevraagde toezending van reclame, zoals spam-e-"
+"mails."
 
 #: src/LegalNoticeSupport.php:227
 msgid ""
@@ -705,14 +708,12 @@ msgstr ""
 "gegevensbescherming (AVG)."
 
 #: resources/views/page/sections/data-categories.phtml:16
-#, fuzzy
 msgid ""
 "Family history and genealogical research is the legitimate purpose for "
 "processing this data."
 msgstr ""
-"Familiegeschiedenis en genealogisch onderzoek vormen een gerechtvaardigd "
-"belang in de zin van artikel 6, onder f, van de Algemene verordening "
-"gegevensbescherming (AVG)."
+"Familiegeschiedenis en genealogisch onderzoek vormen het legitieme doel voor "
+"de verwerking van deze gegevens."
 
 #: resources/views/page/sections/data-categories.phtml:18
 msgid ""
@@ -748,6 +749,9 @@ msgid ""
 "national data protection rules may apply, in particular the Federal Data "
 "Protection Act (BDSG)."
 msgstr ""
+"Naast de Algemene Verordening Gegevensbescherming (EU-AVG) kunnen ook "
+"nationale Nederlandse gegevensbeschermingsregels van toepassing zijn, in het "
+"bijzonder de Uitvoeringswet AVG (UAVG)."
 
 #: resources/views/page/sections/data-categories.phtml:33
 #, fuzzy
@@ -1168,7 +1172,6 @@ msgstr "en privacyverklaring"
 
 #: resources/views/page/sections/data-categories.phtml:242
 #, fuzzy
-#| msgid "Additional third-party services"
 msgid "Additional third-party service details"
 msgstr "Aanvullende diensten van derden"
 
@@ -1194,7 +1197,6 @@ msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:262
 #, fuzzy
-#| msgid "E-mail address"
 msgid "E-mail address hash"
 msgstr "E-mailadres"
 
@@ -1330,13 +1332,12 @@ msgstr ""
 "dat de hostingprovider de persoonsgegevens van deze website verwerkt"
 
 #: resources/views/page/sections/data-categories.phtml:365
-#, fuzzy
 msgid ""
 "This agreement ensures that the hosting provider processes the personal data "
 "of this website"
 msgstr ""
-"Dit is een op grond van artikel 28 AVG vereiste overeenkomst die waarborgt "
-"dat de hostingprovider de persoonsgegevens van deze website verwerkt"
+"Deze overeenkomst waarborgt dat de hostingprovider de persoonsgegevens van "
+"deze website verwerkt"
 
 #: resources/views/page/sections/data-categories.phtml:367
 msgid "only according to my instructions"
@@ -1351,6 +1352,7 @@ msgstr "en in overeenstemming met de AVG."
 #: resources/views/page/sections/data-categories.phtml:371
 msgid "and in compliance with the applicable data protection requirements."
 msgstr ""
+"en in overeenstemming met de toepasselijke gegevensbeschermingsvereisten."
 
 #: resources/views/page/sections/data-categories.phtml:377
 msgid "Application log"
@@ -1405,6 +1407,9 @@ msgid ""
 "the processing of the data be restricted, subject to the applicable legal "
 "requirements."
 msgstr ""
+"U kunt verzoeken dat relevante gegevens zonder onnodige vertraging worden "
+"gewist of dat de verwerking van de gegevens wordt beperkt, onder voorbehoud "
+"van de toepasselijke wettelijke vereisten."
 
 #: resources/views/page/sections/data-rights.phtml:24
 msgid ""
@@ -1445,12 +1450,11 @@ msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:45
 msgid "GDPR in connection with online genealogies"
-msgstr "AVG in verband met onlinegenealogieën"
+msgstr "AVG in verband met online genealogieën"
 
 #: resources/views/page/sections/data-rights.phtml:47
-#, fuzzy
 msgid "Data protection in connection with online genealogies"
-msgstr "AVG in verband met onlinegenealogieën"
+msgstr "Gegevensbescherming in verband met online genealogieën"
 
 #: resources/views/page/sections/data-rights.phtml:53
 msgid ""
@@ -1467,7 +1471,6 @@ msgstr[1] ""
 "benadrukken dat wij ons vanzelfsprekend inspannen om de AVG na te leven."
 
 #: resources/views/page/sections/data-rights.phtml:55
-#, fuzzy
 msgid ""
 "I am a strong advocate of data protection and would like to emphasize that I "
 "naturally make every effort to comply with applicable data protection "
@@ -1477,11 +1480,13 @@ msgid_plural ""
 "we naturally make every effort to comply with applicable data protection "
 "requirements."
 msgstr[0] ""
-"Ik ben een uitgesproken voorstander van gegevensbescherming en wil "
-"benadrukken dat ik mij vanzelfsprekend inspan om de AVG na te leven."
+"Ik ben een groot voorstander van gegevensbescherming en wil benadrukken dat "
+"ik vanzelfsprekend alles in het werk stel om te voldoen aan de toepasselijke "
+"gegevensbeschermingsvereisten."
 msgstr[1] ""
-"Wij zijn uitgesproken voorstanders van gegevensbescherming en willen "
-"benadrukken dat wij ons vanzelfsprekend inspannen om de AVG na te leven."
+"Wij zijn sterke voorstanders van gegevensbescherming en willen benadrukken "
+"dat wij vanzelfsprekend alles in het werk stellen om te voldoen aan de "
+"toepasselijke gegevensbeschermingsvereisten."
 
 #: resources/views/page/sections/data-rights.phtml:57
 msgid ""
@@ -1489,7 +1494,7 @@ msgid ""
 "probably not possible in the field of online genealogy."
 msgstr ""
 "Een volledig en ondubbelzinnig juridisch conforme uitvoering is op het "
-"terrein van onlinegenealogie waarschijnlijk niet in alle gevallen mogelijk."
+"terrein van online genealogie waarschijnlijk niet in alle gevallen mogelijk."
 
 #: resources/views/page/sections/data-rights.phtml:58
 msgid ""
@@ -1552,7 +1557,6 @@ msgstr[1] ""
 "zijn als wij grote delen van deze stamboom weer offline zouden halen."
 
 #: resources/views/page/sections/data-rights.phtml:72
-#, fuzzy
 msgid ""
 "In my opinion, full compliance with every possible privacy expectation would "
 "therefore only be possible if I took large parts of this family tree offline "
@@ -1562,11 +1566,13 @@ msgid_plural ""
 "would therefore only be possible if we took large parts of this family tree "
 "offline again."
 msgstr[0] ""
-"Naar mijn mening zou volledige naleving van de AVG daarom alleen mogelijk "
-"zijn als ik grote delen van deze stamboom weer offline zou halen."
+"Volledige naleving van elke denkbare privacyverwachting zou naar mijn mening "
+"daarom alleen mogelijk zijn als ik grote delen van deze stamboom weer "
+"offline zou halen."
 msgstr[1] ""
-"Naar onze mening zou volledige naleving van de AVG daarom alleen mogelijk "
-"zijn als wij grote delen van deze stamboom weer offline zouden halen."
+"Volledige naleving van elke denkbare privacyverwachting zou naar onze mening "
+"daarom alleen mogelijk zijn als wij grote delen van deze stamboom weer "
+"offline zouden halen."
 
 #: resources/views/page/sections/data-rights.phtml:74
 msgid ""
@@ -1861,7 +1867,7 @@ msgstr "Achterna(a)m(en)"
 #: resources/views/settings.phtml:140
 #, fuzzy
 msgid "Other sex"
-msgstr "overig"
+msgstr "anders"
 
 #: resources/views/settings.phtml:150
 msgid "Should a gravatar image be shown (see www.gravatar.com)?"
@@ -2126,25 +2132,3 @@ msgstr ""
 #: resources/views/settings.phtml:628
 msgid "Restore default sorting for all chapters and sections"
 msgstr "Standaardsortering voor alle hoofdstukken en secties herstellen"
-
-#~ msgid ""
-#~ "It is stored indefinitely because it has historical value for genealogy."
-#~ msgstr ""
-#~ "Deze gegevens worden voor onbepaalde tijd bewaard, omdat zij historische "
-#~ "waarde hebben voor de genealogie."
-
-#~ msgid ""
-#~ "Although I accept a certain risk, I am leaving our data online for the "
-#~ "time being."
-#~ msgid_plural ""
-#~ "Although we accept a certain risk, we are leaving our data online for the "
-#~ "time being."
-#~ msgstr[0] ""
-#~ "Hoewel ik een zeker risico aanvaard, laat ik onze gegevens voorlopig "
-#~ "online staan."
-#~ msgstr[1] ""
-#~ "Hoewel wij een zeker risico aanvaarden, laten wij onze gegevens voorlopig "
-#~ "online staan."
-
-#~ msgid "The will to handle the data carefully is present."
-#~ msgstr "De wil om zorgvuldig met gegevens om te gaan, is aanwezig."
