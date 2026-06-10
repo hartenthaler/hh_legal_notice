@@ -6,11 +6,12 @@
 
 ![Latest Release](https://img.shields.io/github/v/release/hartenthaler/hh_legal_notice)
 
-This [webtrees](https://www.webtrees.net) module creates a legal notice in the footer of the web page.
+This [webtrees](https://www.webtrees.net) module creates a legal notice and a privacy policy in the footer of the web page.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
-> You, as administrator of your website, remain responsible for checking and maintaining the legal notice and privacy policy shown on your site.
+> You, as administrator of your website, remain responsible for checking and maintaining the legal notice and privacy policy shown on your site (in all languages provided by this module).
+> You can fork this module and adapt it to your needs.
 
 There is a German [manual page](https://wiki.genealogy.net/Webtrees_Handbuch/Anleitung_f%C3%BCr_Webmaster/Erweiterungsmodule/Legal_Notice) available, too.
 
@@ -35,10 +36,13 @@ This Readme contains the following main sections
 <a name="Purpose"></a>
 ## 🎯 Purpose
 
-This module adds a legal notice footer to all pages of a webtrees site.
+This module adds a legal notice and privacy policy footer to all pages of a webtrees site.
 
-There is maybe a need to present on your website a "Legal Notice"
-(depending on your local law and the character of your site)
+Whether a webtrees website legally requires a legal notice or privacy policy is a matter of debate among legal professionals.
+This depends on your local law and the character of your site - for example, whether it is purely private or publicly accessible.
+When in doubt, consult a qualified lawyer in your jurisdiction.
+
+There may be a need to present on your website a "Legal Notice"
 * Germany: [§5 Digitale-Dienste-Gesetz (DDG)](https://lxgesetze.de/ddg/5), 
 and [§4 Medienstaatsvertrag (MStV)](https://lxgesetze.de/mstv/4)
 * Austria: § 5 Abs. 1 E-Commerce-Gesetz (ECG)
