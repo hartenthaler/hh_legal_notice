@@ -133,6 +133,36 @@ use Illuminate\Support\Collection;
             margin-top: 1.25rem;
         }
 
+        .hh-legal-notice-page {
+            counter-reset: hh-main-chapter;
+        }
+
+        .hh-legal-notice-page .hh-legal-notice-chapter {
+            counter-increment: hh-main-chapter;
+            counter-reset: hh-section;
+        }
+
+        .hh-legal-notice-page .hh-legal-notice-chapter::before {
+            content: counter(hh-main-chapter) ". ";
+        }
+
+        .hh-legal-notice-page .hh-legal-notice-chapter ~ h3 {
+            counter-increment: hh-section;
+            counter-reset: hh-subsection;
+        }
+
+        .hh-legal-notice-page .hh-legal-notice-chapter ~ h3::before {
+            content: counter(hh-main-chapter) "." counter(hh-section) " ";
+        }
+
+        .hh-legal-notice-page .hh-legal-notice-chapter ~ h3 ~ h4 {
+            counter-increment: hh-subsection;
+        }
+
+        .hh-legal-notice-page .hh-legal-notice-chapter ~ h3 ~ h4::before {
+            content: counter(hh-main-chapter) "." counter(hh-section) "." counter(hh-subsection) " ";
+        }
+
         .hh-legal-notice-page h5 {
             font-size: 1rem;
             margin-top: 1rem;
