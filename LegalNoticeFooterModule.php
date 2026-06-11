@@ -857,6 +857,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'https'                     => legalNoticeSupport::getHttps($request),
             'hostingDomain'             => LegalNoticeSupport::getHostName($request),
             'hostingCountry'            => I18N::translate($this->hostingCountry()),
+            'legalNoticeLawReference'   => $this->legalNoticeLawReference(),
             'privacyLawRegion'          => $privacyLawRegion,
             'useGermanPrivacyLaw'        => $privacyLawRegion === self::PRIVACY_LAW_GERMANY,
             'useEuPrivacyLaw'            => $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
@@ -1017,8 +1018,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function responsiblePronoun(): string
     {
         return match ($this->responsibleSex()) {
-            'M' => I18N::translate('He'),
-            'F' => I18N::translate('She'),
+            'M' => MoreI18N::xlateContext('legal notice pronoun subject', 'He'),
+            'F' => MoreI18N::xlateContext('legal notice pronoun subject', 'She'),
             default => I18N::translate('This person'),
         };
     }
@@ -1366,6 +1367,39 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function isGermany(string $country): bool
     {
         return in_array(strtolower(trim($country)), ['germany', 'deutschland'], true);
+    }
+
+    private function isAustria(string $country): bool
+    {
+        return in_array(strtolower(trim($country)), ['austria', 'österreich', 'oesterreich'], true);
+    }
+
+    private function isSwitzerland(string $country): bool
+    {
+        return in_array(strtolower(trim($country)), ['switzerland', 'schweiz'], true);
+    }
+
+    private function legalNoticeLawReference(): string
+    {
+        $country = strtolower(trim($this->hostingCountry()));
+
+        if ($country === '') {
+            return '';
+        }
+
+        if ($this->isGermany($country)) {
+            return I18N::translate('Information according to Section 5 DDG');
+        }
+
+        if ($this->isAustria($country)) {
+            return I18N::translate('Information according to Section 5 (1) ECG');
+        }
+
+        if ($this->isSwitzerland($country)) {
+            return I18N::translate('Information according to Article 3 UWG');
+        }
+
+        return '';
     }
 
     /**

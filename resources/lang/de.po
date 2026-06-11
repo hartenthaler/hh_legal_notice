@@ -141,10 +141,12 @@ msgid "available"
 msgstr "erreichbar"
 
 #: LegalNoticeFooterModule.php:1020
+msgctxt "legal notice pronoun subject"
 msgid "He"
 msgstr "Er"
 
 #: LegalNoticeFooterModule.php:1021
+msgctxt "legal notice pronoun subject"
 msgid "She"
 msgstr "Sie"
 
@@ -695,6 +697,14 @@ msgstr "Stand der Datenschutzerklärung: %s"
 #: resources/views/page/header.phtml:3
 msgid "Information according to Section 5 DDG"
 msgstr "Angaben gemäß § 5 DDG"
+
+#: resources/views/page/header.phtml:3
+msgid "Information according to Section 5 (1) ECG"
+msgstr "Angaben gemäß § 5 Abs. 1 ECG"
+
+#: resources/views/page/header.phtml:3
+msgid "Information according to Article 3 UWG"
+msgstr "Angaben gemäß Art. 3 UWG"
 
 #: resources/views/page/sections/data-categories.phtml:9
 msgid "Personal data about ancestors, family members, and other persons"

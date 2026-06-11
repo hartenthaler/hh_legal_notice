@@ -1,6 +1,6 @@
     <h2><?= e($legalNoticeTitle) ?></h2>
-    <?php if ($useGermanPrivacyLaw): ?>
-        <p><?= e(\Fisharebest\Webtrees\I18N::translate('Information according to Section 5 DDG')) ?></p>
+    <?php if ($legalNoticeLawReference !== ''): ?>
+        <p><?= e($legalNoticeLawReference) ?></p>
     <?php endif ?>
 
     <h4 class="hh-legal-notice-page-heading"><?= e($legalNoticeHead1) ?></h4>
