@@ -147,7 +147,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private const PRIVACY_LAW_EU = 'eu';
     private const PRIVACY_LAW_OTHER = 'other';
 
-    private const EU_COUNTRIES = [
+    private const EU_GDPR_COUNTRIES = [
         'austria',
         'belgium',
         'bulgaria',
@@ -162,13 +162,16 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         'germany',
         'greece',
         'hungary',
+        'island',
         'ireland',
         'italy',
         'latvia',
+        'liechtenstein',
         'lithuania',
         'luxembourg',
         'malta',
         'netherlands',
+        'norway',
         'poland',
         'portugal',
         'romania',
@@ -1361,7 +1364,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     {
         $country = strtolower(trim($country));
 
-        return $this->isGermany($country) || in_array($country, self::EU_COUNTRIES, true);
+        return $this->isGermany($country) || in_array($country, self::EU_GDPR_COUNTRIES, true);
     }
 
     private function isGermany(string $country): bool
