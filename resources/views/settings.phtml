@@ -20,6 +20,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
  * @var string                  $responsibleSurname     surname(s) of responsible person
  * @var string                  $responsibleSex         gender of responsible person ('M', 'F', 'X')
  * @var string                  $showGravatar           option whether to show image from www.gravatar.com site for this user
+ * @var string                  $showEditorialResp      option whether to show the person responsible for editorial content
  *
  * @var string                  $organization           club name or organization name
  *
@@ -297,6 +298,26 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                             'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
                             'selected' => (int)$showGravatar
                         ]) ?>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- show person responsible for editorial content -->
+            <fieldset class="form-group mb-3">
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 wt-page-options-label">
+                        <?= I18N::translate('Does this website contain editorially prepared content that is not intended only for the family, such as blog posts or news articles?') ?>
+                    </legend>
+                    <div class="col-sm-9 wt-page-options-value">
+                        <?= view('components/radios-inline', [
+                            'id' => 'showEditorialResp',
+                            'name' => 'showEditorialResp',
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
+                            'selected' => (int)$showEditorialResp
+                        ]) ?>
+                        <p class="small text-muted mb-0">
+                            <?= I18N::translate('If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above.') ?>
+                        </p>
                     </div>
                 </div>
             </fieldset>

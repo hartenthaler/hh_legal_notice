@@ -2015,3 +2015,28 @@ msgstr ""
 #, fuzzy
 msgid "Restore default sorting for all chapters and sections"
 msgstr "Restaura l'ordenació predeterminada de tots els capítols i apartats"
+
+#: resources/views/page/header.phtml:103
+msgid "Editorially responsible person according to Section 18 paragraph 2 MStV"
+msgstr ""
+
+#: resources/views/page/header.phtml:103
+msgid "Editorially responsible person"
+msgstr ""
+
+#: resources/views/page/header.phtml:105
+msgid "In addition to genealogical data, this website also contains editorially prepared content addressed to the general public, such as explanations of family history, the software used, or historical topics."
+msgstr ""
+
+#: resources/views/page/header.phtml:106
+#, php-format
+msgid "Responsible for this content is: %s. Address: see above."
+msgstr ""
+
+#: resources/views/settings.phtml:309
+msgid "Does this website contain editorially prepared content that is not intended only for the family, such as blog posts or news articles?"
+msgstr ""
+
+#: resources/views/settings.phtml:319
+msgid "If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above."
+msgstr ""

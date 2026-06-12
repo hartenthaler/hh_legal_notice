@@ -359,6 +359,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'responsibleSurname',
             'responsibleSex',
             'showGravatar',
+            'showEditorialResp',
             'organization',
             'additionalAddress',
             'street',
@@ -590,6 +591,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return match ($preference) {
             'showCopyRight',
             'showGravatar',
+            'showEditorialResp',
             'simpleEmail',
             'showTreeContacts',
             'showAdministrators',
@@ -946,6 +948,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'privacyPolicyDate'         => $this->formattedPrivacyPolicyDate(),
             'responsibleName'           => $responsibleName,
             'responsibleContactNotices' => array_values(array_unique($responsibleContactNotices)),
+            'showEditorialResp'         => $this->showEditorialResp(),
             'showGravatar'              => $this->showGravatar(),
             'image'                     => LegalNoticeSupport::getGravatar($this->getPreference('email', ''),'40'),
             'organization'              => $this->organization(),
@@ -1246,6 +1249,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function showCopyRight(): bool
     {
         return ($this->getPreference('showCopyRight', '0') !== '0');
+    }
+
+    private function showEditorialResp(): bool
+    {
+        return $this->getPreference('showEditorialResp', '0') !== '0';
     }
 
     /**
