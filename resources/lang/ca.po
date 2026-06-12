@@ -1832,6 +1832,10 @@ msgid "Hosting service"
 msgstr "Servei de hosting"
 
 #: resources/views/settings.phtml:366
+msgid "Server location"
+msgstr ""
+
+#: resources/views/settings.phtml:366
 #, fuzzy
 #| msgid ""
 #| "Country of the webtrees server location (in English language, e.g. "
