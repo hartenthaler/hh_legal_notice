@@ -2125,9 +2125,17 @@ msgstr ""
 "In welke volgorde moeten de secties van het hoofdstuk \"Privacyverklaring\" "
 "worden weergegeven?"
 
+#: resources/views/settings.phtml:77
+msgid "In which sequence should the subsections of \"%s\" be shown?"
+msgstr "In welke volgorde moeten de subsecties van \"%s\" worden weergegeven?"
+
 #: resources/views/settings.phtml:537 resources/views/settings.phtml:584
 msgid "Section"
 msgstr "Sectie"
+
+#: resources/views/settings.phtml:78
+msgid "Subsection"
+msgstr "Subsectie"
 
 #: resources/views/settings.phtml:580
 msgid ""

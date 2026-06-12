@@ -1,0 +1,11 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
+    <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
+
+    <p>
+        <?= I18N::plural('I point out that data transmission on the Internet, for example when communicating by e-mail, may have security gaps.', 'We point out that data transmission on the Internet, for example when communicating by e-mail, may have security gaps.', $singular ? 1 : 2) ?>
+        <?= I18N::translate('Complete protection of data against access by third parties is also not possible.') ?>
+    </p>

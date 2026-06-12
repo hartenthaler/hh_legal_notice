@@ -2209,9 +2209,17 @@ msgstr ""
 "In welcher Reihenfolge sollen die Abschnitte im Kapitel "
 "\"Datenschutzerklärung\" angezeigt werden?"
 
+#: resources/views/settings.phtml:77
+msgid "In which sequence should the subsections of \"%s\" be shown?"
+msgstr "In welcher Reihenfolge sollen die Unterabschnitte von \"%s\" angezeigt werden?"
+
 #: resources/views/settings.phtml:537 resources/views/settings.phtml:584
 msgid "Section"
 msgstr "Abschnitt"
+
+#: resources/views/settings.phtml:78
+msgid "Subsection"
+msgstr "Unterabschnitt"
 
 #: resources/views/settings.phtml:580
 msgid ""

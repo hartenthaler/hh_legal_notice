@@ -1,0 +1,46 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
+    <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
+
+    <p>
+        <?php if ($useEuPrivacyLaw) : ?>
+            <?= I18N::plural('I am a strong advocate of data protection and would like to emphasize that I naturally make every effort to comply with the GDPR.', 'We are strong advocates of data protection and would like to emphasize that we naturally make every effort to comply with the GDPR.', $singular ? 1 : 2) ?>
+        <?php else : ?>
+            <?= I18N::plural('I am a strong advocate of data protection and would like to emphasize that I naturally make every effort to comply with applicable data protection requirements.', 'We are strong advocates of data protection and would like to emphasize that we naturally make every effort to comply with applicable data protection requirements.', $singular ? 1 : 2) ?>
+        <?php endif ?>
+        <?= I18N::translate('However, fully and clearly legally compliant implementation in all cases is probably not possible in the field of online genealogy.') ?>
+        <?= I18N::translate('Too many questions are disputed and leave room for legal interpretation.') ?>
+    </p>
+
+    <p>
+        <?= I18N::plural('However, I can rule out with certainty that everyone entered in this family tree knows about it.', 'However, we can rule out with certainty that everyone entered in this family tree knows about it.', $singular ? 1 : 2) ?>
+        <?= I18N::translate('Creating a family tree works differently.') ?>
+        <?= I18N::translate('Usually, information about a branch of the family is obtained from one person in that branch.') ?>
+        <?= I18N::plural('I have not obtained verifiable consent from our relatives to enter the respective family in this family tree.', 'We have not obtained verifiable consent from our relatives to enter the respective family in this family tree.', $singular ? 1 : 2) ?>
+    </p>
+
+    <p>
+        <?php if ($useEuPrivacyLaw) : ?>
+            <?= I18N::plural('In my opinion, full compliance with the GDPR would therefore only be possible if I took large parts of this family tree offline again.', 'In our opinion, full compliance with the GDPR would therefore only be possible if we took large parts of this family tree offline again.', $singular ? 1 : 2) ?>
+        <?php else : ?>
+            <?= I18N::plural('In my opinion, full compliance with every possible privacy expectation would therefore only be possible if I took large parts of this family tree offline again.', 'In our opinion, full compliance with every possible privacy expectation would therefore only be possible if we took large parts of this family tree offline again.', $singular ? 1 : 2) ?>
+        <?php endif ?>
+        <?= I18N::translate('This, however, would remove the ability of the target group to use it and find their own paths through the extended kinship network.') ?>
+        <?php if ($useEuPrivacyLaw) : ?>
+            <?= I18N::plural('I therefore continue to provide the data online on the basis of legitimate interests in family history and historical research.', 'We therefore continue to provide the data online on the basis of legitimate interests in family history and historical research.', $singular ? 1 : 2) ?>
+            <?= I18N::translate('The GDPR expressly recognizes that personal data may also be processed for historical research purposes, subject to appropriate safeguards.') ?>
+        <?php else : ?>
+            <?= I18N::plural('I therefore continue to provide the data online in the interest of family history and historical research.', 'We therefore continue to provide the data online in the interest of family history and historical research.', $singular ? 1 : 2) ?>
+        <?php endif ?>
+        <?= I18N::translate('The data is handled carefully, and objections or requests for restriction or deletion are reviewed individually.') ?>
+        <?= I18N::plural('I would therefore like to agree on the following procedure with all users of our website, hoping that this will satisfy the law:', 'We would therefore like to agree on the following procedure with all users of our website, hoping that this will satisfy the law:', $singular ? 1 : 2) ?>
+    </p>
+
+    <p>
+        <?= I18N::plural('If you discover data that you believe is unlawfully visible, please inform me.', 'If you discover data that you believe is unlawfully visible, please inform us.', $singular ? 1 : 2) ?>
+        <?= I18N::plural('I will then try as quickly as possible to obtain consent, remove visibility, or delete the data.', 'We will then try as quickly as possible to obtain consent, remove visibility, or delete the data.', $singular ? 1 : 2) ?>
+        <?= I18N::plural('If, for specific reasons, you want to prevent your data from being visible even within the group of authorized registered users, please inform me so that I can further restrict visibility here as well.', 'If, for specific reasons, you want to prevent your data from being visible even within the group of authorized registered users, please inform us so that we can further restrict visibility here as well.', $singular ? 1 : 2) ?>
+    </p>

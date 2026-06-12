@@ -1897,9 +1897,17 @@ msgstr ""
 "En quina seqüència s'han de mostrar els apartats del capítol \"Protecció de "
 "dades\"?"
 
+#: resources/views/settings.phtml:77
+msgid "In which sequence should the subsections of \"%s\" be shown?"
+msgstr "En quina seqüència s'han de mostrar els subapartats de \"%s\"?"
+
 #: resources/views/settings.phtml:537 resources/views/settings.phtml:584
 msgid "Section"
 msgstr "Apartat"
+
+#: resources/views/settings.phtml:78
+msgid "Subsection"
+msgstr "Subapartat"
 
 #: resources/views/settings.phtml:580
 msgid ""

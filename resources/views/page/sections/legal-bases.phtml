@@ -1,0 +1,16 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
+    <?php if ($useEuPrivacyLaw) : ?>
+        <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
+
+        <p>
+            <?= I18N::translate('The legal bases for processing personal data depend on the respective processing operation.') ?>
+            <?= I18N::translate('The provision and secure operation of this website, the protection of living persons, and family history research are based on legitimate interests under Article 6(1), first sentence, point (f) GDPR.') ?>
+            <?= I18N::translate('Processing related to user accounts, registered access, and communication with registered users may also be based on contractual or pre-contractual relationships under Article 6(1), first sentence, point (b) GDPR.') ?>
+            <?= I18N::translate('If consent is requested for individual processing operations, the legal basis is Article 6(1), first sentence, point (a) GDPR.') ?>
+            <?= I18N::translate('Where legal obligations require processing or retention, the legal basis is Article 6(1), first sentence, point (c) GDPR.') ?>
+        </p>
+    <?php endif ?>

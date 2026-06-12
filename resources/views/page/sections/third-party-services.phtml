@@ -1,0 +1,157 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
+?>
+
+    <?php if (count($thirdPartyServices) > 0 || count($externalTranscriptionProviders) > 0) : ?>
+        <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
+
+        <p>
+            <?= I18N::translate('When external services are used, personal data may be transferred to these providers, companies, or persons or disclosed to them where this is necessary for the respective service.') ?>
+            <?= I18N::translate('Only those services that are configured and actually used by this website are listed here.') ?>
+        </p>
+
+        <?php if (count($thirdPartyServices) > 0) : ?>
+            <p><?= I18N::translate('This website uses additional third-party services.') ?></p>
+
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th><?= I18N::translate('Service') ?></th>
+                        <th><?= I18N::translate('URL') ?></th>
+                        <th><?= I18N::translate('Country of service provision') ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($thirdPartyServices as $service) : ?>
+                    <tr>
+                        <td><strong><?= e($service['name']) ?></strong></td>
+                        <td><a href="<?= e($service['url']) ?>"><?= e($service['url']) ?></a></td>
+                        <td><?= $service['country'] !== '' ? e(MoreI18N::xlate($service['country'])) : I18N::translate('not specified') ?></td>
+                    </tr>
+                <?php endforeach ?>
+                </tbody>
+            </table>
+
+            <?php $thirdPartyServicesWithData = array_filter($thirdPartyServices, static fn (array $service): bool => count($service['data'] ?? []) > 0 || ($service['privacy_url'] ?? '') !== '') ?>
+            <?php if (count($thirdPartyServicesWithData) > 0) : ?>
+                <?php $mapServiceProviders = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => ($service['name'] ?? '') === 'OpenStreetMap') ?>
+                <?php if (count($mapServiceProviders) > 0) : ?>
+                    <h5><?= I18N::translate('Map service providers') ?></h5>
+                <?php endif ?>
+                <ul>
+                    <?php foreach ($thirdPartyServicesWithData as $service) : ?>
+                        <?php if (($service['name'] ?? '') !== 'OpenStreetMap') : ?>
+                            <?php continue ?>
+                        <?php endif ?>
+                        <li>
+                            <strong><?= e($service['name']) ?></strong>
+                            <?= I18N::translate('This website may embed maps from OpenStreetMap. The map content is loaded from OpenStreetMap servers, and OpenStreetMap may process data such as IP addresses, displayed location data, and selected map settings to provide and cache the map functions.') ?>
+                            <?php if (count($service['data'] ?? []) > 0) : ?>
+                                <br>
+                                <?= I18N::translate('Data that may be processed by this service:') ?>
+                                <ul>
+                                    <?php foreach ($service['data'] as $dataCategory) : ?>
+                                        <?php $dataCategoryLabel = match ($dataCategory) {
+                                            'IP addresses' => I18N::translate('IP addresses'),
+                                            'Location data shown on maps' => I18N::translate('Location data shown on maps'),
+                                            'Map display settings' => I18N::translate('Map display settings'),
+                                            default => I18N::translate($dataCategory),
+                                        } ?>
+                                        <li><?= e($dataCategoryLabel) ?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                            <?php endif ?>
+                            <?php if (($service['privacy_url'] ?? '') !== '') : ?>
+                                <?= I18N::translate('Privacy notice:') ?>
+                                <a href="<?= e($service['privacy_url']) ?>"><?= e($service['privacy_url']) ?></a>
+                            <?php endif ?>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            <?php endif ?>
+
+            <?php $otherThirdPartyServicesWithData = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => in_array(($service['name'] ?? ''), ['Google Charts', 'Gravatar'], true)) ?>
+            <?php if (count($otherThirdPartyServicesWithData) > 0) : ?>
+                <h5><?= I18N::translate('Additional third-party service details') ?></h5>
+
+                <ul>
+                    <?php foreach ($otherThirdPartyServicesWithData as $service) : ?>
+                        <li>
+                            <strong><?= e($service['name']) ?></strong>
+                            <?php if (($service['name'] ?? '') === 'Google Charts') : ?>
+                                <?= I18N::translate('Google Charts may be loaded from Google servers when statistics charts are viewed.') ?>
+                            <?php elseif (($service['name'] ?? '') === 'Gravatar') : ?>
+                                <?= I18N::translate('Gravatar may be loaded from Automattic servers when the responsible person image is displayed.') ?>
+                            <?php endif ?>
+                            <?php if (count($service['data'] ?? []) > 0) : ?>
+                                <br>
+                                <?= I18N::translate('Data that may be processed by this service:') ?>
+                                <ul>
+                                    <?php foreach ($service['data'] as $dataCategory) : ?>
+                                        <?php $dataCategoryLabel = match ($dataCategory) {
+                                            'IP addresses' => I18N::translate('IP addresses'),
+                                            'Browser request metadata' => I18N::translate('Browser request metadata'),
+                                            'Chart data shown on statistics pages' => I18N::translate('Chart data shown on statistics pages'),
+                                            'E-mail address hash' => I18N::translate('E-mail address hash'),
+                                            default => I18N::translate($dataCategory),
+                                        } ?>
+                                        <li><?= e($dataCategoryLabel) ?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                            <?php endif ?>
+                            <?php if (($service['privacy_url'] ?? '') !== '') : ?>
+                                <?= I18N::translate('Privacy notice:') ?>
+                                <a href="<?= e($service['privacy_url']) ?>"><?= e($service['privacy_url']) ?></a>
+                            <?php endif ?>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            <?php endif ?>
+        <?php endif ?>
+
+        <?php $transcriptionProviders = array_filter($thirdPartyServices, static fn (array $service): bool => count($service['data'] ?? []) > 0 && !in_array(($service['name'] ?? ''), ['OpenStreetMap', 'Google Charts', 'Gravatar'], true)) ?>
+        <?php if (count($transcriptionProviders) > 0) : ?>
+            <h5><?= I18N::translate('External transcription providers') ?></h5>
+
+            <p>
+                <?= I18N::translate('This website may use external transcription providers when a registered user explicitly starts such a workflow.') ?>
+                <?= I18N::translate('In that case, the following provider services and data categories may be involved:') ?>
+            </p>
+
+            <ul>
+                <?php foreach ($transcriptionProviders as $provider) : ?>
+                    <li>
+                        <strong><?= e($provider['name'] ?? '') ?></strong>
+                        <?php if (count($provider['data'] ?? []) > 0) : ?>
+                            <br>
+                            <?= I18N::translate('Data that may be exchanged:') ?>
+                            <ul>
+                                <?php foreach ($provider['data'] as $dataCategory) : ?>
+                                    <li><?= e($dataCategory) ?></li>
+                                <?php endforeach ?>
+                            </ul>
+                        <?php endif ?>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+        <?php endif ?>
+
+        <?php $thirdCountryTransferServices = array_filter($thirdPartyServices, static fn (array $service): bool => (bool) ($service['thirdCountryTransfer'] ?? false)) ?>
+        <?php if ($useEuPrivacyLaw && count($thirdCountryTransferServices) > 0) : ?>
+            <h5><?= I18N::translate('Data transfer to third countries') ?></h5>
+
+            <p>
+                <?= I18N::translate('Some third-party services are provided from countries outside the European Union.') ?>
+                <?= I18N::translate('If personal data is transferred to such third countries, this is done only in accordance with the legal requirements of Articles 44 to 49 GDPR, for example on the basis of an adequacy decision, standard contractual clauses, or another legally permitted safeguard.') ?>
+            </p>
+
+            <p>
+                <?= I18N::translate('This may apply to the following services:') ?>
+                <?php foreach (array_values($thirdCountryTransferServices) as $index => $service) : ?>
+                    <?= $index > 0 ? ', ' : '' ?><strong><?= e($service['name'] ?? '') ?></strong>
+                <?php endforeach ?>.
+            </p>
+        <?php endif ?>
+    <?php endif ?>

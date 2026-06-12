@@ -1548,8 +1548,16 @@ msgstr ""
 msgid "In which sequence should the sections of the chapter \"Data protection\" be shown?"
 msgstr ""
 
+#: resources/views/settings.phtml:77
+msgid "In which sequence should the subsections of \"%s\" be shown?"
+msgstr ""
+
 #: resources/views/settings.phtml:537 resources/views/settings.phtml:584
 msgid "Section"
+msgstr ""
+
+#: resources/views/settings.phtml:78
+msgid "Subsection"
 msgstr ""
 
 #: resources/views/settings.phtml:580

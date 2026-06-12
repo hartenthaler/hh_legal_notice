@@ -1,0 +1,57 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
+    <?php if ($hostingCompanyName !== '') : ?>
+        <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
+
+        <p>
+            <?php if ($hostingCompanyUrl !== '') : ?>
+                <?= I18N::translate('This website is hosted by %s, which provides the server and technical infrastructure.', '<a href="' . e($hostingCompanyUrl) . '">' . e($hostingCompanyName) . '</a>') ?>
+            <?php else : ?>
+                <?= I18N::translate('This website is hosted by %s, which provides the server and technical infrastructure.', e($hostingCompanyName)) ?>
+            <?php endif ?>
+            <?php if ($hostingPrivacyNotice !== '' && $hostingCompanyName !== '') : ?>
+                <?= I18N::translate('For details, please refer to the privacy notice of %s.', e($hostingCompanyName)) ?>
+                <a href="<?= e($hostingPrivacyNotice) ?>"><?= e($hostingPrivacyNotice) ?></a>.
+            <?php endif ?>
+        </p>
+
+        <p>
+            <?= I18N::translate('The hosting provider automatically collects and stores information when this website is accessed, such as browser used, operating system, referring page, IP address, time of access, and similar data.') ?>
+            <?= I18N::translate('This data cannot be assigned to specific persons without consulting additional data sources, and') ?>
+            <?= I18N::plural('I do not evaluate this data further', 'we do not evaluate this data further', $singular ? 1 : 2) ?>
+            <?= I18N::translate('unless there is unlawful use of these web pages.') ?>
+        </p>
+
+        <?php if ($orderProcessing) : ?>
+            <h5><?= I18N::translate('Order processing') ?></h5>
+
+            <p><?= I18N::translate('An agreement on order processing has been concluded with the hosting provider.') ?>
+                <?php if ($hostingStartDate !== '' || $hostingEndDate !== '') : ?>
+                    <?= I18N::translate('This took place') ?>
+                    <?php if ($hostingStartDate !== '') : ?>
+                        <?= I18N::translate('for the first time on %s', e($hostingStartDate)) ?>
+                        <?php if ($hostingEndDate !== '') : ?>
+                            <?= I18N::translate('and') ?>
+                        <?php endif ?>
+                    <?php endif ?>
+                    <?php if ($hostingEndDate !== '') : ?>
+                        <?= I18N::translate('most recently on %s', e($hostingEndDate)) ?>
+                    <?php endif ?>.
+                <?php endif ?>
+                <?php if ($useEuPrivacyLaw) : ?>
+                    <?= I18N::translate('This is an agreement required by data protection law under Article 28 GDPR, which ensures that the hosting provider processes the personal data of this website') ?>
+                <?php else : ?>
+                    <?= I18N::translate('This agreement ensures that the hosting provider processes the personal data of this website') ?>
+                <?php endif ?>
+                <?= I18N::plural('only according to my instructions', 'only according to our instructions', $singular ? 1 : 2) ?>
+                <?php if ($useEuPrivacyLaw) : ?>
+                    <?= I18N::translate('and in compliance with the GDPR.') ?>
+                <?php else : ?>
+                    <?= I18N::translate('and in compliance with the applicable data protection requirements.') ?>
+                <?php endif ?>.
+            </p>
+        <?php endif ?>
+    <?php endif ?>

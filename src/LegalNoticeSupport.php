@@ -147,7 +147,22 @@ class LegalNoticeSupport
             'Privacy'               => ['level' => 2, 'id' =>  3, 'link' => 1, 'heading' => I18N::translateContext('heading','Used terminology')],
             'PersonalData'          => ['level' => 2, 'id' =>  4, 'link' => 1, 'heading' => I18N::translateContext('heading','Processing of personal data')],
             'GDPR'                  => ['level' => 2, 'id' =>  5, 'link' => 1, 'heading' => I18N::translateContext('heading','Categories of data')],
+            'Hosting'               => ['level' => 2, 'id' => 111, 'link' => 1, 'heading' => I18N::translate('Hosting for the webtrees server')],
+            'LegalBases'            => ['level' => 2, 'id' => 102, 'link' => 1, 'heading' => I18N::translate('Legal bases for processing')],
+            'GeneralRisk'           => ['level' => 2, 'id' => 107, 'link' => 1, 'heading' => I18N::translate('General risk')],
+            'SecurityMeasures'      => ['level' => 2, 'id' => 106, 'link' => 1, 'heading' => I18N::translate('Security measures')],
+            'ThirdPartyServices'    => ['level' => 2, 'id' => 110, 'link' => 1, 'heading' => I18N::translate('Third party services')],
             'ProvidingInformation'  => ['level' => 2, 'id' =>  6, 'link' => 1, 'heading' => I18N::translateContext('heading','Right of providing information, correction or deletion of personal data, and appeal')],
+            'OnlineGenealogyPrivacy'=> ['level' => 2, 'id' => 115, 'link' => 1, 'heading' => I18N::translate('Data protection in connection with online genealogies')],
+            'GenealogicalData'      => ['level' => 3, 'id' => 101, 'link' => 5, 'heading' => I18N::translate('Personal data about ancestors, family members, and other persons')],
+            'AccessRights'          => ['level' => 3, 'id' => 103, 'link' => 5, 'heading' => I18N::translate('Graduated access rights to personal data')],
+            'VisitorData'           => ['level' => 3, 'id' => 105, 'link' => 5, 'heading' => I18N::translate('Personal data about visitors to this website')],
+            'UserAccountData'       => ['level' => 3, 'id' => 104, 'link' => 5, 'heading' => I18N::translate('Personal data about users with a user account')],
+            'Cookies'               => ['level' => 3, 'id' => 108, 'link' => 5, 'heading' => I18N::translate('Cookies')],
+            'TrackingAnalytics'     => ['level' => 3, 'id' => 109, 'link' => 5, 'heading' => I18N::translate('Tracking and analytics')],
+            'ApplicationLog'        => ['level' => 3, 'id' => 112, 'link' => 5, 'heading' => I18N::translate('Application log')],
+            'DataPortability'       => ['level' => 3, 'id' => 113, 'link' => 6, 'heading' => I18N::translate('Right to data portability')],
+            'RightToObject'         => ['level' => 3, 'id' => 114, 'link' => 6, 'heading' => I18N::translate('Right to object')],
             'CorrectionDeletion'    => ['level' => 2, 'id' =>  7, 'link' => 1, 'heading' => I18N::translateContext('heading','Right to correction or deletion of personal data')],
             'Appeal'                => ['level' => 2, 'id' =>  8, 'link' => 1, 'heading' => I18N::translateContext('heading','Right of appeal')],
             'LegalRegulations'      => ['level' => 1, 'id' =>  9, 'link' => 0, 'heading' => I18N::translateContext('heading','Legal regulations')],
@@ -182,7 +197,22 @@ class LegalNoticeSupport
             'Privacy'               => ['contentIWe' => false, 'content'   => []],
             'PersonalData'          => ['contentIWe' => false, 'content'   => []],
             'GDPR'                  => ['contentIWe' => false, 'content'   => []],
+            'Hosting'               => ['contentIWe' => false, 'content'   => []],
+            'LegalBases'            => ['contentIWe' => false, 'content'   => []],
+            'GeneralRisk'           => ['contentIWe' => false, 'content'   => []],
+            'SecurityMeasures'      => ['contentIWe' => false, 'content'   => []],
+            'ThirdPartyServices'    => ['contentIWe' => false, 'content'   => []],
             'ProvidingInformation'  => ['contentIWe' => false, 'content'   => []],
+            'OnlineGenealogyPrivacy'=> ['contentIWe' => false, 'content'   => []],
+            'GenealogicalData'      => ['contentIWe' => false, 'content'   => []],
+            'AccessRights'          => ['contentIWe' => false, 'content'   => []],
+            'VisitorData'           => ['contentIWe' => false, 'content'   => []],
+            'UserAccountData'       => ['contentIWe' => false, 'content'   => []],
+            'Cookies'               => ['contentIWe' => false, 'content'   => []],
+            'TrackingAnalytics'     => ['contentIWe' => false, 'content'   => []],
+            'ApplicationLog'        => ['contentIWe' => false, 'content'   => []],
+            'DataPortability'       => ['contentIWe' => false, 'content'   => []],
+            'RightToObject'         => ['contentIWe' => false, 'content'   => []],
             'CorrectionDeletion'    => ['contentIWe' => false, 'content'   => []],
             'Appeal'                => ['contentIWe' => false, 'content'   => []],
             'LegalRegulations'      => ['contentIWe' => false, 'content'   => []],
@@ -251,6 +281,26 @@ class LegalNoticeSupport
     }
 
     /**
+     * @param string $parentKey
+     *
+     * @return array<int,string>
+     */
+    public static function listChildChapterKeys(string $parentKey): array
+    {
+        $parameters = self::getChapterParameters();
+        if (!array_key_exists($parentKey, $parameters)) {
+            return [];
+        }
+
+        $parentId = $parameters[$parentKey]['id'];
+
+        return array_keys(array_filter(
+            $parameters,
+            static fn (array $parameter): bool => $parameter['link'] === $parentId
+        ));
+    }
+
+    /**
      * @return array<string,string>
      */
     public static function sectionViewByChapterKey(): array
@@ -260,7 +310,13 @@ class LegalNoticeSupport
             'PersonalData'         => 'personal-data-processing',
             'Privacy'              => 'terminology',
             'GDPR'                 => 'data-categories',
+            'Hosting'              => 'hosting',
+            'LegalBases'           => 'legal-bases',
+            'GeneralRisk'          => 'general-risk',
+            'SecurityMeasures'     => 'security-measures',
+            'ThirdPartyServices'   => 'third-party-services',
             'ProvidingInformation' => 'data-rights',
+            'OnlineGenealogyPrivacy' => 'online-genealogy-privacy',
         ];
     }
 
