@@ -1002,6 +1002,13 @@ msgstr[1] ""
 "um Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen "
 "zu kontaktieren."
 
+#: resources/views/page/sections/data-categories.phtml:78
+#, php-format
+msgid "Inactive user accounts are deleted after %s year."
+msgid_plural "Inactive user accounts are deleted after %s years."
+msgstr[0] "Inaktive Benutzerkonten werden nach %s Jahr gelöscht."
+msgstr[1] "Inaktive Benutzerkonten werden nach %s Jahren gelöscht."
+
 #: resources/views/page/sections/data-categories.phtml:84
 msgid ""
 "If you have your user account disabled here, the genealogical data you "
@@ -2094,8 +2101,8 @@ msgid "Should the administrators of this website be shown?"
 msgstr "Sollen die Administratoren dieser Website angezeigt werden?"
 
 #: resources/views/settings.phtml:302
-msgid "Relationship of registered users to the responsible person"
-msgstr "Beziehung der registrierten Nutzer zum Verantwortlichen"
+msgid "Registered users"
+msgstr "Registrierte Nutzer"
 
 #: resources/views/settings.phtml:308
 msgid "Are the registered users relatives or relatives by marriage?"
@@ -2115,6 +2122,40 @@ msgstr ""
 #, php-format
 msgid "Registered users: %s"
 msgstr "Registrierte Nutzer: %s"
+
+#: resources/views/settings.phtml:470
+msgid "When are inactive user accounts deleted?"
+msgstr "Wann werden inaktive Benutzerkonten gelöscht?"
+
+#: resources/views/settings.phtml:478
+#, php-format
+msgid "after %s year"
+msgid_plural "after %s years"
+msgstr[0] "nach %s Jahr"
+msgstr[1] "nach %s Jahren"
+
+#: resources/views/settings.phtml:483
+msgid ""
+"If \"never\" is selected, no retention period for inactive user accounts is "
+"mentioned in the privacy policy."
+msgstr ""
+"Wenn \"nie\" ausgewählt ist, wird in der Datenschutzerklärung keine "
+"Aufbewahrungsfrist für inaktive Benutzerkonten erwähnt."
+
+#: resources/views/settings.phtml:489
+msgid "No user account has been inactive for at least one year."
+msgstr "Kein Benutzerkonto ist seit mindestens einem Jahr inaktiv."
+
+#: resources/views/settings.phtml:491
+msgid "User accounts inactive for at least one year:"
+msgstr "Seit mindestens einem Jahr inaktive Benutzerkonten:"
+
+#: resources/views/settings.phtml:497
+#, php-format
+msgid "%1$s: inactive since %2$s (%3$s year)."
+msgid_plural "%1$s: inactive since %2$s (%3$s years)."
+msgstr[0] "%1$s: inaktiv seit %2$s (%3$s Jahr)."
+msgstr[1] "%1$s: inaktiv seit %2$s (%3$s Jahren)."
 
 #: resources/views/settings.phtml:328
 msgid "Privacy policy reference date"

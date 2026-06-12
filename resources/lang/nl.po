@@ -955,6 +955,13 @@ msgstr[1] ""
 "nodig, om contact met u op te nemen met vragen over wijzigingen die u heeft "
 "aangebracht."
 
+#: resources/views/page/sections/data-categories.phtml:78
+#, php-format
+msgid "Inactive user accounts are deleted after %s year."
+msgid_plural "Inactive user accounts are deleted after %s years."
+msgstr[0] ""
+msgstr[1] ""
+
 #: resources/views/page/sections/data-categories.phtml:84
 msgid ""
 "If you have your user account disabled here, the genealogical data you "
@@ -2000,7 +2007,7 @@ msgid "Should the administrators of this website be shown?"
 msgstr "Moeten de beheerders van deze website worden weergegeven?"
 
 #: resources/views/settings.phtml:302
-msgid "Relationship of registered users to the responsible person"
+msgid "Registered users"
 msgstr ""
 
 #: resources/views/settings.phtml:308
@@ -2021,6 +2028,38 @@ msgstr ""
 #, php-format
 msgid "Registered users: %s"
 msgstr ""
+
+#: resources/views/settings.phtml:470
+msgid "When are inactive user accounts deleted?"
+msgstr ""
+
+#: resources/views/settings.phtml:478
+#, php-format
+msgid "after %s year"
+msgid_plural "after %s years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/settings.phtml:483
+msgid ""
+"If \"never\" is selected, no retention period for inactive user accounts is "
+"mentioned in the privacy policy."
+msgstr ""
+
+#: resources/views/settings.phtml:489
+msgid "No user account has been inactive for at least one year."
+msgstr ""
+
+#: resources/views/settings.phtml:491
+msgid "User accounts inactive for at least one year:"
+msgstr ""
+
+#: resources/views/settings.phtml:497
+#, php-format
+msgid "%1$s: inactive since %2$s (%3$s year)."
+msgid_plural "%1$s: inactive since %2$s (%3$s years)."
+msgstr[0] ""
+msgstr[1] ""
 
 #: resources/views/settings.phtml:328
 msgid "Privacy policy reference date"

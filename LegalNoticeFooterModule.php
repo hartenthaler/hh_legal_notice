@@ -71,11 +71,14 @@ use function class_exists;
 use function count;
 use function date;
 use function filter_var;
+use function floor;
 use function is_array;
 use function in_array;
+use function max;
 use function method_exists;
 use function preg_match;
 use function preg_replace;
+use function time;
 use function trim;
 use function file_exists;
 use function assert;
@@ -369,6 +372,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showTreeContacts',
             'showAdministrators',
             'registeredUsersAreRelatives',
+            'inactiveUserYears',
             'supervisoryAuthorityName',
             'supervisoryAuthorityUrl',
             'hostingCountry',
@@ -411,6 +415,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $response['chapters'] = $this->getChapters($request);
         $response['dataProtectionSectionKeys'] = LegalNoticeSupport::listDataProtectionSectionKeys();
         $response['registeredUserNames'] = $this->registeredUserNames();
+        $response['inactiveUserAccountSummaries'] = $this->inactiveUserAccountSummaries();
 
         $preferences = $this->listOfPreferences();
         foreach ($preferences as $preference) {
@@ -442,6 +447,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         if ($response['privacyPolicyDateSource'] === '') {
             $response['privacyPolicyDateSource'] = self::PRIVACY_POLICY_DATE_SOURCE_RELEASE;
+        }
+
+        if ($response['inactiveUserYears'] === '') {
+            $response['inactiveUserYears'] = '0';
         }
     }
 
@@ -572,6 +581,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showGoogleCharts' => $value === '1' ? '1' : '0',
 
             'responsibleSex' => in_array($value, ['M', 'F', 'X', 'U'], true) ? $value : 'U',
+
+            'inactiveUserYears' => in_array($value, ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], true) ? $value : '0',
 
             'copyRightStartYear' => $this->validatedYear($value),
 
@@ -896,6 +907,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'countAdministrators'       => count($contactsAdministrators),
             'contactsAdministrators'    => $contactsAdministrators,
             'registeredUsersAreRelatives' => $this->registeredUsersAreRelatives(),
+            'inactiveUserYears' => $this->inactiveUserYears(),
             'supervisoryAuthorityName' => $this->supervisoryAuthorityName(),
             'supervisoryAuthorityUrl' => $this->supervisoryAuthorityUrl(),
             'chapters'                  => $this->getChapters($request),
@@ -1051,11 +1063,44 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return $this->getPreference('registeredUsersAreRelatives', '0') === '1';
     }
 
+    private function inactiveUserYears(): int
+    {
+        $years = (int) $this->getPreference('inactiveUserYears', '0');
+
+        return $years >= 1 && $years <= 10 ? $years : 0;
+    }
+
     private function registeredUserNames(): string
     {
         return implode(', ', $this->userService->all()
             ->map(static fn (UserInterface $user): string => $user->realName() !== '' ? $user->realName() : $user->userName())
             ->all());
+    }
+
+    /**
+     * @return list<object{name:string,lastActiveTimestamp:int,inactiveYears:int}>
+     */
+    private function inactiveUserAccountSummaries(): array
+    {
+        $oneYearAgo = time() - 365 * 24 * 60 * 60;
+
+        return $this->userService->all()
+            ->filter($this->userService->filterInactive($oneYearAgo))
+            ->sort($this->userService->sortByLastLogin())
+            ->map(static function (UserInterface $user): object {
+                $lastActiveTimestamp = max(
+                    (int) $user->getPreference(UserInterface::PREF_TIMESTAMP_REGISTERED),
+                    (int) $user->getPreference(UserInterface::PREF_TIMESTAMP_ACTIVE)
+                );
+
+                return (object) [
+                    'name' => $user->realName() !== '' ? $user->realName() : $user->userName(),
+                    'lastActiveTimestamp' => $lastActiveTimestamp,
+                    'inactiveYears' => (int) floor((time() - $lastActiveTimestamp) / (365 * 24 * 60 * 60)),
+                ];
+            })
+            ->values()
+            ->all();
     }
 
     private function isResponsibleContactName(string $contactName, string $responsibleName): bool
