@@ -482,11 +482,27 @@ msgstr ""
 "escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació "
 "aquí facilitada."
 
+#: src/LegalNoticeSupport.php:247
+msgid ""
+"The automated or systematic collection, scraping, data mining, and use of "
+"content from this website for training or enriching artificial intelligence "
+"systems or for retrieval by such systems is prohibited without my prior "
+"written consent."
+msgstr ""
+
 #: src/LegalNoticeSupport.php:216 src/LegalNoticeSupport.php:224
 msgid ""
 "This is necessary because contributed information becomes part of a shared "
 "genealogical data collection that cannot practically be separated into "
 "individual contributions later."
+msgstr ""
+
+#: src/LegalNoticeSupport.php:249
+msgid ""
+"I take the protection of copyright seriously. If I discover that copyrighted "
+"material from this website has been used contrary to these terms, I reserve "
+"the right to take legal action, including claims for damages, injunctive "
+"relief, and reimbursement of legal costs."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:217
@@ -566,6 +582,22 @@ msgstr ""
 "fora dels límits dels drets d'autor requereixen el nostre consentiment per "
 "escrit. Amb caràcter general, queda prohibit l'ús comercial de la informació "
 "aquí facilitada."
+
+#: src/LegalNoticeSupport.php:255
+msgid ""
+"The automated or systematic collection, scraping, data mining, and use of "
+"content from this website for training or enriching artificial intelligence "
+"systems or for retrieval by such systems is prohibited without our prior "
+"written consent."
+msgstr ""
+
+#: src/LegalNoticeSupport.php:257
+msgid ""
+"We take the protection of copyright seriously. If we discover that "
+"copyrighted material from this website has been used contrary to these "
+"terms, we reserve the right to take legal action, including claims for "
+"damages, injunctive relief, and reimbursement of legal costs."
+msgstr ""
 
 #: src/LegalNoticeSupport.php:225
 #, php-format
@@ -869,6 +901,13 @@ msgid_plural ""
 "We occasionally use your e-mail address to inform you by e-mail about "
 "important matters relating to the website or, if necessary, to contact you "
 "with questions about changes you have made."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/page/sections/data-categories.phtml:78
+#, php-format
+msgid "Inactive user accounts are deleted after %s year."
+msgid_plural "Inactive user accounts are deleted after %s years."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1754,7 +1793,7 @@ msgid "Should the administrators of this website be shown?"
 msgstr "S'han de mostrar els administradors d'aquest lloc web?"
 
 #: resources/views/settings.phtml:302
-msgid "Relationship of registered users to the responsible person"
+msgid "Registered users"
 msgstr ""
 
 #: resources/views/settings.phtml:308
@@ -1772,6 +1811,38 @@ msgstr ""
 #, php-format
 msgid "Registered users: %s"
 msgstr ""
+
+#: resources/views/settings.phtml:470
+msgid "When are inactive user accounts deleted?"
+msgstr ""
+
+#: resources/views/settings.phtml:478
+#, php-format
+msgid "after %s year"
+msgid_plural "after %s years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/settings.phtml:483
+msgid ""
+"If \"never\" is selected, no retention period for inactive user accounts is "
+"mentioned in the privacy policy."
+msgstr ""
+
+#: resources/views/settings.phtml:489
+msgid "No user account has been inactive for at least one year."
+msgstr ""
+
+#: resources/views/settings.phtml:491
+msgid "User accounts inactive for at least one year:"
+msgstr ""
+
+#: resources/views/settings.phtml:497
+#, php-format
+msgid "%1$s: inactive since %2$s (%3$s year)."
+msgid_plural "%1$s: inactive since %2$s (%3$s years)."
+msgstr[0] ""
+msgstr[1] ""
 
 #: resources/views/settings.phtml:328
 #, fuzzy
@@ -1812,6 +1883,10 @@ msgstr ""
 #: resources/views/settings.phtml:361
 msgid "Hosting service"
 msgstr "Servei de hosting"
+
+#: resources/views/settings.phtml:366
+msgid "Server location"
+msgstr ""
 
 #: resources/views/settings.phtml:366
 #, fuzzy

@@ -478,7 +478,7 @@ msgid ""
 msgstr ""
 "Die von mir und von den registrierten Nutzern erstellten Inhalte und Werke "
 "auf diesen Webseiten unterliegen dem Urheberrecht. Wenn Sie als "
-"registrierter Nutzer dieser Website Inhalte beitragen sollten, übertragen "
+"registrierter Nutzer dieser Website Inhalte beitragen sollten, räumen "
 "Sie mir eine unwiderrufliche, nicht ausschließliche Lizenz zur Nutzung "
 "dieser Inhalte ein. Die Verbreitung und jede Art der Verwertung der Inhalte "
 "dieser Website außerhalb der Grenzen des Urheberrechtes bedürfen meiner "
@@ -498,12 +498,24 @@ msgid ""
 msgstr ""
 "Die von mir und von den registrierten Nutzern erstellten Inhalte und Werke "
 "auf diesen Webseiten unterliegen dem Urheberrecht in %s. Wenn Sie als "
-"registrierter Nutzer dieser Website Inhalte beitragen sollten, übertragen "
+"registrierter Nutzer dieser Website Inhalte beitragen sollten, räumen "
 "Sie mir eine unwiderrufliche, nicht ausschließliche Lizenz zur Nutzung "
 "dieser Inhalte ein. Die Verbreitung und jede Art der Verwertung der Inhalte "
 "dieser Website außerhalb der Grenzen des Urheberrechtes bedürfen meiner "
 "schriftlichen Zustimmung. Eine kommerzielle Nutzung der hier "
 "bereitgestellten Informationen ist generell untersagt."
+
+#: src/LegalNoticeSupport.php:247
+msgid ""
+"The automated or systematic collection, scraping, data mining, and use of "
+"content from this website for training or enriching artificial intelligence "
+"systems or for retrieval by such systems is prohibited without my prior "
+"written consent."
+msgstr ""
+"Die automatisierte oder systematische Erfassung, das Auslesen, Data Mining "
+"sowie die Nutzung von Inhalten dieser Website zum Training oder zur "
+"Anreicherung von Systemen künstlicher Intelligenz (KI) oder zum Abruf durch "
+"solche Systeme ist ohne meine vorherige schriftliche Zustimmung untersagt."
 
 #: src/LegalNoticeSupport.php:216 src/LegalNoticeSupport.php:224
 msgid ""
@@ -514,6 +526,19 @@ msgstr ""
 "Dies ist erforderlich, weil beigetragene Informationen Teil einer "
 "gemeinsamen genealogischen Datensammlung werden, die später praktisch nicht "
 "mehr in einzelne Beiträge getrennt werden kann."
+
+#: src/LegalNoticeSupport.php:249
+msgid ""
+"I take the protection of copyright seriously. If I discover that copyrighted "
+"material from this website has been used contrary to these terms, I reserve "
+"the right to take legal action, including claims for damages, injunctive "
+"relief, and reimbursement of legal costs."
+msgstr ""
+"Ich nehme den Schutz des Urheberrechts ernst. Wenn ich feststelle, dass "
+"urheberrechtlich geschütztes Material dieser Website entgegen diesen "
+"Bedingungen genutzt wurde, behalte ich mir rechtliche Schritte vor, "
+"einschließlich Schadensersatzansprüchen, Unterlassungsansprüchen und der "
+"Erstattung von Rechtsverfolgungskosten."
 
 #: src/LegalNoticeSupport.php:217
 #, php-format
@@ -569,7 +594,7 @@ msgid ""
 msgstr ""
 "Die von uns und von den registrierten Nutzern erstellten Inhalte und Werke "
 "auf diesen Webseiten unterliegen dem Urheberrecht. Wenn Sie als "
-"registrierter Nutzer dieser Website Inhalte beitragen sollten, übertragen "
+"registrierter Nutzer dieser Website Inhalte beitragen sollten, räumen "
 "Sie uns eine unwiderrufliche, nicht ausschließliche Lizenz zur Nutzung "
 "dieser Inhalte ein. Die Verbreitung und jede Art der Verwertung der Inhalte "
 "unserer Website außerhalb der Grenzen des Urheberrechtes bedürfen unserer "
@@ -589,12 +614,37 @@ msgid ""
 msgstr ""
 "Die von uns und von den registrierten Nutzern erstellten Inhalte und Werke "
 "auf diesen Webseiten unterliegen dem Urheberrecht in %s. Wenn Sie als "
-"registrierter Nutzer dieser Website Inhalte beitragen sollten, übertragen "
+"registrierter Nutzer dieser Website Inhalte beitragen sollten, räumen "
 "Sie uns eine unwiderrufliche, nicht ausschließliche Lizenz zur Nutzung "
 "dieser Inhalte ein. Die Verbreitung und jede Art der Verwertung der Inhalte "
 "unserer Website außerhalb der Grenzen des Urheberrechtes bedürfen unserer "
 "schriftlichen Zustimmung. Eine kommerzielle Nutzung der hier "
 "bereitgestellten Informationen ist generell untersagt."
+
+#: src/LegalNoticeSupport.php:255
+msgid ""
+"The automated or systematic collection, scraping, data mining, and use of "
+"content from this website for training or enriching artificial intelligence "
+"systems or for retrieval by such systems is prohibited without our prior "
+"written consent."
+msgstr ""
+"Die automatisierte oder systematische Erfassung, das Auslesen, Data Mining "
+"sowie die Nutzung von Inhalten dieser Website zum Training oder zur "
+"Anreicherung von Systemen künstlicher Intelligenz (KI) oder zum Abruf durch "
+"solche Systeme ist ohne unsere vorherige schriftliche Zustimmung untersagt."
+
+#: src/LegalNoticeSupport.php:257
+msgid ""
+"We take the protection of copyright seriously. If we discover that "
+"copyrighted material from this website has been used contrary to these "
+"terms, we reserve the right to take legal action, including claims for "
+"damages, injunctive relief, and reimbursement of legal costs."
+msgstr ""
+"Wir nehmen den Schutz des Urheberrechts ernst. Wenn wir feststellen, dass "
+"urheberrechtlich geschütztes Material dieser Website entgegen diesen "
+"Bedingungen genutzt wurde, behalten wir uns rechtliche Schritte vor, "
+"einschließlich Schadensersatzansprüchen, Unterlassungsansprüchen und der "
+"Erstattung von Rechtsverfolgungskosten."
 
 #: src/LegalNoticeSupport.php:225
 #, php-format
@@ -969,6 +1019,13 @@ msgstr[1] ""
 "wichtige Angelegenheiten im Zusammenhang mit der Website zu informieren oder "
 "um Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen "
 "zu kontaktieren."
+
+#: resources/views/page/sections/data-categories.phtml:78
+#, php-format
+msgid "Inactive user accounts are deleted after %s year."
+msgid_plural "Inactive user accounts are deleted after %s years."
+msgstr[0] "Inaktive Benutzerkonten werden nach %s Jahr gelöscht."
+msgstr[1] "Inaktive Benutzerkonten werden nach %s Jahren gelöscht."
 
 #: resources/views/page/sections/data-categories.phtml:84
 msgid ""
@@ -2062,8 +2119,8 @@ msgid "Should the administrators of this website be shown?"
 msgstr "Sollen die Administratoren dieser Website angezeigt werden?"
 
 #: resources/views/settings.phtml:302
-msgid "Relationship of registered users to the responsible person"
-msgstr "Beziehung der registrierten Nutzer zum Verantwortlichen"
+msgid "Registered users"
+msgstr "Registrierte Nutzer"
 
 #: resources/views/settings.phtml:308
 msgid "Are the registered users relatives or relatives by marriage?"
@@ -2083,6 +2140,40 @@ msgstr ""
 #, php-format
 msgid "Registered users: %s"
 msgstr "Registrierte Nutzer: %s"
+
+#: resources/views/settings.phtml:470
+msgid "When are inactive user accounts deleted?"
+msgstr "Wann werden inaktive Benutzerkonten gelöscht?"
+
+#: resources/views/settings.phtml:478
+#, php-format
+msgid "after %s year"
+msgid_plural "after %s years"
+msgstr[0] "nach %s Jahr"
+msgstr[1] "nach %s Jahren"
+
+#: resources/views/settings.phtml:483
+msgid ""
+"If \"never\" is selected, no retention period for inactive user accounts is "
+"mentioned in the privacy policy."
+msgstr ""
+"Wenn \"nie\" ausgewählt ist, wird in der Datenschutzerklärung keine "
+"Aufbewahrungsfrist für inaktive Benutzerkonten erwähnt."
+
+#: resources/views/settings.phtml:489
+msgid "No user account has been inactive for at least one year."
+msgstr "Kein Benutzerkonto ist seit mindestens einem Jahr inaktiv."
+
+#: resources/views/settings.phtml:491
+msgid "User accounts inactive for at least one year:"
+msgstr "Seit mindestens einem Jahr inaktive Benutzerkonten:"
+
+#: resources/views/settings.phtml:497
+#, php-format
+msgid "%1$s: inactive since %2$s (%3$s year)."
+msgid_plural "%1$s: inactive since %2$s (%3$s years)."
+msgstr[0] "%1$s: inaktiv seit %2$s (%3$s Jahr)."
+msgstr[1] "%1$s: inaktiv seit %2$s (%3$s Jahren)."
 
 #: resources/views/settings.phtml:328
 msgid "Privacy policy reference date"
@@ -2125,6 +2216,10 @@ msgstr ""
 #: resources/views/settings.phtml:361
 msgid "Hosting service"
 msgstr "Hosting-Anbieter"
+
+#: resources/views/settings.phtml:366
+msgid "Server location"
+msgstr "Server-Standort"
 
 #: resources/views/settings.phtml:366
 msgid "Country of the webtrees server location"

@@ -39,6 +39,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
  * @var string                  $supervisoryAuthorityName name of the competent supervisory authority
  * @var string                  $supervisoryAuthorityUrl URL of the competent supervisory authority
  * @var string                  $registeredUsersAreRelatives option whether registered users are relatives or relatives by marriage
+ * @var int                  $inactiveUserYears     when should inactive users be deleted?
+ * @var array<int,object>       $inactiveUserAccountSummaries inactive user accounts for admin decision support
  * @var string                  $registeredUserNames    compact list of registered users
  *
  * @var array<object>           $chapters               list of chapter objects
@@ -440,7 +442,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
         </div>
 
         <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="UserAccountData">
-            <h4><?= I18N::translate('Relationship of registered users to the responsible person') ?></h4>
+            <h4><?= I18N::translate('Registered users') ?></h4>
 
             <div class="row">
                 <fieldset class="form-group mb-3">
@@ -465,6 +467,48 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                         </div>
                     </div>
                 </fieldset>
+            </div>
+
+            <div class="row">
+                <label class="col-sm-3 col-form-label wt-page-options-label" for="inactiveUserYears">
+                    <?= I18N::translate('When are inactive user accounts deleted?') ?>
+                </label>
+                <div class="col-sm-9 wt-page-options-value">
+                    <?= view('components/select', [
+                        'id' => 'inactiveUserYears',
+                        'name' => 'inactiveUserYears',
+                        'options' => ['0' => MoreI18N::xlate('never')] + array_combine(
+                            range(1, 10),
+                            array_map(static fn (int $years): string => I18N::plural('after %s year', 'after %s years', $years, I18N::number($years)), range(1, 10))
+                        ),
+                        'selected' => $inactiveUserYears ?? '0',
+                    ]) ?>
+                    <p class="small text-muted">
+                        <?= I18N::translate('If "never" is selected, no retention period for inactive user accounts is mentioned in the privacy policy.') ?>
+                        <br>
+                        <?php if ($inactiveUserAccountSummaries === []) : ?>
+                            <?= I18N::translate('No user account has been inactive for at least one year.') ?>
+                        <?php else : ?>
+                            <?= I18N::translate('User accounts inactive for at least one year:') ?>
+                        <?php endif ?>
+                    </p>
+                    <?php if ($inactiveUserAccountSummaries !== []) : ?>
+                        <ul class="small text-muted">
+                            <?php foreach ($inactiveUserAccountSummaries as $inactiveUserAccountSummary) : ?>
+                                <li>
+                                    <?= I18N::plural(
+                                        '%1$s: inactive since %2$s (%3$s year).',
+                                        '%1$s: inactive since %2$s (%3$s years).',
+                                        $inactiveUserAccountSummary->inactiveYears,
+                                        e($inactiveUserAccountSummary->name),
+                                        date('Y-m-d', $inactiveUserAccountSummary->lastActiveTimestamp),
+                                        I18N::number($inactiveUserAccountSummary->inactiveYears)
+                                    ) ?>
+                                </li>
+                            <?php endforeach ?>
+                        </ul>
+                    <?php endif ?>
+                </div>
             </div>
         </div>
 
@@ -503,7 +547,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
             </div>
         </div>
 
-        <h4><?= I18N::translate('Country of the webtrees server location') ?></h4>
+        <h4><?= I18N::translate('Server location') ?></h4>
 
         <div class="row">
             <!-- country of the webtrees server location -->
