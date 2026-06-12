@@ -1,3 +1,9 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+
+?>
+
     <h2><?= e($legalNoticeTitle) ?></h2>
     <?php if ($legalNoticeLawReference !== ''): ?>
         <p><?= e($legalNoticeLawReference) ?></p>
@@ -98,3 +104,10 @@
         </ul>
     <?php endif ?>
 
+    <?php if ($showEditorialResp): ?>
+        <h4 class="hh-legal-notice-contact-section">
+            <?= e($useGermanPrivacyLaw ? I18N::translate('Editorially responsible person according to Section 18 paragraph 2 MStV') : I18N::translate('Editorially responsible person')) ?>
+        </h4>
+        <p><?= e(I18N::translate('In addition to genealogical data, this website also contains editorially prepared content addressed to the general public, such as explanations of family history, the software used, or historical topics.')) ?></p>
+        <p><?= e(I18N::translate('Responsible for this content is: %s. Address: see above.', $responsibleName)) ?></p>
+    <?php endif ?>

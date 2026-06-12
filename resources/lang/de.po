@@ -2350,3 +2350,28 @@ msgstr ""
 #: resources/views/settings.phtml:628
 msgid "Restore default sorting for all chapters and sections"
 msgstr "Standardsortierung für alle Kapitel und Abschnitte wiederherstellen"
+
+#: resources/views/page/header.phtml:103
+msgid "Editorially responsible person according to Section 18 paragraph 2 MStV"
+msgstr "Redaktionell verantwortliche Person gemäß § 18 Abs. 2 MStV"
+
+#: resources/views/page/header.phtml:103
+msgid "Editorially responsible person"
+msgstr "Redaktionell verantwortliche Person"
+
+#: resources/views/page/header.phtml:105
+msgid "In addition to genealogical data, this website also contains editorially prepared content addressed to the general public, such as explanations of family history, the software used, or historical topics."
+msgstr "Diese Website enthält neben genealogischen Daten auch redaktionell aufbereitete Inhalte, die sich an die allgemeine Öffentlichkeit richten, etwa Erläuterungen zur Familiengeschichte, zur verwendeten Software oder zu geschichtlichen Themen."
+
+#: resources/views/page/header.phtml:106
+#, php-format
+msgid "Responsible for this content is: %s. Address: see above."
+msgstr "Verantwortlich für diese Inhalte ist: %s. Adresse: siehe oben."
+
+#: resources/views/settings.phtml:309
+msgid "Does this website contain editorially prepared content that is not intended only for the family, such as blog posts or news articles?"
+msgstr "Enthält diese Website redaktionell aufbereitete Inhalte, die nicht nur für die Familie bestimmt sind, etwa Blog- oder News-Artikel?"
+
+#: resources/views/settings.phtml:319
+msgid "If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above."
+msgstr "Wenn aktiviert, wird die im Impressum genannte Person auch als redaktionell verantwortliche Person angezeigt. Die Adresse wird aus dem Impressum oben referenziert."
