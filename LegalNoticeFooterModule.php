@@ -831,6 +831,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         return $this->viewResponse($this->name() . '::page', [
             'moduleName'                => $this->name(),
+            'stylesheet'                => $this->assetUrl('css/hh_legal_notice.css'),
             'title'                     => $this->title(),
             'tree'                      => $tree,
             'legalNoticeTitle'          => I18N::translate('Legal Notice'),

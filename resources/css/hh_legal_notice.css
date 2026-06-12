@@ -1,0 +1,95 @@
+.hh-legal-notice-page .hh-legal-notice-page-heading,
+.hh-legal-notice-page .hh-legal-notice-contact-section,
+.hh-legal-notice-page .hh-legal-notice-chapter {
+    margin-top: 2rem;
+}
+
+.hh-legal-notice-page {
+    box-sizing: border-box;
+    counter-reset: hh-main-chapter;
+    line-height: 1.55;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 210mm;
+    padding: 1.5rem 2rem;
+}
+
+.hh-legal-notice-page .hh-legal-notice-reference-date {
+    color: #555;
+    font-size: 0.95rem;
+    margin-top: -0.25rem;
+}
+
+.hh-legal-notice-page a {
+    color: #005ea8;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.15em;
+}
+
+.hh-legal-notice-page a:hover,
+.hh-legal-notice-page a:focus {
+    color: #b00020;
+    text-decoration-thickness: 0.12em;
+}
+
+.hh-legal-notice-page h3 {
+    margin-top: 1.75rem;
+}
+
+.hh-legal-notice-page h4 {
+    margin-top: 1.25rem;
+}
+
+.hh-legal-notice-page .hh-legal-notice-chapter {
+    align-items: baseline;
+    counter-increment: hh-main-chapter;
+    column-gap: 0.35em;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+}
+
+.hh-legal-notice-page .hh-legal-notice-chapter-body {
+    counter-reset: hh-section;
+}
+
+.hh-legal-notice-page .hh-legal-notice-chapter::before {
+    content: counter(hh-main-chapter) ". ";
+}
+
+.hh-legal-notice-page .hh-legal-notice-section {
+    align-items: baseline;
+    column-gap: 0.35em;
+    counter-increment: hh-section;
+    counter-reset: hh-subsection;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+}
+
+.hh-legal-notice-page .hh-legal-notice-section::before {
+    content: counter(hh-main-chapter) "." counter(hh-section) " ";
+}
+
+.hh-legal-notice-page .hh-legal-notice-chapter-body h4 {
+    align-items: baseline;
+    column-gap: 0.35em;
+    counter-increment: hh-subsection;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+}
+
+.hh-legal-notice-page .hh-legal-notice-chapter-body h4::before {
+    content: counter(hh-main-chapter) "." counter(hh-section) "." counter(hh-subsection) " ";
+}
+
+.hh-legal-notice-page h5 {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .hh-legal-notice-page {
+        padding: 1rem;
+    }
+}

@@ -33,7 +33,7 @@ use Fisharebest\Webtrees\I18N;
 
             <?php $paragraphs = $section->getContent() ?>
             <?php if ($paragraphs !== []) : ?>
-                <h3><?= e($section->getHeading()) ?></h3>
+                <h3 class="hh-legal-notice-section"><?= e($section->getHeading()) ?></h3>
                 <?php foreach ($paragraphs as $paragraph): ?>
                     <p><?= e($paragraph) ?></p>
                 <?php endforeach ?>
