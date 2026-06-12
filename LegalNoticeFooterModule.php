@@ -449,6 +449,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             $response['privacyPolicyDateSource'] = self::PRIVACY_POLICY_DATE_SOURCE_RELEASE;
         }
 
+        $response['hostingStartDate'] = $this->normalizedAgreementDate($response['hostingStartDate']);
+        $response['hostingEndDate'] = $this->normalizedAgreementDate($response['hostingEndDate']);
+
         if ($response['inactiveUserYears'] === '') {
             $response['inactiveUserYears'] = '0';
         }
@@ -558,9 +561,23 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     {
         $body = Validator::parsedBody($request);
         $preferences = $this->listOfPreferences();
+        $validatedPreferences = [];
 
         foreach ($preferences as $preference) {
-            $this->setPreference($preference, $this->validatedPreference($preference, $body->string($preference, '')));
+            $validatedPreferences[$preference] = $this->validatedPreference($preference, $body->string($preference, ''));
+        }
+
+        if (
+            $validatedPreferences['hostingStartDate'] !== ''
+            && $validatedPreferences['hostingEndDate'] !== ''
+            && $validatedPreferences['hostingStartDate'] >= $validatedPreferences['hostingEndDate']
+        ) {
+            $validatedPreferences['hostingEndDate'] = '';
+            FlashMessages::addMessage(I18N::translate('Invalid date in setting “%s”. The first date must be before the last date. The last date was ignored.', 'hostingEndDate'), 'warning');
+        }
+
+        foreach ($validatedPreferences as $preference => $value) {
+            $this->setPreference($preference, $value);
         }
 
         $this->postAdminActionChapter($request);
@@ -593,6 +610,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             ], true) ? $value : self::PRIVACY_POLICY_DATE_SOURCE_RELEASE,
 
             'privacyPolicyManualDate' => $this->validatedIsoDate($value, $preference),
+
+            'hostingStartDate',
+            'hostingEndDate' => $this->validatedAgreementDate($value, $preference),
 
             'email' => $this->validatedEmail($value),
 
@@ -661,6 +681,51 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         FlashMessages::addMessage(I18N::translate('Invalid date in setting “%s”. Use the format YYYY-MM-DD. The value was ignored.', $preference), 'warning');
+
+        return '';
+    }
+
+    private function validatedAgreementDate(string $value, string $preference): string
+    {
+        if ($value === '') {
+            return '';
+        }
+
+        $date = $this->normalizedAgreementDate($value);
+        $today = date('Y-m-d');
+
+        if ($date !== '' && $date >= '2000-01-01' && $date <= $today) {
+            return $date;
+        }
+
+        FlashMessages::addMessage(I18N::translate('Invalid date in setting “%s”. Use a date between 2000-01-01 and today. The value was ignored.', $preference), 'warning');
+
+        return '';
+    }
+
+    private function normalizedAgreementDate(string $value): string
+    {
+        $value = trim($value);
+
+        if (preg_match('/^(\d{4})-(\d{2})-(\d{2})/', $value, $match) === 1) {
+            $year = (int) $match[1];
+            $month = (int) $match[2];
+            $day = (int) $match[3];
+
+            if (checkdate($month, $day, $year)) {
+                return sprintf('%04d-%02d-%02d', $year, $month, $day);
+            }
+        }
+
+        if (preg_match('/(\d{1,2})\.(\d{1,2})\.(\d{4})/', $value, $match) === 1) {
+            $day = (int) $match[1];
+            $month = (int) $match[2];
+            $year = (int) $match[3];
+
+            if (checkdate($month, $day, $year)) {
+                return sprintf('%04d-%02d-%02d', $year, $month, $day);
+            }
+        }
 
         return '';
     }
@@ -1568,25 +1633,40 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * hosting Auftragsverarbeitung agreement first date / time
+     * hosting Auftragsverarbeitung agreement first date
      * e.g. 26.11.2018 um 00:12 Uhr
      *
      * @return string
      */
     private function hostingStartDate(): string
     {
-        return $this->getPreference('hostingStartDate', '');
+        return $this->formattedAgreementDate($this->getPreference('hostingStartDate', ''));
     }
 
     /**
-     * hosting Auftragsverarbeitung agreement last date / time
+     * hosting Auftragsverarbeitung agreement last date
      * e.g. 25.11.2022 um 00:33 Uhr
      *
      * @return string
      */
     private function hostingEndDate(): string
     {
-        return $this->getPreference('hostingEndDate', '');
+        return $this->formattedAgreementDate($this->getPreference('hostingEndDate', ''));
+    }
+
+    private function formattedAgreementDate(string $date): string
+    {
+        $date = $this->normalizedAgreementDate($date);
+
+        if ($date === '') {
+            return '';
+        }
+
+        if ($date < '2000-01-01' || $date > date('Y-m-d')) {
+            return '';
+        }
+
+        return Registry::timestampFactory()->fromString($date, 'Y-m-d')->isoFormat('L');
     }
 
     /**

@@ -53,8 +53,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
  * @var string                  $hostingCompanyUrl      hosting service link
  * @var string                  $hostingPrivacyNotice   hosting service link to privacy notice
  * @var bool                    $orderProcessing        option if Auftragsverarbeitung is used
- * @var string                  $hostingStartDate       hosting Auftragsverarbeitung agreement first date / time
- * @var string                  $hostingEndDate         hosting Auftragsverarbeitung agreement last date / time
+ * @var string                  $hostingStartDate       hosting Auftragsverarbeitung agreement first date
+ * @var string                  $hostingEndDate         hosting Auftragsverarbeitung agreement last date
  * @var string                  $showGoogleCharts       option whether Google Charts should be mentioned as third-party service
  * @var string                  $additionalThirdPartyServices additional third-party services, one service per line
  */
@@ -601,12 +601,12 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                 ]) ?>
             </div>
 
-            <!-- hosting Order Processing agreement first date / time -->
+            <!-- hosting Order Processing agreement first date -->
             <label class="col-sm-3 col-form-label wt-page-options-label" for="hostingStartDate">
                 <?= I18N::translate('First date of Order Processing agreement') ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
-                <input class="form-control" id="hostingStartDate" name="hostingStartDate" type="text" value="<?= $hostingStartDate ?>">
+                <input class="form-control" id="hostingStartDate" name="hostingStartDate" type="date" min="2000-01-01" max="<?= date('Y-m-d') ?>" value="<?= e($hostingStartDate) ?>">
             </div>
 
             <!-- hosting Order Processing agreement last date / time -->
@@ -614,7 +614,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                 <?= I18N::translate('Last date of Order Processing agreement') ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
-                <input class="form-control" id="hostingEndDate" name="hostingEndDate" type="text" value="<?= $hostingEndDate ?>">
+                <input class="form-control" id="hostingEndDate" name="hostingEndDate" type="date" min="2000-01-01" max="<?= date('Y-m-d') ?>" value="<?= e($hostingEndDate) ?>">
             </div>
             </div>
         </div>
