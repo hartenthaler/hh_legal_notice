@@ -1122,16 +1122,21 @@ msgid ""
 "are listed here."
 msgstr ""
 
+#: resources/views/page/sections/third-party-services.phtml
+#, php-format
+msgid "External tracking or analytics services are used; see the section %s."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml
+msgid "External tracking or analytics services are used."
+msgstr ""
+
 #: resources/views/page/sections/data-categories.phtml:181
 msgid "This website uses additional third-party services."
 msgstr "Deze website maakt gebruik van aanvullende diensten van derden."
 
 #: resources/views/page/sections/data-categories.phtml:186
 msgid "Service"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:187
-msgid "URL"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:188

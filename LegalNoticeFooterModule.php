@@ -51,12 +51,14 @@ use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 use Fisharebest\Webtrees\Module\ModuleFooterTrait;
+use Fisharebest\Webtrees\Module\ModuleAnalyticsInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigTrait;
 use Fisharebest\Webtrees\Module\PrivacyPolicy;
 use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\UserService;
+use Fisharebest\Webtrees\Tree;
 use Fisharebest\Webtrees\Validator;
 use Fisharebest\Webtrees\View;
 use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
@@ -140,6 +142,34 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'IP addresses',
             'Location data shown on maps',
             'Map display settings',
+        ],
+    ];
+
+    private const TRACKING_SERVICES_BY_MODULE = [
+        'google-analytics' => [
+            'name' => 'Google™ Analytics',
+            'url' => 'https://www.google.com/analytics',
+            'country' => 'United States',
+        ],
+        'google-webmaster-tools' => [
+            'name' => 'Google™ Search Console',
+            'url' => 'https://search.google.com/search-console',
+            'country' => 'United States',
+        ],
+        'bing-webmaster-tools' => [
+            'name' => 'Bing™ Webmaster Tools',
+            'url' => 'https://www.bing.com/webmasters',
+            'country' => 'United States',
+        ],
+        'matomo-analytics' => [
+            'name' => 'Matomo™ Analytics',
+            'url' => 'https://matomo.org',
+            'country' => 'local',
+        ],
+        'statcounter' => [
+            'name' => 'Statcounter™',
+            'url' => 'https://statcounter.com',
+            'country' => 'Ireland',
         ],
     ];
 
@@ -875,7 +905,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showLegalRegulations'      => $this->isChapterEnabled('LegalRegulations', $request),
             'singular'                  => $this->useSingularStyle($request),
             'analytics'                 => $this->analyticsModules($tree, $user),
-            'trackingServices'          => [],
+            'trackingServices'          => $this->trackingServices($tree, $user),
             'thirdPartyServices'        => $this->thirdPartyServices(),
             'cookiesServices'           => [],
             'externalTranscriptionProviders' => [],
@@ -894,6 +924,27 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingStartDate'          => $this->hostingStartDate(),
             'hostingEndDate'            => $this->hostingEndDate(),
         ]);
+    }
+
+    /**
+     * @return list<array{name:string,url:string,country:string,tracker:bool,thirdCountryTransfer:bool}>
+     */
+    private function trackingServices(Tree $tree, UserInterface $user): array
+    {
+        $services = [];
+
+        foreach ($this->moduleService->findByComponent(ModuleAnalyticsInterface::class, $tree, $user) as $module) {
+            $services[] = self::TRACKING_SERVICES_BY_MODULE[$module->name()] ?? [
+                'name' => $module->title(),
+                'url' => method_exists($module, 'externalUrl') ? $module->externalUrl() : '',
+                'country' => '',
+            ];
+            $services[array_key_last($services)]['tracker'] = $module->isTracker();
+        }
+
+        $services = array_values(array_filter($services, static fn (array $service): bool => $service['url'] !== ''));
+
+        return array_map(fn (array $service): array => $this->withThirdCountryTransferFlag($service), $services);
     }
 
     /**
@@ -1060,7 +1111,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function isThirdCountryTransfer(string $country): bool
     {
-        if ($this->privacyLawRegion() === self::PRIVACY_LAW_OTHER || trim($country) === '') {
+        if ($this->privacyLawRegion() === self::PRIVACY_LAW_OTHER || trim($country) === '' || strtolower(trim($country)) === 'local') {
             return false;
         }
 
