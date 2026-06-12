@@ -8,6 +8,8 @@
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
+Current module version: **2.2.6.2**.
+
 > [!IMPORTANT]
 > This module does not provide legal advice.
 > You, as administrator of your website, remain responsible for checking and maintaining the legal notice and privacy policy shown on your site (in all languages provided by this module).
@@ -22,6 +24,7 @@ This README contains the following main sections:
 
 * [Purpose](#Purpose)
 * [Scope](#Scope)
+* [What's new](#WhatsNew)
 * [Screenshots](#Screenshots)
 * [Requirements](#Requirements)
 * [Installation](#Installation)
@@ -62,6 +65,7 @@ The webtrees admin can choose if the following additional parts should be shown
 * image of the responsible person using the [Gravatar](https://gravatar.com/)
 * list of contact persons for a tree (genealogical and technical)
 * list of administrators of this site with their contact links
+* editorial responsibility notice according to § 18 Abs. 2 MStV, where applicable
 * optional consumer dispute resolution notice for websites whose server is located in the European Union
 
 The generated page is structured into three parts:
@@ -85,9 +89,26 @@ The generated privacy policy can include, depending on the configuration and ser
 * legal bases for processing under the GDPR where EU law applies
 * a named competent supervisory authority with URL
 * data protection contact information referring to the responsible person named in the legal notice
-* information about hosting, order processing, application logs, third-party services, and third-country transfers
+* information about hosting, structured order-processing agreement dates, application logs, third-party services, tracking and analytics, and third-country transfers
+* information about retention periods for inactive user accounts
 * information about the long-term preservation of genealogical data as historically relevant material
 * information about external transcription providers when compatible modules provide such notices
+
+The legal-regulations chapter can include notices about copyright, distribution of genealogical data,
+automated collection, scraping, data mining, AI-system use, and copyright enforcement.
+
+<a name="WhatsNew"></a>
+## ✨ What's new in 2.2.6.2
+
+This release expands the legal notice and privacy policy configuration in several areas:
+
+* More flexible section ordering and visibility controls, especially within the privacy policy.
+* Improved rendering and styling for heading levels and dark themes.
+* A dedicated tracking and analytics disclosure with service details and third-country-transfer handling.
+* Configurable retention wording for inactive user accounts, including an admin-side decision aid.
+* Structured date fields and validation for hosting order-processing agreements.
+* Optional editorial responsibility notice for public editorial content, with § 18 Abs. 2 MStV wording for German legal notices.
+* Additional copyright wording covering automated collection, scraping, data mining, and AI-system use.
 
 <a name="Screenshots"></a>
 ## 🖼 Screenshots
