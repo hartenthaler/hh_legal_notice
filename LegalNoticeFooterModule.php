@@ -561,8 +561,30 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
             'additionalThirdPartyServices' => $this->validatedThirdPartyServices($value),
 
+            'hostingCountry' => $this->normalizeHostingCountry($value),
+
             default => $value,
         };
+    }
+
+    private function normalizeHostingCountry(string $country): string
+    {
+        $country = $this->normalizeCountryToken($country);
+
+        return match ($country) {
+            'deutschland' => 'Deutschland',
+            'germany' => 'Germany',
+            'österreich', 'oesterreich' => 'Österreich',
+            'austria' => 'Austria',
+            'schweiz' => 'Schweiz',
+            'switzerland' => 'Switzerland',
+            default => ucfirst($country),
+        };
+    }
+
+    private function normalizeCountryToken(string $country): string
+    {
+        return strtolower(trim((string) preg_replace('/\s+/', ' ', $country)));
     }
 
     private function validatedYear(string $value): string
@@ -1021,8 +1043,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function responsiblePronoun(): string
     {
         return match ($this->responsibleSex()) {
-            'M' => MoreI18N::xlateContext('legal notice pronoun subject', 'He'),
-            'F' => MoreI18N::xlateContext('legal notice pronoun subject', 'She'),
+            'M' => I18N::translateContext('legal notice pronoun subject', 'He'),
+            'F' => I18N::translateContext('legal notice pronoun subject', 'She'),
             default => I18N::translate('This person'),
         };
     }
@@ -1306,8 +1328,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * country of the webtrees server location (in English language)
-     * e.g. Germany
+     * country of the webtrees server location
+     * e.g. Deutschland
      *
      * @return string
      */
@@ -1345,7 +1367,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function privacyLawRegion(): string
     {
-        $country = strtolower(trim($this->hostingCountry()));
+        $country = $this->normalizeCountryToken($this->hostingCountry());
 
         if ($country === '') {
             return self::PRIVACY_LAW_OTHER;
@@ -1362,7 +1384,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function isEuPrivacyCountry(string $country): bool
     {
-        $country = strtolower(trim($country));
+        $country = $this->normalizeCountryToken($country);
 
         return $this->isGermany($country) || in_array($country, self::EU_GDPR_COUNTRIES, true);
     }
@@ -1384,22 +1406,22 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function legalNoticeLawReference(): string
     {
-        $country = strtolower(trim($this->hostingCountry()));
+        $country = $this->normalizeCountryToken($this->hostingCountry());
 
         if ($country === '') {
             return '';
         }
 
         if ($this->isGermany($country)) {
-            return I18N::translate('Information according to Section 5 DDG');
+            return I18N::translate('Information according to German law Section 5 DDG');
         }
 
         if ($this->isAustria($country)) {
-            return I18N::translate('Information according to Section 5 (1) ECG');
+            return I18N::translate('Information according to Austrian law Section 5 (1) ECG');
         }
 
         if ($this->isSwitzerland($country)) {
-            return I18N::translate('Information according to Article 3 UWG');
+            return I18N::translate('Information according to Swiss law Article 3 paragraph 1 letter s UWG');
         }
 
         return '';

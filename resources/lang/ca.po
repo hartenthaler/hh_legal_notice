@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 02:50+0200\n"
+"POT-Creation-Date: 2026-06-12 13:28+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Hermann Hartenthaler <hermann@hartenthaler.de>\n"
 "Language-Team: \n"
@@ -18,81 +18,81 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: .git\n"
 
-#: LegalNoticeFooterModule.php:214
+#: LegalNoticeFooterModule.php:217
 msgid "Legal notice as a footer element for this site."
 msgstr "Avís legal com a element de peu de pàgina d'aquest lloc."
 
-#: LegalNoticeFooterModule.php:470
+#: LegalNoticeFooterModule.php:473
 #, php-format
 msgid ""
 "The preferences for the custom module \"%s\" were imported from the earlier "
 "custom module \"%s\"."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:578
+#: LegalNoticeFooterModule.php:603
 msgid "Invalid copyright start year. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:597
+#: LegalNoticeFooterModule.php:622
 #, php-format
 msgid ""
 "Invalid date in setting “%s”. Use the format YYYY-MM-DD. The value was "
 "ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:608
+#: LegalNoticeFooterModule.php:633
 msgid "Invalid e-mail address. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:619
+#: LegalNoticeFooterModule.php:644
 #, php-format
 msgid "Invalid URL in setting “%s”. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:659
+#: LegalNoticeFooterModule.php:684
 #, php-format
 msgid "One invalid third-party service entry was ignored."
 msgid_plural "%s invalid third-party service entries were ignored."
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:742 LegalNoticeFooterModule.php:811
+#: LegalNoticeFooterModule.php:767 LegalNoticeFooterModule.php:836
 msgid "Legal Notice"
 msgstr "Avís Legal"
 
-#: LegalNoticeFooterModule.php:744
+#: LegalNoticeFooterModule.php:769
 msgid "and Privacy Policy"
 msgstr "i Política de privacitat"
 
-#: LegalNoticeFooterModule.php:761
+#: LegalNoticeFooterModule.php:786
 msgid "This website uses cookies."
 msgstr "Aquest lloc web utilitza cookies."
 
-#: LegalNoticeFooterModule.php:812
+#: LegalNoticeFooterModule.php:837
 msgid "Responsible person"
 msgstr "Persona responsable"
 
-#: LegalNoticeFooterModule.php:813
+#: LegalNoticeFooterModule.php:838
 msgid "This website is operated by:"
 msgstr "Aquest lloc web està operat per:"
 
-#: LegalNoticeFooterModule.php:820
+#: LegalNoticeFooterModule.php:845
 msgid "Represented by:"
 msgstr "Representat per:"
 
-#: LegalNoticeFooterModule.php:833
+#: LegalNoticeFooterModule.php:858
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Contacte addicional"
 msgstr[1] "Contactes addicionals"
 
-#: LegalNoticeFooterModule.php:837
+#: LegalNoticeFooterModule.php:862
 msgid "Website administrator"
 msgid_plural "Website administrators"
 msgstr[0] "Administrador del lloc web"
 msgstr[1] "Administradors del lloc web"
 
-#: LegalNoticeFooterModule.php:838
+#: LegalNoticeFooterModule.php:863
 msgid ""
 "The webtrees administrator is responsible to manage users and to set the "
 "preferences for this website."
@@ -106,67 +106,81 @@ msgstr[1] ""
 "Els administradors de webtrees són els responsables de gestionar els usuaris "
 "i d'establir les preferències d'aquest lloc web."
 
-#: LegalNoticeFooterModule.php:997
+#: LegalNoticeFooterModule.php:1023
 #, php-format
 msgid "%1$s is %2$s for genealogy questions."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:998
+#: LegalNoticeFooterModule.php:1024
 #, php-format
 msgid "%1$s is %2$s for technical support."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:999
+#: LegalNoticeFooterModule.php:1025
 #, php-format
 msgid "%1$s is %2$s for technical support or genealogy questions."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1005
+#: LegalNoticeFooterModule.php:1031
 #, php-format
 msgid ""
 "%1$s is %2$s as website administrator and is responsible for managing users "
 "and setting the options for this website."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1011 LegalNoticeFooterModule.php:1014
+#: LegalNoticeFooterModule.php:1037 LegalNoticeFooterModule.php:1040
 msgid "available"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1020
+#: LegalNoticeFooterModule.php:1046
+msgctxt "legal notice pronoun subject"
 msgid "He"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1021
+#: LegalNoticeFooterModule.php:1047
+msgctxt "legal notice pronoun subject"
 msgid "She"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1022
+#: LegalNoticeFooterModule.php:1048
 msgid "This person"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1050
+#: LegalNoticeFooterModule.php:1076
 msgid "Legal Notice and Privacy Policy"
 msgstr "Avís Legal i Política de Privacitat"
 
-#: LegalNoticeFooterModule.php:1216
+#: LegalNoticeFooterModule.php:1242
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "missatge a través de l'avís legal del lloc %s"
 
-#: LegalNoticeFooterModule.php:1219
+#: LegalNoticeFooterModule.php:1245
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Benvolgut Sr. %s"
 
-#: LegalNoticeFooterModule.php:1222
+#: LegalNoticeFooterModule.php:1248
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Benvolguda senyora %s"
 
-#: LegalNoticeFooterModule.php:1225
+#: LegalNoticeFooterModule.php:1251
 #, php-format
 msgid "Dear %s"
 msgstr "Benvolguts %s"
+
+#: LegalNoticeFooterModule.php:1416
+msgid "Information according to German law Section 5 DDG"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:1420
+msgid "Information according to Austrian law Section 5 (1) ECG"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:1424
+msgid "Information according to Swiss law Article 3 paragraph 1 letter s UWG"
+msgstr ""
 
 #: src/LegalNoticeSupport.php:145
 msgctxt "heading"
@@ -658,10 +672,6 @@ msgstr ""
 #, php-format
 msgid "Privacy policy date: %s"
 msgstr "i Política de privacitat: %s"
-
-#: resources/views/page/header.phtml:3
-msgid "Information according to Section 5 DDG"
-msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:9
 msgid "Personal data about ancestors, family members, and other persons"
@@ -1785,9 +1795,11 @@ msgid "Hosting service"
 msgstr "Servei de hosting"
 
 #: resources/views/settings.phtml:366
-msgid ""
-"Country of the webtrees server location (in English language, e.g. "
-"\"Germany\")"
+#, fuzzy
+#| msgid ""
+#| "Country of the webtrees server location (in English language, e.g. "
+#| "\"Germany\")"
+msgid "Country of the webtrees server location"
 msgstr ""
 "País de la ubicació del servidor webtrees (en anglès, p. ex. \"Germany\")"
 

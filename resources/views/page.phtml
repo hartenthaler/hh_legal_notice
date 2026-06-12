@@ -139,28 +139,34 @@ use Illuminate\Support\Collection;
 
         .hh-legal-notice-page .hh-legal-notice-chapter {
             counter-increment: hh-main-chapter;
+        }
+
+        .hh-legal-notice-page .hh-legal-notice-chapter-body {
             counter-reset: hh-section;
         }
 
         .hh-legal-notice-page .hh-legal-notice-chapter::before {
             content: counter(hh-main-chapter) ". ";
+            display: inline;
         }
 
-        .hh-legal-notice-page .hh-legal-notice-chapter ~ h3 {
+        .hh-legal-notice-page .hh-legal-notice-chapter-body h3 {
             counter-increment: hh-section;
             counter-reset: hh-subsection;
         }
 
-        .hh-legal-notice-page .hh-legal-notice-chapter ~ h3::before {
+        .hh-legal-notice-page .hh-legal-notice-chapter-body h3::before {
             content: counter(hh-main-chapter) "." counter(hh-section) " ";
+            display: inline;
         }
 
-        .hh-legal-notice-page .hh-legal-notice-chapter ~ h3 ~ h4 {
+        .hh-legal-notice-page .hh-legal-notice-chapter-body h4 {
             counter-increment: hh-subsection;
         }
 
-        .hh-legal-notice-page .hh-legal-notice-chapter ~ h3 ~ h4::before {
+        .hh-legal-notice-page .hh-legal-notice-chapter-body h4::before {
             content: counter(hh-main-chapter) "." counter(hh-section) "." counter(hh-subsection) " ";
+            display: inline;
         }
 
         .hh-legal-notice-page h5 {

@@ -19,22 +19,24 @@ use Fisharebest\Webtrees\I18N;
         </p>
     <?php endif ?>
 
-    <?php foreach ($chapters as $section) : ?>
-        <?php if ($section->getLink() !== $mainChapter->getId() || !$section->getEnabled()) : ?>
-            <?php continue; ?>
-        <?php endif ?>
+    <div class="hh-legal-notice-chapter-body">
+        <?php foreach ($chapters as $section) : ?>
+            <?php if ($section->getLink() !== $mainChapter->getId() || !$section->getEnabled()) : ?>
+                <?php continue; ?>
+            <?php endif ?>
 
-        <?php if (array_key_exists($section->getKey(), $sectionViewByChapterKey)) : ?>
-            <?php $chapter = $section ?>
-            <?= view($moduleName . '::page/sections/' . $sectionViewByChapterKey[$section->getKey()], get_defined_vars()) ?>
-            <?php continue; ?>
-        <?php endif ?>
+            <?php if (array_key_exists($section->getKey(), $sectionViewByChapterKey)) : ?>
+                <?php $chapter = $section ?>
+                <?= view($moduleName . '::page/sections/' . $sectionViewByChapterKey[$section->getKey()], get_defined_vars()) ?>
+                <?php continue; ?>
+            <?php endif ?>
 
-        <?php $paragraphs = $section->getContent() ?>
-        <?php if ($paragraphs !== []) : ?>
-            <h3><?= e($section->getHeading()) ?></h3>
-            <?php foreach ($paragraphs as $paragraph): ?>
-                <p><?= e($paragraph) ?></p>
-            <?php endforeach ?>
-        <?php endif ?>
-    <?php endforeach ?>
+            <?php $paragraphs = $section->getContent() ?>
+            <?php if ($paragraphs !== []) : ?>
+                <h3><?= e($section->getHeading()) ?></h3>
+                <?php foreach ($paragraphs as $paragraph): ?>
+                    <p><?= e($paragraph) ?></p>
+                <?php endforeach ?>
+            <?php endif ?>
+        <?php endforeach ?>
+    </div>
