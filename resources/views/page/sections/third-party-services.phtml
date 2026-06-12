@@ -4,13 +4,34 @@ use Fisharebest\Webtrees\I18N;
 use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 ?>
 
-    <?php if (count($thirdPartyServices) > 0 || count($externalTranscriptionProviders) > 0) : ?>
+    <?php $nonLocalTrackingServices = array_filter($trackingServices, static fn (array $service): bool => ($service['country'] ?? '') !== 'local') ?>
+    <?php $trackingAnalyticsEnabled = false ?>
+    <?php $trackingAnalyticsParentEnabled = false ?>
+    <?php foreach ($chapters as $section) : ?>
+        <?php if ($section->getKey() === 'GDPR') : ?>
+            <?php $trackingAnalyticsParentEnabled = $section->getEnabled() ?>
+        <?php elseif ($section->getKey() === 'TrackingAnalytics') : ?>
+            <?php $trackingAnalyticsEnabled = $section->getEnabled() ?>
+        <?php endif ?>
+    <?php endforeach ?>
+
+    <?php if (count($thirdPartyServices) > 0 || count($externalTranscriptionProviders) > 0 || count($nonLocalTrackingServices) > 0) : ?>
         <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
 
         <p>
             <?= I18N::translate('When external services are used, personal data may be transferred to these providers, companies, or persons or disclosed to them where this is necessary for the respective service.') ?>
             <?= I18N::translate('Only those services that are configured and actually used by this website are listed here.') ?>
         </p>
+
+        <?php if (count($nonLocalTrackingServices) > 0) : ?>
+            <p>
+                <?php if ($trackingAnalyticsParentEnabled && $trackingAnalyticsEnabled) : ?>
+                    <?= I18N::translate('External tracking or analytics services are used; see the section %s.', '<a href="#hh-legal-notice-tracking-analytics">' . I18N::translate('Tracking and analytics') . '</a>') ?>
+                <?php else : ?>
+                    <?= I18N::translate('External tracking or analytics services are used.') ?>
+                <?php endif ?>
+            </p>
+        <?php endif ?>
 
         <?php if (count($thirdPartyServices) > 0) : ?>
             <p><?= I18N::translate('This website uses additional third-party services.') ?></p>
@@ -19,7 +40,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <thead>
                     <tr>
                         <th><?= I18N::translate('Service') ?></th>
-                        <th><?= I18N::translate('URL') ?></th>
+                        <th><?= MoreI18N::xlate('URL') ?></th>
                         <th><?= I18N::translate('Country of service provision') ?></th>
                     </tr>
                 </thead>
@@ -138,7 +159,10 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </ul>
         <?php endif ?>
 
-        <?php $thirdCountryTransferServices = array_filter($thirdPartyServices, static fn (array $service): bool => (bool) ($service['thirdCountryTransfer'] ?? false)) ?>
+        <?php $thirdCountryTransferServices = array_filter(
+            [...$thirdPartyServices, ...$trackingServices],
+            static fn (array $service): bool => (bool) ($service['thirdCountryTransfer'] ?? false)
+        ) ?>
         <?php if ($useEuPrivacyLaw && count($thirdCountryTransferServices) > 0) : ?>
             <h5><?= I18N::translate('Data transfer to third countries') ?></h5>
 

@@ -769,16 +769,21 @@ msgstr ""
 msgid "Only those services that are configured and actually used by this website are listed here."
 msgstr ""
 
+#: resources/views/page/sections/third-party-services.phtml
+#, php-format
+msgid "External tracking or analytics services are used; see the section %s."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml
+msgid "External tracking or analytics services are used."
+msgstr ""
+
 #: resources/views/page/sections/data-categories.phtml:181
 msgid "This website uses additional third-party services."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:186
 msgid "Service"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:187
-msgid "URL"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:188

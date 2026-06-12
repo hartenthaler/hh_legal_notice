@@ -1137,7 +1137,7 @@ msgid ""
 "You can opt out of tracking by setting the \"Do Not Track\" header in your "
 "browser preferences."
 msgstr ""
-"Sie können sich vom Tracking abmelden, indem Sie in ihren "
+"Sie können sich vom Tracking abmelden, indem Sie in Ihren "
 "Browsereinstellungen \"Nicht nachverfolgen\" auswählen."
 
 #: resources/views/page/sections/data-categories.phtml:173
@@ -1162,6 +1162,15 @@ msgstr ""
 "Hier werden nur die Dienste aufgeführt, die für diese Website konfiguriert "
 "sind und tatsächlich verwendet werden."
 
+#: resources/views/page/sections/third-party-services.phtml
+#, php-format
+msgid "External tracking or analytics services are used; see the section %s."
+msgstr "Es werden Tracking- bzw. Analyse-Dienste über Drittanbieter genutzt; siehe Abschnitt %s."
+
+#: resources/views/page/sections/third-party-services.phtml
+msgid "External tracking or analytics services are used."
+msgstr "Es werden Tracking- bzw. Analyse-Dienste über Drittanbieter genutzt."
+
 #: resources/views/page/sections/data-categories.phtml:181
 msgid "This website uses additional third-party services."
 msgstr "Diese Website verwendet zusätzliche Dienste von Drittanbietern."
@@ -1169,10 +1178,6 @@ msgstr "Diese Website verwendet zusätzliche Dienste von Drittanbietern."
 #: resources/views/page/sections/data-categories.phtml:186
 msgid "Service"
 msgstr "Dienst"
-
-#: resources/views/page/sections/data-categories.phtml:187
-msgid "URL"
-msgstr "URL"
 
 #: resources/views/page/sections/data-categories.phtml:188
 msgid "Country of service provision"

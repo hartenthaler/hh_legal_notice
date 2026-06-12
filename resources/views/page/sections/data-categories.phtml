@@ -1,6 +1,7 @@
 <?php
 
 use Fisharebest\Webtrees\I18N;
+use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 ?>
 
     <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
@@ -110,38 +111,37 @@ use Fisharebest\Webtrees\I18N;
                 <?php continue ?>
             <?php endif ?>
 
-            <h4><?= e($subsection->getHeading()) ?></h4>
+            <h4 id="hh-legal-notice-tracking-analytics"><?= e($subsection->getHeading()) ?></h4>
             <p>
-                <ul>
-                    <li>
-                        <?= I18N::translate('This website uses third-party services to learn about visitor behavior.') ?>
-                        <ul>
-                            <?php if ($analytics->isNotEmpty()) : ?>
-                                <?php foreach ($analytics as $module) : ?>
-                                    <li>
-                                        <?= $module->title() ?> -
-                                        <a href="<?= e($module->externalUrl()) ?>"><?= e($module->externalUrl()) ?></a>
-                                    </li>
-                                <?php endforeach ?>
-                            <?php endif ?>
-                            <?php if (count($trackingServices) > 0) : ?>
-                                <?php foreach ($trackingServices as $service => $url) : ?>
-                                    <li>
-                                        <?= $service ?> - <a href="<?= e($url) ?>"><?= e($url) ?></a>
-                                    </li>
-                                <?php endforeach ?>
-                            <?php endif ?>
-                        </ul>
-                    </li>
+                <?= I18N::translate('This website uses third-party services to learn about visitor behavior.') ?>
+            </p>
 
-                    <li>
-                        <?= I18N::translate('These services may use cookies or other tracking technology.') ?>
-                    </li>
+            <?php if (count($trackingServices) > 0) : ?>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th><?= I18N::translate('Service') ?></th>
+                            <th><?= MoreI18N::xlate('Tracker') ?></th>
+                            <th><?= MoreI18N::xlate('URL') ?></th>
+                            <th><?= I18N::translate('Country of service provision') ?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($trackingServices as $service) : ?>
+                        <tr>
+                            <td><strong><?= e($service['name']) ?></strong></td>
+                            <td><?= $service['tracker'] ? MoreI18N::xlate('yes') : MoreI18N::xlate('no') ?></td>
+                            <td><a href="<?= e($service['url']) ?>"><?= e($service['url']) ?></a></td>
+                            <td><?= $service['country'] === 'local' ? 'local' : e(MoreI18N::xlate($service['country'])) ?></td>
+                        </tr>
+                    <?php endforeach ?>
+                    </tbody>
+                </table>
+            <?php endif ?>
 
-                    <li>
-                        <?= I18N::translate('You can opt out of tracking by setting the "Do Not Track" header in your browser preferences.') ?>
-                    </li>
-                </ul>
+            <p>
+                <?= I18N::translate('These services may use cookies or other tracking technology.') ?>
+                <?= I18N::translate('You can opt out of tracking by setting the "Do Not Track" header in your browser preferences.') ?>
             </p>
         <?php elseif ($subsection->getKey() === 'ApplicationLog') : ?>
             <h4><?= e($subsection->getHeading()) ?></h4>
