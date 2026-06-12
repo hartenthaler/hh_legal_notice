@@ -74,6 +74,12 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?= I18N::plural('I occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made.', 'We occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made.', $singular ? 1 : 2) ?>
             </p>
 
+            <?php if ($inactiveUserYears > 0) : ?>
+                <p>
+                    <?= I18N::plural('Inactive user accounts are deleted after %s year.', 'Inactive user accounts are deleted after %s years.', $inactiveUserYears, I18N::number($inactiveUserYears)) ?>
+                </p>
+            <?php endif ?>
+
             <p>
                 <?= I18N::translate('If you have your user account disabled here, the genealogical data you entered will remain available for the benefit of our genealogical research.') ?>
                 <?= I18N::translate('The data about your person will also be retained; only your access to the specially protected areas here will be blocked.') ?>
