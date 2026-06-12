@@ -44,6 +44,24 @@ msgstr ""
 "Ungültiges Datum in der Einstellung „%s“. Verwenden Sie das Format JJJJ-MM-"
 "TT. Der Wert wurde ignoriert."
 
+#: LegalNoticeFooterModule.php:676
+#, php-format
+msgid ""
+"Invalid date in setting “%s”. Use a date between 2000-01-01 and today. The "
+"value was ignored."
+msgstr ""
+"Ungültiges Datum in der Einstellung „%s“. Verwenden Sie ein Datum zwischen "
+"dem 01.01.2000 und dem heutigen Datum. Der Wert wurde ignoriert."
+
+#: LegalNoticeFooterModule.php:570
+#, php-format
+msgid ""
+"Invalid date in setting “%s”. The first date must be before the last date. "
+"The last date was ignored."
+msgstr ""
+"Ungültiges Datum in der Einstellung „%s“. Das erste Datum muss vor dem "
+"letzten Datum liegen. Das letzte Datum wurde ignoriert."
+
 #: LegalNoticeFooterModule.php:633
 msgid "Invalid e-mail address. The value was ignored."
 msgstr "Ungültige E-Mail-Adresse. Der Wert wurde ignoriert."

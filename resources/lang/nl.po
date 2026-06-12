@@ -45,6 +45,20 @@ msgid ""
 "ignored."
 msgstr "Ongeldige URL in instelling “%s”. De waarde is genegeerd."
 
+#: LegalNoticeFooterModule.php:676
+#, php-format
+msgid ""
+"Invalid date in setting “%s”. Use a date between 2000-01-01 and today. The "
+"value was ignored."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:570
+#, php-format
+msgid ""
+"Invalid date in setting “%s”. The first date must be before the last date. "
+"The last date was ignored."
+msgstr ""
+
 #: LegalNoticeFooterModule.php:633
 msgid "Invalid e-mail address. The value was ignored."
 msgstr "Ongeldig e-mailadres. De waarde is genegeerd."
