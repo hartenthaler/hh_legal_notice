@@ -1587,7 +1587,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     {
         $country = $this->normalizeCountryToken($country);
 
-        return $this->isGermany($country) || in_array($country, self::EU_GDPR_COUNTRIES, true);
+        return $this->isGermany($country) || $this->isAustria($country) || in_array($country, self::EU_GDPR_COUNTRIES, true);
     }
 
     private function isGermany(string $country): bool
