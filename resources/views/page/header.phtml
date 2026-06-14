@@ -79,9 +79,11 @@ use Fisharebest\Webtrees\I18N;
 
     <?php if ($responsibleContactNotices !== []): ?>
         <div class="hh-legal-notice-responsible-contact-notices">
-            <?php foreach ($responsibleContactNotices as $notice): ?>
-                <p><?= $notice ?></p>
-            <?php endforeach ?>
+            <ul>
+                <?php foreach ($responsibleContactNotices as $notice): ?>
+                    <li><?= $notice ?></li>
+                <?php endforeach ?>
+            </ul>
         </div>
     <?php endif ?>
 

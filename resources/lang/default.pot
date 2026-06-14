@@ -111,22 +111,22 @@ msgstr[1] ""
 
 #: LegalNoticeFooterModule.php:1219
 #, php-format
-msgid "%1$s is %2$s for genealogy questions."
+msgid "%1$s is also %2$s for genealogy questions."
 msgstr ""
 
 #: LegalNoticeFooterModule.php:1220
 #, php-format
-msgid "%1$s is %2$s for technical support."
+msgid "%1$s is also %2$s for technical support."
 msgstr ""
 
 #: LegalNoticeFooterModule.php:1221
 #, php-format
-msgid "%1$s is %2$s for technical support or genealogy questions."
+msgid "%1$s is also %2$s for technical support or genealogy questions."
 msgstr ""
 
 #: LegalNoticeFooterModule.php:1227
 #, php-format
-msgid "%1$s is %2$s as website administrator and is responsible for managing users and setting the options for this website."
+msgid "%1$s is also %2$s as website administrator and is responsible for managing users and setting the options for this website."
 msgstr ""
 
 #: LegalNoticeFooterModule.php:1233 LegalNoticeFooterModule.php:1236
