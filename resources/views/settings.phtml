@@ -542,8 +542,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                     <?= I18N::translate('Protection period after death') ?>
                 </label>
                 <div class="col-sm-9 wt-page-options-value">
-                    <input class="form-control" id="sensitiveDataYears" name="sensitiveDataYears" type="number" min="0" max="150" step="1"
-                           value="<?= e((string) ($sensitiveDataYears ?? 30)) ?>">
+                    <input class="form-control" id="sensitiveDataYears" name="sensitiveDataYears" type="number" min="0" max="100" step="1"
+                           value="<?= e((string) ($sensitiveDataYears ?? 10)) ?>">
                     <p class="small text-muted">
                         <?= I18N::translate('For how many years after death should particularly sensitive genealogical data remain protected?') ?>
                         <?= I18N::translate('Use 0 if no specific release period should be stated in the privacy policy.') ?>

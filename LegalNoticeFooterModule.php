@@ -459,7 +459,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         if ($response['sensitiveDataYears'] === '') {
-            $response['sensitiveDataYears'] = '30';
+            $response['sensitiveDataYears'] = '10';
         }
     }
 
@@ -679,14 +679,14 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         if (preg_match('/^\d{1,3}$/', $value) === 1) {
             $years = (int) $value;
 
-            if ($years >= 0 && $years <= 150) {
+            if ($years >= 0 && $years <= 100) {
                 return (string) $years;
             }
         }
 
         FlashMessages::addMessage(I18N::translate('Invalid protection period for sensitive data. The default value was used.'), 'warning');
 
-        return '30';
+        return '10';
     }
 
     private function validatedIsoDate(string $value, string $preference): string
@@ -1162,9 +1162,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function sensitiveDataYears(): int
     {
-        $years = (int) $this->getPreference('sensitiveDataYears', '30');
+        $years = (int) $this->getPreference('sensitiveDataYears', '10');
 
-        return $years >= 0 && $years <= 150 ? $years : 30;
+        return $years >= 0 && $years <= 100 ? $years : 10;
     }
 
     private function registeredUserNames(): string
