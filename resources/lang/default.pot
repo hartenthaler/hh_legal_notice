@@ -652,35 +652,39 @@ msgid "Password"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:95
+msgid "As a registered user, you can view, correct, or delete your account data yourself in your profile settings."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:99
 msgid "Other personal data that you actively provide is also stored and used."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:96
+#: resources/views/page/sections/data-categories.phtml:100
 msgid "This includes, for example, data created by completing your personal details on your personal page or by creating family relationships."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:100
+#: resources/views/page/sections/data-categories.phtml:104
 msgid "Furthermore, data relating to your user account is recorded as a result of your activities on our website, for example when editing records."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:104
+#: resources/views/page/sections/data-categories.phtml:108
 msgid "I occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made."
 msgid_plural "We occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-categories.phtml:109
+#: resources/views/page/sections/data-categories.phtml:113
 #, php-format
 msgid "Inactive user accounts are deleted after %s year."
 msgid_plural "Inactive user accounts are deleted after %s years."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-categories.phtml:114
+#: resources/views/page/sections/data-categories.phtml:118
 msgid "If you have your user account disabled here, the genealogical data you entered will remain available for the benefit of our genealogical research."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:115
+#: resources/views/page/sections/data-categories.phtml:119
 msgid "The data about your person will also be retained; only your access to the specially protected areas here will be blocked."
 msgstr ""
 
