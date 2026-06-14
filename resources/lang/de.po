@@ -2409,8 +2409,8 @@ msgid "Where German law applies, Section 27 BDSG may also apply."
 msgstr "Soweit deutsches Recht gilt, kann ergänzend § 27 BDSG Anwendung finden."
 
 #: resources/views/page/sections/data-categories.phtml
-msgid "These facts are protected by graduated access rights and, where supported by webtrees, by GEDCOM restrictions such as RESN CONFIDENTIAL."
-msgstr "Diese Angaben werden durch abgestufte Zugriffsrechte und, soweit von webtrees unterstützt, durch GEDCOM-Sperrvermerke wie RESN CONFIDENTIAL geschützt."
+msgid "These facts are protected by graduated access rights and, where supported by webtrees, by GEDCOM restrictions."
+msgstr "Diese Angaben werden durch abgestufte Zugriffsrechte und, soweit von webtrees unterstützt, durch GEDCOM-Sperrvermerke geschützt."
 
 #: resources/views/page/sections/data-categories.phtml
 #, php-format

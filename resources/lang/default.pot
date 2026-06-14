@@ -1712,7 +1712,7 @@ msgid "Where German law applies, Section 27 BDSG may also apply."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml
-msgid "These facts are protected by graduated access rights and, where supported by webtrees, by GEDCOM restrictions such as RESN CONFIDENTIAL."
+msgid "These facts are protected by graduated access rights and, where supported by webtrees, by GEDCOM restrictions."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml

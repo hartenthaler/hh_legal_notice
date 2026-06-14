@@ -54,7 +54,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <?php endif ?>
 
             <p>
-                <?= I18N::translate('These facts are protected by graduated access rights and, where supported by webtrees, by GEDCOM restrictions such as RESN CONFIDENTIAL.') ?>
+                <?= I18N::translate('These facts are protected by graduated access rights and, where supported by webtrees, by GEDCOM restrictions.') ?>
                 <?php if ($sensitiveDataYears > 0) : ?>
                     <?= I18N::plural(
                         'They are released for wider access no earlier than %s year after the death of the person concerned.',

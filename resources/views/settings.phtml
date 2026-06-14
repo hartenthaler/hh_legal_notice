@@ -534,25 +534,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
             </div>
         </div>
 
-        <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="SensitiveData">
-            <h4><?= I18N::translate('Special categories of personal data') ?></h4>
-
-            <div class="row">
-                <label class="col-sm-3 col-form-label wt-page-options-label" for="sensitiveDataYears">
-                    <?= I18N::translate('Protection period after death') ?>
-                </label>
-                <div class="col-sm-9 wt-page-options-value">
-                    <input class="form-control" id="sensitiveDataYears" name="sensitiveDataYears" type="number" min="0" max="100" step="1"
-                           value="<?= e((string) ($sensitiveDataYears ?? 10)) ?>">
-                    <p class="small text-muted">
-                        <?= I18N::translate('For how many years after death should particularly sensitive genealogical data remain protected?') ?>
-                        <?= I18N::translate('Use 0 if no specific release period should be stated in the privacy policy.') ?>
-                        <?= I18N::translate('The same period should be used by the privacy assistant when applying RESN CONFIDENTIAL automatically.') ?>
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="DataProtection">
             <h4><?= I18N::translate('Privacy policy reference date') ?></h4>
 
@@ -657,6 +638,25 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
             <div class="col-sm-9 wt-page-options-value">
                 <input class="form-control" id="hostingEndDate" name="hostingEndDate" type="date" min="2000-01-01" max="<?= date('Y-m-d') ?>" value="<?= e($hostingEndDate) ?>">
             </div>
+            </div>
+        </div>
+
+        <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="SensitiveData">
+            <h4><?= I18N::translate('Special categories of personal data') ?></h4>
+
+            <div class="row">
+                <label class="col-sm-3 col-form-label wt-page-options-label" for="sensitiveDataYears">
+                    <?= I18N::translate('Protection period after death') ?>
+                </label>
+                <div class="col-sm-9 wt-page-options-value">
+                    <input class="form-control" id="sensitiveDataYears" name="sensitiveDataYears" type="number" min="0" max="100" step="1"
+                           value="<?= e((string) ($sensitiveDataYears ?? 10)) ?>">
+                    <p class="small text-muted">
+                        <?= I18N::translate('For how many years after death should particularly sensitive genealogical data remain protected?') ?>
+                        <?= I18N::translate('Use 0 if no specific release period should be stated in the privacy policy.') ?>
+                        <?= I18N::translate('The same period should be used by the privacy assistant when applying RESN CONFIDENTIAL automatically.') ?>
+                    </p>
+                </div>
             </div>
         </div>
 
