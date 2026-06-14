@@ -1229,15 +1229,15 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function treeContactNotice(string $role, string $contactLink): string
     {
         return match ($role) {
-            'genealogy' => I18N::translate('%1$s is %2$s for genealogy questions.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
-            'technical' => I18N::translate('%1$s is %2$s for technical support.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
-            default => I18N::translate('%1$s is %2$s for technical support or genealogy questions.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
+            'genealogy' => I18N::translate('%1$s is also %2$s for genealogy questions.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
+            'technical' => I18N::translate('%1$s is also %2$s for technical support.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
+            default => I18N::translate('%1$s is also %2$s for technical support or genealogy questions.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
         };
     }
 
     private function administratorContactNotice(string $contactLink): string
     {
-        return I18N::translate('%1$s is %2$s as website administrator and is responsible for managing users and setting the options for this website.', $this->responsiblePronoun(), $this->contactActionLink($contactLink));
+        return I18N::translate('%1$s is also %2$s as website administrator and is responsible for managing users and setting the options for this website.', $this->responsiblePronoun(), $this->contactActionLink($contactLink));
     }
 
     private function contactActionLink(string $contactLink): string

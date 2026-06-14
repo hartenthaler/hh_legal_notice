@@ -137,29 +137,30 @@ msgstr[1] ""
 
 #: LegalNoticeFooterModule.php:1219
 #, php-format
-msgid "%1$s is %2$s for genealogy questions."
-msgstr "%1$s ist bei genealogischen Fragen %2$s."
+msgid "%1$s is also %2$s for genealogy questions."
+msgstr "%1$s ist zusätzlich bei genealogischen Fragen %2$s."
 
 #: LegalNoticeFooterModule.php:1220
 #, php-format
-msgid "%1$s is %2$s for technical support."
-msgstr "%1$s ist bei Fragen zur technischen Unterstützung %2$s."
+msgid "%1$s is also %2$s for technical support."
+msgstr "%1$s ist zusätzlich bei Fragen zur technischen Unterstützung %2$s."
 
 #: LegalNoticeFooterModule.php:1221
 #, php-format
-msgid "%1$s is %2$s for technical support or genealogy questions."
+msgid "%1$s is also %2$s for technical support or genealogy questions."
 msgstr ""
-"%1$s ist bei Fragen zur technischen Unterstützung oder bei genealogischen "
-"Fragen %2$s."
+"%1$s ist zusätzlich bei Fragen zur technischen Unterstützung oder bei "
+"genealogischen Fragen %2$s."
 
 #: LegalNoticeFooterModule.php:1227
 #, php-format
 msgid ""
-"%1$s is %2$s as website administrator and is responsible for managing users "
-"and setting the options for this website."
+"%1$s is also %2$s as website administrator and is responsible for managing "
+"users and setting the options for this website."
 msgstr ""
-"%1$s ist als Website-Verwalter für die Verwaltung der Benutzer und die "
-"Einstellung der Optionen für diese Website zuständig und für Sie %2$s."
+"%1$s ist zusätzlich als Website-Verwalter für die Verwaltung der Benutzer "
+"und die Einstellung der Optionen für diese Website zuständig und für Sie "
+"%2$s."
 
 #: LegalNoticeFooterModule.php:1233 LegalNoticeFooterModule.php:1236
 msgid "available"
