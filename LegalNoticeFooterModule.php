@@ -374,6 +374,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showAdministrators',
             'registeredUsersAreRelatives',
             'inactiveUserYears',
+            'sensitiveDataYears',
             'supervisoryAuthorityName',
             'supervisoryAuthorityUrl',
             'hostingCountry',
@@ -455,6 +456,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         if ($response['inactiveUserYears'] === '') {
             $response['inactiveUserYears'] = '0';
+        }
+
+        if ($response['sensitiveDataYears'] === '') {
+            $response['sensitiveDataYears'] = '30';
         }
     }
 
@@ -602,6 +607,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'responsibleSex' => in_array($value, ['M', 'F', 'X', 'U'], true) ? $value : 'U',
 
             'inactiveUserYears' => in_array($value, ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], true) ? $value : '0',
+            'sensitiveDataYears' => $this->validatedSensitiveDataYears($value),
 
             'copyRightStartYear' => $this->validatedYear($value),
 
@@ -666,6 +672,21 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         FlashMessages::addMessage(I18N::translate('Invalid copyright start year. The value was ignored.'), 'warning');
 
         return '';
+    }
+
+    private function validatedSensitiveDataYears(string $value): string
+    {
+        if (preg_match('/^\d{1,3}$/', $value) === 1) {
+            $years = (int) $value;
+
+            if ($years >= 0 && $years <= 150) {
+                return (string) $years;
+            }
+        }
+
+        FlashMessages::addMessage(I18N::translate('Invalid protection period for sensitive data. The default value was used.'), 'warning');
+
+        return '30';
     }
 
     private function validatedIsoDate(string $value, string $preference): string
@@ -976,6 +997,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'contactsAdministrators'    => $contactsAdministrators,
             'registeredUsersAreRelatives' => $this->registeredUsersAreRelatives(),
             'inactiveUserYears' => $this->inactiveUserYears(),
+            'sensitiveDataYears' => $this->sensitiveDataYears(),
             'supervisoryAuthorityName' => $this->supervisoryAuthorityName(),
             'supervisoryAuthorityUrl' => $this->supervisoryAuthorityUrl(),
             'chapters'                  => $this->getChapters($request),
@@ -1136,6 +1158,13 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $years = (int) $this->getPreference('inactiveUserYears', '0');
 
         return $years >= 1 && $years <= 10 ? $years : 0;
+    }
+
+    private function sensitiveDataYears(): int
+    {
+        $years = (int) $this->getPreference('sensitiveDataYears', '30');
+
+        return $years >= 0 && $years <= 150 ? $years : 30;
     }
 
     private function registeredUserNames(): string

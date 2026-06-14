@@ -1678,3 +1678,62 @@ msgstr ""
 #: resources/views/settings.phtml:319
 msgid "If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above."
 msgstr ""
+
+#: LegalNoticeFooterModule.php
+msgid "Invalid protection period for sensitive data. The default value was used."
+msgstr ""
+
+#: src/LegalNoticeSupport.php resources/views/settings.phtml
+msgid "Special categories of personal data"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "Genealogical records may contain particularly sensitive personal data where such information is relevant to family history or historical research."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "This can include ethnic origin, physical characteristics, political opinions or affiliations, religious or philosophical beliefs, trade union or party membership, genetic data, and health data including causes of death."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "Information about criminal convictions or offences may also occur in historical sources."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "The legal basis for processing special categories of personal data is Article 9(2)(j) GDPR for historical research purposes."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "Information about criminal convictions and offences is processed in accordance with Article 10 GDPR."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "Where German law applies, Section 27 BDSG may also apply."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "These facts are protected by graduated access rights and, where supported by webtrees, by GEDCOM restrictions such as RESN CONFIDENTIAL."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml
+#, php-format
+msgid "They are released for wider access no earlier than %s year after the death of the person concerned."
+msgid_plural "They are released for wider access no earlier than %s years after the death of the person concerned."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/settings.phtml
+msgid "Protection period after death"
+msgstr ""
+
+#: resources/views/settings.phtml
+msgid "For how many years after death should particularly sensitive genealogical data remain protected?"
+msgstr ""
+
+#: resources/views/settings.phtml
+msgid "Use 0 if no specific release period should be stated in the privacy policy."
+msgstr ""
+
+#: resources/views/settings.phtml
+msgid "The same period should be used by the privacy assistant when applying RESN CONFIDENTIAL automatically."
+msgstr ""
