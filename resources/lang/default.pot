@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 13:26+0200\n"
+"POT-Creation-Date: 2026-06-14 23:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,166 +19,167 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: .git\n"
 
-#: LegalNoticeFooterModule.php:217
+#: LegalNoticeFooterModule.php:250
 msgid "Legal notice as a footer element for this site."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:473
+#: LegalNoticeFooterModule.php:521
 #, php-format
 msgid "The preferences for the custom module \"%s\" were imported from the earlier custom module \"%s\"."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:603
-msgid "Invalid copyright start year. The value was ignored."
-msgstr ""
-
-#: LegalNoticeFooterModule.php:622
-#, php-format
-msgid "Invalid date in setting “%s”. Use the format YYYY-MM-DD. The value was ignored."
-msgstr ""
-
-#: LegalNoticeFooterModule.php:676
-#, php-format
-msgid "Invalid date in setting “%s”. Use a date between 2000-01-01 and today. The value was ignored."
-msgstr ""
-
-#: LegalNoticeFooterModule.php:570
+#: LegalNoticeFooterModule.php:582
 #, php-format
 msgid "Invalid date in setting “%s”. The first date must be before the last date. The last date was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:633
+#: LegalNoticeFooterModule.php:674
+msgid "Invalid copyright start year. The value was ignored."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:689
+msgid "Invalid protection period for sensitive data. The default value was used."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:708
+#, php-format
+msgid "Invalid date in setting “%s”. Use the format YYYY-MM-DD. The value was ignored."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:726
+#, php-format
+msgid "Invalid date in setting “%s”. Use a date between 2000-01-01 and today. The value was ignored."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:764
 msgid "Invalid e-mail address. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:644
+#: LegalNoticeFooterModule.php:775
 #, php-format
 msgid "Invalid URL in setting “%s”. The value was ignored."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:684
+#: LegalNoticeFooterModule.php:815
 #, php-format
 msgid "One invalid third-party service entry was ignored."
 msgid_plural "%s invalid third-party service entries were ignored."
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:767 LegalNoticeFooterModule.php:836
+#: LegalNoticeFooterModule.php:898 LegalNoticeFooterModule.php:968
 msgid "Legal Notice"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:769
+#: LegalNoticeFooterModule.php:900
 msgid "and Privacy Policy"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:786
+#: LegalNoticeFooterModule.php:917
 msgid "This website uses cookies."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:837
+#: LegalNoticeFooterModule.php:969
 msgid "Responsible person"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:838
+#: LegalNoticeFooterModule.php:970
 msgid "This website is operated by:"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:845
+#: LegalNoticeFooterModule.php:978
 msgid "Represented by:"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:858
+#: LegalNoticeFooterModule.php:991
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:862
+#: LegalNoticeFooterModule.php:995
 msgid "Website administrator"
 msgid_plural "Website administrators"
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:863
+#: LegalNoticeFooterModule.php:996
 msgid "The webtrees administrator is responsible to manage users and to set the preferences for this website."
-msgid_plural ""
-"The webtrees administrators are responsible to manage users and to set the preferences for this website."
+msgid_plural "The webtrees administrators are responsible to manage users and to set the preferences for this website."
 msgstr[0] ""
 msgstr[1] ""
 
-#: LegalNoticeFooterModule.php:1023
+#: LegalNoticeFooterModule.php:1219
 #, php-format
 msgid "%1$s is %2$s for genealogy questions."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1024
+#: LegalNoticeFooterModule.php:1220
 #, php-format
 msgid "%1$s is %2$s for technical support."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1025
+#: LegalNoticeFooterModule.php:1221
 #, php-format
 msgid "%1$s is %2$s for technical support or genealogy questions."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1031
+#: LegalNoticeFooterModule.php:1227
 #, php-format
-msgid ""
-"%1$s is %2$s as website administrator and is responsible for managing users and setting the options for this "
-"website."
+msgid "%1$s is %2$s as website administrator and is responsible for managing users and setting the options for this website."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1037 LegalNoticeFooterModule.php:1040
+#: LegalNoticeFooterModule.php:1233 LegalNoticeFooterModule.php:1236
 msgid "available"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1046
+#: LegalNoticeFooterModule.php:1242
 msgctxt "legal notice pronoun subject"
 msgid "He"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1047
+#: LegalNoticeFooterModule.php:1243
 msgctxt "legal notice pronoun subject"
 msgid "She"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1048
+#: LegalNoticeFooterModule.php:1244
 msgid "This person"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1076
+#: LegalNoticeFooterModule.php:1272
 msgid "Legal Notice and Privacy Policy"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1242
+#: LegalNoticeFooterModule.php:1443
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1245
+#: LegalNoticeFooterModule.php:1446
 #, php-format
 msgid "Dear Mr. %s"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1248
+#: LegalNoticeFooterModule.php:1449
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1251
+#: LegalNoticeFooterModule.php:1452
 #, php-format
 msgid "Dear %s"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1416
+#: LegalNoticeFooterModule.php:1617
 msgid "Information according to German law Section 5 DDG"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1420
+#: LegalNoticeFooterModule.php:1621
 msgid "Information according to Austrian law Section 5 (1) ECG"
 msgstr ""
 
-#: LegalNoticeFooterModule.php:1424
+#: LegalNoticeFooterModule.php:1625
 msgid "Information according to Swiss law Article 3 paragraph 1 letter s UWG"
 msgstr ""
 
@@ -208,302 +209,307 @@ msgid "Categories of data"
 msgstr ""
 
 #: src/LegalNoticeSupport.php:150
-msgctxt "heading"
-msgid "Right of providing information, correction or deletion of personal data, and appeal"
+msgid "Third party services"
 msgstr ""
 
 #: src/LegalNoticeSupport.php:151
-msgctxt "heading"
-msgid "Right to correction or deletion of personal data"
+msgid "Hosting for the webtrees server"
 msgstr ""
 
 #: src/LegalNoticeSupport.php:152
-msgctxt "heading"
-msgid "Right of appeal"
+msgid "Legal bases for processing"
 msgstr ""
 
 #: src/LegalNoticeSupport.php:153
-msgctxt "heading"
-msgid "Legal regulations"
+msgid "General risk"
 msgstr ""
 
 #: src/LegalNoticeSupport.php:154
-msgctxt "heading"
-msgid "Liability for the content of these websites"
+msgid "Security measures"
 msgstr ""
 
 #: src/LegalNoticeSupport.php:155
 msgctxt "heading"
-msgid "Liability for links"
+msgid "Right of providing information, correction or deletion of personal data, and appeal"
 msgstr ""
 
 #: src/LegalNoticeSupport.php:156
+msgid "Data protection in connection with online genealogies"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:157
+msgid "Personal data about ancestors, family members, and other persons"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:158
+msgid "Special categories of personal data"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:159
+msgid "Graduated access rights to personal data"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:160
+msgid "Personal data about visitors to this website"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:161
+msgid "Personal data about users with a user account"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:162
+msgid "Application log"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:163
+msgid "Cookies"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:164
+msgid "Tracking and analytics"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:165
+msgid "Right to data portability"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:166
+msgid "Right to object"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:167
+msgctxt "heading"
+msgid "Right to correction or deletion of personal data"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:168
+msgctxt "heading"
+msgid "Right of appeal"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:169
+msgctxt "heading"
+msgid "Legal regulations"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:170
+msgctxt "heading"
+msgid "Liability for the content of these websites"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:171
+msgctxt "heading"
+msgid "Liability for links"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:172
 msgctxt "heading"
 msgid "Copyright and distribution of genealogical data"
 msgstr ""
 
-#: src/LegalNoticeSupport.php:157
+#: src/LegalNoticeSupport.php:173
 msgctxt "heading"
 msgid "Use of the address data in the Legal Notice"
 msgstr ""
 
-#: src/LegalNoticeSupport.php:158
+#: src/LegalNoticeSupport.php:174
 msgctxt "heading"
 msgid "Duty to mitigate damages"
 msgstr ""
 
-#: src/LegalNoticeSupport.php:159
+#: src/LegalNoticeSupport.php:175
 msgctxt "heading"
 msgid "Consumer dispute resolution"
 msgstr ""
 
-#: src/LegalNoticeSupport.php:160
+#: src/LegalNoticeSupport.php:176
 msgctxt "heading"
 msgid "Open-source and License"
 msgstr ""
 
-#: src/LegalNoticeSupport.php:161
+#: src/LegalNoticeSupport.php:177
 msgctxt "heading"
 msgid "Severability Clause"
 msgstr ""
 
-#: src/LegalNoticeSupport.php:193 src/LegalNoticeSupport.php:199
-msgid ""
-"Consumer dispute resolution is available under Section 36 of the German Consumer Dispute Resolution Act (VSBG)."
+#: src/LegalNoticeSupport.php:225 src/LegalNoticeSupport.php:231
+msgid "Consumer dispute resolution is available under Section 36 of the German Consumer Dispute Resolution Act (VSBG)."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:194 src/LegalNoticeSupport.php:200
+#: src/LegalNoticeSupport.php:226 src/LegalNoticeSupport.php:232
 msgid "Alternative dispute resolution mechanisms are available for consumer disputes in the European Union."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:195
-msgid ""
-"I am not obliged and not willing to participate in dispute resolution proceedings before a consumer "
-"arbitration board."
+#: src/LegalNoticeSupport.php:227
+msgid "I am not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:201
-msgid ""
-"We are not obliged and not willing to participate in dispute resolution proceedings before a consumer "
-"arbitration board."
+#: src/LegalNoticeSupport.php:233
+msgid "We are not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:204
+#: src/LegalNoticeSupport.php:236
 msgid ""
-"The contents of my pages were created with great care. However, I cannot guarantee that the content is "
-"correct, complete or up-to-date. I am responsible for my own content on these pages according to general laws; "
-"However, I am not obliged to monitor transmitted or stored third-party information or to investigate "
-"circumstances that indicate illegal activity. An obligation to remove or block the use of information "
-"according to general laws remains unaffected. However, liability in this regard is only possible from the "
-"point in time at which knowledge of a specific infringement of the law is known. As soon as I become aware of "
-"any legal violations, I will remove this content immediately."
+"The contents of my pages were created with great care. However, I cannot guarantee that the content is correct, complete or up-to-date. I am responsible for my own content on these pages according to general laws; However, I "
+"am not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. An obligation to remove or block the use of information according to general laws "
+"remains unaffected. However, liability in this regard is only possible from the point in time at which knowledge of a specific infringement of the law is known. As soon as I become aware of any legal violations, I will "
+"remove this content immediately."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:205
+#: src/LegalNoticeSupport.php:237
 msgid ""
-"If you, as a user of this site, are entitled to create content yourself or upload files, you are obliged to "
-"comply with all legal requirements and to protect personal data by using the mechanisms of webtrees. If in "
-"doubt, please feel free to contact me."
+"If you, as a user of this site, are entitled to create content yourself or upload files, you are obliged to comply with all legal requirements and to protect personal data by using the mechanisms of webtrees. If in doubt, "
+"please feel free to contact me."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:206
+#: src/LegalNoticeSupport.php:238
 msgid ""
-"The contents of our pages were created with great care. However, we cannot guarantee that the content is "
-"correct, complete or up-to-date. We are responsible for our own content on these pages according to general "
-"laws; however, we are not obliged to monitor transmitted or stored third-party information or to investigate "
-"circumstances that indicate illegal activity. An obligation to remove or block the use of information "
-"according to general laws remains unaffected. However, liability in this regard is only possible from the "
-"point in time at which knowledge of a specific infringement of the law is known. As soon as we become aware of "
-"any legal violations, we will remove this content immediately."
+"The contents of our pages were created with great care. However, we cannot guarantee that the content is correct, complete or up-to-date. We are responsible for our own content on these pages according to general laws; "
+"however, we are not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. An obligation to remove or block the use of information according to "
+"general laws remains unaffected. However, liability in this regard is only possible from the point in time at which knowledge of a specific infringement of the law is known. As soon as we become aware of any legal "
+"violations, we will remove this content immediately."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:207
+#: src/LegalNoticeSupport.php:239
 msgid ""
-"If you, as a user of this site, are entitled to create content yourself or upload files, you are obliged to "
-"comply with all legal requirements and to protect personal data by using the mechanisms of webtrees. If in "
-"doubt, please feel free to contact us."
+"If you, as a user of this site, are entitled to create content yourself or upload files, you are obliged to comply with all legal requirements and to protect personal data by using the mechanisms of webtrees. If in doubt, "
+"please feel free to contact us."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:208
+#: src/LegalNoticeSupport.php:240
 msgid ""
-"This web application contains links to external websites over which I have no control. Therefore I cannot "
-"assume any liability for this external content. The respective provider or operator of the pages is always "
-"responsible for the content of the linked pages. The linked pages were checked for possible legal violations "
-"at the time of linking. Illegal content was not recognizable at the time of linking. However, a permanent "
-"control of the content of the linked pages is not reasonable without concrete evidence of an infringement. As "
-"soon as I become aware of legal violations, I will remove such links immediately."
+"This web application contains links to external websites over which I have no control. Therefore I cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible "
+"for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, a permanent control of the "
+"content of the linked pages is not reasonable without concrete evidence of an infringement. As soon as I become aware of legal violations, I will remove such links immediately."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:209
+#: src/LegalNoticeSupport.php:241
 msgid ""
-"This web application contains links to external websites over which we have no control. Therefore we cannot "
-"assume any liability for this external content. The respective provider or operator of the pages is always "
-"responsible for the content of the linked pages. The linked pages were checked for possible legal violations "
-"at the time of linking. Illegal content was not recognizable at the time of linking. However, a permanent "
-"control of the content of the linked pages is not reasonable without concrete evidence of an infringement. As "
-"soon as we become aware of legal violations, we will remove such links immediately."
+"This web application contains links to external websites over which we have no control. Therefore we cannot assume any liability for this external content. The respective provider or operator of the pages is always "
+"responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, a permanent control "
+"of the content of the linked pages is not reasonable without concrete evidence of an infringement. As soon as we become aware of legal violations, we will remove such links immediately."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:210
+#: src/LegalNoticeSupport.php:242
 msgid ""
-"I always endeavor to observe the copyrights of others or to use self-created and license-free works. Third-"
-"party contributions to this website are marked as such by naming a source if they cannot be used freely. "
-"Should you nevertheless become aware of a copyright infringement, please inform me accordingly. As soon as I "
-"become aware of legal violations, I will remove such content immediately."
+"I always endeavor to observe the copyrights of others or to use self-created and license-free works. Third-party contributions to this website are marked as such by naming a source if they cannot be used freely. Should you "
+"nevertheless become aware of a copyright infringement, please inform me accordingly. As soon as I become aware of legal violations, I will remove such content immediately."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:212
+#: src/LegalNoticeSupport.php:244
 msgid ""
-"The content and works created by me and the registered users on this website are subject to copyright. If you "
-"contribute content as a registered user of this website, you grant me an irrevocable, non-exclusive license to "
-"use this content. This is necessary because contributed information becomes part of a shared genealogical data "
-"collection that cannot practically be separated into individual contributions later."
+"The content and works created by me and the registered users on this website are subject to copyright. If you contribute content as a registered user of this website, you grant me an irrevocable, non-exclusive license to use "
+"this content. This is necessary because contributed information becomes part of a shared genealogical data collection that cannot practically be separated into individual contributions later."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:214
+#: src/LegalNoticeSupport.php:246
 #, php-format
 msgid ""
-"The content and works created by me and the registered users on this website are subject to copyright in %s. "
-"If you contribute content as a registered user of this website, you grant me an irrevocable, non-exclusive "
-"license to use this content. This is necessary because contributed information becomes part of a shared "
-"genealogical data collection that cannot practically be separated into individual contributions later."
+"The content and works created by me and the registered users on this website are subject to copyright in %s. If you contribute content as a registered user of this website, you grant me an irrevocable, non-exclusive license "
+"to use this content. This is necessary because contributed information becomes part of a shared genealogical data collection that cannot practically be separated into individual contributions later."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:247
-msgid ""
-"The automated or systematic collection, scraping, data mining, and use of content from this website for "
-"training or enriching artificial intelligence systems or for retrieval by such systems is prohibited without my "
-"prior written consent."
-msgstr ""
-
-#: src/LegalNoticeSupport.php:216
-msgid ""
-"The distribution and any kind of exploitation of the content of this website outside the limits of copyright "
-"require my written consent. Commercial use of the information provided here is generally prohibited."
+#: src/LegalNoticeSupport.php:248
+msgid "The distribution and any kind of exploitation of the content of this website outside the limits of copyright require my written consent. Commercial use of the information provided here is generally prohibited."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:249
 msgid ""
-"I take the protection of copyright seriously. If I discover that copyrighted material from this website has "
-"been used contrary to these terms, I reserve the right to take legal action, including claims for damages, "
+"The automated or systematic collection, scraping, data mining, and use of content from this website for training or enriching artificial intelligence systems or for retrieval by such systems is prohibited without my prior "
+"written consent."
+msgstr ""
+
+#: src/LegalNoticeSupport.php:250
+msgid ""
+"I take the protection of copyright seriously. If I discover that copyrighted material from this website has been used contrary to these terms, I reserve the right to take legal action, including claims for damages, "
 "injunctive relief, and reimbursement of legal costs."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:217
+#: src/LegalNoticeSupport.php:251
 #, php-format
 msgid ""
-"Copying or downloading genealogical data for private use is permitted. Anyone who wants to use parts of our "
-"data in their own family trees is obliged to name %s as the source. In particular, the protected images may "
-"only be accessible there for family members. The information on living people must not be copied to other "
-"websites where the privacy of these people cannot be guaranteed. A lot of time and effort was put into the "
-"webtrees database. I don't want others to simply copy our work together. I expect you to follow these "
-"guidelines as well. This database remains my property and will not be sold, donated or rented in any way."
+"Copying or downloading genealogical data for private use is permitted. Anyone who wants to use parts of our data in their own family trees is obliged to name %s as the source. In particular, the protected images may only be "
+"accessible there for family members. The information on living people must not be copied to other websites where the privacy of these people cannot be guaranteed. A lot of time and effort was put into the webtrees database. "
+"I don't want others to simply copy our work together. I expect you to follow these guidelines as well. This database remains my property and will not be sold, donated or rented in any way."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:218
+#: src/LegalNoticeSupport.php:252
 msgid ""
-"We always endeavor to observe the copyrights of others or to use self-created and license-free works. Third-"
-"party contributions to this website are marked as such by naming a source if they cannot be used freely. "
-"Should you nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we "
-"become aware of legal violations, we will remove such content immediately."
+"We always endeavor to observe the copyrights of others or to use self-created and license-free works. Third-party contributions to this website are marked as such by naming a source if they cannot be used freely. Should you "
+"nevertheless become aware of a copyright infringement, please inform us accordingly. As soon as we become aware of legal violations, we will remove such content immediately."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:220
+#: src/LegalNoticeSupport.php:254
 msgid ""
-"The content and works created by us and by the registered users on this website are subject to copyright. If "
-"you contribute content as a registered user of this website, you grant us an irrevocable, non-exclusive "
-"license to use this content. This is necessary because contributed information becomes part of a shared "
-"genealogical data collection that cannot practically be separated into individual contributions later."
+"The content and works created by us and by the registered users on this website are subject to copyright. If you contribute content as a registered user of this website, you grant us an irrevocable, non-exclusive license to "
+"use this content. This is necessary because contributed information becomes part of a shared genealogical data collection that cannot practically be separated into individual contributions later."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:222
+#: src/LegalNoticeSupport.php:256
 #, php-format
 msgid ""
-"The content and works created by us and by the registered users on this website are subject to copyright in "
-"%s. If you contribute content as a registered user of this website, you grant us an irrevocable, non-exclusive "
-"license to use this content. This is necessary because contributed information becomes part of a shared "
-"genealogical data collection that cannot practically be separated into individual contributions later."
+"The content and works created by us and by the registered users on this website are subject to copyright in %s. If you contribute content as a registered user of this website, you grant us an irrevocable, non-exclusive "
+"license to use this content. This is necessary because contributed information becomes part of a shared genealogical data collection that cannot practically be separated into individual contributions later."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:224
-msgid ""
-"The distribution and any kind of exploitation of the content of this website outside the limits of copyright "
-"require our written consent. Commercial use of the information provided here is generally prohibited."
+#: src/LegalNoticeSupport.php:258
+msgid "The distribution and any kind of exploitation of the content of this website outside the limits of copyright require our written consent. Commercial use of the information provided here is generally prohibited."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:255
+#: src/LegalNoticeSupport.php:259
 msgid ""
-"The automated or systematic collection, scraping, data mining, and use of content from this website for "
-"training or enriching artificial intelligence systems or for retrieval by such systems is prohibited without our "
-"prior written "
-"consent."
+"The automated or systematic collection, scraping, data mining, and use of content from this website for training or enriching artificial intelligence systems or for retrieval by such systems is prohibited without our prior "
+"written consent."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:257
+#: src/LegalNoticeSupport.php:260
 msgid ""
-"We take the protection of copyright seriously. If we discover that copyrighted material from this website has "
-"been used contrary to these terms, we reserve the right to take legal action, including claims for damages, "
+"We take the protection of copyright seriously. If we discover that copyrighted material from this website has been used contrary to these terms, we reserve the right to take legal action, including claims for damages, "
 "injunctive relief, and reimbursement of legal costs."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:225
+#: src/LegalNoticeSupport.php:261
 #, php-format
 msgid ""
-"Copying or downloading genealogical data for private use is permitted. Anyone who wants to use parts of our "
-"data in their own family trees is obliged to name %s as the source. In particular, the protected images may "
-"only be accessible there for family members. The information on living people must not be copied to other "
-"websites where the privacy of these people cannot be guaranteed. A lot of time and effort was put into the "
-"webtrees database. We don't want others to simply copy our work together. We expect you to follow these "
-"guidelines as well. This database remains our property and will not be sold, donated or rented in any way."
+"Copying or downloading genealogical data for private use is permitted. Anyone who wants to use parts of our data in their own family trees is obliged to name %s as the source. In particular, the protected images may only be "
+"accessible there for family members. The information on living people must not be copied to other websites where the privacy of these people cannot be guaranteed. A lot of time and effort was put into the webtrees database. "
+"We don't want others to simply copy our work together. We expect you to follow these guidelines as well. This database remains our property and will not be sold, donated or rented in any way."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:226
+#: src/LegalNoticeSupport.php:262
 msgid ""
-"The use of the contact data published by me as part of the imprint obligation by third parties for the purpose "
-"of sending unsolicited advertising and information material is hereby expressly prohibited. I expressly "
-"reserve the right to take legal action in the event of unsolicited advertising being sent, such as spam e-"
-"mails."
+"The use of the contact data published by me as part of the imprint obligation by third parties for the purpose of sending unsolicited advertising and information material is hereby expressly prohibited. I expressly reserve "
+"the right to take legal action in the event of unsolicited advertising being sent, such as spam e-mails."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:227
+#: src/LegalNoticeSupport.php:263
 msgid ""
-"The use of the contact data published by us as part of the imprint obligation by third parties for the purpose "
-"of sending unsolicited advertising and information material is hereby expressly prohibited. We expressly "
-"reserve the right to take legal action in the event of unsolicited advertising being sent, such as spam e-"
-"mails."
+"The use of the contact data published by us as part of the imprint obligation by third parties for the purpose of sending unsolicited advertising and information material is hereby expressly prohibited. We expressly reserve "
+"the right to take legal action in the event of unsolicited advertising being sent, such as spam e-mails."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:228
+#: src/LegalNoticeSupport.php:264
 msgid ""
-"Should you notice any irregularities on our website, please contact me beforehand to avoid unnecessary legal "
-"disputes and costs. I am sure that we will come to an amicable and informal solution. The cost note of a legal "
-"warning will therefore be rejected as unfounded in the sense of the obligation to mitigate the damage if I "
-"have not been contacted via my e-mail address beforehand and have been informed of this possible grievance."
+"Should you notice any irregularities on our website, please contact me beforehand to avoid unnecessary legal disputes and costs. I am sure that we will come to an amicable and informal solution. The cost note of a legal "
+"warning will therefore be rejected as unfounded in the sense of the obligation to mitigate the damage if I have not been contacted via my e-mail address beforehand and have been informed of this possible grievance."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:229
+#: src/LegalNoticeSupport.php:265
 msgid ""
-"Should you notice any irregularities on our website, we ask you to contact us beforehand to avoid unnecessary "
-"legal disputes and costs. We are sure that we will come to an amicable and informal solution. The cost note of "
-"a legal warning will therefore be rejected as unfounded in the sense of the obligation to mitigate the damage "
-"if we have not been contacted beforehand via one of our e-mail addresses and have been informed of this "
-"possible grievance."
+"Should you notice any irregularities on our website, we ask you to contact us beforehand to avoid unnecessary legal disputes and costs. We are sure that we will come to an amicable and informal solution. The cost note of a "
+"legal warning will therefore be rejected as unfounded in the sense of the obligation to mitigate the damage if we have not been contacted beforehand via one of our e-mail addresses and have been informed of this possible "
+"grievance."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:230
+#: src/LegalNoticeSupport.php:266
 msgid ""
-"This website uses the genealogy program webtrees - an open source software. The source code is publicly "
-"available on GitHub and can be changed by anyone. Usage is free. This program was developed by people from "
-"many countries and is provided under the terms of the GNU General Public License Version 3 or a later version. "
-"The developers and the entire webtrees community are volunteering their time and skills to the project. Apart "
-"from the few donations from users, the developers receive no compensation for the time they invest in the "
-"project. There are also no external sources of income to support the project."
+"This website uses the genealogy program webtrees - an open source software. The source code is publicly available on GitHub and can be changed by anyone. Usage is free. This program was developed by people from many "
+"countries and is provided under the terms of the GNU General Public License Version 3 or a later version. The developers and the entire webtrees community are volunteering their time and skills to the project. Apart from the "
+"few donations from users, the developers receive no compensation for the time they invest in the project. There are also no external sources of income to support the project."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:231
-msgid ""
-"If parts or individual formulations of this text do not, no longer or not completely correspond to the "
-"applicable legal situation, the remaining parts of the text remain unaffected in their content and validity."
+#: src/LegalNoticeSupport.php:267
+msgid "If parts or individual formulations of this text do not, no longer or not completely correspond to the applicable legal situation, the remaining parts of the text remain unaffected in their content and validity."
 msgstr ""
 
 #: resources/views/page/chapter.phtml:18
@@ -511,536 +517,241 @@ msgstr ""
 msgid "Privacy policy date: %s"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:9
-msgid "Personal data about ancestors, family members, and other persons"
+#: resources/views/page/header.phtml:109
+msgid "Editorially responsible person according to Section 18 paragraph 2 MStV"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:12
-msgid ""
-"Personal data about living persons is also stored for the purpose of family history and genealogical research; "
-"see inventory data and content data above."
+#: resources/views/page/header.phtml:109
+msgid "Editorially responsible person"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:14
-msgid ""
-"Family history and genealogical research is a legitimate interest under Article 6(1), first sentence, point "
-"(f) of the General Data Protection Regulation (EU GDPR)."
+#: resources/views/page/header.phtml:111
+msgid "In addition to genealogical data, this website also contains editorially prepared content addressed to the general public, such as explanations of family history, the software used, or historical topics."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:16
-msgid "Family history and genealogical research is the legitimate purpose for processing this data."
+#: resources/views/page/header.phtml:112
+#, php-format
+msgid "Responsible for this content is: %s. Address: see above."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:18
-msgid ""
-"Personal data that you find on this website, such as names, e-mail addresses, photos, addresses, or life "
-"dates, is used only for family history and genealogical research and is kept securely."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:19
-msgid ""
-"Genealogical data is stored for the long term because it is historically relevant and should remain preserved "
-"and accessible for future generations."
+msgid "Personal data about living persons is also stored for the purpose of family history and genealogical research; see inventory data and content data above."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:20
-msgid "Requests for deletion are reviewed individually."
+msgid "Family history and genealogical research is a legitimate interest under Article 6(1), first sentence, point (f) of the General Data Protection Regulation (EU GDPR)."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:22
-msgid ""
-"Deletion may be restricted if further processing is necessary for historical research purposes and deletion "
-"would likely make these purposes impossible or seriously impair them, in accordance with Article 17(3)(d) GDPR."
+msgid "Family history and genealogical research is the legitimate purpose for processing this data."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:24
+msgid "Personal data that you find on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:25
+msgid "Genealogical data is stored for the long term because it is historically relevant and should remain preserved and accessible for future generations."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:26
+msgid "Requests for deletion are reviewed individually."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:28
-msgid ""
-"In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may "
-"apply, in particular the Federal Data Protection Act (BDSG)."
+msgid "Deletion may be restricted if further processing is necessary for historical research purposes and deletion would likely make these purposes impossible or seriously impair them, in accordance with Article 17(3)(d) GDPR."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:33
-msgid "Legal bases for processing"
+#: resources/views/page/sections/data-categories.phtml:34
+msgid "In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular the Federal Data Protection Act (BDSG)."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:36
-msgid "The legal bases for processing personal data depend on the respective processing operation."
+#: resources/views/page/sections/data-categories.phtml:41
+msgid "Genealogical records may contain particularly sensitive personal data where such information is relevant to family history or historical research."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:37
-msgid ""
-"The provision and secure operation of this website, the protection of living persons, and family history "
-"research are based on legitimate interests under Article 6(1), first sentence, point (f) GDPR."
+#: resources/views/page/sections/data-categories.phtml:42
+msgid "This can include ethnic origin, physical characteristics, political opinions or affiliations, religious or philosophical beliefs, trade union or party membership, genetic data, and health data including causes of death."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:38
-msgid ""
-"Processing related to user accounts, registered access, and communication with registered users may also be "
-"based on contractual or pre-contractual relationships under Article 6(1), first sentence, point (b) GDPR."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:39
-msgid ""
-"If consent is requested for individual processing operations, the legal basis is Article 6(1), first sentence, "
-"point (a) GDPR."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:40
-msgid ""
-"Where legal obligations require processing or retention, the legal basis is Article 6(1), first sentence, "
-"point (c) GDPR."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:44
-msgid "Graduated access rights to personal data"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:47
-msgid "Large parts of the content of this website are freely accessible."
+#: resources/views/page/sections/data-categories.phtml:43
+msgid "Information about criminal convictions or offences may also occur in historical sources."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:48
-msgid "This does not apply to data about persons who are still living."
+msgid "The legal basis for processing special categories of personal data is Article 9(2)(j) GDPR for historical research purposes."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:49
+msgid "Information about criminal convictions and offences is processed in accordance with Article 10 GDPR."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:51
+msgid "Where German law applies, Section 27 BDSG may also apply."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:57
+msgid "These facts are protected by graduated access rights and GEDCOM restrictions."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:60
+#, php-format
+msgid "They are released for wider access no earlier than %s year after the death of the person concerned."
+msgid_plural "They are released for wider access no earlier than %s years after the death of the person concerned."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/page/sections/data-categories.phtml:71
+msgid "Large parts of the content of this website are freely accessible."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:72
+msgid "This does not apply to data about persons who are still living."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:73
 msgid "Only registered users who have been assigned graduated rights have access to this data."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:50
+#: resources/views/page/sections/data-categories.phtml:74
 msgid "Additional data is stored about these users, such as their name and e-mail address."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:52
+#: resources/views/page/sections/data-categories.phtml:76
 msgid "Registered users are only persons related to me by blood or marriage."
 msgid_plural "Registered users are only persons related to us by blood or marriage."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-categories.phtml:53
+#: resources/views/page/sections/data-categories.phtml:77
 msgid "A substantial part of the content here has been shared confidentially within the family."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:54
-msgid ""
-"It must remain confidential; therefore we all depend on every individual treating this data confidentially."
+#: resources/views/page/sections/data-categories.phtml:78
+msgid "It must remain confidential; therefore we all depend on every individual treating this data confidentially."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:58
-msgid "Personal data about users with a user account"
+#: resources/views/page/sections/data-categories.phtml:85
+msgid "The personal data that you provide yourself when creating an account is stored and processed; see contact data."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:61
-msgid ""
-"The personal data that you provide yourself when creating an account is stored and processed; see contact data."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:65
+#: resources/views/page/sections/data-categories.phtml:89 resources/views/settings.phtml:251
 msgid "Name"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:66
+#: resources/views/page/sections/data-categories.phtml:90
 msgid "E-mail address"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:67
+#: resources/views/page/sections/data-categories.phtml:91
 msgid "Password"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:71
+#: resources/views/page/sections/data-categories.phtml:95
 msgid "Other personal data that you actively provide is also stored and used."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:72
-msgid ""
-"This includes, for example, data created by completing your personal details on your personal page or by "
-"creating family relationships."
+#: resources/views/page/sections/data-categories.phtml:96
+msgid "This includes, for example, data created by completing your personal details on your personal page or by creating family relationships."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:76
-msgid ""
-"Furthermore, data relating to your user account is recorded as a result of your activities on our website, for "
-"example when editing records."
+#: resources/views/page/sections/data-categories.phtml:100
+msgid "Furthermore, data relating to your user account is recorded as a result of your activities on our website, for example when editing records."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:80
-msgid ""
-"I occasionally use your e-mail address to inform you by e-mail about important matters relating to the website "
-"or, if necessary, to contact you with questions about changes you have made."
-msgid_plural ""
-"We occasionally use your e-mail address to inform you by e-mail about important matters relating to the "
-"website or, if necessary, to contact you with questions about changes you have made."
+#: resources/views/page/sections/data-categories.phtml:104
+msgid "I occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made."
+msgid_plural "We occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-categories.phtml:78
+#: resources/views/page/sections/data-categories.phtml:109
 #, php-format
 msgid "Inactive user accounts are deleted after %s year."
 msgid_plural "Inactive user accounts are deleted after %s years."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-categories.phtml:84
-msgid ""
-"If you have your user account disabled here, the genealogical data you entered will remain available for the "
-"benefit of our genealogical research."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:85
-msgid ""
-"The data about your person will also be retained; only your access to the specially protected areas here will "
-"be blocked."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:88
-msgid "Personal data about visitors to this website"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:90
-msgid ""
-"In principle, data that can be related to non-logged-in users of this service, visitors, is also stored; see "
-"usage data and communication data."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:92
-msgid "Security measures"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:95
-msgid ""
-"Appropriate technical and organizational measures are taken in accordance with legal requirements, taking into "
-"account the state of the art, implementation costs, the nature, scope, circumstances, and purposes of "
-"processing, and the varying likelihood and severity of the risk to the rights and freedoms of natural persons, "
-"in order to ensure a level of security appropriate to the risk."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:97
-msgid "Transmission to a user browser is encrypted (https)."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:102
-msgid ""
-"These measures include, in particular, securing the confidentiality, integrity, and availability of data, "
-"including by controlling access to the data."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:105
-msgid "General risk"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:108
-msgid ""
-"I point out that data transmission on the Internet, for example when communicating by e-mail, may have "
-"security gaps."
-msgid_plural ""
-"We point out that data transmission on the Internet, for example when communicating by e-mail, may have "
-"security gaps."
-msgstr[0] ""
-msgstr[1] ""
-
-#: resources/views/page/sections/data-categories.phtml:109
-msgid "Complete protection of data against access by third parties is also not possible."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:112
-msgid "Cookies"
+#: resources/views/page/sections/data-categories.phtml:114
+msgid "If you have your user account disabled here, the genealogical data you entered will remain available for the benefit of our genealogical research."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:115
-msgid "This website uses cookies to enable user logins and to store settings such as your selected language."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:116
-msgid "Cookies help make our service more user-friendly, effective, and secure."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:117
-msgid "Cookies are small text files that are stored on your computer and saved by your browser."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:118
-msgid "These cookies are strictly necessary for the website to function properly."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:119
-msgid "Session cookies are deleted when you leave the website or close your browser."
+msgid "The data about your person will also be retained; only your access to the specially protected areas here will be blocked."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:120
-msgid ""
-"Persistent cookies can remain stored after the browser is closed, for example to preserve selected settings "
-"for a later visit."
+msgid "In principle, data that can be related to non-logged-in users of this service, visitors, is also stored; see usage data and communication data."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:121
-msgid ""
-"You can configure your browser so that you are informed when cookies are set, allow cookies only in individual "
-"cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of "
-"cookies when closing the browser."
+#: resources/views/page/sections/data-categories.phtml:125
+msgid "This website uses cookies to enable user logins and to store settings such as your selected language."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:122
-msgid "If cookies are disabled, the functionality of this website may be restricted."
+#: resources/views/page/sections/data-categories.phtml:126
+msgid "Cookies help make our service more user-friendly, effective, and secure."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:127
-msgid "This website uses third-party services to manage cookies."
+msgid "Cookies are small text files that are stored on your computer and saved by your browser."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:128
+msgid "These cookies are strictly necessary for the website to function properly."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:129
+msgid "Session cookies are deleted when you leave the website or close your browser."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:130
+msgid "Persistent cookies can remain stored after the browser is closed, for example to preserve selected settings for a later visit."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:131
+msgid ""
+"You can configure your browser so that you are informed when cookies are set, allow cookies only in individual cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of cookies "
+"when closing the browser."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:132
+msgid "If cookies are disabled, the functionality of this website may be restricted."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:137
-msgid "Tracking and analytics"
+msgid "This website uses third-party services to manage cookies."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:141
+#: resources/views/page/sections/data-categories.phtml:152
 msgid "This website uses third-party services to learn about visitor behavior."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:162
-msgid "These services may use cookies or other tracking technology."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:166
-msgid "You can opt out of tracking by setting the \"Do Not Track\" header in your browser preferences."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:173
-msgid "Third party services"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:176
-msgid ""
-"When external services are used, personal data may be transferred to these providers, companies, or persons or "
-"disclosed to them where this is necessary for the respective service."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:177
-msgid "Only those services that are configured and actually used by this website are listed here."
-msgstr ""
-
-#: resources/views/page/sections/third-party-services.phtml
-#, php-format
-msgid "External tracking or analytics services are used; see the section %s."
-msgstr ""
-
-#: resources/views/page/sections/third-party-services.phtml
-msgid "External tracking or analytics services are used."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:181
-msgid "This website uses additional third-party services."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:186
+#: resources/views/page/sections/data-categories.phtml:159 resources/views/page/sections/third-party-services.phtml:42
 msgid "Service"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:188
+#: resources/views/page/sections/data-categories.phtml:162 resources/views/page/sections/third-party-services.phtml:44
 msgid "Country of service provision"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:196
-msgid "not specified"
+#: resources/views/page/sections/data-categories.phtml:179
+msgid "These services may use cookies or other tracking technology."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:206
-msgid "Map service providers"
+#: resources/views/page/sections/data-categories.phtml:180
+msgid "You can opt out of tracking by setting the \"Do Not Track\" header in your browser preferences."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:215
-msgid ""
-"This website may embed maps from OpenStreetMap. The map content is loaded from OpenStreetMap servers, and "
-"OpenStreetMap may process data such as IP addresses, displayed location data, and selected map settings to "
-"provide and cache the map functions."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:218
-#: resources/views/page/sections/data-categories.phtml:255
-msgid "Data that may be processed by this service:"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:222
-#: resources/views/page/sections/data-categories.phtml:259
-msgid "IP addresses"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:223
-msgid "Location data shown on maps"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:224
-msgid "Map display settings"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:232
-#: resources/views/page/sections/data-categories.phtml:270
-msgid "Privacy notice:"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:242
-msgid "Additional third-party service details"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:249
-msgid "Google Charts may be loaded from Google servers when statistics charts are viewed."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:251
-msgid "Gravatar may be loaded from Automattic servers when the responsible person image is displayed."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:260
-msgid "Browser request metadata"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:261
-msgid "Chart data shown on statistics pages"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:262
-msgid "E-mail address hash"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:281
-msgid "External transcription providers"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:284
-msgid ""
-"This website may use external transcription providers when a registered user explicitly starts such a workflow."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:285
-msgid "In that case, the following provider services and data categories may be involved:"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:294
-msgid "Data that may be exchanged:"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:308
-msgid "Data transfer to third countries"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:311
-msgid "Some third-party services are provided from countries outside the European Union."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:312
-msgid ""
-"If personal data is transferred to such third countries, this is done only in accordance with the legal "
-"requirements of Articles 44 to 49 GDPR, for example on the basis of an adequacy decision, standard contractual "
-"clauses, or another legally permitted safeguard."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:316
-msgid "This may apply to the following services:"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:325
-msgid "Hosting for the webtrees server"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:329
-#: resources/views/page/sections/data-categories.phtml:331
-#, php-format
-msgid "This website is hosted by %s, which provides the server and technical infrastructure."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:334
-#, php-format
-msgid "For details, please refer to the privacy notice of %s."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:340
-msgid ""
-"The hosting provider automatically collects and stores information when this website is accessed, such as "
-"browser used, operating system, referring page, IP address, time of access, and similar data."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:341
-msgid "This data cannot be assigned to specific persons without consulting additional data sources, and"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:342
-msgid "I do not evaluate this data further"
-msgid_plural "we do not evaluate this data further"
-msgstr[0] ""
-msgstr[1] ""
-
-#: resources/views/page/sections/data-categories.phtml:343
-msgid "unless there is unlawful use of these web pages."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:347
-msgid "Order processing"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:349
-msgid "An agreement on order processing has been concluded with the hosting provider."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:351
-msgid "This took place"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:353
-#, php-format
-msgid "for the first time on %s"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:355
-msgid "and"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:359
-#, php-format
-msgid "most recently on %s"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:363
-msgid ""
-"This is an agreement required by data protection law under Article 28 GDPR, which ensures that the hosting "
-"provider processes the personal data of this website"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:365
-msgid "This agreement ensures that the hosting provider processes the personal data of this website"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:367
-msgid "only according to my instructions"
-msgid_plural "only according to our instructions"
-msgstr[0] ""
-msgstr[1] ""
-
-#: resources/views/page/sections/data-categories.phtml:369
-msgid "and in compliance with the GDPR."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:371
-msgid "and in compliance with the applicable data protection requirements."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:377
-msgid "Application log"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:380
-msgid ""
-"The application used (webtrees) logs all user actions so that, among other things, changes to the data can be "
-"traced and approved."
+#: resources/views/page/sections/data-categories.phtml:186
+msgid "The application used (webtrees) logs all user actions so that, among other things, changes to the data can be traced and approved."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:9
-msgid ""
-"You have the right at any time to obtain information about the data stored about you, its origin, and the "
-"purpose of storage."
+msgid "You have the right at any time to obtain information about the data stored about you, its origin, and the purpose of storage."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:10
-msgid ""
-"You also have the right to request completion of the data concerning you or correction of inaccurate data "
-"concerning you."
+msgid "You also have the right to request completion of the data concerning you or correction of inaccurate data concerning you."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:11
@@ -1049,21 +760,15 @@ msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:16
 msgid ""
-"In accordance with Article 17 GDPR, you have the right to request that relevant data be deleted without undue "
-"delay, or alternatively, in accordance with Article 18 GDPR, to request restriction of the processing of the "
-"data."
+"In accordance with Article 17 GDPR, you have the right to request that relevant data be deleted without undue delay, or alternatively, in accordance with Article 18 GDPR, to request restriction of the processing of the data."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:18
-msgid ""
-"You may request that relevant data be deleted without undue delay or that the processing of the data be "
-"restricted, subject to the applicable legal requirements."
+msgid "You may request that relevant data be deleted without undue delay or that the processing of the data be restricted, subject to the applicable legal requirements."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:24
-msgid ""
-"Furthermore, under Article 77 GDPR, you have the right to lodge a complaint with the competent supervisory "
-"authority."
+msgid "Furthermore, under Article 77 GDPR, you have the right to lodge a complaint with the competent supervisory authority."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:26
@@ -1071,173 +776,221 @@ msgstr ""
 msgid "The competent supervisory authority is %s."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:30
-msgid "Right to data portability"
-msgstr ""
-
-#: resources/views/page/sections/data-rights.phtml:33
+#: resources/views/page/sections/data-rights.phtml:45
 msgid ""
-"Under Article 20 GDPR, you have the right to receive personal data that you have provided in a structured, "
-"commonly used, and machine-readable format, and to transmit that data to another controller where the legal "
+"Under Article 20 GDPR, you have the right to receive personal data that you have provided in a structured, commonly used, and machine-readable format, and to transmit that data to another controller where the legal "
 "requirements are met."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:36
-msgid "Right to object"
-msgstr ""
-
-#: resources/views/page/sections/data-rights.phtml:39
-msgid ""
-"Under Article 21 GDPR, you have the right to object at any time, on grounds relating to your particular "
-"situation, to the processing of personal data concerning you that is based on Article 6(1), first sentence, "
-"point (e) or Article 6(1), first sentence, point (f) GDPR."
-msgstr ""
-
-#: resources/views/page/sections/data-rights.phtml:45
-msgid "GDPR in connection with online genealogies"
-msgstr ""
-
-#: resources/views/page/sections/data-rights.phtml:47
-msgid "Data protection in connection with online genealogies"
-msgstr ""
-
-#: resources/views/page/sections/data-rights.phtml:53
-msgid ""
-"I am a strong advocate of data protection and would like to emphasize that I naturally make every effort to "
-"comply with the GDPR."
-msgid_plural ""
-"We are strong advocates of data protection and would like to emphasize that we naturally make every effort to "
-"comply with the GDPR."
-msgstr[0] ""
-msgstr[1] ""
-
 #: resources/views/page/sections/data-rights.phtml:55
 msgid ""
-"I am a strong advocate of data protection and would like to emphasize that I naturally make every effort to "
-"comply with applicable data protection requirements."
-msgid_plural ""
-"We are strong advocates of data protection and would like to emphasize that we naturally make every effort to "
-"comply with applicable data protection requirements."
+"Under Article 21 GDPR, you have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data concerning you that is based on Article 6(1), first sentence, point (e) or "
+"Article 6(1), first sentence, point (f) GDPR."
+msgstr ""
+
+#: resources/views/page/sections/general-risk.phtml:9
+msgid "I point out that data transmission on the Internet, for example when communicating by e-mail, may have security gaps."
+msgid_plural "We point out that data transmission on the Internet, for example when communicating by e-mail, may have security gaps."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:57
-msgid ""
-"However, fully and clearly legally compliant implementation in all cases is probably not possible in the field "
-"of online genealogy."
+#: resources/views/page/sections/general-risk.phtml:10
+msgid "Complete protection of data against access by third parties is also not possible."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:58
+#: resources/views/page/sections/hosting.phtml:11 resources/views/page/sections/hosting.phtml:13
+#, php-format
+msgid "This website is hosted by %s, which provides the server and technical infrastructure."
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:16
+#, php-format
+msgid "For details, please refer to the privacy notice of %s."
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:22
+msgid "The hosting provider automatically collects and stores information when this website is accessed, such as browser used, operating system, referring page, IP address, time of access, and similar data."
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:23
+msgid "This data cannot be assigned to specific persons without consulting additional data sources, and"
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:24
+msgid "I do not evaluate this data further"
+msgid_plural "we do not evaluate this data further"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/page/sections/hosting.phtml:25
+msgid "unless there is unlawful use of these web pages."
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:29
+msgid "Order processing"
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:31
+msgid "An agreement on order processing has been concluded with the hosting provider."
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:33
+msgid "This took place"
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:35
+#, php-format
+msgid "for the first time on %s"
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:37
+msgid "and"
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:41
+#, php-format
+msgid "most recently on %s"
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:45
+msgid "This is an agreement required by data protection law under Article 28 GDPR, which ensures that the hosting provider processes the personal data of this website"
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:47
+msgid "This agreement ensures that the hosting provider processes the personal data of this website"
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:49
+msgid "only according to my instructions"
+msgid_plural "only according to our instructions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/page/sections/hosting.phtml:51
+msgid "and in compliance with the GDPR."
+msgstr ""
+
+#: resources/views/page/sections/hosting.phtml:53
+msgid "and in compliance with the applicable data protection requirements."
+msgstr ""
+
+#: resources/views/page/sections/legal-bases.phtml:10
+msgid "The legal bases for processing personal data depend on the respective processing operation."
+msgstr ""
+
+#: resources/views/page/sections/legal-bases.phtml:11
+msgid "The provision and secure operation of this website, the protection of living persons, and family history research are based on legitimate interests under Article 6(1), first sentence, point (f) GDPR."
+msgstr ""
+
+#: resources/views/page/sections/legal-bases.phtml:12
+msgid "Processing related to user accounts, registered access, and communication with registered users may also be based on contractual or pre-contractual relationships under Article 6(1), first sentence, point (b) GDPR."
+msgstr ""
+
+#: resources/views/page/sections/legal-bases.phtml:13
+msgid "If consent is requested for individual processing operations, the legal basis is Article 6(1), first sentence, point (a) GDPR."
+msgstr ""
+
+#: resources/views/page/sections/legal-bases.phtml:14
+msgid "Where legal obligations require processing or retention, the legal basis is Article 6(1), first sentence, point (c) GDPR."
+msgstr ""
+
+#: resources/views/page/sections/online-genealogy-privacy.phtml:10
+msgid "I am a strong advocate of data protection and would like to emphasize that I naturally make every effort to comply with the GDPR."
+msgid_plural "We are strong advocates of data protection and would like to emphasize that we naturally make every effort to comply with the GDPR."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/page/sections/online-genealogy-privacy.phtml:12
+msgid "I am a strong advocate of data protection and would like to emphasize that I naturally make every effort to comply with applicable data protection requirements."
+msgid_plural "We are strong advocates of data protection and would like to emphasize that we naturally make every effort to comply with applicable data protection requirements."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/views/page/sections/online-genealogy-privacy.phtml:14
+msgid "However, fully and clearly legally compliant implementation in all cases is probably not possible in the field of online genealogy."
+msgstr ""
+
+#: resources/views/page/sections/online-genealogy-privacy.phtml:15
 msgid "Too many questions are disputed and leave room for legal interpretation."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:62
+#: resources/views/page/sections/online-genealogy-privacy.phtml:19
 msgid "However, I can rule out with certainty that everyone entered in this family tree knows about it."
 msgid_plural "However, we can rule out with certainty that everyone entered in this family tree knows about it."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:63
+#: resources/views/page/sections/online-genealogy-privacy.phtml:20
 msgid "Creating a family tree works differently."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:64
+#: resources/views/page/sections/online-genealogy-privacy.phtml:21
 msgid "Usually, information about a branch of the family is obtained from one person in that branch."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:65
-msgid ""
-"I have not obtained verifiable consent from our relatives to enter the respective family in this family tree."
-msgid_plural ""
-"We have not obtained verifiable consent from our relatives to enter the respective family in this family tree."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:22
+msgid "I have not obtained verifiable consent from our relatives to enter the respective family in this family tree."
+msgid_plural "We have not obtained verifiable consent from our relatives to enter the respective family in this family tree."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:70
-msgid ""
-"In my opinion, full compliance with the GDPR would therefore only be possible if I took large parts of this "
-"family tree offline again."
-msgid_plural ""
-"In our opinion, full compliance with the GDPR would therefore only be possible if we took large parts of this "
-"family tree offline again."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:27
+msgid "In my opinion, full compliance with the GDPR would therefore only be possible if I took large parts of this family tree offline again."
+msgid_plural "In our opinion, full compliance with the GDPR would therefore only be possible if we took large parts of this family tree offline again."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:72
-msgid ""
-"In my opinion, full compliance with every possible privacy expectation would therefore only be possible if I "
-"took large parts of this family tree offline again."
-msgid_plural ""
-"In our opinion, full compliance with every possible privacy expectation would therefore only be possible if we "
-"took large parts of this family tree offline again."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:29
+msgid "In my opinion, full compliance with every possible privacy expectation would therefore only be possible if I took large parts of this family tree offline again."
+msgid_plural "In our opinion, full compliance with every possible privacy expectation would therefore only be possible if we took large parts of this family tree offline again."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:74
-msgid ""
-"This, however, would remove the ability of the target group to use it and find their own paths through the "
-"extended kinship network."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:31
+msgid "This, however, would remove the ability of the target group to use it and find their own paths through the extended kinship network."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:76
-msgid ""
-"I therefore continue to provide the data online on the basis of legitimate interests in family history and "
-"historical research."
-msgid_plural ""
-"We therefore continue to provide the data online on the basis of legitimate interests in family history and "
-"historical research."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:33
+msgid "I therefore continue to provide the data online on the basis of legitimate interests in family history and historical research."
+msgid_plural "We therefore continue to provide the data online on the basis of legitimate interests in family history and historical research."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:77
-msgid ""
-"The GDPR expressly recognizes that personal data may also be processed for historical research purposes, "
-"subject to appropriate safeguards."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:34
+msgid "The GDPR expressly recognizes that personal data may also be processed for historical research purposes, subject to appropriate safeguards."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:79
-msgid ""
-"I therefore continue to provide the data online in the interest of family history and historical research."
-msgid_plural ""
-"We therefore continue to provide the data online in the interest of family history and historical research."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:36
+msgid "I therefore continue to provide the data online in the interest of family history and historical research."
+msgid_plural "We therefore continue to provide the data online in the interest of family history and historical research."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:81
-msgid ""
-"The data is handled carefully, and objections or requests for restriction or deletion are reviewed "
-"individually."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:38
+msgid "The data is handled carefully, and objections or requests for restriction or deletion are reviewed individually."
 msgstr ""
 
-#: resources/views/page/sections/data-rights.phtml:82
-msgid ""
-"I would therefore like to agree on the following procedure with all users of our website, hoping that this "
-"will satisfy the law:"
-msgid_plural ""
-"We would therefore like to agree on the following procedure with all users of our website, hoping that this "
-"will satisfy the law:"
+#: resources/views/page/sections/online-genealogy-privacy.phtml:39
+msgid "I would therefore like to agree on the following procedure with all users of our website, hoping that this will satisfy the law:"
+msgid_plural "We would therefore like to agree on the following procedure with all users of our website, hoping that this will satisfy the law:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:86
+#: resources/views/page/sections/online-genealogy-privacy.phtml:43
 msgid "If you discover data that you believe is unlawfully visible, please inform me."
 msgid_plural "If you discover data that you believe is unlawfully visible, please inform us."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:87
+#: resources/views/page/sections/online-genealogy-privacy.phtml:44
 msgid "I will then try as quickly as possible to obtain consent, remove visibility, or delete the data."
 msgid_plural "We will then try as quickly as possible to obtain consent, remove visibility, or delete the data."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/page/sections/data-rights.phtml:88
-msgid ""
-"If, for specific reasons, you want to prevent your data from being visible even within the group of authorized "
-"registered users, please inform me so that I can further restrict visibility here as well."
-msgid_plural ""
-"If, for specific reasons, you want to prevent your data from being visible even within the group of authorized "
-"registered users, please inform us so that we can further restrict visibility here as well."
+#: resources/views/page/sections/online-genealogy-privacy.phtml:45
+msgid "If, for specific reasons, you want to prevent your data from being visible even within the group of authorized registered users, please inform me so that I can further restrict visibility here as well."
+msgid_plural "If, for specific reasons, you want to prevent your data from being visible even within the group of authorized registered users, please inform us so that we can further restrict visibility here as well."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1281,9 +1034,7 @@ msgid "Communication data (device information, browser used, IP addresses, ...)"
 msgstr ""
 
 #: resources/views/page/sections/personal-data-processing.phtml:31
-msgid ""
-"To inform you fully about the use of personal data, you are asked to take note of the following privacy "
-"information."
+msgid "To inform you fully about the use of personal data, you are asked to take note of the following privacy information."
 msgstr ""
 
 #: resources/views/page/sections/purpose.phtml:9
@@ -1291,9 +1042,7 @@ msgid "This website processes personal data for the purposes of historical and g
 msgstr ""
 
 #: resources/views/page/sections/purpose.phtml:10
-msgid ""
-"It deals with family history research into my own family, more distant relatives by marriage, and the research "
-"of other persons, such as bearers of my family name."
+msgid "It deals with family history research into my own family, more distant relatives by marriage, and the research of other persons, such as bearers of my family name."
 msgstr ""
 
 #: resources/views/page/sections/purpose.phtml:14
@@ -1312,22 +1061,32 @@ msgstr ""
 msgid "Security measures, reach measurement, and improvement of the online presence"
 msgstr ""
 
+#: resources/views/page/sections/security-measures.phtml:9
+msgid ""
+"Appropriate technical and organizational measures are taken in accordance with legal requirements, taking into account the state of the art, implementation costs, the nature, scope, circumstances, and purposes of processing, "
+"and the varying likelihood and severity of the risk to the rights and freedoms of natural persons, in order to ensure a level of security appropriate to the risk."
+msgstr ""
+
+#: resources/views/page/sections/security-measures.phtml:11
+msgid "Transmission to a user browser is encrypted (https)."
+msgstr ""
+
+#: resources/views/page/sections/security-measures.phtml:16
+msgid "These measures include, in particular, securing the confidentiality, integrity, and availability of data, including by controlling access to the data."
+msgstr ""
+
 #: resources/views/page/sections/terminology.phtml:9
 msgid "Personal data"
 msgstr ""
 
 #: resources/views/page/sections/terminology.phtml:10
-msgid ""
-"means any information relating to an identified or identifiable natural person, hereinafter referred to as the "
-"data subject."
+msgid "means any information relating to an identified or identifiable natural person, hereinafter referred to as the data subject."
 msgstr ""
 
 #: resources/views/page/sections/terminology.phtml:11
 msgid ""
-"An identifiable natural person is one who can be identified, directly or indirectly, in particular by "
-"reference to an identifier such as a name, an identification number, location data, an online identifier, such "
-"as a cookie, or to one or more special characteristics that express the physical, physiological, genetic, "
-"mental, economic, cultural, or social identity of that data subject."
+"An identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier, such as a "
+"cookie, or to one or more special characteristics that express the physical, physiological, genetic, mental, economic, cultural, or social identity of that data subject."
 msgstr ""
 
 #: resources/views/page/sections/terminology.phtml:15
@@ -1343,399 +1102,436 @@ msgid "The term is broad and includes practically any handling of such data."
 msgstr ""
 
 #: resources/views/page/sections/terminology.phtml:22
+msgid "means the natural person who, alone or jointly with others, determines the purposes and means of the processing of personal data."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:22
+msgid "When external services are used, personal data may be transferred to these providers, companies, or persons or disclosed to them where this is necessary for the respective service."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:23
+msgid "Only those services that are configured and actually used by this website are listed here."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:29
+#, php-format
+msgid "External tracking or analytics services are used; see the section %s."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:31
+msgid "External tracking or analytics services are used."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:37
+msgid "This website uses additional third-party services."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:52
+msgid "not specified"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:62
+msgid "Map service providers"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:71
 msgid ""
-"means the natural person who, alone or jointly with others, determines the purposes and means of the "
-"processing of personal data."
+"This website may embed maps from OpenStreetMap. The map content is loaded from OpenStreetMap servers, and OpenStreetMap may process data such as IP addresses, displayed location data, and selected map settings to provide and "
+"cache the map functions."
 msgstr ""
 
-#: resources/views/settings.phtml:70 resources/views/settings.phtml:162 resources/views/settings.phtml:178
-#: resources/views/settings.phtml:200 resources/views/settings.phtml:244 resources/views/settings.phtml:302
-#: resources/views/settings.phtml:328 resources/views/settings.phtml:361 resources/views/settings.phtml:427
-#: resources/views/settings.phtml:451
-msgid "optional"
+#: resources/views/page/sections/third-party-services.phtml:74 resources/views/page/sections/third-party-services.phtml:111
+msgid "Data that may be processed by this service:"
 msgstr ""
 
-#: resources/views/settings.phtml:77
+#: resources/views/page/sections/third-party-services.phtml:78 resources/views/page/sections/third-party-services.phtml:115
+msgid "IP addresses"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:79
+msgid "Location data shown on maps"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:80
+msgid "Map display settings"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:88 resources/views/page/sections/third-party-services.phtml:126
+msgid "Privacy notice:"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:98
+msgid "Additional third-party service details"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:105
+msgid "Google Charts may be loaded from Google servers when statistics charts are viewed."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:107
+msgid "Gravatar may be loaded from Automattic servers when the responsible person image is displayed."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:116
+msgid "Browser request metadata"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:117
+msgid "Chart data shown on statistics pages"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:118
+msgid "E-mail address hash"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:137
+msgid "External transcription providers"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:140
+msgid "This website may use external transcription providers when a registered user explicitly starts such a workflow."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:141
+msgid "In that case, the following provider services and data categories may be involved:"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:150
+msgid "Data that may be exchanged:"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:167
+msgid "Data transfer to third countries"
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:170
+msgid "Some third-party services are provided from countries outside the European Union."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:171
+msgid ""
+"If personal data is transferred to such third countries, this is done only in accordance with the legal requirements of Articles 44 to 49 GDPR, for example on the basis of an adequacy decision, standard contractual clauses, "
+"or another legally permitted safeguard."
+msgstr ""
+
+#: resources/views/page/sections/third-party-services.phtml:175
+msgid "This may apply to the following services:"
+msgstr ""
+
+#: resources/views/settings.phtml:78
+msgid "In which sequence should the sections of the chapter \"Data protection\" be shown?"
+msgstr ""
+
+#: resources/views/settings.phtml:79 resources/views/settings.phtml:97
+msgid "Section"
+msgstr ""
+
+#: resources/views/settings.phtml:88
+#, php-format
+msgid "In which sequence should the subsections of \"%s\" be shown?"
+msgstr ""
+
+#: resources/views/settings.phtml:89
+msgid "Subsection"
+msgstr ""
+
+#: resources/views/settings.phtml:96
+msgid "In which sequence should the sections of the chapter \"Legal Regulations\" be shown?"
+msgstr ""
+
+#: resources/views/settings.phtml:106
+msgid "In which sequence should the main chapters be shown?"
+msgstr ""
+
+#: resources/views/settings.phtml:110
+msgid "Chapter"
+msgstr ""
+
+#: resources/views/settings.phtml:210
+msgid "Restore default sorting for all chapters and sections"
+msgstr ""
+
+#: resources/views/settings.phtml:220
 msgid "Should a copyright notice be included in this page footer element?"
 msgstr ""
 
-#: resources/views/settings.phtml:92
+#: resources/views/settings.phtml:235
 msgid "Start year of copyright (e.g. \"2020\")"
 msgstr ""
 
-#: resources/views/settings.phtml:101
+#: resources/views/settings.phtml:244
 msgid "Name of holder of copyright"
 msgstr ""
 
-#: resources/views/settings.phtml:108 resources/views/settings.phtml:173
+#: resources/views/settings.phtml:251 resources/views/settings.phtml:337
 msgid "mandatory"
 msgstr ""
 
-#: resources/views/settings.phtml:113
+#: resources/views/settings.phtml:256
 msgid "First name(s)"
 msgstr ""
 
-#: resources/views/settings.phtml:122
+#: resources/views/settings.phtml:265
 msgid "Surname(s)"
 msgstr ""
 
-#: resources/views/settings.phtml:140
+#: resources/views/settings.phtml:283
 msgid "Other sex"
 msgstr ""
 
-#: resources/views/settings.phtml:150
+#: resources/views/settings.phtml:293
 msgid "Should a gravatar image be shown (see www.gravatar.com)?"
 msgstr ""
 
-#: resources/views/settings.phtml:162
+#: resources/views/settings.phtml:310
+msgid "Does this website contain editorially prepared content that is not intended only for the family, such as blog posts or news articles?"
+msgstr ""
+
+#: resources/views/settings.phtml:320
+msgid "If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above."
+msgstr ""
+
+#: resources/views/settings.phtml:326
 msgid "Club or Organization"
 msgstr ""
 
-#: resources/views/settings.phtml:167
+#: resources/views/settings.phtml:331
 msgid "Name of club or organization"
 msgstr ""
 
-#: resources/views/settings.phtml:173
+#: resources/views/settings.phtml:337
 msgid "Address data"
 msgstr ""
 
-#: resources/views/settings.phtml:178
+#: resources/views/settings.phtml:342
 msgid "Additional address line"
 msgstr ""
 
-#: resources/views/settings.phtml:186
+#: resources/views/settings.phtml:350
 msgid "Street name and house number"
 msgstr ""
 
-#: resources/views/settings.phtml:194
+#: resources/views/settings.phtml:358
 msgid "City including zip code"
 msgstr ""
 
-#: resources/views/settings.phtml:200
+#: resources/views/settings.phtml:364
 msgid "Communication data"
 msgstr ""
 
-#: resources/views/settings.phtml:205
+#: resources/views/settings.phtml:369
 msgid "Phone number (including country prefix, e.g. \"+49 30 123456\")"
 msgstr ""
 
-#: resources/views/settings.phtml:213
+#: resources/views/settings.phtml:377
 msgid "Fax number (including country prefix, e.g. \"+49 30 654321\")"
 msgstr ""
 
-#: resources/views/settings.phtml:221
+#: resources/views/settings.phtml:385
 msgid "eMail address"
 msgstr ""
 
-#: resources/views/settings.phtml:231
+#: resources/views/settings.phtml:395
 msgid "Should a simple eMail link be used (if \"no\": subject and body of eMail are generated, too)?"
 msgstr ""
 
-#: resources/views/settings.phtml:244
+#: resources/views/settings.phtml:408
 msgid "Registration data"
 msgstr ""
 
-#: resources/views/settings.phtml:249
+#: resources/views/settings.phtml:413
 msgid "Label like \"VAT ID No.\" or other registration number label"
 msgstr ""
 
-#: resources/views/settings.phtml:257
+#: resources/views/settings.phtml:421
 msgid "Registration number"
 msgstr ""
 
-#: resources/views/settings.phtml:263
+#: resources/views/settings.phtml:427
 msgid "Additional contacts to be shown"
 msgstr ""
 
-#: resources/views/settings.phtml:271
+#: resources/views/settings.phtml:435
 msgid "Should the tree contacts be shown (there are maybe genealogical and technical contacts defined)?"
 msgstr ""
 
-#: resources/views/settings.phtml:288
+#: resources/views/settings.phtml:452
 msgid "Should the administrators of this website be shown?"
 msgstr ""
 
-#: resources/views/settings.phtml:302
+#: resources/views/settings.phtml:467
 msgid "Registered users"
 msgstr ""
 
-#: resources/views/settings.phtml:308
+#: resources/views/settings.phtml:473
 msgid "Are the registered users relatives or relatives by marriage?"
 msgstr ""
 
-#: resources/views/settings.phtml:318
-msgid ""
-"Select this only if registered users are limited to relatives or relatives by marriage and family-internal "
-"confidentiality should be stated in the privacy policy."
+#: resources/views/settings.phtml:483
+msgid "Select this only if registered users are limited to relatives or relatives by marriage and family-internal confidentiality should be stated in the privacy policy."
 msgstr ""
 
-#: resources/views/settings.phtml:321
+#: resources/views/settings.phtml:486
 #, php-format
 msgid "Registered users: %s"
 msgstr ""
 
-#: resources/views/settings.phtml:470
+#: resources/views/settings.phtml:496
 msgid "When are inactive user accounts deleted?"
 msgstr ""
 
-#: resources/views/settings.phtml:478
+#: resources/views/settings.phtml:504
 #, php-format
 msgid "after %s year"
 msgid_plural "after %s years"
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/settings.phtml:483
-msgid ""
-"If \"never\" is selected, no retention period for inactive user accounts is mentioned in the privacy policy."
+#: resources/views/settings.phtml:509
+msgid "If \"never\" is selected, no retention period for inactive user accounts is mentioned in the privacy policy."
 msgstr ""
 
-#: resources/views/settings.phtml:489
+#: resources/views/settings.phtml:512
 msgid "No user account has been inactive for at least one year."
 msgstr ""
 
-#: resources/views/settings.phtml:491
+#: resources/views/settings.phtml:514
 msgid "User accounts inactive for at least one year:"
 msgstr ""
 
-#: resources/views/settings.phtml:497
+#: resources/views/settings.phtml:522
 #, php-format
 msgid "%1$s: inactive since %2$s (%3$s year)."
 msgid_plural "%1$s: inactive since %2$s (%3$s years)."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/views/settings.phtml:328
+#: resources/views/settings.phtml:538
 msgid "Privacy policy reference date"
 msgstr ""
 
-#: resources/views/settings.phtml:332
+#: resources/views/settings.phtml:542
 msgid "Which date should be shown in the privacy policy?"
 msgstr ""
 
-#: resources/views/settings.phtml:339
+#: resources/views/settings.phtml:549
 msgid "Module release date"
 msgstr ""
 
-#: resources/views/settings.phtml:340
+#: resources/views/settings.phtml:550
 msgid "Manually configured date"
 msgstr ""
 
-#: resources/views/settings.phtml:341
+#: resources/views/settings.phtml:551
 msgid "Current date"
 msgstr ""
 
-#: resources/views/settings.phtml:346
-msgid ""
-"Use the current date only if you want the dynamically generated privacy policy to always show the day on which "
-"it is viewed."
+#: resources/views/settings.phtml:556
+msgid "Use the current date only if you want the dynamically generated privacy policy to always show the day on which it is viewed."
 msgstr ""
 
-#: resources/views/settings.phtml:351
+#: resources/views/settings.phtml:561
 msgid "Manual privacy policy date"
 msgstr ""
 
-#: resources/views/settings.phtml:356
+#: resources/views/settings.phtml:566
 msgid "Used only when the manually configured date option is selected."
 msgstr ""
 
-#: resources/views/settings.phtml:361
-msgid "Hosting service"
-msgstr ""
-
-#: resources/views/settings.phtml:366
+#: resources/views/settings.phtml:572
 msgid "Server location"
 msgstr ""
 
-#: resources/views/settings.phtml:366
+#: resources/views/settings.phtml:577
 msgid "Country of the webtrees server location"
 msgstr ""
 
-#: resources/views/settings.phtml:374
+#: resources/views/settings.phtml:585
+msgid "Hosting service"
+msgstr ""
+
+#: resources/views/settings.phtml:590
 msgid "Name of hosting service company"
 msgstr ""
 
-#: resources/views/settings.phtml:382
+#: resources/views/settings.phtml:598
 msgid "Hosting service link (URL)"
 msgstr ""
 
-#: resources/views/settings.phtml:390
+#: resources/views/settings.phtml:606
 msgid "Hosting service link to privacy notice (URL)"
 msgstr ""
 
-#: resources/views/settings.phtml:399
+#: resources/views/settings.phtml:615
 msgid "Should a section about Order Processing agreement be shown?"
 msgstr ""
 
-#: resources/views/settings.phtml:412
+#: resources/views/settings.phtml:628
 msgid "First date of Order Processing agreement"
 msgstr ""
 
-#: resources/views/settings.phtml:420
+#: resources/views/settings.phtml:636
 msgid "Last date of Order Processing agreement"
 msgstr ""
 
-#: resources/views/settings.phtml:427
+#: resources/views/settings.phtml:649
+msgid "Protection period after death"
+msgstr ""
+
+#: resources/views/settings.phtml:655
+msgid "For how many years after death should particularly sensitive genealogical data remain protected?"
+msgstr ""
+
+#: resources/views/settings.phtml:656
+msgid "Use 0 if no specific release period should be stated in the privacy policy."
+msgstr ""
+
+#: resources/views/settings.phtml:657
+msgid "The same period should be used by the privacy assistant when applying RESN CONFIDENTIAL automatically."
+msgstr ""
+
+#: resources/views/settings.phtml:664
 msgid "Supervisory authority"
 msgstr ""
 
-#: resources/views/settings.phtml:431
+#: resources/views/settings.phtml:668
 msgid "Name of the competent supervisory authority"
 msgstr ""
 
-#: resources/views/settings.phtml:436
+#: resources/views/settings.phtml:673
 msgid "If this field is empty, no specific supervisory authority is named in the privacy policy."
 msgstr ""
 
-#: resources/views/settings.phtml:441
+#: resources/views/settings.phtml:678
 msgid "URL of the competent supervisory authority"
 msgstr ""
 
-#: resources/views/settings.phtml:446
+#: resources/views/settings.phtml:683
 msgid "The specific supervisory authority is linked only when both name and URL are configured."
 msgstr ""
 
-#: resources/views/settings.phtml:451
+#: resources/views/settings.phtml:690
 msgid "External services"
 msgstr ""
 
-#: resources/views/settings.phtml:457
+#: resources/views/settings.phtml:696
 msgid "Should Google Charts be mentioned as an external service?"
 msgstr ""
 
-#: resources/views/settings.phtml:467
+#: resources/views/settings.phtml:706
 #, php-format
 msgid "webtrees statistics pages can load Google Charts from %s."
 msgstr ""
 
-#: resources/views/settings.phtml:468
-msgid ""
-"Google Charts is only listed when this option is enabled and the webtrees statistics chart module is enabled."
+#: resources/views/settings.phtml:707
+msgid "Google Charts is only listed when this option is enabled and the webtrees statistics chart module is enabled."
 msgstr ""
 
-#: resources/views/settings.phtml:475
+#: resources/views/settings.phtml:714
 msgid "Additional third-party services"
 msgstr ""
 
-#: resources/views/settings.phtml:480
+#: resources/views/settings.phtml:719
 #, php-format
-msgid ""
-"Enter one service per line using the format “Name | URL | Country”. The country is optional, but should be "
-"provided when known. Example: %s"
-msgstr ""
-
-#: resources/views/settings.phtml:486
-msgid "In which sequence should the main chapters be shown?"
-msgstr ""
-
-#: resources/views/settings.phtml:490
-msgid "Chapter"
-msgstr ""
-
-#: resources/views/settings.phtml:533
-msgid "In which sequence should the sections of the chapter \"Data protection\" be shown?"
-msgstr ""
-
-#: resources/views/settings.phtml:77
-msgid "In which sequence should the subsections of \"%s\" be shown?"
-msgstr ""
-
-#: resources/views/settings.phtml:537 resources/views/settings.phtml:584
-msgid "Section"
-msgstr ""
-
-#: resources/views/settings.phtml:78
-msgid "Subsection"
-msgstr ""
-
-#: resources/views/settings.phtml:580
-msgid "In which sequence should the sections of the chapter \"Legal Regulations\" be shown?"
-msgstr ""
-
-#: resources/views/settings.phtml:628
-msgid "Restore default sorting for all chapters and sections"
-msgstr ""
-
-#: resources/views/page/header.phtml:103
-msgid "Editorially responsible person according to Section 18 paragraph 2 MStV"
-msgstr ""
-
-#: resources/views/page/header.phtml:103
-msgid "Editorially responsible person"
-msgstr ""
-
-#: resources/views/page/header.phtml:105
-msgid "In addition to genealogical data, this website also contains editorially prepared content addressed to the general public, such as explanations of family history, the software used, or historical topics."
-msgstr ""
-
-#: resources/views/page/header.phtml:106
-#, php-format
-msgid "Responsible for this content is: %s. Address: see above."
-msgstr ""
-
-#: resources/views/settings.phtml:309
-msgid "Does this website contain editorially prepared content that is not intended only for the family, such as blog posts or news articles?"
-msgstr ""
-
-#: resources/views/settings.phtml:319
-msgid "If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above."
-msgstr ""
-
-#: LegalNoticeFooterModule.php
-msgid "Invalid protection period for sensitive data. The default value was used."
-msgstr ""
-
-#: src/LegalNoticeSupport.php resources/views/settings.phtml
-msgid "Special categories of personal data"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml
-msgid "Genealogical records may contain particularly sensitive personal data where such information is relevant to family history or historical research."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml
-msgid "This can include ethnic origin, physical characteristics, political opinions or affiliations, religious or philosophical beliefs, trade union or party membership, genetic data, and health data including causes of death."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml
-msgid "Information about criminal convictions or offences may also occur in historical sources."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml
-msgid "The legal basis for processing special categories of personal data is Article 9(2)(j) GDPR for historical research purposes."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml
-msgid "Information about criminal convictions and offences is processed in accordance with Article 10 GDPR."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml
-msgid "Where German law applies, Section 27 BDSG may also apply."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml
-msgid "These facts are protected by graduated access rights and GEDCOM restrictions."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml
-#, php-format
-msgid "They are released for wider access no earlier than %s year after the death of the person concerned."
-msgid_plural "They are released for wider access no earlier than %s years after the death of the person concerned."
-msgstr[0] ""
-msgstr[1] ""
-
-#: resources/views/settings.phtml
-msgid "Protection period after death"
-msgstr ""
-
-#: resources/views/settings.phtml
-msgid "For how many years after death should particularly sensitive genealogical data remain protected?"
-msgstr ""
-
-#: resources/views/settings.phtml
-msgid "Use 0 if no specific release period should be stated in the privacy policy."
-msgstr ""
-
-#: resources/views/settings.phtml
-msgid "The same period should be used by the privacy assistant when applying RESN CONFIDENTIAL automatically."
+msgid "Enter one service per line using the format “Name | URL | Country”. The country is optional, but should be provided when known. Example: %s"
 msgstr ""
