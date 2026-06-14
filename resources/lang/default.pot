@@ -79,7 +79,11 @@ msgstr ""
 msgid "This website uses cookies."
 msgstr ""
 
-#: LegalNoticeFooterModule.php:969
+#: LegalNoticeFooterModule.php:1043
+msgid "Provider"
+msgstr ""
+
+#: resources/views/page/sections/terminology.phtml:21
 msgid "Responsible person"
 msgstr ""
 

@@ -97,7 +97,11 @@ msgstr "und Datenschutzerklärung"
 msgid "This website uses cookies."
 msgstr "Diese Website verwendet Cookies."
 
-#: LegalNoticeFooterModule.php:969
+#: LegalNoticeFooterModule.php:1043
+msgid "Provider"
+msgstr "Anbieter"
+
+#: resources/views/page/sections/terminology.phtml:21
 msgid "Responsible person"
 msgstr "Verantwortliche Person"
 
