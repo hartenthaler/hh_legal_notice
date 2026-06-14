@@ -647,6 +647,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'austria' => 'Austria',
             'schweiz' => 'Schweiz',
             'switzerland' => 'Switzerland',
+            'usa', 'u.s.a.', 'us' => 'USA',
+            'united states', 'united states of america' => 'United States',
             default => ucfirst($country),
         };
     }
