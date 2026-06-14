@@ -8,7 +8,7 @@
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
-Current module version: **2.2.6.2**.
+Current module version: **2.2.6.3**.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
@@ -52,8 +52,8 @@ There may be a need to present a legal notice on your website:
 <a name="Scope"></a>
 ## 🔎 Scope
 
-The webtrees admin can define the following data fields in the control panel for the responsible person
-* name of responsible person
+The webtrees admin can define the following data fields in the control panel for the provider named in the legal notice
+* name of provider
 * name of genealogical club or organization
 * address
 * phone and fax numbers
@@ -62,14 +62,14 @@ The webtrees admin can define the following data fields in the control panel for
 
 The webtrees admin can choose if the following additional parts should be shown
 * copyright notice in the footer
-* image of the responsible person using the [Gravatar](https://gravatar.com/)
+* image of the provider using the [Gravatar](https://gravatar.com/)
 * list of contact persons for a tree (genealogical and technical)
 * list of administrators of this site with their contact links
 * editorial responsibility notice according to § 18 Abs. 2 MStV, where applicable
 * optional consumer dispute resolution notice for websites whose server is located in the European Union
 
 The generated page is structured into three parts:
-* **Legal Notice** with the responsible person and contact details; this part is always shown.
+* **Legal Notice** with the provider and contact details; this part is always shown.
 * **Privacy Policy** with several configurable sections; this chapter is optional.
 * **Legal Regulations** with several configurable sections; this chapter is optional.
 
@@ -77,9 +77,9 @@ The optional chapters and their sections can be reordered and individually enabl
 There are two styles provided for those sections: "I" style and "We" style,
 depending on the number of website administrators.
 
-If a tree contact or website administrator is the same person as the responsible person named in the legal notice,
+If a tree contact or website administrator is the same person as the provider named in the legal notice,
 the module avoids showing this person as a separate additional contact.
-Instead, the relevant contact role is shown directly below the responsible person.
+Instead, the relevant contact role is shown directly below the provider as an additional role.
 
 The administrator can also configure the server location, hosting provider, supervisory authority,
 third-party services, and whether registered users are relatives or relatives by marriage.
@@ -88,9 +88,10 @@ The generated privacy policy can include, depending on the configuration and ser
 * references to German, European, or no specific regional data-protection law
 * legal bases for processing under the GDPR where EU law applies
 * a named competent supervisory authority with URL
-* data protection contact information referring to the responsible person named in the legal notice
+* data protection contact information referring to the provider named in the legal notice
 * information about hosting, structured order-processing agreement dates, application logs, third-party services, tracking and analytics, and third-country transfers
 * information about retention periods for inactive user accounts
+* information that registered users can view, correct, or delete account data in their profile settings
 * information about the long-term preservation of genealogical data as historically relevant material
 * information about special categories of genealogical personal data and their protection period after death
 * information about external transcription providers when compatible modules provide such notices
@@ -105,18 +106,15 @@ The legal-regulations chapter can include notices about copyright, distribution 
 automated collection, scraping, data mining, AI-system use, and copyright enforcement.
 
 <a name="WhatsNew"></a>
-## ✨ What's new in 2.2.6.2
+## ✨ What's new in 2.2.6.3
 
-This release expands the legal notice and privacy policy configuration in several areas:
+This release refines the legal notice wording and privacy-policy details:
 
-* More flexible section ordering and visibility controls, especially within the privacy policy.
-* Improved rendering and styling for heading levels and dark themes.
-* A dedicated tracking and analytics disclosure with service details and third-country-transfer handling.
-* Configurable retention wording for inactive user accounts, including an admin-side decision aid.
-* A configurable privacy-policy subsection for special categories of genealogical personal data, including a post-death protection period.
-* Structured date fields and validation for hosting order-processing agreements.
-* Optional editorial responsibility notice for public editorial content, with § 18 Abs. 2 MStV wording for German legal notices.
-* Additional copyright wording covering automated collection, scraping, data mining, and AI-system use.
+* The legal notice now uses a separate provider heading, avoiding confusion with the GDPR term "responsible person".
+* Additional roles of the provider, such as tree contact or website administrator, are shown as bullet points and explicitly described as additional roles.
+* Temporarily unavailable sections keep their stored order and visibility settings when they become available again.
+* The predefined Statcounter service location is now United States.
+* The privacy policy now states that registered users can view, correct, or delete account data in their profile settings.
 
 <a name="Screenshots"></a>
 ## 🖼 Screenshots
@@ -210,7 +208,7 @@ This module does not collect analytics data, does not track users, and does not 
 
 When the **webtrees** control panel is opened, the module checks whether a newer version is available. This version check requests only the module's public latest-version URL on `github.com`.
 
-The module can optionally show an image of the responsible person through [Gravatar](https://gravatar.com/). If this option is enabled, the visitor's browser requests an image from `www.gravatar.com`; the configured e-mail address is used only as a hash in the Gravatar image URL. Gravatar may process the visitor's IP address and normal browser request metadata. The generated privacy policy can list Gravatar as a third-party service and can mention possible third-country transfer where EU data-protection law applies.
+The module can optionally show an image of the provider through [Gravatar](https://gravatar.com/). If this option is enabled, the visitor's browser requests an image from `www.gravatar.com`; the configured e-mail address is used only as a hash in the Gravatar image URL. Gravatar may process the visitor's IP address and normal browser request metadata. The generated privacy policy can list Gravatar as a third-party service and can mention possible third-country transfer where EU data-protection law applies.
 
 The generated privacy policy can also mention [Google Charts](https://developers.google.com/chart) when the administrator enables this option and the webtrees statistics chart module is active. Google Charts may be loaded from Google servers when statistics charts are viewed.
 
