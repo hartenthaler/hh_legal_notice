@@ -1067,11 +1067,23 @@ msgid ""
 "and the varying likelihood and severity of the risk to the rights and freedoms of natural persons, in order to ensure a level of security appropriate to the risk."
 msgstr ""
 
-#: resources/views/page/sections/security-measures.phtml:11
-msgid "Transmission to a user browser is encrypted (https)."
+#: resources/views/page/sections/security-measures.phtml:13
+msgid "SSL or TLS encryption"
 msgstr ""
 
 #: resources/views/page/sections/security-measures.phtml:16
+msgid "This site uses SSL or TLS encryption to protect the transmission of data."
+msgstr ""
+
+#: resources/views/page/sections/security-measures.phtml:17
+msgid "You can recognize an encrypted connection by the fact that the browser address bar contains “https://”, usually also indicated by a lock symbol in your browser bar."
+msgstr ""
+
+#: resources/views/page/sections/security-measures.phtml:18
+msgid "When SSL or TLS encryption is enabled, the data transmitted cannot be read by third parties."
+msgstr ""
+
+#: resources/views/page/sections/security-measures.phtml:23
 msgid "These measures include, in particular, securing the confidentiality, integrity, and availability of data, including by controlling access to the data."
 msgstr ""
 
