@@ -429,7 +429,7 @@ msgstr ""
 "Gegevensbescherming (AVG)."
 
 msgid "In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular the Federal Data Protection Act (BDSG)."
-msgstr "Naast de Algemene Verordening Gegevensbescherming (EU-AVG) kunnen ook nationale Duitse gegevensbeschermingsregels van toepassing zijn, met namer de Bundesdatenschutzgesetz (BDSG)."
+msgstr "Naast de Algemene Verordening Gegevensbescherming (EU-AVG) kunnen ook nationale Duitse gegevensbeschermingsregels van toepassing zijn, met name de Bundesdatenschutzgesetz (BDSG)."
 
 msgid "Legal bases for processing"
 msgstr "Rechtsgrondslagen voor de verwerking"
