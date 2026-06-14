@@ -9,6 +9,10 @@ use Fisharebest\Webtrees\I18N;
         <?= I18N::translate('Appropriate technical and organizational measures are taken in accordance with legal requirements, taking into account the state of the art, implementation costs, the nature, scope, circumstances, and purposes of processing, and the varying likelihood and severity of the risk to the rights and freedoms of natural persons, in order to ensure a level of security appropriate to the risk.') ?>
     </p>
 
+    <p>
+        <?= I18N::translate('These measures include, in particular, securing the confidentiality, integrity, and availability of data, including by controlling access to the data.') ?>
+    </p>
+
     <?php if ($https) : ?>
         <h5><?= I18N::translate('SSL or TLS encryption') ?></h5>
 
@@ -18,7 +22,3 @@ use Fisharebest\Webtrees\I18N;
             <?= I18N::translate('When SSL or TLS encryption is enabled, the data transmitted cannot be read by third parties.') ?>
         </p>
     <?php endif ?>
-
-    <p>
-        <?= I18N::translate('These measures include, in particular, securing the confidentiality, integrity, and availability of data, including by controlling access to the data.') ?>
-    </p>
