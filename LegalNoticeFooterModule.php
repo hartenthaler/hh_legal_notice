@@ -1040,7 +1040,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'title'                     => $this->title(),
             'tree'                      => $tree,
             'legalNoticeTitle'          => I18N::translate('Legal Notice'),
-            'legalNoticeHead1'          => I18N::translate('Responsible person'),
+            'legalNoticeHead1'          => I18N::translate('Provider'),
             'legalNoticeHead2'          => I18N::translate('This website is operated by:'),
             'privacyPolicyDate'         => $this->formattedPrivacyPolicyDate(),
             'responsibleName'           => $responsibleName,
