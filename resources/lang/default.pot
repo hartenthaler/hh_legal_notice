@@ -356,9 +356,8 @@ msgstr ""
 msgid ""
 "The content and works created by me and the registered users on this website are subject to copyright. If you "
 "contribute content as a registered user of this website, you grant me an irrevocable, non-exclusive license to "
-"use this content. The distribution and any kind of exploitation of the content of this website outside the "
-"limits of copyright require my written consent. Commercial use of the information provided here is generally "
-"prohibited."
+"use this content. This is necessary because contributed information becomes part of a shared genealogical data "
+"collection that cannot practically be separated into individual contributions later."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:214
@@ -366,9 +365,8 @@ msgstr ""
 msgid ""
 "The content and works created by me and the registered users on this website are subject to copyright in %s. "
 "If you contribute content as a registered user of this website, you grant me an irrevocable, non-exclusive "
-"license to use this content. The distribution and any kind of exploitation of the content of this website "
-"outside the limits of copyright require my written consent. Commercial use of the information provided here is "
-"generally prohibited."
+"license to use this content. This is necessary because contributed information becomes part of a shared "
+"genealogical data collection that cannot practically be separated into individual contributions later."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:247
@@ -378,10 +376,10 @@ msgid ""
 "prior written consent."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:216 src/LegalNoticeSupport.php:224
+#: src/LegalNoticeSupport.php:216
 msgid ""
-"This is necessary because contributed information becomes part of a shared genealogical data collection that "
-"cannot practically be separated into individual contributions later."
+"The distribution and any kind of exploitation of the content of this website outside the limits of copyright "
+"require my written consent. Commercial use of the information provided here is generally prohibited."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:249
@@ -414,9 +412,8 @@ msgstr ""
 msgid ""
 "The content and works created by us and by the registered users on this website are subject to copyright. If "
 "you contribute content as a registered user of this website, you grant us an irrevocable, non-exclusive "
-"license to use this content. The distribution and any kind of exploitation of the content of this website "
-"outside the limits of copyright require our written consent. Commercial use of the information provided here "
-"is generally prohibited."
+"license to use this content. This is necessary because contributed information becomes part of a shared "
+"genealogical data collection that cannot practically be separated into individual contributions later."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:222
@@ -424,9 +421,14 @@ msgstr ""
 msgid ""
 "The content and works created by us and by the registered users on this website are subject to copyright in "
 "%s. If you contribute content as a registered user of this website, you grant us an irrevocable, non-exclusive "
-"license to use this content. The distribution and any kind of exploitation of the content of this website "
-"outside the limits of copyright require our written consent. Commercial use of the information provided here "
-"is generally prohibited."
+"license to use this content. This is necessary because contributed information becomes part of a shared "
+"genealogical data collection that cannot practically be separated into individual contributions later."
+msgstr ""
+
+#: src/LegalNoticeSupport.php:224
+msgid ""
+"The distribution and any kind of exploitation of the content of this website outside the limits of copyright "
+"require our written consent. Commercial use of the information provided here is generally prohibited."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:255
