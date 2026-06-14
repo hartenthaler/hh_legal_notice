@@ -851,10 +851,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $params = (array) $request->getParsedBody();
         $order = Validator::parsedBody($request)->string('resetOrder', '') === '1'
             ? $this->defaultChapterOrder()
-            : $this->validatedChapterOrder($params['order'] ?? []);
+            : $this->validatedChapterOrder($params['order'] ?? [], $this->storedChapterOrder());
 
         $this->setPreference('order', implode(',', $order));
-        foreach (LegalNoticeSupport::listChapterKeys() as $chapterKey) {
+        foreach ($this->submittedChapterKeys($params['order'] ?? []) as $chapterKey) {
             $this->setPreference('status-' . $chapterKey, '0');
         }
         foreach ($params as $key => $value) {
@@ -873,22 +873,83 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
+     * @return array<int,string>
+     */
+    private function storedChapterOrder(): array
+    {
+        return explode(',', $this->getPreference('order', implode(',', $this->defaultChapterOrder())));
+    }
+
+    /**
+     * @param mixed $submittedOrder
+     * @param array<int,string> $previousOrder
+     *
+     * @return array<int,string>
+     */
+    private function validatedChapterOrder(mixed $submittedOrder, array $previousOrder): array
+    {
+        if (!is_array($submittedOrder)) {
+            return $this->defaultChapterOrder();
+        }
+
+        $submittedOrder = $this->submittedChapterKeys($submittedOrder);
+        $submittedLookup = array_flip($submittedOrder);
+        $submittedIndex = 0;
+        $order = [];
+
+        foreach ($this->completeChapterOrder($previousOrder) as $chapterKey) {
+            $order[] = isset($submittedLookup[$chapterKey])
+                ? $submittedOrder[$submittedIndex++]
+                : $chapterKey;
+        }
+
+        return $this->completeChapterOrder($order);
+    }
+
+    /**
      * @param mixed $submittedOrder
      *
      * @return array<int,string>
      */
-    private function validatedChapterOrder(mixed $submittedOrder): array
+    private function submittedChapterKeys(mixed $submittedOrder): array
     {
-        $defaultOrder = $this->defaultChapterOrder();
-
         if (!is_array($submittedOrder)) {
-            return $defaultOrder;
+            return [];
         }
 
         $submittedOrder = array_filter($submittedOrder, static fn (mixed $chapterKey): bool => is_string($chapterKey));
-        $order = array_values(array_intersect($submittedOrder, $defaultOrder));
 
-        return array_values(array_unique([...$order, ...$defaultOrder]));
+        return array_values(array_unique(array_intersect($submittedOrder, $this->defaultChapterOrder())));
+    }
+
+    /**
+     * @param array<int,string> $order
+     *
+     * @return array<int,string>
+     */
+    private function completeChapterOrder(array $order): array
+    {
+        $defaultOrder = $this->defaultChapterOrder();
+        $order = array_values(array_unique(array_intersect($order, $defaultOrder)));
+
+        foreach ($defaultOrder as $defaultIndex => $chapterKey) {
+            if (in_array($chapterKey, $order, true)) {
+                continue;
+            }
+
+            $insertAt = count($order);
+            foreach ($order as $orderIndex => $orderedChapterKey) {
+                $orderedDefaultIndex = array_search($orderedChapterKey, $defaultOrder, true);
+                if ($orderedDefaultIndex !== false && $orderedDefaultIndex > $defaultIndex) {
+                    $insertAt = $orderIndex;
+                    break;
+                }
+            }
+
+            array_splice($order, $insertAt, 0, [$chapterKey]);
+        }
+
+        return $order;
     }
 
     /**
@@ -1730,13 +1791,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function getChapters(ServerRequestInterface $request): array
     {
-        $listChapterKeys = LegalNoticeSupport::listChapterKeys();
-        $orderDefault = implode(',', $listChapterKeys);
-        $order = explode(',', $this->getPreference('order', $orderDefault));
-
-        if (count($listChapterKeys) > count($order)) {
-            $this->addChapters($listChapterKeys, $order);
-        }
+        $order = $this->completeChapterOrder($this->storedChapterOrder());
 
         $parameters = LegalNoticeSupport::getChapterParameters();
         $privacyLawRegion = $this->privacyLawRegion();
@@ -1766,21 +1821,6 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             }
         }
         return $chaptersList;
-    }
-
-    /**
-     * add chapters, which are newly defined
-     * @param array $listChapters list of chapters defined by this module
-     * @param array $order list of ordered chapters out of parameters
-     */
-    private function addChapters(array $listChapters, array &$order)
-    {
-
-        foreach ($listChapters as $chapter) {
-            if (!in_array($chapter, $order)) {
-                $order[] = $chapter;                 // add new chapters at the end of the list
-            }
-        }
     }
 
     /**
