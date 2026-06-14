@@ -92,7 +92,14 @@ The generated privacy policy can include, depending on the configuration and ser
 * information about hosting, structured order-processing agreement dates, application logs, third-party services, tracking and analytics, and third-country transfers
 * information about retention periods for inactive user accounts
 * information about the long-term preservation of genealogical data as historically relevant material
+* information about special categories of genealogical personal data and their protection period after death
 * information about external transcription providers when compatible modules provide such notices
+
+For special categories of personal data, such as religious affiliation, political affiliation,
+genetic data, health data, or causes of death, the administrator can configure a protection period
+from 0 to 100 years after death. The default is 10 years. If EU data-protection law applies based
+on the configured server location, the generated privacy policy also mentions the applicable GDPR
+legal bases for these special categories.
 
 The legal-regulations chapter can include notices about copyright, distribution of genealogical data,
 automated collection, scraping, data mining, AI-system use, and copyright enforcement.
@@ -106,6 +113,7 @@ This release expands the legal notice and privacy policy configuration in severa
 * Improved rendering and styling for heading levels and dark themes.
 * A dedicated tracking and analytics disclosure with service details and third-country-transfer handling.
 * Configurable retention wording for inactive user accounts, including an admin-side decision aid.
+* A configurable privacy-policy subsection for special categories of genealogical personal data, including a post-death protection period.
 * Structured date fields and validation for hosting order-processing agreements.
 * Optional editorial responsibility notice for public editorial content, with § 18 Abs. 2 MStV wording for German legal notices.
 * Additional copyright wording covering automated collection, scraping, data mining, and AI-system use.

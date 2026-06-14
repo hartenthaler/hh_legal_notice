@@ -34,6 +34,36 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <?= I18N::translate('In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular the Federal Data Protection Act (BDSG).') ?>
                 </p>
             <?php endif ?>
+        <?php elseif ($subsection->getKey() === 'SensitiveData') : ?>
+            <h4><?= e($subsection->getHeading()) ?></h4>
+
+            <p>
+                <?= I18N::translate('Genealogical records may contain particularly sensitive personal data where such information is relevant to family history or historical research.') ?>
+                <?= I18N::translate('This can include ethnic origin, physical characteristics, political opinions or affiliations, religious or philosophical beliefs, trade union or party membership, genetic data, and health data including causes of death.') ?>
+                <?= I18N::translate('Information about criminal convictions or offences may also occur in historical sources.') ?>
+            </p>
+
+            <?php if ($useEuPrivacyLaw) : ?>
+                <p>
+                    <?= I18N::translate('The legal basis for processing special categories of personal data is Article 9(2)(j) GDPR for historical research purposes.') ?>
+                    <?= I18N::translate('Information about criminal convictions and offences is processed in accordance with Article 10 GDPR.') ?>
+                    <?php if ($useGermanPrivacyLaw) : ?>
+                        <?= I18N::translate('Where German law applies, Section 27 BDSG may also apply.') ?>
+                    <?php endif ?>
+                </p>
+            <?php endif ?>
+
+            <p>
+                <?= I18N::translate('These facts are protected by graduated access rights and GEDCOM restrictions.') ?>
+                <?php if ($sensitiveDataYears > 0) : ?>
+                    <?= I18N::plural(
+                        'They are released for wider access no earlier than %s year after the death of the person concerned.',
+                        'They are released for wider access no earlier than %s years after the death of the person concerned.',
+                        $sensitiveDataYears,
+                        I18N::number($sensitiveDataYears)
+                    ) ?>
+                <?php endif ?>
+            </p>
         <?php elseif ($subsection->getKey() === 'AccessRights') : ?>
             <h4><?= e($subsection->getHeading()) ?></h4>
 
