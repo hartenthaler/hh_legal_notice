@@ -172,7 +172,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         'statcounter' => [
             'name' => 'Statcounter™',
             'url' => 'https://statcounter.com',
-            'country' => 'Ireland',
+            'country' => 'United States',
         ],
     ];
 
