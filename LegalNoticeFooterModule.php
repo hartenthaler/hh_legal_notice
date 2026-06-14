@@ -638,14 +638,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function normalizeHostingCountry(string $country): string
     {
-        $country = $this->normalizeCountryToken($country);
+        $country = $this->canonicalCountryToken($country);
 
         return match ($country) {
-            'deutschland' => 'Deutschland',
             'germany' => 'Germany',
-            'österreich', 'oesterreich' => 'Österreich',
             'austria' => 'Austria',
-            'schweiz' => 'Schweiz',
             'switzerland' => 'Switzerland',
             'usa', 'u.s.a.', 'us' => 'USA',
             'united states', 'united states of america' => 'United States',
@@ -655,7 +652,23 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function normalizeCountryToken(string $country): string
     {
-        return strtolower(trim((string) preg_replace('/\s+/', ' ', $country)));
+        $country = trim((string) preg_replace('/\s+/', ' ', $country));
+
+        return function_exists('mb_strtolower')
+            ? mb_strtolower($country, 'UTF-8')
+            : strtolower(strtr($country, ['Ä' => 'ä', 'Ö' => 'ö', 'Ü' => 'ü']));
+    }
+
+    private function canonicalCountryToken(string $country): string
+    {
+        return match ($this->normalizeCountryToken($country)) {
+            'deutschland' => 'germany',
+            'österreich', 'oesterreich' => 'austria',
+            'schweiz' => 'switzerland',
+            'frankreich' => 'france',
+            'niederlande', 'holland' => 'netherlands',
+            default => $this->normalizeCountryToken($country),
+        };
     }
 
     private function validatedYear(string $value): string
@@ -1568,7 +1581,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function privacyLawRegion(): string
     {
-        $country = $this->normalizeCountryToken($this->hostingCountry());
+        $country = $this->canonicalCountryToken($this->hostingCountry());
 
         if ($country === '') {
             return self::PRIVACY_LAW_OTHER;
@@ -1585,29 +1598,29 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function isEuPrivacyCountry(string $country): bool
     {
-        $country = $this->normalizeCountryToken($country);
+        $country = $this->canonicalCountryToken($country);
 
         return $this->isGermany($country) || $this->isAustria($country) || in_array($country, self::EU_GDPR_COUNTRIES, true);
     }
 
     private function isGermany(string $country): bool
     {
-        return in_array(strtolower(trim($country)), ['germany', 'deutschland'], true);
+        return $this->canonicalCountryToken($country) === 'germany';
     }
 
     private function isAustria(string $country): bool
     {
-        return in_array(strtolower(trim($country)), ['austria', 'österreich', 'oesterreich'], true);
+        return $this->canonicalCountryToken($country) === 'austria';
     }
 
     private function isSwitzerland(string $country): bool
     {
-        return in_array(strtolower(trim($country)), ['switzerland', 'schweiz'], true);
+        return $this->canonicalCountryToken($country) === 'switzerland';
     }
 
     private function legalNoticeLawReference(): string
     {
-        $country = $this->normalizeCountryToken($this->hostingCountry());
+        $country = $this->canonicalCountryToken($this->hostingCountry());
 
         if ($country === '') {
             return '';
