@@ -1882,11 +1882,23 @@ msgstr ""
 "Maßnahmen getroffen, um ein dem Risiko angemessenes Schutzniveau zu "
 "gewährleisten."
 
-#: resources/views/page/sections/security-measures.phtml:11
-msgid "Transmission to a user browser is encrypted (https)."
-msgstr "Die Übertragung zum Browser eines Nutzers ist verschlüsselt (https)."
+#: resources/views/page/sections/security-measures.phtml:13
+msgid "SSL or TLS encryption"
+msgstr "SSL- bzw. TLS-Verschlüsselung"
 
 #: resources/views/page/sections/security-measures.phtml:16
+msgid "This site uses SSL or TLS encryption to protect the transmission of data."
+msgstr "Diese Seite nutzt zum Schutz der Übertragung eine SSL- bzw. TLS-Verschlüsselung."
+
+#: resources/views/page/sections/security-measures.phtml:17
+msgid "You can recognize an encrypted connection by the fact that the browser address bar contains “https://”, usually also indicated by a lock symbol in your browser bar."
+msgstr "Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers „https://“ enthält, was zusätzlich meist durch ein Schloss-Symbol in Ihrer Browserzeile angezeigt wird."
+
+#: resources/views/page/sections/security-measures.phtml:18
+msgid "When SSL or TLS encryption is enabled, the data transmitted cannot be read by third parties."
+msgstr "Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die übermittelten Daten nicht von Dritten mitgelesen werden."
+
+#: resources/views/page/sections/security-measures.phtml:23
 msgid ""
 "These measures include, in particular, securing the confidentiality, "
 "integrity, and availability of data, including by controlling access to the "
