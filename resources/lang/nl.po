@@ -1905,30 +1905,28 @@ msgstr ""
 "Deze website verwerkt persoonsgegevens ten behoeve van historisch en "
 "genealogisch onderzoek."
 
-#: resources/views/page/sections/purpose.phtml:10
+#: LegalNoticeFooterModule.php:713
 msgid ""
-"It deals with family history research into my own family, more distant "
-"relatives by marriage, and the research of other persons, such as bearers of "
-"my family name."
+"This website deals with family history research into my own family and "
+"relatives by marriage."
 msgstr ""
-"Het betreft familiehistorisch onderzoek naar mijn eigen familie, verder "
-"verwante aangetrouwde familieleden en onderzoek naar andere personen, zoals "
-"dragers van mijn familienaam."
+"Deze website houdt zich bezig met familiehistorisch onderzoek naar mijn "
+"eigen familie en aangetrouwde familieleden."
 
-#: resources/views/page/sections/purpose.phtml:14
+#: resources/views/page/sections/purpose.phtml:13
 msgid "This includes:"
 msgstr "Dit omvat:"
 
-#: resources/views/page/sections/purpose.phtml:17
+#: resources/views/page/sections/purpose.phtml:16
 msgid "Providing the online service, its functions, and its content"
 msgstr "Het aanbieden van de onlinedienst, de functies en de inhoud daarvan"
 
-#: resources/views/page/sections/purpose.phtml:18
+#: resources/views/page/sections/purpose.phtml:17
 msgid "Answering contact requests and communicating with users"
 msgstr ""
 "Het beantwoorden van contactverzoeken en het communiceren met gebruikers"
 
-#: resources/views/page/sections/purpose.phtml:19
+#: resources/views/page/sections/purpose.phtml:18
 msgid ""
 "Security measures, reach measurement, and improvement of the online presence"
 msgstr ""

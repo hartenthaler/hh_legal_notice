@@ -217,16 +217,16 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
 
             <div class="row">
                 <?php foreach ($researchTypeDetailPreferences as $researchType => $detailPreference) : ?>
-                    <label class="col-sm-3 col-form-label wt-page-options-label" for="<?= e($detailPreference) ?>">
+                    <label class="col-sm-3 col-form-label wt-page-options-label hh-legal-notice-section-setting" data-dependent-on-chapter="<?= e($researchType) ?>" for="<?= e($detailPreference) ?>">
                         <?= e($chapterByKey[$researchType]->getHeading()) ?>
                     </label>
-                    <div class="col-sm-9 wt-page-options-value">
+                    <div class="col-sm-9 wt-page-options-value hh-legal-notice-section-setting" data-dependent-on-chapter="<?= e($researchType) ?>">
                         <input class="form-control" id="<?= e($detailPreference) ?>" name="<?= e($detailPreference) ?>" type="text" value="<?= e($$detailPreference) ?>" placeholder="<?= e($researchTypePrompts[$researchType]) ?>">
                     </div>
                 <?php endforeach ?>
                 <div class="offset-sm-3 col-sm-9 wt-page-options-value">
                     <p class="small text-muted mb-0">
-                        <?= I18N::translate('The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of "Purpose".') ?>
+                        <?= I18N::translate('The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of "Purpose". Research focus details are not translated, so they should be kept short.') ?>
                     </p>
                 </div>
             </div>

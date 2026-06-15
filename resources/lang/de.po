@@ -1849,30 +1849,28 @@ msgstr ""
 "Diese Website verarbeitet personenbezogene Daten zum Zwecke der historischen "
 "und genealogischen Forschung."
 
-#: LegalNoticeFooterModule.php:758
+#: LegalNoticeFooterModule.php:713
 msgid ""
-"It deals with family history research into my own family, more distant "
-"relatives by marriage, and the research of other persons, such as bearers of "
-"my family name."
+"This website deals with family history research into my own family and "
+"relatives by marriage."
 msgstr ""
-"Sie beschäftigt sich mit der Familien- und Ahnenforschung meiner eigenen "
-"Familie, der angeheirateten entfernteren Verwandtschaft und der Erforschung "
-"von weiteren Personen, etwa Trägern meines Familiennamens."
+"Diese Web-Site beschäftigt sich mit der Familien- und Ahnenforschung meiner "
+"eigenen Familie und der angeheirateten Verwandtschaft."
 
-#: resources/views/page/sections/purpose.phtml:14
+#: resources/views/page/sections/purpose.phtml:13
 msgid "This includes:"
 msgstr "Dazu gehören:"
 
-#: resources/views/page/sections/purpose.phtml:17
+#: resources/views/page/sections/purpose.phtml:16
 msgid "Providing the online service, its functions, and its content"
 msgstr ""
 "Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte"
 
-#: resources/views/page/sections/purpose.phtml:18
+#: resources/views/page/sections/purpose.phtml:17
 msgid "Answering contact requests and communicating with users"
 msgstr "Beantwortung von Kontaktanfragen und Kommunikation mit den Nutzern"
 
-#: resources/views/page/sections/purpose.phtml:19
+#: resources/views/page/sections/purpose.phtml:18
 msgid ""
 "Security measures, reach measurement, and improvement of the online presence"
 msgstr ""
@@ -2534,15 +2532,15 @@ msgstr "Familien- und Ahnenforschung"
 
 #: LegalNoticeFooterModule.php:683
 msgid "One-name study"
-msgstr "One-Name-Study"
+msgstr "Namensträgerstudie"
 
 #: LegalNoticeFooterModule.php:684
 msgid "One-place study or local family book"
-msgstr "Ortsfamilienbuch / One-Location-Study"
+msgstr "Ortsfamilienbücher"
 
 #: LegalNoticeFooterModule.php:685
 msgid "Farm and farmstead research"
-msgstr "Farm- und Höfeforschung"
+msgstr "Höfeforschung"
 
 #: LegalNoticeFooterModule.php:686
 msgid "Thematic research"
@@ -2584,59 +2582,61 @@ msgstr "Herkunft/Ziel, z. B. „Auswanderer aus dem Vogtland nach Pennsylvania�
 msgid "Group, e.g. \"Huguenots in Brandenburg\""
 msgstr "Gruppe, z. B. „Hugenotten in Brandenburg“"
 
-#: LegalNoticeFooterModule.php:752
+#: LegalNoticeFooterModule.php:707
 msgid ""
-"It deals with the systematic research of all persons who bear or have borne "
-"particular family names, regardless of geographical or family boundaries."
+"This website deals with the systematic research of all persons who bear or "
+"have borne particular family names, regardless of geographical or family "
+"boundaries."
 msgstr ""
-"Sie beschäftigt sich mit der systematischen Erforschung aller Personen, die "
-"einen bestimmten Familiennamen tragen oder getragen haben, unabhängig von "
-"geographischen oder familiären Grenzen."
+"Diese Web-Site beschäftigt sich mit der systematischen Erforschung aller "
+"Personen, die einen bestimmten Familiennamen tragen oder getragen haben, "
+"unabhängig von geographischen oder familiären Grenzen."
 
-#: LegalNoticeFooterModule.php:753
+#: LegalNoticeFooterModule.php:708
 msgid ""
-"It deals with the research of all families and persons who lived in a "
-"particular place or region, regardless of their family names."
+"This website deals with the research of all families and persons who lived "
+"in a particular place or region, regardless of their family names."
 msgstr ""
-"Sie beschäftigt sich mit der Erforschung aller Familien und Personen, die in "
-"einem bestimmten Ort oder einer bestimmten Region gelebt haben, unabhängig "
-"von ihren Familiennamen."
+"Diese Web-Site beschäftigt sich mit der Erforschung aller Familien und "
+"Personen, die in einem bestimmten Ort oder einer bestimmten Region gelebt "
+"haben, unabhängig von ihren Familiennamen."
 
-#: LegalNoticeFooterModule.php:754
+#: LegalNoticeFooterModule.php:709
 msgid ""
-"It deals with the research of farmsteads and their residents in a particular "
-"region, including the succession of farm owners and tenants over generations."
+"This website deals with the research of farmsteads and their residents in a "
+"particular region, including the succession of farm owners and tenants over "
+"generations."
 msgstr ""
-"Sie beschäftigt sich mit der Erforschung von Hofstellen und deren Bewohnern "
-"in einer bestimmten Region, einschließlich der Abfolge von Hofbesitzern und "
-"Pächtern über Generationen."
+"Diese Web-Site beschäftigt sich mit der Erforschung von Hofstellen und deren "
+"Bewohnern in einer bestimmten Region, einschließlich der Abfolge von "
+"Hofbesitzern und Pächtern über Generationen."
 
-#: LegalNoticeFooterModule.php:755
+#: LegalNoticeFooterModule.php:710
 msgid ""
-"It deals with the research of persons connected by a common historical "
-"characteristic, such as membership of an institution, a profession, or a "
-"historical event."
+"This website deals with the research of persons connected by a common "
+"historical characteristic, such as membership of an institution, a "
+"profession, or a historical event."
 msgstr ""
-"Sie beschäftigt sich mit der Erforschung von Personen, die durch ein "
-"gemeinsames historisches Merkmal verbunden sind, etwa Zugehörigkeit zu einer "
-"Institution, einem Beruf oder einem historischen Ereignis."
+"Diese Web-Site beschäftigt sich mit der Erforschung von Personen, die durch "
+"ein gemeinsames historisches Merkmal verbunden sind, etwa Zugehörigkeit zu "
+"einer Institution, einem Beruf oder einem historischen Ereignis."
 
-#: LegalNoticeFooterModule.php:756
+#: LegalNoticeFooterModule.php:711
 msgid ""
-"It deals with the research of persons and families who emigrated from or "
-"immigrated to a particular area of origin or destination."
+"This website deals with the research of persons and families who emigrated "
+"from or immigrated to a particular area of origin or destination."
 msgstr ""
-"Sie beschäftigt sich mit der Erforschung von Personen und Familien, die aus "
-"einem bestimmten Herkunftsgebiet ausgewandert sind oder in dieses "
-"eingewandert sind."
+"Diese Web-Site beschäftigt sich mit der Erforschung von Personen und "
+"Familien, die aus einem bestimmten Herkunftsgebiet ausgewandert sind oder in "
+"dieses eingewandert sind."
 
-#: LegalNoticeFooterModule.php:757
+#: LegalNoticeFooterModule.php:712
 msgid ""
-"It deals with the research of members of a particular community, religious "
-"community, or social group."
+"This website deals with the research of members of a particular community, "
+"religious community, or social group."
 msgstr ""
-"Sie beschäftigt sich mit der Erforschung von Mitgliedern einer bestimmten "
-"Gemeinschaft, Religionsgemeinschaft oder sozialen Gruppe."
+"Diese Web-Site beschäftigt sich mit der Erforschung von Mitgliedern einer "
+"bestimmten Gemeinschaft, Religionsgemeinschaft oder sozialen Gruppe."
 
 #: LegalNoticeFooterModule.php:763
 #, php-format
@@ -2651,11 +2651,13 @@ msgstr "Details zum Forschungszweck"
 msgid ""
 "The detail fields are optional and make the generated purpose description "
 "more specific. Visibility and sequence are controlled by the subsections of "
-"\"Purpose\"."
+"\"Purpose\". Research focus details are not translated, so they should be "
+"kept short."
 msgstr ""
 "Die Detailfelder sind optional und machen die erzeugte Zweckbeschreibung "
 "konkreter. Sichtbarkeit und Reihenfolge werden über die Unterabschnitte von "
-"„Zweck“ gesteuert."
+"„Zweck“ gesteuert. Forschungsschwerpunkte werden nicht übersetzt und sollten "
+"deshalb kurz gehalten werden."
 
 #~ msgid "GDPR in connection with online genealogies"
 #~ msgstr "DSGVO im Zusammenhang mit Online-Genealogien"
