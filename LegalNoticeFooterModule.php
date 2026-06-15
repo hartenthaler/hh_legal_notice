@@ -108,6 +108,14 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private const PRIVACY_POLICY_DATE_SOURCE_MANUAL = 'manual';
     private const PRIVACY_POLICY_DATE_SOURCE_CURRENT = 'current';
 
+    private const RESEARCH_SECTION_FAMILY = 'ResearchFamily';
+    private const RESEARCH_SECTION_ONS = 'ResearchOns';
+    private const RESEARCH_SECTION_OFB = 'ResearchOfb';
+    private const RESEARCH_SECTION_HOEFE = 'ResearchHoefe';
+    private const RESEARCH_SECTION_THEMA = 'ResearchThema';
+    private const RESEARCH_SECTION_MIGRATION = 'ResearchMigration';
+    private const RESEARCH_SECTION_COMMUNITY = 'ResearchCommunity';
+
     // old module name
     public const OLD_MODULE_NAME_FOR_PREFERENCES = 'hh_imprint';
 
@@ -372,6 +380,13 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'vatNumber',
             'showTreeContacts',
             'showAdministrators',
+            'researchFamily',
+            'researchOns',
+            'researchOfb',
+            'researchHoefe',
+            'researchThema',
+            'researchMigration',
+            'researchCommunity',
             'registeredUsersAreRelatives',
             'inactiveUserYears',
             'sensitiveDataYears',
@@ -418,6 +433,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $response['dataProtectionSectionKeys'] = LegalNoticeSupport::listDataProtectionSectionKeys();
         $response['registeredUserNames'] = $this->registeredUserNames();
         $response['inactiveUserAccountSummaries'] = $this->inactiveUserAccountSummaries();
+        $response['researchTypePrompts'] = $this->researchTypePrompts();
+        $response['researchTypeDetailPreferences'] = $this->researchTypeDetailPreferences();
 
         $preferences = $this->listOfPreferences();
         foreach ($preferences as $preference) {
@@ -461,6 +478,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         if ($response['sensitiveDataYears'] === '') {
             $response['sensitiveDataYears'] = '10';
         }
+
     }
 
     /**
@@ -634,6 +652,77 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
             default => $value,
         };
+    }
+
+    /**
+     * @return array<string,string>
+     */
+    private function researchTypePrompts(): array
+    {
+        return [
+            self::RESEARCH_SECTION_FAMILY => I18N::translate('Names, e.g. "Smith, Miller"'),
+            self::RESEARCH_SECTION_ONS => I18N::translate('Name(s), e.g. "Smith"'),
+            self::RESEARCH_SECTION_OFB => I18N::translate('Place(s) or region, e.g. "Bautzen, Löbau"'),
+            self::RESEARCH_SECTION_HOEFE => I18N::translate('Region or farm type, e.g. "Black Forest farms, Wolfach district"'),
+            self::RESEARCH_SECTION_THEMA => I18N::translate('Topic, e.g. "Students of the Bautzen grammar school 1600-1900"'),
+            self::RESEARCH_SECTION_MIGRATION => I18N::translate('Origin or destination, e.g. "Emigrants from Vogtland to Pennsylvania"'),
+            self::RESEARCH_SECTION_COMMUNITY => I18N::translate('Group, e.g. "Huguenots in Brandenburg"'),
+        ];
+    }
+
+    /**
+     * @return array<string,string>
+     */
+    private function researchTypeDetailPreferences(): array
+    {
+        return [
+            self::RESEARCH_SECTION_FAMILY => 'researchFamily',
+            self::RESEARCH_SECTION_ONS => 'researchOns',
+            self::RESEARCH_SECTION_OFB => 'researchOfb',
+            self::RESEARCH_SECTION_HOEFE => 'researchHoefe',
+            self::RESEARCH_SECTION_THEMA => 'researchThema',
+            self::RESEARCH_SECTION_MIGRATION => 'researchMigration',
+            self::RESEARCH_SECTION_COMMUNITY => 'researchCommunity',
+        ];
+    }
+
+    /**
+     * @return array<string,string>
+     */
+    private function researchPurposeDescriptions(): array
+    {
+        $descriptions = [];
+
+        foreach (array_keys($this->researchTypeDetailPreferences()) as $researchSectionKey) {
+            $descriptions[$researchSectionKey] = $this->researchPurposeDescription($researchSectionKey);
+        }
+
+        return $descriptions;
+    }
+
+    private function researchPurposeDescription(string $researchSectionKey): string
+    {
+        $details = $this->researchTypeDetails($researchSectionKey);
+        $description = match ($researchSectionKey) {
+            self::RESEARCH_SECTION_ONS => I18N::translate('It deals with the systematic research of all persons who bear or have borne particular family names, regardless of geographical or family boundaries.'),
+            self::RESEARCH_SECTION_OFB => I18N::translate('It deals with the research of all families and persons who lived in a particular place or region, regardless of their family names.'),
+            self::RESEARCH_SECTION_HOEFE => I18N::translate('It deals with the research of farmsteads and their residents in a particular region, including the succession of farm owners and tenants over generations.'),
+            self::RESEARCH_SECTION_THEMA => I18N::translate('It deals with the research of persons connected by a common historical characteristic, such as membership of an institution, a profession, or a historical event.'),
+            self::RESEARCH_SECTION_MIGRATION => I18N::translate('It deals with the research of persons and families who emigrated from or immigrated to a particular area of origin or destination.'),
+            self::RESEARCH_SECTION_COMMUNITY => I18N::translate('It deals with the research of members of a particular community, religious community, or social group.'),
+            default => I18N::translate('It deals with family history research into my own family, more distant relatives by marriage, and the research of other persons, such as bearers of my family name.'),
+        };
+
+        return $details === ''
+            ? $description
+            : $description . ' ' . I18N::translate('The research focus is: %s', e($details));
+    }
+
+    private function researchTypeDetails(string $researchSectionKey): string
+    {
+        $preference = $this->researchTypeDetailPreferences()[$researchSectionKey] ?? '';
+
+        return $preference === '' ? '' : $this->getPreference($preference, '');
     }
 
     private function normalizeHostingCountry(string $country): string
@@ -1072,6 +1161,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'countAdministrators'       => count($contactsAdministrators),
             'contactsAdministrators'    => $contactsAdministrators,
             'registeredUsersAreRelatives' => $this->registeredUsersAreRelatives(),
+            'researchPurposeDescriptions' => $this->researchPurposeDescriptions(),
             'inactiveUserYears' => $this->inactiveUserYears(),
             'sensitiveDataYears' => $this->sensitiveDataYears(),
             'supervisoryAuthorityName' => $this->supervisoryAuthorityName(),

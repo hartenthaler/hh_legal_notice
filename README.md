@@ -86,6 +86,7 @@ third-party services, and whether registered users are relatives or relatives by
 
 The generated privacy policy can include, depending on the configuration and server location:
 * references to German, European, or no specific regional data-protection law
+* configurable research purpose wording for family research, one-name studies, local family books, farmstead research, thematic research, migration research, or community research
 * legal bases for processing under the GDPR where EU law applies
 * a named competent supervisory authority with URL
 * data protection contact information referring to the provider named in the legal notice

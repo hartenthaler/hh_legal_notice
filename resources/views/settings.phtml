@@ -40,6 +40,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
  * @var string                  $supervisoryAuthorityName name of the competent supervisory authority
  * @var string                  $supervisoryAuthorityUrl URL of the competent supervisory authority
  * @var string                  $registeredUsersAreRelatives option whether registered users are relatives or relatives by marriage
+ * @var array<string,string>    $researchTypePrompts    research purpose detail prompts
+ * @var array<string,string>    $researchTypeDetailPreferences preference names for research purpose detail fields
  * @var int                  $inactiveUserYears     when should inactive users be deleted?
  * @var int                     $sensitiveDataYears  years after death before sensitive genealogical data is released
  * @var array<int,object>       $inactiveUserAccountSummaries inactive user accounts for admin decision support
@@ -209,6 +211,26 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
         <button type="submit" class="btn btn-secondary d-block mb-3" name="resetOrder" value="1">
             <?= I18N::translate('Restore default sorting for all chapters and sections') ?>
         </button>
+
+        <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="Purpose">
+            <h4><?= I18N::translate('Research purpose details') ?></h4>
+
+            <div class="row">
+                <?php foreach ($researchTypeDetailPreferences as $researchType => $detailPreference) : ?>
+                    <label class="col-sm-3 col-form-label wt-page-options-label" for="<?= e($detailPreference) ?>">
+                        <?= e($chapterByKey[$researchType]->getHeading()) ?>
+                    </label>
+                    <div class="col-sm-9 wt-page-options-value">
+                        <input class="form-control" id="<?= e($detailPreference) ?>" name="<?= e($detailPreference) ?>" type="text" value="<?= e($$detailPreference) ?>" placeholder="<?= e($researchTypePrompts[$researchType]) ?>">
+                    </div>
+                <?php endforeach ?>
+                <div class="offset-sm-3 col-sm-9 wt-page-options-value">
+                    <p class="small text-muted mb-0">
+                        <?= I18N::translate('The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of "Purpose".') ?>
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <h4><?= MoreI18N::xlate('Copyright') ?></h4>
 
