@@ -104,7 +104,8 @@ on the configured server location, the generated privacy policy also mentions th
 legal bases for these special categories.
 
 The legal-regulations chapter can include notices about copyright, distribution of genealogical data,
-automated collection, scraping, data mining, AI-system use, and copyright enforcement.
+automated collection, scraping, data mining, AI-system use, technical measures against unwanted
+automated access, and copyright enforcement.
 
 <a name="WhatsNew"></a>
 ## ✨ What's new in 2.2.6.3

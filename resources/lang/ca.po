@@ -612,6 +612,14 @@ msgid ""
 "written consent."
 msgstr ""
 
+#: src/LegalNoticeSupport.php:264 src/LegalNoticeSupport.php:275
+msgid ""
+"To reduce unwanted automated access, this website uses technical measures "
+"such as robots.txt rules and the webtrees Bad Bot Blocker. Access attempts "
+"may be recorded in the webtrees log and analyzed there. These measures "
+"supplement the legal notice but cannot guarantee complete protection."
+msgstr ""
+
 #: src/LegalNoticeSupport.php:250
 msgid ""
 "I take the protection of copyright seriously. If I discover that copyrighted "
