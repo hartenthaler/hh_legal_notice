@@ -7,8 +7,16 @@ use Fisharebest\Webtrees\I18N;
 
     <p>
         <?= I18N::translate('This website processes personal data for the purposes of historical and genealogical research.') ?>
-        <?= I18N::translate('It deals with family history research into my own family, more distant relatives by marriage, and the research of other persons, such as bearers of my family name.') ?>
     </p>
+
+    <?php foreach ($chapters as $subsection) : ?>
+        <?php if ($subsection->getLink() !== $chapter->getId() || !$subsection->getEnabled()) : ?>
+            <?php continue ?>
+        <?php endif ?>
+
+        <h4><?= e($subsection->getHeading()) ?></h4>
+        <p><?= $researchPurposeDescriptions[$subsection->getKey()] ?? '' ?></p>
+    <?php endforeach ?>
 
     <p>
         <?= I18N::translate('This includes:') ?>
