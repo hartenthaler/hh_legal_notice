@@ -966,7 +966,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function storedChapterOrder(): array
     {
-        return explode(',', $this->getPreference('order', implode(',', $this->defaultChapterOrder())));
+        return $this->normalizeChapterOrderKeys(explode(',', $this->getPreference('order', implode(',', $this->defaultChapterOrder()))));
     }
 
     /**
@@ -1008,7 +1008,26 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         $submittedOrder = array_filter($submittedOrder, static fn (mixed $chapterKey): bool => is_string($chapterKey));
 
-        return array_values(array_unique(array_intersect($submittedOrder, $this->defaultChapterOrder())));
+        return array_values(array_unique(array_intersect($this->normalizeChapterOrderKeys($submittedOrder), $this->defaultChapterOrder())));
+    }
+
+    /**
+     * @param array<int,string> $chapterKeys
+     *
+     * @return array<int,string>
+     */
+    private function normalizeChapterOrderKeys(array $chapterKeys): array
+    {
+        $legacyChapterKeys = [
+            'ResearchOfb' => self::RESEARCH_SECTION_PLACE,
+            'ResearchHoefe' => self::RESEARCH_SECTION_FARM,
+            'ResearchThema' => self::RESEARCH_SECTION_TOPIC,
+        ];
+
+        return array_map(
+            static fn (string $chapterKey): string => $legacyChapterKeys[$chapterKey] ?? $chapterKey,
+            $chapterKeys
+        );
     }
 
     /**
