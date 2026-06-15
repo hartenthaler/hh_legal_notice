@@ -1379,25 +1379,36 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function treeContactNotice(string $role, string $contactLink): string
     {
-        return match ($role) {
-            'genealogy' => I18N::translate('%1$s is also %2$s for genealogy questions.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
-            'technical' => I18N::translate('%1$s is also %2$s for technical support.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
-            default => I18N::translate('%1$s is also %2$s for technical support or genealogy questions.', $this->responsiblePronoun(), $this->contactActionLink($contactLink)),
+        $roleNotice = match ($role) {
+            'genealogy' =>
+                /* I18N: %s is a subject pronoun such as “He”, “She”, or “This person”. */
+                I18N::translate('%s is additionally responsible for genealogy questions.', $this->responsiblePronoun()),
+            'technical' =>
+                /* I18N: %s is a subject pronoun such as “He”, “She”, or “This person”. */
+                I18N::translate('%s is additionally responsible for technical support.', $this->responsiblePronoun()),
+            default =>
+                /* I18N: %s is a subject pronoun such as “He”, “She”, or “This person”. */
+                I18N::translate('%s is additionally responsible for technical support or genealogy questions.', $this->responsiblePronoun()),
         };
+
+        return $roleNotice . ' ' . $this->contactAvailabilityNotice($contactLink);
     }
 
     private function administratorContactNotice(string $contactLink): string
     {
-        return I18N::translate('%1$s is also %2$s as website administrator and is responsible for managing users and setting the options for this website.', $this->responsiblePronoun(), $this->contactActionLink($contactLink));
+        /* I18N: %s is a subject pronoun such as “He”, “She”, or “This person”. */
+        $roleNotice = I18N::translate('%s is additionally website administrator and is responsible for managing users and setting the options for this website.', $this->responsiblePronoun());
+
+        return $roleNotice . ' ' . $this->contactAvailabilityNotice($contactLink);
     }
 
-    private function contactActionLink(string $contactLink): string
+    private function contactAvailabilityNotice(string $contactLink): string
     {
         if (preg_match('/href="([^"]+)"/', $contactLink, $match) !== 1) {
-            return I18N::translate('available');
+            return I18N::translate('A contact option is available.');
         }
 
-        return '<a href="' . e($match[1]) . '" rel="nofollow">' . I18N::translate('available') . '</a>';
+        return I18N::translate('A contact option is available:') . ' <a href="' . e($match[1]) . '" rel="nofollow">' . I18N::translate('open contact form') . '</a>.';
     }
 
     private function responsiblePronoun(): string

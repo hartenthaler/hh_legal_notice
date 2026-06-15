@@ -93,24 +93,34 @@ msgid_plural "The webtrees administrators are responsible to manage users and to
 msgstr[0] "De webtrees-beheerder is verantwoordelijk voor het beheren van gebruikers en het instellen van de voorkeuren voor deze website."
 msgstr[1] "De webtrees-beheerders zijn verantwoordelijk voor het beheren van gebruikers en het instellen van de voorkeuren voor deze website."
 
+#. I18N: %s is a subject pronoun such as “He”, “She”, or “This person”.
 #, php-format
-msgid "%1$s is also %2$s for genealogy questions."
-msgstr "%1$s is ook bij genealogische vragen %2$s."
+msgid "%s is additionally responsible for genealogy questions."
+msgstr "%s is daarnaast verantwoordelijk voor genealogische vragen."
 
+#. I18N: %s is a subject pronoun such as “He”, “She”, or “This person”.
 #, php-format
-msgid "%1$s is also %2$s for technical support."
-msgstr "%1$s is ook bij vragen over technische ondersteuning %2$s."
+msgid "%s is additionally responsible for technical support."
+msgstr "%s is daarnaast verantwoordelijk voor technische ondersteuning."
 
+#. I18N: %s is a subject pronoun such as “He”, “She”, or “This person”.
 #, php-format
-msgid "%1$s is also %2$s for technical support or genealogy questions."
-msgstr "%1$s is ook bij vragen over technische ondersteuning of bij genealogische vragen %2$s."
+msgid "%s is additionally responsible for technical support or genealogy questions."
+msgstr "%s is daarnaast verantwoordelijk voor technische ondersteuning of genealogische vragen."
 
+#. I18N: %s is a subject pronoun such as “He”, “She”, or “This person”.
 #, php-format
-msgid "%1$s is also %2$s as website administrator and is responsible for managing users and setting the options for this website."
-msgstr "%1$s is ook als websitebeheerder verantwoordelijk voor het beheren van gebruikers en het instellen van de opties voor deze website en is voor u %2$s."
+msgid "%s is additionally website administrator and is responsible for managing users and setting the options for this website."
+msgstr "%s is daarnaast websitebeheerder en verantwoordelijk voor het beheren van gebruikers en het instellen van de opties voor deze website."
 
-msgid "available"
-msgstr "beschikbaar"
+msgid "A contact option is available."
+msgstr "Er is een contactmogelijkheid beschikbaar."
+
+msgid "A contact option is available:"
+msgstr "Er is een contactmogelijkheid beschikbaar:"
+
+msgid "open contact form"
+msgstr "contactformulier openen"
 
 msgctxt "legal notice pronoun subject"
 msgid "He"
