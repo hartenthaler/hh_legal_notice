@@ -1049,7 +1049,7 @@ msgstr ""
 msgid "This website processes personal data for the purposes of historical and genealogical research."
 msgstr ""
 
-#: resources/views/page/sections/purpose.phtml:10
+#: LegalNoticeFooterModule.php:758
 msgid "It deals with family history research into my own family, more distant relatives by marriage, and the research of other persons, such as bearers of my family name."
 msgstr ""
 
@@ -1554,4 +1554,97 @@ msgstr ""
 #: resources/views/settings.phtml:719
 #, php-format
 msgid "Enter one service per line using the format “Name | URL | Country”. The country is optional, but should be provided when known. Example: %s"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:682
+msgid "Family and ancestry research"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:683
+msgid "One-name study"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:684
+msgid "One-place study or local family book"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:685
+msgid "Farm and farmstead research"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:686
+msgid "Thematic research"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:687
+msgid "Migration research"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:688
+msgid "Community research"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:698
+msgid "Names, e.g. \"Smith, Miller\""
+msgstr ""
+
+#: LegalNoticeFooterModule.php:699
+msgid "Name(s), e.g. \"Smith\""
+msgstr ""
+
+#: LegalNoticeFooterModule.php:700
+msgid "Place(s) or region, e.g. \"Bautzen, Löbau\""
+msgstr ""
+
+#: LegalNoticeFooterModule.php:701
+msgid "Region or farm type, e.g. \"Black Forest farms, Wolfach district\""
+msgstr ""
+
+#: LegalNoticeFooterModule.php:702
+msgid "Topic, e.g. \"Students of the Bautzen grammar school 1600-1900\""
+msgstr ""
+
+#: LegalNoticeFooterModule.php:703
+msgid "Origin or destination, e.g. \"Emigrants from Vogtland to Pennsylvania\""
+msgstr ""
+
+#: LegalNoticeFooterModule.php:704
+msgid "Group, e.g. \"Huguenots in Brandenburg\""
+msgstr ""
+
+#: LegalNoticeFooterModule.php:752
+msgid "It deals with the systematic research of all persons who bear or have borne particular family names, regardless of geographical or family boundaries."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:753
+msgid "It deals with the research of all families and persons who lived in a particular place or region, regardless of their family names."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:754
+msgid "It deals with the research of farmsteads and their residents in a particular region, including the succession of farm owners and tenants over generations."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:755
+msgid "It deals with the research of persons connected by a common historical characteristic, such as membership of an institution, a profession, or a historical event."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:756
+msgid "It deals with the research of persons and families who emigrated from or immigrated to a particular area of origin or destination."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:757
+msgid "It deals with the research of members of a particular community, religious community, or social group."
+msgstr ""
+
+#: LegalNoticeFooterModule.php:763
+#, php-format
+msgid "The research focus is: %s"
+msgstr ""
+
+#: resources/views/settings.phtml:216
+msgid "Research purpose details"
+msgstr ""
+
+#: resources/views/settings.phtml:229
+msgid "The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of \"Purpose\"."
 msgstr ""

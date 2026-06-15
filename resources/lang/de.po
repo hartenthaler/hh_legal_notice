@@ -1849,7 +1849,7 @@ msgstr ""
 "Diese Website verarbeitet personenbezogene Daten zum Zwecke der historischen "
 "und genealogischen Forschung."
 
-#: resources/views/page/sections/purpose.phtml:10
+#: LegalNoticeFooterModule.php:758
 msgid ""
 "It deals with family history research into my own family, more distant "
 "relatives by marriage, and the research of other persons, such as bearers of "
@@ -2527,6 +2527,135 @@ msgid ""
 msgstr ""
 "Geben Sie einen Dienst pro Zeile im Format „Name | URL | Land“ ein. Das Land "
 "ist optional, sollte aber angegeben werden, wenn es bekannt ist. Beispiel: %s"
+
+#: LegalNoticeFooterModule.php:682
+msgid "Family and ancestry research"
+msgstr "Familien- und Ahnenforschung"
+
+#: LegalNoticeFooterModule.php:683
+msgid "One-name study"
+msgstr "One-Name-Study"
+
+#: LegalNoticeFooterModule.php:684
+msgid "One-place study or local family book"
+msgstr "Ortsfamilienbuch / One-Location-Study"
+
+#: LegalNoticeFooterModule.php:685
+msgid "Farm and farmstead research"
+msgstr "Farm- und Höfeforschung"
+
+#: LegalNoticeFooterModule.php:686
+msgid "Thematic research"
+msgstr "Thematische Forschung"
+
+#: LegalNoticeFooterModule.php:687
+msgid "Migration research"
+msgstr "Migrationsforschung"
+
+#: LegalNoticeFooterModule.php:688
+msgid "Community research"
+msgstr "Gruppenforschung"
+
+#: LegalNoticeFooterModule.php:698
+msgid "Names, e.g. \"Smith, Miller\""
+msgstr "Namen, z. B. „Hartenthaler, Bienengräber“"
+
+#: LegalNoticeFooterModule.php:699
+msgid "Name(s), e.g. \"Smith\""
+msgstr "Name(n), z. B. „Hartenthaler“"
+
+#: LegalNoticeFooterModule.php:700
+msgid "Place(s) or region, e.g. \"Bautzen, Löbau\""
+msgstr "Ort(e) / Region, z. B. „Bautzen, Löbau“"
+
+#: LegalNoticeFooterModule.php:701
+msgid "Region or farm type, e.g. \"Black Forest farms, Wolfach district\""
+msgstr "Region / Hoftyp, z. B. „Schwarzwälder Bauernhöfe, Kreis Wolfach“"
+
+#: LegalNoticeFooterModule.php:702
+msgid "Topic, e.g. \"Students of the Bautzen grammar school 1600-1900\""
+msgstr "Thema, z. B. „Schüler des Ratsgymnasiums Bautzen 1600–1900“"
+
+#: LegalNoticeFooterModule.php:703
+msgid "Origin or destination, e.g. \"Emigrants from Vogtland to Pennsylvania\""
+msgstr "Herkunft/Ziel, z. B. „Auswanderer aus dem Vogtland nach Pennsylvania“"
+
+#: LegalNoticeFooterModule.php:704
+msgid "Group, e.g. \"Huguenots in Brandenburg\""
+msgstr "Gruppe, z. B. „Hugenotten in Brandenburg“"
+
+#: LegalNoticeFooterModule.php:752
+msgid ""
+"It deals with the systematic research of all persons who bear or have borne "
+"particular family names, regardless of geographical or family boundaries."
+msgstr ""
+"Sie beschäftigt sich mit der systematischen Erforschung aller Personen, die "
+"einen bestimmten Familiennamen tragen oder getragen haben, unabhängig von "
+"geographischen oder familiären Grenzen."
+
+#: LegalNoticeFooterModule.php:753
+msgid ""
+"It deals with the research of all families and persons who lived in a "
+"particular place or region, regardless of their family names."
+msgstr ""
+"Sie beschäftigt sich mit der Erforschung aller Familien und Personen, die in "
+"einem bestimmten Ort oder einer bestimmten Region gelebt haben, unabhängig "
+"von ihren Familiennamen."
+
+#: LegalNoticeFooterModule.php:754
+msgid ""
+"It deals with the research of farmsteads and their residents in a particular "
+"region, including the succession of farm owners and tenants over generations."
+msgstr ""
+"Sie beschäftigt sich mit der Erforschung von Hofstellen und deren Bewohnern "
+"in einer bestimmten Region, einschließlich der Abfolge von Hofbesitzern und "
+"Pächtern über Generationen."
+
+#: LegalNoticeFooterModule.php:755
+msgid ""
+"It deals with the research of persons connected by a common historical "
+"characteristic, such as membership of an institution, a profession, or a "
+"historical event."
+msgstr ""
+"Sie beschäftigt sich mit der Erforschung von Personen, die durch ein "
+"gemeinsames historisches Merkmal verbunden sind, etwa Zugehörigkeit zu einer "
+"Institution, einem Beruf oder einem historischen Ereignis."
+
+#: LegalNoticeFooterModule.php:756
+msgid ""
+"It deals with the research of persons and families who emigrated from or "
+"immigrated to a particular area of origin or destination."
+msgstr ""
+"Sie beschäftigt sich mit der Erforschung von Personen und Familien, die aus "
+"einem bestimmten Herkunftsgebiet ausgewandert sind oder in dieses "
+"eingewandert sind."
+
+#: LegalNoticeFooterModule.php:757
+msgid ""
+"It deals with the research of members of a particular community, religious "
+"community, or social group."
+msgstr ""
+"Sie beschäftigt sich mit der Erforschung von Mitgliedern einer bestimmten "
+"Gemeinschaft, Religionsgemeinschaft oder sozialen Gruppe."
+
+#: LegalNoticeFooterModule.php:763
+#, php-format
+msgid "The research focus is: %s"
+msgstr "Der Forschungsschwerpunkt ist: %s"
+
+#: resources/views/settings.phtml:216
+msgid "Research purpose details"
+msgstr "Details zum Forschungszweck"
+
+#: resources/views/settings.phtml:229
+msgid ""
+"The detail fields are optional and make the generated purpose description "
+"more specific. Visibility and sequence are controlled by the subsections of "
+"\"Purpose\"."
+msgstr ""
+"Die Detailfelder sind optional und machen die erzeugte Zweckbeschreibung "
+"konkreter. Sichtbarkeit und Reihenfolge werden über die Unterabschnitte von "
+"„Zweck“ gesteuert."
 
 #~ msgid "GDPR in connection with online genealogies"
 #~ msgstr "DSGVO im Zusammenhang mit Online-Genealogien"
