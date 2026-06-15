@@ -130,6 +130,9 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?= I18N::translate('Cookies help make our service more user-friendly, effective, and secure.') ?>
                 <?= I18N::translate('Cookies are small text files that are stored on your computer and saved by your browser.') ?>
                 <?= I18N::translate('These cookies are strictly necessary for the website to function properly.') ?>
+                <?php if ($useGermanPrivacyLaw) : ?>
+                    <?= I18N::translate('Under Section 25 TDDDG, storing cookies that are not technically necessary and accessing information on your device generally require your consent.') ?>
+                <?php endif ?>
                 <?= I18N::translate('Session cookies are deleted when you leave the website or close your browser.') ?>
                 <?= I18N::translate('Persistent cookies can remain stored after the browser is closed, for example to preserve selected settings for a later visit.') ?>
                 <?= I18N::translate('You can configure your browser so that you are informed when cookies are set, allow cookies only in individual cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of cookies when closing the browser.') ?>

@@ -722,6 +722,9 @@ msgstr "Cookies zijn kleine tekstbestanden die op uw computer worden opgeslagen 
 msgid "These cookies are strictly necessary for the website to function properly."
 msgstr "Deze cookies zijn strikt noodzakelijk om de website goed te laten functioneren."
 
+msgid "Under Section 25 TDDDG, storing cookies that are not technically necessary and accessing information on your device generally require your consent."
+msgstr "Op grond van § 25 TDDDG is voor het opslaan van cookies die niet technisch noodzakelijk zijn en voor toegang tot informatie op uw apparaat in beginsel uw toestemming vereist."
+
 msgid "Session cookies are deleted when you leave the website or close your browser."
 msgstr "Sessiecookies worden verwijderd wanneer u de website verlaat of uw browser sluit."
 

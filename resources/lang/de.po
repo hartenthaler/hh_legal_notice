@@ -1224,7 +1224,16 @@ msgstr ""
 "Diese Cookies sind für das ordnungsgemäße Funktionieren der Website "
 "unbedingt notwendig."
 
-#: resources/views/page/sections/data-categories.phtml:129
+#: resources/views/page/sections/data-categories.phtml:134
+msgid ""
+"Under Section 25 TDDDG, storing cookies that are not technically necessary "
+"and accessing information on your device generally require your consent."
+msgstr ""
+"Nach § 25 TDDDG bedürfen das Speichern technisch nicht notwendiger Cookies "
+"und der Zugriff auf Informationen auf Ihrem Endgerät grundsätzlich Ihrer "
+"Einwilligung."
+
+#: resources/views/page/sections/data-categories.phtml:136
 msgid ""
 "Session cookies are deleted when you leave the website or close your browser."
 msgstr ""

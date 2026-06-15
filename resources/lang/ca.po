@@ -1135,7 +1135,13 @@ msgid ""
 "These cookies are strictly necessary for the website to function properly."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:129
+#: resources/views/page/sections/data-categories.phtml:134
+msgid ""
+"Under Section 25 TDDDG, storing cookies that are not technically necessary "
+"and accessing information on your device generally require your consent."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:136
 msgid ""
 "Session cookies are deleted when you leave the website or close your browser."
 msgstr ""
