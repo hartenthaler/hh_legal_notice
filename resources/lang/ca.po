@@ -1601,26 +1601,25 @@ msgid ""
 "genealogical research."
 msgstr ""
 
-#: resources/views/page/sections/purpose.phtml:10
+#: LegalNoticeFooterModule.php:713
 msgid ""
-"It deals with family history research into my own family, more distant "
-"relatives by marriage, and the research of other persons, such as bearers of "
-"my family name."
+"This website deals with family history research into my own family and "
+"relatives by marriage."
 msgstr ""
 
-#: resources/views/page/sections/purpose.phtml:14
+#: resources/views/page/sections/purpose.phtml:13
 msgid "This includes:"
 msgstr ""
 
-#: resources/views/page/sections/purpose.phtml:17
+#: resources/views/page/sections/purpose.phtml:16
 msgid "Providing the online service, its functions, and its content"
 msgstr ""
 
-#: resources/views/page/sections/purpose.phtml:18
+#: resources/views/page/sections/purpose.phtml:17
 msgid "Answering contact requests and communicating with users"
 msgstr ""
 
-#: resources/views/page/sections/purpose.phtml:19
+#: resources/views/page/sections/purpose.phtml:18
 msgid ""
 "Security measures, reach measurement, and improvement of the online presence"
 msgstr ""
