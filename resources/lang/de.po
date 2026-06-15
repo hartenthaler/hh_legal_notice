@@ -139,36 +139,41 @@ msgstr[1] ""
 "Die Webtrees-Administratoren sind für die Verwaltung der Benutzer und die "
 "Einstellung der Optionen dieser Website zuständig."
 
-#: LegalNoticeFooterModule.php:1219
+#. I18N: %s is a subject pronoun such as “He”, “She”, or “This person”.
+#: LegalNoticeFooterModule.php:1385
 #, php-format
-msgid "%1$s is also %2$s for genealogy questions."
-msgstr "%1$s ist zusätzlich bei genealogischen Fragen %2$s."
+msgid "%s is additionally responsible for genealogy questions."
+msgstr "%s ist zusätzlich für genealogische Fragen zuständig."
 
-#: LegalNoticeFooterModule.php:1220
+#. I18N: %s is a subject pronoun such as “He”, “She”, or “This person”.
+#: LegalNoticeFooterModule.php:1388
 #, php-format
-msgid "%1$s is also %2$s for technical support."
-msgstr "%1$s ist zusätzlich bei Fragen zur technischen Unterstützung %2$s."
+msgid "%s is additionally responsible for technical support."
+msgstr "%s ist zusätzlich für technische Unterstützung zuständig."
 
-#: LegalNoticeFooterModule.php:1221
+#. I18N: %s is a subject pronoun such as “He”, “She”, or “This person”.
+#: LegalNoticeFooterModule.php:1391
 #, php-format
-msgid "%1$s is also %2$s for technical support or genealogy questions."
-msgstr ""
-"%1$s ist zusätzlich bei Fragen zur technischen Unterstützung oder bei "
-"genealogischen Fragen %2$s."
+msgid "%s is additionally responsible for technical support or genealogy questions."
+msgstr "%s ist zusätzlich für technische Unterstützung oder genealogische Fragen zuständig."
 
-#: LegalNoticeFooterModule.php:1227
+#. I18N: %s is a subject pronoun such as “He”, “She”, or “This person”.
+#: LegalNoticeFooterModule.php:1400
 #, php-format
-msgid ""
-"%1$s is also %2$s as website administrator and is responsible for managing "
-"users and setting the options for this website."
-msgstr ""
-"%1$s ist zusätzlich als Website-Verwalter für die Verwaltung der Benutzer "
-"und die Einstellung der Optionen für diese Website zuständig und für Sie "
-"%2$s."
+msgid "%s is additionally website administrator and is responsible for managing users and setting the options for this website."
+msgstr "%s ist zusätzlich Website-Verwalter und für die Verwaltung der Benutzer sowie die Einstellung der Optionen für diese Website zuständig."
 
-#: LegalNoticeFooterModule.php:1233 LegalNoticeFooterModule.php:1236
-msgid "available"
-msgstr "erreichbar"
+#: LegalNoticeFooterModule.php:1408
+msgid "A contact option is available."
+msgstr "Eine Kontaktmöglichkeit ist verfügbar."
+
+#: LegalNoticeFooterModule.php:1411
+msgid "A contact option is available:"
+msgstr "Eine Kontaktmöglichkeit ist verfügbar:"
+
+#: LegalNoticeFooterModule.php:1411
+msgid "open contact form"
+msgstr "Kontaktformular öffnen"
 
 #: LegalNoticeFooterModule.php:1242
 msgctxt "legal notice pronoun subject"
