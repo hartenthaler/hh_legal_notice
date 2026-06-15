@@ -216,7 +216,7 @@ The generated privacy policy can also mention [Google Charts](https://developers
 
 Additional third-party services can be configured by the administrator using service name, URL, and optional country of service provision. If the website is subject to EU data-protection law and a configured service is provided from outside the European Union, the generated privacy policy can include a third-country-transfer notice.
 
-The privacy-policy page can also include information from other installed modules. For example, if `hh_source_transcription` is installed, this module can show privacy information about external transcription providers such as Transkribus or Discourse.
+The privacy-policy page can also include information from other installed modules. Compatible modules can expose a public `privacyNotices(): array` method. The method may currently return `third_party_services` entries with `name`, `url`, optional `country`, `privacy_url`, `description`, `data`, and `group`, plus `security_measures` text entries. This is used, for example, by `hh_source_transcription` for external transcription providers such as Transkribus or Discourse.
 
 The wording for the webtrees core cookie behavior is being clarified separately; see issue [#48](https://github.com/hartenthaler/hh_legal_notice/issues/48).
 

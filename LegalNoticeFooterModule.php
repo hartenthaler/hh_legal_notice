@@ -1195,7 +1195,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'trackingServices'          => $this->trackingServices($tree, $user),
             'thirdPartyServices'        => $this->thirdPartyServices(),
             'cookiesServices'           => [],
-            'externalTranscriptionProviders' => [],
+            'moduleSecurityMeasures'     => $this->moduleSecurityMeasures(),
             //'usercentricsLanguages' => self::USERCENTRICS_LANGUAGES,
             'https'                     => legalNoticeSupport::getHttps($request),
             'hostingDomain'             => LegalNoticeSupport::getHostName($request),
@@ -1249,13 +1249,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             $services[] = self::OPENSTREETMAP_SERVICE;
         }
 
-        $services = [
-            ...$services,
-            ...$this->externalTranscriptionProviders(),
-        ];
-
         return array_map(fn (array $service): array => $this->withThirdCountryTransferFlag($service), [
             ...$services,
+            ...$this->moduleThirdPartyServices(),
             ...$this->additionalThirdPartyServices(),
         ]);
     }
@@ -1308,29 +1304,106 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * External transcription providers announced by hh_source_transcription, if installed.
+     * Privacy notices announced by other enabled modules.
      *
-     * @return list<array{name:string,url:string,country:string,data:list<string>,thirdCountryTransfer:bool}>
+     * The current lightweight module contract is intentionally method-based:
+     * modules may expose a public privacyNotices() method without importing a
+     * shared interface from this module.
+     *
+     * @return array{third_party_services:list<array<string,mixed>>,security_measures:list<string>}
      */
-    private function externalTranscriptionProviders(): array
+    private function modulePrivacyNotices(): array
     {
-        $sourceTranscription = '\Hartenthaler\Webtrees\Module\SourceTranscription\SourceTranscription';
+        $notices = [
+            'third_party_services' => [],
+            'security_measures' => [],
+        ];
 
-        if (!class_exists($sourceTranscription) || !method_exists($sourceTranscription, 'externalProviderPrivacyNotices')) {
-            return [];
+        foreach ($this->moduleService->all() as $module) {
+            if ($module === $this || !method_exists($module, 'privacyNotices')) {
+                continue;
+            }
+
+            try {
+                $moduleNotices = $module->privacyNotices();
+            } catch (Throwable) {
+                continue;
+            }
+
+            if (!is_array($moduleNotices)) {
+                continue;
+            }
+
+            foreach ($moduleNotices['third_party_services'] ?? [] as $service) {
+                if (is_array($service)) {
+                    $normalized = $this->normalizedThirdPartyService($service);
+
+                    if ($normalized !== null) {
+                        $notices['third_party_services'][] = $normalized;
+                    }
+                }
+            }
+
+            foreach ($moduleNotices['security_measures'] ?? [] as $measure) {
+                $measure = trim((string) $measure);
+
+                if ($measure !== '') {
+                    $notices['security_measures'][] = $measure;
+                }
+            }
         }
 
-        try {
-            $providers = $sourceTranscription::externalProviderPrivacyNotices();
-        } catch (Throwable) {
-            return [];
+        return $notices;
+    }
+
+    /**
+     * @return list<array<string,mixed>>
+     */
+    private function moduleThirdPartyServices(): array
+    {
+        return $this->modulePrivacyNotices()['third_party_services'];
+    }
+
+    /**
+     * @return list<string>
+     */
+    private function moduleSecurityMeasures(): array
+    {
+        return $this->modulePrivacyNotices()['security_measures'];
+    }
+
+    /**
+     * @param array<string,mixed> $service
+     *
+     * @return array<string,mixed>|null
+     */
+    private function normalizedThirdPartyService(array $service): ?array
+    {
+        $name = trim((string) ($service['name'] ?? ''));
+        $url = trim((string) ($service['url'] ?? ''));
+
+        if ($name === '' || $url === '') {
+            return null;
         }
 
-        if (!is_array($providers)) {
-            return [];
+        $data = [];
+        foreach ($service['data'] ?? [] as $dataCategory) {
+            $dataCategory = trim((string) $dataCategory);
+
+            if ($dataCategory !== '') {
+                $data[] = $dataCategory;
+            }
         }
 
-        return array_map(fn (array $provider): array => $this->withThirdCountryTransferFlag($provider), $providers);
+        return [
+            'name' => $name,
+            'url' => $url,
+            'country' => trim((string) ($service['country'] ?? '')),
+            'privacy_url' => trim((string) ($service['privacy_url'] ?? '')),
+            'data' => $data,
+            'description' => trim((string) ($service['description'] ?? '')),
+            'group' => trim((string) ($service['group'] ?? '')),
+        ];
     }
 
     private function registeredUsersAreRelatives(): bool
