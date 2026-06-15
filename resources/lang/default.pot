@@ -435,7 +435,13 @@ msgid ""
 "written consent."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:250
+#: src/LegalNoticeSupport.php:264 src/LegalNoticeSupport.php:275
+msgid ""
+"To reduce unwanted automated access, this website uses technical measures such as robots.txt rules and the webtrees Bad Bot Blocker. Access attempts may be recorded in the webtrees log and analyzed there. These measures "
+"supplement the legal notice but cannot guarantee complete protection."
+msgstr ""
+
+#: src/LegalNoticeSupport.php:265
 msgid ""
 "I take the protection of copyright seriously. If I discover that copyrighted material from this website has been used contrary to these terms, I reserve the right to take legal action, including claims for damages, "
 "injunctive relief, and reimbursement of legal costs."
@@ -478,7 +484,7 @@ msgid ""
 "written consent."
 msgstr ""
 
-#: src/LegalNoticeSupport.php:260
+#: src/LegalNoticeSupport.php:276
 msgid ""
 "We take the protection of copyright seriously. If we discover that copyrighted material from this website has been used contrary to these terms, we reserve the right to take legal action, including claims for damages, "
 "injunctive relief, and reimbursement of legal costs."

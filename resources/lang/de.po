@@ -606,7 +606,20 @@ msgstr ""
 "Anreicherung von Systemen künstlicher Intelligenz (KI) oder zum Abruf durch "
 "solche Systeme ist ohne meine vorherige schriftliche Zustimmung untersagt."
 
-#: src/LegalNoticeSupport.php:250
+#: src/LegalNoticeSupport.php:264 src/LegalNoticeSupport.php:275
+msgid ""
+"To reduce unwanted automated access, this website uses technical measures "
+"such as robots.txt rules and the webtrees Bad Bot Blocker. Access attempts "
+"may be recorded in the webtrees log and analyzed there. These measures "
+"supplement the legal notice but cannot guarantee complete protection."
+msgstr ""
+"Zur Verringerung unerwünschter automatisierter Zugriffe nutzt diese Website "
+"technische Maßnahmen wie Regeln in der robots.txt und den Bad Bot Blocker "
+"von webtrees. Zugriffsversuche können im webtrees-Protokoll aufgezeichnet "
+"und dort ausgewertet werden. Diese Maßnahmen ergänzen den rechtlichen "
+"Hinweis, können aber keinen vollständigen Schutz garantieren."
+
+#: src/LegalNoticeSupport.php:265
 msgid ""
 "I take the protection of copyright seriously. If I discover that copyrighted "
 "material from this website has been used contrary to these terms, I reserve "
@@ -719,7 +732,7 @@ msgstr ""
 "Anreicherung von Systemen künstlicher Intelligenz (KI) oder zum Abruf durch "
 "solche Systeme ist ohne unsere vorherige schriftliche Zustimmung untersagt."
 
-#: src/LegalNoticeSupport.php:260
+#: src/LegalNoticeSupport.php:276
 msgid ""
 "We take the protection of copyright seriously. If we discover that "
 "copyrighted material from this website has been used contrary to these "
