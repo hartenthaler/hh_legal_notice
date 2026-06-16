@@ -1670,3 +1670,63 @@ msgstr ""
 #: resources/views/settings.phtml:229
 msgid "The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of \"Purpose\". Research focus details are not translated, so they should be kept short."
 msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:85
+msgid "Global privacy-related settings"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:87
+msgid "The following global webtrees settings affect visibility and registration information on this website:"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:91
+msgid "Show list of family trees"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:96
+msgid "Show acceptable use agreement on “Request a new user account” page"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:102
+msgid "Privacy settings for individual family trees"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:104
+msgid "In addition, webtrees privacy settings can be configured separately for each family tree. The concrete settings may differ from tree to tree."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:105
+msgid "The following areas can be configured for each family tree:"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:108
+msgid "Show the family tree"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:109
+msgid "Show dead individuals"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:110
+msgid "Age at which to assume an individual is dead"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:111
+msgid "Show living individuals"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:112
+msgid "Extend privacy to dead individuals"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:113
+msgid "Show names of private individuals"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:114
+msgid "Show private relationships"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:115
+msgid "Privacy restrictions for records, facts, and events"
+msgstr ""

@@ -58,6 +58,7 @@ use Fisharebest\Webtrees\Module\PrivacyPolicy;
 use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\UserService;
+use Fisharebest\Webtrees\Site;
 use Fisharebest\Webtrees\Tree;
 use Fisharebest\Webtrees\Validator;
 use Fisharebest\Webtrees\View;
@@ -1267,6 +1268,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'contactsAdministrators'    => $contactsAdministrators,
             'registeredUsersAreRelatives' => $this->registeredUsersAreRelatives(),
             'researchPurposeDescriptions' => $this->researchPurposeDescriptions(),
+            'showFamilyTreeList' => $this->showFamilyTreeList(),
+            'showRegisterCaution' => $this->showRegisterCaution(),
             'inactiveUserYears' => $this->inactiveUserYears(),
             'sensitiveDataYears' => $this->sensitiveDataYears(),
             'supervisoryAuthorityName' => $this->supervisoryAuthorityName(),
@@ -1495,6 +1498,16 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function registeredUsersAreRelatives(): bool
     {
         return $this->getPreference('registeredUsersAreRelatives', '0') === '1';
+    }
+
+    private function showFamilyTreeList(): bool
+    {
+        return Site::getPreference('ALLOW_CHANGE_GEDCOM') === '1';
+    }
+
+    private function showRegisterCaution(): bool
+    {
+        return Site::getPreference('SHOW_REGISTER_CAUTION') === '1';
     }
 
     private function inactiveUserYears(): int

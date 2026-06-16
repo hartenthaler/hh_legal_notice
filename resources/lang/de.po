@@ -2686,6 +2686,76 @@ msgstr ""
 "„Zweck“ gesteuert. Forschungsschwerpunkte werden nicht übersetzt und sollten "
 "deshalb kurz gehalten werden."
 
+#: resources/views/page/sections/data-categories.phtml:85
+msgid "Global privacy-related settings"
+msgstr "Globale datenschutzrelevante Einstellungen"
+
+#: resources/views/page/sections/data-categories.phtml:87
+msgid ""
+"The following global webtrees settings affect visibility and registration "
+"information on this website:"
+msgstr ""
+"Die folgenden globalen webtrees-Einstellungen beeinflussen die Sichtbarkeit "
+"und Registrierungsinformationen auf dieser Website:"
+
+#: resources/views/page/sections/data-categories.phtml:91
+msgid "Show list of family trees"
+msgstr "Liste der Stammbäume zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:96
+msgid "Show acceptable use agreement on “Request a new user account” page"
+msgstr ""
+"Nutzungsbedingungen auf der Seite „Neues Benutzerkonto anfragen“ zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:102
+msgid "Privacy settings for individual family trees"
+msgstr "Datenschutzeinstellungen für einzelne Stammbäume"
+
+#: resources/views/page/sections/data-categories.phtml:104
+msgid ""
+"In addition, webtrees privacy settings can be configured separately for each "
+"family tree. The concrete settings may differ from tree to tree."
+msgstr ""
+"Zusätzlich können die webtrees-Datenschutzeinstellungen für jeden Stammbaum "
+"separat konfiguriert werden. Die konkreten Einstellungen können sich von "
+"Stammbaum zu Stammbaum unterscheiden."
+
+#: resources/views/page/sections/data-categories.phtml:105
+msgid "The following areas can be configured for each family tree:"
+msgstr "Die folgenden Bereiche können pro Stammbaum konfiguriert werden:"
+
+#: resources/views/page/sections/data-categories.phtml:108
+msgid "Show the family tree"
+msgstr "Den Stammbaum zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:109
+msgid "Show dead individuals"
+msgstr "Verstorbene Personen zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:110
+msgid "Age at which to assume an individual is dead"
+msgstr "Alter, ab dem angenommen wird, dass eine Person verstorben ist"
+
+#: resources/views/page/sections/data-categories.phtml:111
+msgid "Show living individuals"
+msgstr "Lebende Personen zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:112
+msgid "Extend privacy to dead individuals"
+msgstr "Datenschutz auf Verstorbene ausweiten"
+
+#: resources/views/page/sections/data-categories.phtml:113
+msgid "Show names of private individuals"
+msgstr "Namen vertraulicher Personen zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:114
+msgid "Show private relationships"
+msgstr "Vertrauliche Beziehungen zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:115
+msgid "Privacy restrictions for records, facts, and events"
+msgstr "Zugriffsberechtigungen für Datensätze, Tatsachen und Ereignisse"
+
 #~ msgid "GDPR in connection with online genealogies"
 #~ msgstr "DSGVO im Zusammenhang mit Online-Genealogien"
 
