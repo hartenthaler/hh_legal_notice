@@ -2692,20 +2692,55 @@ msgstr "Globale datenschutzrelevante Einstellungen"
 
 #: resources/views/page/sections/data-categories.phtml:87
 msgid ""
-"The following global webtrees settings affect visibility and registration "
-"information on this website:"
+"The following global webtrees setting affects visibility on this website:"
 msgstr ""
-"Die folgenden globalen webtrees-Einstellungen beeinflussen die Sichtbarkeit "
-"und Registrierungsinformationen auf dieser Website:"
+"Die folgende globale webtrees-Einstellung beeinflusst die Sichtbarkeit auf "
+"dieser Website:"
 
 #: resources/views/page/sections/data-categories.phtml:91
 msgid "Show list of family trees"
 msgstr "Liste der Stammbäume zeigen"
 
-#: resources/views/page/sections/data-categories.phtml:96
+#: resources/views/page/sections/data-categories.phtml:124
+msgid "Requesting a new user account"
+msgstr "Neues Benutzerkonto anfragen"
+
+#: resources/views/page/sections/data-categories.phtml:128
+msgid "Allow visitors to request a new user account"
+msgstr "Besuchern erlauben, ein neues Benutzerkonto anzufordern"
+
+#: resources/views/page/sections/data-categories.phtml:133
 msgid "Show acceptable use agreement on “Request a new user account” page"
 msgstr ""
 "Nutzungsbedingungen auf der Seite „Neues Benutzerkonto anfragen“ zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:141
+msgid ""
+"When requesting a new user account, visitors are shown an acceptable use "
+"agreement before submitting the form."
+msgstr ""
+"Beim Anfragen eines neuen Benutzerkontos werden Besuchern vor dem Absenden "
+"des Formulars Nutzungsbedingungen angezeigt."
+
+#: resources/views/page/sections/data-categories.phtml:142
+msgid ""
+"This agreement asks them to respect the privacy of living persons listed on "
+"this website and to describe their relationship to persons on this website "
+"or provide information about someone who should be listed on this website."
+msgstr ""
+"Diese Nutzungsbedingungen fordern sie auf, den Datenschutz der auf dieser "
+"Website aufgeführten lebenden Personen zu beachten und ihr "
+"Verwandtschaftsverhältnis zu Personen dieser Website zu beschreiben oder "
+"Informationen über jemanden zukommen zu lassen, der auf dieser Website "
+"aufgeführt werden sollte."
+
+#: resources/views/page/sections/data-categories.phtml:143
+msgid ""
+"This is the point at which new users explicitly confirm these terms before "
+"submitting their account request."
+msgstr ""
+"Dies ist die Stelle, an der neue Nutzer diese Bedingungen vor dem Absenden "
+"ihrer Kontoanfrage ausdrücklich bestätigen."
 
 #: resources/views/page/sections/data-categories.phtml:102
 msgid "Privacy settings for individual family trees"

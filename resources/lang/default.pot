@@ -1676,15 +1676,35 @@ msgid "Global privacy-related settings"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:87
-msgid "The following global webtrees settings affect visibility and registration information on this website:"
+msgid "The following global webtrees setting affects visibility on this website:"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:91
 msgid "Show list of family trees"
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:96
+#: resources/views/page/sections/data-categories.phtml:124
+msgid "Requesting a new user account"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:128
+msgid "Allow visitors to request a new user account"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:133
 msgid "Show acceptable use agreement on “Request a new user account” page"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:141
+msgid "When requesting a new user account, visitors are shown an acceptable use agreement before submitting the form."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:142
+msgid "This agreement asks them to respect the privacy of living persons listed on this website and to describe their relationship to persons on this website or provide information about someone who should be listed on this website."
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:143
+msgid "This is the point at which new users explicitly confirm these terms before submitting their account request."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:102

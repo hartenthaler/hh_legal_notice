@@ -81,16 +81,12 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
             <h5><?= I18N::translate('Global privacy-related settings') ?></h5>
             <p>
-                <?= I18N::translate('The following global webtrees settings affect visibility and registration information on this website:') ?>
+                <?= I18N::translate('The following global webtrees setting affects visibility on this website:') ?>
             </p>
             <ul>
                 <li>
                     <?= I18N::translate('Show list of family trees') ?>:
                     <?= MoreI18N::xlate($showFamilyTreeList ? 'yes' : 'no') ?>
-                </li>
-                <li>
-                    <?= I18N::translate('Show acceptable use agreement on “Request a new user account” page') ?>:
-                    <?= MoreI18N::xlate($showRegisterCaution ? 'yes' : 'no') ?>
                 </li>
             </ul>
 
@@ -115,6 +111,26 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <p>
                 <?= I18N::translate('The personal data that you provide yourself when creating an account is stored and processed; see contact data.') ?>
             </p>
+
+            <h5><?= I18N::translate('Requesting a new user account') ?></h5>
+            <ul>
+                <li>
+                    <?= I18N::translate('Allow visitors to request a new user account') ?>:
+                    <?= MoreI18N::xlate($allowVisitorRegistration ? 'yes' : 'no') ?>
+                </li>
+                <li>
+                    <?= I18N::translate('Show acceptable use agreement on “Request a new user account” page') ?>:
+                    <?= MoreI18N::xlate($allowVisitorRegistration && $showRegisterCaution ? 'yes' : 'no') ?>
+                </li>
+            </ul>
+
+            <?php if ($allowVisitorRegistration && $showRegisterCaution) : ?>
+                <p>
+                    <?= I18N::translate('When requesting a new user account, visitors are shown an acceptable use agreement before submitting the form.') ?>
+                    <?= I18N::translate('This agreement asks them to respect the privacy of living persons listed on this website and to describe their relationship to persons on this website or provide information about someone who should be listed on this website.') ?>
+                    <?= I18N::translate('This is the point at which new users explicitly confirm these terms before submitting their account request.') ?>
+                </p>
+            <?php endif ?>
 
             <ul>
                 <li><?= I18N::translate('Name') ?></li>
