@@ -8,7 +8,7 @@
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
-Current module version: **2.2.6.3**.
+Current module version: **2.2.6.4**.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
@@ -108,15 +108,14 @@ automated collection, scraping, data mining, AI-system use, technical measures a
 automated access, and copyright enforcement.
 
 <a name="WhatsNew"></a>
-## ✨ What's new in 2.2.6.3
+## ✨ What's new in 2.2.6.4
 
-This release refines the legal notice wording and privacy-policy details:
+This release adds cross-module privacy notices and refines generated wording:
 
-* The legal notice now uses a separate provider heading, avoiding confusion with the GDPR term "responsible person".
-* Additional roles of the provider, such as tree contact or website administrator, are shown as bullet points and explicitly described as additional roles.
-* Temporarily unavailable sections keep their stored order and visibility settings when they become available again.
-* The predefined Statcounter service location is now United States.
-* The privacy policy now states that registered users can view, correct, or delete account data in their profile settings.
+* Compatible custom modules can now provide privacy notices through `privacyNotices()`.
+* Module-provided third-party services and security measures can be included in the generated privacy policy.
+* The research-purpose settings block is hidden when all related purpose subsections are disabled.
+* Website/service wording was neutralized where a site reference is meant rather than an owner reference.
 
 <a name="Screenshots"></a>
 ## 🖼 Screenshots
