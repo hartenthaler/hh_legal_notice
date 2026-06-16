@@ -13,6 +13,14 @@ use Fisharebest\Webtrees\I18N;
         <?= I18N::translate('These measures include, in particular, securing the confidentiality, integrity, and availability of data, including by controlling access to the data.') ?>
     </p>
 
+    <?php if (count($moduleSecurityMeasures) > 0) : ?>
+        <ul>
+            <?php foreach ($moduleSecurityMeasures as $moduleSecurityMeasure) : ?>
+                <li><?= e($moduleSecurityMeasure) ?></li>
+            <?php endforeach ?>
+        </ul>
+    <?php endif ?>
+
     <?php if ($https) : ?>
         <h5><?= I18N::translate('SSL or TLS encryption') ?></h5>
 
