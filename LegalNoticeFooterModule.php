@@ -78,11 +78,13 @@ use function max;
 use function method_exists;
 use function preg_match;
 use function preg_replace;
+use function preg_split;
 use function time;
 use function trim;
 use function file_exists;
 use function assert;
 use function array_map;
+use function array_values;
 use function view;
 
 class LegalNoticeFooterModule extends PrivacyPolicy
@@ -455,6 +457,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     {
         // check if this module is called the first time; then transfer the preferences from the former module hh_imprint
         $this->checkModuleVersionUpdate();
+        $this->syncResponsiblePersonPreferences($response);
+        $this->initializeResponsiblePersonFromFirstAdministrator($response);
 
         if ($response['responsibleSex'] == '') {
             $response['responsibleSex'] = 'U';
@@ -479,6 +483,88 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             $response['sensitiveDataYears'] = '10';
         }
 
+    }
+
+    /**
+     * Sync values that may have been migrated after the initial preference read.
+     *
+     * @param array<string,string> $response
+     */
+    private function syncResponsiblePersonPreferences(array &$response): void
+    {
+        foreach (['responsibleFirst', 'responsibleSurname', 'responsibleSex', 'email'] as $preference) {
+            $response[$preference] = $this->getPreference($preference, $response[$preference] ?? '');
+        }
+    }
+
+    /**
+     * Initialize the responsible person from the first administrator only when no responsible person exists yet.
+     *
+     * @param array<string,string> $response
+     */
+    private function initializeResponsiblePersonFromFirstAdministrator(array &$response): void
+    {
+        if (!$this->responsiblePersonSettingsAreEmpty($response)) {
+            return;
+        }
+
+        $administrator = $this->userService->administrators()->first();
+
+        if (!$administrator instanceof UserInterface) {
+            return;
+        }
+
+        $nameParts = $this->splitResponsiblePersonName($administrator->realName());
+
+        if ($nameParts === null) {
+            return;
+        }
+
+        $response['responsibleFirst'] = $nameParts['first'];
+        $response['responsibleSurname'] = $nameParts['surname'];
+
+        if (($response['email'] ?? '') === '') {
+            $response['email'] = $administrator->email();
+        }
+    }
+
+    /**
+     * @param array<string,string> $response
+     */
+    private function responsiblePersonSettingsAreEmpty(array $response): bool
+    {
+        return ($response['responsibleFirst'] ?? '') === ''
+            && ($response['responsibleSurname'] ?? '') === '';
+    }
+
+    /**
+     * Split a real name into first name(s) and surname.
+     *
+     * @return array{first:string,surname:string}|null
+     */
+    private function splitResponsiblePersonName(string $realName): ?array
+    {
+        $name = trim($realName);
+
+        if ($name === '') {
+            return null;
+        }
+
+        $parts = array_values(preg_split('/\s+/', $name) ?: []);
+
+        if (count($parts) < 2) {
+            return [
+                'first' => '',
+                'surname' => $name,
+            ];
+        }
+
+        $surname = array_pop($parts);
+
+        return [
+            'first' => trim(implode(' ', $parts)),
+            'surname' => $surname,
+        ];
     }
 
     /**
