@@ -2686,6 +2686,111 @@ msgstr ""
 "„Zweck“ gesteuert. Forschungsschwerpunkte werden nicht übersetzt und sollten "
 "deshalb kurz gehalten werden."
 
+#: resources/views/page/sections/data-categories.phtml:85
+msgid "Global privacy-related settings"
+msgstr "Globale datenschutzrelevante Einstellungen"
+
+#: resources/views/page/sections/data-categories.phtml:87
+msgid ""
+"The following global webtrees setting affects visibility on this website:"
+msgstr ""
+"Die folgende globale webtrees-Einstellung beeinflusst die Sichtbarkeit auf "
+"dieser Website:"
+
+#: resources/views/page/sections/data-categories.phtml:91
+msgid "Show list of family trees"
+msgstr "Liste der Stammbäume zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:124
+msgid "Requesting a new user account"
+msgstr "Neues Benutzerkonto anfragen"
+
+#: resources/views/page/sections/data-categories.phtml:128
+msgid "Allow visitors to request a new user account"
+msgstr "Besuchern erlauben, ein neues Benutzerkonto anzufordern"
+
+#: resources/views/page/sections/data-categories.phtml:133
+msgid "Show acceptable use agreement on “Request a new user account” page"
+msgstr ""
+"Nutzungsbedingungen auf der Seite „Neues Benutzerkonto anfragen“ zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:141
+msgid ""
+"When requesting a new user account, visitors are shown an acceptable use "
+"agreement before submitting the form."
+msgstr ""
+"Beim Anfragen eines neuen Benutzerkontos werden Besuchern vor dem Absenden "
+"des Formulars Nutzungsbedingungen angezeigt."
+
+#: resources/views/page/sections/data-categories.phtml:142
+msgid ""
+"This agreement asks them to respect the privacy of living persons listed on "
+"this website and to describe their relationship to persons on this website "
+"or provide information about someone who should be listed on this website."
+msgstr ""
+"Diese Nutzungsbedingungen fordern sie auf, den Datenschutz der auf dieser "
+"Website aufgeführten lebenden Personen zu beachten und ihr "
+"Verwandtschaftsverhältnis zu Personen dieser Website zu beschreiben oder "
+"Informationen über jemanden zukommen zu lassen, der auf dieser Website "
+"aufgeführt werden sollte."
+
+#: resources/views/page/sections/data-categories.phtml:143
+msgid ""
+"This is the point at which new users explicitly confirm these terms before "
+"submitting their account request."
+msgstr ""
+"Dies ist die Stelle, an der neue Nutzer diese Bedingungen vor dem Absenden "
+"ihrer Kontoanfrage ausdrücklich bestätigen."
+
+#: resources/views/page/sections/data-categories.phtml:102
+msgid "Privacy settings for individual family trees"
+msgstr "Datenschutzeinstellungen für einzelne Stammbäume"
+
+#: resources/views/page/sections/data-categories.phtml:104
+msgid ""
+"In addition, webtrees privacy settings can be configured separately for each "
+"family tree. The concrete settings may differ from tree to tree."
+msgstr ""
+"Zusätzlich können die webtrees-Datenschutzeinstellungen für jeden Stammbaum "
+"separat konfiguriert werden. Die konkreten Einstellungen können sich von "
+"Stammbaum zu Stammbaum unterscheiden."
+
+#: resources/views/page/sections/data-categories.phtml:105
+msgid "The following areas can be configured for each family tree:"
+msgstr "Die folgenden Bereiche können pro Stammbaum konfiguriert werden:"
+
+#: resources/views/page/sections/data-categories.phtml:108
+msgid "Show the family tree"
+msgstr "Den Stammbaum zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:109
+msgid "Show dead individuals"
+msgstr "Verstorbene Personen zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:110
+msgid "Age at which to assume an individual is dead"
+msgstr "Alter, ab dem angenommen wird, dass eine Person verstorben ist"
+
+#: resources/views/page/sections/data-categories.phtml:111
+msgid "Show living individuals"
+msgstr "Lebende Personen zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:112
+msgid "Extend privacy to dead individuals"
+msgstr "Datenschutz auf Verstorbene ausweiten"
+
+#: resources/views/page/sections/data-categories.phtml:113
+msgid "Show names of private individuals"
+msgstr "Namen vertraulicher Personen zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:114
+msgid "Show private relationships"
+msgstr "Vertrauliche Beziehungen zeigen"
+
+#: resources/views/page/sections/data-categories.phtml:115
+msgid "Privacy restrictions for records, facts, and events"
+msgstr "Zugriffsberechtigungen für Datensätze, Tatsachen und Ereignisse"
+
 #~ msgid "GDPR in connection with online genealogies"
 #~ msgstr "DSGVO im Zusammenhang mit Online-Genealogien"
 

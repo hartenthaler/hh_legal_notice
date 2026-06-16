@@ -78,12 +78,59 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <?= I18N::translate('It must remain confidential; therefore we all depend on every individual treating this data confidentially.') ?>
                 <?php endif ?>
             </p>
+
+            <h5><?= I18N::translate('Global privacy-related settings') ?></h5>
+            <p>
+                <?= I18N::translate('The following global webtrees setting affects visibility on this website:') ?>
+            </p>
+            <ul>
+                <li>
+                    <?= I18N::translate('Show list of family trees') ?>:
+                    <?= MoreI18N::xlate($showFamilyTreeList ? 'yes' : 'no') ?>
+                </li>
+            </ul>
+
+            <h5><?= I18N::translate('Privacy settings for individual family trees') ?></h5>
+            <p>
+                <?= I18N::translate('In addition, webtrees privacy settings can be configured separately for each family tree. The concrete settings may differ from tree to tree.') ?>
+                <?= I18N::translate('The following areas can be configured for each family tree:') ?>
+            </p>
+            <ul>
+                <li><?= I18N::translate('Show the family tree') ?></li>
+                <li><?= I18N::translate('Show dead individuals') ?></li>
+                <li><?= I18N::translate('Age at which to assume an individual is dead') ?></li>
+                <li><?= I18N::translate('Show living individuals') ?></li>
+                <li><?= I18N::translate('Extend privacy to dead individuals') ?></li>
+                <li><?= I18N::translate('Show names of private individuals') ?></li>
+                <li><?= I18N::translate('Show private relationships') ?></li>
+                <li><?= I18N::translate('Privacy restrictions for records, facts, and events') ?></li>
+            </ul>
         <?php elseif ($subsection->getKey() === 'UserAccountData') : ?>
             <h4><?= e($subsection->getHeading()) ?></h4>
 
             <p>
                 <?= I18N::translate('The personal data that you provide yourself when creating an account is stored and processed; see contact data.') ?>
             </p>
+
+            <h5><?= I18N::translate('Requesting a new user account') ?></h5>
+            <ul>
+                <li>
+                    <?= I18N::translate('Allow visitors to request a new user account') ?>:
+                    <?= MoreI18N::xlate($allowVisitorRegistration ? 'yes' : 'no') ?>
+                </li>
+                <li>
+                    <?= I18N::translate('Show acceptable use agreement on “Request a new user account” page') ?>:
+                    <?= MoreI18N::xlate($allowVisitorRegistration && $showRegisterCaution ? 'yes' : 'no') ?>
+                </li>
+            </ul>
+
+            <?php if ($allowVisitorRegistration && $showRegisterCaution) : ?>
+                <p>
+                    <?= I18N::translate('When requesting a new user account, visitors are shown an acceptable use agreement before submitting the form.') ?>
+                    <?= I18N::translate('This agreement asks them to respect the privacy of living persons listed on this website and to describe their relationship to persons on this website or provide information about someone who should be listed on this website.') ?>
+                    <?= I18N::translate('This is the point at which new users explicitly confirm these terms before submitting their account request.') ?>
+                </p>
+            <?php endif ?>
 
             <ul>
                 <li><?= I18N::translate('Name') ?></li>
