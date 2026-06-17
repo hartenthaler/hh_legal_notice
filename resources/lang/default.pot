@@ -565,7 +565,8 @@ msgid "Responsible for this content is: %s. Address: see above."
 msgstr ""
 
 #: resources/views/page/header.phtml:114
-msgid "This person is resident in Germany."
+#, php-format
+msgid "Responsible for this content is: %s (resident in Germany; address: see above)."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:18
