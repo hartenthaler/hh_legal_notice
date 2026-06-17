@@ -1732,7 +1732,7 @@ msgid "Show living individuals"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:112
-msgid "Extend privacy to dead individuals"
+msgid "Extend privacy to dead individuals for a selectable period after birth or death"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:113

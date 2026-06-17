@@ -2779,8 +2779,10 @@ msgid "Show living individuals"
 msgstr "Lebende Personen zeigen"
 
 #: resources/views/page/sections/data-categories.phtml:112
-msgid "Extend privacy to dead individuals"
-msgstr "Datenschutz auf Verstorbene ausweiten"
+msgid "Extend privacy to dead individuals for a selectable period after birth or death"
+msgstr ""
+"Datenschutz auf Verstorbene ausweiten (für eine wählbare Zeit nach Geburt "
+"oder Tod)"
 
 #: resources/views/page/sections/data-categories.phtml:113
 msgid "Show names of private individuals"
