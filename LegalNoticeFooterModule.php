@@ -191,6 +191,39 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private const PRIVACY_LAW_EU = 'eu';
     private const PRIVACY_LAW_OTHER = 'other';
 
+    private const LEGAL_REFERENCES = [
+        'germany' => [
+            'ddg' => [
+                'abbreviation' => 'DDG',
+                'title' => 'Digitale-Dienste-Gesetz',
+            ],
+            'mstv' => [
+                'abbreviation' => 'MStV',
+                'title' => 'Medienstaatsvertrag',
+            ],
+            'bdsg' => [
+                'abbreviation' => 'BDSG',
+                'title' => 'Bundesdatenschutzgesetz',
+            ],
+            'tdddg' => [
+                'abbreviation' => 'TDDDG',
+                'title' => 'Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz',
+            ],
+        ],
+        'austria' => [
+            'ecg' => [
+                'abbreviation' => 'ECG',
+                'title' => 'E-Commerce-Gesetz',
+            ],
+        ],
+        'switzerland' => [
+            'uwg' => [
+                'abbreviation' => 'UWG',
+                'title' => 'Bundesgesetz gegen den unlauteren Wettbewerb',
+            ],
+        ],
+    ];
+
     private const EU_GDPR_COUNTRIES = [
         'austria',
         'belgium',
@@ -1291,6 +1324,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingDomain'             => LegalNoticeSupport::getHostName($request),
             'hostingCountry'            => I18N::translate($this->hostingCountry()),
             'legalNoticeLawReference'   => $this->legalNoticeLawReference(),
+            'mediaStateTreatyReference' => $this->legalReference('germany', 'mstv'),
+            'federalDataProtectionActReference' => $this->legalReference('germany', 'bdsg'),
+            'telecommunicationDigitalServicesDataProtectionActReference' => $this->legalReference('germany', 'tdddg'),
             'privacyLawRegion'          => $privacyLawRegion,
             'useGermanPrivacyLaw'        => $privacyLawRegion === self::PRIVACY_LAW_GERMANY,
             'useEuPrivacyLaw'            => $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
@@ -1986,18 +2022,29 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         if ($this->isGermany($country)) {
-            return I18N::translate('Information according to German law Section 5 DDG');
+            return I18N::translate('Information according to German law Section 5 %s', $this->legalReference('germany', 'ddg'));
         }
 
         if ($this->isAustria($country)) {
-            return I18N::translate('Information according to Austrian law Section 5 (1) ECG');
+            return I18N::translate('Information according to Austrian law Section 5 (1) %s', $this->legalReference('austria', 'ecg'));
         }
 
         if ($this->isSwitzerland($country)) {
-            return I18N::translate('Information according to Swiss law Article 3 paragraph 1 letter s UWG');
+            return I18N::translate('Information according to Swiss law Article 3 paragraph 1 letter s %s', $this->legalReference('switzerland', 'uwg'));
         }
 
         return '';
+    }
+
+    private function legalReference(string $region, string $key): string
+    {
+        $reference = self::LEGAL_REFERENCES[$region][$key] ?? null;
+
+        if ($reference === null) {
+            return '';
+        }
+
+        return $reference['abbreviation'] . ' (' . $reference['title'] . ')';
     }
 
     /**

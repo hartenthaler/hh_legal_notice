@@ -43,7 +43,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
             <?php if ($useGermanPrivacyLaw) : ?>
                 <p>
-                    <?= I18N::translate('In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular the Federal Data Protection Act (BDSG).') ?>
+                    <?= I18N::translate('In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular %s.', $federalDataProtectionActReference) ?>
                 </p>
             <?php endif ?>
         <?php elseif ($subsection->getKey() === 'SensitiveData') : ?>
@@ -60,7 +60,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <?= I18N::translate('The legal basis for processing special categories of personal data is Article 9(2)(j) GDPR for historical research purposes.') ?>
                     <?= I18N::translate('Information about criminal convictions and offences is processed in accordance with Article 10 GDPR.') ?>
                     <?php if ($useGermanPrivacyLaw) : ?>
-                        <?= I18N::translate('Where German law applies, Section 27 BDSG may also apply.') ?>
+                        <?= I18N::translate('Where German law applies, Section 27 %s may also apply.', $federalDataProtectionActReference) ?>
                     <?php endif ?>
                 </p>
             <?php endif ?>
@@ -178,7 +178,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?= I18N::translate('Cookies are small text files that are stored on your computer and saved by your browser.') ?>
                 <?= I18N::translate('These cookies are strictly necessary for the website to function properly.') ?>
                 <?php if ($useGermanPrivacyLaw) : ?>
-                    <?= I18N::translate('Under Section 25 TDDDG, storing cookies that are not technically necessary and accessing information on your device generally require your consent.') ?>
+                    <?= I18N::translate('Under Section 25 %s, storing cookies that are not technically necessary and accessing information on your device generally require your consent.', $telecommunicationDigitalServicesDataProtectionActReference) ?>
                 <?php endif ?>
                 <?= I18N::translate('Session cookies are deleted when you leave the website or close your browser.') ?>
                 <?= I18N::translate('Persistent cookies can remain stored after the browser is closed, for example to preserve selected settings for a later visit.') ?>
@@ -211,7 +211,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <thead>
                         <tr>
                             <th><?= I18N::translate('Service') ?></th>
-                            <th><?= MoreI18N::xlate('Tracker') ?></th>
+                            <th><?= I18N::translate('Type') ?></th>
                             <th><?= MoreI18N::xlate('URL') ?></th>
                             <th><?= I18N::translate('Country of service provision') ?></th>
                         </tr>
@@ -220,7 +220,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <?php foreach ($trackingServices as $service) : ?>
                         <tr>
                             <td><strong><?= e($service['name']) ?></strong></td>
-                            <td><?= $service['tracker'] ? MoreI18N::xlate('yes') : MoreI18N::xlate('no') ?></td>
+                            <td><?= $service['tracker'] ? MoreI18N::xlate('Tracker') : I18N::translate('Analytics tool') ?></td>
                             <td><a href="<?= e($service['url']) ?>"><?= e($service['url']) ?></a></td>
                             <td><?= $service['country'] === 'local' ? 'local' : e(MoreI18N::xlate($service['country'])) ?></td>
                         </tr>
