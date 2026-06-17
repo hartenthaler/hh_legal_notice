@@ -654,7 +654,7 @@ msgid "It must remain confidential; therefore we all depend on every individual 
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:85
-msgid "Personal data provided when creating an account is stored and processed; see contact data."
+msgid "The personal data that you provide yourself when creating an account is stored and processed; see contact data."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:89 resources/views/settings.phtml:251
@@ -670,24 +670,24 @@ msgid "Password"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:95
-msgid "Registered users can view, correct, or delete their account data themselves in their profile settings."
+msgid "As a registered user, you can view, correct, or delete your account data yourself in your profile settings."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:99
-msgid "Other personal data actively provided by registered users is also stored and used."
+msgid "Other personal data that you actively provide is also stored and used."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:100
-msgid "This includes, for example, data created by completing personal details on a personal page or by creating family relationships."
+msgid "This includes, for example, data created by completing your personal details on your personal page or by creating family relationships."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:104
-msgid "Furthermore, data relating to a user account is recorded as a result of activities on this website, for example when editing records."
+msgid "Furthermore, data relating to your user account is recorded as a result of your activities on this website, for example when editing records."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:108
-msgid "I occasionally use the e-mail address of registered users to provide information by e-mail about important matters relating to the website or, if necessary, to ask questions about changes they have made."
-msgid_plural "We occasionally use the e-mail address of registered users to provide information by e-mail about important matters relating to the website or, if necessary, to ask questions about changes they have made."
+msgid "I occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made."
+msgid_plural "We occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -699,11 +699,11 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: resources/views/page/sections/data-categories.phtml:118
-msgid "If a user account is disabled here, the genealogical data entered through this account will remain available for the benefit of our genealogical research."
+msgid "If you have your user account disabled here, the genealogical data you entered will remain available for the benefit of our genealogical research."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:119
-msgid "The data about the person concerned will also be retained; only access to the specially protected areas here will be blocked."
+msgid "The data about your person will also be retained; only your access to the specially protected areas here will be blocked."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:120
@@ -711,7 +711,7 @@ msgid "In principle, data that can be related to non-logged-in users of this ser
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:125
-msgid "This website uses cookies to enable user logins and to store settings such as the selected language."
+msgid "This website uses cookies to enable user logins and to store settings such as your selected language."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:126
@@ -719,7 +719,7 @@ msgid "Cookies help make this service more user-friendly, effective, and secure.
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:127
-msgid "Cookies are small text files that are stored on the device and saved by the browser."
+msgid "Cookies are small text files that are stored on your computer and saved by your browser."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:128
@@ -727,11 +727,11 @@ msgid "These cookies are strictly necessary for the website to function properly
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:134
-msgid "Under Section 25 TDDDG, storing cookies that are not technically necessary and accessing information on a device generally require consent."
+msgid "Under Section 25 TDDDG, storing cookies that are not technically necessary and accessing information on your device generally require your consent."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:136
-msgid "Session cookies are deleted when the website is left or the browser is closed."
+msgid "Session cookies are deleted when you leave the website or close your browser."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:130
@@ -740,7 +740,7 @@ msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:131
 msgid ""
-"Browsers can be configured to provide information when cookies are set, allow cookies only in individual cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of cookies "
+"You can configure your browser so that you are informed when cookies are set, allow cookies only in individual cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of cookies "
 "when closing the browser."
 msgstr ""
 
@@ -769,7 +769,7 @@ msgid "These services may use cookies or other tracking technology."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:180
-msgid "Tracking can be objected to by setting the \"Do Not Track\" header in the browser preferences."
+msgid "You can opt out of tracking by setting the \"Do Not Track\" header in your browser preferences."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:186
@@ -777,28 +777,28 @@ msgid "The application used (webtrees) logs all user actions so that, among othe
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:9
-msgid "Data subjects have the right at any time to obtain information about the data stored about them, its origin, and the purpose of storage."
+msgid "You have the right at any time to obtain information about the data stored about you, its origin, and the purpose of storage."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:10
-msgid "They also have the right to request completion of data concerning them or correction of inaccurate data concerning them."
+msgid "You also have the right to request completion of the data concerning you or correction of inaccurate data concerning you."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:11
-msgid "Data protection requests can be addressed to the person named above in the legal notice."
+msgid "For data protection requests, please contact the person named above in the legal notice."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:16
 msgid ""
-"In accordance with Article 17 GDPR, data subjects have the right to request that relevant data be deleted without undue delay, or alternatively, in accordance with Article 18 GDPR, to request restriction of the processing of the data."
+"In accordance with Article 17 GDPR, you have the right to request that relevant data be deleted without undue delay, or alternatively, in accordance with Article 18 GDPR, to request restriction of the processing of the data."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:18
-msgid "Relevant data may be requested to be deleted without undue delay or the processing of the data may be requested to be restricted, subject to the applicable legal requirements."
+msgid "You may request that relevant data be deleted without undue delay or that the processing of the data be restricted, subject to the applicable legal requirements."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:24
-msgid "Furthermore, under Article 77 GDPR, data subjects have the right to lodge a complaint with the competent supervisory authority."
+msgid "Furthermore, under Article 77 GDPR, you have the right to lodge a complaint with the competent supervisory authority."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:26
@@ -808,14 +808,14 @@ msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:45
 msgid ""
-"Under Article 20 GDPR, data subjects have the right to receive personal data they have provided in a structured, commonly used, and machine-readable format, and to transmit that data to another controller where the legal "
-"requirements are met."
+"Under Article 20 GDPR, you have the right to receive personal data that you have provided in a structured, commonly used, and machine-readable format, and to transmit that data to another controller where the legal requirements "
+"are met."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:55
 msgid ""
-"Under Article 21 GDPR, data subjects have the right to object at any time, on grounds relating to their particular situation, to the processing of personal data concerning them that is based on Article 6(1), first sentence, point (e) or "
-"Article 6(1), first sentence, point (f) GDPR."
+"Under Article 21 GDPR, you have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data concerning you that is based on Article 6(1), first sentence, point (e) or Article "
+"6(1), first sentence, point (f) GDPR."
 msgstr ""
 
 #: resources/views/page/sections/general-risk.phtml:9
@@ -1007,8 +1007,8 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:43
-msgid "If data appears to be unlawfully visible, I should be informed."
-msgid_plural "If data appears to be unlawfully visible, we should be informed."
+msgid "If you discover data that you believe is unlawfully visible, please inform me."
+msgid_plural "If you discover data that you believe is unlawfully visible, please inform us."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1019,8 +1019,8 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:45
-msgid "If, for specific reasons, data about a person should not be visible even within the group of authorized registered users, I should be informed so that visibility can be further restricted here as well."
-msgid_plural "If, for specific reasons, data about a person should not be visible even within the group of authorized registered users, we should be informed so that visibility can be further restricted here as well."
+msgid "If, for specific reasons, data about a person should not be visible even within the group of authorized registered users, please inform me so that I can further restrict visibility here as well."
+msgid_plural "If, for specific reasons, data about a person should not be visible even within the group of authorized registered users, please inform us so that we can further restrict visibility here as well."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1064,7 +1064,7 @@ msgid "Communication data (device information, browser used, IP addresses, ...)"
 msgstr ""
 
 #: resources/views/page/sections/personal-data-processing.phtml:19
-msgid "The following privacy information explains the use of personal data."
+msgid "To inform you fully about the use of personal data, you are asked to take note of the following privacy information."
 msgstr ""
 
 #: resources/views/page/sections/purpose.phtml:9
@@ -1106,7 +1106,7 @@ msgid "This site uses SSL or TLS encryption to protect the transmission of data.
 msgstr ""
 
 #: resources/views/page/sections/security-measures.phtml:17
-msgid "An encrypted connection can be recognized by the fact that the browser address bar contains “https://”, usually also indicated by a lock symbol in the browser bar."
+msgid "You can recognize an encrypted connection by the fact that the browser address bar contains “https://”, usually also indicated by a lock symbol in your browser bar."
 msgstr ""
 
 #: resources/views/page/sections/security-measures.phtml:18

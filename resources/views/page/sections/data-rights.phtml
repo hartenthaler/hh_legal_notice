@@ -6,22 +6,22 @@ use Fisharebest\Webtrees\I18N;
     <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
 
     <p>
-        <?= I18N::translate('Data subjects have the right at any time to obtain information about the data stored about them, its origin, and the purpose of storage.') ?>
-        <?= I18N::translate('They also have the right to request completion of data concerning them or correction of inaccurate data concerning them.') ?>
-        <?= I18N::translate('Data protection requests can be addressed to the person named above in the legal notice.') ?>
+        <?= I18N::translate('You have the right at any time to obtain information about the data stored about you, its origin, and the purpose of storage.') ?>
+        <?= I18N::translate('You also have the right to request completion of the data concerning you or correction of inaccurate data concerning you.') ?>
+        <?= I18N::translate('For data protection requests, please contact the person named above in the legal notice.') ?>
     </p>
 
     <p>
         <?php if ($useEuPrivacyLaw) : ?>
-            <?= I18N::translate('In accordance with Article 17 GDPR, data subjects have the right to request that relevant data be deleted without undue delay, or alternatively, in accordance with Article 18 GDPR, to request restriction of the processing of the data.') ?>
+            <?= I18N::translate('In accordance with Article 17 GDPR, you have the right to request that relevant data be deleted without undue delay, or alternatively, in accordance with Article 18 GDPR, to request restriction of the processing of the data.') ?>
         <?php else : ?>
-            <?= I18N::translate('Relevant data may be requested to be deleted without undue delay or the processing of the data may be requested to be restricted, subject to the applicable legal requirements.') ?>
+            <?= I18N::translate('You may request that relevant data be deleted without undue delay or that the processing of the data be restricted, subject to the applicable legal requirements.') ?>
         <?php endif ?>
     </p>
 
     <?php if ($useEuPrivacyLaw) : ?>
         <p>
-            <?= I18N::translate('Furthermore, under Article 77 GDPR, data subjects have the right to lodge a complaint with the competent supervisory authority.') ?>
+            <?= I18N::translate('Furthermore, under Article 77 GDPR, you have the right to lodge a complaint with the competent supervisory authority.') ?>
             <?php if ($supervisoryAuthorityName !== '' && $supervisoryAuthorityUrl !== '') : ?>
                 <?= I18N::translate('The competent supervisory authority is %s.', '<a href="' . e($supervisoryAuthorityUrl) . '">' . e($supervisoryAuthorityName) . '</a>') ?>
             <?php endif ?>
@@ -42,7 +42,7 @@ use Fisharebest\Webtrees\I18N;
             <h4><?= e($subsection->getHeading()) ?></h4>
 
             <p>
-                <?= I18N::translate('Under Article 20 GDPR, data subjects have the right to receive personal data they have provided in a structured, commonly used, and machine-readable format, and to transmit that data to another controller where the legal requirements are met.') ?>
+                <?= I18N::translate('Under Article 20 GDPR, you have the right to receive personal data that you have provided in a structured, commonly used, and machine-readable format, and to transmit that data to another controller where the legal requirements are met.') ?>
             </p>
         <?php elseif ($subsection->getKey() === 'RightToObject') : ?>
             <?php if (!$useEuPrivacyLaw) : ?>
@@ -52,7 +52,7 @@ use Fisharebest\Webtrees\I18N;
             <h4><?= e($subsection->getHeading()) ?></h4>
 
             <p>
-                <?= I18N::translate('Under Article 21 GDPR, data subjects have the right to object at any time, on grounds relating to their particular situation, to the processing of personal data concerning them that is based on Article 6(1), first sentence, point (e) or Article 6(1), first sentence, point (f) GDPR.') ?>
+                <?= I18N::translate('Under Article 21 GDPR, you have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data concerning you that is based on Article 6(1), first sentence, point (e) or Article 6(1), first sentence, point (f) GDPR.') ?>
             </p>
         <?php endif ?>
     <?php endforeach ?>
