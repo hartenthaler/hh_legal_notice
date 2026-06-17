@@ -680,7 +680,7 @@ msgid "Password"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:95
-msgid "As a registered user, you can view, correct, or delete your account data yourself in your profile settings."
+msgid "Registered users can view, correct, or delete their account data themselves in their profile settings."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:99
@@ -1671,12 +1671,12 @@ msgstr ""
 msgid "The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of \"Purpose\". Research focus details are not translated, so they should be kept short."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:96
-msgid "If there is more than one family tree on this website, visitors can see a list of the family trees to which they have access, for example on the home page or when searching."
+#: resources/views/page/sections/data-categories.phtml:97
+msgid "Visitors can see a list of the family trees to which they have access, for example on the home page or when searching."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:98
-msgid "Visitors are shown the default family tree and do not see a list of any other family trees that may exist on this website."
+#: resources/views/page/sections/data-categories.phtml:99
+msgid "Visitors are shown the default family tree and do not see a list of the other family trees on this website."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:126
