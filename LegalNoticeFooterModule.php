@@ -174,6 +174,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'name' => 'Bing™ Webmaster Tools',
             'url' => 'https://www.bing.com/webmasters',
             'country' => 'United States',
+            'type' => 'webmaster-tool',
         ],
         'matomo-analytics' => [
             'name' => 'Matomo™ Analytics',
@@ -1357,7 +1358,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * @return list<array{name:string,url:string,country:string,tracker:bool,thirdCountryTransfer:bool}>
+     * @return list<array{name:string,url:string,country:string,tracker:bool,type?:string,thirdCountryTransfer:bool}>
      */
     private function trackingServices(Tree $tree, UserInterface $user): array
     {

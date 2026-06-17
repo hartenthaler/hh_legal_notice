@@ -222,7 +222,13 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <?php foreach ($trackingServices as $service) : ?>
                         <tr>
                             <td><strong><?= e($service['name']) ?></strong></td>
-                            <td><?= $service['tracker'] ? MoreI18N::xlate('Tracker') : I18N::translate('Analytics tool') ?></td>
+                            <td>
+                                <?php if (($service['type'] ?? '') === 'webmaster-tool') : ?>
+                                    <?= I18N::translate('Webmaster tool') ?>
+                                <?php else : ?>
+                                    <?= $service['tracker'] ? MoreI18N::xlate('Tracker') : I18N::translate('Analytics tool') ?>
+                                <?php endif ?>
+                            </td>
                             <td><a href="<?= e($service['url']) ?>"><?= e($service['url']) ?></a></td>
                             <td><?= $service['country'] === 'local' ? 'local' : e(MoreI18N::xlate($service['country'])) ?></td>
                         </tr>
