@@ -30,27 +30,35 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <?php endif ?>
         </p>
 
-        <dl>
+        <table class="table table-borderless hh-legal-notice-contact-table">
             <?php if ($dpoName !== '') : ?>
-                <dt><?= I18N::translate('Name') ?></dt>
-                <dd><?= e($dpoName) ?></dd>
+                <tr>
+                    <th scope="row"><?= I18N::translate('Name') ?></th>
+                    <td><?= e($dpoName) ?></td>
+                </tr>
             <?php endif ?>
 
             <?php if ($dpoCompany !== '') : ?>
-                <dt><?= I18N::translate('Company') ?></dt>
-                <dd><?= e($dpoCompany) ?></dd>
+                <tr>
+                    <th scope="row"><?= I18N::translate('Company') ?></th>
+                    <td><?= e($dpoCompany) ?></td>
+                </tr>
             <?php endif ?>
 
             <?php if ($dpoAddress !== '') : ?>
-                <dt><?= I18N::translate('Address') ?></dt>
-                <dd><?= nl2br(e($dpoAddress)) ?></dd>
+                <tr>
+                    <th scope="row"><?= I18N::translate('Address') ?></th>
+                    <td><?= nl2br(e($dpoAddress)) ?></td>
+                </tr>
             <?php endif ?>
 
             <?php if ($dpoEmail !== '') : ?>
-                <dt><?= MoreI18N::xlate('eMail') ?></dt>
-                <dd><a href="mailto:<?= e($dpoEmail) ?>"><?= e($dpoEmail) ?></a></dd>
+                <tr>
+                    <th scope="row"><?= MoreI18N::xlate('eMail') ?></th>
+                    <td><a href="mailto:<?= e($dpoEmail) ?>"><?= e($dpoEmail) ?></a></td>
+                </tr>
             <?php endif ?>
-        </dl>
+        </table>
     <?php else : ?>
         <p>
             <?php if ($useGermanPrivacyLaw) : ?>
