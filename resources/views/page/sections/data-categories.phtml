@@ -121,25 +121,16 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?= I18N::translate('The personal data that you provide yourself when creating an account is stored and processed; see contact data.') ?>
             </p>
 
-            <h5><?= I18N::translate('Requesting a new user account') ?></h5>
-            <ul>
-                <li>
-                    <?= I18N::translate('Allow visitors to request a new user account') ?>:
-                    <?= MoreI18N::xlate($allowVisitorRegistration ? 'yes' : 'no') ?>
-                </li>
-                <li>
-                    <?= I18N::translate('Show acceptable use agreement on “Request a new user account” page') ?>:
-                    <?= MoreI18N::xlate($allowVisitorRegistration && $showRegisterCaution ? 'yes' : 'no') ?>
-                </li>
-            </ul>
-
-            <?php if ($allowVisitorRegistration && $showRegisterCaution) : ?>
-                <p>
-                    <?= I18N::translate('When requesting a new user account, visitors are shown an acceptable use agreement before submitting the form.') ?>
-                    <?= I18N::translate('This agreement asks them to respect the privacy of living persons listed on this website and to describe their relationship to persons on this website or provide information about someone who should be listed on this website.') ?>
-                    <?= I18N::translate('This is the point at which new users explicitly confirm these terms before submitting their account request.') ?>
-                </p>
-            <?php endif ?>
+            <p>
+                <?php if (!$allowVisitorRegistration) : ?>
+                    <?= I18N::translate('Visitors cannot request a new user account themselves on this website.') ?>
+                <?php elseif ($showRegisterCaution) : ?>
+                    <?= I18N::translate('Visitors can request a new user account on this website.') ?>
+                    <?= I18N::translate('Before submitting the request, they must confirm that they will respect the privacy of living persons listed here and describe their relationship to persons on this website or provide information about someone who should be listed here.') ?>
+                <?php else : ?>
+                    <?= I18N::translate('Visitors can request a new user account on this website without being shown an additional acceptable use agreement before submitting the request.') ?>
+                <?php endif ?>
+            </p>
 
             <ul>
                 <li><?= I18N::translate('Name') ?></li>

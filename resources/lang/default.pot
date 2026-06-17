@@ -1679,28 +1679,20 @@ msgstr ""
 msgid "Visitors are shown the default family tree and do not see a list of any other family trees that may exist on this website."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:124
-msgid "Requesting a new user account"
+#: resources/views/page/sections/data-categories.phtml:126
+msgid "Visitors cannot request a new user account themselves on this website."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:128
-msgid "Allow visitors to request a new user account"
+msgid "Visitors can request a new user account on this website."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:133
-msgid "Show acceptable use agreement on “Request a new user account” page"
+#: resources/views/page/sections/data-categories.phtml:129
+msgid "Before submitting the request, they must confirm that they will respect the privacy of living persons listed here and describe their relationship to persons on this website or provide information about someone who should be listed here."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:141
-msgid "When requesting a new user account, visitors are shown an acceptable use agreement before submitting the form."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:142
-msgid "This agreement asks them to respect the privacy of living persons listed on this website and to describe their relationship to persons on this website or provide information about someone who should be listed on this website."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:143
-msgid "This is the point at which new users explicitly confirm these terms before submitting their account request."
+#: resources/views/page/sections/data-categories.phtml:131
+msgid "Visitors can request a new user account on this website without being shown an additional acceptable use agreement before submitting the request."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:102

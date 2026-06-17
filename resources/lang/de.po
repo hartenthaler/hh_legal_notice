@@ -2704,46 +2704,37 @@ msgstr ""
 "Besuchern wird der Standard-Stammbaum angezeigt; sie sehen keine Liste "
 "weiterer Stammbäume, die auf dieser Website vorhanden sein können."
 
-#: resources/views/page/sections/data-categories.phtml:124
-msgid "Requesting a new user account"
-msgstr "Neues Benutzerkonto anfragen"
+#: resources/views/page/sections/data-categories.phtml:126
+msgid "Visitors cannot request a new user account themselves on this website."
+msgstr ""
+"Besucher können auf dieser Website nicht selbst ein neues Benutzerkonto "
+"anfragen."
 
 #: resources/views/page/sections/data-categories.phtml:128
-msgid "Allow visitors to request a new user account"
-msgstr "Besuchern erlauben, ein neues Benutzerkonto anzufordern"
+msgid "Visitors can request a new user account on this website."
+msgstr "Besucher können auf dieser Website ein neues Benutzerkonto anfragen."
 
-#: resources/views/page/sections/data-categories.phtml:133
-msgid "Show acceptable use agreement on “Request a new user account” page"
-msgstr ""
-"Nutzungsbedingungen auf der Seite „Neues Benutzerkonto anfragen“ zeigen"
-
-#: resources/views/page/sections/data-categories.phtml:141
+#: resources/views/page/sections/data-categories.phtml:129
 msgid ""
-"When requesting a new user account, visitors are shown an acceptable use "
-"agreement before submitting the form."
+"Before submitting the request, they must confirm that they will respect the "
+"privacy of living persons listed here and describe their relationship to "
+"persons on this website or provide information about someone who should be "
+"listed here."
 msgstr ""
-"Beim Anfragen eines neuen Benutzerkontos werden Besuchern vor dem Absenden "
-"des Formulars Nutzungsbedingungen angezeigt."
+"Vor dem Absenden der Anfrage müssen sie bestätigen, dass sie den Datenschutz "
+"der hier aufgeführten lebenden Personen beachten und ihr "
+"Verwandtschaftsverhältnis zu Personen dieser Website beschreiben oder "
+"Informationen über jemanden zukommen lassen, der hier aufgeführt werden "
+"sollte."
 
-#: resources/views/page/sections/data-categories.phtml:142
+#: resources/views/page/sections/data-categories.phtml:131
 msgid ""
-"This agreement asks them to respect the privacy of living persons listed on "
-"this website and to describe their relationship to persons on this website "
-"or provide information about someone who should be listed on this website."
+"Visitors can request a new user account on this website without being shown "
+"an additional acceptable use agreement before submitting the request."
 msgstr ""
-"Diese Nutzungsbedingungen fordern sie auf, den Datenschutz der auf dieser "
-"Website aufgeführten lebenden Personen zu beachten und ihr "
-"Verwandtschaftsverhältnis zu Personen dieser Website zu beschreiben oder "
-"Informationen über jemanden zukommen zu lassen, der auf dieser Website "
-"aufgeführt werden sollte."
-
-#: resources/views/page/sections/data-categories.phtml:143
-msgid ""
-"This is the point at which new users explicitly confirm these terms before "
-"submitting their account request."
-msgstr ""
-"Dies ist die Stelle, an der neue Nutzer diese Bedingungen vor dem Absenden "
-"ihrer Kontoanfrage ausdrücklich bestätigen."
+"Besucher können auf dieser Website ein neues Benutzerkonto anfragen, ohne "
+"dass ihnen vor dem Absenden der Anfrage zusätzliche Nutzungsbedingungen "
+"angezeigt werden."
 
 #: resources/views/page/sections/data-categories.phtml:102
 msgid "Privacy settings for individual family trees"
