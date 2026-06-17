@@ -30,16 +30,13 @@ use Fisharebest\Webtrees\I18N;
 
             <p><?= I18N::translate('An agreement on order processing has been concluded with the hosting provider.') ?>
                 <?php if ($hostingStartDate !== '' || $hostingEndDate !== '') : ?>
-                    <?= I18N::translate('This took place') ?>
-                    <?php if ($hostingStartDate !== '') : ?>
-                        <?= I18N::translate('for the first time on %s', e($hostingStartDate)) ?>
-                        <?php if ($hostingEndDate !== '') : ?>
-                            <?= I18N::translate('and') ?>
-                        <?php endif ?>
+                    <?php if ($hostingStartDate !== '' && $hostingEndDate !== '') : ?>
+                        <?= I18N::translate('It was first concluded on %s and last updated on %s.', e($hostingStartDate), e($hostingEndDate)) ?>
+                    <?php elseif ($hostingStartDate !== '') : ?>
+                        <?= I18N::translate('It was concluded on %s.', e($hostingStartDate)) ?>
+                    <?php elseif ($hostingEndDate !== '') : ?>
+                        <?= I18N::translate('It was last updated on %s.', e($hostingEndDate)) ?>
                     <?php endif ?>
-                    <?php if ($hostingEndDate !== '') : ?>
-                        <?= I18N::translate('most recently on %s', e($hostingEndDate)) ?>
-                    <?php endif ?>.
                 <?php endif ?>
                 <?php if ($useEuPrivacyLaw) : ?>
                     <?= I18N::translate('This is an agreement required by data protection law under Article 28 GDPR, which ensures that the hosting provider processes the personal data of this website') ?>

@@ -188,15 +188,18 @@ msgid "Dear %s"
 msgstr ""
 
 #: LegalNoticeFooterModule.php:1617
-msgid "Information according to German law Section 5 DDG"
+#, php-format
+msgid "Information according to German law Section 5 %s"
 msgstr ""
 
 #: LegalNoticeFooterModule.php:1621
-msgid "Information according to Austrian law Section 5 (1) ECG"
+#, php-format
+msgid "Information according to Austrian law Section 5 (1) %s"
 msgstr ""
 
 #: LegalNoticeFooterModule.php:1625
-msgid "Information according to Swiss law Article 3 paragraph 1 letter s UWG"
+#, php-format
+msgid "Information according to Swiss law Article 3 paragraph 1 letter s %s"
 msgstr ""
 
 #: src/LegalNoticeSupport.php:145
@@ -431,8 +434,8 @@ msgstr ""
 
 #: src/LegalNoticeSupport.php:249
 msgid ""
-"The automated or systematic collection, scraping, data mining, and use of content from this website for training or enriching artificial intelligence systems or for retrieval by such systems is prohibited without my prior "
-"written consent."
+"The automated or systematic collection, scraping, text and data mining within the meaning of Section 44b UrhG (Urheberrechtsgesetz), and use of content from this website for training or enriching artificial intelligence systems "
+"or for retrieval by such systems is prohibited without my prior written consent."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:264 src/LegalNoticeSupport.php:275
@@ -480,8 +483,8 @@ msgstr ""
 
 #: src/LegalNoticeSupport.php:259
 msgid ""
-"The automated or systematic collection, scraping, data mining, and use of content from this website for training or enriching artificial intelligence systems or for retrieval by such systems is prohibited without our prior "
-"written consent."
+"The automated or systematic collection, scraping, text and data mining within the meaning of Section 44b UrhG (Urheberrechtsgesetz), and use of content from this website for training or enriching artificial intelligence systems "
+"or for retrieval by such systems is prohibited without our prior written consent."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:276
@@ -540,7 +543,8 @@ msgid "Privacy policy date: %s"
 msgstr ""
 
 #: resources/views/page/header.phtml:109
-msgid "Editorially responsible person according to Section 18 paragraph 2 MStV"
+#, php-format
+msgid "Editorially responsible person according to Section 18 paragraph 2 %s"
 msgstr ""
 
 #: resources/views/page/header.phtml:109
@@ -554,6 +558,10 @@ msgstr ""
 #: resources/views/page/header.phtml:112
 #, php-format
 msgid "Responsible for this content is: %s. Address: see above."
+msgstr ""
+
+#: resources/views/page/header.phtml:114
+msgid "This person is resident in Germany."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:18
@@ -585,7 +593,8 @@ msgid "Deletion may be restricted if further processing is necessary for histori
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:34
-msgid "In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular the Federal Data Protection Act (BDSG)."
+#, php-format
+msgid "In addition to the General Data Protection Regulation (EU GDPR), German national data protection rules may apply, in particular %s."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:41
@@ -609,7 +618,8 @@ msgid "Information about criminal convictions and offences is processed in accor
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:51
-msgid "Where German law applies, Section 27 BDSG may also apply."
+#, php-format
+msgid "Where German law applies, Section 27 %s may also apply."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:57
@@ -727,7 +737,8 @@ msgid "These cookies are strictly necessary for the website to function properly
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:134
-msgid "Under Section 25 TDDDG, storing cookies that are not technically necessary and accessing information on your device generally require your consent."
+#, php-format
+msgid "Under Section 25 %s, storing cookies that are not technically necessary and accessing information on your device generally require your consent."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:136
@@ -760,6 +771,14 @@ msgstr ""
 msgid "Service"
 msgstr ""
 
+#: resources/views/page/sections/data-categories.phtml:160
+msgid "Type"
+msgstr ""
+
+#: resources/views/page/sections/data-categories.phtml:224
+msgid "Analytics tool"
+msgstr ""
+
 #: resources/views/page/sections/data-categories.phtml:162 resources/views/page/sections/third-party-services.phtml:44
 msgid "Country of service provision"
 msgstr ""
@@ -774,6 +793,10 @@ msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:186
 msgid "The application used (webtrees) logs all user actions so that, among other things, changes to the data can be traced and approved."
+msgstr ""
+
+#: resources/views/page/sections/personal-data-processing.phtml:20
+msgid "A data protection officer has not been appointed because the legal requirements for appointing one are not met."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:9
@@ -816,6 +839,10 @@ msgstr ""
 msgid ""
 "Under Article 21 GDPR, you have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data concerning you that is based on Article 6(1), first sentence, point (e) or Article "
 "6(1), first sentence, point (f) GDPR."
+msgstr ""
+
+#: resources/views/page/sections/data-rights.phtml:56
+msgid "Personal data is not processed for direct marketing purposes on this website."
 msgstr ""
 
 #: resources/views/page/sections/general-risk.phtml:9
@@ -865,21 +892,18 @@ msgid "An agreement on order processing has been concluded with the hosting prov
 msgstr ""
 
 #: resources/views/page/sections/hosting.phtml:33
-msgid "This took place"
+#, php-format
+msgid "It was first concluded on %s and last updated on %s."
 msgstr ""
 
 #: resources/views/page/sections/hosting.phtml:35
 #, php-format
-msgid "for the first time on %s"
+msgid "It was concluded on %s."
 msgstr ""
 
 #: resources/views/page/sections/hosting.phtml:37
-msgid "and"
-msgstr ""
-
-#: resources/views/page/sections/hosting.phtml:41
 #, php-format
-msgid "most recently on %s"
+msgid "It was last updated on %s."
 msgstr ""
 
 #: resources/views/page/sections/hosting.phtml:45
@@ -937,48 +961,24 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:14
-msgid "However, fully and clearly legally compliant implementation in all cases is probably not possible in the field of online genealogy."
-msgstr ""
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:15
-msgid "Too many questions are disputed and leave room for legal interpretation."
+msgid "At the same time, online genealogy raises questions that are not always fully clarified legally and require careful balancing in individual cases."
 msgstr ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:19
-msgid "However, I can rule out with certainty that everyone entered in this family tree knows about it."
-msgid_plural "However, we can rule out with certainty that everyone entered in this family tree knows about it."
-msgstr[0] ""
-msgstr[1] ""
+msgid "Family trees are usually created from information contributed by relatives about entire branches of the family."
+msgstr ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:20
-msgid "Creating a family tree works differently."
-msgstr ""
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:21
-msgid "Usually, information about a branch of the family is obtained from one person in that branch."
-msgstr ""
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:22
-msgid "I have not obtained verifiable consent from our relatives to enter the respective family in this family tree."
-msgid_plural "We have not obtained verifiable consent from our relatives to enter the respective family in this family tree."
+msgid "I therefore cannot verify that every person entered in this family tree knows about it or has given consent."
+msgid_plural "We therefore cannot verify that every person entered in this family tree knows about it or has given consent."
 msgstr[0] ""
 msgstr[1] ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:27
-msgid "In my opinion, full compliance with the GDPR would therefore only be possible if I took large parts of this family tree offline again."
-msgid_plural "In our opinion, full compliance with the GDPR would therefore only be possible if we took large parts of this family tree offline again."
+msgid "Taking all potentially sensitive data offline would, in my opinion, largely prevent the intended use for family history and historical research."
+msgid_plural "Taking all potentially sensitive data offline would, in our opinion, largely prevent the intended use for family history and historical research."
 msgstr[0] ""
 msgstr[1] ""
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:29
-msgid "In my opinion, full compliance with every possible privacy expectation would therefore only be possible if I took large parts of this family tree offline again."
-msgid_plural "In our opinion, full compliance with every possible privacy expectation would therefore only be possible if we took large parts of this family tree offline again."
-msgstr[0] ""
-msgstr[1] ""
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:31
-msgid "This, however, would remove the ability of the target group to use it and find their own paths through the extended kinship network."
-msgstr ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:33
 msgid "I therefore continue to provide the data online on the basis of legitimate interests in family history and historical research."
@@ -1001,8 +1001,8 @@ msgid "The data is handled carefully, and objections or requests for restriction
 msgstr ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:39
-msgid "I would therefore like to agree on the following procedure with all users of this website, hoping that this will satisfy the law:"
-msgid_plural "We would therefore like to agree on the following procedure with all users of this website, hoping that this will satisfy the law:"
+msgid "I ask all users of this website to follow the procedure below:"
+msgid_plural "We ask all users of this website to follow the procedure below:"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1329,8 +1329,8 @@ msgstr ""
 msgid "Does this website contain editorially prepared content that is not intended only for the family, such as blog posts or news articles?"
 msgstr ""
 
-#: resources/views/settings.phtml:320
-msgid "If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above."
+#: resources/views/settings.phtml:342
+msgid "If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above. If Section 18 paragraph 2 of the German Media State Treaty applies, this person must be resident in Germany."
 msgstr ""
 
 #: resources/views/settings.phtml:326
@@ -1508,12 +1508,12 @@ msgstr ""
 msgid "Should a section about Order Processing agreement be shown?"
 msgstr ""
 
-#: resources/views/settings.phtml:628
-msgid "First date of Order Processing agreement"
+#: resources/views/settings.phtml:650
+msgid "Date when the Order Processing agreement was first concluded"
 msgstr ""
 
-#: resources/views/settings.phtml:636
-msgid "Last date of Order Processing agreement"
+#: resources/views/settings.phtml:658
+msgid "Date when the Order Processing agreement was last updated"
 msgstr ""
 
 #: resources/views/settings.phtml:649

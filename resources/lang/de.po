@@ -214,16 +214,19 @@ msgid "Dear %s"
 msgstr "Sehr geehrte/r %s"
 
 #: LegalNoticeFooterModule.php:1617
-msgid "Information according to German law Section 5 DDG"
-msgstr "Angaben gemäß deutschem Gesetz § 5 DDG"
+#, php-format
+msgid "Information according to German law Section 5 %s"
+msgstr "Angaben gemäß deutschem Gesetz § 5 %s"
 
 #: LegalNoticeFooterModule.php:1621
-msgid "Information according to Austrian law Section 5 (1) ECG"
-msgstr "Angaben gemäß österreichischem Gesetz § 5 Abs. 1 ECG"
+#, php-format
+msgid "Information according to Austrian law Section 5 (1) %s"
+msgstr "Angaben gemäß österreichischem Gesetz § 5 Abs. 1 %s"
 
 #: LegalNoticeFooterModule.php:1625
-msgid "Information according to Swiss law Article 3 paragraph 1 letter s UWG"
-msgstr "Angaben gemäß schweizerischem Gesetz Art. 3 Abs. 1 lit. s UWG"
+#, php-format
+msgid "Information according to Swiss law Article 3 paragraph 1 letter s %s"
+msgstr "Angaben gemäß schweizerischem Gesetz Art. 3 Abs. 1 lit. s %s"
 
 #: src/LegalNoticeSupport.php:145
 msgctxt "heading"
@@ -596,15 +599,17 @@ msgstr ""
 
 #: src/LegalNoticeSupport.php:249
 msgid ""
-"The automated or systematic collection, scraping, data mining, and use of "
-"content from this website for training or enriching artificial intelligence "
-"systems or for retrieval by such systems is prohibited without my prior "
-"written consent."
+"The automated or systematic collection, scraping, text and data mining within "
+"the meaning of Section 44b UrhG (Urheberrechtsgesetz), and use of content "
+"from this website for training or enriching artificial intelligence systems "
+"or for retrieval by such systems is prohibited without my prior written "
+"consent."
 msgstr ""
-"Die automatisierte oder systematische Erfassung, das Auslesen, Data Mining "
-"sowie die Nutzung von Inhalten dieser Website zum Training oder zur "
-"Anreicherung von Systemen künstlicher Intelligenz (KI) oder zum Abruf durch "
-"solche Systeme ist ohne meine vorherige schriftliche Zustimmung untersagt."
+"Die automatisierte oder systematische Erfassung, das Auslesen, das Text- und "
+"Data-Mining im Sinne von § 44b UrhG (Urheberrechtsgesetz) sowie die Nutzung "
+"von Inhalten dieser Website zum Training oder zur Anreicherung von Systemen "
+"künstlicher Intelligenz (KI) oder zum Abruf durch solche Systeme ist ohne "
+"meine vorherige schriftliche Zustimmung untersagt."
 
 #: src/LegalNoticeSupport.php:264 src/LegalNoticeSupport.php:275
 msgid ""
@@ -722,15 +727,17 @@ msgstr ""
 
 #: src/LegalNoticeSupport.php:259
 msgid ""
-"The automated or systematic collection, scraping, data mining, and use of "
-"content from this website for training or enriching artificial intelligence "
-"systems or for retrieval by such systems is prohibited without our prior "
-"written consent."
+"The automated or systematic collection, scraping, text and data mining within "
+"the meaning of Section 44b UrhG (Urheberrechtsgesetz), and use of content "
+"from this website for training or enriching artificial intelligence systems "
+"or for retrieval by such systems is prohibited without our prior written "
+"consent."
 msgstr ""
-"Die automatisierte oder systematische Erfassung, das Auslesen, Data Mining "
-"sowie die Nutzung von Inhalten dieser Website zum Training oder zur "
-"Anreicherung von Systemen künstlicher Intelligenz (KI) oder zum Abruf durch "
-"solche Systeme ist ohne unsere vorherige schriftliche Zustimmung untersagt."
+"Die automatisierte oder systematische Erfassung, das Auslesen, das Text- und "
+"Data-Mining im Sinne von § 44b UrhG (Urheberrechtsgesetz) sowie die Nutzung "
+"von Inhalten dieser Website zum Training oder zur Anreicherung von Systemen "
+"künstlicher Intelligenz (KI) oder zum Abruf durch solche Systeme ist ohne "
+"unsere vorherige schriftliche Zustimmung untersagt."
 
 #: src/LegalNoticeSupport.php:276
 msgid ""
@@ -874,8 +881,9 @@ msgid "Privacy policy date: %s"
 msgstr "Stand der Datenschutzerklärung: %s"
 
 #: resources/views/page/header.phtml:109
-msgid "Editorially responsible person according to Section 18 paragraph 2 MStV"
-msgstr "Redaktionell verantwortliche Person gemäß § 18 Abs. 2 MStV"
+#, php-format
+msgid "Editorially responsible person according to Section 18 paragraph 2 %s"
+msgstr "Redaktionell verantwortliche Person gemäß § 18 Abs. 2 %s"
 
 #: resources/views/page/header.phtml:109
 msgid "Editorially responsible person"
@@ -896,6 +904,10 @@ msgstr ""
 #, php-format
 msgid "Responsible for this content is: %s. Address: see above."
 msgstr "Verantwortlich für diese Inhalte ist: %s. Adresse: siehe oben."
+
+#: resources/views/page/header.phtml:116
+msgid "This person is resident in Germany."
+msgstr "Diese Person ist in Deutschland wohnhaft."
 
 #: resources/views/page/sections/data-categories.phtml:18
 msgid ""
@@ -959,14 +971,13 @@ msgstr ""
 "Artikel 17 Absatz 3 Buchstabe d DSGVO."
 
 #: resources/views/page/sections/data-categories.phtml:34
+#, php-format
 msgid ""
 "In addition to the General Data Protection Regulation (EU GDPR), German "
-"national data protection rules may apply, in particular the Federal Data "
-"Protection Act (BDSG)."
+"national data protection rules may apply, in particular %s."
 msgstr ""
 "Zusätzlich zur Datenschutz-Grundverordnung (EU-DSGVO) können nationale "
-"deutsche Datenschutzregelungen gelten, insbesondere das "
-"Bundesdatenschutzgesetz (BDSG)."
+"deutsche Datenschutzregelungen gelten, insbesondere %s."
 
 #: resources/views/page/sections/data-categories.phtml:41
 msgid ""
@@ -1013,9 +1024,9 @@ msgstr ""
 "Maßgabe von Art. 10 DSGVO verarbeitet."
 
 #: resources/views/page/sections/data-categories.phtml:51
-msgid "Where German law applies, Section 27 BDSG may also apply."
-msgstr ""
-"Soweit deutsches Recht gilt, kann ergänzend § 27 BDSG Anwendung finden."
+#, php-format
+msgid "Where German law applies, Section 27 %s may also apply."
+msgstr "Soweit deutsches Recht gilt, kann ergänzend § 27 %s Anwendung finden."
 
 #: resources/views/page/sections/data-categories.phtml:57
 msgid ""
@@ -1225,11 +1236,12 @@ msgstr ""
 "unbedingt notwendig."
 
 #: resources/views/page/sections/data-categories.phtml:134
+#, php-format
 msgid ""
-"Under Section 25 TDDDG, storing cookies that are not technically necessary "
-"and accessing information on your device generally require your consent."
+"Under Section 25 %s, storing cookies that are not technically necessary and "
+"accessing information on your device generally require your consent."
 msgstr ""
-"Nach § 25 TDDDG bedürfen das Speichern technisch nicht notwendiger Cookies "
+"Nach § 25 %s bedürfen das Speichern technisch nicht notwendiger Cookies "
 "und der Zugriff auf Informationen auf Ihrem Endgerät grundsätzlich Ihrer "
 "Einwilligung."
 
@@ -1284,6 +1296,14 @@ msgstr ""
 msgid "Service"
 msgstr "Dienst"
 
+#: resources/views/page/sections/data-categories.phtml:160
+msgid "Type"
+msgstr "Typ"
+
+#: resources/views/page/sections/data-categories.phtml:224
+msgid "Analytics tool"
+msgstr "Analysetool"
+
 #: resources/views/page/sections/data-categories.phtml:162
 #: resources/views/page/sections/third-party-services.phtml:44
 msgid "Country of service provision"
@@ -1309,6 +1329,14 @@ msgstr ""
 "Die verwendete Anwendung (webtrees) protokolliert alle Aktionen der Nutzer, "
 "damit u.a. die Änderungen am Datenbestand nachvollzogen und freigegeben "
 "werden können."
+
+#: resources/views/page/sections/personal-data-processing.phtml:19
+msgid ""
+"A data protection officer has not been appointed because the legal "
+"requirements for appointing one are not met."
+msgstr ""
+"Ein Datenschutzbeauftragter ist nicht bestellt, da die gesetzlichen "
+"Voraussetzungen hierfür nicht vorliegen."
 
 #: resources/views/page/sections/data-rights.phtml:9
 msgid ""
@@ -1386,6 +1414,13 @@ msgstr ""
 "betreffenden personenbezogenen Daten Widerspruch einzulegen, wenn diese auf "
 "Artikel 6 Absatz 1 Satz 1 Buchstabe e oder Artikel 6 Absatz 1 Satz 1 "
 "Buchstabe f DSGVO beruht."
+
+#: resources/views/page/sections/data-rights.phtml:56
+msgid ""
+"Personal data is not processed for direct marketing purposes on this website."
+msgstr ""
+"Personenbezogene Daten werden auf dieser Website nicht zu Zwecken der "
+"Direktwerbung verarbeitet."
 
 #: resources/views/page/sections/general-risk.phtml:9
 msgid ""
@@ -1465,22 +1500,19 @@ msgstr ""
 "Auftragsverarbeitung geschlossen."
 
 #: resources/views/page/sections/hosting.phtml:33
-msgid "This took place"
-msgstr "Dies erfolgte"
+#, php-format
+msgid "It was first concluded on %s and last updated on %s."
+msgstr "Sie wurde erstmals am %s geschlossen und zuletzt am %s aktualisiert."
 
 #: resources/views/page/sections/hosting.phtml:35
 #, php-format
-msgid "for the first time on %s"
-msgstr "erstmalig am %s"
+msgid "It was concluded on %s."
+msgstr "Sie wurde am %s geschlossen."
 
 #: resources/views/page/sections/hosting.phtml:37
-msgid "and"
-msgstr "und"
-
-#: resources/views/page/sections/hosting.phtml:41
 #, php-format
-msgid "most recently on %s"
-msgstr "letztmalig am %s"
+msgid "It was last updated on %s."
+msgstr "Sie wurde zuletzt am %s aktualisiert."
 
 #: resources/views/page/sections/hosting.phtml:45
 msgid ""
@@ -1595,99 +1627,50 @@ msgstr[1] ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:14
 msgid ""
-"However, fully and clearly legally compliant implementation in all cases is "
-"probably not possible in the field of online genealogy."
+"At the same time, online genealogy raises questions that are not always "
+"fully clarified legally and require careful balancing in individual cases."
 msgstr ""
-"Aber eine in allen Fällen eindeutig rechtskonforme Umsetzung ist auf dem "
-"Gebiet der Online-Genealogie vermutlich gar nicht möglich."
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:15
-msgid ""
-"Too many questions are disputed and leave room for legal interpretation."
-msgstr ""
-"Zu viele Fragen sind strittig, die juristischen Spielraum offen lassen."
+"Gleichzeitig wirft Online-Genealogie Fragen auf, die rechtlich nicht immer "
+"abschließend geklärt sind und im Einzelfall sorgfältig abgewogen werden "
+"müssen."
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:19
 msgid ""
-"However, I can rule out with certainty that everyone entered in this family "
-"tree knows about it."
-msgid_plural ""
-"However, we can rule out with certainty that everyone entered in this family "
-"tree knows about it."
-msgstr[0] ""
-"Ich kann aber mit Sicherheit ausschließen, dass jeder, der in diesem "
-"Stammbaum eingetragen ist, auch davon weiß."
-msgstr[1] ""
-"Wir können aber mit Sicherheit ausschließen, dass jeder, der in diesem "
-"Stammbaum eingetragen ist, auch davon weiß."
+"Family trees are usually created from information contributed by relatives "
+"about entire branches of the family."
+msgstr ""
+"Stammbäume entstehen typischerweise aus Informationen, die Verwandte über "
+"ganze Familienzweige beitragen."
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:20
-msgid "Creating a family tree works differently."
-msgstr "Die Erstellung eines Stammbaumes funktioniert anders."
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:21
 msgid ""
-"Usually, information about a branch of the family is obtained from one "
-"person in that branch."
-msgstr ""
-"Meistens bekommt man von einer Person eines Familienzweiges Informationen zu "
-"diesem Teil der Verwandtschaft."
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:22
-msgid ""
-"I have not obtained verifiable consent from our relatives to enter the "
-"respective family in this family tree."
+"I therefore cannot verify that every person entered in this family tree "
+"knows about it or has given consent."
 msgid_plural ""
-"We have not obtained verifiable consent from our relatives to enter the "
-"respective family in this family tree."
+"We therefore cannot verify that every person entered in this family tree "
+"knows about it or has given consent."
 msgstr[0] ""
-"Ich habe von unseren Verwandten nicht die nachweisbare Einwilligung zur "
-"Eintragung der jeweiligen Familie in diesen Stammbaum eingeholt."
+"Ich kann daher nicht nachweisen, dass jede in diesem Stammbaum eingetragene "
+"Person davon weiß oder eingewilligt hat."
 msgstr[1] ""
-"Wir haben von unseren Verwandten nicht die nachweisbare Einwilligung zur "
-"Eintragung der jeweiligen Familie in diesen Stammbaum eingeholt."
+"Wir können daher nicht nachweisen, dass jede in diesem Stammbaum "
+"eingetragene Person davon weiß oder eingewilligt hat."
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:27
 msgid ""
-"In my opinion, full compliance with the GDPR would therefore only be "
-"possible if I took large parts of this family tree offline again."
+"Taking all potentially sensitive data offline would, in my opinion, largely "
+"prevent the intended use for family history and historical research."
 msgid_plural ""
-"In our opinion, full compliance with the GDPR would therefore only be "
-"possible if we took large parts of this family tree offline again."
+"Taking all potentially sensitive data offline would, in our opinion, largely "
+"prevent the intended use for family history and historical research."
 msgstr[0] ""
-"Eine vollumfängliche Erfüllung der DSGVO wäre also meines Erachtens nur "
-"möglich, wenn ich diesen Stammbaum in weiten Teilen wieder vom Netz nehmen "
-"würde."
+"Würden alle potenziell sensiblen Daten offline genommen, würde dies meines "
+"Erachtens die beabsichtigte Nutzung für Familiengeschichte und historische "
+"Forschung weitgehend verhindern."
 msgstr[1] ""
-"Eine vollumfängliche Erfüllung der DSGVO wäre also unseres Erachtens nur "
-"möglich, wenn wir diesen Stammbaum in weiten Teilen wieder vom Netz nehmen "
-"würden."
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:29
-msgid ""
-"In my opinion, full compliance with every possible privacy expectation would "
-"therefore only be possible if I took large parts of this family tree offline "
-"again."
-msgid_plural ""
-"In our opinion, full compliance with every possible privacy expectation "
-"would therefore only be possible if we took large parts of this family tree "
-"offline again."
-msgstr[0] ""
-"Eine vollständige Erfüllung jeder denkbaren Datenschutzerwartung wäre also "
-"meines Erachtens nur möglich, wenn ich diesen Stammbaum in weiten Teilen "
-"wieder vom Netz nehmen würde."
-msgstr[1] ""
-"Eine vollständige Erfüllung jeder denkbaren Datenschutzerwartung wäre also "
-"unseres Erachtens nur möglich, wenn wir diesen Stammbaum in weiten Teilen "
-"wieder vom Netz nehmen würden."
-
-#: resources/views/page/sections/online-genealogy-privacy.phtml:31
-msgid ""
-"This, however, would remove the ability of the target group to use it and "
-"find their own paths through the extended kinship network."
-msgstr ""
-"Damit aber entfiele für die Zielgruppe die Möglichkeit ihn zu nutzen und "
-"eigene Pfade in die verzweigte Verwandtschaft zu finden."
+"Würden alle potenziell sensiblen Daten offline genommen, würde dies unseres "
+"Erachtens die beabsichtigte Nutzung für Familiengeschichte und historische "
+"Forschung weitgehend verhindern."
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:33
 msgid ""
@@ -1735,18 +1718,10 @@ msgstr ""
 "Einschränkung oder Löschung werden im Einzelfall geprüft."
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:39
-msgid ""
-"I would therefore like to agree on the following procedure with all users of "
-"this website, hoping that this will satisfy the law:"
-msgid_plural ""
-"We would therefore like to agree on the following procedure with all users "
-"of this website, hoping that this will satisfy the law:"
-msgstr[0] ""
-"Ich möchte daher mit allen Nutzern dieser Website folgendes Vorgehen "
-"vereinbaren - in der Hoffnung damit dem Gesetz genüge zu tun:"
-msgstr[1] ""
-"Wir möchten daher mit allen Nutzern dieser Website folgendes Vorgehen "
-"vereinbaren - in der Hoffnung damit dem Gesetz genüge zu tun:"
+msgid "I ask all users of this website to follow the procedure below:"
+msgid_plural "We ask all users of this website to follow the procedure below:"
+msgstr[0] "Ich bitte alle Nutzer dieser Website, folgendes Vorgehen zu beachten:"
+msgstr[1] "Wir bitten alle Nutzer dieser Website, folgendes Vorgehen zu beachten:"
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:43
 msgid "If you discover data that you believe is unlawfully visible, please inform me."
@@ -2227,15 +2202,17 @@ msgstr ""
 "Enthält diese Website redaktionell aufbereitete Inhalte, die nicht nur für "
 "die Familie bestimmt sind, etwa Blog- oder News-Artikel?"
 
-#: resources/views/settings.phtml:320
+#: resources/views/settings.phtml:342
 msgid ""
 "If enabled, the person named in the legal notice is also shown as "
 "responsible for editorial content. The address is referenced from the legal "
-"notice above."
+"notice above. If Section 18 paragraph 2 of the German Media State Treaty "
+"applies, this person must be resident in Germany."
 msgstr ""
 "Wenn aktiviert, wird die im Impressum genannte Person auch als redaktionell "
 "verantwortliche Person angezeigt. Die Adresse wird aus dem Impressum oben "
-"referenziert."
+"referenziert. Wenn § 18 Absatz 2 des deutschen Medienstaatsvertrags "
+"anwendbar ist, muss diese Person in Deutschland wohnhaft sein."
 
 #: resources/views/settings.phtml:326
 msgid "Club or Organization"
@@ -2438,13 +2415,17 @@ msgstr "Verweis zur Datenschutzerklärung des Hosting-Anbieters (URL)"
 msgid "Should a section about Order Processing agreement be shown?"
 msgstr "Soll ein Abschnitt zur Auftragsverarbeitung angezeigt werden?"
 
-#: resources/views/settings.phtml:628
-msgid "First date of Order Processing agreement"
-msgstr "Datum der erstmaligen Vereinbarung zur Auftragsverarbeitung"
+#: resources/views/settings.phtml:650
+msgid "Date when the Order Processing agreement was first concluded"
+msgstr ""
+"Datum, an dem die Vereinbarung zur Auftragsverarbeitung erstmals "
+"geschlossen wurde"
 
-#: resources/views/settings.phtml:636
-msgid "Last date of Order Processing agreement"
-msgstr "Datum der letztmaligen Vereinbarung zur Auftragsverarbeitung"
+#: resources/views/settings.phtml:658
+msgid "Date when the Order Processing agreement was last updated"
+msgstr ""
+"Datum, an dem die Vereinbarung zur Auftragsverarbeitung zuletzt aktualisiert "
+"wurde"
 
 #: resources/views/settings.phtml:649
 msgid "Protection period after death"

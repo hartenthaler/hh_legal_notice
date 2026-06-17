@@ -339,7 +339,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                             'selected' => (int)$showEditorialResp
                         ]) ?>
                         <p class="small text-muted mb-0">
-                            <?= I18N::translate('If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above.') ?>
+                            <?= I18N::translate('If enabled, the person named in the legal notice is also shown as responsible for editorial content. The address is referenced from the legal notice above. If Section 18 paragraph 2 of the German Media State Treaty applies, this person must be resident in Germany.') ?>
                         </p>
                     </div>
                 </div>
@@ -647,7 +647,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
 
             <!-- hosting Order Processing agreement first date -->
             <label class="col-sm-3 col-form-label wt-page-options-label" for="hostingStartDate">
-                <?= I18N::translate('First date of Order Processing agreement') ?>
+                <?= I18N::translate('Date when the Order Processing agreement was first concluded') ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
                 <input class="form-control" id="hostingStartDate" name="hostingStartDate" type="date" min="2000-01-01" max="<?= date('Y-m-d') ?>" value="<?= e($hostingStartDate) ?>">
@@ -655,7 +655,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
 
             <!-- hosting Order Processing agreement last date / time -->
             <label class="col-sm-3 col-form-label wt-page-options-label" for="hostingEndDate">
-                <?= I18N::translate('Last date of Order Processing agreement') ?>
+                <?= I18N::translate('Date when the Order Processing agreement was last updated') ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
                 <input class="form-control" id="hostingEndDate" name="hostingEndDate" type="date" min="2000-01-01" max="<?= date('Y-m-d') ?>" value="<?= e($hostingEndDate) ?>">
