@@ -33,7 +33,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?php else : ?>
                     <?= I18N::translate('Family history and genealogical research is the legitimate purpose for processing this data.') ?>
                 <?php endif ?>
-                <?= I18N::translate('Personal data that you find on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely.') ?>
+                <?= I18N::translate('Personal data published on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely.') ?>
                 <?= I18N::translate('Genealogical data is stored for the long term because it is historically relevant and should remain preserved and accessible for future generations.') ?>
                 <?= I18N::translate('Requests for deletion are reviewed individually.') ?>
                 <?php if ($useEuPrivacyLaw) : ?>
@@ -118,7 +118,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <h4><?= e($subsection->getHeading()) ?></h4>
 
             <p>
-                <?= I18N::translate('The personal data that you provide yourself when creating an account is stored and processed; see contact data.') ?>
+                <?= I18N::translate('Personal data provided when creating an account is stored and processed; see contact data.') ?>
             </p>
 
             <p>
@@ -139,20 +139,20 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             </ul>
 
             <p>
-                <?= I18N::translate('As a registered user, you can view, correct, or delete your account data yourself in your profile settings.') ?>
+                <?= I18N::translate('Registered users can view, correct, or delete their account data themselves in their profile settings.') ?>
             </p>
 
             <p>
-                <?= I18N::translate('Other personal data that you actively provide is also stored and used.') ?>
-                <?= I18N::translate('This includes, for example, data created by completing your personal details on your personal page or by creating family relationships.') ?>
+                <?= I18N::translate('Other personal data actively provided by registered users is also stored and used.') ?>
+                <?= I18N::translate('This includes, for example, data created by completing personal details on a personal page or by creating family relationships.') ?>
             </p>
 
             <p>
-                <?= I18N::translate('Furthermore, data relating to your user account is recorded as a result of your activities on this website, for example when editing records.') ?>
+                <?= I18N::translate('Furthermore, data relating to a user account is recorded as a result of activities on this website, for example when editing records.') ?>
             </p>
 
             <p>
-                <?= I18N::plural('I occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made.', 'We occasionally use your e-mail address to inform you by e-mail about important matters relating to the website or, if necessary, to contact you with questions about changes you have made.', $singular ? 1 : 2) ?>
+                <?= I18N::plural('I occasionally use the e-mail address of registered users to provide information by e-mail about important matters relating to the website or, if necessary, to ask questions about changes they have made.', 'We occasionally use the e-mail address of registered users to provide information by e-mail about important matters relating to the website or, if necessary, to ask questions about changes they have made.', $singular ? 1 : 2) ?>
             </p>
 
             <?php if ($inactiveUserYears > 0) : ?>
@@ -162,8 +162,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <?php endif ?>
 
             <p>
-                <?= I18N::translate('If you have your user account disabled here, the genealogical data you entered will remain available for the benefit of our genealogical research.') ?>
-                <?= I18N::translate('The data about your person will also be retained; only your access to the specially protected areas here will be blocked.') ?>
+                <?= I18N::translate('If a user account is disabled here, the genealogical data entered through this account will remain available for the benefit of our genealogical research.') ?>
+                <?= I18N::translate('The data about the person concerned will also be retained; only access to the specially protected areas here will be blocked.') ?>
             </p>
         <?php elseif ($subsection->getKey() === 'VisitorData') : ?>
             <h4><?= e($subsection->getHeading()) ?></h4>
@@ -173,16 +173,16 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <h4><?= e($subsection->getHeading()) ?></h4>
 
             <p>
-                <?= I18N::translate('This website uses cookies to enable user logins and to store settings such as your selected language.') ?>
+                <?= I18N::translate('This website uses cookies to enable user logins and to store settings such as the selected language.') ?>
                 <?= I18N::translate('Cookies help make this service more user-friendly, effective, and secure.') ?>
-                <?= I18N::translate('Cookies are small text files that are stored on your computer and saved by your browser.') ?>
+                <?= I18N::translate('Cookies are small text files that are stored on the device and saved by the browser.') ?>
                 <?= I18N::translate('These cookies are strictly necessary for the website to function properly.') ?>
                 <?php if ($useGermanPrivacyLaw) : ?>
-                    <?= I18N::translate('Under Section 25 TDDDG, storing cookies that are not technically necessary and accessing information on your device generally require your consent.') ?>
+                    <?= I18N::translate('Under Section 25 TDDDG, storing cookies that are not technically necessary and accessing information on a device generally require consent.') ?>
                 <?php endif ?>
-                <?= I18N::translate('Session cookies are deleted when you leave the website or close your browser.') ?>
+                <?= I18N::translate('Session cookies are deleted when the website is left or the browser is closed.') ?>
                 <?= I18N::translate('Persistent cookies can remain stored after the browser is closed, for example to preserve selected settings for a later visit.') ?>
-                <?= I18N::translate('You can configure your browser so that you are informed when cookies are set, allow cookies only in individual cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of cookies when closing the browser.') ?>
+                <?= I18N::translate('Browsers can be configured to provide information when cookies are set, allow cookies only in individual cases, exclude the acceptance of cookies in certain cases or in general, and enable automatic deletion of cookies when closing the browser.') ?>
                 <?= I18N::translate('If cookies are disabled, the functionality of this website may be restricted.') ?>
             </p>
 
@@ -231,7 +231,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
             <p>
                 <?= I18N::translate('These services may use cookies or other tracking technology.') ?>
-                <?= I18N::translate('You can opt out of tracking by setting the "Do Not Track" header in your browser preferences.') ?>
+                <?= I18N::translate('Tracking can be objected to by setting the "Do Not Track" header in the browser preferences.') ?>
             </p>
         <?php elseif ($subsection->getKey() === 'ApplicationLog') : ?>
             <h4><?= e($subsection->getHeading()) ?></h4>
