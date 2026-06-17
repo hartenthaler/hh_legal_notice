@@ -6,6 +6,18 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
     <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
 
+    <p>
+        <?= I18N::translate('Data assigned to users of this service is processed, as well as data about living and deceased persons.') ?>
+    </p>
+
+    <ul>
+        <li><?= I18N::translate('Inventory data (names, birth, marriage, and death data, ...)') ?></li>
+        <li><?= I18N::translate('Content data (messages, life stories of individuals, photographs, videos, ...)') ?></li>
+        <li><?= I18N::translate('Contact data (addresses, e-mail, telephone numbers, ...)') ?></li>
+        <li><?= I18N::translate('Usage data (visited web pages, access times, changes made, ...)') ?></li>
+        <li><?= I18N::translate('Communication data (device information, browser used, IP addresses, ...)') ?></li>
+    </ul>
+
     <?php foreach ($chapters as $subsection) : ?>
         <?php if ($subsection->getLink() !== $chapter->getId() || !$subsection->getEnabled()) : ?>
             <?php continue ?>

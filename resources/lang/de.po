@@ -1821,7 +1821,7 @@ msgid "The software used (webtrees) offers many protection mechanisms."
 msgstr ""
 "Die verwendete Software (webtrees) bietet sehr viele Schutzmechanismen."
 
-#: resources/views/page/sections/personal-data-processing.phtml:19
+#: resources/views/page/sections/data-categories.phtml:9
 msgid ""
 "Data assigned to users of this service is processed, as well as data about "
 "living and deceased persons."
@@ -1830,11 +1830,11 @@ msgstr ""
 "zuzuordnen sind, als auch Daten über lebende und bereits verstorbene "
 "Personen."
 
-#: resources/views/page/sections/personal-data-processing.phtml:23
+#: resources/views/page/sections/data-categories.phtml:13
 msgid "Inventory data (names, birth, marriage, and death data, ...)"
 msgstr "Bestandsdaten (Namen, Geburts-, Heirats- und Todesdaten, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:24
+#: resources/views/page/sections/data-categories.phtml:14
 msgid ""
 "Content data (messages, life stories of individuals, photographs, "
 "videos, ...)"
@@ -1842,24 +1842,24 @@ msgstr ""
 "Inhaltsdaten (Nachrichten, Geschichten zum Leben von Personen, Fotografien, "
 "Videos, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:25
+#: resources/views/page/sections/data-categories.phtml:15
 msgid "Contact data (addresses, e-mail, telephone numbers, ...)"
 msgstr "Kontaktdaten (Adressen, E-Mail, Telefonnummern, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:26
+#: resources/views/page/sections/data-categories.phtml:16
 msgid "Usage data (visited web pages, access times, changes made, ...)"
 msgstr ""
 "Nutzungsdaten (besuchte Webseiten, Zugriffszeiten, durchgeführte "
 "Änderungen, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:27
+#: resources/views/page/sections/data-categories.phtml:17
 msgid ""
 "Communication data (device information, browser used, IP addresses, ...)"
 msgstr ""
 "Kommunikationsdaten (Geräte-Informationen, verwendeter Browser, IP-"
 "Adressen, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:31
+#: resources/views/page/sections/personal-data-processing.phtml:19
 msgid ""
 "To inform you fully about the use of personal data, you are asked to take "
 "note of the following privacy information."
