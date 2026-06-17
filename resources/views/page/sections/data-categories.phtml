@@ -6,6 +6,18 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
     <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
 
+    <p>
+        <?= I18N::translate('Data assigned to users of this service is processed, as well as data about living and deceased persons.') ?>
+    </p>
+
+    <ul>
+        <li><?= I18N::translate('Inventory data (names, birth, marriage, and death data, ...)') ?></li>
+        <li><?= I18N::translate('Content data (messages, life stories of individuals, photographs, videos, ...)') ?></li>
+        <li><?= I18N::translate('Contact data (addresses, e-mail, telephone numbers, ...)') ?></li>
+        <li><?= I18N::translate('Usage data (visited web pages, access times, changes made, ...)') ?></li>
+        <li><?= I18N::translate('Communication data (device information, browser used, IP addresses, ...)') ?></li>
+    </ul>
+
     <?php foreach ($chapters as $subsection) : ?>
         <?php if ($subsection->getLink() !== $chapter->getId() || !$subsection->getEnabled()) : ?>
             <?php continue ?>
@@ -21,7 +33,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?php else : ?>
                     <?= I18N::translate('Family history and genealogical research is the legitimate purpose for processing this data.') ?>
                 <?php endif ?>
-                <?= I18N::translate('Personal data that you find on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely.') ?>
+                <?= I18N::translate('Personal data published on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely.') ?>
                 <?= I18N::translate('Genealogical data is stored for the long term because it is historically relevant and should remain preserved and accessible for future generations.') ?>
                 <?= I18N::translate('Requests for deletion are reviewed individually.') ?>
                 <?php if ($useEuPrivacyLaw) : ?>
@@ -79,16 +91,13 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?php endif ?>
             </p>
 
-            <h5><?= I18N::translate('Global privacy-related settings') ?></h5>
             <p>
-                <?= I18N::translate('The following global webtrees setting affects visibility on this website:') ?>
+                <?php if ($showFamilyTreeList) : ?>
+                    <?= I18N::translate('If there is more than one family tree on this website, visitors can see a list of the family trees to which they have access, for example on the home page or when searching.') ?>
+                <?php else : ?>
+                    <?= I18N::translate('Visitors are shown the default family tree and do not see a list of any other family trees that may exist on this website.') ?>
+                <?php endif ?>
             </p>
-            <ul>
-                <li>
-                    <?= I18N::translate('Show list of family trees') ?>:
-                    <?= MoreI18N::xlate($showFamilyTreeList ? 'yes' : 'no') ?>
-                </li>
-            </ul>
 
             <h5><?= I18N::translate('Privacy settings for individual family trees') ?></h5>
             <p>
@@ -100,7 +109,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <li><?= I18N::translate('Show dead individuals') ?></li>
                 <li><?= I18N::translate('Age at which to assume an individual is dead') ?></li>
                 <li><?= I18N::translate('Show living individuals') ?></li>
-                <li><?= I18N::translate('Extend privacy to dead individuals') ?></li>
+                <li><?= I18N::translate('Extend privacy to dead individuals for a selectable period after birth or death') ?></li>
                 <li><?= I18N::translate('Show names of private individuals') ?></li>
                 <li><?= I18N::translate('Show private relationships') ?></li>
                 <li><?= I18N::translate('Privacy restrictions for records, facts, and events') ?></li>
@@ -112,25 +121,16 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?= I18N::translate('The personal data that you provide yourself when creating an account is stored and processed; see contact data.') ?>
             </p>
 
-            <h5><?= I18N::translate('Requesting a new user account') ?></h5>
-            <ul>
-                <li>
-                    <?= I18N::translate('Allow visitors to request a new user account') ?>:
-                    <?= MoreI18N::xlate($allowVisitorRegistration ? 'yes' : 'no') ?>
-                </li>
-                <li>
-                    <?= I18N::translate('Show acceptable use agreement on “Request a new user account” page') ?>:
-                    <?= MoreI18N::xlate($allowVisitorRegistration && $showRegisterCaution ? 'yes' : 'no') ?>
-                </li>
-            </ul>
-
-            <?php if ($allowVisitorRegistration && $showRegisterCaution) : ?>
-                <p>
-                    <?= I18N::translate('When requesting a new user account, visitors are shown an acceptable use agreement before submitting the form.') ?>
-                    <?= I18N::translate('This agreement asks them to respect the privacy of living persons listed on this website and to describe their relationship to persons on this website or provide information about someone who should be listed on this website.') ?>
-                    <?= I18N::translate('This is the point at which new users explicitly confirm these terms before submitting their account request.') ?>
-                </p>
-            <?php endif ?>
+            <p>
+                <?php if (!$allowVisitorRegistration) : ?>
+                    <?= I18N::translate('Visitors cannot request a new user account themselves on this website.') ?>
+                <?php elseif ($showRegisterCaution) : ?>
+                    <?= I18N::translate('Visitors can request a new user account on this website.') ?>
+                    <?= I18N::translate('Before submitting the request, they must confirm that they will respect the privacy of living persons listed here and describe their relationship to persons on this website or provide information about someone who should be listed here.') ?>
+                <?php else : ?>
+                    <?= I18N::translate('Visitors can request a new user account on this website without being shown an additional acceptable use agreement before submitting the request.') ?>
+                <?php endif ?>
+            </p>
 
             <ul>
                 <li><?= I18N::translate('Name') ?></li>

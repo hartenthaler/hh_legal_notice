@@ -926,12 +926,12 @@ msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:24
 msgid ""
-"Personal data that you find on this website, such as names, e-mail "
-"addresses, photos, addresses, or life dates, is used only for family history "
-"and genealogical research and is kept securely."
+"Personal data published on this website, such as names, e-mail addresses, "
+"photos, addresses, or life dates, is used only for family history and "
+"genealogical research and is kept securely."
 msgstr ""
-"Persönliche Daten, die Sie auf dieser Website finden, wie zum Beispiel "
-"Namen, E-Mail-Adressen, Fotos, Adressen oder Lebensdaten werden nur zum "
+"Auf dieser Website veröffentlichte personenbezogene Daten, wie zum Beispiel "
+"Namen, E-Mail-Adressen, Fotos, Adressen oder Lebensdaten, werden nur zum "
 "Zweck der Familien- und Ahnenforschung verwendet und sicher verwahrt."
 
 #: resources/views/page/sections/data-categories.phtml:25
@@ -1093,8 +1093,8 @@ msgid ""
 "The personal data that you provide yourself when creating an account is "
 "stored and processed; see contact data."
 msgstr ""
-"Die personenbezogenen Daten, die Sie zur Einrichtung eines Kontos selbst zur "
-"Verfügung stellen, werden gespeichert und verarbeitet (siehe: Kontaktdaten)"
+"Die personenbezogenen Daten, die Sie bei der Einrichtung eines Kontos selbst "
+"angeben, werden gespeichert und verarbeitet; siehe Kontaktdaten."
 
 #: resources/views/page/sections/data-categories.phtml:89
 #: resources/views/settings.phtml:251
@@ -1128,8 +1128,8 @@ msgid ""
 "This includes, for example, data created by completing your personal details "
 "on your personal page or by creating family relationships."
 msgstr ""
-"Dazu gehören etwa Daten durch die Vervollständigung Ihrer persönlichen Daten "
-"auf Ihrer persönlichen Seite oder durch die Herstellung von "
+"Dazu gehören etwa Daten durch die Vervollständigung Ihrer persönlichen "
+"Angaben auf Ihrer persönlichen Seite oder durch die Herstellung von "
 "Familienbeziehungen."
 
 #: resources/views/page/sections/data-categories.phtml:104
@@ -1153,13 +1153,13 @@ msgid_plural ""
 msgstr[0] ""
 "Ich verwende Ihre E-Mail-Adresse gelegentlich, um Sie per E-Mail über "
 "wichtige Angelegenheiten im Zusammenhang mit der Website zu informieren oder "
-"um Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen "
-"zu kontaktieren."
+"Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen zu "
+"kontaktieren."
 msgstr[1] ""
 "Wir verwenden Ihre E-Mail-Adresse gelegentlich, um Sie per E-Mail über "
 "wichtige Angelegenheiten im Zusammenhang mit der Website zu informieren oder "
-"um Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen "
-"zu kontaktieren."
+"Sie gegebenenfalls bei Rückfragen zu von Ihnen vorgenommenen Änderungen zu "
+"kontaktieren."
 
 #: resources/views/page/sections/data-categories.phtml:113
 #, php-format
@@ -1182,7 +1182,7 @@ msgid ""
 "The data about your person will also be retained; only your access to the "
 "specially protected areas here will be blocked."
 msgstr ""
-"Die Daten zu Ihrer Person bleiben ebenfalls erhalten, nur Ihr Zugang zu den "
+"Die Daten zu Ihrer Person bleiben ebenfalls erhalten; nur Ihr Zugang zu den "
 "hier speziell geschützten Bereichen wird gesperrt."
 
 #: resources/views/page/sections/data-categories.phtml:120
@@ -1214,8 +1214,8 @@ msgid ""
 "Cookies are small text files that are stored on your computer and saved by "
 "your browser."
 msgstr ""
-"Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und "
-"die Ihr Browser speichert."
+"Cookies sind kleine Textdateien, die auf Ihrem Computer abgelegt und von "
+"Ihrem Browser gespeichert werden."
 
 #: resources/views/page/sections/data-categories.phtml:128
 msgid ""
@@ -1234,8 +1234,7 @@ msgstr ""
 "Einwilligung."
 
 #: resources/views/page/sections/data-categories.phtml:136
-msgid ""
-"Session cookies are deleted when you leave the website or close your browser."
+msgid "Session cookies are deleted when you leave the website or close your browser."
 msgstr ""
 "Sitzungs-Cookies werden gelöscht, wenn Sie die Website verlassen oder Ihren "
 "Browser schließen."
@@ -1257,9 +1256,9 @@ msgid ""
 "cookies when closing the browser."
 msgstr ""
 "Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies "
-"informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von "
+"informiert werden, Cookies nur im Einzelfall erlauben, die Annahme von "
 "Cookies für bestimmte Fälle oder generell ausschließen sowie das "
-"automatische Löschen der Cookies beim Schließen des Browser aktivieren."
+"automatische Löschen der Cookies beim Schließen des Browsers aktivieren."
 
 #: resources/views/page/sections/data-categories.phtml:132
 msgid ""
@@ -1299,7 +1298,7 @@ msgid ""
 "You can opt out of tracking by setting the \"Do Not Track\" header in your "
 "browser preferences."
 msgstr ""
-"Sie können sich vom Tracking abmelden, indem Sie in Ihren "
+"Sie können dem Tracking widersprechen, indem Sie in Ihren "
 "Browsereinstellungen \"Nicht nachverfolgen\" auswählen."
 
 #: resources/views/page/sections/data-categories.phtml:186
@@ -1316,8 +1315,8 @@ msgid ""
 "You have the right at any time to obtain information about the data stored "
 "about you, its origin, and the purpose of storage."
 msgstr ""
-"Sie haben jederzeit das Recht auf Auskunft über die bezüglich Ihrer Person "
-"gespeicherten Daten, deren Herkunft und den Zweck der Speicherung."
+"Sie haben jederzeit das Recht auf Auskunft über die zu Ihnen gespeicherten "
+"Daten, deren Herkunft und den Zweck der Speicherung."
 
 #: resources/views/page/sections/data-rights.phtml:10
 msgid ""
@@ -1328,12 +1327,8 @@ msgstr ""
 "oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen."
 
 #: resources/views/page/sections/data-rights.phtml:11
-msgid ""
-"For data protection requests, please contact the person named above in the "
-"legal notice."
-msgstr ""
-"Bitte wenden Sie sich bei Datenschutzanfragen an die oben im Impressum "
-"genannte Person."
+msgid "For data protection requests, please contact the person named above in the legal notice."
+msgstr "Für Datenschutzanfragen wenden Sie sich bitte an die oben im Impressum genannte Person."
 
 #: resources/views/page/sections/data-rights.phtml:16
 msgid ""
@@ -1358,12 +1353,8 @@ msgstr ""
 "rechtlichen Voraussetzungen erfüllt sind."
 
 #: resources/views/page/sections/data-rights.phtml:24
-msgid ""
-"Furthermore, under Article 77 GDPR, you have the right to lodge a complaint "
-"with the competent supervisory authority."
-msgstr ""
-"Sie haben ferner gemäß Artikel 77 DSGVO das Recht, eine Beschwerde bei der "
-"zuständigen Aufsichtsbehörde einzureichen."
+msgid "Furthermore, under Article 77 GDPR, you have the right to lodge a complaint with the competent supervisory authority."
+msgstr "Sie haben ferner gemäß Artikel 77 DSGVO das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen."
 
 #: resources/views/page/sections/data-rights.phtml:26
 #, php-format
@@ -1430,8 +1421,8 @@ msgstr ""
 
 #: resources/views/page/sections/hosting.phtml:16
 #, php-format
-msgid "For details, please refer to the privacy notice of %s."
-msgstr "Details entnehmen Sie bitte der Datenschutzerklärung von %s."
+msgid "Details are available in the privacy notice of %s."
+msgstr "Details stehen in der Datenschutzerklärung von %s."
 
 #: resources/views/page/sections/hosting.phtml:22
 msgid ""
@@ -1758,18 +1749,14 @@ msgstr[1] ""
 "vereinbaren - in der Hoffnung damit dem Gesetz genüge zu tun:"
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:43
-msgid ""
-"If you discover data that you believe is unlawfully visible, please inform "
-"me."
-msgid_plural ""
-"If you discover data that you believe is unlawfully visible, please inform "
-"us."
+msgid "If you discover data that you believe is unlawfully visible, please inform me."
+msgid_plural "If you discover data that you believe is unlawfully visible, please inform us."
 msgstr[0] ""
-"Sollten Sie Daten entdecken, von denen Sie annehmen, dass diese "
-"widerrechtlich frei sichtbar sind, dann teilen Sie mir das bitte mit."
+"Wenn Sie Daten entdecken, von denen Sie annehmen, dass sie widerrechtlich "
+"frei sichtbar sind, informieren Sie mich bitte."
 msgstr[1] ""
-"Sollten Sie Daten entdecken, von denen Sie annehmen, dass diese "
-"widerrechtlich frei sichtbar sind, dann teilen Sie uns das bitte mit."
+"Wenn Sie Daten entdecken, von denen Sie annehmen, dass sie widerrechtlich "
+"frei sichtbar sind, informieren Sie uns bitte."
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:44
 msgid ""
@@ -1787,23 +1774,23 @@ msgstr[1] ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:45
 msgid ""
-"If, for specific reasons, you want to prevent your data from being visible "
-"even within the group of authorized registered users, please inform me so "
-"that I can further restrict visibility here as well."
+"If, for specific reasons, data about a person should not be visible even "
+"within the group of authorized registered users, please inform me so that I "
+"can further restrict visibility here as well."
 msgid_plural ""
-"If, for specific reasons, you want to prevent your data from being visible "
-"even within the group of authorized registered users, please inform us so "
-"that we can further restrict visibility here as well."
+"If, for specific reasons, data about a person should not be visible even "
+"within the group of authorized registered users, please inform us so that we "
+"can further restrict visibility here as well."
 msgstr[0] ""
-"Wenn Sie aus bestimmten Gründen die Sichtbarkeit von ihren Daten auch im "
-"Kreis der berechtigten, registrierten Nutzer verhindern wollen, dann bitte "
-"ich darum mir das mitzuteilen, damit ich auch hier die Sichtbarkeit weiter "
-"einschränken kann."
+"Wenn Daten zu einer Person aus bestimmten Gründen auch im Kreis der "
+"berechtigten, registrierten Nutzer nicht sichtbar sein sollen, informieren "
+"Sie mich bitte, damit ich die Sichtbarkeit auch hier weiter einschränken "
+"kann."
 msgstr[1] ""
-"Wenn Sie aus bestimmten Gründen die Sichtbarkeit von ihren Daten auch im "
-"Kreis der berechtigten, registrierten Nutzer verhindern wollen, dann bitten "
-"wir darum uns das mitzuteilen, damit wir auch hier die Sichtbarkeit weiter "
-"einschränken können."
+"Wenn Daten zu einer Person aus bestimmten Gründen auch im Kreis der "
+"berechtigten, registrierten Nutzer nicht sichtbar sein sollen, informieren "
+"Sie uns bitte, damit wir die Sichtbarkeit auch hier weiter einschränken "
+"können."
 
 #: resources/views/page/sections/personal-data-processing.phtml:9
 msgid "I take the protection of the data stored here very seriously."
@@ -1821,7 +1808,7 @@ msgid "The software used (webtrees) offers many protection mechanisms."
 msgstr ""
 "Die verwendete Software (webtrees) bietet sehr viele Schutzmechanismen."
 
-#: resources/views/page/sections/personal-data-processing.phtml:19
+#: resources/views/page/sections/data-categories.phtml:9
 msgid ""
 "Data assigned to users of this service is processed, as well as data about "
 "living and deceased persons."
@@ -1830,11 +1817,11 @@ msgstr ""
 "zuzuordnen sind, als auch Daten über lebende und bereits verstorbene "
 "Personen."
 
-#: resources/views/page/sections/personal-data-processing.phtml:23
+#: resources/views/page/sections/data-categories.phtml:13
 msgid "Inventory data (names, birth, marriage, and death data, ...)"
 msgstr "Bestandsdaten (Namen, Geburts-, Heirats- und Todesdaten, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:24
+#: resources/views/page/sections/data-categories.phtml:14
 msgid ""
 "Content data (messages, life stories of individuals, photographs, "
 "videos, ...)"
@@ -1842,31 +1829,26 @@ msgstr ""
 "Inhaltsdaten (Nachrichten, Geschichten zum Leben von Personen, Fotografien, "
 "Videos, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:25
+#: resources/views/page/sections/data-categories.phtml:15
 msgid "Contact data (addresses, e-mail, telephone numbers, ...)"
 msgstr "Kontaktdaten (Adressen, E-Mail, Telefonnummern, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:26
+#: resources/views/page/sections/data-categories.phtml:16
 msgid "Usage data (visited web pages, access times, changes made, ...)"
 msgstr ""
 "Nutzungsdaten (besuchte Webseiten, Zugriffszeiten, durchgeführte "
 "Änderungen, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:27
+#: resources/views/page/sections/data-categories.phtml:17
 msgid ""
 "Communication data (device information, browser used, IP addresses, ...)"
 msgstr ""
 "Kommunikationsdaten (Geräte-Informationen, verwendeter Browser, IP-"
 "Adressen, ...)"
 
-#: resources/views/page/sections/personal-data-processing.phtml:31
-msgid ""
-"To inform you fully about the use of personal data, you are asked to take "
-"note of the following privacy information."
-msgstr ""
-"Um Sie in vollem Umfang über die Verwendung personenbezogener Daten zu "
-"informieren, werden Sie gebeten, die folgenden Datenschutzhinweise zur "
-"Kenntnis zu nehmen."
+#: resources/views/page/sections/personal-data-processing.phtml:19
+msgid "To inform you fully about the use of personal data, you are asked to take note of the following privacy information."
+msgstr "Um Sie umfassend über die Verwendung personenbezogener Daten zu informieren, werden Sie gebeten, die folgenden Datenschutzhinweise zur Kenntnis zu nehmen."
 
 #: resources/views/page/sections/purpose.phtml:9
 msgid ""
@@ -1930,7 +1912,7 @@ msgstr "Diese Seite nutzt zum Schutz der Übertragung eine SSL- bzw. TLS-Verschl
 
 #: resources/views/page/sections/security-measures.phtml:17
 msgid "You can recognize an encrypted connection by the fact that the browser address bar contains “https://”, usually also indicated by a lock symbol in your browser bar."
-msgstr "Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers „https://“ enthält, was zusätzlich meist durch ein Schloss-Symbol in Ihrer Browserzeile angezeigt wird."
+msgstr "Sie erkennen eine verschlüsselte Verbindung daran, dass die Adresszeile des Browsers „https://“ enthält, was zusätzlich meist durch ein Schloss-Symbol in Ihrer Browserzeile angezeigt wird."
 
 #: resources/views/page/sections/security-measures.phtml:18
 msgid "When SSL or TLS encryption is enabled, the data transmitted cannot be read by third parties."
@@ -2686,61 +2668,55 @@ msgstr ""
 "„Zweck“ gesteuert. Forschungsschwerpunkte werden nicht übersetzt und sollten "
 "deshalb kurz gehalten werden."
 
-#: resources/views/page/sections/data-categories.phtml:85
-msgid "Global privacy-related settings"
-msgstr "Globale datenschutzrelevante Einstellungen"
-
-#: resources/views/page/sections/data-categories.phtml:87
+#: resources/views/page/sections/data-categories.phtml:96
 msgid ""
-"The following global webtrees setting affects visibility on this website:"
+"If there is more than one family tree on this website, visitors can see a "
+"list of the family trees to which they have access, for example on the home "
+"page or when searching."
 msgstr ""
-"Die folgende globale webtrees-Einstellung beeinflusst die Sichtbarkeit auf "
-"dieser Website:"
+"Wenn es auf dieser Website mehr als einen Stammbaum gibt, können Besucher "
+"eine Liste der Stammbäume sehen, auf die sie Zugriff haben, zum Beispiel auf "
+"der Startseite oder bei der Suche."
 
-#: resources/views/page/sections/data-categories.phtml:91
-msgid "Show list of family trees"
-msgstr "Liste der Stammbäume zeigen"
+#: resources/views/page/sections/data-categories.phtml:98
+msgid ""
+"Visitors are shown the default family tree and do not see a list of any "
+"other family trees that may exist on this website."
+msgstr ""
+"Besuchern wird der Standard-Stammbaum angezeigt; sie sehen keine Liste "
+"weiterer Stammbäume, die auf dieser Website vorhanden sein können."
 
-#: resources/views/page/sections/data-categories.phtml:124
-msgid "Requesting a new user account"
-msgstr "Neues Benutzerkonto anfragen"
+#: resources/views/page/sections/data-categories.phtml:126
+msgid "Visitors cannot request a new user account themselves on this website."
+msgstr ""
+"Besucher können auf dieser Website nicht selbst ein neues Benutzerkonto "
+"anfragen."
 
 #: resources/views/page/sections/data-categories.phtml:128
-msgid "Allow visitors to request a new user account"
-msgstr "Besuchern erlauben, ein neues Benutzerkonto anzufordern"
+msgid "Visitors can request a new user account on this website."
+msgstr "Besucher können auf dieser Website ein neues Benutzerkonto anfragen."
 
-#: resources/views/page/sections/data-categories.phtml:133
-msgid "Show acceptable use agreement on “Request a new user account” page"
-msgstr ""
-"Nutzungsbedingungen auf der Seite „Neues Benutzerkonto anfragen“ zeigen"
-
-#: resources/views/page/sections/data-categories.phtml:141
+#: resources/views/page/sections/data-categories.phtml:129
 msgid ""
-"When requesting a new user account, visitors are shown an acceptable use "
-"agreement before submitting the form."
+"Before submitting the request, they must confirm that they will respect the "
+"privacy of living persons listed here and describe their relationship to "
+"persons on this website or provide information about someone who should be "
+"listed here."
 msgstr ""
-"Beim Anfragen eines neuen Benutzerkontos werden Besuchern vor dem Absenden "
-"des Formulars Nutzungsbedingungen angezeigt."
+"Vor dem Absenden der Anfrage müssen sie bestätigen, dass sie den Datenschutz "
+"der hier aufgeführten lebenden Personen beachten und ihr "
+"Verwandtschaftsverhältnis zu Personen dieser Website beschreiben oder "
+"Informationen über jemanden zukommen lassen, der hier aufgeführt werden "
+"sollte."
 
-#: resources/views/page/sections/data-categories.phtml:142
+#: resources/views/page/sections/data-categories.phtml:131
 msgid ""
-"This agreement asks them to respect the privacy of living persons listed on "
-"this website and to describe their relationship to persons on this website "
-"or provide information about someone who should be listed on this website."
+"Visitors can request a new user account on this website without being shown "
+"an additional acceptable use agreement before submitting the request."
 msgstr ""
-"Diese Nutzungsbedingungen fordern sie auf, den Datenschutz der auf dieser "
-"Website aufgeführten lebenden Personen zu beachten und ihr "
-"Verwandtschaftsverhältnis zu Personen dieser Website zu beschreiben oder "
-"Informationen über jemanden zukommen zu lassen, der auf dieser Website "
-"aufgeführt werden sollte."
-
-#: resources/views/page/sections/data-categories.phtml:143
-msgid ""
-"This is the point at which new users explicitly confirm these terms before "
-"submitting their account request."
-msgstr ""
-"Dies ist die Stelle, an der neue Nutzer diese Bedingungen vor dem Absenden "
-"ihrer Kontoanfrage ausdrücklich bestätigen."
+"Besucher können auf dieser Website ein neues Benutzerkonto anfragen, ohne "
+"dass ihnen vor dem Absenden der Anfrage zusätzliche Nutzungsbedingungen "
+"angezeigt werden."
 
 #: resources/views/page/sections/data-categories.phtml:102
 msgid "Privacy settings for individual family trees"
@@ -2776,8 +2752,10 @@ msgid "Show living individuals"
 msgstr "Lebende Personen zeigen"
 
 #: resources/views/page/sections/data-categories.phtml:112
-msgid "Extend privacy to dead individuals"
-msgstr "Datenschutz auf Verstorbene ausweiten"
+msgid "Extend privacy to dead individuals for a selectable period after birth or death"
+msgstr ""
+"Datenschutz auf Verstorbene ausweiten (für eine wählbare Zeit nach Geburt "
+"oder Tod)"
 
 #: resources/views/page/sections/data-categories.phtml:113
 msgid "Show names of private individuals"

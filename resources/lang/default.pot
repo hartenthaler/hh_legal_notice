@@ -569,7 +569,7 @@ msgid "Family history and genealogical research is the legitimate purpose for pr
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:24
-msgid "Personal data that you find on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely."
+msgid "Personal data published on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:25
@@ -808,14 +808,14 @@ msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:45
 msgid ""
-"Under Article 20 GDPR, you have the right to receive personal data that you have provided in a structured, commonly used, and machine-readable format, and to transmit that data to another controller where the legal "
-"requirements are met."
+"Under Article 20 GDPR, you have the right to receive personal data that you have provided in a structured, commonly used, and machine-readable format, and to transmit that data to another controller where the legal requirements "
+"are met."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:55
 msgid ""
-"Under Article 21 GDPR, you have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data concerning you that is based on Article 6(1), first sentence, point (e) or "
-"Article 6(1), first sentence, point (f) GDPR."
+"Under Article 21 GDPR, you have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data concerning you that is based on Article 6(1), first sentence, point (e) or Article "
+"6(1), first sentence, point (f) GDPR."
 msgstr ""
 
 #: resources/views/page/sections/general-risk.phtml:9
@@ -835,7 +835,7 @@ msgstr ""
 
 #: resources/views/page/sections/hosting.phtml:16
 #, php-format
-msgid "For details, please refer to the privacy notice of %s."
+msgid "Details are available in the privacy notice of %s."
 msgstr ""
 
 #: resources/views/page/sections/hosting.phtml:22
@@ -1019,8 +1019,8 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: resources/views/page/sections/online-genealogy-privacy.phtml:45
-msgid "If, for specific reasons, you want to prevent your data from being visible even within the group of authorized registered users, please inform me so that I can further restrict visibility here as well."
-msgid_plural "If, for specific reasons, you want to prevent your data from being visible even within the group of authorized registered users, please inform us so that we can further restrict visibility here as well."
+msgid "If, for specific reasons, data about a person should not be visible even within the group of authorized registered users, please inform me so that I can further restrict visibility here as well."
+msgid_plural "If, for specific reasons, data about a person should not be visible even within the group of authorized registered users, please inform us so that we can further restrict visibility here as well."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1039,31 +1039,31 @@ msgstr ""
 msgid "The software used (webtrees) offers many protection mechanisms."
 msgstr ""
 
-#: resources/views/page/sections/personal-data-processing.phtml:19
+#: resources/views/page/sections/data-categories.phtml:9
 msgid "Data assigned to users of this service is processed, as well as data about living and deceased persons."
 msgstr ""
 
-#: resources/views/page/sections/personal-data-processing.phtml:23
+#: resources/views/page/sections/data-categories.phtml:13
 msgid "Inventory data (names, birth, marriage, and death data, ...)"
 msgstr ""
 
-#: resources/views/page/sections/personal-data-processing.phtml:24
+#: resources/views/page/sections/data-categories.phtml:14
 msgid "Content data (messages, life stories of individuals, photographs, videos, ...)"
 msgstr ""
 
-#: resources/views/page/sections/personal-data-processing.phtml:25
+#: resources/views/page/sections/data-categories.phtml:15
 msgid "Contact data (addresses, e-mail, telephone numbers, ...)"
 msgstr ""
 
-#: resources/views/page/sections/personal-data-processing.phtml:26
+#: resources/views/page/sections/data-categories.phtml:16
 msgid "Usage data (visited web pages, access times, changes made, ...)"
 msgstr ""
 
-#: resources/views/page/sections/personal-data-processing.phtml:27
+#: resources/views/page/sections/data-categories.phtml:17
 msgid "Communication data (device information, browser used, IP addresses, ...)"
 msgstr ""
 
-#: resources/views/page/sections/personal-data-processing.phtml:31
+#: resources/views/page/sections/personal-data-processing.phtml:19
 msgid "To inform you fully about the use of personal data, you are asked to take note of the following privacy information."
 msgstr ""
 
@@ -1671,40 +1671,28 @@ msgstr ""
 msgid "The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of \"Purpose\". Research focus details are not translated, so they should be kept short."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:85
-msgid "Global privacy-related settings"
+#: resources/views/page/sections/data-categories.phtml:96
+msgid "If there is more than one family tree on this website, visitors can see a list of the family trees to which they have access, for example on the home page or when searching."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:87
-msgid "The following global webtrees setting affects visibility on this website:"
+#: resources/views/page/sections/data-categories.phtml:98
+msgid "Visitors are shown the default family tree and do not see a list of any other family trees that may exist on this website."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:91
-msgid "Show list of family trees"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:124
-msgid "Requesting a new user account"
+#: resources/views/page/sections/data-categories.phtml:126
+msgid "Visitors cannot request a new user account themselves on this website."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:128
-msgid "Allow visitors to request a new user account"
+msgid "Visitors can request a new user account on this website."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:133
-msgid "Show acceptable use agreement on “Request a new user account” page"
+#: resources/views/page/sections/data-categories.phtml:129
+msgid "Before submitting the request, they must confirm that they will respect the privacy of living persons listed here and describe their relationship to persons on this website or provide information about someone who should be listed here."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:141
-msgid "When requesting a new user account, visitors are shown an acceptable use agreement before submitting the form."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:142
-msgid "This agreement asks them to respect the privacy of living persons listed on this website and to describe their relationship to persons on this website or provide information about someone who should be listed on this website."
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:143
-msgid "This is the point at which new users explicitly confirm these terms before submitting their account request."
+#: resources/views/page/sections/data-categories.phtml:131
+msgid "Visitors can request a new user account on this website without being shown an additional acceptable use agreement before submitting the request."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:102
@@ -1736,7 +1724,7 @@ msgid "Show living individuals"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:112
-msgid "Extend privacy to dead individuals"
+msgid "Extend privacy to dead individuals for a selectable period after birth or death"
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:113

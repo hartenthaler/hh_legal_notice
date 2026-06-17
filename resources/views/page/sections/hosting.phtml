@@ -13,7 +13,7 @@ use Fisharebest\Webtrees\I18N;
                 <?= I18N::translate('This website is hosted by %s, which provides the server and technical infrastructure.', e($hostingCompanyName)) ?>
             <?php endif ?>
             <?php if ($hostingPrivacyNotice !== '' && $hostingCompanyName !== '') : ?>
-                <?= I18N::translate('For details, please refer to the privacy notice of %s.', e($hostingCompanyName)) ?>
+                <?= I18N::translate('Details are available in the privacy notice of %s.', e($hostingCompanyName)) ?>
                 <a href="<?= e($hostingPrivacyNotice) ?>"><?= e($hostingPrivacyNotice) ?></a>.
             <?php endif ?>
         </p>
