@@ -1671,16 +1671,12 @@ msgstr ""
 msgid "The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of \"Purpose\". Research focus details are not translated, so they should be kept short."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:85
-msgid "Global privacy-related settings"
+#: resources/views/page/sections/data-categories.phtml:96
+msgid "If there is more than one family tree on this website, visitors can see a list of the family trees to which they have access, for example on the home page or when searching."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:87
-msgid "The following global webtrees setting affects visibility on this website:"
-msgstr ""
-
-#: resources/views/page/sections/data-categories.phtml:91
-msgid "Show list of family trees"
+#: resources/views/page/sections/data-categories.phtml:98
+msgid "Visitors are shown the default family tree and do not see a list of any other family trees that may exist on this website."
 msgstr ""
 
 #: resources/views/page/sections/data-categories.phtml:124

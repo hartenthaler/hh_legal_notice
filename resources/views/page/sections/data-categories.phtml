@@ -91,16 +91,13 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?php endif ?>
             </p>
 
-            <h5><?= I18N::translate('Global privacy-related settings') ?></h5>
             <p>
-                <?= I18N::translate('The following global webtrees setting affects visibility on this website:') ?>
+                <?php if ($showFamilyTreeList) : ?>
+                    <?= I18N::translate('If there is more than one family tree on this website, visitors can see a list of the family trees to which they have access, for example on the home page or when searching.') ?>
+                <?php else : ?>
+                    <?= I18N::translate('Visitors are shown the default family tree and do not see a list of any other family trees that may exist on this website.') ?>
+                <?php endif ?>
             </p>
-            <ul>
-                <li>
-                    <?= I18N::translate('Show list of family trees') ?>:
-                    <?= MoreI18N::xlate($showFamilyTreeList ? 'yes' : 'no') ?>
-                </li>
-            </ul>
 
             <h5><?= I18N::translate('Privacy settings for individual family trees') ?></h5>
             <p>

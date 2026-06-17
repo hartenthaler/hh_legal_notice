@@ -2686,20 +2686,23 @@ msgstr ""
 "„Zweck“ gesteuert. Forschungsschwerpunkte werden nicht übersetzt und sollten "
 "deshalb kurz gehalten werden."
 
-#: resources/views/page/sections/data-categories.phtml:85
-msgid "Global privacy-related settings"
-msgstr "Globale datenschutzrelevante Einstellungen"
-
-#: resources/views/page/sections/data-categories.phtml:87
+#: resources/views/page/sections/data-categories.phtml:96
 msgid ""
-"The following global webtrees setting affects visibility on this website:"
+"If there is more than one family tree on this website, visitors can see a "
+"list of the family trees to which they have access, for example on the home "
+"page or when searching."
 msgstr ""
-"Die folgende globale webtrees-Einstellung beeinflusst die Sichtbarkeit auf "
-"dieser Website:"
+"Wenn es auf dieser Website mehr als einen Stammbaum gibt, können Besucher "
+"eine Liste der Stammbäume sehen, auf die sie Zugriff haben, zum Beispiel auf "
+"der Startseite oder bei der Suche."
 
-#: resources/views/page/sections/data-categories.phtml:91
-msgid "Show list of family trees"
-msgstr "Liste der Stammbäume zeigen"
+#: resources/views/page/sections/data-categories.phtml:98
+msgid ""
+"Visitors are shown the default family tree and do not see a list of any "
+"other family trees that may exist on this website."
+msgstr ""
+"Besuchern wird der Standard-Stammbaum angezeigt; sie sehen keine Liste "
+"weiterer Stammbäume, die auf dieser Website vorhanden sein können."
 
 #: resources/views/page/sections/data-categories.phtml:124
 msgid "Requesting a new user account"
