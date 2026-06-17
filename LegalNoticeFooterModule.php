@@ -1269,6 +1269,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'registeredUsersAreRelatives' => $this->registeredUsersAreRelatives(),
             'researchPurposeDescriptions' => $this->researchPurposeDescriptions(),
             'showFamilyTreeList' => $this->showFamilyTreeList(),
+            'familyTreeCount' => $this->familyTreeCount(),
             'allowVisitorRegistration' => $this->allowVisitorRegistration(),
             'showRegisterCaution' => $this->showRegisterCaution(),
             'inactiveUserYears' => $this->inactiveUserYears(),
@@ -1504,6 +1505,13 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function showFamilyTreeList(): bool
     {
         return Site::getPreference('ALLOW_CHANGE_GEDCOM') === '1';
+    }
+
+    private function familyTreeCount(): int
+    {
+        return DB::table('gedcom')
+            ->where('gedcom_id', '>', 0)
+            ->count();
     }
 
     private function allowVisitorRegistration(): bool
