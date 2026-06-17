@@ -207,7 +207,11 @@ msgctxt "heading"
 msgid "Data protection"
 msgstr ""
 
-#: src/LegalNoticeSupport.php:146
+#: src/LegalNoticeSupport.php:146 resources/views/settings.phtml:214
+msgid "Data protection officer"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:147
 msgctxt "heading"
 msgid "Purpose"
 msgstr ""
@@ -667,7 +671,7 @@ msgstr ""
 msgid "The personal data that you provide yourself when creating an account is stored and processed; see contact data."
 msgstr ""
 
-#: resources/views/page/sections/data-categories.phtml:89 resources/views/settings.phtml:251
+#: resources/views/page/sections/data-categories.phtml:89 resources/views/page/sections/data-protection-officer.phtml:33 resources/views/settings.phtml:251
 msgid "Name"
 msgstr ""
 
@@ -795,8 +799,38 @@ msgstr ""
 msgid "The application used (webtrees) logs all user actions so that, among other things, changes to the data can be traced and approved."
 msgstr ""
 
-#: resources/views/page/sections/personal-data-processing.phtml:20
-msgid "A data protection officer has not been appointed because the legal requirements for appointing one are not met."
+#: resources/views/page/sections/data-protection-officer.phtml:21
+msgid "A data protection officer has been designated for this website."
+msgstr ""
+
+#: resources/views/page/sections/data-protection-officer.phtml:24
+#, php-format
+msgid "This information is provided with reference to Article 37 GDPR and Section 38 %s."
+msgstr ""
+
+#: resources/views/page/sections/data-protection-officer.phtml:26
+msgid "This information is provided with reference to Article 37 GDPR."
+msgstr ""
+
+#: resources/views/page/sections/data-protection-officer.phtml:38
+msgid "Company"
+msgstr ""
+
+#: resources/views/page/sections/data-protection-officer.phtml:43
+msgid "Address"
+msgstr ""
+
+#: resources/views/page/sections/data-protection-officer.phtml:55
+#, php-format
+msgid "No data protection officer has been designated because neither Article 37 GDPR nor Section 38 %s requires designation for this website."
+msgstr ""
+
+#: resources/views/page/sections/data-protection-officer.phtml:57
+msgid "No data protection officer has been designated because Article 37 GDPR does not require designation for this website."
+msgstr ""
+
+#: resources/views/page/sections/data-protection-officer.phtml:59
+msgid "No data protection officer has been designated for this website."
 msgstr ""
 
 #: resources/views/page/sections/data-rights.phtml:9
@@ -1291,6 +1325,30 @@ msgstr ""
 
 #: resources/views/settings.phtml:210
 msgid "Restore default sorting for all chapters and sections"
+msgstr ""
+
+#: resources/views/settings.phtml:220
+msgid "Has a data protection officer been designated?"
+msgstr ""
+
+#: resources/views/settings.phtml:230
+msgid "If no data protection officer has been designated, the privacy policy states that no designation is required under the applicable law."
+msgstr ""
+
+#: resources/views/settings.phtml:239
+msgid "Name of the data protection officer"
+msgstr ""
+
+#: resources/views/settings.phtml:247
+msgid "Company of the data protection officer"
+msgstr ""
+
+#: resources/views/settings.phtml:255
+msgid "Address of the data protection officer"
+msgstr ""
+
+#: resources/views/settings.phtml:263
+msgid "E-mail address of the data protection officer"
 msgstr ""
 
 #: resources/views/settings.phtml:220

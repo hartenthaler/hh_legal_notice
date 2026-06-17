@@ -233,7 +233,11 @@ msgctxt "heading"
 msgid "Data protection"
 msgstr "Datenschutzerklärung"
 
-#: src/LegalNoticeSupport.php:146
+#: src/LegalNoticeSupport.php:146 resources/views/settings.phtml:214
+msgid "Data protection officer"
+msgstr "Datenschutzbeauftragter"
+
+#: src/LegalNoticeSupport.php:147
 msgctxt "heading"
 msgid "Purpose"
 msgstr "Zweck"
@@ -1108,6 +1112,7 @@ msgstr ""
 "angeben, werden gespeichert und verarbeitet; siehe Kontaktdaten."
 
 #: resources/views/page/sections/data-categories.phtml:89
+#: resources/views/page/sections/data-protection-officer.phtml:33
 #: resources/views/settings.phtml:251
 msgid "Name"
 msgstr "Name"
@@ -1330,13 +1335,50 @@ msgstr ""
 "damit u.a. die Änderungen am Datenbestand nachvollzogen und freigegeben "
 "werden können."
 
-#: resources/views/page/sections/personal-data-processing.phtml:19
+#: resources/views/page/sections/data-protection-officer.phtml:21
+msgid "A data protection officer has been designated for this website."
+msgstr "Für diese Website wurde ein Datenschutzbeauftragter benannt."
+
+#: resources/views/page/sections/data-protection-officer.phtml:24
+#, php-format
 msgid ""
-"A data protection officer has not been appointed because the legal "
-"requirements for appointing one are not met."
+"This information is provided with reference to Article 37 GDPR and Section "
+"38 %s."
+msgstr "Diese Angabe erfolgt mit Verweis auf Artikel 37 DSGVO und § 38 %s."
+
+#: resources/views/page/sections/data-protection-officer.phtml:26
+msgid "This information is provided with reference to Article 37 GDPR."
+msgstr "Diese Angabe erfolgt mit Verweis auf Artikel 37 DSGVO."
+
+#: resources/views/page/sections/data-protection-officer.phtml:38
+msgid "Company"
+msgstr "Unternehmen"
+
+#: resources/views/page/sections/data-protection-officer.phtml:43
+msgid "Address"
+msgstr "Adresse"
+
+#: resources/views/page/sections/data-protection-officer.phtml:55
+#, php-format
+msgid ""
+"No data protection officer has been designated because neither Article 37 "
+"GDPR nor Section 38 %s requires designation for this website."
 msgstr ""
-"Ein Datenschutzbeauftragter ist nicht bestellt, da die gesetzlichen "
-"Voraussetzungen hierfür nicht vorliegen."
+"Für diese Website wurde kein Datenschutzbeauftragter benannt, da weder "
+"Artikel 37 DSGVO noch § 38 %s eine Benennung erfordern."
+
+#: resources/views/page/sections/data-protection-officer.phtml:57
+msgid ""
+"No data protection officer has been designated because Article 37 GDPR does "
+"not require designation for this website."
+msgstr ""
+"Für diese Website wurde kein Datenschutzbeauftragter benannt, da Artikel 37 "
+"DSGVO keine Benennung erfordert."
+
+#: resources/views/page/sections/data-protection-officer.phtml:59
+msgid "No data protection officer has been designated for this website."
+msgstr ""
+"Für diese Website wurde kein Datenschutzbeauftragter benannt."
 
 #: resources/views/page/sections/data-rights.phtml:9
 msgid ""
@@ -2161,6 +2203,35 @@ msgstr "Kapitel"
 #: resources/views/settings.phtml:210
 msgid "Restore default sorting for all chapters and sections"
 msgstr "Standardsortierung für alle Kapitel und Abschnitte wiederherstellen"
+
+#: resources/views/settings.phtml:220
+msgid "Has a data protection officer been designated?"
+msgstr "Ist ein Datenschutzbeauftragter benannt?"
+
+#: resources/views/settings.phtml:230
+msgid ""
+"If no data protection officer has been designated, the privacy policy states "
+"that no designation is required under the applicable law."
+msgstr ""
+"Wenn kein Datenschutzbeauftragter benannt wurde, wird in der "
+"Datenschutzerklärung angegeben, dass nach dem anwendbaren Recht keine "
+"Benennung erforderlich ist."
+
+#: resources/views/settings.phtml:239
+msgid "Name of the data protection officer"
+msgstr "Name des Datenschutzbeauftragten"
+
+#: resources/views/settings.phtml:247
+msgid "Company of the data protection officer"
+msgstr "Unternehmen des Datenschutzbeauftragten"
+
+#: resources/views/settings.phtml:255
+msgid "Address of the data protection officer"
+msgstr "Adresse des Datenschutzbeauftragten"
+
+#: resources/views/settings.phtml:263
+msgid "E-mail address of the data protection officer"
+msgstr "E-Mail-Adresse des Datenschutzbeauftragten"
 
 #: resources/views/settings.phtml:220
 msgid "Should a copyright notice be included in this page footer element?"

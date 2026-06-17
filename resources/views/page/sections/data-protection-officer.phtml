@@ -1,0 +1,64 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
+
+/**
+ * @var object $chapter
+ * @var bool   $dpoNamed
+ * @var string $dpoName
+ * @var string $dpoCompany
+ * @var string $dpoAddress
+ * @var string $dpoEmail
+ * @var bool   $useEuPrivacyLaw
+ * @var bool   $useGermanPrivacyLaw
+ * @var string $federalDataProtectionActReference
+ */
+?>
+
+    <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
+
+    <?php if ($dpoNamed) : ?>
+        <p>
+            <?= I18N::translate('A data protection officer has been designated for this website.') ?>
+            <?php if ($useEuPrivacyLaw) : ?>
+                <?php if ($useGermanPrivacyLaw) : ?>
+                    <?= I18N::translate('This information is provided with reference to Article 37 GDPR and Section 38 %s.', $federalDataProtectionActReference) ?>
+                <?php else : ?>
+                    <?= I18N::translate('This information is provided with reference to Article 37 GDPR.') ?>
+                <?php endif ?>
+            <?php endif ?>
+        </p>
+
+        <dl>
+            <?php if ($dpoName !== '') : ?>
+                <dt><?= I18N::translate('Name') ?></dt>
+                <dd><?= e($dpoName) ?></dd>
+            <?php endif ?>
+
+            <?php if ($dpoCompany !== '') : ?>
+                <dt><?= I18N::translate('Company') ?></dt>
+                <dd><?= e($dpoCompany) ?></dd>
+            <?php endif ?>
+
+            <?php if ($dpoAddress !== '') : ?>
+                <dt><?= I18N::translate('Address') ?></dt>
+                <dd><?= nl2br(e($dpoAddress)) ?></dd>
+            <?php endif ?>
+
+            <?php if ($dpoEmail !== '') : ?>
+                <dt><?= MoreI18N::xlate('eMail') ?></dt>
+                <dd><a href="mailto:<?= e($dpoEmail) ?>"><?= e($dpoEmail) ?></a></dd>
+            <?php endif ?>
+        </dl>
+    <?php else : ?>
+        <p>
+            <?php if ($useGermanPrivacyLaw) : ?>
+                <?= I18N::translate('No data protection officer has been designated because neither Article 37 GDPR nor Section 38 %s requires designation for this website.', $federalDataProtectionActReference) ?>
+            <?php elseif ($useEuPrivacyLaw) : ?>
+                <?= I18N::translate('No data protection officer has been designated because Article 37 GDPR does not require designation for this website.') ?>
+            <?php else : ?>
+                <?= I18N::translate('No data protection officer has been designated for this website.') ?>
+            <?php endif ?>
+        </p>
+    <?php endif ?>

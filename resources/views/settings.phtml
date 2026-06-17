@@ -37,6 +37,11 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
  *
  * @var string                  $showTreeContacts       option whether to show tree contacts
  * @var string                  $showAdministrators     option whether to show administrators of webtrees
+ * @var string                  $dpoNamed               option whether a data protection officer has been designated
+ * @var string                  $dpoName                name of the data protection officer
+ * @var string                  $dpoCompany             company of the data protection officer
+ * @var string                  $dpoAddress             address of the data protection officer
+ * @var string                  $dpoEmail               e-mail address of the data protection officer
  * @var string                  $supervisoryAuthorityName name of the competent supervisory authority
  * @var string                  $supervisoryAuthorityUrl URL of the competent supervisory authority
  * @var string                  $registeredUsersAreRelatives option whether registered users are relatives or relatives by marriage
@@ -211,6 +216,63 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
         <button type="submit" class="btn btn-secondary d-block mb-3" name="resetOrder" value="1">
             <?= I18N::translate('Restore default sorting for all chapters and sections') ?>
         </button>
+
+        <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="DataProtectionOfficer">
+            <h4><?= I18N::translate('Data protection officer') ?></h4>
+
+            <div class="row">
+                <fieldset class="form-group mb-3 col-12">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 wt-page-options-label">
+                            <?= I18N::translate('Has a data protection officer been designated?') ?>
+                        </legend>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <?= view('components/radios-inline', [
+                                'id' => 'dpoNamed',
+                                'name' => 'dpoNamed',
+                                'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
+                                'selected' => (int)($dpoNamed ?? '0'),
+                            ]) ?>
+                            <p class="small text-muted">
+                                <?= I18N::translate('If no data protection officer has been designated, the privacy policy states that no designation is required under the applicable law.') ?>
+                            </p>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="col-12 hh-legal-notice-input-setting" data-dependent-on-input="dpoNamed" data-dependent-value="1">
+                    <div class="row">
+                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoName">
+                            <?= I18N::translate('Name of the data protection officer') ?>
+                        </label>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <input class="form-control" id="dpoName" name="dpoName" type="text" value="<?= e($dpoName) ?>">
+                        </div>
+
+                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoCompany">
+                            <?= I18N::translate('Company of the data protection officer') ?>
+                        </label>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <input class="form-control" id="dpoCompany" name="dpoCompany" type="text" value="<?= e($dpoCompany) ?>">
+                        </div>
+
+                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoAddress">
+                            <?= I18N::translate('Address of the data protection officer') ?>
+                        </label>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <textarea class="form-control" id="dpoAddress" name="dpoAddress" rows="3"><?= e($dpoAddress) ?></textarea>
+                        </div>
+
+                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoEmail">
+                            <?= I18N::translate('E-mail address of the data protection officer') ?>
+                        </label>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <input class="form-control" id="dpoEmail" name="dpoEmail" type="email" value="<?= e($dpoEmail) ?>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="Purpose" data-dependent-on-any-chapter="<?= e(implode(' ', array_keys($researchTypeDetailPreferences))) ?>">
             <h4><?= I18N::translate('Research purpose details') ?></h4>
@@ -793,9 +855,20 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
 
                 $(this).toggleClass('d-none', hidden);
             });
+
+            $('.hh-legal-notice-input-setting').each(function () {
+                var inputName = $(this).attr('data-dependent-on-input');
+                var expectedValue = $(this).attr('data-dependent-value');
+                var checkedValue = $('[name="' + inputName + '"]:checked').val();
+
+                $(this).toggleClass('d-none', checkedValue !== expectedValue);
+            });
         }
 
         $('[data-controls-chapters]').on('change', hhLegalNoticeUpdateDependentChapters);
+        $('[data-dependent-on-input]').each(function () {
+            $('[name="' + $(this).attr('data-dependent-on-input') + '"]').on('change', hhLegalNoticeUpdateDependentChapters);
+        });
         hhLegalNoticeUpdateDependentChapters();
     </script>
 <?php View::endpush() ?>

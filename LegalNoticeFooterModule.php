@@ -416,6 +416,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'vatNumber',
             'showTreeContacts',
             'showAdministrators',
+            'dpoNamed',
+            'dpoName',
+            'dpoCompany',
+            'dpoAddress',
+            'dpoEmail',
             'researchFamily',
             'researchOns',
             'researchPlace',
@@ -500,6 +505,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         if ($response['showGoogleCharts'] === '') {
             $response['showGoogleCharts'] = '1';
+        }
+
+        if ($response['dpoNamed'] === '') {
+            $response['dpoNamed'] = '0';
         }
 
         if ($response['privacyPolicyDateSource'] === '') {
@@ -740,6 +749,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showAdministrators',
             'orderProcessing',
             'registeredUsersAreRelatives',
+            'dpoNamed',
             'showGoogleCharts' => $value === '1' ? '1' : '0',
 
             'responsibleSex' => in_array($value, ['M', 'F', 'X', 'U'], true) ? $value : 'U',
@@ -760,7 +770,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingStartDate',
             'hostingEndDate' => $this->validatedAgreementDate($value, $preference),
 
-            'email' => $this->validatedEmail($value),
+            'email',
+            'dpoEmail' => $this->validatedEmail($value),
 
             'hostingCompanyUrl',
             'hostingPrivacyNotice' => $this->validatedUrl($value, $preference),
@@ -1307,6 +1318,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showRegisterCaution' => $this->showRegisterCaution(),
             'inactiveUserYears' => $this->inactiveUserYears(),
             'sensitiveDataYears' => $this->sensitiveDataYears(),
+            'dpoNamed' => $this->dpoNamed(),
+            'dpoName' => $this->dpoName(),
+            'dpoCompany' => $this->dpoCompany(),
+            'dpoAddress' => $this->dpoAddress(),
+            'dpoEmail' => $this->dpoEmail(),
             'supervisoryAuthorityName' => $this->supervisoryAuthorityName(),
             'supervisoryAuthorityUrl' => $this->supervisoryAuthorityUrl(),
             'chapters'                  => $this->getChapters($request),
@@ -1572,6 +1588,31 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $years = (int) $this->getPreference('sensitiveDataYears', '10');
 
         return $years >= 0 && $years <= 100 ? $years : 10;
+    }
+
+    private function dpoNamed(): bool
+    {
+        return $this->getPreference('dpoNamed', '0') === '1';
+    }
+
+    private function dpoName(): string
+    {
+        return $this->getPreference('dpoName', '');
+    }
+
+    private function dpoCompany(): string
+    {
+        return $this->getPreference('dpoCompany', '');
+    }
+
+    private function dpoAddress(): string
+    {
+        return $this->getPreference('dpoAddress', '');
+    }
+
+    private function dpoEmail(): string
+    {
+        return $this->getPreference('dpoEmail', '');
     }
 
     private function registeredUserNames(): string
