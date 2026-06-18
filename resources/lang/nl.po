@@ -1081,8 +1081,9 @@ msgstr "SSL- of TLS-versleuteling"
 msgid "This site uses SSL or TLS encryption to protect the transmission of data."
 msgstr "Deze website maakt gebruik van SSL- of TLS-versleuteling om de overdracht van gegevens te beschermen."
 
-msgid "You can recognize an encrypted connection by the fact that the browser address bar contains “https://”, usually also indicated by a lock symbol in your browser bar."
-msgstr "U kunt een versleutelde verbinding herkennen doordat de adresbalk van de browser “https://” bevat, meestal ook aangeduid met een slotpictogram in de browserbalk."
+#, php-format
+msgid "You can recognize an encrypted connection by the fact that the browser address bar starts with %s, usually also indicated by a lock symbol in your browser bar."
+msgstr "U kunt een versleutelde verbinding herkennen doordat de adresbalk van de browser begint met %s, meestal ook aangeduid met een slotpictogram in de browserbalk."
 
 msgid "When SSL or TLS encryption is enabled, the data transmitted cannot be read by third parties."
 msgstr "Wanneer SSL- of TLS-versleuteling is ingeschakeld, kunnen de verzonden gegevens niet door derden worden gelezen."
