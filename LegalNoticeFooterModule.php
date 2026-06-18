@@ -253,7 +253,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'name' => 'Lantmäteriet',
             'url' => 'https://www.lantmateriet.se/',
             'country' => 'Sweden',
-            'privacy_url' => 'https://www.lantmateriet.se/en/about-lantmateriet/personal-data/',
+            'privacy_url' => 'https://www.lantmateriet.se/en/about-lantmateriet/processing-of-personal-data-at-lantmateriet/',
             'group' => 'map',
             'data' => [
                 'IP addresses',
