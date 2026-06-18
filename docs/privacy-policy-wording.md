@@ -20,6 +20,5 @@ The goal is not to avoid direct address everywhere. The goal is to avoid mislead
 Examples:
 
 - Reader-facing: "You have the right to request correction of data concerning you."
-- Registered users: "As a registered user, you can view, correct, or delete your account data yourself."
 - Genealogical third-party data: "Personal data published on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research."
 - Visibility requests: "If, for specific reasons, data about a person should not be visible even within the group of authorized registered users, please inform me/us."
