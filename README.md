@@ -8,7 +8,7 @@
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
-Current module version: **2.2.6.4**.
+Current module version: **2.2.6.5**.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
@@ -108,26 +108,46 @@ automated collection, scraping, data mining, AI-system use, technical measures a
 automated access, and copyright enforcement.
 
 <a name="WhatsNew"></a>
-## ✨ What's new in 2.2.6.4
+## ✨ What's new in 2.2.6.5
 
-This release adds cross-module privacy notices and refines generated wording:
+This release prepares updated documentation, screenshots, and translations and refines several generated privacy-policy sections:
 
 * Compatible custom modules can now provide privacy notices through `privacyNotices()`.
 * Module-provided third-party services and security measures can be included in the generated privacy policy.
-* The research-purpose settings block is hidden when all related purpose subsections are disabled.
-* Website/service wording was neutralized where a site reference is meant rather than an owner reference.
+* Active map providers and map links can be listed as third-party services.
+* The privacy policy can include further webtrees privacy information as a separate section.
+* German copyright wording now distinguishes general AI/text-and-data-mining wording from references that only apply under German law.
+* The README screenshots and Dutch translation have been updated.
 
 <a name="Screenshots"></a>
 ## 🖼 Screenshots
 
-Screenshot of Legal Notice footer (in German language)
-<p align="center"><img src="docs/img/legal_notice_footer.png" alt="Screenshot of Legal Notice" align="center" width="60%"></p>
+Screenshot of Legal Notice footer (English)
+<p align="center"><img src="docs/img/legal_notice_footer_english.jpg" alt="Screenshot of Legal Notice footer in English" align="center" width="60%"></p>
 
-Screenshot of Legal Notice (in German language)
-<p align="center"><img src="docs/img/legal_notice.png" alt="Screenshot of Legal Notice" align="center" width="80%"></p>
+Screenshot of Legal Notice footer (German)
+<p align="center"><img src="docs/img/legal_notice_footer_german.jpg" alt="Screenshot of Legal Notice footer in German" align="center" width="60%"></p>
 
-Screenshot of control panel page (in German language)
-<p align="center"><img src="docs/img/legal_notice_control_panel.png" alt="Screenshot of control panel menu" align="center" width="80%"></p>
+Screenshot of Legal Notice page (English)
+<p align="center"><img src="docs/img/legal_notice_legal_notice_english.jpg" alt="Screenshot of Legal Notice page in English" align="center" width="80%"></p>
+
+Screenshot of Privacy Policy page (English)
+<p align="center"><img src="docs/img/legal_notice_legal_data_protection_english.jpg" alt="Screenshot of Privacy Policy page in English" align="center" width="80%"></p>
+
+Screenshot of Legal Regulations page (English)
+<p align="center"><img src="docs/img/legal_notice_legal_regulations_english.jpg" alt="Screenshot of Legal Regulations page in English" align="center" width="80%"></p>
+
+Screenshot of control panel sections (English)
+<p align="center"><img src="docs/img/legal_notice_control_panel_sections_english.jpg" alt="Screenshot of control panel sections in English" align="center" width="80%"></p>
+
+Screenshot of control panel sections (German)
+<p align="center"><img src="docs/img/legal_notice_control_panel_sections_german.jpg" alt="Screenshot of control panel sections in German" align="center" width="80%"></p>
+
+Screenshot of control panel details (English)
+<p align="center"><img src="docs/img/legal_notice_control_panel_details_english.jpg" alt="Screenshot of control panel details in English" align="center" width="80%"></p>
+
+Screenshot of control panel details (German)
+<p align="center"><img src="docs/img/legal_notice_control_panel_details_german.jpg" alt="Screenshot of control panel details in German" align="center" width="80%"></p>
 
 <a name="Requirements"></a>
 ## 📌 Requirements
@@ -215,7 +235,7 @@ The generated privacy policy can also mention [Google Charts](https://developers
 
 Additional third-party services can be configured by the administrator using service name, URL, and optional country of service provision. If the website is subject to EU data-protection law and a configured service is provided from outside the European Union, the generated privacy policy can include a third-country-transfer notice.
 
-The privacy-policy page can also include information from other installed modules. Compatible modules can expose a public `privacyNotices(): array` method. The method may currently return `third_party_services` entries with `name`, `url`, optional `country`, `privacy_url`, `description`, `data`, and `group`, plus `security_measures` text entries. This is used, for example, by `hh_source_transcription` for external transcription providers such as Transkribus or Discourse.
+The privacy-policy page can also include information from other installed modules. Compatible modules can expose a public `privacyNotices(): array` method. The method may currently return `third_party_services` entries with `name`, `url`, optional `country`, `privacy_url`, `description`, `data`, and `group`, plus `security_measures` text entries. This is used, for example, by `hh_source_transcription` for external transcription providers such as Transkribus or Discourse. Active webtrees map providers and map links can also be detected and listed as third-party services.
 
 The wording for the webtrees core cookie behavior is being clarified separately; see issue [#48](https://github.com/hartenthaler/hh_legal_notice/issues/48).
 
