@@ -1,0 +1,22 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+
+/**
+ * @var object $chapter
+ */
+?>
+
+    <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
+
+    <?php $manualLink = '<a href="https://wiki.genealogy.net/Webtrees_Handbuch/Anleitung_f%C3%BCr_Webmaster#Datensicherheit_und_Datenschutz">' . I18N::translate('German-language webtrees manual (GenWiki)') . '</a>' ?>
+    <?php $webtreesPrivacyLink = '<a href="https://webtrees.net/user/privacy/">' . I18N::translate('official privacy information from webtrees.net') . '</a>' ?>
+
+    <p>
+        <?= I18N::translate(
+            'Detailed technical background information about data protection in webtrees as well as further information for administrators is available in the %s and in the %s.',
+            $manualLink,
+            $webtreesPrivacyLink
+        ) ?>
+        <?= I18N::translate('This information supplements the following privacy policy, but does not replace it.') ?>
+    </p>
