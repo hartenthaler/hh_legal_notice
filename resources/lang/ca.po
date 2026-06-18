@@ -217,6 +217,10 @@ msgid "Data protection"
 msgstr "Protecció de dades"
 
 #: src/LegalNoticeSupport.php:146
+msgid "Further information"
+msgstr ""
+
+#: src/LegalNoticeSupport.php:147
 msgctxt "heading"
 msgid "Purpose"
 msgstr "Propòsit"
@@ -879,6 +883,23 @@ msgstr ""
 #, php-format
 msgid "Privacy policy date: %s"
 msgstr "i Política de privacitat: %s"
+
+#: resources/views/page/sections/further-information.phtml:12
+msgid "German-language webtrees manual (GenWiki)"
+msgstr ""
+
+#: resources/views/page/sections/further-information.phtml:13
+msgid "official privacy information from webtrees.net"
+msgstr ""
+
+#: resources/views/page/sections/further-information.phtml:17
+#, php-format
+msgid "Detailed technical background information about data protection in webtrees as well as further information for administrators is available in the %s and in the %s."
+msgstr ""
+
+#: resources/views/page/sections/further-information.phtml:21
+msgid "This information supplements the following privacy policy, but does not replace it."
+msgstr ""
 
 #: resources/views/page/header.phtml:109
 msgid "Editorially responsible person according to Section 18 paragraph 2 MStV"

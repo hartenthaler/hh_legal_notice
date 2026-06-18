@@ -144,6 +144,7 @@ class LegalNoticeSupport
         return [
             'DataProtection'        => ['level' => 1, 'id' =>  1, 'link' => 0, 'heading' => I18N::translateContext('heading','Data protection')],
             'DataProtectionOfficer' => ['level' => 2, 'id' => 124, 'link' => 1, 'heading' => I18N::translate('Data protection officer')],
+            'FurtherInformation'    => ['level' => 2, 'id' => 125, 'link' => 1, 'heading' => I18N::translate('Further information')],
             'Purpose'               => ['level' => 2, 'id' =>  2, 'link' => 1, 'heading' => I18N::translateContext('heading','Purpose')],
             'ResearchFamily'        => ['level' => 3, 'id' => 117, 'link' => 2, 'heading' => I18N::translate('Family and ancestry research')],
             'ResearchOns'           => ['level' => 3, 'id' => 118, 'link' => 2, 'heading' => I18N::translate('One-name study')],
@@ -203,6 +204,7 @@ class LegalNoticeSupport
         return [
             'DataProtection'        => ['contentIWe' => false, 'content'   => []],
             'DataProtectionOfficer' => ['contentIWe' => false, 'content'   => []],
+            'FurtherInformation'    => ['contentIWe' => false, 'content'   => []],
             'Purpose'               => ['contentIWe' => false, 'content'   => []],
             'ResearchFamily'        => ['contentIWe' => false, 'content'   => []],
             'ResearchOns'           => ['contentIWe' => false, 'content'   => []],
@@ -331,6 +333,7 @@ class LegalNoticeSupport
     {
         return [
             'DataProtectionOfficer' => 'data-protection-officer',
+            'FurtherInformation'   => 'further-information',
             'Purpose'              => 'purpose',
             'PersonalData'         => 'personal-data-processing',
             'Privacy'              => 'terminology',
