@@ -165,6 +165,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             [...$thirdPartyServices, ...$trackingServices],
             static fn (array $service): bool => (bool) ($service['thirdCountryTransfer'] ?? false)
         ) ?>
+        <?php usort($thirdCountryTransferServices, static fn (array $a, array $b): int => strnatcasecmp((string) ($a['name'] ?? ''), (string) ($b['name'] ?? ''))) ?>
         <?php if ($useEuPrivacyLaw && count($thirdCountryTransferServices) > 0) : ?>
             <h5><?= I18N::translate('Data transfer to third countries') ?></h5>
 
@@ -176,8 +177,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <p>
                 <?= I18N::translate('This may apply to the following services:') ?>
                 <?php foreach (array_values($thirdCountryTransferServices) as $index => $service) : ?>
-                    <?= $index > 0 ? ', ' : '' ?><strong><?= e($service['name'] ?? '') ?></strong>
-                <?php endforeach ?>.
+                    <?= $index > 0 ? ', ' : '' ?><strong><?= e($service['name'] ?? '') ?></strong><?= $index === count($thirdCountryTransferServices) - 1 ? '.' : '' ?>
+                <?php endforeach ?>
             </p>
         <?php endif ?>
     <?php endif ?>
