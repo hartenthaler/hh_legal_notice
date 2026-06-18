@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-18 18:20+0200\n"
-"PO-Revision-Date: 2026-06-18 18:22+0200\n"
-"Last-Translator: Hermann Hartenthaler <hermann@hartenthaler.de>\n"
+"POT-Creation-Date: 2026-06-14 23:08+0200\n"
+"PO-Revision-Date: 2026-06-18 21:43+0200\n"
+"Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -19,12 +19,10 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: .git\n"
 
-#: LegalNoticeFooterModule.php:399
 msgid "Legal notice as a footer element for this site."
 msgstr ""
 "Colofon en privacyverklaring als element in de voettekst van deze website."
 
-#: LegalNoticeFooterModule.php:773
 #, php-format
 msgid ""
 "The preferences for the custom module \"%s\" were imported from the earlier "
@@ -33,7 +31,6 @@ msgstr ""
 "De voorkeuren voor de aangepaste module \"%s\" zijn geïmporteerd uit de "
 "eerdere aangepaste module \"%s\"."
 
-#: LegalNoticeFooterModule.php:834
 #, php-format
 msgid ""
 "Invalid date in setting “%s”. The first date must be before the last date. "
@@ -42,36 +39,28 @@ msgstr ""
 "Ongeldige datum in de instelling “%s”. De eerste datum moet vóór de laatste "
 "datum liggen. De laatste datum is genegeerd."
 
-#: LegalNoticeFooterModule.php:899
 msgid "Names, e.g. \"Smith, Miller\""
 msgstr "Namen, bijv. \"De Jong, Jansen\""
 
-#: LegalNoticeFooterModule.php:900
 msgid "Name(s), e.g. \"Smith\""
 msgstr "Naam/namen, bijv. \"De Jong\""
 
-#: LegalNoticeFooterModule.php:901
 msgid "Place(s) or region, e.g. \"Bautzen, Löbau\""
 msgstr "Plaats(en) of regio, bijv. \"Amsterdam, Rotterdam\""
 
-#: LegalNoticeFooterModule.php:902
 msgid "Region or farm type, e.g. \"Black Forest farms, Wolfach district\""
 msgstr "Regio of type boerderij, bijv. \"Zeeuwse boerderijen, Walcheren\""
 
-#: LegalNoticeFooterModule.php:903
 msgid "Topic, e.g. \"Students of the Bautzen grammar school 1600-1900\""
 msgstr ""
 "Onderwerp, bijv. \"Leerlingen van de Latijnse School Middelburg 1600-1900\""
 
-#: LegalNoticeFooterModule.php:904
 msgid "Origin or destination, e.g. \"Emigrants from Vogtland to Pennsylvania\""
 msgstr "Herkomst of bestemming, bijv. \"Emigranten uit Zeeland naar Michigan\""
 
-#: LegalNoticeFooterModule.php:905
 msgid "Group, e.g. \"Huguenots in Brandenburg\""
 msgstr "Groep, bijv. \"Hugenoten in Zeeland\""
 
-#: LegalNoticeFooterModule.php:943
 msgid ""
 "This website deals with the systematic research of all persons who bear or "
 "have borne particular family names, regardless of geographical or family "
@@ -81,7 +70,6 @@ msgstr ""
 "een bepaalde familienaam dragen of hebben gedragen, ongeacht geografische of "
 "familiale grenzen."
 
-#: LegalNoticeFooterModule.php:944
 msgid ""
 "This website deals with the research of all families and persons who lived "
 "in a particular place or region, regardless of their family names."
@@ -89,7 +77,6 @@ msgstr ""
 "Deze website gaat over het onderzoek naar alle families en personen die in "
 "een bepaalde plaats of regio hebben gewoond, ongeacht hun familienamen."
 
-#: LegalNoticeFooterModule.php:945
 msgid ""
 "This website deals with the research of farmsteads and their residents in a "
 "particular region, including the succession of farm owners and tenants over "
@@ -99,7 +86,6 @@ msgstr ""
 "bepaalde regio, inclusief de opeenvolging van boerderij-eigenaren en "
 "pachters over generaties."
 
-#: LegalNoticeFooterModule.php:946
 msgid ""
 "This website deals with the research of persons connected by a common "
 "historical characteristic, such as membership of an institution, a "
@@ -109,7 +95,6 @@ msgstr ""
 "een gemeenschappelijk historisch kenmerk, zoals lidmaatschap van een "
 "instelling, een beroep of een historische gebeurtenis."
 
-#: LegalNoticeFooterModule.php:947
 msgid ""
 "This website deals with the research of persons and families who emigrated "
 "from or immigrated to a particular area of origin or destination."
@@ -118,7 +103,6 @@ msgstr ""
 "bepaald herkomstgebied zijn geëmigreerd of naar een bepaald gebied zijn "
 "geïmmigreerd."
 
-#: LegalNoticeFooterModule.php:948
 msgid ""
 "This website deals with the research of members of a particular community, "
 "religious community, or social group."
@@ -126,31 +110,26 @@ msgstr ""
 "Deze website gaat over het onderzoek naar leden van een bepaalde "
 "gemeenschap, religieuze gemeenschap of sociale groep."
 
-#: LegalNoticeFooterModule.php:949
 msgid ""
 "This website deals with family history research into my own family and "
 "relatives by marriage."
 msgstr ""
-"Deze website gaat over onderzoek naar de familiegeschiedenis van mijn eigen "
-"familie en aangetrouwde verwanten."
+"Deze website gaat over familiegeschiedenis en genealogisch onderzoek naar "
+"mijn eigen familie en aangetrouwde verwanten."
 
-#: LegalNoticeFooterModule.php:954
 #, php-format
 msgid "The research focus is: %s"
-msgstr "Het onderzoeksdoel is: %s"
+msgstr "De onderzoeksfocus is: %s"
 
-#: LegalNoticeFooterModule.php:1012
 msgid "Invalid copyright start year. The value was ignored."
 msgstr "Ongeldig beginjaar van het auteursrecht. De waarde is genegeerd."
 
-#: LegalNoticeFooterModule.php:1027
 msgid ""
 "Invalid protection period for sensitive data. The default value was used."
 msgstr ""
 "Ongeldige beschermingsperiode voor gevoelige gegevens. De standaardwaarde is "
 "gebruikt."
 
-#: LegalNoticeFooterModule.php:1046
 #, php-format
 msgid ""
 "Invalid date in setting “%s”. Use the format YYYY-MM-DD. The value was "
@@ -159,7 +138,6 @@ msgstr ""
 "Ongeldige datum in de instelling “%s”. Gebruik het formaat JJJJ-MM-DD. De "
 "waarde is genegeerd."
 
-#: LegalNoticeFooterModule.php:1064
 #, php-format
 msgid ""
 "Invalid date in setting “%s”. Use a date between 2000-01-01 and today. The "
@@ -168,59 +146,47 @@ msgstr ""
 "Ongeldige datum in de instelling “%s”. Gebruik een datum tussen 01-01-2000 "
 "en vandaag. De waarde is genegeerd."
 
-#: LegalNoticeFooterModule.php:1102
 msgid "Invalid e-mail address. The value was ignored."
 msgstr "Ongeldig e-mailadres. De waarde is genegeerd."
 
-#: LegalNoticeFooterModule.php:1113
 #, php-format
 msgid "Invalid URL in setting “%s”. The value was ignored."
 msgstr "Ongeldige URL in instelling “%s”. De waarde is genegeerd."
 
-#: LegalNoticeFooterModule.php:1153
 #, php-format
 msgid "One invalid third-party service entry was ignored."
 msgid_plural "%s invalid third-party service entries were ignored."
 msgstr[0] "Eén ongeldige vermelding van een dienst van derden is genegeerd."
 msgstr[1] "%s ongeldige vermeldingen van diensten van derden zijn genegeerd."
 
-#: LegalNoticeFooterModule.php:1316 LegalNoticeFooterModule.php:1386
 msgid "Legal Notice"
 msgstr "Colofon"
 
-#: LegalNoticeFooterModule.php:1318
 msgid "and Privacy Policy"
 msgstr "en privacyverklaring"
 
-#: LegalNoticeFooterModule.php:1335
 msgid "This website uses cookies."
 msgstr "Deze website gebruikt cookies."
 
-#: LegalNoticeFooterModule.php:1387
 msgid "Provider"
-msgstr "Aanbieder"
+msgstr "Provider"
 
-#: LegalNoticeFooterModule.php:1388
 msgid "This website is operated by:"
 msgstr "Deze website wordt beheerd door:"
 
-#: LegalNoticeFooterModule.php:1396
 msgid "Represented by:"
 msgstr "Vertegenwoordigd door:"
 
-#: LegalNoticeFooterModule.php:1409
 msgid "Additional contact"
 msgid_plural "Additional contacts"
 msgstr[0] "Aanvullend contact"
 msgstr[1] "Aanvullende contactpersonen"
 
-#: LegalNoticeFooterModule.php:1413
 msgid "Website administrator"
 msgid_plural "Website administrators"
 msgstr[0] "Websitebeheerder"
 msgstr[1] "Websitebeheerders"
 
-#: LegalNoticeFooterModule.php:1414
 msgid ""
 "The webtrees administrator is responsible to manage users and to set the "
 "preferences for this website."
@@ -234,17 +200,14 @@ msgstr[1] ""
 "De webtrees-beheerders zijn verantwoordelijk voor het beheren van gebruikers "
 "en het instellen van de voorkeuren voor deze website."
 
-#: LegalNoticeFooterModule.php:1857
 #, php-format
 msgid "%s is additionally responsible for genealogy questions."
 msgstr "%s is daarnaast verantwoordelijk voor genealogische vragen."
 
-#: LegalNoticeFooterModule.php:1860
 #, php-format
 msgid "%s is additionally responsible for technical support."
 msgstr "%s is daarnaast verantwoordelijk voor technische ondersteuning."
 
-#: LegalNoticeFooterModule.php:1863
 #, php-format
 msgid ""
 "%s is additionally responsible for technical support or genealogy questions."
@@ -252,7 +215,6 @@ msgstr ""
 "%s is daarnaast verantwoordelijk voor technische ondersteuning of "
 "genealogische vragen."
 
-#: LegalNoticeFooterModule.php:1872
 #, php-format
 msgid ""
 "%s is additionally website administrator and is responsible for managing "
@@ -261,156 +223,113 @@ msgstr ""
 "%s is daarnaast websitebeheerder en verantwoordelijk voor het beheren van "
 "gebruikers en het instellen van de opties voor deze website."
 
-#: LegalNoticeFooterModule.php:1880
 msgid "A contact option is available."
 msgstr "Er is een contactmogelijkheid beschikbaar."
 
-#: LegalNoticeFooterModule.php:1883
 msgid "A contact option is available:"
 msgstr "Er is een contactmogelijkheid beschikbaar:"
 
-#: LegalNoticeFooterModule.php:1883
 msgid "open contact form"
 msgstr "contactformulier openen"
 
-#: LegalNoticeFooterModule.php:1889
 msgctxt "legal notice pronoun subject"
 msgid "He"
 msgstr "Hij"
 
-#: LegalNoticeFooterModule.php:1890
 msgctxt "legal notice pronoun subject"
 msgid "She"
 msgstr "Zij"
 
-#: LegalNoticeFooterModule.php:1891
 msgid "This person"
 msgstr "Deze persoon"
 
-#: LegalNoticeFooterModule.php:1919
 msgid "Legal Notice and Privacy Policy"
 msgstr "Colofon en privacyverklaring"
 
-#: LegalNoticeFooterModule.php:2090
 #, php-format
 msgid "message via legal notice of site %s"
 msgstr "bericht via het colofon van website %s"
 
-#: LegalNoticeFooterModule.php:2093
 #, php-format
 msgid "Dear Mr. %s"
 msgstr "Geachte heer %s"
 
-#: LegalNoticeFooterModule.php:2096
 #, php-format
 msgid "Dear Mrs. %s"
 msgstr "Geachte mevrouw %s"
 
-#: LegalNoticeFooterModule.php:2099
 #, php-format
 msgid "Dear %s"
 msgstr "Geachte %s"
 
-#: LegalNoticeFooterModule.php:2264
-#, fuzzy, php-format
-#| msgid "Information according to German law Section 5 DDG"
 msgid "Information according to German law Section 5 %s"
-msgstr "Informatie volgens de Duitse wet § 5 DDG"
+msgstr "Informatie volgens de Duitse wet § 5 %s"
 
-#: LegalNoticeFooterModule.php:2268
-#, fuzzy, php-format
-#| msgid "Information according to Austrian law Section 5 (1) ECG"
 msgid "Information according to Austrian law Section 5 (1) %s"
-msgstr "Informatie volgens de Oostenrijkse wet § 5, eerste lid, ECG"
+msgstr "Informatie volgens de Oostenrijkse wet § 5, eerste lid, %s"
 
-#: LegalNoticeFooterModule.php:2272
-#, fuzzy, php-format
-#| msgid ""
-#| "Information according to Swiss law Article 3 paragraph 1 letter s UWG"
 msgid "Information according to Swiss law Article 3 paragraph 1 letter s %s"
-msgstr "Informatie volgens de Zwitserse wet art. 3, eerste lid, letter s, UWG"
+msgstr "Informatie volgens de Zwitserse wet art. 3, eerste lid, letter s, %s"
 
-#: src/LegalNoticeSupport.php:145
 msgctxt "heading"
 msgid "Data protection"
 msgstr "Privacyverklaring"
 
-#: src/LegalNoticeSupport.php:146
-#, fuzzy
-#| msgctxt "heading"
-#| msgid "Data protection"
 msgid "Data protection officer"
-msgstr "Privacyverklaring"
+msgstr "Functionaris voor gegevensbescherming"
 
-#: src/LegalNoticeSupport.php:147
 msgctxt "heading"
 msgid "Purpose"
 msgstr "Doel"
 
-#: src/LegalNoticeSupport.php:148
 msgid "Family and ancestry research"
 msgstr "Familie- en stamboomonderzoek"
 
-#: src/LegalNoticeSupport.php:149
 msgid "One-name study"
 msgstr "Onderzoek naar naamdragers"
 
-#: src/LegalNoticeSupport.php:150
 msgid "One-place study or local family book"
 msgstr "Plaatsgebonden onderzoek of lokaal familieboek"
 
-#: src/LegalNoticeSupport.php:151
 msgid "Farm and farmstead research"
 msgstr "Onderzoek naar boerderijen en hofsteden"
 
-#: src/LegalNoticeSupport.php:152
 msgid "Thematic research"
 msgstr "Thematisch onderzoek"
 
-#: src/LegalNoticeSupport.php:153
 msgid "Migration research"
 msgstr "Migratieonderzoek"
 
-#: src/LegalNoticeSupport.php:154
 msgid "Community research"
 msgstr "Onderzoek naar gemeenschappen"
 
-#: src/LegalNoticeSupport.php:155
 msgctxt "heading"
 msgid "Used terminology"
 msgstr "Gebruikte terminologie"
 
-#: src/LegalNoticeSupport.php:156
 msgctxt "heading"
 msgid "Processing of personal data"
 msgstr "Verwerking van persoonsgegevens"
 
-#: src/LegalNoticeSupport.php:157
 msgctxt "heading"
 msgid "Categories of data"
 msgstr "Categorieën van gegevens"
 
-#: src/LegalNoticeSupport.php:158
 msgid "Third party services"
 msgstr "Diensten van derden"
 
-#: src/LegalNoticeSupport.php:159
 msgid "Hosting for the webtrees server"
 msgstr "Hosting van de webtrees-server"
 
-#: src/LegalNoticeSupport.php:160
 msgid "Legal bases for processing"
 msgstr "Rechtsgrondslagen voor de verwerking"
 
-#: src/LegalNoticeSupport.php:161
 msgid "General risk"
 msgstr "Algemeen risico"
 
-#: src/LegalNoticeSupport.php:162
 msgid "Security measures"
 msgstr "Beveiligingsmaatregelen"
 
-#: src/LegalNoticeSupport.php:163
 msgctxt "heading"
 msgid ""
 "Right of providing information, correction or deletion of personal data, and "
@@ -419,110 +338,86 @@ msgstr ""
 "Recht op inzage, correctie of verwijdering van persoonsgegevens en "
 "bezwaarrecht"
 
-#: src/LegalNoticeSupport.php:164
 msgid "Data protection in connection with online genealogies"
 msgstr "Gegevensbescherming in verband met online genealogieën"
 
-#: src/LegalNoticeSupport.php:165
 msgid "Personal data about ancestors, family members, and other persons"
 msgstr "Persoonsgegevens over voorouders, familieleden en andere personen"
 
-#: src/LegalNoticeSupport.php:166
 msgid "Special categories of personal data"
 msgstr "Bijzondere categorieën van persoonsgegevens"
 
-#: src/LegalNoticeSupport.php:167
 msgid "Graduated access rights to personal data"
 msgstr "Gelaagde toegangsrechten tot persoonsgegevens"
 
-#: src/LegalNoticeSupport.php:168
 msgid "Personal data about visitors to this website"
 msgstr "Persoonsgegevens van bezoekers van deze website"
 
-#: src/LegalNoticeSupport.php:169
 msgid "Personal data about users with a user account"
 msgstr "Persoonsgegevens van gebruikers met een gebruikersaccount"
 
-#: src/LegalNoticeSupport.php:170
 msgid "Application log"
 msgstr "Applicatielogboek"
 
-#: src/LegalNoticeSupport.php:171
 msgid "Cookies"
 msgstr "Cookies"
 
-#: src/LegalNoticeSupport.php:172
 msgid "Tracking and analytics"
 msgstr "Tracking en analyse"
 
-#: src/LegalNoticeSupport.php:173
 msgid "Right to data portability"
 msgstr "Recht op gegevensoverdraagbaarheid"
 
-#: src/LegalNoticeSupport.php:174
 msgid "Right to object"
 msgstr "Recht van bezwaar"
 
-#: src/LegalNoticeSupport.php:175
 msgctxt "heading"
 msgid "Right to correction or deletion of personal data"
 msgstr "Recht op correctie of verwijdering van persoonsgegevens"
 
-#: src/LegalNoticeSupport.php:176
 msgctxt "heading"
 msgid "Right of appeal"
 msgstr "Recht van bezwaar"
 
-#: src/LegalNoticeSupport.php:177
 msgid "Further information"
-msgstr ""
+msgstr "Verdere informatie"
 
-#: src/LegalNoticeSupport.php:178
 msgctxt "heading"
 msgid "Legal regulations"
 msgstr "Wettelijke bepalingen"
 
-#: src/LegalNoticeSupport.php:179
 msgctxt "heading"
 msgid "Liability for the content of these websites"
 msgstr "Aansprakelijkheid voor de inhoud van deze websites"
 
-#: src/LegalNoticeSupport.php:180
 msgctxt "heading"
 msgid "Liability for links"
 msgstr "Aansprakelijkheid voor links"
 
-#: src/LegalNoticeSupport.php:181
 msgctxt "heading"
 msgid "Copyright and distribution of genealogical data"
 msgstr "Auteursrecht en verspreiding van genealogische gegevens"
 
-#: src/LegalNoticeSupport.php:182
 msgctxt "heading"
 msgid "Use of the address data in the Legal Notice"
 msgstr "Gebruik van adresgegevens in het colofon"
 
-#: src/LegalNoticeSupport.php:183
 msgctxt "heading"
 msgid "Duty to mitigate damages"
 msgstr "Schadebeperkingsplicht"
 
-#: src/LegalNoticeSupport.php:184
 msgctxt "heading"
 msgid "Consumer dispute resolution"
 msgstr "Consumenten-geschillenbeslechting"
 
-#: src/LegalNoticeSupport.php:185
 msgctxt "heading"
 msgid "Open-source and License"
 msgstr "Open source en licentie"
 
-#: src/LegalNoticeSupport.php:186
 msgctxt "heading"
 msgid "Severability Clause"
 msgstr "Salvatorische clausule"
 
-#: src/LegalNoticeSupport.php:205
 msgid ""
 "The automated or systematic collection, scraping, and use of content from "
 "this website for text and data mining, including where a reservation of "
@@ -532,12 +427,11 @@ msgid ""
 msgstr ""
 "Het geautomatiseerd of systematisch verzamelen, scrapen en gebruiken van "
 "inhoud van deze website voor tekst- en datamining is verboden, voor zover "
-"een rechtenvoorbehoud op grond van § 44b lid 3 UrhG is toegestaan. Voor het "
-"trainen of verrijken van kunstmatige-intelligentiesystemen en voor het "
+"een voorbehoud overeenkomstig § 44b lid 3 UrhG is toegestaan. Voor het "
+"trainen of verrijken van kunstmatigeintelligentiesystemen evenals het "
 "ophalen door dergelijke systemen is mijn voorafgaande schriftelijke "
 "toestemming vereist."
 
-#: src/LegalNoticeSupport.php:206
 msgid ""
 "The automated or systematic collection, scraping, and use of content from "
 "this website for text and data mining, for training or enriching artificial "
@@ -546,11 +440,10 @@ msgid ""
 msgstr ""
 "Het geautomatiseerd of systematisch verzamelen, scrapen en gebruiken van "
 "inhoud van deze website voor tekst- en datamining, voor het trainen of "
-"verrijken van kunstmatige-intelligentiesystemen of voor het ophalen door "
+"verrijken van kunstmatigeintelligentiesystemen of voor het ophalen door "
 "dergelijke systemen is zonder mijn voorafgaande schriftelijke toestemming "
 "verboden."
 
-#: src/LegalNoticeSupport.php:208
 msgid ""
 "The automated or systematic collection, scraping, and use of content from "
 "this website for text and data mining, including where a reservation of "
@@ -560,12 +453,11 @@ msgid ""
 msgstr ""
 "Het geautomatiseerd of systematisch verzamelen, scrapen en gebruiken van "
 "inhoud van deze website voor tekst- en datamining is verboden, voor zover "
-"een rechtenvoorbehoud op grond van § 44b lid 3 UrhG is toegestaan. Voor het "
-"trainen of verrijken van kunstmatige-intelligentiesystemen en voor het "
+"een voorbehoud overeenkomstig § 44b lid 3 UrhG is toegestaan. Voor het "
+"trainen of verrijken van kunstmatigeintelligentiesystemen evenals het "
 "ophalen door dergelijke systemen is onze voorafgaande schriftelijke "
 "toestemming vereist."
 
-#: src/LegalNoticeSupport.php:209
 msgid ""
 "The automated or systematic collection, scraping, and use of content from "
 "this website for text and data mining, for training or enriching artificial "
@@ -574,11 +466,10 @@ msgid ""
 msgstr ""
 "Het geautomatiseerd of systematisch verzamelen, scrapen en gebruiken van "
 "inhoud van deze website voor tekst- en datamining, voor het trainen of "
-"verrijken van kunstmatige-intelligentiesystemen of voor het ophalen door "
+"verrijken van kunstmatigeintelligentiesystemen of voor het ophalen door "
 "dergelijke systemen is zonder onze voorafgaande schriftelijke toestemming "
 "verboden."
 
-#: src/LegalNoticeSupport.php:250 src/LegalNoticeSupport.php:256
 msgid ""
 "Consumer dispute resolution is available under Section 36 of the German "
 "Consumer Dispute Resolution Act (VSBG)."
@@ -586,7 +477,6 @@ msgstr ""
 "Volgens § 36 van de Duitse wet inzake consumenten-geschillenbeslechting "
 "(VSBG) bestaat de mogelijkheid tot consumenten-geschillenbeslechting."
 
-#: src/LegalNoticeSupport.php:251 src/LegalNoticeSupport.php:257
 msgid ""
 "Alternative dispute resolution mechanisms are available for consumer "
 "disputes in the European Union."
@@ -594,7 +484,6 @@ msgstr ""
 "In de Europese Unie bestaan mogelijkheden voor buitengerechtelijke "
 "beslechting van consumentengeschillen."
 
-#: src/LegalNoticeSupport.php:252
 msgid ""
 "I am not obliged and not willing to participate in dispute resolution "
 "proceedings before a consumer arbitration board."
@@ -602,7 +491,6 @@ msgstr ""
 "Ik ben noch verplicht noch bereid deel te nemen aan geschillenprocedures "
 "voor een consumenten-arbitragecommissie."
 
-#: src/LegalNoticeSupport.php:258
 msgid ""
 "We are not obliged and not willing to participate in dispute resolution "
 "proceedings before a consumer arbitration board."
@@ -610,7 +498,6 @@ msgstr ""
 "Wij zijn noch verplicht noch bereid deel te nemen aan geschillenprocedures "
 "voor een consumenten-arbitragecommissie."
 
-#: src/LegalNoticeSupport.php:261
 msgid ""
 "The contents of my pages were created with great care. However, I cannot "
 "guarantee that the content is correct, complete or up-to-date. I am "
@@ -635,7 +522,6 @@ msgstr ""
 "kennis bestaat van een concrete inbreuk op de wet. Zodra ik kennis krijg van "
 "dergelijke overtredingen, zal ik deze inhoud onmiddellijk verwijderen."
 
-#: src/LegalNoticeSupport.php:262
 msgid ""
 "If you, as a user of this site, are entitled to create content yourself or "
 "upload files, you are obliged to comply with all legal requirements and to "
@@ -648,7 +534,6 @@ msgstr ""
 "mechanismen van webtrees. In geval van twijfel kunt u contact met mij "
 "opnemen."
 
-#: src/LegalNoticeSupport.php:263
 msgid ""
 "The contents of these pages were created with great care. However, we cannot "
 "guarantee that the content is correct, complete or up-to-date. We are "
@@ -674,7 +559,6 @@ msgstr ""
 "van dergelijke overtredingen, zullen wij deze inhoud onmiddellijk "
 "verwijderen."
 
-#: src/LegalNoticeSupport.php:264
 msgid ""
 "If you, as a user of this site, are entitled to create content yourself or "
 "upload files, you are obliged to comply with all legal requirements and to "
@@ -687,7 +571,6 @@ msgstr ""
 "mechanismen van webtrees. In geval van twijfel kunt u contact met ons "
 "opnemen."
 
-#: src/LegalNoticeSupport.php:265
 msgid ""
 "This web application contains links to external websites over which I have "
 "no control. Therefore I cannot assume any liability for this external "
@@ -702,7 +585,7 @@ msgstr ""
 "Deze webapplicatie bevat links naar externe websites waarop ik geen invloed "
 "heb. Daarom kan ik geen aansprakelijkheid aanvaarden voor deze externe "
 "inhoud. Voor de inhoud van de gelinkte pagina's is steeds de betreffende "
-"aanbieder of exploitant van de pagina's verantwoordelijk. De gelinkte "
+"provider of exploitant van de pagina's verantwoordelijk. De gelinkte "
 "pagina's zijn op het moment van linken gecontroleerd op mogelijke "
 "wetsovertredingen. Onrechtmatige inhoud was op dat moment niet herkenbaar. "
 "Een permanente inhoudelijke controle van de gelinkte pagina's is zonder "
@@ -710,7 +593,6 @@ msgstr ""
 "krijg van wetsovertredingen, zal ik dergelijke links onmiddellijk "
 "verwijderen."
 
-#: src/LegalNoticeSupport.php:266
 msgid ""
 "This web application contains links to external websites over which we have "
 "no control. Therefore we cannot assume any liability for this external "
@@ -725,7 +607,7 @@ msgstr ""
 "Deze webapplicatie bevat links naar externe websites waarop wij geen invloed "
 "hebben. Daarom kunnen wij geen aansprakelijkheid aanvaarden voor deze "
 "externe inhoud. Voor de inhoud van de gelinkte pagina's is steeds de "
-"betreffende aanbieder of exploitant van de pagina's verantwoordelijk. De "
+"betreffende provider of exploitant van de pagina's verantwoordelijk. De "
 "gelinkte pagina's zijn op het moment van linken gecontroleerd op mogelijke "
 "wetsovertredingen. Onrechtmatige inhoud was op dat moment niet herkenbaar. "
 "Een permanente inhoudelijke controle van de gelinkte pagina's is zonder "
@@ -733,7 +615,6 @@ msgstr ""
 "krijgen van wetsovertredingen, zullen wij dergelijke links onmiddellijk "
 "verwijderen."
 
-#: src/LegalNoticeSupport.php:267
 msgid ""
 "I always endeavor to observe the copyrights of others or to use self-created "
 "and license-free works. Third-party contributions to this website are marked "
@@ -750,7 +631,6 @@ msgstr ""
 "te stellen. Zodra ik kennis krijg van wetsovertredingen, zal ik dergelijke "
 "inhoud onmiddellijk verwijderen."
 
-#: src/LegalNoticeSupport.php:269
 msgid ""
 "The content and works created by me and the registered users on this website "
 "are subject to copyright. If you contribute content as a registered user of "
@@ -767,7 +647,6 @@ msgstr ""
 "gezamenlijke genealogische gegevensverzameling, die later praktisch niet "
 "meer in afzonderlijke bijdragen kan worden gescheiden."
 
-#: src/LegalNoticeSupport.php:271
 #, php-format
 msgid ""
 "The content and works created by me and the registered users on this website "
@@ -785,7 +664,6 @@ msgstr ""
 "gezamenlijke genealogische gegevensverzameling, die later praktisch niet "
 "meer in afzonderlijke bijdragen kan worden gescheiden."
 
-#: src/LegalNoticeSupport.php:273
 msgid ""
 "The distribution and any kind of exploitation of the content of this website "
 "outside the limits of copyright require my written consent. Commercial use "
@@ -796,7 +674,6 @@ msgstr ""
 "vereist. Commercieel gebruik van de hier verstrekte informatie is in het "
 "algemeen verboden."
 
-#: src/LegalNoticeSupport.php:275 src/LegalNoticeSupport.php:286
 msgid ""
 "To reduce unwanted automated access, this website uses technical measures "
 "such as robots.txt rules and the webtrees Bad Bot Blocker. Access attempts "
@@ -809,7 +686,6 @@ msgstr ""
 "en daar worden geanalyseerd. Deze maatregelen vormen een aanvulling op de "
 "juridische kennisgeving, maar kunnen geen volledige bescherming garanderen."
 
-#: src/LegalNoticeSupport.php:276
 msgid ""
 "I take the protection of copyright seriously. If I discover that copyrighted "
 "material from this website has been used contrary to these terms, I reserve "
@@ -822,7 +698,6 @@ msgstr ""
 "te ondernemen, waaronder vorderingen tot schadevergoeding, rechtsmaatregelen "
 "tot staking en vergoeding van juridische kosten."
 
-#: src/LegalNoticeSupport.php:277
 #, php-format
 msgid ""
 "Copying or downloading genealogical data for private use is permitted. "
@@ -846,12 +721,11 @@ msgstr ""
 "eveneens naleeft. Deze database blijft mijn eigendom en zal op geen enkele "
 "wijze worden verkocht, geschonken of verhuurd."
 
-#: src/LegalNoticeSupport.php:278
 msgid ""
-"We always endeavor to observe the copyrights of others or to use self-"
-"created and license-free works. Third-party contributions to this website "
-"are marked as such by naming a source if they cannot be used freely. Should "
-"you nevertheless become aware of a copyright infringement, please inform us "
+"We always endeavor to observe the copyrights of others or to use selfcreated "
+"and license-free works. Third-party contributions to this website are marked "
+"as such by naming a source if they cannot be used freely. Should you "
+"nevertheless become aware of a copyright infringement, please inform us "
 "accordingly. As soon as we become aware of legal violations, we will remove "
 "such content immediately."
 msgstr ""
@@ -863,7 +737,6 @@ msgstr ""
 "hoogte te stellen. Zodra wij kennis krijgen van wetsovertredingen, zullen "
 "wij dergelijke inhoud onmiddellijk verwijderen."
 
-#: src/LegalNoticeSupport.php:280
 msgid ""
 "The content and works created by us and by the registered users on this "
 "website are subject to copyright. If you contribute content as a registered "
@@ -880,7 +753,6 @@ msgstr ""
 "gezamenlijke genealogische gegevensverzameling, die later praktisch niet "
 "meer in afzonderlijke bijdragen kan worden gescheiden."
 
-#: src/LegalNoticeSupport.php:282
 #, php-format
 msgid ""
 "The content and works created by us and by the registered users on this "
@@ -898,7 +770,6 @@ msgstr ""
 "gezamenlijke genealogische gegevensverzameling, die later praktisch niet "
 "meer in afzonderlijke bijdragen kan worden gescheiden."
 
-#: src/LegalNoticeSupport.php:284
 msgid ""
 "The distribution and any kind of exploitation of the content of this website "
 "outside the limits of copyright require our written consent. Commercial use "
@@ -909,7 +780,6 @@ msgstr ""
 "vereist. Commercieel gebruik van de hier verstrekte informatie is in het "
 "algemeen verboden."
 
-#: src/LegalNoticeSupport.php:287
 msgid ""
 "We take the protection of copyright seriously. If we discover that "
 "copyrighted material from this website has been used contrary to these "
@@ -922,7 +792,6 @@ msgstr ""
 "stappen te ondernemen, waaronder vorderingen tot schadevergoeding, "
 "rechtsmaatregelen tot staking en vergoeding van juridische kosten."
 
-#: src/LegalNoticeSupport.php:288
 #, php-format
 msgid ""
 "Copying or downloading genealogical data for private use is permitted. "
@@ -946,7 +815,6 @@ msgstr ""
 "eveneens naleeft. Deze database blijft ons eigendom en zal op geen enkele "
 "wijze worden verkocht, geschonken of verhuurd."
 
-#: src/LegalNoticeSupport.php:289
 msgid ""
 "The use of the contact data published by me as part of the imprint "
 "obligation by third parties for the purpose of sending unsolicited "
@@ -960,7 +828,6 @@ msgstr ""
 "Ik behoud mij uitdrukkelijk het recht voor om juridische stappen te "
 "ondernemen in geval van ongevraagde toezending van reclame, zoals spammails."
 
-#: src/LegalNoticeSupport.php:290
 msgid ""
 "The use of the contact data published by us as part of the imprint "
 "obligation by third parties for the purpose of sending unsolicited "
@@ -974,7 +841,6 @@ msgstr ""
 "Wij behouden ons uitdrukkelijk het recht voor om juridische stappen te "
 "ondernemen in geval van ongevraagde toezending van reclame, zoals spammails."
 
-#: src/LegalNoticeSupport.php:291
 msgid ""
 "Should you notice any irregularities on this website, please contact me "
 "beforehand to avoid unnecessary legal disputes and costs. I am sure that we "
@@ -990,7 +856,6 @@ msgstr ""
 "ongegrond afgewezen in het kader van de schadebeperkingsplicht, als ik niet "
 "vooraf via mijn e-mailadres ben geïnformeerd over de mogelijke klacht."
 
-#: src/LegalNoticeSupport.php:292
 msgid ""
 "Should you notice any irregularities on this website, we ask you to contact "
 "us beforehand to avoid unnecessary legal disputes and costs. We are sure "
@@ -1008,7 +873,6 @@ msgstr ""
 "schadebeperkingsplicht, als wij niet vooraf via een van onze e-mailadressen "
 "op de hoogte zijn gesteld van de mogelijke klacht."
 
-#: src/LegalNoticeSupport.php:293
 msgid ""
 "This website uses the genealogy program webtrees - an open source software. "
 "The source code is publicly available on GitHub and can be changed by "
@@ -1031,7 +895,6 @@ msgstr ""
 "zij in het project investeren. Er zijn ook geen externe inkomstenbronnen om "
 "het project te ondersteunen."
 
-#: src/LegalNoticeSupport.php:294
 msgid ""
 "If parts or individual formulations of this text do not, no longer or not "
 "completely correspond to the applicable legal situation, the remaining parts "
@@ -1041,24 +904,17 @@ msgstr ""
 "niet volledig overeenkomen met de geldende rechtspositie, blijven de overige "
 "delen van de tekst in hun inhoud en geldigheid hierdoor onaangetast."
 
-#: resources/views/page/chapter.phtml:18
 #, php-format
 msgid "Privacy policy date: %s"
 msgstr "Stand van de privacyverklaring: %s"
 
-#: resources/views/page/header.phtml:111
-#, fuzzy, php-format
-#| msgid ""
-#| "Editorially responsible person according to Section 18 paragraph 2 MStV"
 msgid "Editorially responsible person according to Section 18 paragraph 2 %s"
 msgstr ""
-"Redactioneel verantwoordelijke persoon overeenkomstig § 18, tweede lid, MStV"
+"Redactioneel verantwoordelijke persoon overeenkomstig § 18, tweede lid, %s"
 
-#: resources/views/page/header.phtml:111
 msgid "Editorially responsible person"
 msgstr "Redactioneel verantwoordelijke persoon"
 
-#: resources/views/page/header.phtml:113
 msgid ""
 "In addition to genealogical data, this website also contains editorially "
 "prepared content addressed to the general public, such as explanations of "
@@ -1068,20 +924,18 @@ msgstr ""
 "inhoud die gericht is op het algemene publiek, zoals toelichtingen op "
 "familiegeschiedenis, de gebruikte software of historische onderwerpen."
 
-#: resources/views/page/header.phtml:115
-#, fuzzy, php-format
-#| msgid "Responsible for this content is: %s. Address: see above."
+#, php-format
 msgid ""
 "Responsible for this content is: %s (resident in Germany; address: see "
 "above)."
-msgstr "Verantwoordelijke voor deze inhoud is: %s. Adres: zie hierboven."
+msgstr ""
+"Verantwoordelijk voor deze inhoud is: %s (woonachtig in Nederland; adres: "
+"zie hierboven)."
 
-#: resources/views/page/header.phtml:117
 #, php-format
 msgid "Responsible for this content is: %s. Address: see above."
 msgstr "Verantwoordelijke voor deze inhoud is: %s. Adres: zie hierboven."
 
-#: resources/views/page/sections/data-categories.phtml:10
 msgid ""
 "Data assigned to users of this service is processed, as well as data about "
 "living and deceased persons."
@@ -1089,12 +943,10 @@ msgstr ""
 "Er worden zowel gegevens verwerkt die aan gebruikers van deze dienst kunnen "
 "worden gekoppeld als gegevens over levende en overleden personen."
 
-#: resources/views/page/sections/data-categories.phtml:14
 msgid "Inventory data (names, birth, marriage, and death data, ...)"
 msgstr ""
 "Bestandsgegevens (zoals namen, geboorte-, huwelijks- en overlijdensgegevens)"
 
-#: resources/views/page/sections/data-categories.phtml:15
 msgid ""
 "Content data (messages, life stories of individuals, photographs, "
 "videos, ...)"
@@ -1102,24 +954,20 @@ msgstr ""
 "Inhoudsgegevens (zoals berichten, levensverhalen van personen, foto's, "
 "video's)"
 
-#: resources/views/page/sections/data-categories.phtml:16
 msgid "Contact data (addresses, e-mail, telephone numbers, ...)"
 msgstr "Contactgegevens (zoals adressen, e-mail, telefoonnummers)"
 
-#: resources/views/page/sections/data-categories.phtml:17
 msgid "Usage data (visited web pages, access times, changes made, ...)"
 msgstr ""
 "Gebruiksgegevens (zoals bezochte webpagina's, toegangstijden, aangebrachte "
 "wijzigingen)"
 
-#: resources/views/page/sections/data-categories.phtml:18
 msgid ""
 "Communication data (device information, browser used, IP addresses, ...)"
 msgstr ""
 "Communicatiegegevens (zoals apparaatinformatie, gebruikte browser, IP-"
 "adressen)"
 
-#: resources/views/page/sections/data-categories.phtml:30
 msgid ""
 "Personal data about living persons is also stored for the purpose of family "
 "history and genealogical research; see inventory data and content data above."
@@ -1128,7 +976,6 @@ msgstr ""
 "familiegeschiedenis en genealogisch onderzoek; zie hierboven de "
 "bestandsgegevens en de inhoudsgegevens."
 
-#: resources/views/page/sections/data-categories.phtml:32
 msgid ""
 "Family history and genealogical research is a legitimate interest under "
 "Article 6(1), first sentence, point (f) of the General Data Protection "
@@ -1138,7 +985,6 @@ msgstr ""
 "belang overeenkomstig artikel 6, eerste lid, eerste zin, onder f van de "
 "Algemene Verordening Gegevensbescherming (AVG)."
 
-#: resources/views/page/sections/data-categories.phtml:34
 msgid ""
 "Family history and genealogical research is the legitimate purpose for "
 "processing this data."
@@ -1146,23 +992,15 @@ msgstr ""
 "Familiegeschiedenis en genealogisch onderzoek vormen het legitieme doel voor "
 "de verwerking van deze gegevens."
 
-#: resources/views/page/sections/data-categories.phtml:36
-#, fuzzy
-#| msgid ""
-#| "Personal data that you find on this website, such as names, e-mail "
-#| "addresses, photos, addresses, or life dates, is used only for family "
-#| "history and genealogical research and is kept securely."
 msgid ""
 "Personal data published on this website, such as names, e-mail addresses, "
 "photos, addresses, or life dates, is used only for family history and "
 "genealogical research and is kept securely."
 msgstr ""
-"Persoonsgegevens die u op deze website aantreft, zoals namen, e-"
-"mailadressen, foto's, adressen of levensdata, worden uitsluitend gebruikt "
-"voor familiegeschiedenis en genealogisch onderzoek en zorgvuldig beveiligd "
-"bewaard."
+"Op deze website gepubliceerde persoonsgegevens, zoals namen, e-mailadressen, "
+"foto’s, adressen of levensgegevens, worden uitsluitend gebruikt voor "
+"familie- en genealogisch onderzoek en worden veilig bewaard."
 
-#: resources/views/page/sections/data-categories.phtml:37
 msgid ""
 "Genealogical data is stored for the long term because it is historically "
 "relevant and should remain preserved and accessible for future generations."
@@ -1171,11 +1009,9 @@ msgstr ""
 "relevant zijn en voor toekomstige generaties behouden en toegankelijk moeten "
 "blijven."
 
-#: resources/views/page/sections/data-categories.phtml:38
 msgid "Requests for deletion are reviewed individually."
 msgstr "Verzoeken tot verwijdering worden per geval beoordeeld."
 
-#: resources/views/page/sections/data-categories.phtml:40
 msgid ""
 "Deletion may be restricted if further processing is necessary for historical "
 "research purposes and deletion would likely make these purposes impossible "
@@ -1187,21 +1023,14 @@ msgstr ""
 "overeenkomstig artikel 17, derde lid, onder d van de Algemene Verordening "
 "Gegevensbescherming (AVG)."
 
-#: resources/views/page/sections/data-categories.phtml:46
-#, fuzzy, php-format
-#| msgid ""
-#| "In addition to the General Data Protection Regulation (EU GDPR), German "
-#| "national data protection rules may apply, in particular the Federal Data "
-#| "Protection Act (BDSG)."
 msgid ""
 "In addition to the General Data Protection Regulation (EU GDPR), German "
 "national data protection rules may apply, in particular %s."
 msgstr ""
 "Naast de Algemene Verordening Gegevensbescherming (EU-AVG) kunnen ook "
 "nationale Duitse gegevensbeschermingsregels van toepassing zijn, met name de "
-"Bundesdatenschutzgesetz (BDSG)."
+"%s."
 
-#: resources/views/page/sections/data-categories.phtml:53
 msgid ""
 "Genealogical records may contain particularly sensitive personal data where "
 "such information is relevant to family history or historical research."
@@ -1210,7 +1039,6 @@ msgstr ""
 "wanneer deze informatie relevant is voor familiegeschiedenis of historisch "
 "onderzoek."
 
-#: resources/views/page/sections/data-categories.phtml:54
 msgid ""
 "This can include ethnic origin, physical characteristics, political opinions "
 "or affiliations, religious or philosophical beliefs, trade union or party "
@@ -1221,7 +1049,6 @@ msgstr ""
 "overtuigingen, lidmaatschap van een vakbond of partij, genetische gegevens "
 "en gezondheidsgegevens, met inbegrip van doodsoorzaken, omvatten."
 
-#: resources/views/page/sections/data-categories.phtml:55
 msgid ""
 "Information about criminal convictions or offences may also occur in "
 "historical sources."
@@ -1229,7 +1056,6 @@ msgstr ""
 "Informatie over strafrechtelijke veroordelingen of strafbare feiten kan ook "
 "voorkomen in historische bronnen."
 
-#: resources/views/page/sections/data-categories.phtml:60
 msgid ""
 "The legal basis for processing special categories of personal data is "
 "Article 9(2)(j) GDPR for historical research purposes."
@@ -1238,7 +1064,6 @@ msgstr ""
 "persoonsgegevens is artikel 9, tweede lid, onder j, AVG voor doeleinden van "
 "historisch onderzoek."
 
-#: resources/views/page/sections/data-categories.phtml:61
 msgid ""
 "Information about criminal convictions and offences is processed in "
 "accordance with Article 10 GDPR."
@@ -1246,22 +1071,17 @@ msgstr ""
 "Informatie over strafrechtelijke veroordelingen en strafbare feiten wordt "
 "verwerkt overeenkomstig artikel 10 AVG."
 
-#: resources/views/page/sections/data-categories.phtml:63
-#, fuzzy, php-format
-#| msgid "Where German law applies, Section 27 BDSG may also apply."
 msgid "Where German law applies, Section 27 %s may also apply."
 msgstr ""
-"Voor zover Duits recht van toepassing is, kan aanvullend § 27 BDSG van "
+"Voor zover Duits recht van toepassing is, kan aanvullend § 27 %s van "
 "toepassing zijn."
 
-#: resources/views/page/sections/data-categories.phtml:69
 msgid ""
 "These facts are protected by graduated access rights and GEDCOM restrictions."
 msgstr ""
 "Deze gegevens worden beschermd door gedifferentieerde toegangsrechten en "
 "GEDCOM-beperkingen."
 
-#: resources/views/page/sections/data-categories.phtml:72
 #, php-format
 msgid ""
 "They are released for wider access no earlier than %s year after the death "
@@ -1276,15 +1096,12 @@ msgstr[1] ""
 "Zij worden niet eerder dan %s jaar na het overlijden van de betrokkene voor "
 "ruimere toegang vrijgegeven."
 
-#: resources/views/page/sections/data-categories.phtml:83
 msgid "Large parts of the content of this website are freely accessible."
 msgstr "Grote delen van de inhoud van deze website zijn vrij toegankelijk."
 
-#: resources/views/page/sections/data-categories.phtml:84
 msgid "This does not apply to data about persons who are still living."
 msgstr "Dit geldt niet voor gegevens van personen die nog in leven zijn."
 
-#: resources/views/page/sections/data-categories.phtml:85
 msgid ""
 "Only registered users who have been assigned graduated rights have access to "
 "this data."
@@ -1292,7 +1109,6 @@ msgstr ""
 "Alleen geregistreerde gebruikers aan wie gelaagde rechten zijn toegekend, "
 "hebben toegang tot deze gegevens."
 
-#: resources/views/page/sections/data-categories.phtml:86
 msgid ""
 "Additional data is stored about these users, such as their name and e-mail "
 "address."
@@ -1300,7 +1116,6 @@ msgstr ""
 "Van deze gebruikers worden aanvullende gegevens opgeslagen, zoals hun naam "
 "en e-mailadres."
 
-#: resources/views/page/sections/data-categories.phtml:88
 msgid "Registered users are only persons related to me by blood or marriage."
 msgid_plural ""
 "Registered users are only persons related to us by blood or marriage."
@@ -1311,7 +1126,6 @@ msgstr[1] ""
 "Geregistreerde gebruikers zijn uitsluitend personen die door bloed- of "
 "aanverwantschap aan ons verbonden zijn."
 
-#: resources/views/page/sections/data-categories.phtml:89
 msgid ""
 "A substantial part of the content here has been shared confidentially within "
 "the family."
@@ -1319,7 +1133,6 @@ msgstr ""
 "Een aanzienlijk deel van de inhoud hier is binnen de familie vertrouwelijk "
 "gedeeld."
 
-#: resources/views/page/sections/data-categories.phtml:90
 msgid ""
 "It must remain confidential; therefore we all depend on every individual "
 "treating this data confidentially."
@@ -1327,67 +1140,62 @@ msgstr ""
 "Dat moet vertrouwelijk blijven; daarom zijn wij er allemaal van afhankelijk "
 "dat iedere betrokkene deze gegevens vertrouwelijk behandelt."
 
-#: resources/views/page/sections/data-categories.phtml:97
 msgid ""
 "Visitors can see a list of the family trees to which they have access, for "
 "example on the home page or when searching."
 msgstr ""
+"Bezoekers kunnen een lijst zien van de stambomen waartoe zij toegang hebben, "
+"bijvoorbeeld op de startpagina of bij het zoeken."
 
-#: resources/views/page/sections/data-categories.phtml:99
 msgid ""
 "Visitors are shown the default family tree and do not see a list of the "
 "other family trees on this website."
 msgstr ""
+"Bezoekers krijgen de standaardstamboom te zien en zien geen lijst van de "
+"andere stambomen op deze website."
 
-#: resources/views/page/sections/data-categories.phtml:104
 msgid "Privacy settings for individual family trees"
-msgstr ""
+msgstr "Privacy-instellingen voor afzonderlijke stambomen"
 
-#: resources/views/page/sections/data-categories.phtml:106
 msgid ""
 "In addition, webtrees privacy settings can be configured separately for each "
 "family tree. The concrete settings may differ from tree to tree."
 msgstr ""
+"Daarnaast kunnen de privacy-instellingen van webtrees voor elke stamboom "
+"afzonderlijk worden geconfigureerd. De concrete instellingen kunnen per "
+"stamboom verschillen."
 
-#: resources/views/page/sections/data-categories.phtml:107
 msgid "The following areas can be configured for each family tree:"
-msgstr ""
+msgstr "De volgende onderdelen kunnen per stamboom worden geconfigureerd:"
 
-#: resources/views/page/sections/data-categories.phtml:110
 msgid "Show the family tree"
-msgstr ""
+msgstr "Stamboom weergeven"
 
-#: resources/views/page/sections/data-categories.phtml:111
 msgid "Show dead individuals"
-msgstr ""
+msgstr "Overleden personen weergeven"
 
-#: resources/views/page/sections/data-categories.phtml:112
 msgid "Age at which to assume an individual is dead"
-msgstr ""
+msgstr "Leeftijd vanaf wanneer wordt aangenomen dat een persoon overleden is"
 
-#: resources/views/page/sections/data-categories.phtml:113
 msgid "Show living individuals"
-msgstr ""
+msgstr "Levende personen weergeven"
 
-#: resources/views/page/sections/data-categories.phtml:114
 msgid ""
 "Extend privacy to dead individuals for a selectable period after birth or "
 "death"
 msgstr ""
+"Privacy ook toepassen op overleden personen (voor een instelbare periode na "
+"geboorte of overlijden)"
 
-#: resources/views/page/sections/data-categories.phtml:115
 msgid "Show names of private individuals"
-msgstr ""
+msgstr "Namen van afgeschermde personen weergeven"
 
-#: resources/views/page/sections/data-categories.phtml:116
 msgid "Show private relationships"
-msgstr ""
+msgstr "Afgeschermde relaties weergeven"
 
-#: resources/views/page/sections/data-categories.phtml:117
 msgid "Privacy restrictions for records, facts, and events"
-msgstr ""
+msgstr "Privacybeperkingen voor gegevens, feiten en gebeurtenissen"
 
-#: resources/views/page/sections/data-categories.phtml:123
 msgid ""
 "The personal data that you provide yourself when creating an account is "
 "stored and processed; see contact data."
@@ -1395,61 +1203,54 @@ msgstr ""
 "De persoonsgegevens die u zelf verstrekt bij het aanmaken van een account, "
 "worden opgeslagen en verwerkt; zie contactgegevens."
 
-#: resources/views/page/sections/data-categories.phtml:128
 msgid "Visitors cannot request a new user account themselves on this website."
 msgstr ""
+"Bezoekers kunnen op deze website zelf geen nieuw gebruikersaccount aanvragen."
 
-#: resources/views/page/sections/data-categories.phtml:130
 msgid "Visitors can request a new user account on this website."
 msgstr ""
+"Bezoekers kunnen op deze website een nieuw gebruikersaccount aanvragen."
 
-#: resources/views/page/sections/data-categories.phtml:131
 msgid ""
 "Before submitting the request, they must confirm that they will respect the "
 "privacy of living persons listed here and describe their relationship to "
 "persons on this website or provide information about someone who should be "
 "listed here."
 msgstr ""
+"Voordat zij de aanvraag indienen, moeten zij bevestigen dat zij de privacy "
+"van hier vermelde levende personen respecteren en hun verwantschap met "
+"personen op deze website beschrijven of informatie verstrekken over iemand "
+"die hier vermeld zou moeten worden."
 
-#: resources/views/page/sections/data-categories.phtml:133
 msgid ""
 "Visitors can request a new user account on this website without being shown "
 "an additional acceptable use agreement before submitting the request."
 msgstr ""
+"Bezoekers kunnen op deze website een nieuw gebruikersaccount aanvragen "
+"zonder dat hun vóór het indienen van de aanvraag aanvullende "
+"gebruiksvoorwaarden worden getoond."
 
-#: resources/views/page/sections/data-categories.phtml:138
-#, fuzzy
-#| msgid ""
-#| "As a registered user, you can view, correct, or delete your account data "
-#| "yourself in your profile settings."
 msgid ""
 "Registered users can view, correct, or delete their account data themselves "
 "in their profile settings."
 msgstr ""
-"Als geregistreerde gebruiker kunt u uw accountgegevens in uw "
-"profielinstellingen zelf bekijken, corrigeren of verwijderen."
+"Geregistreerde gebruikers kunnen hun accountgegevens in hun "
+"profielinstellingen zelf inzien, corrigeren of verwijderen."
 
-#: resources/views/page/sections/data-categories.phtml:142
-#: resources/views/page/sections/data-protection-officer.phtml:36
-#: resources/views/settings.phtml:220
 msgid "Name"
 msgstr "Naam"
 
-#: resources/views/page/sections/data-categories.phtml:143
 msgid "E-mail address"
 msgstr "E-mailadres"
 
-#: resources/views/page/sections/data-categories.phtml:144
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: resources/views/page/sections/data-categories.phtml:148
 msgid "Other personal data that you actively provide is also stored and used."
 msgstr ""
 "Andere persoonsgegevens die u actief verstrekt, worden eveneens opgeslagen "
 "en gebruikt."
 
-#: resources/views/page/sections/data-categories.phtml:149
 msgid ""
 "This includes, for example, data created by completing your personal details "
 "on your personal page or by creating family relationships."
@@ -1458,7 +1259,6 @@ msgstr ""
 "persoonsgegevens op uw persoonlijke pagina of door het vastleggen van "
 "familiebanden."
 
-#: resources/views/page/sections/data-categories.phtml:153
 msgid ""
 "Furthermore, data relating to your user account is recorded as a result of "
 "your activities on this website, for example when editing records."
@@ -1467,7 +1267,6 @@ msgstr ""
 "als gevolg van uw activiteiten op deze website, bijvoorbeeld wanneer u "
 "gegevens bewerkt."
 
-#: resources/views/page/sections/data-categories.phtml:157
 msgid ""
 "I occasionally use your e-mail address to inform you by e-mail about "
 "important matters relating to the website or, if necessary, to contact you "
@@ -1487,14 +1286,12 @@ msgstr[1] ""
 "nodig, om contact met u op te nemen met vragen over wijzigingen die u heeft "
 "aangebracht."
 
-#: resources/views/page/sections/data-categories.phtml:162
 #, php-format
 msgid "Inactive user accounts are deleted after %s year."
 msgid_plural "Inactive user accounts are deleted after %s years."
 msgstr[0] "Inactieve gebruikersaccounts worden na %s jaar verwijderd."
 msgstr[1] "Inactieve gebruikersaccounts worden na %s jaar verwijderd."
 
-#: resources/views/page/sections/data-categories.phtml:167
 msgid ""
 "If you have your user account disabled here, the genealogical data you "
 "entered will remain available for the benefit of our genealogical research."
@@ -1503,7 +1300,6 @@ msgstr ""
 "ingevoerde genealogische gegevens beschikbaar ten behoeve van ons "
 "genealogisch onderzoek."
 
-#: resources/views/page/sections/data-categories.phtml:168
 msgid ""
 "The data about your person will also be retained; only your access to the "
 "specially protected areas here will be blocked."
@@ -1511,7 +1307,6 @@ msgstr ""
 "De gegevens over uw persoon blijven eveneens bewaard; alleen uw toegang tot "
 "de bijzonder beschermde delen van deze website wordt geblokkeerd."
 
-#: resources/views/page/sections/data-categories.phtml:173
 msgid ""
 "In principle, data that can be related to non-logged-in users of this "
 "service, visitors, is also stored; see usage data and communication data."
@@ -1520,7 +1315,6 @@ msgstr ""
 "niet-ingelogde gebruikers van deze dienst, te weten bezoekers; zie "
 "gebruiksgegevens en communicatiegegevens."
 
-#: resources/views/page/sections/data-categories.phtml:178
 msgid ""
 "This website uses cookies to enable user logins and to store settings such "
 "as your selected language."
@@ -1528,14 +1322,12 @@ msgstr ""
 "Deze website gebruikt cookies om gebruikersaanmeldingen mogelijk te maken en "
 "instellingen op te slaan, zoals de door u gekozen taal."
 
-#: resources/views/page/sections/data-categories.phtml:179
 msgid ""
 "Cookies help make this service more user-friendly, effective, and secure."
 msgstr ""
 "Cookies helpen deze dienst gebruiksvriendelijker, effectiever en veiliger te "
 "maken."
 
-#: resources/views/page/sections/data-categories.phtml:180
 msgid ""
 "Cookies are small text files that are stored on your computer and saved by "
 "your browser."
@@ -1543,35 +1335,26 @@ msgstr ""
 "Cookies zijn kleine tekstbestanden die op uw computer worden opgeslagen en "
 "door uw browser worden bewaard."
 
-#: resources/views/page/sections/data-categories.phtml:181
 msgid ""
 "These cookies are strictly necessary for the website to function properly."
 msgstr ""
 "Deze cookies zijn strikt noodzakelijk om de website goed te laten "
 "functioneren."
 
-#: resources/views/page/sections/data-categories.phtml:183
-#, fuzzy, php-format
-#| msgid ""
-#| "Under Section 25 TDDDG, storing cookies that are not technically "
-#| "necessary and accessing information on your device generally require your "
-#| "consent."
 msgid ""
 "Under Section 25 %s, storing cookies that are not technically necessary and "
 "accessing information on your device generally require your consent."
 msgstr ""
-"Op grond van § 25 TDDDG is voor het opslaan van cookies die niet technisch "
+"Op grond van § 25 %s is voor het opslaan van cookies die niet technisch "
 "noodzakelijk zijn en voor toegang tot informatie op uw apparaat in beginsel "
 "uw toestemming vereist."
 
-#: resources/views/page/sections/data-categories.phtml:185
 msgid ""
 "Session cookies are deleted when you leave the website or close your browser."
 msgstr ""
 "Sessiecookies worden verwijderd wanneer u de website verlaat of uw browser "
 "sluit."
 
-#: resources/views/page/sections/data-categories.phtml:186
 msgid ""
 "Persistent cookies can remain stored after the browser is closed, for "
 "example to preserve selected settings for a later visit."
@@ -1580,7 +1363,6 @@ msgstr ""
 "blijven, bijvoorbeeld om geselecteerde instellingen voor een later bezoek te "
 "bewaren."
 
-#: resources/views/page/sections/data-categories.phtml:187
 msgid ""
 "You can configure your browser so that you are informed when cookies are "
 "set, allow cookies only in individual cases, exclude the acceptance of "
@@ -1593,58 +1375,45 @@ msgstr ""
 "algemeen wordt uitgesloten en cookies automatisch worden verwijderd wanneer "
 "u de browser sluit."
 
-#: resources/views/page/sections/data-categories.phtml:188
 msgid ""
 "If cookies are disabled, the functionality of this website may be restricted."
 msgstr ""
 "Als cookies zijn uitgeschakeld, kan de functionaliteit van deze website "
 "beperkt zijn."
 
-#: resources/views/page/sections/data-categories.phtml:193
 msgid "This website uses third-party services to manage cookies."
 msgstr "Deze website gebruikt diensten van derden voor het beheer van cookies."
 
-#: resources/views/page/sections/data-categories.phtml:208
 msgid "This website uses third-party services to learn about visitor behavior."
 msgstr ""
 "Deze website gebruikt diensten van derden om inzicht te verkrijgen in het "
 "gedrag van bezoekers."
 
-#: resources/views/page/sections/data-categories.phtml:215
-#: resources/views/page/sections/third-party-services.phtml:42
 msgid "Service"
 msgstr "Dienst"
 
-#: resources/views/page/sections/data-categories.phtml:216
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
-#: resources/views/page/sections/data-categories.phtml:218
-#: resources/views/page/sections/third-party-services.phtml:44
 msgid "Country of service provision"
 msgstr "Land van dienstverlening"
 
-#: resources/views/page/sections/data-categories.phtml:227
 msgid "Webmaster tool"
-msgstr ""
+msgstr "Webmastertool"
 
-#: resources/views/page/sections/data-categories.phtml:229
 msgid "Analytics tool"
-msgstr ""
+msgstr "Analysetool"
 
-#: resources/views/page/sections/data-categories.phtml:241
 msgid "These services may use cookies or other tracking technology."
 msgstr "Deze diensten kunnen cookies of andere trackingtechnologie gebruiken."
 
-#: resources/views/page/sections/data-categories.phtml:242
 msgid ""
 "You can opt out of tracking by setting the \"Do Not Track\" header in your "
 "browser preferences."
 msgstr ""
-"U kunt zich afmelden voor tracking door in de instellingen van uw browser de "
-"\"Do Not Track\"-instelling in te schakelen."
+"U kunt tracking uitschakelen door in uw browserinstellingen de optie \"Niet "
+"volgen\" in te schakelen."
 
-#: resources/views/page/sections/data-categories.phtml:248
 msgid ""
 "The application used (webtrees) logs all user actions so that, among other "
 "things, changes to the data can be traced and approved."
@@ -1653,49 +1422,46 @@ msgstr ""
 "zodat onder meer wijzigingen in de gegevens kunnen worden herleid en "
 "goedgekeurd."
 
-#: resources/views/page/sections/data-protection-officer.phtml:23
 msgid "A data protection officer has been designated for this website."
 msgstr ""
+"Voor deze website is een functionaris voor gegevensbescherming aangewezen."
 
-#: resources/views/page/sections/data-protection-officer.phtml:26
 #, php-format
 msgid ""
 "This information is provided with reference to Article 37 GDPR and Section "
 "38 %s."
 msgstr ""
+"Deze informatie wordt verstrekt met verwijzing naar artikel 37 AVG en § 38 "
+"%s."
 
-#: resources/views/page/sections/data-protection-officer.phtml:28
 msgid "This information is provided with reference to Article 37 GDPR."
-msgstr ""
+msgstr "Deze informatie wordt verstrekt met verwijzing naar artikel 37 AVG."
 
-#: resources/views/page/sections/data-protection-officer.phtml:43
 msgid "Company"
-msgstr ""
+msgstr "Bedrijf"
 
-#: resources/views/page/sections/data-protection-officer.phtml:50
-#, fuzzy
-#| msgid "Address data"
 msgid "Address"
-msgstr "Adresgegevens"
+msgstr "Adres"
 
-#: resources/views/page/sections/data-protection-officer.phtml:65
 #, php-format
 msgid ""
 "No data protection officer has been designated because neither Article 37 "
 "GDPR nor Section 38 %s requires designation for this website."
 msgstr ""
+"Voor deze website is geen functionaris voor gegevensbescherming aangewezen, "
+"omdat noch artikel 37 AVG noch § 38 %s een aanwijzing vereist."
 
-#: resources/views/page/sections/data-protection-officer.phtml:67
 msgid ""
 "No data protection officer has been designated because Article 37 GDPR does "
 "not require designation for this website."
 msgstr ""
+"Voor deze website is geen functionaris voor gegevensbescherming aangewezen, "
+"omdat artikel 37 AVG geen aanwijzing vereist."
 
-#: resources/views/page/sections/data-protection-officer.phtml:69
 msgid "No data protection officer has been designated for this website."
 msgstr ""
+"Voor deze website is geen functionaris voor gegevensbescherming aangewezen."
 
-#: resources/views/page/sections/data-rights.phtml:9
 msgid ""
 "You have the right at any time to obtain information about the data stored "
 "about you, its origin, and the purpose of storage."
@@ -1703,7 +1469,6 @@ msgstr ""
 "U heeft te allen tijde het recht om informatie te verkrijgen over de over u "
 "opgeslagen gegevens, de herkomst daarvan en het doel van de opslag."
 
-#: resources/views/page/sections/data-rights.phtml:10
 msgid ""
 "You also have the right to request completion of the data concerning you or "
 "correction of inaccurate data concerning you."
@@ -1711,7 +1476,6 @@ msgstr ""
 "U heeft eveneens het recht om aanvulling van de op u betrekking hebbende "
 "gegevens of correctie van onjuiste gegevens te verzoeken."
 
-#: resources/views/page/sections/data-rights.phtml:11
 msgid ""
 "For data protection requests, please contact the person named above in the "
 "legal notice."
@@ -1719,7 +1483,6 @@ msgstr ""
 "Voor vragen over gegevensbescherming kunt u contact opnemen met de hierboven "
 "in het colofon vermelde persoon."
 
-#: resources/views/page/sections/data-rights.phtml:16
 msgid ""
 "In accordance with Article 17 GDPR, you have the right to request that "
 "relevant data be deleted without undue delay, or alternatively, in "
@@ -1731,7 +1494,6 @@ msgstr ""
 "grond van artikel 18 AVG beperking van de verwerking van de gegevens te "
 "vragen."
 
-#: resources/views/page/sections/data-rights.phtml:18
 msgid ""
 "You may request that relevant data be deleted without undue delay or that "
 "the processing of the data be restricted, subject to the applicable legal "
@@ -1741,7 +1503,6 @@ msgstr ""
 "gewist of dat de verwerking van de gegevens wordt beperkt, onder voorbehoud "
 "van de toepasselijke wettelijke vereisten."
 
-#: resources/views/page/sections/data-rights.phtml:24
 msgid ""
 "Furthermore, under Article 77 GDPR, you have the right to lodge a complaint "
 "with the competent supervisory authority."
@@ -1749,12 +1510,10 @@ msgstr ""
 "Daarnaast heeft u op grond van artikel 77 AVG het recht een klacht in te "
 "dienen bij de bevoegde toezichthoudende autoriteit."
 
-#: resources/views/page/sections/data-rights.phtml:26
 #, php-format
 msgid "The competent supervisory authority is %s."
 msgstr "De bevoegde toezichthoudende autoriteit is %s."
 
-#: resources/views/page/sections/data-rights.phtml:45
 msgid ""
 "Under Article 20 GDPR, you have the right to receive personal data that you "
 "have provided in a structured, commonly used, and machine-readable format, "
@@ -1767,7 +1526,6 @@ msgstr ""
 "gegevens aan een andere verwerkingsverantwoordelijke over te dragen, voor "
 "zover aan de wettelijke vereisten is voldaan."
 
-#: resources/views/page/sections/data-rights.phtml:55
 msgid ""
 "Under Article 21 GDPR, you have the right to object at any time, on grounds "
 "relating to your particular situation, to the processing of personal data "
@@ -1781,36 +1539,35 @@ msgstr ""
 "eerste zin, onder e of artikel 6, eerste lid, eerste zin, onder f van de "
 "Algemene Verordening Gegevensbescherming (AVG)."
 
-#: resources/views/page/sections/data-rights.phtml:56
-#, fuzzy
-#| msgid "Personal data about visitors to this website"
 msgid ""
 "Personal data is not processed for direct marketing purposes on this website."
-msgstr "Persoonsgegevens van bezoekers van deze website"
+msgstr ""
+"Op deze website worden persoonsgegevens niet verwerkt voor "
+"directmarketingdoeleinden."
 
-#: resources/views/page/sections/further-information.phtml:12
 msgid "German-language webtrees manual (GenWiki)"
-msgstr ""
+msgstr "Duitstalige webtrees-handleiding (GenWiki)"
 
-#: resources/views/page/sections/further-information.phtml:13
 msgid "official privacy information from webtrees.net"
-msgstr ""
+msgstr "officiële privacy-informatie van webtrees.net"
 
-#: resources/views/page/sections/further-information.phtml:17
 #, php-format
 msgid ""
 "Detailed technical background information about data protection in webtrees "
 "as well as further information for administrators is available in the %s and "
 "in the %s."
 msgstr ""
+"Uitgebreide technische achtergrondinformatie over gegevensbescherming in "
+"webtrees en verdere informatie voor beheerders is beschikbaar in de %s en in "
+"de %s."
 
-#: resources/views/page/sections/further-information.phtml:21
 msgid ""
 "This information supplements the following privacy policy, but does not "
 "replace it."
 msgstr ""
+"Deze informatie vormt een aanvulling op het onderstaande privacybeleid, maar "
+"vervangt dit niet."
 
-#: resources/views/page/sections/general-risk.phtml:9
 msgid ""
 "I point out that data transmission on the Internet, for example when "
 "communicating by e-mail, may have security gaps."
@@ -1824,7 +1581,6 @@ msgstr[1] ""
 "Wij wijzen erop dat gegevensoverdracht via internet, bijvoorbeeld bij "
 "communicatie per e-mail, beveiligingsrisico's kan meebrengen."
 
-#: resources/views/page/sections/general-risk.phtml:10
 msgid ""
 "Complete protection of data against access by third parties is also not "
 "possible."
@@ -1832,8 +1588,6 @@ msgstr ""
 "Volledige bescherming van gegevens tegen toegang door derden is evenmin "
 "mogelijk."
 
-#: resources/views/page/sections/hosting.phtml:11
-#: resources/views/page/sections/hosting.phtml:13
 #, php-format
 msgid ""
 "This website is hosted by %s, which provides the server and technical "
@@ -1842,14 +1596,10 @@ msgstr ""
 "Deze website wordt gehost door %s, die de server en de technische "
 "infrastructuur levert."
 
-#: resources/views/page/sections/hosting.phtml:16
-#, fuzzy, php-format
-#| msgid "For details, please refer to the privacy notice of %s."
+#, php-format
 msgid "Details are available in the privacy notice of %s."
-msgstr ""
-"Voor nadere informatie verwijzen wij u naar de privacyverklaring van %s."
+msgstr "Details zijn beschikbaar in de privacyverklaring van %s."
 
-#: resources/views/page/sections/hosting.phtml:22
 msgid ""
 "The hosting provider automatically collects and stores information when this "
 "website is accessed, such as browser used, operating system, referring page, "
@@ -1857,10 +1607,9 @@ msgid ""
 msgstr ""
 "De hostingprovider verzamelt en bewaart automatisch informatie wanneer deze "
 "website wordt bezocht, zoals de gebruikte browser, het besturingssysteem, de "
-"verwijzende pagina, het IP-adres, het tijdstip van toegang en daarmee "
+"verwijzende pagina, het IPadres, het tijdstip van toegang en daarmee "
 "vergelijkbare gegevens."
 
-#: resources/views/page/sections/hosting.phtml:23
 msgid ""
 "This data cannot be assigned to specific persons without consulting "
 "additional data sources, and"
@@ -1868,42 +1617,36 @@ msgstr ""
 "Deze gegevens kunnen zonder raadpleging van aanvullende gegevensbronnen niet "
 "aan specifieke personen worden toegewezen, en"
 
-#: resources/views/page/sections/hosting.phtml:24
 msgid "I do not evaluate this data further"
 msgid_plural "we do not evaluate this data further"
 msgstr[0] "ik analyseer deze gegevens verder niet"
 msgstr[1] "wij analyseren deze gegevens verder niet"
 
-#: resources/views/page/sections/hosting.phtml:25
 msgid "unless there is unlawful use of these web pages."
 msgstr "tenzij sprake is van onrechtmatig gebruik van deze webpagina's."
 
-#: resources/views/page/sections/hosting.phtml:29
 msgid "Order processing"
 msgstr "Verwerkersovereenkomst"
 
-#: resources/views/page/sections/hosting.phtml:31
 msgid ""
 "An agreement on order processing has been concluded with the hosting "
 "provider."
 msgstr "Met de hostingprovider is een verwerkersovereenkomst gesloten."
 
-#: resources/views/page/sections/hosting.phtml:34
 #, php-format
 msgid "It was first concluded on %s and last updated on %s."
 msgstr ""
+"Deze werd voor het eerst afgesloten op %s en voor het laatst bijgewerkt op "
+"%s."
 
-#: resources/views/page/sections/hosting.phtml:36
 #, php-format
 msgid "It was concluded on %s."
-msgstr ""
+msgstr "Deze werd afgesloten op %s."
 
-#: resources/views/page/sections/hosting.phtml:38
 #, php-format
 msgid "It was last updated on %s."
-msgstr ""
+msgstr "Deze werd voor het laatst bijgewerkt op %s."
 
-#: resources/views/page/sections/hosting.phtml:42
 msgid ""
 "This is an agreement required by data protection law under Article 28 GDPR, "
 "which ensures that the hosting provider processes the personal data of this "
@@ -1912,7 +1655,6 @@ msgstr ""
 "Dit is een op grond van artikel 28 AVG vereiste overeenkomst die waarborgt "
 "dat de hostingprovider de persoonsgegevens van deze website verwerkt"
 
-#: resources/views/page/sections/hosting.phtml:44
 msgid ""
 "This agreement ensures that the hosting provider processes the personal data "
 "of this website"
@@ -1920,22 +1662,18 @@ msgstr ""
 "Deze overeenkomst waarborgt dat de hostingprovider de persoonsgegevens van "
 "deze website verwerkt"
 
-#: resources/views/page/sections/hosting.phtml:46
 msgid "only according to my instructions"
 msgid_plural "only according to our instructions"
 msgstr[0] "uitsluitend volgens mijn instructies"
 msgstr[1] "uitsluitend volgens onze instructies"
 
-#: resources/views/page/sections/hosting.phtml:48
 msgid "and in compliance with the GDPR."
 msgstr "en in overeenstemming met de AVG."
 
-#: resources/views/page/sections/hosting.phtml:50
 msgid "and in compliance with the applicable data protection requirements."
 msgstr ""
 "en in overeenstemming met de toepasselijke gegevensbeschermingsvereisten."
 
-#: resources/views/page/sections/legal-bases.phtml:10
 msgid ""
 "The legal bases for processing personal data depend on the respective "
 "processing operation."
@@ -1943,7 +1681,6 @@ msgstr ""
 "De rechtsgrondslagen voor de verwerking van persoonsgegevens hangen af van "
 "de betreffende verwerkingshandeling."
 
-#: resources/views/page/sections/legal-bases.phtml:11
 msgid ""
 "The provision and secure operation of this website, the protection of living "
 "persons, and family history research are based on legitimate interests under "
@@ -1955,7 +1692,6 @@ msgstr ""
 "overeenkomstig artikel 6, eerste lid, eerste zin, onder f van de Algemene "
 "Verordening Gegevensbescherming (AVG)."
 
-#: resources/views/page/sections/legal-bases.phtml:12
 msgid ""
 "Processing related to user accounts, registered access, and communication "
 "with registered users may also be based on contractual or pre-contractual "
@@ -1967,7 +1703,6 @@ msgstr ""
 "eerste lid, eerste zin, onder b van de Algemene Verordening "
 "Gegevensbescherming (AVG)."
 
-#: resources/views/page/sections/legal-bases.phtml:13
 msgid ""
 "If consent is requested for individual processing operations, the legal "
 "basis is Article 6(1), first sentence, point (a) GDPR."
@@ -1976,7 +1711,6 @@ msgstr ""
 "artikel 6, eerste lid, eerste zin, onder a van de Algemene Verordening "
 "Gegevensbescherming (AVG) de rechtsgrondslag."
 
-#: resources/views/page/sections/legal-bases.phtml:14
 msgid ""
 "Where legal obligations require processing or retention, the legal basis is "
 "Article 6(1), first sentence, point (c) GDPR."
@@ -1985,7 +1719,6 @@ msgstr ""
 "artikel 6, eerste lid, eerste zin, onder c van de Algemene Verordening "
 "Gegevensbescherming (AVG) de rechtsgrondslag."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:10
 msgid ""
 "I am a strong advocate of data protection and would like to emphasize that I "
 "naturally make every effort to comply with the GDPR."
@@ -1999,7 +1732,6 @@ msgstr[1] ""
 "Wij zijn uitgesproken voorstanders van gegevensbescherming en willen "
 "benadrukken dat wij ons vanzelfsprekend inspannen om de AVG na te leven."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:12
 msgid ""
 "I am a strong advocate of data protection and would like to emphasize that I "
 "naturally make every effort to comply with applicable data protection "
@@ -2017,26 +1749,20 @@ msgstr[1] ""
 "dat wij vanzelfsprekend alles in het werk stellen om te voldoen aan de "
 "toepasselijke gegevensbeschermingsvereisten."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:14
 msgid ""
 "At the same time, online genealogy raises questions that are not always "
 "fully clarified legally and require careful balancing in individual cases."
 msgstr ""
+"Tegelijkertijd roept online genealogie vragen op die juridisch niet altijd "
+"volledig duidelijk zijn en die per geval zorgvuldig moeten worden afgewogen."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:18
 msgid ""
 "Family trees are usually created from information contributed by relatives "
 "about entire branches of the family."
 msgstr ""
+"Stambomen worden doorgaans samengesteld op basis van informatie die door "
+"familieleden over volledige familietakken wordt verstrekt."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:19
-#, fuzzy
-#| msgid ""
-#| "However, I can rule out with certainty that everyone entered in this "
-#| "family tree knows about it."
-#| msgid_plural ""
-#| "However, we can rule out with certainty that everyone entered in this "
-#| "family tree knows about it."
 msgid ""
 "I therefore cannot verify that every person entered in this family tree "
 "knows about it or has given consent."
@@ -2044,20 +1770,12 @@ msgid_plural ""
 "We therefore cannot verify that every person entered in this family tree "
 "knows about it or has given consent."
 msgstr[0] ""
-"Ik kan echter met zekerheid uitsluiten dat iedereen die in deze stamboom is "
-"opgenomen, daarvan op de hoogte is."
+"Ik kan daarom niet verifiëren dat elke in deze stamboom opgenomen persoon "
+"hiervan op de hoogte is of toestemming heeft gegeven."
 msgstr[1] ""
-"Wij kunnen echter met zekerheid uitsluiten dat iedereen die in deze stamboom "
-"is opgenomen, daarvan op de hoogte is."
+"Wij kunnen daarom niet verifiëren dat elke in deze stamboom opgenomen "
+"persoon hiervan op de hoogte is of toestemming heeft gegeven."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:23
-#, fuzzy
-#| msgid ""
-#| "I therefore continue to provide the data online in the interest of family "
-#| "history and historical research."
-#| msgid_plural ""
-#| "We therefore continue to provide the data online in the interest of "
-#| "family history and historical research."
 msgid ""
 "Taking all potentially sensitive data offline would, in my opinion, largely "
 "prevent the intended use for family history and historical research."
@@ -2065,13 +1783,14 @@ msgid_plural ""
 "Taking all potentially sensitive data offline would, in our opinion, largely "
 "prevent the intended use for family history and historical research."
 msgstr[0] ""
-"Ik blijf de gegevens daarom online beschikbaar stellen in het belang van "
-"familiegeschiedenis en historisch onderzoek."
+"Het offline halen van alle potentieel gevoelige gegevens zou naar mijn "
+"mening het beoogde gebruik voor familiegeschiedenis en historisch onderzoek "
+"grotendeels verhinderen."
 msgstr[1] ""
-"Wij blijven de gegevens daarom online beschikbaar stellen in het belang van "
-"familiegeschiedenis en historisch onderzoek."
+"Het offline halen van alle potentieel gevoelige gegevens zou naar onze "
+"mening het beoogde gebruik voor familiegeschiedenis en historisch onderzoek "
+"grotendeels verhinderen."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:25
 msgid ""
 "I therefore continue to provide the data online on the basis of legitimate "
 "interests in family history and historical research."
@@ -2085,7 +1804,6 @@ msgstr[1] ""
 "Wij blijven de gegevens daarom online beschikbaar stellen op basis van "
 "gerechtvaardigde belangen in familiegeschiedenis en historisch onderzoek."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:26
 msgid ""
 "The GDPR expressly recognizes that personal data may also be processed for "
 "historical research purposes, subject to appropriate safeguards."
@@ -2094,7 +1812,6 @@ msgstr ""
 "persoonsgegevens ook mogen worden verwerkt voor historische "
 "onderzoeksdoeleinden, mits passende waarborgen worden getroffen."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:28
 msgid ""
 "I therefore continue to provide the data online in the interest of family "
 "history and historical research."
@@ -2108,7 +1825,6 @@ msgstr[1] ""
 "Wij blijven de gegevens daarom online beschikbaar stellen in het belang van "
 "familiegeschiedenis en historisch onderzoek."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:30
 msgid ""
 "The data is handled carefully, and objections or requests for restriction or "
 "deletion are reviewed individually."
@@ -2116,13 +1832,15 @@ msgstr ""
 "De gegevens worden zorgvuldig behandeld en bezwaren of verzoeken tot "
 "beperking of verwijdering worden per geval beoordeeld."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:31
 msgid "I ask all users of this website to follow the procedure below:"
 msgid_plural "We ask all users of this website to follow the procedure below:"
 msgstr[0] ""
+"Ik verzoek alle gebruikers van deze website de onderstaande procedure te "
+"volgen:"
 msgstr[1] ""
+"Wij verzoeken alle gebruikers van deze website de onderstaande procedure te "
+"volgen:"
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:35
 msgid ""
 "If you discover data that you believe is unlawfully visible, please inform "
 "me."
@@ -2131,12 +1849,11 @@ msgid_plural ""
 "us."
 msgstr[0] ""
 "Als u gegevens ontdekt waarvan u meent dat deze onrechtmatig zichtbaar zijn, "
-"verzoek ik u mij daarvan op de hoogte te stellen."
+"informeer mij dan."
 msgstr[1] ""
 "Als u gegevens ontdekt waarvan u meent dat deze onrechtmatig zichtbaar zijn, "
-"verzoeken wij u ons daarvan op de hoogte te stellen."
+"informeer ons dan."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:36
 msgid ""
 "I will then try as quickly as possible to obtain consent, remove visibility, "
 "or delete the data."
@@ -2144,22 +1861,12 @@ msgid_plural ""
 "We will then try as quickly as possible to obtain consent, remove "
 "visibility, or delete the data."
 msgstr[0] ""
-"Ik zal dan zo spoedig mogelijk proberen alsnog toestemming te verkrijgen, de "
+"Ik zal vervolgens zo snel mogelijk proberen toestemming te verkrijgen, de "
 "zichtbaarheid te beperken of de gegevens te verwijderen."
 msgstr[1] ""
-"Wij zullen dan zo spoedig mogelijk proberen alsnog toestemming te "
-"verkrijgen, de zichtbaarheid te beperken of de gegevens te verwijderen."
+"Wij zullen vervolgens zo snel mogelijk proberen toestemming te verkrijgen, "
+"de zichtbaarheid te beperken of de gegevens te verwijderen."
 
-#: resources/views/page/sections/online-genealogy-privacy.phtml:37
-#, fuzzy
-#| msgid ""
-#| "If, for specific reasons, you want to prevent your data from being "
-#| "visible even within the group of authorized registered users, please "
-#| "inform me so that I can further restrict visibility here as well."
-#| msgid_plural ""
-#| "If, for specific reasons, you want to prevent your data from being "
-#| "visible even within the group of authorized registered users, please "
-#| "inform us so that we can further restrict visibility here as well."
 msgid ""
 "If, for specific reasons, data about a person should not be visible even "
 "within the group of authorized registered users, please inform me so that I "
@@ -2169,17 +1876,14 @@ msgid_plural ""
 "within the group of authorized registered users, please inform us so that we "
 "can further restrict visibility here as well."
 msgstr[0] ""
-"Als u om specifieke redenen wilt voorkomen dat uw gegevens zelfs binnen de "
-"groep van bevoegde geregistreerde gebruikers zichtbaar zijn, verzoek ik u "
-"mij daarvan op de hoogte te stellen zodat ik de zichtbaarheid ook hier "
-"verder kan beperken."
+"Als gegevens over een persoon om specifieke redenen ook binnen de groep van "
+"geautoriseerde geregistreerde gebruikers niet zichtbaar mogen zijn, "
+"informeer mij dan, zodat ik de zichtbaarheid hier verder kan beperken."
 msgstr[1] ""
-"Als u om specifieke redenen wilt voorkomen dat uw gegevens zelfs binnen de "
-"groep van bevoegde geregistreerde gebruikers zichtbaar zijn, verzoeken wij u "
-"ons daarvan op de hoogte te stellen zodat wij de zichtbaarheid ook hier "
-"verder kunnen beperken."
+"Als gegevens over een persoon om specifieke redenen ook binnen de groep van "
+"geautoriseerde geregistreerde gebruikers niet zichtbaar mogen zijn, "
+"informeer ons dan, zodat wij de zichtbaarheid hier verder kunnen beperken."
 
-#: resources/views/page/sections/personal-data-processing.phtml:9
 msgid "I take the protection of the data stored here very seriously."
 msgid_plural "We take the protection of the data stored here very seriously."
 msgstr[0] ""
@@ -2187,16 +1891,13 @@ msgstr[0] ""
 msgstr[1] ""
 "Wij nemen de bescherming van de hier opgeslagen gegevens zeer serieus."
 
-#: resources/views/page/sections/personal-data-processing.phtml:12
 #, php-format
 msgid "The host for this application is located in %s."
 msgstr "De host voor deze toepassing bevindt zich in %s."
 
-#: resources/views/page/sections/personal-data-processing.phtml:15
 msgid "The software used (webtrees) offers many protection mechanisms."
 msgstr "De gebruikte software (webtrees) biedt veel beschermingsmechanismen."
 
-#: resources/views/page/sections/personal-data-processing.phtml:19
 msgid ""
 "To inform you fully about the use of personal data, you are asked to take "
 "note of the following privacy information."
@@ -2204,7 +1905,6 @@ msgstr ""
 "Om u volledig te informeren over het gebruik van persoonsgegevens, verzoeken "
 "wij u kennis te nemen van de volgende privacyverklaring."
 
-#: resources/views/page/sections/purpose.phtml:9
 msgid ""
 "This website processes personal data for the purposes of historical and "
 "genealogical research."
@@ -2212,27 +1912,22 @@ msgstr ""
 "Deze website verwerkt persoonsgegevens ten behoeve van historisch en "
 "genealogisch onderzoek."
 
-#: resources/views/page/sections/purpose.phtml:13
 msgid "This includes:"
 msgstr "Dit omvat:"
 
-#: resources/views/page/sections/purpose.phtml:16
 msgid "Providing the online service, its functions, and its content"
 msgstr "Het aanbieden van de onlinedienst, de functies en de inhoud daarvan"
 
-#: resources/views/page/sections/purpose.phtml:17
 msgid "Answering contact requests and communicating with users"
 msgstr ""
 "Het beantwoorden van contactverzoeken en het communiceren met gebruikers"
 
-#: resources/views/page/sections/purpose.phtml:18
 msgid ""
 "Security measures, reach measurement, and improvement of the online presence"
 msgstr ""
 "Beveiligingsmaatregelen, bereikmeting en verbetering van de online "
 "aanwezigheid"
 
-#: resources/views/page/sections/security-measures.phtml:9
 msgid ""
 "Appropriate technical and organizational measures are taken in accordance "
 "with legal requirements, taking into account the state of the art, "
@@ -2249,7 +1944,6 @@ msgstr ""
 "betrokkenen. Op deze manier wordt een beveiligingsniveau gewaarborgd dat is "
 "afgestemd op de risico's."
 
-#: resources/views/page/sections/security-measures.phtml:13
 msgid ""
 "These measures include, in particular, securing the confidentiality, "
 "integrity, and availability of data, including by controlling access to the "
@@ -2259,29 +1953,24 @@ msgstr ""
 "vertrouwelijkheid, integriteit en beschikbaarheid van gegevens, onder meer "
 "door de toegang tot de gegevens te beheersen."
 
-#: resources/views/page/sections/security-measures.phtml:25
 msgid "SSL or TLS encryption"
 msgstr "SSL- of TLS-versleuteling"
 
-#: resources/views/page/sections/security-measures.phtml:28
 msgid ""
 "This site uses SSL or TLS encryption to protect the transmission of data."
 msgstr ""
 "Deze website maakt gebruik van SSL- of TLS-versleuteling om de overdracht "
 "van gegevens te beschermen."
 
-#: resources/views/page/sections/security-measures.phtml:29
-#, php-format
 msgid ""
 "You can recognize an encrypted connection by the fact that the browser "
 "address bar starts with %s, usually also indicated by a lock symbol in your "
 "browser bar."
 msgstr ""
-"U kunt een versleutelde verbinding herkennen doordat de adresbalk van de "
-"browser begint met %s, meestal ook aangeduid met een slotpictogram in de "
+"U herkent een versleutelde verbinding doordat de adresbalk van de browser "
+"begint met %s, wat meestal ook wordt aangegeven door een slotpictogram in uw "
 "browserbalk."
 
-#: resources/views/page/sections/security-measures.phtml:30
 msgid ""
 "When SSL or TLS encryption is enabled, the data transmitted cannot be read "
 "by third parties."
@@ -2289,11 +1978,9 @@ msgstr ""
 "Wanneer SSL- of TLS-versleuteling is ingeschakeld, kunnen de verzonden "
 "gegevens niet door derden worden gelezen."
 
-#: resources/views/page/sections/terminology.phtml:9
 msgid "Personal data"
 msgstr "Persoonsgegevens"
 
-#: resources/views/page/sections/terminology.phtml:10
 msgid ""
 "means any information relating to an identified or identifiable natural "
 "person, hereinafter referred to as the data subject."
@@ -2301,7 +1988,6 @@ msgstr ""
 "betekent alle informatie over een geïdentificeerde of identificeerbare "
 "natuurlijke persoon, hierna aangeduid als de betrokkene."
 
-#: resources/views/page/sections/terminology.phtml:11
 msgid ""
 "An identifiable natural person is one who can be identified, directly or "
 "indirectly, in particular by reference to an identifier such as a name, an "
@@ -2317,11 +2003,9 @@ msgstr ""
 "die de fysieke, fysiologische, genetische, psychische, economische, "
 "culturele of sociale identiteit van die betrokkene tot uitdrukking brengen."
 
-#: resources/views/page/sections/terminology.phtml:15
 msgid "Processing"
 msgstr "Verwerking"
 
-#: resources/views/page/sections/terminology.phtml:16
 msgid ""
 "means any operation performed on personal data, whether or not by automated "
 "means."
@@ -2329,16 +2013,13 @@ msgstr ""
 "betekent elke bewerking of elk geheel van bewerkingen met betrekking tot "
 "persoonsgegevens, al dan niet uitgevoerd met geautomatiseerde middelen."
 
-#: resources/views/page/sections/terminology.phtml:17
 msgid "The term is broad and includes practically any handling of such data."
 msgstr ""
 "Dit begrip is ruim en omvat vrijwel elke omgang met dergelijke gegevens."
 
-#: resources/views/page/sections/terminology.phtml:21
 msgid "Responsible person"
 msgstr "Verantwoordelijke persoon"
 
-#: resources/views/page/sections/terminology.phtml:22
 msgid ""
 "means the natural person who, alone or jointly with others, determines the "
 "purposes and means of the processing of personal data."
@@ -2347,17 +2028,15 @@ msgstr ""
 "doeleinden van en de middelen voor de verwerking van persoonsgegevens "
 "vaststelt."
 
-#: resources/views/page/sections/third-party-services.phtml:22
 msgid ""
 "When external services are used, personal data may be transferred to these "
 "providers, companies, or persons or disclosed to them where this is "
 "necessary for the respective service."
 msgstr ""
 "Wanneer externe diensten worden gebruikt, kunnen persoonsgegevens aan deze "
-"aanbieders, bedrijven of personen worden doorgegeven of aan hen worden "
+"providers, bedrijven of personen worden doorgegeven of aan hen worden "
 "openbaar gemaakt, voor zover dit noodzakelijk is voor de betreffende dienst."
 
-#: resources/views/page/sections/third-party-services.phtml:23
 msgid ""
 "Only those services that are configured and actually used by this website "
 "are listed here."
@@ -2365,30 +2044,24 @@ msgstr ""
 "Hier worden alleen de diensten vermeld die voor deze website zijn "
 "geconfigureerd en daadwerkelijk worden gebruikt."
 
-#: resources/views/page/sections/third-party-services.phtml:29
 #, php-format
 msgid "External tracking or analytics services are used; see the section %s."
 msgstr ""
 "Er wordt gebruikgemaakt van tracking- of analysediensten van derden; zie "
 "sectie %s."
 
-#: resources/views/page/sections/third-party-services.phtml:31
 msgid "External tracking or analytics services are used."
 msgstr "Er wordt gebruikgemaakt van tracking- of analysediensten van derden."
 
-#: resources/views/page/sections/third-party-services.phtml:37
 msgid "This website uses additional third-party services."
 msgstr "Deze website maakt gebruik van aanvullende diensten van derden."
 
-#: resources/views/page/sections/third-party-services.phtml:52
 msgid "not specified"
 msgstr "niet gespecificeerd"
 
-#: resources/views/page/sections/third-party-services.phtml:62
 msgid "Map service providers"
-msgstr "Aanbieders van kaartdiensten"
+msgstr "Providers van kaartdiensten"
 
-#: resources/views/page/sections/third-party-services.phtml:71
 #, php-format
 msgid ""
 "This website may embed maps from %s. The map content is loaded from servers "
@@ -2396,39 +2069,29 @@ msgid ""
 "displayed location data, and selected map settings to provide and cache the "
 "map functions."
 msgstr ""
-"Deze website kan kaarten van %s insluiten. De kaartinhoud wordt geladen van "
-"servers van deze aanbieder. De aanbieder kan daarbij gegevens zoals IP-"
-"adressen, weergegeven locatiegegevens en geselecteerde kaartinstellingen "
-"verwerken om de kaartfuncties te leveren en te cachen."
+"Deze website kan kaarten van %s insluiten. De kaartinhoud wordt geladen "
+"vanaf servers van deze provider, en de provider kan daarbij gegevens zoals "
+"IP-adressen, weergegeven locatiegegevens en geselecteerde kaartinstellingen "
+"verwerken om de kaartfuncties beschikbaar te stellen en te cachen."
 
-#: resources/views/page/sections/third-party-services.phtml:74
-#: resources/views/page/sections/third-party-services.phtml:113
 msgid "Data that may be processed by this service:"
 msgstr "Gegevens die door deze dienst kunnen worden verwerkt:"
 
-#: resources/views/page/sections/third-party-services.phtml:78
-#: resources/views/page/sections/third-party-services.phtml:117
 msgid "IP addresses"
 msgstr "IP-adressen"
 
-#: resources/views/page/sections/third-party-services.phtml:79
 msgid "Location data shown on maps"
 msgstr "Op kaarten weergegeven locatiegegevens"
 
-#: resources/views/page/sections/third-party-services.phtml:80
 msgid "Map display settings"
 msgstr "Instellingen voor de kaartweergave"
 
-#: resources/views/page/sections/third-party-services.phtml:88
-#: resources/views/page/sections/third-party-services.phtml:128
 msgid "Privacy notice:"
 msgstr "Privacyverklaring:"
 
-#: resources/views/page/sections/third-party-services.phtml:98
 msgid "Additional third-party service details"
 msgstr "Details over aanvullende diensten van derden"
 
-#: resources/views/page/sections/third-party-services.phtml:105
 msgid ""
 "Google Charts may be loaded from Google servers when statistics charts are "
 "viewed."
@@ -2436,7 +2099,6 @@ msgstr ""
 "Google Charts kan van Google-servers worden geladen wanneer "
 "statistiekgrafieken worden weergegeven."
 
-#: resources/views/page/sections/third-party-services.phtml:107
 msgid ""
 "Gravatar may be loaded from Automattic servers when the responsible person "
 "image is displayed."
@@ -2444,23 +2106,18 @@ msgstr ""
 "Gravatar kan van Automattic-servers worden geladen wanneer de afbeelding van "
 "de verantwoordelijke persoon wordt weergegeven."
 
-#: resources/views/page/sections/third-party-services.phtml:118
 msgid "Browser request metadata"
 msgstr "Metagegevens van browserverzoeken"
 
-#: resources/views/page/sections/third-party-services.phtml:119
 msgid "Chart data shown on statistics pages"
 msgstr "Op statistiekpagina's weergegeven diagramgegevens"
 
-#: resources/views/page/sections/third-party-services.phtml:120
 msgid "E-mail address hash"
 msgstr "Hash van het e-mailadres"
 
-#: resources/views/page/sections/third-party-services.phtml:139
 msgid "External transcription providers"
 msgstr "Externe transcriptiedienstverleners"
 
-#: resources/views/page/sections/third-party-services.phtml:142
 msgid ""
 "This website may use external transcription providers when a registered user "
 "explicitly starts such a workflow."
@@ -2469,23 +2126,19 @@ msgstr ""
 "wanneer een geregistreerde gebruiker een dergelijk proces uitdrukkelijk "
 "start."
 
-#: resources/views/page/sections/third-party-services.phtml:143
 msgid ""
 "In that case, the following provider services and data categories may be "
 "involved:"
 msgstr ""
-"In dat geval kunnen de volgende diensten van aanbieders en categorieën van "
+"In dat geval kunnen de volgende diensten van providers en categorieën van "
 "gegevens betrokken zijn:"
 
-#: resources/views/page/sections/third-party-services.phtml:152
 msgid "Data that may be exchanged:"
 msgstr "Gegevens die kunnen worden uitgewisseld:"
 
-#: resources/views/page/sections/third-party-services.phtml:170
 msgid "Data transfer to third countries"
 msgstr "Doorgifte van gegevens naar derde landen"
 
-#: resources/views/page/sections/third-party-services.phtml:173
 msgid ""
 "Some third-party services are provided from countries outside the European "
 "Union."
@@ -2493,7 +2146,6 @@ msgstr ""
 "Sommige diensten van derden worden aangeboden vanuit landen buiten de "
 "Europese Unie."
 
-#: resources/views/page/sections/third-party-services.phtml:174
 msgid ""
 "If personal data is transferred to such third countries, this is done only "
 "in accordance with the legal requirements of Articles 44 to 49 GDPR, for "
@@ -2506,11 +2158,9 @@ msgstr ""
 "(AVG), bijvoorbeeld op basis van een adequaatheidsbesluit, "
 "standaardcontractbepalingen of een andere rechtens toegestane waarborg."
 
-#: resources/views/page/sections/third-party-services.phtml:178
 msgid "This may apply to the following services:"
 msgstr "Dit kan van toepassing zijn op de volgende diensten:"
 
-#: resources/views/settings.phtml:85
 msgid ""
 "In which sequence should the sections of the chapter \"Data protection\" be "
 "shown?"
@@ -2518,20 +2168,16 @@ msgstr ""
 "In welke volgorde moeten de secties van het hoofdstuk \"Privacyverklaring\" "
 "worden weergegeven?"
 
-#: resources/views/settings.phtml:86 resources/views/settings.phtml:104
 msgid "Section"
 msgstr "Sectie"
 
-#: resources/views/settings.phtml:95
 #, php-format
 msgid "In which sequence should the subsections of \"%s\" be shown?"
 msgstr "In welke volgorde moeten de subsecties van \"%s\" worden weergegeven?"
 
-#: resources/views/settings.phtml:96
 msgid "Subsection"
 msgstr "Subsectie"
 
-#: resources/views/settings.phtml:103
 msgid ""
 "In which sequence should the sections of the chapter \"Legal Regulations\" "
 "be shown?"
@@ -2539,40 +2185,31 @@ msgstr ""
 "In welke volgorde moeten de secties van het hoofdstuk \"Wettelijke "
 "bepalingen\" worden weergegeven?"
 
-#: resources/views/settings.phtml:113
 msgid "In which sequence should the main chapters be shown?"
 msgstr "In welke volgorde moeten de hoofdhoofdstukken worden weergegeven?"
 
-#: resources/views/settings.phtml:117
 msgid "Chapter"
 msgstr "Hoofdstuk"
 
-#: resources/views/settings.phtml:217
 msgid "Restore default sorting for all chapters and sections"
 msgstr "Standaardsortering voor alle hoofdstukken en secties herstellen"
 
-#: resources/views/settings.phtml:220 resources/views/settings.phtml:306
 msgid "mandatory"
 msgstr "verplicht"
 
-#: resources/views/settings.phtml:225
 msgid "First name(s)"
 msgstr "Voorna(a)m(en)"
 
-#: resources/views/settings.phtml:234
 msgid "Surname(s)"
 msgstr "Achterna(a)m(en)"
 
-#: resources/views/settings.phtml:252
 msgid "Other sex"
 msgstr "Anders"
 
-#: resources/views/settings.phtml:262
 msgid "Should a gravatar image be shown (see www.gravatar.com)?"
 msgstr ""
 "Moet een Gravatar-afbeelding worden weergegeven (zie www.gravatar.com)?"
 
-#: resources/views/settings.phtml:279
 msgid ""
 "Does this website contain editorially prepared content that is not intended "
 "only for the family, such as blog posts or news articles?"
@@ -2580,63 +2217,48 @@ msgstr ""
 "Bevat deze website redactioneel opgestelde inhoud die niet uitsluitend voor "
 "de familie bedoeld is, zoals blogberichten of nieuwsartikelen?"
 
-#: resources/views/settings.phtml:289
-#, fuzzy
-#| msgid ""
-#| "If enabled, the person named in the legal notice is also shown as "
-#| "responsible for editorial content. The address is referenced from the "
-#| "legal notice above."
 msgid ""
 "If enabled, the person named in the legal notice is also shown as "
 "responsible for editorial content. The address is referenced from the legal "
 "notice above. If Section 18 paragraph 2 of the German Media State Treaty "
 "applies, this person must be resident in Germany."
 msgstr ""
-"Als deze optie is ingeschakeld, wordt de in het colofon vermelde persoon ook "
-"als redactioneel verantwoordelijke weergegeven. Het adres wordt overgenomen "
-"uit het bovenstaande colofon."
+"Indien ingeschakeld, wordt de in het colofon genoemde persoon ook "
+"weergegeven als verantwoordelijke voor de redactionele inhoud. Het adres "
+"wordt overgenomen uit het bovenstaande colofon. Indien § 18 lid 2 van het "
+"Duitse Medienstaatsvertrag van toepassing is, moet deze persoon in Duitsland "
+"woonachtig zijn."
 
-#: resources/views/settings.phtml:295
 msgid "Club or Organization"
 msgstr "Vereniging of organisatie"
 
-#: resources/views/settings.phtml:300
 msgid "Name of club or organization"
 msgstr "Naam van de vereniging of organisatie"
 
-#: resources/views/settings.phtml:306
 msgid "Address data"
 msgstr "Adresgegevens"
 
-#: resources/views/settings.phtml:311
 msgid "Additional address line"
 msgstr "Aanvullende adresregel"
 
-#: resources/views/settings.phtml:319
 msgid "Street name and house number"
 msgstr "Straatnaam en huisnummer"
 
-#: resources/views/settings.phtml:327
 msgid "City including zip code"
 msgstr "Plaats inclusief postcode"
 
-#: resources/views/settings.phtml:333
 msgid "Communication data"
 msgstr "Communicatiegegevens"
 
-#: resources/views/settings.phtml:338
 msgid "Phone number (including country prefix, e.g. \"+49 30 123456\")"
 msgstr "Telefoonnummer (inclusief landcode, bijvoorbeeld \"+31 10 123456\")"
 
-#: resources/views/settings.phtml:346
 msgid "Fax number (including country prefix, e.g. \"+49 30 654321\")"
 msgstr "Faxnummer (inclusief landcode, bijvoorbeeld \"+31 10 654321\")"
 
-#: resources/views/settings.phtml:354
 msgid "eMail address"
 msgstr "E-mailadres"
 
-#: resources/views/settings.phtml:364
 msgid ""
 "Should a simple eMail link be used (if \"no\": subject and body of eMail are "
 "generated, too)?"
@@ -2644,25 +2266,20 @@ msgstr ""
 "Moet een eenvoudige e-maillink worden gebruikt (indien \"nee\": worden ook "
 "het onderwerp en de inhoud van de e-mail gegenereerd)?"
 
-#: resources/views/settings.phtml:377
 msgid "Registration data"
 msgstr "Registratiegegevens"
 
-#: resources/views/settings.phtml:382
 msgid "Label like \"VAT ID No.\" or other registration number label"
 msgstr ""
 "Aanduiding zoals \"btw-nummer\" of een andere benaming voor een "
 "registratienummer"
 
-#: resources/views/settings.phtml:390
 msgid "Registration number"
 msgstr "Registratienummer"
 
-#: resources/views/settings.phtml:396
 msgid "Additional contacts to be shown"
 msgstr "Aanvullende contactpersonen die moeten worden weergegeven"
 
-#: resources/views/settings.phtml:404
 msgid ""
 "Should the tree contacts be shown (there are maybe genealogical and "
 "technical contacts defined)?"
@@ -2670,41 +2287,35 @@ msgstr ""
 "Moeten de contactpersonen van de stamboom worden weergegeven (er kunnen "
 "genealogische en technische contactpersonen zijn gedefinieerd)?"
 
-#: resources/views/settings.phtml:421
 msgid "Should the administrators of this website be shown?"
 msgstr "Moeten de beheerders van deze website worden weergegeven?"
 
-#: resources/views/settings.phtml:442
 msgid "Has a data protection officer been designated?"
-msgstr ""
+msgstr "Is er een functionaris voor gegevensbescherming aangewezen?"
 
-#: resources/views/settings.phtml:452
 msgid ""
 "If no data protection officer has been designated, the privacy policy states "
 "that no designation is required under the applicable law."
 msgstr ""
+"Als er geen functionaris voor gegevensbescherming is aangewezen, wordt in de "
+"privacyverklaring vermeld dat volgens het toepasselijke recht geen "
+"aanwijzing vereist is."
 
-#: resources/views/settings.phtml:461
 msgid "Name of the data protection officer"
-msgstr ""
+msgstr "Naam van de functionaris voor gegevensbescherming"
 
-#: resources/views/settings.phtml:468
 msgid "Company of the data protection officer"
-msgstr ""
+msgstr "Bedrijf van de functionaris voor gegevensbescherming"
 
-#: resources/views/settings.phtml:475
 msgid "Address of the data protection officer"
-msgstr ""
+msgstr "Adres van de functionaris voor gegevensbescherming"
 
-#: resources/views/settings.phtml:482
 msgid "E-mail address of the data protection officer"
-msgstr ""
+msgstr "E-mailadres van de functionaris voor gegevensbescherming"
 
-#: resources/views/settings.phtml:493
 msgid "Research purpose details"
 msgstr "Details van het onderzoeksdoel"
 
-#: resources/views/settings.phtml:506
 msgid ""
 "The detail fields are optional and make the generated purpose description "
 "more specific. Visibility and sequence are controlled by the subsections of "
@@ -2716,16 +2327,13 @@ msgstr ""
 "subsecties van \"Doel\". Details van de onderzoeksfocus worden niet vertaald "
 "en moeten daarom kort worden gehouden."
 
-#: resources/views/settings.phtml:513
 msgid "Registered users"
 msgstr "Geregistreerde gebruikers"
 
-#: resources/views/settings.phtml:519
 msgid "Are the registered users relatives or relatives by marriage?"
 msgstr ""
 "Zijn de geregistreerde gebruikers familieleden of aangetrouwde familieleden?"
 
-#: resources/views/settings.phtml:529
 msgid ""
 "Select this only if registered users are limited to relatives or relatives "
 "by marriage and family-internal confidentiality should be stated in the "
@@ -2735,23 +2343,19 @@ msgstr ""
 "familieleden of aangetrouwde familieleden en de vertrouwelijkheid binnen de "
 "familie in de privacyverklaring moet worden vermeld."
 
-#: resources/views/settings.phtml:532
 #, php-format
 msgid "Registered users: %s"
 msgstr "Geregistreerde gebruikers: %s"
 
-#: resources/views/settings.phtml:542
 msgid "When are inactive user accounts deleted?"
 msgstr "Wanneer worden inactieve gebruikersaccounts verwijderd?"
 
-#: resources/views/settings.phtml:550
 #, php-format
 msgid "after %s year"
 msgid_plural "after %s years"
 msgstr[0] "na %s jaar"
 msgstr[1] "na %s jaar"
 
-#: resources/views/settings.phtml:555
 msgid ""
 "If \"never\" is selected, no retention period for inactive user accounts is "
 "mentioned in the privacy policy."
@@ -2759,42 +2363,33 @@ msgstr ""
 "Als \"nooit\" is geselecteerd, wordt in de privacyverklaring geen "
 "bewaartermijn voor inactieve gebruikersaccounts vermeld."
 
-#: resources/views/settings.phtml:558
 msgid "No user account has been inactive for at least one year."
 msgstr "Geen enkel gebruikersaccount is al minstens één jaar inactief."
 
-#: resources/views/settings.phtml:560
 msgid "User accounts inactive for at least one year:"
 msgstr "Gebruikersaccounts die al minstens één jaar inactief zijn:"
 
-#: resources/views/settings.phtml:568
 #, php-format
 msgid "%1$s: inactive since %2$s (%3$s year)."
 msgid_plural "%1$s: inactive since %2$s (%3$s years)."
 msgstr[0] "%1$s: inactief sinds %2$s (%3$s jaar)."
 msgstr[1] "%1$s: inactief sinds %2$s (%3$s jaar)."
 
-#: resources/views/settings.phtml:584
 msgid "Privacy policy reference date"
 msgstr "Referentiedatum van de privacyverklaring"
 
-#: resources/views/settings.phtml:588
 msgid "Which date should be shown in the privacy policy?"
 msgstr "Welke datum moet in de privacyverklaring worden weergegeven?"
 
-#: resources/views/settings.phtml:595
 msgid "Module release date"
 msgstr "Releasedatum van de module"
 
-#: resources/views/settings.phtml:596
 msgid "Manually configured date"
 msgstr "Handmatig ingestelde datum"
 
-#: resources/views/settings.phtml:597
 msgid "Current date"
 msgstr "Huidige datum"
 
-#: resources/views/settings.phtml:602
 msgid ""
 "Use the current date only if you want the dynamically generated privacy "
 "policy to always show the day on which it is viewed."
@@ -2802,61 +2397,44 @@ msgstr ""
 "Gebruik de huidige datum alleen wanneer de dynamisch gegenereerde "
 "privacyverklaring steeds de dag moet tonen waarop zij wordt geraadpleegd."
 
-#: resources/views/settings.phtml:607
 msgid "Manual privacy policy date"
 msgstr "Handmatig ingestelde datum van de privacyverklaring"
 
-#: resources/views/settings.phtml:612
 msgid "Used only when the manually configured date option is selected."
 msgstr ""
 "Wordt alleen gebruikt wanneer de optie voor een handmatig ingestelde datum "
 "is geselecteerd."
 
-#: resources/views/settings.phtml:618
 msgid "Server location"
 msgstr "Serverlocatie"
 
-#: resources/views/settings.phtml:623
 msgid "Country of the webtrees server location"
 msgstr "Land waar de webtrees-server zich bevindt"
 
-#: resources/views/settings.phtml:631
 msgid "Hosting service"
 msgstr "Hostingprovider"
 
-#: resources/views/settings.phtml:636
 msgid "Name of hosting service company"
 msgstr "Naam van de hostingprovider"
 
-#: resources/views/settings.phtml:644
 msgid "Hosting service link (URL)"
 msgstr "Link naar de hostingprovider (URL)"
 
-#: resources/views/settings.phtml:652
 msgid "Hosting service link to privacy notice (URL)"
 msgstr "Link naar de privacyverklaring van de hostingprovider (URL)"
 
-#: resources/views/settings.phtml:661
 msgid "Should a section about Order Processing agreement be shown?"
 msgstr "Moet een sectie over de verwerkersovereenkomst worden weergegeven?"
 
-#: resources/views/settings.phtml:674
-#, fuzzy
-#| msgid "Last date of Order Processing agreement"
 msgid "Date when the Order Processing agreement was first concluded"
-msgstr "Datum van de meest recente verwerkersovereenkomst"
+msgstr "Datum waarop de verwerkersovereenkomst voor het eerst is afgesloten"
 
-#: resources/views/settings.phtml:682
-#, fuzzy
-#| msgid "Last date of Order Processing agreement"
 msgid "Date when the Order Processing agreement was last updated"
-msgstr "Datum van de meest recente verwerkersovereenkomst"
+msgstr "Datum waarop de verwerkersovereenkomst voor het laatst is bijgewerkt"
 
-#: resources/views/settings.phtml:695
 msgid "Protection period after death"
 msgstr "Beschermingsperiode na overlijden"
 
-#: resources/views/settings.phtml:701
 msgid ""
 "For how many years after death should particularly sensitive genealogical "
 "data remain protected?"
@@ -2864,14 +2442,12 @@ msgstr ""
 "Hoeveel jaar na het overlijden moeten bijzonder gevoelige genealogische "
 "gegevens beschermd blijven?"
 
-#: resources/views/settings.phtml:702
 msgid ""
 "Use 0 if no specific release period should be stated in the privacy policy."
 msgstr ""
 "Gebruik 0 als er in de privacyverklaring geen specifieke vrijgaveperiode "
 "moet worden vermeld."
 
-#: resources/views/settings.phtml:703
 msgid ""
 "The same period should be used by the privacy assistant when applying RESN "
 "CONFIDENTIAL automatically."
@@ -2879,15 +2455,12 @@ msgstr ""
 "Dezelfde periode moet door de privacyassistent worden gebruikt wanneer RESN "
 "CONFIDENTIAL automatisch wordt toegepast."
 
-#: resources/views/settings.phtml:710
 msgid "Supervisory authority"
 msgstr "Toezichthoudende autoriteit"
 
-#: resources/views/settings.phtml:714
 msgid "Name of the competent supervisory authority"
 msgstr "Naam van de bevoegde toezichthoudende autoriteit"
 
-#: resources/views/settings.phtml:719
 msgid ""
 "If this field is empty, no specific supervisory authority is named in the "
 "privacy policy."
@@ -2895,11 +2468,9 @@ msgstr ""
 "Als dit veld leeg is, wordt in de privacyverklaring geen specifieke "
 "toezichthoudende autoriteit genoemd."
 
-#: resources/views/settings.phtml:724
 msgid "URL of the competent supervisory authority"
 msgstr "URL van de bevoegde toezichthoudende autoriteit"
 
-#: resources/views/settings.phtml:729
 msgid ""
 "The specific supervisory authority is linked only when both name and URL are "
 "configured."
@@ -2907,20 +2478,16 @@ msgstr ""
 "De specifieke toezichthoudende autoriteit wordt alleen gekoppeld wanneer "
 "zowel naam als URL zijn ingesteld."
 
-#: resources/views/settings.phtml:736
 msgid "External services"
 msgstr "Externe diensten"
 
-#: resources/views/settings.phtml:742
 msgid "Should Google Charts be mentioned as an external service?"
 msgstr "Moet Google Charts als externe dienst worden vermeld?"
 
-#: resources/views/settings.phtml:752
 #, php-format
 msgid "webtrees statistics pages can load Google Charts from %s."
 msgstr "webtrees-statistiekpagina's kunnen Google Charts laden vanaf %s."
 
-#: resources/views/settings.phtml:753
 msgid ""
 "Google Charts is only listed when this option is enabled and the webtrees "
 "statistics chart module is enabled."
@@ -2928,11 +2495,9 @@ msgstr ""
 "Google Charts wordt alleen vermeld wanneer deze optie is ingeschakeld en de "
 "webtrees-module voor statistiekgrafieken is ingeschakeld."
 
-#: resources/views/settings.phtml:760
 msgid "Additional third-party services"
 msgstr "Aanvullende diensten van derden"
 
-#: resources/views/settings.phtml:765
 #, php-format
 msgid ""
 "Enter one service per line using the format “Name | URL | Country”. The "
@@ -2942,119 +2507,11 @@ msgstr ""
 "land is optioneel, maar moet worden opgegeven als het bekend is. Voorbeeld: "
 "%s"
 
-#: resources/views/settings.phtml:778
 msgid "Should a copyright notice be included in this page footer element?"
 msgstr "Moet er een auteursrechtvermelding in de voettekst worden opgenomen?"
 
-#: resources/views/settings.phtml:793
 msgid "Start year of copyright (e.g. \"2020\")"
 msgstr "Beginjaar van het auteursrecht (bijv. \"2020\")"
 
-#: resources/views/settings.phtml:802
 msgid "Name of holder of copyright"
 msgstr "Naam van de auteursrechthebbende"
-
-#~ msgid "This took place"
-#~ msgstr "Dit vond plaats"
-
-#, php-format
-#~ msgid "for the first time on %s"
-#~ msgstr "voor het eerst op %s"
-
-#~ msgid "and"
-#~ msgstr "en"
-
-#, php-format
-#~ msgid "most recently on %s"
-#~ msgstr "meest recent op %s"
-
-#~ msgid ""
-#~ "However, fully and clearly legally compliant implementation in all cases "
-#~ "is probably not possible in the field of online genealogy."
-#~ msgstr ""
-#~ "Een volledig en ondubbelzinnig juridisch conforme uitvoering is op het "
-#~ "terrein van online genealogie waarschijnlijk niet in alle gevallen "
-#~ "mogelijk."
-
-#~ msgid ""
-#~ "Too many questions are disputed and leave room for legal interpretation."
-#~ msgstr ""
-#~ "Te veel vragen zijn omstreden en laten ruimte voor juridische "
-#~ "interpretatie."
-
-#~ msgid "Creating a family tree works differently."
-#~ msgstr "Het opstellen van een stamboom werkt anders."
-
-#~ msgid ""
-#~ "Usually, information about a branch of the family is obtained from one "
-#~ "person in that branch."
-#~ msgstr ""
-#~ "Gewoonlijk wordt informatie over een familietak verkregen van één persoon "
-#~ "binnen die tak."
-
-#~ msgid ""
-#~ "I have not obtained verifiable consent from our relatives to enter the "
-#~ "respective family in this family tree."
-#~ msgid_plural ""
-#~ "We have not obtained verifiable consent from our relatives to enter the "
-#~ "respective family in this family tree."
-#~ msgstr[0] ""
-#~ "Ik heb van onze familieleden geen verifieerbare toestemming verkregen om "
-#~ "de betreffende familie in deze stamboom op te nemen."
-#~ msgstr[1] ""
-#~ "Wij hebben van onze familieleden geen verifieerbare toestemming verkregen "
-#~ "om de betreffende familie in deze stamboom op te nemen."
-
-#~ msgid ""
-#~ "In my opinion, full compliance with the GDPR would therefore only be "
-#~ "possible if I took large parts of this family tree offline again."
-#~ msgid_plural ""
-#~ "In our opinion, full compliance with the GDPR would therefore only be "
-#~ "possible if we took large parts of this family tree offline again."
-#~ msgstr[0] ""
-#~ "Naar mijn mening zou volledige naleving van de AVG daarom alleen mogelijk "
-#~ "zijn als ik grote delen van deze stamboom weer offline zou halen."
-#~ msgstr[1] ""
-#~ "Naar onze mening zou volledige naleving van de AVG daarom alleen mogelijk "
-#~ "zijn als wij grote delen van deze stamboom weer offline zouden halen."
-
-#~ msgid ""
-#~ "In my opinion, full compliance with every possible privacy expectation "
-#~ "would therefore only be possible if I took large parts of this family "
-#~ "tree offline again."
-#~ msgid_plural ""
-#~ "In our opinion, full compliance with every possible privacy expectation "
-#~ "would therefore only be possible if we took large parts of this family "
-#~ "tree offline again."
-#~ msgstr[0] ""
-#~ "Volledige naleving van elke denkbare privacyverwachting zou naar mijn "
-#~ "mening daarom alleen mogelijk zijn als ik grote delen van deze stamboom "
-#~ "weer offline zou halen."
-#~ msgstr[1] ""
-#~ "Volledige naleving van elke denkbare privacyverwachting zou naar onze "
-#~ "mening daarom alleen mogelijk zijn als wij grote delen van deze stamboom "
-#~ "weer offline zouden halen."
-
-#~ msgid ""
-#~ "This, however, would remove the ability of the target group to use it and "
-#~ "find their own paths through the extended kinship network."
-#~ msgstr ""
-#~ "Daardoor zou de doelgroep echter de mogelijkheid verliezen om deze "
-#~ "website te gebruiken en eigen wegen te vinden binnen het uitgebreide "
-#~ "verwantschapsnetwerk."
-
-#~ msgid ""
-#~ "I would therefore like to agree on the following procedure with all users "
-#~ "of this website, hoping that this will satisfy the law:"
-#~ msgid_plural ""
-#~ "We would therefore like to agree on the following procedure with all "
-#~ "users of this website, hoping that this will satisfy the law:"
-#~ msgstr[0] ""
-#~ "Ik wil daarom graag met alle gebruikers van deze website de volgende "
-#~ "werkwijze afspreken, in de hoop dat daarmee aan de wet wordt voldaan:"
-#~ msgstr[1] ""
-#~ "Wij willen daarom graag met alle gebruikers van deze website de volgende "
-#~ "werkwijze afspreken, in de hoop dat daarmee aan de wet wordt voldaan:"
-
-#~ msgid "First date of Order Processing agreement"
-#~ msgstr "Datum van de eerste verwerkersovereenkomst"
