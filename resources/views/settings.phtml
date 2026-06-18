@@ -217,121 +217,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
             <?= I18N::translate('Restore default sorting for all chapters and sections') ?>
         </button>
 
-        <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="DataProtectionOfficer">
-            <h4><?= I18N::translate('Data protection officer') ?></h4>
-
-            <div class="row">
-                <fieldset class="form-group mb-3 col-12">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-3 wt-page-options-label">
-                            <?= I18N::translate('Has a data protection officer been designated?') ?>
-                        </legend>
-                        <div class="col-sm-9 wt-page-options-value">
-                            <?= view('components/radios-inline', [
-                                'id' => 'dpoNamed',
-                                'name' => 'dpoNamed',
-                                'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
-                                'selected' => (int)($dpoNamed ?? '0'),
-                            ]) ?>
-                            <p class="small text-muted">
-                                <?= I18N::translate('If no data protection officer has been designated, the privacy policy states that no designation is required under the applicable law.') ?>
-                            </p>
-                        </div>
-                    </div>
-                </fieldset>
-
-                <div class="col-12 hh-legal-notice-input-setting" data-dependent-on-input="dpoNamed" data-dependent-value="1">
-                    <div class="row">
-                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoName">
-                            <?= I18N::translate('Name of the data protection officer') ?>
-                        </label>
-                        <div class="col-sm-9 wt-page-options-value">
-                            <input class="form-control" id="dpoName" name="dpoName" type="text" value="<?= e($dpoName) ?>">
-                        </div>
-
-                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoCompany">
-                            <?= I18N::translate('Company of the data protection officer') ?>
-                        </label>
-                        <div class="col-sm-9 wt-page-options-value">
-                            <input class="form-control" id="dpoCompany" name="dpoCompany" type="text" value="<?= e($dpoCompany) ?>">
-                        </div>
-
-                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoAddress">
-                            <?= I18N::translate('Address of the data protection officer') ?>
-                        </label>
-                        <div class="col-sm-9 wt-page-options-value">
-                            <textarea class="form-control" id="dpoAddress" name="dpoAddress" rows="3"><?= e($dpoAddress) ?></textarea>
-                        </div>
-
-                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoEmail">
-                            <?= I18N::translate('E-mail address of the data protection officer') ?>
-                        </label>
-                        <div class="col-sm-9 wt-page-options-value">
-                            <input class="form-control" id="dpoEmail" name="dpoEmail" type="email" value="<?= e($dpoEmail) ?>">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="Purpose" data-dependent-on-any-chapter="<?= e(implode(' ', array_keys($researchTypeDetailPreferences))) ?>">
-            <h4><?= I18N::translate('Research purpose details') ?></h4>
-
-            <div class="row">
-                <?php foreach ($researchTypeDetailPreferences as $researchType => $detailPreference) : ?>
-                    <label class="col-sm-3 col-form-label wt-page-options-label hh-legal-notice-section-setting" data-dependent-on-chapter="<?= e($researchType) ?>" for="<?= e($detailPreference) ?>">
-                        <?= e($chapterByKey[$researchType]->getHeading()) ?>
-                    </label>
-                    <div class="col-sm-9 wt-page-options-value hh-legal-notice-section-setting" data-dependent-on-chapter="<?= e($researchType) ?>">
-                        <input class="form-control" id="<?= e($detailPreference) ?>" name="<?= e($detailPreference) ?>" type="text" value="<?= e($$detailPreference) ?>" placeholder="<?= e($researchTypePrompts[$researchType]) ?>">
-                    </div>
-                <?php endforeach ?>
-                <div class="offset-sm-3 col-sm-9 wt-page-options-value">
-                    <p class="small text-muted mb-0">
-                        <?= I18N::translate('The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of "Purpose". Research focus details are not translated, so they should be kept short.') ?>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h4><?= MoreI18N::xlate('Copyright') ?></h4>
-
-        <div class="row">
-            <!-- show copyright -->
-            <fieldset class="form-group mb-3">
-                <div class="row">
-                    <legend class="col-form-label col-sm-3 wt-page-options-label">
-                        <?= I18N::translate('Should a copyright notice be included in this page footer element?') ?>
-                    </legend>
-                    <div class="col-sm-9 wt-page-options-value">
-                        <?= view('components/radios-inline', [
-                            'id' => 'showCopyRight',
-                            'name' => 'showCopyRight',
-                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
-                            'selected' => (int)$showCopyRight
-                        ]) ?>
-                    </div>
-                </div>
-            </fieldset>
-
-            <!-- copy right start year -->
-            <label class="col-sm-3 col-form-label wt-page-options-label" for="copyRightStartYear">
-                <?= I18N::translate('Start year of copyright (e.g. "2020")') ?>
-            </label>
-            <div class="col-sm-9 wt-page-options-value">
-                <input class="form-control" id="copyRightStartYear" name="copyRightStartYear" type="text"
-                       value="<?= $copyRightStartYear ?>">
-            </div>
-
-            <!-- name of holder of copy right -->
-            <label class="col-sm-3 col-form-label wt-page-options-label" for="copyRightName">
-                <?= I18N::translate('Name of holder of copyright') ?>
-            </label>
-            <div class="col-sm-9 wt-page-options-value">
-                <input class="form-control" id="copyRightName" name="copyRightName" type="text"
-                       value="<?= $copyRightName ?>">
-            </div>
-        </div>
         <h4><?= MoreI18N::xlate('Responsible person') . ' (' . I18N::translate('Name') . ' ' . I18N::translate('mandatory') . ')' ?></h4>
 
         <div class="row">
@@ -545,6 +430,83 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                     </div>
                 </div>
             </fieldset>
+        </div>
+
+        <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="DataProtectionOfficer">
+            <h4><?= I18N::translate('Data protection officer') ?></h4>
+
+            <div class="row">
+                <fieldset class="form-group mb-3 col-12">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 wt-page-options-label">
+                            <?= I18N::translate('Has a data protection officer been designated?') ?>
+                        </legend>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <?= view('components/radios-inline', [
+                                'id' => 'dpoNamed',
+                                'name' => 'dpoNamed',
+                                'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
+                                'selected' => (int)($dpoNamed ?? '0'),
+                            ]) ?>
+                            <p class="small text-muted">
+                                <?= I18N::translate('If no data protection officer has been designated, the privacy policy states that no designation is required under the applicable law.') ?>
+                            </p>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="col-12 hh-legal-notice-input-setting" data-dependent-on-input="dpoNamed" data-dependent-value="1">
+                    <div class="row">
+                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoName">
+                            <?= I18N::translate('Name of the data protection officer') ?>
+                        </label>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <input class="form-control" id="dpoName" name="dpoName" type="text" value="<?= e($dpoName) ?>">
+                        </div>
+
+                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoCompany">
+                            <?= I18N::translate('Company of the data protection officer') ?>
+                        </label>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <input class="form-control" id="dpoCompany" name="dpoCompany" type="text" value="<?= e($dpoCompany) ?>">
+                        </div>
+
+                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoAddress">
+                            <?= I18N::translate('Address of the data protection officer') ?>
+                        </label>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <textarea class="form-control" id="dpoAddress" name="dpoAddress" rows="3"><?= e($dpoAddress) ?></textarea>
+                        </div>
+
+                        <label class="col-sm-3 col-form-label wt-page-options-label" for="dpoEmail">
+                            <?= I18N::translate('E-mail address of the data protection officer') ?>
+                        </label>
+                        <div class="col-sm-9 wt-page-options-value">
+                            <input class="form-control" id="dpoEmail" name="dpoEmail" type="email" value="<?= e($dpoEmail) ?>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="Purpose" data-dependent-on-any-chapter="<?= e(implode(' ', array_keys($researchTypeDetailPreferences))) ?>">
+            <h4><?= I18N::translate('Research purpose details') ?></h4>
+
+            <div class="row">
+                <?php foreach ($researchTypeDetailPreferences as $researchType => $detailPreference) : ?>
+                    <label class="col-sm-3 col-form-label wt-page-options-label hh-legal-notice-section-setting" data-dependent-on-chapter="<?= e($researchType) ?>" for="<?= e($detailPreference) ?>">
+                        <?= e($chapterByKey[$researchType]->getHeading()) ?>
+                    </label>
+                    <div class="col-sm-9 wt-page-options-value hh-legal-notice-section-setting" data-dependent-on-chapter="<?= e($researchType) ?>">
+                        <input class="form-control" id="<?= e($detailPreference) ?>" name="<?= e($detailPreference) ?>" type="text" value="<?= e($$detailPreference) ?>" placeholder="<?= e($researchTypePrompts[$researchType]) ?>">
+                    </div>
+                <?php endforeach ?>
+                <div class="offset-sm-3 col-sm-9 wt-page-options-value">
+                    <p class="small text-muted mb-0">
+                        <?= I18N::translate('The detail fields are optional and make the generated purpose description more specific. Visibility and sequence are controlled by the subsections of "Purpose". Research focus details are not translated, so they should be kept short.') ?>
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="UserAccountData">
@@ -803,6 +765,45 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                         <?= I18N::translate('Enter one service per line using the format “Name | URL | Country”. The country is optional, but should be provided when known. Example: %s', 'Usercentrics | https://usercentrics.com/ | Germany') ?>
                     </p>
                 </div>
+            </div>
+        </div>
+
+        <h4><?= MoreI18N::xlate('Copyright') ?></h4>
+
+        <div class="row">
+            <!-- show copyright -->
+            <fieldset class="form-group mb-3">
+                <div class="row">
+                    <legend class="col-form-label col-sm-3 wt-page-options-label">
+                        <?= I18N::translate('Should a copyright notice be included in this page footer element?') ?>
+                    </legend>
+                    <div class="col-sm-9 wt-page-options-value">
+                        <?= view('components/radios-inline', [
+                            'id' => 'showCopyRight',
+                            'name' => 'showCopyRight',
+                            'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
+                            'selected' => (int)$showCopyRight
+                        ]) ?>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- copy right start year -->
+            <label class="col-sm-3 col-form-label wt-page-options-label" for="copyRightStartYear">
+                <?= I18N::translate('Start year of copyright (e.g. "2020")') ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <input class="form-control" id="copyRightStartYear" name="copyRightStartYear" type="text"
+                       value="<?= $copyRightStartYear ?>">
+            </div>
+
+            <!-- name of holder of copy right -->
+            <label class="col-sm-3 col-form-label wt-page-options-label" for="copyRightName">
+                <?= I18N::translate('Name of holder of copyright') ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <input class="form-control" id="copyRightName" name="copyRightName" type="text"
+                       value="<?= $copyRightName ?>">
             </div>
         </div>
 
