@@ -144,7 +144,6 @@ class LegalNoticeSupport
         return [
             'DataProtection'        => ['level' => 1, 'id' =>  1, 'link' => 0, 'heading' => I18N::translateContext('heading','Data protection')],
             'DataProtectionOfficer' => ['level' => 2, 'id' => 124, 'link' => 1, 'heading' => I18N::translate('Data protection officer')],
-            'FurtherInformation'    => ['level' => 2, 'id' => 125, 'link' => 1, 'heading' => I18N::translate('Further information')],
             'Purpose'               => ['level' => 2, 'id' =>  2, 'link' => 1, 'heading' => I18N::translateContext('heading','Purpose')],
             'ResearchFamily'        => ['level' => 3, 'id' => 117, 'link' => 2, 'heading' => I18N::translate('Family and ancestry research')],
             'ResearchOns'           => ['level' => 3, 'id' => 118, 'link' => 2, 'heading' => I18N::translate('One-name study')],
@@ -175,6 +174,7 @@ class LegalNoticeSupport
             'RightToObject'         => ['level' => 3, 'id' => 114, 'link' => 6, 'heading' => I18N::translate('Right to object')],
             'CorrectionDeletion'    => ['level' => 2, 'id' =>  7, 'link' => 1, 'heading' => I18N::translateContext('heading','Right to correction or deletion of personal data')],
             'Appeal'                => ['level' => 2, 'id' =>  8, 'link' => 1, 'heading' => I18N::translateContext('heading','Right of appeal')],
+            'FurtherInformation'    => ['level' => 2, 'id' => 125, 'link' => 1, 'heading' => I18N::translate('Further information')],
             'LegalRegulations'      => ['level' => 1, 'id' =>  9, 'link' => 0, 'heading' => I18N::translateContext('heading','Legal regulations')],
             'LiabilityContent'      => ['level' => 2, 'id' => 10, 'link' => 9, 'heading' => I18N::translateContext('heading','Liability for the content of these websites')],
             'LiabilityLinks'        => ['level' => 2, 'id' => 11, 'link' => 9, 'heading' => I18N::translateContext('heading','Liability for links')],
@@ -204,7 +204,6 @@ class LegalNoticeSupport
         return [
             'DataProtection'        => ['contentIWe' => false, 'content'   => []],
             'DataProtectionOfficer' => ['contentIWe' => false, 'content'   => []],
-            'FurtherInformation'    => ['contentIWe' => false, 'content'   => []],
             'Purpose'               => ['contentIWe' => false, 'content'   => []],
             'ResearchFamily'        => ['contentIWe' => false, 'content'   => []],
             'ResearchOns'           => ['contentIWe' => false, 'content'   => []],
@@ -235,6 +234,7 @@ class LegalNoticeSupport
             'RightToObject'         => ['contentIWe' => false, 'content'   => []],
             'CorrectionDeletion'    => ['contentIWe' => false, 'content'   => []],
             'Appeal'                => ['contentIWe' => false, 'content'   => []],
+            'FurtherInformation'    => ['contentIWe' => false, 'content'   => []],
             'LegalRegulations'      => ['contentIWe' => false, 'content'   => []],
             'DisputeResolution'     => $useEuPrivacyLaw
                 ? ['contentIWe' => true,
@@ -333,7 +333,6 @@ class LegalNoticeSupport
     {
         return [
             'DataProtectionOfficer' => 'data-protection-officer',
-            'FurtherInformation'   => 'further-information',
             'Purpose'              => 'purpose',
             'PersonalData'         => 'personal-data-processing',
             'Privacy'              => 'terminology',
@@ -345,6 +344,7 @@ class LegalNoticeSupport
             'SecurityMeasures'     => 'security-measures',
             'ProvidingInformation' => 'data-rights',
             'OnlineGenealogyPrivacy' => 'online-genealogy-privacy',
+            'FurtherInformation'   => 'further-information',
         ];
     }
 
