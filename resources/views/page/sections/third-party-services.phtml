@@ -57,18 +57,18 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
             <?php $thirdPartyServicesWithData = array_filter($thirdPartyServices, static fn (array $service): bool => count($service['data'] ?? []) > 0 || ($service['privacy_url'] ?? '') !== '') ?>
             <?php if (count($thirdPartyServicesWithData) > 0) : ?>
-                <?php $mapServiceProviders = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => ($service['name'] ?? '') === 'OpenStreetMap') ?>
+                <?php $mapServiceProviders = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => ($service['group'] ?? '') === 'map') ?>
                 <?php if (count($mapServiceProviders) > 0) : ?>
                     <h5><?= I18N::translate('Map service providers') ?></h5>
                 <?php endif ?>
                 <ul>
                     <?php foreach ($thirdPartyServicesWithData as $service) : ?>
-                        <?php if (($service['name'] ?? '') !== 'OpenStreetMap') : ?>
+                        <?php if (($service['group'] ?? '') !== 'map') : ?>
                             <?php continue ?>
                         <?php endif ?>
                         <li>
                             <strong><?= e($service['name']) ?></strong>
-                            <?= I18N::translate('This website may embed maps from OpenStreetMap. The map content is loaded from OpenStreetMap servers, and OpenStreetMap may process data such as IP addresses, displayed location data, and selected map settings to provide and cache the map functions.') ?>
+                            <?= I18N::translate('This website may embed maps from %s. The map content is loaded from servers of this provider, and the provider may process data such as IP addresses, displayed location data, and selected map settings to provide and cache the map functions.', e($service['name'])) ?>
                             <?php if (count($service['data'] ?? []) > 0) : ?>
                                 <br>
                                 <?= I18N::translate('Data that may be processed by this service:') ?>
@@ -93,7 +93,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 </ul>
             <?php endif ?>
 
-            <?php $otherThirdPartyServicesWithData = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => in_array(($service['name'] ?? ''), ['Google Charts', 'Gravatar'], true) || (($service['description'] ?? '') !== '' && ($service['group'] ?? '') !== 'transcription')) ?>
+            <?php $otherThirdPartyServicesWithData = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => in_array(($service['name'] ?? ''), ['Google Charts', 'Gravatar'], true) || (($service['description'] ?? '') !== '' && !in_array(($service['group'] ?? ''), ['map', 'transcription'], true))) ?>
             <?php if (count($otherThirdPartyServicesWithData) > 0) : ?>
                 <h5><?= I18N::translate('Additional third-party service details') ?></h5>
 
@@ -165,6 +165,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             [...$thirdPartyServices, ...$trackingServices],
             static fn (array $service): bool => (bool) ($service['thirdCountryTransfer'] ?? false)
         ) ?>
+        <?php usort($thirdCountryTransferServices, static fn (array $a, array $b): int => strnatcasecmp((string) ($a['name'] ?? ''), (string) ($b['name'] ?? ''))) ?>
         <?php if ($useEuPrivacyLaw && count($thirdCountryTransferServices) > 0) : ?>
             <h5><?= I18N::translate('Data transfer to third countries') ?></h5>
 
@@ -176,8 +177,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
             <p>
                 <?= I18N::translate('This may apply to the following services:') ?>
                 <?php foreach (array_values($thirdCountryTransferServices) as $index => $service) : ?>
-                    <?= $index > 0 ? ', ' : '' ?><strong><?= e($service['name'] ?? '') ?></strong>
-                <?php endforeach ?>.
+                    <?= $index > 0 ? ', ' : '' ?><strong><?= e($service['name'] ?? '') ?></strong><?= $index === count($thirdCountryTransferServices) - 1 ? '.' : '' ?>
+                <?php endforeach ?>
             </p>
         <?php endif ?>
     <?php endif ?>
