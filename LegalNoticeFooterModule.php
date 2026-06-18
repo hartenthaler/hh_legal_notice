@@ -55,6 +55,8 @@ use Fisharebest\Webtrees\Module\ModuleAnalyticsInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigTrait;
 use Fisharebest\Webtrees\Module\PrivacyPolicy;
+use Fisharebest\Webtrees\Module\ModuleMapLinkInterface;
+use Fisharebest\Webtrees\Module\ModuleMapProviderInterface;
 use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\UserService;
@@ -152,10 +154,112 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         'url' => 'https://www.openstreetmap.org/',
         'country' => 'United Kingdom',
         'privacy_url' => 'https://osmfoundation.org/wiki/Privacy_Policy',
+        'group' => 'map',
         'data' => [
             'IP addresses',
             'Location data shown on maps',
             'Map display settings',
+        ],
+    ];
+
+    private const MAP_SERVICES_BY_MODULE = [
+        'bing-maps' => [
+            'name' => 'Bing™ maps',
+            'url' => 'https://www.bing.com/maps',
+            'country' => 'United States',
+            'privacy_url' => 'https://privacy.microsoft.com/privacystatement',
+            'group' => 'map',
+            'data' => [
+                'IP addresses',
+                'Location data shown on maps',
+                'Map display settings',
+            ],
+        ],
+        'map-link-bing' => [
+            'name' => 'Bing™ maps',
+            'url' => 'https://www.bing.com/maps',
+            'country' => 'United States',
+            'privacy_url' => 'https://privacy.microsoft.com/privacystatement',
+            'group' => 'map',
+            'data' => [
+                'IP addresses',
+                'Location data shown on maps',
+                'Map display settings',
+            ],
+        ],
+        'esri-maps' => [
+            'name' => 'Esri/ArcGIS',
+            'url' => 'https://www.arcgis.com/',
+            'country' => 'United States',
+            'privacy_url' => 'https://www.esri.com/en-us/privacy/privacy-statements/privacy-statement',
+            'group' => 'map',
+            'data' => [
+                'IP addresses',
+                'Location data shown on maps',
+                'Map display settings',
+            ],
+        ],
+        'google-maps' => [
+            'name' => 'Google™ maps',
+            'url' => 'https://www.google.com/maps',
+            'country' => 'United States',
+            'privacy_url' => 'https://policies.google.com/privacy',
+            'group' => 'map',
+            'data' => [
+                'IP addresses',
+                'Location data shown on maps',
+                'Map display settings',
+            ],
+        ],
+        'map-link-google' => [
+            'name' => 'Google™ maps',
+            'url' => 'https://www.google.com/maps',
+            'country' => 'United States',
+            'privacy_url' => 'https://policies.google.com/privacy',
+            'group' => 'map',
+            'data' => [
+                'IP addresses',
+                'Location data shown on maps',
+                'Map display settings',
+            ],
+        ],
+        'here-maps' => [
+            'name' => 'Here maps',
+            'url' => 'https://www.here.com/',
+            'country' => 'Netherlands',
+            'privacy_url' => 'https://legal.here.com/privacy/policy',
+            'group' => 'map',
+            'data' => [
+                'IP addresses',
+                'Location data shown on maps',
+                'Map display settings',
+            ],
+        ],
+        'mapbox' => [
+            'name' => 'Mapbox',
+            'url' => 'https://www.mapbox.com/',
+            'country' => 'United States',
+            'privacy_url' => 'https://www.mapbox.com/legal/privacy',
+            'group' => 'map',
+            'data' => [
+                'IP addresses',
+                'Location data shown on maps',
+                'Map display settings',
+            ],
+        ],
+        'openstreetmap' => self::OPENSTREETMAP_SERVICE,
+        'map-link-openstreetmap' => self::OPENSTREETMAP_SERVICE,
+        '_webtrees-lantmateriet_' => [
+            'name' => 'Lantmäteriet',
+            'url' => 'https://www.lantmateriet.se/',
+            'country' => 'Sweden',
+            'privacy_url' => 'https://www.lantmateriet.se/en/about-lantmateriet/personal-data/',
+            'group' => 'map',
+            'data' => [
+                'IP addresses',
+                'Location data shown on maps',
+                'Map display settings',
+            ],
         ],
     ];
 
@@ -1334,7 +1438,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'singular'                  => $this->useSingularStyle($request),
             'analytics'                 => $this->analyticsModules($tree, $user),
             'trackingServices'          => $this->trackingServices($tree, $user),
-            'thirdPartyServices'        => $this->thirdPartyServices(),
+            'thirdPartyServices'        => $this->thirdPartyServices($tree, $user),
             'cookiesServices'           => [],
             'moduleSecurityMeasures'     => $this->moduleSecurityMeasures(),
             //'usercentricsLanguages' => self::USERCENTRICS_LANGUAGES,
@@ -1379,9 +1483,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * @return list<array{name:string,url:string,country:string,thirdCountryTransfer:bool}>
+     * @return list<array<string,mixed>>
      */
-    private function thirdPartyServices(): array
+    private function thirdPartyServices(Tree $tree, UserInterface $user): array
     {
         $services = $this->showGoogleCharts() ? [self::GOOGLE_CHARTS_SERVICE] : [];
 
@@ -1389,15 +1493,100 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             $services[] = self::GRAVATAR_SERVICE;
         }
 
-        if ($this->isModuleEnabled('openstreetmap')) {
-            $services[] = self::OPENSTREETMAP_SERVICE;
-        }
-
-        return array_map(fn (array $service): array => $this->withThirdCountryTransferFlag($service), [
+        $services = [
             ...$services,
+            ...$this->mapThirdPartyServices($tree, $user),
             ...$this->moduleThirdPartyServices(),
             ...$this->additionalThirdPartyServices(),
-        ]);
+        ];
+
+        return array_map(
+            fn (array $service): array => $this->withThirdCountryTransferFlag($service),
+            $this->uniqueThirdPartyServices($services)
+        );
+    }
+
+    /**
+     * @return list<array<string,mixed>>
+     */
+    private function mapThirdPartyServices(Tree $tree, UserInterface $user): array
+    {
+        $services = [];
+
+        foreach ($this->moduleService->findByComponent(ModuleMapProviderInterface::class, $tree, $user) as $module) {
+            $service = $this->mapThirdPartyService($module->name(), $module->title());
+
+            if ($service !== null) {
+                $services[] = $service;
+            }
+        }
+
+        foreach ($this->moduleService->findByComponent(ModuleMapLinkInterface::class, $tree, $user) as $module) {
+            $service = $this->mapThirdPartyService($module->name(), $module->title());
+
+            if ($service !== null) {
+                $services[] = $service;
+            }
+        }
+
+        return $this->uniqueThirdPartyServices($services);
+    }
+
+    /**
+     * @return array<string,mixed>|null
+     */
+    private function mapThirdPartyService(string $moduleName, string $moduleTitle): ?array
+    {
+        if (isset(self::MAP_SERVICES_BY_MODULE[$moduleName])) {
+            return self::MAP_SERVICES_BY_MODULE[$moduleName];
+        }
+
+        $moduleTitle = preg_replace('/\s+/', ' ', trim($moduleTitle)) ?? '';
+
+        foreach (self::MAP_SERVICES_BY_MODULE as $service) {
+            if ($this->isKnownMapServiceTitle($moduleTitle, (string) $service['name'])) {
+                return $service;
+            }
+        }
+
+        return null;
+    }
+
+    private function isKnownMapServiceTitle(string $moduleTitle, string $serviceName): bool
+    {
+        $moduleTitle = preg_replace('/\s+[—-]\s+.*$/u', '', $moduleTitle) ?? $moduleTitle;
+        $moduleTitle = preg_replace('/\s+/', ' ', trim(str_replace('™', '', $moduleTitle))) ?? '';
+        $serviceName = preg_replace('/\s+/', ' ', trim(str_replace('™', '', $serviceName))) ?? '';
+
+        return $moduleTitle === $serviceName;
+    }
+
+    /**
+     * @param list<array<string,mixed>> $services
+     *
+     * @return list<array<string,mixed>>
+     */
+    private function uniqueThirdPartyServices(array $services): array
+    {
+        $unique = [];
+        $seen = [];
+
+        foreach ($services as $service) {
+            $key = (string) ($service['url'] ?? '');
+
+            if ($key === '') {
+                $key = (string) ($service['name'] ?? '');
+            }
+
+            if ($key === '' || isset($seen[$key])) {
+                continue;
+            }
+
+            $seen[$key] = true;
+            $unique[] = $service;
+        }
+
+        return $unique;
     }
 
     private function showGoogleCharts(): bool

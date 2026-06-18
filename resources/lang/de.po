@@ -2057,14 +2057,14 @@ msgstr "Kartendienstanbieter"
 
 #: resources/views/page/sections/third-party-services.phtml:71
 msgid ""
-"This website may embed maps from OpenStreetMap. The map content is loaded "
-"from OpenStreetMap servers, and OpenStreetMap may process data such as IP "
+"This website may embed maps from %s. The map content is loaded from servers "
+"of this provider, and the provider may process data such as IP "
 "addresses, displayed location data, and selected map settings to provide and "
 "cache the map functions."
 msgstr ""
-"Diese Website kann Karten von OpenStreetMap einbinden. Die Karteninhalte "
-"werden von OpenStreetMap-Servern geladen. OpenStreetMap kann dabei Daten wie "
-"IP-Adressen, angezeigte Standortdaten und gewählte Karteneinstellungen "
+"Diese Website kann Karten von %s einbinden. Die Karteninhalte werden von "
+"Servern dieses Anbieters geladen. Der Anbieter kann dabei Daten wie IP-"
+"Adressen, angezeigte Standortdaten und gewählte Karteneinstellungen "
 "verarbeiten, um die Kartenfunktionen bereitzustellen und zwischenzuspeichern."
 
 #: resources/views/page/sections/third-party-services.phtml:74

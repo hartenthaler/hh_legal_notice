@@ -1113,10 +1113,10 @@ msgid "Map service providers"
 msgstr "Aanbieders van kaartdiensten"
 
 msgid ""
-"This website may embed maps from OpenStreetMap. The map content is loaded from OpenStreetMap servers, and OpenStreetMap may process data such as IP addresses, displayed location "
+"This website may embed maps from %s. The map content is loaded from servers of this provider, and the provider may process data such as IP addresses, displayed location "
 "data, and selected map settings to provide and cache the map functions."
 msgstr ""
-"Deze website kan kaarten van OpenStreetMap insluiten. De kaartinhoud wordt geladen van OpenStreetMap-servers. OpenStreetMap kan daarbij gegevens zoals IP-adressen, weergegeven "
+"Deze website kan kaarten van %s insluiten. De kaartinhoud wordt geladen van servers van deze aanbieder. De aanbieder kan daarbij gegevens zoals IP-adressen, weergegeven "
 "locatiegegevens en geselecteerde kaartinstellingen verwerken om de kaartfuncties te leveren en te cachen."
 
 msgid "Data that may be processed by this service:"
