@@ -76,6 +76,7 @@ use function date;
 use function filter_var;
 use function floor;
 use function is_array;
+use function is_callable;
 use function in_array;
 use function max;
 use function method_exists;
@@ -1653,7 +1654,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         ];
 
         foreach ($this->moduleService->all() as $module) {
-            if ($module === $this || !method_exists($module, 'privacyNotices')) {
+            if ($module === $this || !is_callable([$module, 'privacyNotices'])) {
                 continue;
             }
 
