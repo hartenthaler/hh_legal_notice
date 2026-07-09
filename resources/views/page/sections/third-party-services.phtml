@@ -105,6 +105,10 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                                 <?= I18N::translate('Google Charts may be loaded from Google servers when statistics charts are viewed.') ?>
                             <?php elseif (($service['name'] ?? '') === 'Gravatar') : ?>
                                 <?= I18N::translate('Gravatar may be loaded from Automattic servers when the responsible person image is displayed.') ?>
+                            <?php elseif (($service['name'] ?? '') === 'webtrees update server') : ?>
+                                <?= I18N::translate('webtrees may contact the webtrees update server to check whether a newer webtrees version is available.') ?>
+                            <?php elseif (($service['name'] ?? '') === 'GitHub') : ?>
+                                <?= I18N::translate('webtrees may contact GitHub to check whether a newer version of this custom module is available.') ?>
                             <?php elseif (($service['description'] ?? '') !== '') : ?>
                                 <?= e($service['description']) ?>
                             <?php endif ?>
@@ -116,8 +120,13 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                                         <?php $dataCategoryLabel = match ($dataCategory) {
                                             'IP addresses' => I18N::translate('IP addresses'),
                                             'Browser request metadata' => I18N::translate('Browser request metadata'),
+                                            'Technical request metadata' => I18N::translate('Technical request metadata'),
                                             'Chart data shown on statistics pages' => I18N::translate('Chart data shown on statistics pages'),
                                             'E-mail address hash' => I18N::translate('E-mail address hash'),
+                                            'Installed webtrees version' => I18N::translate('Installed webtrees version'),
+                                            'PHP version' => I18N::translate('PHP version'),
+                                            'Site identifier' => I18N::translate('Site identifier'),
+                                            'Database driver' => I18N::translate('Database driver'),
                                             default => I18N::translate($dataCategory),
                                         } ?>
                                         <li><?= e($dataCategoryLabel) ?></li>

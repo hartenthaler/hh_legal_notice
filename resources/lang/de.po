@@ -2415,17 +2415,53 @@ msgstr ""
 "Gravatar kann von Automattic-Servern geladen werden, wenn das Bild der "
 "verantwortlichen Person angezeigt wird."
 
-#: resources/views/page/sections/third-party-services.phtml:118
+#: resources/views/page/sections/third-party-services.phtml:109
+msgid ""
+"webtrees may contact the webtrees update server to check whether a newer "
+"webtrees version is available."
+msgstr ""
+"webtrees kann den webtrees-Update-Server kontaktieren, um zu prüfen, ob eine "
+"neuere webtrees-Version verfügbar ist."
+
+#: resources/views/page/sections/third-party-services.phtml:111
+msgid ""
+"webtrees may contact GitHub to check whether a newer version of this custom "
+"module is available."
+msgstr ""
+"webtrees kann GitHub kontaktieren, um zu prüfen, ob eine neuere Version "
+"dieses Erweiterungsmoduls verfügbar ist."
+
+#: resources/views/page/sections/third-party-services.phtml:122
 msgid "Browser request metadata"
 msgstr "Metadaten der Browseranfrage"
 
-#: resources/views/page/sections/third-party-services.phtml:119
+#: resources/views/page/sections/third-party-services.phtml:123
+msgid "Technical request metadata"
+msgstr "Technische Metadaten der Anfrage"
+
+#: resources/views/page/sections/third-party-services.phtml:124
 msgid "Chart data shown on statistics pages"
 msgstr "Auf Statistikseiten angezeigte Diagrammdaten"
 
-#: resources/views/page/sections/third-party-services.phtml:120
+#: resources/views/page/sections/third-party-services.phtml:125
 msgid "E-mail address hash"
 msgstr "Hash der E-Mail-Adresse"
+
+#: resources/views/page/sections/third-party-services.phtml:126
+msgid "Installed webtrees version"
+msgstr "Installierte webtrees-Version"
+
+#: resources/views/page/sections/third-party-services.phtml:127
+msgid "PHP version"
+msgstr "PHP-Version"
+
+#: resources/views/page/sections/third-party-services.phtml:128
+msgid "Site identifier"
+msgstr "Website-Kennung"
+
+#: resources/views/page/sections/third-party-services.phtml:129
+msgid "Database driver"
+msgstr "Datenbanktreiber"
 
 #: resources/views/page/sections/third-party-services.phtml:139
 msgid "External transcription providers"

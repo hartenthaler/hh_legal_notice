@@ -150,6 +150,34 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         ],
     ];
 
+    private const WEBTREES_VERSION_CHECK_SERVICE = [
+        'name' => 'webtrees update server',
+        'url' => 'https://dev.webtrees.net/build/latest-version.txt',
+        'country' => 'United Kingdom',
+        'privacy_url' => 'https://webtrees.net/user/privacy/',
+        'description' => 'webtrees may contact the webtrees update server to check whether a newer webtrees version is available.',
+        'data' => [
+            'IP addresses',
+            'Technical request metadata',
+            'Installed webtrees version',
+            'PHP version',
+            'Site identifier',
+            'Database driver',
+        ],
+    ];
+
+    private const GITHUB_VERSION_CHECK_SERVICE = [
+        'name' => 'GitHub',
+        'url' => self::CUSTOM_LAST,
+        'country' => 'United States',
+        'privacy_url' => 'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement',
+        'description' => 'webtrees may contact GitHub to check whether a newer version of this custom module is available.',
+        'data' => [
+            'IP addresses',
+            'Technical request metadata',
+        ],
+    ];
+
     private const OPENSTREETMAP_SERVICE = [
         'name' => 'OpenStreetMap',
         'url' => 'https://www.openstreetmap.org/',
@@ -1488,7 +1516,14 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function thirdPartyServices(Tree $tree, UserInterface $user): array
     {
-        $services = $this->showGoogleCharts() ? [self::GOOGLE_CHARTS_SERVICE] : [];
+        $services = [
+            self::WEBTREES_VERSION_CHECK_SERVICE,
+            self::GITHUB_VERSION_CHECK_SERVICE,
+        ];
+
+        if ($this->showGoogleCharts()) {
+            $services[] = self::GOOGLE_CHARTS_SERVICE;
+        }
 
         if ($this->showGravatar()) {
             $services[] = self::GRAVATAR_SERVICE;
