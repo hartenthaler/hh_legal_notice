@@ -122,6 +122,7 @@ This release prepares updated documentation, screenshots, and translations and r
 * Module-provided third-party services and security measures can be included in the generated privacy policy.
 * Active map providers and map links can be listed as third-party services.
 * The privacy policy can include further webtrees privacy information as a separate section.
+* The privacy policy now describes the webtrees core version check and custom-module version checks.
 * German copyright wording now distinguishes general AI/text-and-data-mining wording from references that only apply under German law.
 * The README screenshots and Dutch translation have been updated.
 
