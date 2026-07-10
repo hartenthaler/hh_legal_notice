@@ -105,7 +105,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     public const CUSTOM_AUTHOR      = 'Hermann Hartenthaler';
     public const GITHUB_USER        = 'hartenthaler';
     public const CUSTOM_WEBSITE     = 'https://github.com/' . self::GITHUB_USER . '/' . self::CUSTOM_MODULE . '/';
-    public const CUSTOM_VERSION     = '2.2.6.6';
+    public const CUSTOM_VERSION     = '2.2.6.7';
     public const CUSTOM_LAST        = 'https://raw.githubusercontent.com/' . self::GITHUB_USER . '/' .
                                             self::CUSTOM_MODULE . '/main/latest-version.txt';
     public const CUSTOM_RELEASE_DATE = '2026-07-10';

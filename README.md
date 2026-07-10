@@ -9,7 +9,7 @@
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
-Current module version: **2.2.6.6**.
+Current module version: **2.2.6.7**.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
@@ -115,15 +115,13 @@ automated collection, scraping, data mining, AI-system use, technical measures a
 automated access, and copyright enforcement.
 
 <a name="WhatsNew"></a>
-## ✨ What's new in 2.2.6.6
+## ✨ What's new in 2.2.6.7
 
-This release improves the generated legal notice and privacy policy page:
+This release improves the generated privacy policy page:
 
-* Empty optional chapters are no longer shown. For example, if all sections below **Legal Regulations** are disabled, the generated page no longer displays the **Legal Regulations** heading by itself.
-* The privacy policy can now describe webtrees core version checks and custom-module version checks, including the contacted services and the data that may be transmitted.
-* The webtrees update server and GitHub-hosted module version checks can be listed as third-party services; GitHub may also be listed as a possible third-country transfer where EU data-protection law applies.
-* The privacy policy can now explain data exports, reports, and screenshots as situations where data leaves the technical protection of webtrees.
-* The German translation has been updated for the new privacy-policy wording.
+* A new privacy-policy section explains that exported data is no longer protected by the technical protection mechanisms of webtrees.
+* The section covers GEDCOM exports, reports, and screenshots, including the role-based visibility settings that can apply before data leaves webtrees.
+* The German translation has been updated for the new data-export wording.
 
 ## ✨ What's still open
 
