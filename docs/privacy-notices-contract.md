@@ -62,8 +62,8 @@ supplying module:
 `hh_legal_notice` ignores the complete service entry. Empty optional strings and
 empty `data` entries are removed or treated as absent.
 
-Services are deduplicated later by `url`, or by `name` if no URL is available.
-Supplying a stable canonical HTTPS URL is therefore important.
+Services are deduplicated later by `url`. Supplying a stable canonical HTTPS
+URL is therefore important.
 
 The `country` value is used to determine whether a service may involve a
 third-country transfer when EU data-protection law applies. It should describe
