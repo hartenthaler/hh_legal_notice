@@ -5,10 +5,11 @@
 ![webtrees major version](https://img.shields.io/badge/webtrees-v2.1.x-green) ![webtrees major version](https://img.shields.io/badge/webtrees-v2.2.x-green)
 
 ![Latest Release](https://img.shields.io/github/v/release/hartenthaler/hh_legal_notice)
+![Downloads](https://img.shields.io/github/downloads/hartenthaler/hh_legal_notice/total)
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
-Current module version: **2.2.6.5**.
+Current module version: **2.2.6.6**.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
@@ -114,18 +115,14 @@ automated collection, scraping, data mining, AI-system use, technical measures a
 automated access, and copyright enforcement.
 
 <a name="WhatsNew"></a>
-## ✨ What's new in 2.2.6.5
+## ✨ What's new in 2.2.6.6
 
-This release prepares updated documentation, screenshots, and translations and refines several generated privacy-policy sections:
+This release improves the generated legal notice and privacy policy page:
 
-* Compatible custom modules can now provide privacy notices.
-* Module-provided third-party services and security measures can be included in the generated privacy policy.
-* Active map providers and map links can be listed as third-party services.
-* The privacy policy can include further webtrees privacy information as a separate section.
-* The privacy policy now describes the webtrees core version check and custom-module version checks.
-* German copyright wording now distinguishes general AI/text-and-data-mining wording from references that only apply under German law.
-* Optional main chapters with no enabled sections are no longer shown as empty headings.
-* The README screenshots and Dutch translation have been updated.
+* Empty optional chapters are no longer shown. For example, if all sections below **Legal Regulations** are disabled, the generated page no longer displays the **Legal Regulations** heading by itself.
+* The privacy policy can now describe webtrees core version checks and custom-module version checks, including the contacted services and the data that may be transmitted.
+* The webtrees update server and this module's GitHub-hosted version check can be listed as third-party services and, where EU data-protection law applies, as possible third-country transfers.
+* The German translation has been updated for the new privacy-policy wording.
 
 ## ✨ What's still open
 
