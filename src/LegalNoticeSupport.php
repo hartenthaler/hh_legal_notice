@@ -334,6 +334,20 @@ class LegalNoticeSupport
     }
 
     /**
+     * @param array<int|string,Chapter> $chapters
+     */
+    public static function hasEnabledChildChapter(array $chapters, Chapter $parentChapter): bool
+    {
+        foreach ($chapters as $chapter) {
+            if ($chapter->getLink() === $parentChapter->getId() && $chapter->getEnabled()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * @return array<string,string>
      */
     public static function sectionViewByChapterKey(): array

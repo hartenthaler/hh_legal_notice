@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Fisharebest\Webtrees\View;
+use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
 use Illuminate\Support\Collection;
 
 /**
@@ -106,6 +107,10 @@ use Illuminate\Support\Collection;
         <?php endif ?>
 
         <?php if ($chapter->getKey() === 'LegalRegulations' && !$showLegalRegulations) : ?>
+            <?php continue; ?>
+        <?php endif ?>
+
+        <?php if (!LegalNoticeSupport::hasEnabledChildChapter($chapters, $chapter)) : ?>
             <?php continue; ?>
         <?php endif ?>
 

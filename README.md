@@ -124,6 +124,7 @@ This release prepares updated documentation, screenshots, and translations and r
 * The privacy policy can include further webtrees privacy information as a separate section.
 * The privacy policy now describes the webtrees core version check and custom-module version checks.
 * German copyright wording now distinguishes general AI/text-and-data-mining wording from references that only apply under German law.
+* Optional main chapters with no enabled sections are no longer shown as empty headings.
 * The README screenshots and Dutch translation have been updated.
 
 ## ✨ What's still open
