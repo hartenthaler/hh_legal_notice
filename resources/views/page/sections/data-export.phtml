@@ -1,0 +1,37 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+?>
+
+    <h3 class="hh-legal-notice-section"><?= e($chapter->getHeading()) ?></h3>
+
+    <p>
+        <?= I18N::translate('webtrees protects data inside the application by using privacy rules, access rights, and role-dependent visibility.') ?>
+        <?= I18N::translate('When data is exported, copied, printed, saved as a file, or captured as a screenshot, the technical protection mechanisms of webtrees no longer apply to that exported copy.') ?>
+        <?= I18N::translate('Users who export or otherwise take data out of webtrees are responsible for handling that copy lawfully and with appropriate care.') ?>
+    </p>
+
+    <p>
+        <?= I18N::translate('There are several ways in which data can leave webtrees:') ?>
+    </p>
+
+    <ul>
+        <li>
+            <?= I18N::translate('GEDCOM export can export genealogical data from a tree.') ?>
+            <?= I18N::translate('Depending on the export function and its settings, the export can be created with different webtrees privacy levels or role-based views, for example without privacy filtering, as visible to managers, as visible to members, or as visible to visitors.') ?>
+            <?= I18N::translate('An export without privacy filtering can contain all data, including confidential or otherwise protected information in plain text.') ?>
+        </li>
+        <li>
+            <?= I18N::translate('Reports can extract selected parts of the data from webtrees as text or generated output.') ?>
+            <?= I18N::translate('Reports are generated according to the webtrees protection and visibility settings that apply to the user creating the report.') ?>
+        </li>
+        <li>
+            <?= I18N::translate('Screenshots can capture the information that is visible on screen.') ?>
+            <?= I18N::translate('The displayed page is still controlled by the webtrees protection settings, but the screenshot itself is no longer controlled by webtrees after it has been created.') ?>
+        </li>
+    </ul>
+
+    <p>
+        <?= I18N::translate('Export functions and report access should therefore be granted only to users who may handle the exported data responsibly.') ?>
+        <?= I18N::translate('Before exported data is passed on or published elsewhere, it should be checked again for living persons, confidential facts, media files, and other protected content.') ?>
+    </p>
