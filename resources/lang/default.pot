@@ -1420,7 +1420,7 @@ msgid "webtrees may contact the webtrees update server to check whether a newer 
 msgstr ""
 
 #: resources/views/page/sections/third-party-services.phtml:111
-msgid "webtrees may contact GitHub to check whether a newer version of this custom module is available."
+msgid "webtrees may contact GitHub to check whether a newer version of a custom module is available."
 msgstr ""
 
 #: resources/views/page/sections/third-party-services.phtml:122
