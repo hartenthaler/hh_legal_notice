@@ -402,6 +402,10 @@ msgid "Security measures"
 msgstr "Sicherheitsmaßnahmen"
 
 #: src/LegalNoticeSupport.php:163
+msgid "Exporting data from webtrees"
+msgstr "Export von Daten aus webtrees"
+
+#: src/LegalNoticeSupport.php:163
 msgctxt "heading"
 msgid ""
 "Right of providing information, correction or deletion of personal data, and "
@@ -2956,6 +2960,111 @@ msgstr "Startjahr des Copyrights (z.B. \"2020\")"
 #: resources/views/settings.phtml:802
 msgid "Name of holder of copyright"
 msgstr "Inhaber des Copyrights"
+
+#: resources/views/page/sections/data-export.phtml:9
+msgid ""
+"webtrees protects data inside the application by using privacy rules, access "
+"rights, and role-dependent visibility."
+msgstr ""
+"webtrees schützt Daten innerhalb der Anwendung durch Datenschutzregeln, "
+"Zugriffsrechte und rollenabhängige Sichtbarkeit."
+
+#: resources/views/page/sections/data-export.phtml:10
+msgid ""
+"When data is exported, copied, printed, saved as a file, or captured as a "
+"screenshot, the technical protection mechanisms of webtrees no longer apply "
+"to that exported copy."
+msgstr ""
+"Wenn Daten exportiert, kopiert, gedruckt, als Datei gespeichert oder als "
+"Screenshot erfasst werden, greifen die technischen Schutzmechanismen von "
+"webtrees für diese exportierte Kopie nicht mehr."
+
+#: resources/views/page/sections/data-export.phtml:11
+msgid ""
+"Users who export or otherwise take data out of webtrees are responsible for "
+"handling that copy lawfully and with appropriate care."
+msgstr ""
+"Benutzer, die Daten exportieren oder auf andere Weise aus webtrees "
+"herausnehmen, sind dafür verantwortlich, diese Kopie rechtmäßig und mit "
+"angemessener Sorgfalt zu behandeln."
+
+#: resources/views/page/sections/data-export.phtml:15
+msgid "There are several ways in which data can leave webtrees:"
+msgstr "Es gibt verschiedene Wege, auf denen Daten webtrees verlassen können:"
+
+#: resources/views/page/sections/data-export.phtml:20
+msgid "GEDCOM export can export genealogical data from a tree."
+msgstr "Der GEDCOM-Export kann genealogische Daten aus einem Stammbaum exportieren."
+
+#: resources/views/page/sections/data-export.phtml:21
+msgid ""
+"Depending on the export function and its settings, the export can be created "
+"with different webtrees privacy levels or role-based views, for example "
+"without privacy filtering, as visible to managers, as visible to members, or "
+"as visible to visitors."
+msgstr ""
+"Je nach Exportfunktion und deren Einstellungen kann der Export mit "
+"unterschiedlichen webtrees-Datenschutzstufen oder rollenbezogenen Sichten "
+"erstellt werden, zum Beispiel ohne Datenschutzfilterung, so wie für "
+"Verwalter sichtbar, so wie für Mitglieder sichtbar, oder so wie für Besucher "
+"sichtbar."
+
+#: resources/views/page/sections/data-export.phtml:22
+msgid ""
+"An export without privacy filtering can contain all data, including "
+"confidential or otherwise protected information in plain text."
+msgstr ""
+"Ein Export ohne Datenschutzfilterung kann alle Daten enthalten, einschließlich "
+"vertraulicher oder anderweitig geschützter Informationen im Klartext."
+
+#: resources/views/page/sections/data-export.phtml:25
+msgid ""
+"Reports can extract selected parts of the data from webtrees as text or "
+"generated output."
+msgstr ""
+"Berichte können ausgewählte Teile der Daten als Text oder erzeugte Ausgabe "
+"aus webtrees herausholen."
+
+#: resources/views/page/sections/data-export.phtml:26
+msgid ""
+"Reports are generated according to the webtrees protection and visibility "
+"settings that apply to the user creating the report."
+msgstr ""
+"Berichte werden gemäß den webtrees-Schutz- und Sichtbarkeitseinstellungen "
+"erzeugt, die für den Benutzer gelten, der den Bericht erstellt."
+
+#: resources/views/page/sections/data-export.phtml:29
+msgid "Screenshots can capture the information that is visible on screen."
+msgstr "Screenshots können die Informationen erfassen, die auf dem Bildschirm sichtbar sind."
+
+#: resources/views/page/sections/data-export.phtml:30
+msgid ""
+"The displayed page is still controlled by the webtrees protection settings, "
+"but the screenshot itself is no longer controlled by webtrees after it has "
+"been created."
+msgstr ""
+"Die angezeigte Seite wird weiterhin durch die webtrees-Schutzeinstellungen "
+"gesteuert; der Screenshot selbst wird nach seiner Erstellung jedoch nicht "
+"mehr durch webtrees kontrolliert."
+
+#: resources/views/page/sections/data-export.phtml:35
+msgid ""
+"Export functions and report access should therefore be granted only to users "
+"who may handle the exported data responsibly."
+msgstr ""
+"Exportfunktionen und Zugriff auf Berichte sollten daher nur Benutzern "
+"gewährt werden, die mit den exportierten Daten verantwortungsvoll umgehen "
+"dürfen."
+
+#: resources/views/page/sections/data-export.phtml:36
+msgid ""
+"Before exported data is passed on or published elsewhere, it should be "
+"checked again for living persons, confidential facts, media files, and other "
+"protected content."
+msgstr ""
+"Bevor exportierte Daten weitergegeben oder an anderer Stelle veröffentlicht "
+"werden, sollten sie erneut auf lebende Personen, vertrauliche Fakten, "
+"Mediendateien und andere geschützte Inhalte geprüft werden."
 
 #: resources/views/page/sections/further-information.phtml:24
 msgid "Version checks"

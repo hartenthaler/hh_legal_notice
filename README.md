@@ -122,6 +122,7 @@ This release improves the generated legal notice and privacy policy page:
 * Empty optional chapters are no longer shown. For example, if all sections below **Legal Regulations** are disabled, the generated page no longer displays the **Legal Regulations** heading by itself.
 * The privacy policy can now describe webtrees core version checks and custom-module version checks, including the contacted services and the data that may be transmitted.
 * The webtrees update server and GitHub-hosted module version checks can be listed as third-party services; GitHub may also be listed as a possible third-country transfer where EU data-protection law applies.
+* The privacy policy can now explain data exports, reports, and screenshots as situations where data leaves the technical protection of webtrees.
 * The German translation has been updated for the new privacy-policy wording.
 
 ## ✨ What's still open
