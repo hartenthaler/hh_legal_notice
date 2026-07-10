@@ -2425,11 +2425,11 @@ msgstr ""
 
 #: resources/views/page/sections/third-party-services.phtml:111
 msgid ""
-"webtrees may contact GitHub to check whether a newer version of this custom "
+"webtrees may contact GitHub to check whether a newer version of a custom "
 "module is available."
 msgstr ""
 "webtrees kann GitHub kontaktieren, um zu prüfen, ob eine neuere Version "
-"dieses Erweiterungsmoduls verfügbar ist."
+"eines Erweiterungsmoduls verfügbar ist."
 
 #: resources/views/page/sections/third-party-services.phtml:122
 msgid "Browser request metadata"

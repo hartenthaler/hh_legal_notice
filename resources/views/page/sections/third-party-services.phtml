@@ -108,7 +108,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                             <?php elseif (($service['name'] ?? '') === 'webtrees update server') : ?>
                                 <?= I18N::translate('webtrees may contact the webtrees update server to check whether a newer webtrees version is available.') ?>
                             <?php elseif (($service['name'] ?? '') === 'GitHub') : ?>
-                                <?= I18N::translate('webtrees may contact GitHub to check whether a newer version of this custom module is available.') ?>
+                                <?= I18N::translate('webtrees may contact GitHub to check whether a newer version of a custom module is available.') ?>
                             <?php elseif (($service['description'] ?? '') !== '') : ?>
                                 <?= e($service['description']) ?>
                             <?php endif ?>
