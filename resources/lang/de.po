@@ -371,8 +371,8 @@ msgid "Test"
 msgstr "Test"
 
 #: LegalNoticeFooterModule.php
-msgid "This website is used to test webtrees functions."
-msgstr "Diese Website wird zum Testen von webtrees-Funktionen verwendet."
+msgid "This website is used to test webtrees functions or contains genealogical test data for other purposes."
+msgstr "Diese Website wird zum Testen von webtrees-Funktionen verwendet oder enthält genealogische Testdaten für andere Zwecke."
 
 #: src/LegalNoticeSupport.php:155
 msgctxt "heading"
