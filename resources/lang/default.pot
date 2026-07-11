@@ -297,6 +297,14 @@ msgstr ""
 msgid "Community research"
 msgstr ""
 
+#: src/LegalNoticeSupport.php
+msgid "Test"
+msgstr ""
+
+#: LegalNoticeFooterModule.php
+msgid "This website is used to test webtrees functions."
+msgstr ""
+
 #: src/LegalNoticeSupport.php:155
 msgctxt "heading"
 msgid "Used terminology"
