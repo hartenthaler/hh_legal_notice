@@ -302,7 +302,7 @@ msgid "Test"
 msgstr ""
 
 #: LegalNoticeFooterModule.php
-msgid "This website is used to test webtrees functions."
+msgid "This website is used to test webtrees functions or contains genealogical test data for other purposes."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:155
