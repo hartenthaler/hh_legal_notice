@@ -92,7 +92,7 @@ The generated privacy policy can include, depending on the configuration and ser
 * a named competent supervisory authority with URL
 * references to German, European, or no specific regional data-protection law
 * legal bases for processing under the GDPR where EU law applies
-* configurable research purpose wording for family research, one-name studies, local family books, farmstead research, thematic research, migration research, community research, or a test website
+* configurable research purpose wording for family research, one-name studies, local family books, farmstead research, thematic research, migration research, community research, or webtrees and genealogical test data
 * data protection contact information referring to the provider named in the legal notice
 * information about hosting, structured order-processing agreement dates, application logs, third-party services, tracking and analytics, and third-country transfers
 * information about retention periods for inactive user accounts
