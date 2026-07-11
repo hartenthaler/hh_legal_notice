@@ -366,6 +366,14 @@ msgstr "Migrationsforschung"
 msgid "Community research"
 msgstr "Gruppenforschung"
 
+#: src/LegalNoticeSupport.php
+msgid "Test"
+msgstr "Test"
+
+#: LegalNoticeFooterModule.php
+msgid "This website is used to test webtrees functions."
+msgstr "Diese Website wird zum Testen von webtrees-Funktionen verwendet."
+
 #: src/LegalNoticeSupport.php:155
 msgctxt "heading"
 msgid "Used terminology"
