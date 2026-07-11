@@ -985,7 +985,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             self::RESEARCH_SECTION_TOPIC => I18N::translate('This website deals with the research of persons connected by a common historical characteristic, such as membership of an institution, a profession, or a historical event.'),
             self::RESEARCH_SECTION_MIGRATION => I18N::translate('This website deals with the research of persons and families who emigrated from or immigrated to a particular area of origin or destination.'),
             self::RESEARCH_SECTION_COMMUNITY => I18N::translate('This website deals with the research of members of a particular community, religious community, or social group.'),
-            self::RESEARCH_SECTION_TEST => I18N::translate('This website is used to test webtrees functions.'),
+            self::RESEARCH_SECTION_TEST => I18N::translate('This website is used to test webtrees functions or contains genealogical test data for other purposes.'),
             default => I18N::translate('This website deals with family history research into my own family and relatives by marriage.'),
         };
 
