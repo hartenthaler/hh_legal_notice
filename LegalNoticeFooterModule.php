@@ -72,8 +72,10 @@ use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
 
 use function class_exists;
+use function constant;
 use function count;
 use function date;
+use function defined;
 use function filter_var;
 use function floor;
 use function is_array;
@@ -108,10 +110,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     public const CUSTOM_AUTHOR      = 'Hermann Hartenthaler';
     public const GITHUB_USER        = 'hartenthaler';
     public const CUSTOM_WEBSITE     = 'https://github.com/' . self::GITHUB_USER . '/' . self::CUSTOM_MODULE . '/';
-    public const CUSTOM_VERSION     = '2.2.6.8';
+    public const CUSTOM_VERSION     = '2.2.6.9';
     public const CUSTOM_LAST        = 'https://raw.githubusercontent.com/' . self::GITHUB_USER . '/' .
                                             self::CUSTOM_MODULE . '/main/latest-version.txt';
-    public const CUSTOM_RELEASE_DATE = '2026-07-14';
+    public const CUSTOM_RELEASE_DATE = '2026-07-15';
 
     private const PRIVACY_POLICY_DATE_SOURCE_RELEASE = 'release';
     private const PRIVACY_POLICY_DATE_SOURCE_MANUAL = 'manual';
@@ -1016,7 +1018,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function researchPurposeTreeSummaries(): array
     {
-        $familyTreesListModule = $this->moduleService->findByName('hh-family-trees-list');
+        $familyTreesListModule = $this->familyTreesListModule();
 
         if ($familyTreesListModule === null || !is_callable([$familyTreesListModule, 'researchPurpose'])) {
             return [];
@@ -1061,6 +1063,23 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         });
 
         return $summaries;
+    }
+
+    /**
+     * Find hh-family-trees-list by its stable public module identifier instead
+     * of the installation-folder-derived internal webtrees module name.
+     */
+    private function familyTreesListModule(bool $includeDisabled = false): ModuleCustomInterface|null
+    {
+        $module = $this->moduleService->all($includeDisabled)->first(static function (object $candidate): bool {
+            $moduleIdentifier = $candidate::class . '::CUSTOM_MODULE';
+
+            return is_callable([$candidate, 'researchPurpose'])
+                && defined($moduleIdentifier)
+                && constant($moduleIdentifier) === 'hh-family-trees-list';
+        });
+
+        return $module instanceof ModuleCustomInterface ? $module : null;
     }
 
     private function normalizeHostingCountry(string $country): string
