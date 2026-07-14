@@ -9,7 +9,7 @@
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
-Current module version: **2.2.6.7**.
+Current module version: **2.2.6.8**.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
@@ -116,13 +116,12 @@ automated collection, scraping, data mining, AI-system use, technical measures a
 automated access, and copyright enforcement.
 
 <a name="WhatsNew"></a>
-## ✨ What's new in 2.2.6.7
+## ✨ What's new in 2.2.6.8
 
-This release improves the generated privacy policy page:
+This release improves the module settings and translations:
 
-* A new privacy-policy section explains that exported data is no longer protected by the technical protection mechanisms of webtrees.
-* The section covers GEDCOM exports, reports, and screenshots, including the role-based visibility settings that can apply before data leaves webtrees.
-* The German translation has been updated for the new data-export wording.
+* When `hh-family-trees-list` is available, the settings page summarizes the configured research purposes and corresponding family trees.
+* The Dutch translation has been updated; thanks to TheDutchJewel.
 
 ## ✨ What's still open
 

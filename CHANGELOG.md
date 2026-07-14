@@ -2,6 +2,8 @@
 
 ## Next release
 
+## 2.2.6.8 - 2026-07-14
+
 * Added an optional summary of per-tree research purposes supplied by hh-family-trees-list to the module settings.
 * Updated Dutch translations; thanks to TheDutchJewel.
 
