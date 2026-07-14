@@ -3112,7 +3112,7 @@ msgid ""
 "panel."
 msgstr ""
 "webtrees speichert das Ergebnis lokal und führt diese Prüfung normalerweise "
-"höchstens einmal pro Tag aus; ein Administrator kann im Control Panel auch "
+"höchstens einmal pro Tag aus; ein Administrator kann im webtrees-Verwaltungsmenü auch "
 "eine manuelle Prüfung starten."
 
 #: resources/views/page/sections/further-information.phtml:32
@@ -3142,7 +3142,7 @@ msgid ""
 "compare the installed module version with the latest version offered by the "
 "module author."
 msgstr ""
-"Wenn das webtrees-Control-Panel geöffnet wird, kann webtrees diese URLs "
+"Wenn das webtrees-Verwaltungsmenü geöffnet wird, kann webtrees diese URLs "
 "abrufen, um die installierte Modulversion mit der vom Modulautor angebotenen "
 "neuesten Version zu vergleichen."
 

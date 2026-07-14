@@ -9,7 +9,7 @@
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
-Current module version: **2.2.6.8**.
+Current module version: **2.2.6.9**.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
@@ -116,12 +116,15 @@ automated collection, scraping, data mining, AI-system use, technical measures a
 automated access, and copyright enforcement.
 
 <a name="WhatsNew"></a>
-## ✨ What's new in 2.2.6.8
+## ✨ What's new in 2.2.6.9
 
-This release improves the module settings and translations:
+This release improves third-party service notices and fixes the integration with `hh-family-trees-list`:
 
-* When `hh-family-trees-list` is available, the settings page summarizes the configured research purposes and corresponding family trees.
-* The Dutch translation has been updated; thanks to TheDutchJewel.
+* Reports for the same external service are consolidated without losing the supplying modules, their specific uses, data categories, or differing provider details. Wikimedia, Wikidata, Wikipedia, and Wikimedia Commons share one Wikimedia Foundation entry.
+* Third-party service details now appear in the order webtrees core, map providers, external transcription providers, and additional services, followed by third-country transfers. The Gravatar entry identifies its optional use by `hh_legal_notice`.
+* The data-export and shortened version-check sections now appear directly before the hosting section.
+* The settings page now correctly detects `hh-family-trees-list` and shows its configured research purposes and corresponding family trees.
+* The German version-check information now consistently refers to the webtrees administration menu as “webtrees-Verwaltungsmenü”.
 
 ## ✨ What's still open
 
