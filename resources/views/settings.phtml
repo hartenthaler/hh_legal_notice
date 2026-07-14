@@ -47,6 +47,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
  * @var string                  $registeredUsersAreRelatives option whether registered users are relatives or relatives by marriage
  * @var array<string,string>    $researchTypePrompts    research purpose detail prompts
  * @var array<string,string>    $researchTypeDetailPreferences preference names for research purpose detail fields
+ * @var list<array{count:int,purpose:string,trees:list<string>}> $researchPurposeTreeSummaries per-tree research purposes grouped for admin orientation
  * @var int                  $inactiveUserYears     when should inactive users be deleted?
  * @var int                     $sensitiveDataYears  years after death before sensitive genealogical data is released
  * @var array<int,object>       $inactiveUserAccountSummaries inactive user accounts for admin decision support
@@ -488,6 +489,35 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                 </div>
             </div>
         </div>
+
+        <?php if ($researchPurposeTreeSummaries !== []) : ?>
+            <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="Purpose">
+                <h4><?= I18N::translate('Research purposes of family trees') ?></h4>
+                <p class="small text-muted">
+                    <?= I18N::translate('The list shows the research purposes stored by hh-family-trees-list as guidance for configuring the overall purpose of this website.') ?>
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-sm small">
+                        <thead>
+                            <tr>
+                                <th class="text-end"><?= I18N::translate('Frequency') ?></th>
+                                <th><?= I18N::translate('Purpose') ?></th>
+                                <th><?= MoreI18N::xlate('Family trees') ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($researchPurposeTreeSummaries as $summary) : ?>
+                                <tr>
+                                    <td class="text-end"><?= e((string) $summary['count']) ?></td>
+                                    <td><?= e($summary['purpose']) ?></td>
+                                    <td><?= e(implode(', ', $summary['trees'])) ?></td>
+                                </tr>
+                            <?php endforeach ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <?php endif ?>
 
         <div class="hh-legal-notice-section-setting" data-dependent-on-chapter="Purpose" data-dependent-on-any-chapter="<?= e(implode(' ', array_keys($researchTypeDetailPreferences))) ?>">
             <h4><?= I18N::translate('Research purpose details') ?></h4>

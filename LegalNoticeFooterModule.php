@@ -59,6 +59,7 @@ use Fisharebest\Webtrees\Module\ModuleMapLinkInterface;
 use Fisharebest\Webtrees\Module\ModuleMapProviderInterface;
 use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\Services\ModuleService;
+use Fisharebest\Webtrees\Services\TreeService;
 use Fisharebest\Webtrees\Services\UserService;
 use Fisharebest\Webtrees\Site;
 use Fisharebest\Webtrees\Tree;
@@ -83,8 +84,10 @@ use function method_exists;
 use function preg_match;
 use function preg_replace;
 use function preg_split;
+use function strnatcasecmp;
 use function time;
 use function trim;
+use function usort;
 use function file_exists;
 use function assert;
 use function array_map;
@@ -611,6 +614,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $response['inactiveUserAccountSummaries'] = $this->inactiveUserAccountSummaries();
         $response['researchTypePrompts'] = $this->researchTypePrompts();
         $response['researchTypeDetailPreferences'] = $this->researchTypeDetailPreferences();
+        $response['researchPurposeTreeSummaries'] = $this->researchPurposeTreeSummaries();
 
         $preferences = $this->listOfPreferences();
         foreach ($preferences as $preference) {
@@ -999,6 +1003,61 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $preference = $this->researchTypeDetailPreferences()[$researchSectionKey] ?? '';
 
         return $preference === '' ? '' : $this->getPreference($preference, '');
+    }
+
+    /**
+     * Summarize the per-tree purposes supplied by the optional
+     * hh-family-trees-list module.
+     *
+     * @return list<array{count:int,purpose:string,trees:list<string>}>
+     */
+    private function researchPurposeTreeSummaries(): array
+    {
+        $familyTreesListModule = $this->moduleService->findByName('hh-family-trees-list');
+
+        if ($familyTreesListModule === null || !is_callable([$familyTreesListModule, 'researchPurpose'])) {
+            return [];
+        }
+
+        $summariesByPurpose = [];
+        $treeService = Registry::container()->get(TreeService::class);
+
+        foreach ($treeService->all() as $tree) {
+            try {
+                $purpose = trim((string) $familyTreesListModule->researchPurpose($tree));
+            } catch (Throwable) {
+                continue;
+            }
+
+            if ($purpose === '') {
+                continue;
+            }
+
+            if (!isset($summariesByPurpose[$purpose])) {
+                $summariesByPurpose[$purpose] = [
+                    'count' => 0,
+                    'purpose' => $purpose,
+                    'trees' => [],
+                ];
+            }
+
+            $summariesByPurpose[$purpose]['count']++;
+            $summariesByPurpose[$purpose]['trees'][] = $tree->title();
+        }
+
+        $summaries = array_values($summariesByPurpose);
+
+        foreach ($summaries as &$summary) {
+            usort($summary['trees'], static fn (string $left, string $right): int => strnatcasecmp($left, $right));
+        }
+        unset($summary);
+
+        usort($summaries, static function (array $left, array $right): int {
+            return $right['count'] <=> $left['count']
+                ?: strnatcasecmp($left['purpose'], $right['purpose']);
+        });
+
+        return $summaries;
     }
 
     private function normalizeHostingCountry(string $country): string
