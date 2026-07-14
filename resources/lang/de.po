@@ -3198,3 +3198,13 @@ msgstr "Zweck"
 
 #~ msgid "optional"
 #~ msgstr "optional"
+msgid "webtrees core"
+msgstr "webtrees-Kern"
+
+msgid "The hh_legal_notice module itself uses this service to optionally display a representative image of the responsible person."
+msgstr "Das Modul hh_legal_notice selbst nutzt diesen Dienst, um optional ein Stellvertreter-Bild der verantwortlichen Person anzuzeigen."
+msgid "This service is used by the following modules:"
+msgstr "Dieser Dienst wird von den folgenden Modulen verwendet:"
+
+msgid "Data that may be processed for this use:"
+msgstr "Daten, die bei dieser Nutzung verarbeitet werden können:"

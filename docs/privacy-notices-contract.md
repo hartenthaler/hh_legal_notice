@@ -50,6 +50,7 @@ supplying module:
 
 | Field | Required | Type | Meaning |
 | --- | --- | --- | --- |
+| `service_id` | no | string | Stable provider identity used to merge reports from several modules, for example `wikimedia-foundation`. |
 | `name` | yes | string | Human-readable service or provider name. |
 | `url` | yes | string | Canonical service URL. It also identifies duplicate entries. |
 | `country` | no | string | Country in which the service is provided, preferably a core-translatable English country name such as `Germany` or `United States`. |
@@ -62,8 +63,24 @@ supplying module:
 `hh_legal_notice` ignores the complete service entry. Empty optional strings and
 empty `data` entries are removed or treated as absent.
 
-Services are deduplicated later by `url`. Supplying a stable canonical HTTPS
-URL is therefore important.
+Services with the same non-empty `service_id` are consolidated. Without a
+`service_id`, an exact normalized `url` match is used as a compatibility
+fallback. Similar names or related domains are not merged heuristically,
+because that could combine distinct services accidentally.
+
+Consolidation never discards a later module report. The generated privacy
+policy lists every supplying module together with its specific description and
+data categories. Distinct descriptions and data categories are retained;
+duplicates are removed. Conflicting non-empty names, URLs, countries, or
+privacy URLs are retained as lists. If any reported country is outside the
+European Union, the consolidated service is treated conservatively as a
+possible third-country transfer.
+
+The Wikimedia family is a deliberate special case. Reports for Wikimedia,
+Wikidata, Wikipedia, and Wikimedia Commons are consolidated under
+`service_id` `wikimedia-foundation` and the display name `Wikimedia Foundation
+(Wikidata and Wikipedia)`. They use the single privacy notice
+`https://foundation.wikimedia.org/wiki/Policy:Privacy_policy`.
 
 The `country` value is used to determine whether a service may involve a
 third-country transfer when EU data-protection law applies. It should describe
@@ -124,6 +141,7 @@ For `country`, prefer a country name that webtrees can translate.
  *
  * @return array{
  *     third_party_services:list<array{
+ *         service_id?:string,
  *         name:string,
  *         url:string,
  *         country:string,
@@ -144,6 +162,7 @@ public function privacyNotices(): array
     return [
         'third_party_services' => [
             [
+                'service_id' => 'example-authority-service',
                 'name'        => 'Example Authority Service',
                 'url'         => 'https://example.org/',
                 'country'     => 'Germany',

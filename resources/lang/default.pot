@@ -1973,3 +1973,13 @@ msgstr ""
 #: resources/views/settings.phtml
 msgid "Purpose"
 msgstr ""
+msgid "webtrees core"
+msgstr ""
+
+msgid "The hh_legal_notice module itself uses this service to optionally display a representative image of the responsible person."
+msgstr ""
+msgid "This service is used by the following modules:"
+msgstr ""
+
+msgid "Data that may be processed for this use:"
+msgstr ""
