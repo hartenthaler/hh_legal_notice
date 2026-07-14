@@ -366,6 +366,14 @@ msgstr "Migrationsforschung"
 msgid "Community research"
 msgstr "Gruppenforschung"
 
+#: src/LegalNoticeSupport.php
+msgid "Test"
+msgstr "Test"
+
+#: LegalNoticeFooterModule.php
+msgid "This website is used to test webtrees functions or contains genealogical test data for other purposes."
+msgstr "Diese Website wird zum Testen von webtrees-Funktionen verwendet oder enthält genealogische Testdaten für andere Zwecke."
+
 #: src/LegalNoticeSupport.php:155
 msgctxt "heading"
 msgid "Used terminology"
@@ -3163,6 +3171,27 @@ msgstr ""
 "Administratoren können Modul-Versionsprüfungen verhindern, indem sie Module "
 "verwenden, die keine Latest-Version-URL bereitstellen, oder indem sie den "
 "Modulcode entsprechend anpassen."
+
+#: resources/views/settings.phtml
+msgid "Research purposes of family trees"
+msgstr "Forschungszwecke der Stammbäume"
+
+#: resources/views/settings.phtml
+msgid ""
+"The list shows the research purposes stored by hh-family-trees-list as "
+"guidance for configuring the overall purpose of this website."
+msgstr ""
+"Die Liste zeigt die in hh-family-trees-list gespeicherten Forschungszwecke "
+"als Orientierung für die Konfiguration des übergeordneten Zwecks dieser "
+"Website."
+
+#: resources/views/settings.phtml
+msgid "Frequency"
+msgstr "Häufigkeit"
+
+#: resources/views/settings.phtml
+msgid "Purpose"
+msgstr "Zweck"
 
 #~ msgid "GDPR in connection with online genealogies"
 #~ msgstr "DSGVO im Zusammenhang mit Online-Genealogien"
