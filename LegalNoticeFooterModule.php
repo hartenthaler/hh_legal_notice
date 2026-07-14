@@ -126,6 +126,9 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private const RESEARCH_SECTION_COMMUNITY = 'ResearchCommunity';
     private const RESEARCH_SECTION_TEST = 'ResearchTest';
 
+    /** @var array{third_party_services:list<array<string,mixed>>,security_measures:list<string>}|null */
+    private ?array $modulePrivacyNoticesCache = null;
+
     // old module name
     public const OLD_MODULE_NAME_FOR_PREFERENCES = 'hh_imprint';
 
@@ -1675,24 +1678,193 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function uniqueThirdPartyServices(array $services): array
     {
         $unique = [];
-        $seen = [];
+        $indexByKey = [];
 
         foreach ($services as $service) {
-            $key = (string) ($service['url'] ?? '');
+            $service = $this->preparedThirdPartyService($service);
+            $key = $this->thirdPartyServiceKey($service);
 
             if ($key === '') {
-                $key = (string) ($service['name'] ?? '');
+                continue;
             }
 
-            if ($key === '' || isset($seen[$key])) {
+            if (!isset($indexByKey[$key])) {
+                $indexByKey[$key] = count($unique);
+                $unique[] = $service;
+                continue;
+            }
+
+            $index = $indexByKey[$key];
+            $unique[$index] = $this->mergeThirdPartyService($unique[$index], $service);
+        }
+
+        return $unique;
+    }
+
+    /**
+     * @param array<string,mixed> $service
+     *
+     * @return array<string,mixed>
+     */
+    private function preparedThirdPartyService(array $service): array
+    {
+        $originalUrl = trim((string) ($service['url'] ?? ''));
+
+        if ($this->isWikimediaService($service)) {
+            $service['service_id'] = 'wikimedia-foundation';
+            $service['name'] = 'Wikimedia Foundation (Wikidata and Wikipedia)';
+            $service['url'] = 'https://www.wikimedia.org/';
+            $service['country'] = 'United States';
+            $service['privacy_url'] = 'https://foundation.wikimedia.org/wiki/Policy:Privacy_policy';
+            $service['names'] = [$service['name']];
+            $service['privacy_urls'] = [$service['privacy_url']];
+        }
+
+        $service['names'] = $this->uniqueNonEmptyStrings([
+            ...($service['names'] ?? []),
+            (string) ($service['name'] ?? ''),
+        ]);
+        $service['urls'] = $this->uniqueNonEmptyStrings([
+            ...($service['urls'] ?? []),
+            $originalUrl,
+            (string) ($service['url'] ?? ''),
+        ]);
+        $service['countries'] = $this->uniqueNonEmptyStrings([
+            ...($service['countries'] ?? []),
+            (string) ($service['country'] ?? ''),
+        ]);
+        $service['privacy_urls'] = $this->uniqueNonEmptyStrings([
+            ...($service['privacy_urls'] ?? []),
+            (string) ($service['privacy_url'] ?? ''),
+        ]);
+        $service['descriptions'] = $this->uniqueNonEmptyStrings([
+            ...($service['descriptions'] ?? []),
+            (string) ($service['description'] ?? ''),
+        ]);
+        $service['data'] = $this->uniqueNonEmptyStrings($service['data'] ?? []);
+        $service['usages'] = $this->uniqueThirdPartyServiceUsages($service['usages'] ?? []);
+
+        return $service;
+    }
+
+    /**
+     * @param array<string,mixed> $service
+     */
+    private function thirdPartyServiceKey(array $service): string
+    {
+        $serviceId = strtolower(trim((string) ($service['service_id'] ?? '')));
+
+        if ($serviceId !== '') {
+            return 'id:' . $serviceId;
+        }
+
+        $url = strtolower(rtrim(trim((string) ($service['url'] ?? '')), '/'));
+
+        return $url !== '' ? 'url:' . $url : '';
+    }
+
+    /**
+     * @param array<string,mixed> $left
+     * @param array<string,mixed> $right
+     *
+     * @return array<string,mixed>
+     */
+    private function mergeThirdPartyService(array $left, array $right): array
+    {
+        foreach (['names', 'urls', 'countries', 'privacy_urls', 'descriptions', 'data'] as $field) {
+            $left[$field] = $this->uniqueNonEmptyStrings([
+                ...($left[$field] ?? []),
+                ...($right[$field] ?? []),
+            ]);
+        }
+
+        $left['usages'] = $this->uniqueThirdPartyServiceUsages([
+            ...($left['usages'] ?? []),
+            ...($right['usages'] ?? []),
+        ]);
+
+        $leftGroup = trim((string) ($left['group'] ?? ''));
+        $rightGroup = trim((string) ($right['group'] ?? ''));
+        if ($leftGroup === '') {
+            $left['group'] = $rightGroup;
+        } elseif ($rightGroup !== '' && $leftGroup !== $rightGroup) {
+            $left['group'] = '';
+        }
+
+        return $left;
+    }
+
+    /**
+     * @param array<int,mixed> $values
+     *
+     * @return list<string>
+     */
+    private function uniqueNonEmptyStrings(array $values): array
+    {
+        $unique = [];
+
+        foreach ($values as $value) {
+            $value = trim((string) $value);
+            if ($value !== '' && !in_array($value, $unique, true)) {
+                $unique[] = $value;
+            }
+        }
+
+        return $unique;
+    }
+
+    /**
+     * @param array<int,mixed> $usages
+     *
+     * @return list<array{module_name:string,module_title:string,description:string,data:list<string>}>
+     */
+    private function uniqueThirdPartyServiceUsages(array $usages): array
+    {
+        $unique = [];
+        $seen = [];
+
+        foreach ($usages as $usage) {
+            if (!is_array($usage)) {
+                continue;
+            }
+
+            $normalized = [
+                'module_name' => trim((string) ($usage['module_name'] ?? '')),
+                'module_title' => trim((string) ($usage['module_title'] ?? '')),
+                'description' => trim((string) ($usage['description'] ?? '')),
+                'data' => $this->uniqueNonEmptyStrings($usage['data'] ?? []),
+            ];
+            $key = json_encode($normalized);
+
+            if ($normalized['module_name'] === '' || $key === false || isset($seen[$key])) {
                 continue;
             }
 
             $seen[$key] = true;
-            $unique[] = $service;
+            $unique[] = $normalized;
         }
 
         return $unique;
+    }
+
+    /**
+     * @param array<string,mixed> $service
+     */
+    private function isWikimediaService(array $service): bool
+    {
+        $serviceId = strtolower(trim((string) ($service['service_id'] ?? '')));
+        if (in_array($serviceId, ['wikimedia', 'wikimedia-foundation', 'wikidata', 'wikipedia', 'wikimedia-commons', 'wikicommons'], true)) {
+            return true;
+        }
+
+        $host = strtolower((string) parse_url((string) ($service['url'] ?? ''), PHP_URL_HOST));
+        foreach (['wikimedia.org', 'wikidata.org', 'wikipedia.org'] as $domain) {
+            if ($host === $domain || str_ends_with($host, '.' . $domain)) {
+                return true;
+            }
+        }
+
+        return preg_match('/\b(?:wikimedia|wikidata|wikipedia|wikicommons)\b/i', (string) ($service['name'] ?? '')) === 1;
     }
 
     private function showGoogleCharts(): bool
@@ -1753,6 +1925,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function modulePrivacyNotices(): array
     {
+        if ($this->modulePrivacyNoticesCache !== null) {
+            return $this->modulePrivacyNoticesCache;
+        }
+
         $notices = [
             'third_party_services' => [],
             'security_measures' => [],
@@ -1775,7 +1951,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
             foreach ($moduleNotices['third_party_services'] ?? [] as $service) {
                 if (is_array($service)) {
-                    $normalized = $this->normalizedThirdPartyService($service);
+                    $normalized = $this->normalizedThirdPartyService(
+                        $service,
+                        $module->name(),
+                        $module->title()
+                    );
 
                     if ($normalized !== null) {
                         $notices['third_party_services'][] = $normalized;
@@ -1792,7 +1972,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             }
         }
 
-        return $notices;
+        $notices['third_party_services'] = $this->uniqueThirdPartyServices($notices['third_party_services']);
+        $notices['security_measures'] = $this->uniqueNonEmptyStrings($notices['security_measures']);
+        $this->modulePrivacyNoticesCache = $notices;
+
+        return $this->modulePrivacyNoticesCache;
     }
 
     /**
@@ -1816,7 +2000,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      *
      * @return array<string,mixed>|null
      */
-    private function normalizedThirdPartyService(array $service): ?array
+    private function normalizedThirdPartyService(
+        array $service,
+        string $moduleName,
+        string $moduleTitle
+    ): ?array
     {
         $name = trim((string) ($service['name'] ?? ''));
         $url = trim((string) ($service['url'] ?? ''));
@@ -1835,6 +2023,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         return [
+            'service_id' => trim((string) ($service['service_id'] ?? '')),
             'name' => $name,
             'url' => $url,
             'country' => trim((string) ($service['country'] ?? '')),
@@ -1842,6 +2031,12 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'data' => $data,
             'description' => trim((string) ($service['description'] ?? '')),
             'group' => trim((string) ($service['group'] ?? '')),
+            'usages' => [[
+                'module_name' => $moduleName,
+                'module_title' => $moduleTitle,
+                'description' => trim((string) ($service['description'] ?? '')),
+                'data' => $data,
+            ]],
         ];
     }
 
@@ -2001,7 +2196,15 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     private function withThirdCountryTransferFlag(array $service): array
     {
         $service['country'] = (string) ($service['country'] ?? '');
-        $service['thirdCountryTransfer'] = $this->isThirdCountryTransfer($service['country']);
+        $countries = $this->uniqueNonEmptyStrings([
+            ...($service['countries'] ?? []),
+            $service['country'],
+        ]);
+        $service['countries'] = $countries;
+        $service['thirdCountryTransfer'] = count(array_filter(
+            $countries,
+            fn (string $country): bool => $this->isThirdCountryTransfer($country)
+        )) > 0;
 
         return $service;
     }

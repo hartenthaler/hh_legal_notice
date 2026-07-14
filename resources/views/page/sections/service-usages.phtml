@@ -1,0 +1,37 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+
+/**
+ * @var array<string,mixed> $service
+ */
+
+$usages = $service['usages'] ?? [];
+?>
+
+<?php if (count($usages) > 0) : ?>
+    <br>
+    <?= I18N::translate('This service is used by the following modules:') ?>
+    <ul>
+        <?php foreach ($usages as $usage) : ?>
+            <li>
+                <strong><?= e($usage['module_title'] !== '' ? $usage['module_title'] : $usage['module_name']) ?></strong>
+                <?php if ($usage['module_title'] !== '' && $usage['module_title'] !== $usage['module_name']) : ?>
+                    (<code><?= e($usage['module_name']) ?></code>)
+                <?php endif ?>
+                <?php if ($usage['description'] !== '') : ?>
+                    <?= e($usage['description']) ?>
+                <?php endif ?>
+                <?php if (count($usage['data']) > 0) : ?>
+                    <br>
+                    <?= I18N::translate('Data that may be processed for this use:') ?>
+                    <ul>
+                        <?php foreach ($usage['data'] as $dataCategory) : ?>
+                            <li><?= e($dataCategory) ?></li>
+                        <?php endforeach ?>
+                    </ul>
+                <?php endif ?>
+            </li>
+        <?php endforeach ?>
+    </ul>
+<?php endif ?>

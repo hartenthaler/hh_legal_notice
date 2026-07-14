@@ -47,9 +47,26 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <tbody>
                 <?php foreach ($thirdPartyServices as $service) : ?>
                     <tr>
-                        <td><strong><?= e($service['name']) ?></strong></td>
-                        <td><a href="<?= e($service['url']) ?>"><?= e($service['url']) ?></a></td>
-                        <td><?= $service['country'] !== '' ? e(MoreI18N::xlate($service['country'])) : I18N::translate('not specified') ?></td>
+                        <td>
+                            <?php foreach (($service['names'] ?? [$service['name']]) as $index => $name) : ?>
+                                <?= $index > 0 ? '<br>' : '' ?><strong><?= e($name) ?></strong>
+                            <?php endforeach ?>
+                        </td>
+                        <td>
+                            <?php foreach (($service['urls'] ?? [$service['url']]) as $index => $url) : ?>
+                                <?= $index > 0 ? '<br>' : '' ?><a href="<?= e($url) ?>"><?= e($url) ?></a>
+                            <?php endforeach ?>
+                        </td>
+                        <td>
+                            <?php $countries = $service['countries'] ?? [$service['country']] ?>
+                            <?php if (count($countries) === 0) : ?>
+                                <?= I18N::translate('not specified') ?>
+                            <?php else : ?>
+                                <?php foreach ($countries as $index => $country) : ?>
+                                    <?= $index > 0 ? '<br>' : '' ?><?= e(MoreI18N::xlate($country)) ?>
+                                <?php endforeach ?>
+                            <?php endif ?>
+                        </td>
                     </tr>
                 <?php endforeach ?>
                 </tbody>
@@ -57,6 +74,52 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
             <?php $thirdPartyServicesWithData = array_filter($thirdPartyServices, static fn (array $service): bool => count($service['data'] ?? []) > 0 || ($service['privacy_url'] ?? '') !== '') ?>
             <?php if (count($thirdPartyServicesWithData) > 0) : ?>
+                <?php $webtreesCoreServiceNames = ['webtrees update server', 'GitHub', 'Google Charts'] ?>
+                <?php $webtreesCoreServices = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => in_array(($service['name'] ?? ''), $webtreesCoreServiceNames, true)) ?>
+                <?php if (count($webtreesCoreServices) > 0) : ?>
+                    <h5><?= I18N::translate('webtrees core') ?></h5>
+
+                    <ul>
+                        <?php foreach ($webtreesCoreServices as $service) : ?>
+                            <li>
+                                <strong><?= e($service['name']) ?></strong>
+                                <?php if (($service['name'] ?? '') === 'Google Charts') : ?>
+                                    <?= I18N::translate('Google Charts may be loaded from Google servers when statistics charts are viewed.') ?>
+                                <?php elseif (($service['name'] ?? '') === 'webtrees update server') : ?>
+                                    <?= I18N::translate('webtrees may contact the webtrees update server to check whether a newer webtrees version is available.') ?>
+                                <?php elseif (($service['name'] ?? '') === 'GitHub') : ?>
+                                    <?= I18N::translate('webtrees may contact GitHub to check whether a newer version of a custom module is available.') ?>
+                                <?php endif ?>
+                                <?= view($moduleName . '::page/sections/service-usages', ['service' => $service]) ?>
+                                <?php if (count($service['data'] ?? []) > 0 && count($service['usages'] ?? []) === 0) : ?>
+                                    <br>
+                                    <?= I18N::translate('Data that may be processed by this service:') ?>
+                                    <ul>
+                                        <?php foreach ($service['data'] as $dataCategory) : ?>
+                                            <?php $dataCategoryLabel = match ($dataCategory) {
+                                                'IP addresses' => I18N::translate('IP addresses'),
+                                                'Browser request metadata' => I18N::translate('Browser request metadata'),
+                                                'Technical request metadata' => I18N::translate('Technical request metadata'),
+                                                'Chart data shown on statistics pages' => I18N::translate('Chart data shown on statistics pages'),
+                                                'Installed webtrees version' => I18N::translate('Installed webtrees version'),
+                                                'PHP version' => I18N::translate('PHP version'),
+                                                'Site identifier' => I18N::translate('Site identifier'),
+                                                'Database driver' => I18N::translate('Database driver'),
+                                                default => I18N::translate($dataCategory),
+                                            } ?>
+                                            <li><?= e($dataCategoryLabel) ?></li>
+                                        <?php endforeach ?>
+                                    </ul>
+                                <?php endif ?>
+                                <?php foreach (($service['privacy_urls'] ?? []) as $privacyUrl) : ?>
+                                    <br><?= I18N::translate('Privacy notice:') ?>
+                                    <a href="<?= e($privacyUrl) ?>"><?= e($privacyUrl) ?></a>
+                                <?php endforeach ?>
+                            </li>
+                        <?php endforeach ?>
+                    </ul>
+                <?php endif ?>
+
                 <?php $mapServiceProviders = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => ($service['group'] ?? '') === 'map') ?>
                 <?php if (count($mapServiceProviders) > 0) : ?>
                     <h5><?= I18N::translate('Map service providers') ?></h5>
@@ -69,7 +132,8 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                         <li>
                             <strong><?= e($service['name']) ?></strong>
                             <?= I18N::translate('This website may embed maps from %s. The map content is loaded from servers of this provider, and the provider may process data such as IP addresses, displayed location data, and selected map settings to provide and cache the map functions.', e($service['name'])) ?>
-                            <?php if (count($service['data'] ?? []) > 0) : ?>
+                            <?= view($moduleName . '::page/sections/service-usages', ['service' => $service]) ?>
+                            <?php if (count($service['data'] ?? []) > 0 && count($service['usages'] ?? []) === 0) : ?>
                                 <br>
                                 <?= I18N::translate('Data that may be processed by this service:') ?>
                                 <ul>
@@ -84,16 +148,44 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                                     <?php endforeach ?>
                                 </ul>
                             <?php endif ?>
-                            <?php if (($service['privacy_url'] ?? '') !== '') : ?>
-                                <?= I18N::translate('Privacy notice:') ?>
-                                <a href="<?= e($service['privacy_url']) ?>"><?= e($service['privacy_url']) ?></a>
+                            <?php foreach (($service['privacy_urls'] ?? []) as $privacyUrl) : ?>
+                                <br><?= I18N::translate('Privacy notice:') ?>
+                                <a href="<?= e($privacyUrl) ?>"><?= e($privacyUrl) ?></a>
+                            <?php endforeach ?>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            <?php endif ?>
+
+            <?php $transcriptionProviders = array_filter($thirdPartyServices, static fn (array $service): bool => ($service['group'] ?? '') === 'transcription') ?>
+            <?php if (count($transcriptionProviders) > 0) : ?>
+                <h5><?= I18N::translate('External transcription providers') ?></h5>
+
+                <p>
+                    <?= I18N::translate('This website may use external transcription providers when a registered user explicitly starts such a workflow.') ?>
+                    <?= I18N::translate('In that case, the following provider services and data categories may be involved:') ?>
+                </p>
+
+                <ul>
+                    <?php foreach ($transcriptionProviders as $provider) : ?>
+                        <li>
+                            <strong><?= e($provider['name'] ?? '') ?></strong>
+                            <?= view($moduleName . '::page/sections/service-usages', ['service' => $provider]) ?>
+                            <?php if (count($provider['data'] ?? []) > 0 && count($provider['usages'] ?? []) === 0) : ?>
+                                <br>
+                                <?= I18N::translate('Data that may be exchanged:') ?>
+                                <ul>
+                                    <?php foreach ($provider['data'] as $dataCategory) : ?>
+                                        <li><?= e($dataCategory) ?></li>
+                                    <?php endforeach ?>
+                                </ul>
                             <?php endif ?>
                         </li>
                     <?php endforeach ?>
                 </ul>
             <?php endif ?>
 
-            <?php $otherThirdPartyServicesWithData = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => in_array(($service['name'] ?? ''), ['Google Charts', 'Gravatar'], true) || (($service['description'] ?? '') !== '' && !in_array(($service['group'] ?? ''), ['map', 'transcription'], true))) ?>
+            <?php $otherThirdPartyServicesWithData = array_filter($thirdPartyServicesWithData, static fn (array $service): bool => !in_array(($service['name'] ?? ''), $webtreesCoreServiceNames, true) && !in_array(($service['group'] ?? ''), ['map', 'transcription'], true)) ?>
             <?php if (count($otherThirdPartyServicesWithData) > 0) : ?>
                 <h5><?= I18N::translate('Additional third-party service details') ?></h5>
 
@@ -101,18 +193,16 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <?php foreach ($otherThirdPartyServicesWithData as $service) : ?>
                         <li>
                             <strong><?= e($service['name']) ?></strong>
-                            <?php if (($service['name'] ?? '') === 'Google Charts') : ?>
-                                <?= I18N::translate('Google Charts may be loaded from Google servers when statistics charts are viewed.') ?>
-                            <?php elseif (($service['name'] ?? '') === 'Gravatar') : ?>
+                            <?php if (($service['name'] ?? '') === 'Gravatar') : ?>
+                                <?= I18N::translate('The hh_legal_notice module itself uses this service to optionally display a representative image of the responsible person.') ?>
                                 <?= I18N::translate('Gravatar may be loaded from Automattic servers when the responsible person image is displayed.') ?>
-                            <?php elseif (($service['name'] ?? '') === 'webtrees update server') : ?>
-                                <?= I18N::translate('webtrees may contact the webtrees update server to check whether a newer webtrees version is available.') ?>
-                            <?php elseif (($service['name'] ?? '') === 'GitHub') : ?>
-                                <?= I18N::translate('webtrees may contact GitHub to check whether a newer version of a custom module is available.') ?>
-                            <?php elseif (($service['description'] ?? '') !== '') : ?>
-                                <?= e($service['description']) ?>
+                            <?php elseif (count($service['usages'] ?? []) === 0) : ?>
+                                <?php foreach (($service['descriptions'] ?? []) as $description) : ?>
+                                    <?= e($description) ?>
+                                <?php endforeach ?>
                             <?php endif ?>
-                            <?php if (count($service['data'] ?? []) > 0) : ?>
+                            <?= view($moduleName . '::page/sections/service-usages', ['service' => $service]) ?>
+                            <?php if (count($service['data'] ?? []) > 0 && count($service['usages'] ?? []) === 0) : ?>
                                 <br>
                                 <?= I18N::translate('Data that may be processed by this service:') ?>
                                 <ul>
@@ -133,41 +223,14 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                                     <?php endforeach ?>
                                 </ul>
                             <?php endif ?>
-                            <?php if (($service['privacy_url'] ?? '') !== '') : ?>
-                                <?= I18N::translate('Privacy notice:') ?>
-                                <a href="<?= e($service['privacy_url']) ?>"><?= e($service['privacy_url']) ?></a>
-                            <?php endif ?>
+                            <?php foreach (($service['privacy_urls'] ?? []) as $privacyUrl) : ?>
+                                <br><?= I18N::translate('Privacy notice:') ?>
+                                <a href="<?= e($privacyUrl) ?>"><?= e($privacyUrl) ?></a>
+                            <?php endforeach ?>
                         </li>
                     <?php endforeach ?>
                 </ul>
             <?php endif ?>
-        <?php endif ?>
-
-        <?php $transcriptionProviders = array_filter($thirdPartyServices, static fn (array $service): bool => ($service['group'] ?? '') === 'transcription') ?>
-        <?php if (count($transcriptionProviders) > 0) : ?>
-            <h5><?= I18N::translate('External transcription providers') ?></h5>
-
-            <p>
-                <?= I18N::translate('This website may use external transcription providers when a registered user explicitly starts such a workflow.') ?>
-                <?= I18N::translate('In that case, the following provider services and data categories may be involved:') ?>
-            </p>
-
-            <ul>
-                <?php foreach ($transcriptionProviders as $provider) : ?>
-                    <li>
-                        <strong><?= e($provider['name'] ?? '') ?></strong>
-                        <?php if (count($provider['data'] ?? []) > 0) : ?>
-                            <br>
-                            <?= I18N::translate('Data that may be exchanged:') ?>
-                            <ul>
-                                <?php foreach ($provider['data'] as $dataCategory) : ?>
-                                    <li><?= e($dataCategory) ?></li>
-                                <?php endforeach ?>
-                            </ul>
-                        <?php endif ?>
-                    </li>
-                <?php endforeach ?>
-            </ul>
         <?php endif ?>
 
         <?php $thirdCountryTransferServices = array_filter(
