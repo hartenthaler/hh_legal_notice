@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-27 09:45+0200\n"
-"PO-Revision-Date: 2026-07-15 08:09+0200\n"
+"PO-Revision-Date: 2026-07-27 18:06+0200\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -2780,106 +2780,186 @@ msgid "Data that may be processed for this use:"
 msgstr "Gegevens die voor dit gebruik kunnen worden verwerkt:"
 
 msgid "European Union / European Economic Area (GDPR)"
-msgstr ""
+msgstr "Europese Unie / Europese Economische Ruimte (AVG)"
 
 msgid "Germany (national law)"
-msgstr ""
+msgstr "Duitsland (nationaal recht)"
 
 msgid "Austria (national law)"
-msgstr ""
+msgstr "Oostenrijk (nationaal recht)"
 
 msgid "Switzerland (national law)"
-msgstr ""
+msgstr "Zwitserland (nationaal recht)"
 
 msgid "Applicable legal jurisdictions"
-msgstr ""
+msgstr "Toepasselijke rechtsgebieden"
 
 msgid "How should the applicable legal jurisdictions be determined?"
-msgstr ""
+msgstr "Hoe moeten de toepasselijke rechtsgebieden worden bepaald?"
 
 msgid "Infer from the server location"
-msgstr ""
+msgstr "Afleiden uit de serverlocatie"
 
 msgid "Select manually"
-msgstr ""
+msgstr "Handmatig selecteren"
 
-msgid "The server location remains factual hosting information. It is used as the default for legal jurisdictions only while automatic inference is selected."
+msgid ""
+"The server location remains factual hosting information. It is used as the "
+"default for legal jurisdictions only while automatic inference is selected."
 msgstr ""
+"De serverlocatie blijft feitelijke hostinginformatie. Deze wordt alleen als "
+"standaard voor rechtsgebieden gebruikt wanneer automatische afleiding is "
+"geselecteerd."
 
 msgid "Automatically inferred legal jurisdictions"
-msgstr ""
+msgstr "Automatisch afgeleide rechtsgebieden"
 
-msgid "No module-specific legal jurisdiction can be inferred from the configured server location."
+msgid ""
+"No module-specific legal jurisdiction can be inferred from the configured "
+"server location."
 msgstr ""
+"Uit de ingestelde serverlocatie kan geen modulespecifiek rechtsgebied worden "
+"afgeleid."
 
-msgid "The manual selection overrides the legal jurisdictions inferred from the server location. Verify that every legal jurisdiction applicable to this website is selected."
+msgid ""
+"The manual selection overrides the legal jurisdictions inferred from the "
+"server location. Verify that every legal jurisdiction applicable to this "
+"website is selected."
 msgstr ""
+"De handmatige selectie overschrijft de uit de serverlocatie afgeleide "
+"rechtsgebieden. Controleer of alle op deze website toepasselijke "
+"rechtsgebieden zijn geselecteerd."
 
 msgid "Legal jurisdictions"
-msgstr ""
+msgstr "Rechtsgebieden"
 
-msgid "Several jurisdictions may apply at the same time, for example European Union law and German national law."
+msgid ""
+"Several jurisdictions may apply at the same time, for example European Union "
+"law and German national law."
 msgstr ""
+"Meerdere rechtsgebieden kunnen tegelijkertijd van toepassing zijn, "
+"bijvoorbeeld het recht van de Europese Unie en het nationale recht van "
+"Duitsland."
 
 #: resources/views/settings.phtml
 msgid "Age limit for additional protection of minors"
-msgstr ""
+msgstr "Leeftijdsgrens voor aanvullende bescherming van minderjarigen"
 
 #: resources/views/settings.phtml
-msgid "Up to what age should personal data about a person receive additional protection?"
+msgid ""
+"Up to what age should personal data about a person receive additional "
+"protection?"
 msgstr ""
+"Tot welke leeftijd moeten persoonsgegevens van een persoon aanvullend worden "
+"beschermd?"
 
 #: resources/views/settings.phtml
 msgid "Use 0 for no additional age-based protection."
 msgstr ""
+"Gebruik 0 als geen aanvullende leeftijdsafhankelijke bescherming nodig is."
 
 #: resources/views/settings.phtml
-msgid "The privacy assistant should use the same age limit when applying RESN CONFIDENTIAL automatically."
+msgid ""
+"The privacy assistant should use the same age limit when applying RESN "
+"CONFIDENTIAL automatically."
 msgstr ""
+"De privacyassistent moet dezelfde leeftijdsgrens gebruiken wanneer RESN "
+"CONFIDENTIAL automatisch wordt toegepast."
 
 #: LegalNoticeFooterModule.php
-msgid "Invalid age limit for the protection of minors. No additional age-based protection was selected."
+msgid ""
+"Invalid age limit for the protection of minors. No additional age-based "
+"protection was selected."
 msgstr ""
+"Ongeldige leeftijdsgrens voor de bescherming van minderjarigen. Er is geen "
+"aanvullende leeftijdsafhankelijke bescherming geselecteerd."
 
 #: resources/views/page/sections/data-categories.phtml
-msgid "Genealogical data on this website may originate from publicly accessible sources, including civil registration records, church records, census records, published directories, gravestones, and contributions from family members or other researchers. The persons concerned have not necessarily provided this data themselves."
+msgid ""
+"Genealogical data on this website may originate from publicly accessible "
+"sources, including civil registration records, church records, census "
+"records, published directories, gravestones, and contributions from family "
+"members or other researchers. The persons concerned have not necessarily "
+"provided this data themselves."
 msgstr ""
+"Genealogische gegevens op deze website kunnen afkomstig zijn uit openbaar "
+"toegankelijke bronnen, waaronder burgerlijkestandregisters, kerkregisters, "
+"volkstellingsgegevens, gepubliceerde adres- en naamlijsten, grafstenen en "
+"bijdragen van familieleden of andere onderzoekers. De betrokken personen "
+"hebben deze gegevens niet noodzakelijk zelf verstrekt."
 
 #: resources/views/page/sections/data-categories.phtml
-msgid "This long-term retention is independent of the lifecycle of individual user accounts."
+msgid ""
+"This long-term retention is independent of the lifecycle of individual user "
+"accounts."
 msgstr ""
+"Deze langdurige bewaring staat los van de levenscyclus van individuele "
+"gebruikersaccounts."
 
 #: resources/views/page/sections/data-categories.phtml
 msgid "User account data is retained while the account is active."
 msgstr ""
+"Gegevens van gebruikersaccounts worden bewaard zolang het account actief is."
 
 #: resources/views/page/sections/data-categories.phtml
 msgid "Data about minors"
-msgstr ""
+msgstr "Gegevens van minderjarigen"
 
 #: resources/views/page/sections/data-categories.phtml
 #, php-format
-msgid "Personal data about persons below the configured age of %s year is subject to additional protection on this website."
-msgid_plural "Personal data about persons below the configured age of %s years is subject to additional protection on this website."
+msgid ""
+"Personal data about persons below the configured age of %s year is subject "
+"to additional protection on this website."
+msgid_plural ""
+"Personal data about persons below the configured age of %s years is subject "
+"to additional protection on this website."
 msgstr[0] ""
+"Persoonsgegevens van personen jonger dan de ingestelde leeftijd van %s jaar "
+"genieten op deze website aanvullende bescherming."
 msgstr[1] ""
+"Persoonsgegevens van personen jonger dan de ingestelde leeftijd van %s jaar "
+"genieten op deze website aanvullende bescherming."
 
 #: resources/views/page/sections/data-rights.phtml
-msgid "Where it is appropriate and legally permissible to provide genealogical data as an export, webtrees supports GEDCOM as a structured, machine-readable format."
+msgid ""
+"Where it is appropriate and legally permissible to provide genealogical data "
+"as an export, webtrees supports GEDCOM as a structured, machiNe-readable "
+"format."
 msgstr ""
+"Wanneer het passend en juridisch toegestaan is om genealogische gegevens als "
+"export beschikbaar te stellen, ondersteunt webtrees GEDCOM als een "
+"gestructureerd, machineleesbaar formaat."
 
 #: resources/views/page/sections/security-measures.phtml
 msgid "Notification of personal data breaches"
-msgstr ""
+msgstr "Melding van inbreuken in verband met persoonsgegevens"
 
 #: resources/views/page/sections/security-measures.phtml
-msgid "Personal data breaches are assessed in accordance with the applicable legal requirements."
+msgid ""
+"Personal data breaches are assessed in accordance with the applicable legal "
+"requirements."
 msgstr ""
+"Inbreuken in verband met persoonsgegevens worden beoordeeld overeenkomstig "
+"de toepasselijke wettelijke vereisten."
 
 #: resources/views/page/sections/security-measures.phtml
-msgid "If a personal data breach is likely to result in a risk to the rights and freedoms of natural persons, it is reported to the competent supervisory authority in accordance with Article 33 GDPR. Where the breach is likely to result in a high risk, the affected persons are also informed in accordance with Article 34 GDPR."
+msgid ""
+"If a personal data breach is likely to result in a risk to the rights and "
+"freedoms of natural persons, it is reported to the competent supervisory "
+"authority in accordance with Article 33 GDPR. Where the breach is likely to "
+"result in a high risk, the affected persons are also informed in accordance "
+"with Article 34 GDPR."
 msgstr ""
+"Als een inbreuk in verband met persoonsgegevens waarschijnlijk een risico "
+"inhoudt voor de rechten en vrijheden van natuurlijke personen, wordt deze "
+"overeenkomstig artikel 33 AVG gemeld aan de bevoegde toezichthoudende "
+"autoriteit. Als de inbreuk waarschijnlijk een hoog risico inhoudt, worden de "
+"betrokken personen overeenkomstig artikel 34 AVG eveneens geïnformeerd."
 
 #: resources/views/page/sections/security-measures.phtml
-msgid "Where required by applicable law, the competent authority and the affected persons are notified."
+msgid ""
+"Where required by applicable law, the competent authority and the affected "
+"persons are notified."
 msgstr ""
+"Voor zover het toepasselijke recht dit vereist, worden de bevoegde "
+"autoriteit en de betrokken personen geïnformeerd."
