@@ -57,8 +57,19 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?= I18N::translate('Information about criminal convictions or offences may also occur in historical sources.') ?>
             </p>
 
+            <p>
+                <?= I18N::translate('These facts are protected by graduated access rights and GEDCOM restrictions.') ?>
+                <?php if ($sensitiveDataYears > 0) : ?>
+                    <?= I18N::plural(
+                        'They are released for wider access no earlier than %s year after the death of the person concerned.',
+                        'They are released for wider access no earlier than %s years after the death of the person concerned.',
+                        $sensitiveDataYears,
+                        I18N::number($sensitiveDataYears)
+                    ) ?>
+                <?php endif ?>
+            </p>
+
             <?php if ($minorProtectionAge > 0) : ?>
-                <h5><?= I18N::translate('Data about minors') ?></h5>
                 <p>
                     <?= I18N::plural(
                         'Personal data about persons below the configured age of %s year is subject to additional protection on this website.',
@@ -78,18 +89,6 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <?php endif ?>
                 </p>
             <?php endif ?>
-
-            <p>
-                <?= I18N::translate('These facts are protected by graduated access rights and GEDCOM restrictions.') ?>
-                <?php if ($sensitiveDataYears > 0) : ?>
-                    <?= I18N::plural(
-                        'They are released for wider access no earlier than %s year after the death of the person concerned.',
-                        'They are released for wider access no earlier than %s years after the death of the person concerned.',
-                        $sensitiveDataYears,
-                        I18N::number($sensitiveDataYears)
-                    ) ?>
-                <?php endif ?>
-            </p>
         <?php elseif ($subsection->getKey() === 'AccessRights') : ?>
             <h4><?= e($subsection->getHeading()) ?></h4>
 

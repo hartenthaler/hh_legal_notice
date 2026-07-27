@@ -3284,10 +3284,6 @@ msgid "User account data is retained while the account is active."
 msgstr "Benutzerkontodaten werden aufbewahrt, solange das Konto aktiv ist."
 
 #: resources/views/page/sections/data-categories.phtml
-msgid "Data about minors"
-msgstr "Daten über Minderjährige"
-
-#: resources/views/page/sections/data-categories.phtml
 #, php-format
 msgid "Personal data about persons below the configured age of %s year is subject to additional protection on this website."
 msgid_plural "Personal data about persons below the configured age of %s years is subject to additional protection on this website."
