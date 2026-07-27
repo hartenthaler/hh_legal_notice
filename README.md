@@ -102,8 +102,12 @@ The generated privacy policy can include, depending on the configuration and app
 * information about hosting, structured order-processing agreement dates, application logs, third-party services, tracking and analytics, and third-country transfers
 * information about retention periods for inactive user accounts
 * information that registered users can view, correct, or delete account data in their profile settings
+* information about typical sources of genealogical data and the fact that the persons concerned may not have supplied the data themselves
+* GEDCOM as a structured, machine-readable export format where providing an export is appropriate and legally permissible
 * information about the long-term preservation of genealogical data as historically relevant material
 * information about special categories of genealogical personal data and their protection period after death
+* an optional age threshold for additional protection of minors, shown in the privacy policy only when the configured value is greater than zero and intended for enforcement by `hh_privacy_assistant`
+* information about assessing and, where legally required, reporting personal data breaches
 * optional consumer dispute resolution notice for websites based on German law
 * additional third-party services can be configured by the administrator using service name, URL, and optional country of service provision. If EU/EEA data-protection law is selected and a configured service is provided from outside the European Economic Area, the generated privacy policy can include a third-country-transfer notice.
 * the privacy-policy page can also include information from other installed modules. Compatible modules can expose a public `privacyNotices(): array` method with third-party services and security measures. The complete contract for supplying modules, field definitions, translation guidance, and a PHP example are documented in [`docs/privacy-notices-contract.md`](docs/privacy-notices-contract.md). This is used, for example, by `hh_source_transcription` for external transcription providers such as Transkribus or Discourse. Active webtrees map providers and map links can also be detected and listed as third-party services.
@@ -112,6 +116,10 @@ The generated privacy policy can include, depending on the configuration and app
 For special categories of personal data, such as religious affiliation, political affiliation,
 genetic data, health data, or causes of death, the administrator can configure a protection period
 from 0 to 100 years after death. The default is 10 years.
+
+The administrator can also configure an age threshold from 0 to 100 for additional protection of minors.
+The value `0` disables the additional age-based protection and suppresses the corresponding privacy-policy statement.
+`hh_privacy_assistant` can reuse a positive value when applying `RESN CONFIDENTIAL` automatically.
 
 ### Legal Regulations
 

@@ -34,7 +34,9 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                     <?= I18N::translate('Family history and genealogical research is the legitimate purpose for processing this data.') ?>
                 <?php endif ?>
                 <?= I18N::translate('Personal data published on this website, such as names, e-mail addresses, photos, addresses, or life dates, is used only for family history and genealogical research and is kept securely.') ?>
+                <?= I18N::translate('Genealogical data on this website may originate from publicly accessible sources, including civil registration records, church records, census records, published directories, gravestones, and contributions from family members or other researchers. The persons concerned have not necessarily provided this data themselves.') ?>
                 <?= I18N::translate('Genealogical data is stored for the long term because it is historically relevant and should remain preserved and accessible for future generations.') ?>
+                <?= I18N::translate('This long-term retention is independent of the lifecycle of individual user accounts.') ?>
                 <?= I18N::translate('Requests for deletion are reviewed individually.') ?>
                 <?php if ($useEuPrivacyLaw) : ?>
                     <?= I18N::translate('Deletion may be restricted if further processing is necessary for historical research purposes and deletion would likely make these purposes impossible or seriously impair them, in accordance with Article 17(3)(d) GDPR.') ?>
@@ -54,6 +56,18 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
                 <?= I18N::translate('This can include ethnic origin, physical characteristics, political opinions or affiliations, religious or philosophical beliefs, trade union or party membership, genetic data, and health data including causes of death.') ?>
                 <?= I18N::translate('Information about criminal convictions or offences may also occur in historical sources.') ?>
             </p>
+
+            <?php if ($minorProtectionAge > 0) : ?>
+                <h5><?= I18N::translate('Data about minors') ?></h5>
+                <p>
+                    <?= I18N::plural(
+                        'Personal data about persons below the configured age of %s year is subject to additional protection on this website.',
+                        'Personal data about persons below the configured age of %s years is subject to additional protection on this website.',
+                        $minorProtectionAge,
+                        I18N::number($minorProtectionAge)
+                    ) ?>
+                </p>
+            <?php endif ?>
 
             <?php if ($useEuPrivacyLaw) : ?>
                 <p>
@@ -159,6 +173,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 
             <?php if ($inactiveUserYears > 0) : ?>
                 <p>
+                    <?= I18N::translate('User account data is retained while the account is active.') ?>
                     <?= I18N::plural('Inactive user accounts are deleted after %s year.', 'Inactive user accounts are deleted after %s years.', $inactiveUserYears, I18N::number($inactiveUserYears)) ?>
                 </p>
             <?php endif ?>

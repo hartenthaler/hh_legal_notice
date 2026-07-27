@@ -3250,3 +3250,66 @@ msgstr "Rechtsräume"
 
 msgid "Several jurisdictions may apply at the same time, for example European Union law and German national law."
 msgstr "Mehrere Rechtsräume können gleichzeitig gelten, beispielsweise das Recht der Europäischen Union und deutsches nationales Recht."
+
+#: resources/views/settings.phtml
+msgid "Age limit for additional protection of minors"
+msgstr "Altersgrenze für den zusätzlichen Schutz Minderjähriger"
+
+#: resources/views/settings.phtml
+msgid "Up to what age should personal data about a person receive additional protection?"
+msgstr "Bis zu welchem Alter sollen personenbezogene Daten einer Person zusätzlich geschützt werden?"
+
+#: resources/views/settings.phtml
+msgid "Use 0 for no additional age-based protection."
+msgstr "Verwenden Sie 0, wenn kein zusätzlicher altersabhängiger Schutz erfolgen soll."
+
+#: resources/views/settings.phtml
+msgid "The privacy assistant should use the same age limit when applying RESN CONFIDENTIAL automatically."
+msgstr "Der Datenschutzassistent sollte dieselbe Altersgrenze verwenden, wenn er RESN CONFIDENTIAL automatisch setzt."
+
+#: LegalNoticeFooterModule.php
+msgid "Invalid age limit for the protection of minors. No additional age-based protection was selected."
+msgstr "Ungültige Altersgrenze für den Schutz Minderjähriger. Es wurde kein zusätzlicher altersabhängiger Schutz ausgewählt."
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "Genealogical data on this website may originate from publicly accessible sources, including civil registration records, church records, census records, published directories, gravestones, and contributions from family members or other researchers. The persons concerned have not necessarily provided this data themselves."
+msgstr "Genealogische Daten auf dieser Website können aus öffentlich zugänglichen Quellen stammen, darunter Personenstandsregister, Kirchenbücher, Volkszählungsunterlagen, veröffentlichte Verzeichnisse und Grabsteine sowie Beiträge von Familienangehörigen oder anderen Forschenden. Die betroffenen Personen haben diese Daten nicht notwendigerweise selbst bereitgestellt."
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "This long-term retention is independent of the lifecycle of individual user accounts."
+msgstr "Diese langfristige Aufbewahrung ist vom Lebenszyklus einzelner Benutzerkonten unabhängig."
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "User account data is retained while the account is active."
+msgstr "Benutzerkontodaten werden aufbewahrt, solange das Konto aktiv ist."
+
+#: resources/views/page/sections/data-categories.phtml
+msgid "Data about minors"
+msgstr "Daten über Minderjährige"
+
+#: resources/views/page/sections/data-categories.phtml
+#, php-format
+msgid "Personal data about persons below the configured age of %s year is subject to additional protection on this website."
+msgid_plural "Personal data about persons below the configured age of %s years is subject to additional protection on this website."
+msgstr[0] "Personenbezogene Daten über Personen unter dem konfigurierten Alter von %s Jahr unterliegen auf dieser Website einem zusätzlichen Schutz."
+msgstr[1] "Personenbezogene Daten über Personen unter dem konfigurierten Alter von %s Jahren unterliegen auf dieser Website einem zusätzlichen Schutz."
+
+#: resources/views/page/sections/data-rights.phtml
+msgid "Where it is appropriate and legally permissible to provide genealogical data as an export, webtrees supports GEDCOM as a structured, machine-readable format."
+msgstr "Wenn es angemessen und rechtlich zulässig ist, genealogische Daten als Export bereitzustellen, unterstützt webtrees GEDCOM als strukturiertes, maschinenlesbares Format."
+
+#: resources/views/page/sections/security-measures.phtml
+msgid "Notification of personal data breaches"
+msgstr "Meldung von Verletzungen des Schutzes personenbezogener Daten"
+
+#: resources/views/page/sections/security-measures.phtml
+msgid "Personal data breaches are assessed in accordance with the applicable legal requirements."
+msgstr "Verletzungen des Schutzes personenbezogener Daten werden gemäß den geltenden rechtlichen Anforderungen bewertet."
+
+#: resources/views/page/sections/security-measures.phtml
+msgid "If a personal data breach is likely to result in a risk to the rights and freedoms of natural persons, it is reported to the competent supervisory authority in accordance with Article 33 GDPR. Where the breach is likely to result in a high risk, the affected persons are also informed in accordance with Article 34 GDPR."
+msgstr "Wenn eine Verletzung des Schutzes personenbezogener Daten voraussichtlich zu einem Risiko für die Rechte und Freiheiten natürlicher Personen führt, wird sie gemäß Artikel 33 DSGVO der zuständigen Aufsichtsbehörde gemeldet. Führt die Verletzung voraussichtlich zu einem hohen Risiko, werden gemäß Artikel 34 DSGVO auch die betroffenen Personen benachrichtigt."
+
+#: resources/views/page/sections/security-measures.phtml
+msgid "Where required by applicable law, the competent authority and the affected persons are notified."
+msgstr "Soweit nach geltendem Recht erforderlich, werden die zuständige Behörde und die betroffenen Personen benachrichtigt."

@@ -6,6 +6,8 @@
 * Fixed a runtime error when another module supplies a single data category, security measure, or third-party service instead of a list in `privacyNotices()`.
 * Added an administrator-controlled multi-select for applicable legal jurisdictions, with the server location retained as the automatic default and a warning whenever that default is overridden.
 * Decoupled regional legal wording, national legal-notice references, and EU/EEA third-country-transfer checks from the factual server location.
+* Added clearer privacy-policy information about genealogical data sources, GEDCOM as a machine-readable export format, retention, personal data breach notifications, and configured additional protection for minors.
+* Documented which statements and jurisdiction groupings from the rewritten webtrees Core privacy policy are intentionally not adopted.
 
 ## 2.2.6.9 - 2026-07-15
 

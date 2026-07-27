@@ -50,6 +50,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
  * @var list<array{count:int,purpose:string,trees:list<string>}> $researchPurposeTreeSummaries per-tree research purposes grouped for admin orientation
  * @var int                  $inactiveUserYears     when should inactive users be deleted?
  * @var int                     $sensitiveDataYears  years after death before sensitive genealogical data is released
+ * @var int                     $minorProtectionAge age below which personal data receives additional protection
  * @var array<int,object>       $inactiveUserAccountSummaries inactive user accounts for admin decision support
  * @var string                  $registeredUserNames    compact list of registered users
  *
@@ -492,6 +493,7 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                     </div>
                 </div>
             </div>
+
         </div>
 
         <?php if ($researchPurposeTreeSummaries !== []) : ?>
@@ -798,6 +800,21 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                         <?= I18N::translate('For how many years after death should particularly sensitive genealogical data remain protected?') ?>
                         <?= I18N::translate('Use 0 if no specific release period should be stated in the privacy policy.') ?>
                         <?= I18N::translate('The same period should be used by the privacy assistant when applying RESN CONFIDENTIAL automatically.') ?>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <label class="col-sm-3 col-form-label wt-page-options-label" for="minorProtectionAge">
+                    <?= I18N::translate('Age limit for additional protection of minors') ?>
+                </label>
+                <div class="col-sm-9 wt-page-options-value">
+                    <input class="form-control" id="minorProtectionAge" name="minorProtectionAge" type="number" min="0" max="100" step="1"
+                           value="<?= e((string) ($minorProtectionAge ?? 0)) ?>">
+                    <p class="small text-muted">
+                        <?= I18N::translate('Up to what age should personal data about a person receive additional protection?') ?>
+                        <?= I18N::translate('Use 0 for no additional age-based protection.') ?>
+                        <?= I18N::translate('The privacy assistant should use the same age limit when applying RESN CONFIDENTIAL automatically.') ?>
                     </p>
                 </div>
             </div>

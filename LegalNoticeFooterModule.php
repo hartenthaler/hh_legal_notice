@@ -585,6 +585,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'registeredUsersAreRelatives',
             'inactiveUserYears',
             'sensitiveDataYears',
+            'minorProtectionAge',
             'supervisoryAuthorityName',
             'supervisoryAuthorityUrl',
             'legalJurisdictionMode',
@@ -688,6 +689,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         if ($response['sensitiveDataYears'] === '') {
             $response['sensitiveDataYears'] = '10';
+        }
+
+        if ($response['minorProtectionAge'] === '') {
+            $response['minorProtectionAge'] = '0';
         }
 
     }
@@ -927,6 +932,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
             'inactiveUserYears' => in_array($value, ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], true) ? $value : '0',
             'sensitiveDataYears' => $this->validatedSensitiveDataYears($value),
+            'minorProtectionAge' => $this->validatedMinorProtectionAge($value),
 
             'copyRightStartYear' => $this->validatedYear($value),
 
@@ -1181,6 +1187,21 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         FlashMessages::addMessage(I18N::translate('Invalid protection period for sensitive data. The default value was used.'), 'warning');
 
         return '10';
+    }
+
+    private function validatedMinorProtectionAge(string $value): string
+    {
+        if (preg_match('/^\d{1,3}$/', $value) === 1) {
+            $age = (int) $value;
+
+            if ($age >= 0 && $age <= 100) {
+                return (string) $age;
+            }
+        }
+
+        FlashMessages::addMessage(I18N::translate('Invalid age limit for the protection of minors. No additional age-based protection was selected.'), 'warning');
+
+        return '0';
     }
 
     private function validatedIsoDate(string $value, string $preference): string
@@ -1578,6 +1599,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'showRegisterCaution' => $this->showRegisterCaution(),
             'inactiveUserYears' => $this->inactiveUserYears(),
             'sensitiveDataYears' => $this->sensitiveDataYears(),
+            'minorProtectionAge' => $this->minorProtectionAge(),
             'dpoNamed' => $this->dpoNamed(),
             'dpoName' => $this->dpoName(),
             'dpoCompany' => $this->dpoCompany(),
@@ -2167,6 +2189,13 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $years = (int) $this->getPreference('sensitiveDataYears', '10');
 
         return $years >= 0 && $years <= 100 ? $years : 10;
+    }
+
+    private function minorProtectionAge(): int
+    {
+        $age = (int) $this->getPreference('minorProtectionAge', '0');
+
+        return $age >= 0 && $age <= 100 ? $age : 0;
     }
 
     private function dpoNamed(): bool
