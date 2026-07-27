@@ -194,12 +194,16 @@ public function privacyNotices(): array
 - exceptions and other `Throwable` errors from a provider are caught;
 - non-array return values are ignored;
 - malformed service entries are ignored;
-- missing top-level lists are treated as empty.
+- missing top-level lists are treated as empty;
+- for backwards compatibility, a scalar `data` string is treated as one data
+  category, a scalar `security_measures` string as one measure, and one
+  associative `third_party_services` service object as a one-element list.
 
 This prevents one incompatible provider from breaking the generated legal
 notice. It does not replace testing by the supplying module. Module authors
-should verify their notices with all supported languages and with the relevant
-sections of `hh_legal_notice` enabled.
+should still return the documented list forms and verify their notices with all
+supported languages and with the relevant sections of `hh_legal_notice`
+enabled.
 
 ## Compatibility
 
