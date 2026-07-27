@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-14 23:08+0200\n"
+"POT-Creation-Date: 2026-07-27 09:45+0200\n"
 "PO-Revision-Date: 2026-07-15 08:09+0200\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: \n"
@@ -2183,10 +2183,10 @@ msgstr "Doorgifte van gegevens naar derde landen"
 
 msgid ""
 "Some third-party services are provided from countries outside the European "
-"Union."
+"Economic Area."
 msgstr ""
 "Sommige diensten van derden worden aangeboden vanuit landen buiten de "
-"Europese Unie."
+"Europese Economische Ruimte."
 
 msgid ""
 "If personal data is transferred to such third countries, this is done only "
@@ -2778,3 +2778,45 @@ msgstr "Deze dienst wordt gebruikt door de volgende modules:"
 
 msgid "Data that may be processed for this use:"
 msgstr "Gegevens die voor dit gebruik kunnen worden verwerkt:"
+
+msgid "European Union / European Economic Area (GDPR)"
+msgstr ""
+
+msgid "Germany (national law)"
+msgstr ""
+
+msgid "Austria (national law)"
+msgstr ""
+
+msgid "Switzerland (national law)"
+msgstr ""
+
+msgid "Applicable legal jurisdictions"
+msgstr ""
+
+msgid "How should the applicable legal jurisdictions be determined?"
+msgstr ""
+
+msgid "Infer from the server location"
+msgstr ""
+
+msgid "Select manually"
+msgstr ""
+
+msgid "The server location remains factual hosting information. It is used as the default for legal jurisdictions only while automatic inference is selected."
+msgstr ""
+
+msgid "Automatically inferred legal jurisdictions"
+msgstr ""
+
+msgid "No module-specific legal jurisdiction can be inferred from the configured server location."
+msgstr ""
+
+msgid "The manual selection overrides the legal jurisdictions inferred from the server location. Verify that every legal jurisdiction applicable to this website is selected."
+msgstr ""
+
+msgid "Legal jurisdictions"
+msgstr ""
+
+msgid "Several jurisdictions may apply at the same time, for example European Union law and German national law."
+msgstr ""

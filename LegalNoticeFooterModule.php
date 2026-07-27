@@ -330,9 +330,20 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         ],
     ];
 
-    private const PRIVACY_LAW_GERMANY = 'germany';
-    private const PRIVACY_LAW_EU = 'eu';
-    private const PRIVACY_LAW_OTHER = 'other';
+    private const LEGAL_JURISDICTION_MODE_AUTOMATIC = 'automatic';
+    private const LEGAL_JURISDICTION_MODE_MANUAL = 'manual';
+
+    private const LEGAL_JURISDICTION_EU_EEA = 'eu-eea';
+    private const LEGAL_JURISDICTION_GERMANY = 'germany';
+    private const LEGAL_JURISDICTION_AUSTRIA = 'austria';
+    private const LEGAL_JURISDICTION_SWITZERLAND = 'switzerland';
+
+    private const LEGAL_JURISDICTIONS = [
+        self::LEGAL_JURISDICTION_EU_EEA,
+        self::LEGAL_JURISDICTION_GERMANY,
+        self::LEGAL_JURISDICTION_AUSTRIA,
+        self::LEGAL_JURISDICTION_SWITZERLAND,
+    ];
 
     private const LEGAL_REFERENCES = [
         'germany' => [
@@ -382,7 +393,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         'germany',
         'greece',
         'hungary',
-        'island',
+        'iceland',
         'ireland',
         'italy',
         'latvia',
@@ -576,6 +587,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'sensitiveDataYears',
             'supervisoryAuthorityName',
             'supervisoryAuthorityUrl',
+            'legalJurisdictionMode',
             'hostingCountry',
             'hostingCompanyName',
             'hostingCompanyUrl',
@@ -627,6 +639,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
         $this->checkOptions($request, $response);
 
+        $response['availableLegalJurisdictions'] = $this->legalJurisdictionLabels();
+        $response['inferredLegalJurisdictions'] = $this->inferredLegalJurisdictions();
+        $response['selectedLegalJurisdictions'] = $this->legalJurisdictionsForSettings();
+
         return $response;
     }
 
@@ -657,6 +673,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
         if ($response['privacyPolicyDateSource'] === '') {
             $response['privacyPolicyDateSource'] = self::PRIVACY_POLICY_DATE_SOURCE_RELEASE;
+        }
+
+        if ($response['legalJurisdictionMode'] === '') {
+            $response['legalJurisdictionMode'] = self::LEGAL_JURISDICTION_MODE_AUTOMATIC;
         }
 
         $response['hostingStartDate'] = $this->normalizedAgreementDate($response['hostingStartDate']);
@@ -877,6 +897,13 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             $this->setPreference($preference, $value);
         }
 
+        if ($validatedPreferences['legalJurisdictionMode'] === self::LEGAL_JURISDICTION_MODE_MANUAL) {
+            $this->setPreference(
+                'legalJurisdictions',
+                implode(',', $this->validatedLegalJurisdictions($body->array('legalJurisdictions')))
+            );
+        }
+
         $this->postAdminActionChapter($request);
     }
 
@@ -910,6 +937,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             ], true) ? $value : self::PRIVACY_POLICY_DATE_SOURCE_RELEASE,
 
             'privacyPolicyManualDate' => $this->validatedIsoDate($value, $preference),
+
+            'legalJurisdictionMode' => in_array($value, [
+                self::LEGAL_JURISDICTION_MODE_AUTOMATIC,
+                self::LEGAL_JURISDICTION_MODE_MANUAL,
+            ], true) ? $value : self::LEGAL_JURISDICTION_MODE_AUTOMATIC,
 
             'hostingStartDate',
             'hostingEndDate' => $this->validatedAgreementDate($value, $preference),
@@ -1112,6 +1144,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'österreich', 'oesterreich' => 'austria',
             'schweiz' => 'switzerland',
             'frankreich' => 'france',
+            'island' => 'iceland',
             'niederlande', 'holland' => 'netherlands',
             default => $this->normalizeCountryToken($country),
         };
@@ -1497,7 +1530,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $tree = Validator::attributes($request)->treeOptional();
         $user = $request->getAttribute('user');
         assert($user instanceof UserInterface);
-        $privacyLawRegion = $this->privacyLawRegion();
+        $useEuPrivacyLaw = $this->usesEuPrivacyLaw();
+        $useGermanPrivacyLaw = $this->usesGermanPrivacyLaw();
 
         return $this->viewResponse($this->name() . '::page', [
             'moduleName'                => $this->name(),
@@ -1566,13 +1600,12 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'https'                     => legalNoticeSupport::getHttps($request),
             'hostingDomain'             => LegalNoticeSupport::getHostName($request),
             'hostingCountry'            => I18N::translate($this->hostingCountry()),
-            'legalNoticeLawReference'   => $this->legalNoticeLawReference(),
+            'legalNoticeLawReferences'  => $this->legalNoticeLawReferences(),
             'mediaStateTreatyReference' => $this->legalReference('germany', 'mstv'),
             'federalDataProtectionActReference' => $this->legalReference('germany', 'bdsg'),
             'telecommunicationDigitalServicesDataProtectionActReference' => $this->legalReference('germany', 'tdddg'),
-            'privacyLawRegion'          => $privacyLawRegion,
-            'useGermanPrivacyLaw'        => $privacyLawRegion === self::PRIVACY_LAW_GERMANY,
-            'useEuPrivacyLaw'            => $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
+            'useGermanPrivacyLaw'       => $useGermanPrivacyLaw,
+            'useEuPrivacyLaw'           => $useEuPrivacyLaw,
             'hostingCompanyName'        => $this->hostingCompanyName(),
             'hostingCompanyUrl'         => $this->hostingCompanyUrl(),
             'hostingPrivacyNotice'      => $this->hostingPrivacyNotice(),
@@ -2266,11 +2299,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function isThirdCountryTransfer(string $country): bool
     {
-        if ($this->privacyLawRegion() === self::PRIVACY_LAW_OTHER || trim($country) === '' || strtolower(trim($country)) === 'local') {
+        if (!$this->usesEuPrivacyLaw() || trim($country) === '' || strtolower(trim($country)) === 'local') {
             return false;
         }
 
-        return !$this->isEuPrivacyCountry($country);
+        return !$this->isEuEeaCountry($country);
     }
 
     /**
@@ -2577,24 +2610,133 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return $this->getPreference('privacyPolicyManualDate', '');
     }
 
-    private function privacyLawRegion(): string
+    /**
+     * @return array<string,string>
+     */
+    private function legalJurisdictionLabels(): array
+    {
+        return [
+            self::LEGAL_JURISDICTION_EU_EEA => I18N::translate('European Union / European Economic Area (GDPR)'),
+            self::LEGAL_JURISDICTION_GERMANY => I18N::translate('Germany (national law)'),
+            self::LEGAL_JURISDICTION_AUSTRIA => I18N::translate('Austria (national law)'),
+            self::LEGAL_JURISDICTION_SWITZERLAND => I18N::translate('Switzerland (national law)'),
+        ];
+    }
+
+    private function legalJurisdictionMode(): string
+    {
+        return $this->getPreference('legalJurisdictionMode', self::LEGAL_JURISDICTION_MODE_AUTOMATIC) === self::LEGAL_JURISDICTION_MODE_MANUAL
+            ? self::LEGAL_JURISDICTION_MODE_MANUAL
+            : self::LEGAL_JURISDICTION_MODE_AUTOMATIC;
+    }
+
+    private function usesLegalJurisdictionOverride(): bool
+    {
+        return $this->legalJurisdictionMode() === self::LEGAL_JURISDICTION_MODE_MANUAL;
+    }
+
+    /**
+     * @param array<mixed> $jurisdictions
+     * @return list<string>
+     */
+    private function validatedLegalJurisdictions(array $jurisdictions): array
+    {
+        $selected = [];
+
+        foreach ($jurisdictions as $jurisdiction) {
+            if (is_string($jurisdiction) && in_array($jurisdiction, self::LEGAL_JURISDICTIONS, true)) {
+                $selected[$jurisdiction] = true;
+            }
+        }
+
+        return array_values(array_filter(
+            self::LEGAL_JURISDICTIONS,
+            static fn (string $jurisdiction): bool => isset($selected[$jurisdiction])
+        ));
+    }
+
+    /**
+     * @return list<string>
+     */
+    private function configuredLegalJurisdictions(): array
+    {
+        $stored = trim($this->getPreference('legalJurisdictions', ''));
+
+        return $stored === ''
+            ? []
+            : $this->validatedLegalJurisdictions(explode(',', $stored));
+    }
+
+    /**
+     * Infer the default from the factual server location. This is used only
+     * in automatic mode and never overrides an administrator's manual choice.
+     *
+     * @return list<string>
+     */
+    private function inferredLegalJurisdictions(): array
     {
         $country = $this->canonicalCountryToken($this->hostingCountry());
+        $jurisdictions = [];
 
-        if ($country === '') {
-            return self::PRIVACY_LAW_OTHER;
+        if ($this->isEuEeaCountry($country)) {
+            $jurisdictions[] = self::LEGAL_JURISDICTION_EU_EEA;
         }
 
         if ($this->isGermany($country)) {
-            return self::PRIVACY_LAW_GERMANY;
+            $jurisdictions[] = self::LEGAL_JURISDICTION_GERMANY;
+        } elseif ($this->isAustria($country)) {
+            $jurisdictions[] = self::LEGAL_JURISDICTION_AUSTRIA;
+        } elseif ($this->isSwitzerland($country)) {
+            $jurisdictions[] = self::LEGAL_JURISDICTION_SWITZERLAND;
         }
 
-        return $this->isEuPrivacyCountry($country)
-            ? self::PRIVACY_LAW_EU
-            : self::PRIVACY_LAW_OTHER;
+        return $jurisdictions;
     }
 
-    private function isEuPrivacyCountry(string $country): bool
+    /**
+     * @return list<string>
+     */
+    private function selectedLegalJurisdictions(): array
+    {
+        return $this->usesLegalJurisdictionOverride()
+            ? $this->configuredLegalJurisdictions()
+            : $this->inferredLegalJurisdictions();
+    }
+
+    /**
+     * Preserve an earlier manual choice in the form while automatic mode is
+     * active. On first use, preselect the jurisdictions inferred from the
+     * server location so switching to manual starts with the current result.
+     *
+     * @return list<string>
+     */
+    private function legalJurisdictionsForSettings(): array
+    {
+        $configured = $this->configuredLegalJurisdictions();
+
+        if ($this->usesLegalJurisdictionOverride() || $configured !== []) {
+            return $configured;
+        }
+
+        return $this->inferredLegalJurisdictions();
+    }
+
+    private function hasLegalJurisdiction(string $jurisdiction): bool
+    {
+        return in_array($jurisdiction, $this->selectedLegalJurisdictions(), true);
+    }
+
+    private function usesEuPrivacyLaw(): bool
+    {
+        return $this->hasLegalJurisdiction(self::LEGAL_JURISDICTION_EU_EEA);
+    }
+
+    private function usesGermanPrivacyLaw(): bool
+    {
+        return $this->hasLegalJurisdiction(self::LEGAL_JURISDICTION_GERMANY);
+    }
+
+    private function isEuEeaCountry(string $country): bool
     {
         $country = $this->canonicalCountryToken($country);
 
@@ -2616,27 +2758,26 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         return $this->canonicalCountryToken($country) === 'switzerland';
     }
 
-    private function legalNoticeLawReference(): string
+    /**
+     * @return list<string>
+     */
+    private function legalNoticeLawReferences(): array
     {
-        $country = $this->canonicalCountryToken($this->hostingCountry());
+        $references = [];
 
-        if ($country === '') {
-            return '';
+        if ($this->hasLegalJurisdiction(self::LEGAL_JURISDICTION_GERMANY)) {
+            $references[] = I18N::translate('Information according to German law Section 5 %s', $this->legalReference('germany', 'ddg'));
         }
 
-        if ($this->isGermany($country)) {
-            return I18N::translate('Information according to German law Section 5 %s', $this->legalReference('germany', 'ddg'));
+        if ($this->hasLegalJurisdiction(self::LEGAL_JURISDICTION_AUSTRIA)) {
+            $references[] = I18N::translate('Information according to Austrian law Section 5 (1) %s', $this->legalReference('austria', 'ecg'));
         }
 
-        if ($this->isAustria($country)) {
-            return I18N::translate('Information according to Austrian law Section 5 (1) %s', $this->legalReference('austria', 'ecg'));
+        if ($this->hasLegalJurisdiction(self::LEGAL_JURISDICTION_SWITZERLAND)) {
+            $references[] = I18N::translate('Information according to Swiss law Article 3 paragraph 1 letter s %s', $this->legalReference('switzerland', 'uwg'));
         }
 
-        if ($this->isSwitzerland($country)) {
-            return I18N::translate('Information according to Swiss law Article 3 paragraph 1 letter s %s', $this->legalReference('switzerland', 'uwg'));
-        }
-
-        return '';
+        return $references;
     }
 
     private function legalReference(string $region, string $key): string
@@ -2742,12 +2883,10 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $order = $this->completeChapterOrder($this->storedChapterOrder());
 
         $parameters = LegalNoticeSupport::getChapterParameters();
-        $privacyLawRegion = $this->privacyLawRegion();
         $chapterTexts = LegalNoticeSupport::getChapterContent(
             LegalNoticeSupport::getHostName($request),
-            I18N::translate($this->hostingCountry()),
-            $privacyLawRegion !== self::PRIVACY_LAW_OTHER,
-            $privacyLawRegion === self::PRIVACY_LAW_GERMANY
+            $this->usesEuPrivacyLaw(),
+            $this->usesGermanPrivacyLaw()
         );
 
         $chaptersList = [];

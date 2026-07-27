@@ -54,9 +54,8 @@ use Illuminate\Support\Collection;
  * @var array<string,string>        $sectionViewByChapterKey partial view names keyed by chapter key
  * @var bool                        $showDataProtection     option whether to show the data protection chapter
  * @var bool                        $showLegalRegulations   option whether to show the legal regulations chapter
- * @var string                      $privacyLawRegion       privacy law region inferred from the configured hosting country
  * @var bool                        $useGermanPrivacyLaw    whether German privacy law references should be shown
- * @var bool                        $useEuPrivacyLaw  whether EU privacy law references should be shown
+ * @var bool                        $useEuPrivacyLaw        whether EU/EEA privacy law references should be shown
  * @var string                      $supervisoryAuthorityName name of the competent supervisory authority
  * @var string                      $supervisoryAuthorityUrl URL of the competent supervisory authority
  * @var bool                        $registeredUsersAreRelatives whether registered users are relatives or relatives by marriage
@@ -82,6 +81,7 @@ use Illuminate\Support\Collection;
  * @var bool                        $https                  host URL starts with https
  * @var string                      $hostingDomain          domain name of host
  * @var string                      $hostingCountry         country where the host is located (in English)
+ * @var list<string>                $legalNoticeLawReferences national legal-notice references that apply
  * @var string                      $mediaStateTreatyReference German media treaty reference
  * @var string                      $federalDataProtectionActReference German federal data protection act reference
  * @var string                      $telecommunicationDigitalServicesDataProtectionActReference German telecommunications digital services data protection act reference
