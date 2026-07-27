@@ -1740,24 +1740,24 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         }
 
         $service['names'] = $this->uniqueNonEmptyStrings([
-            ...($service['names'] ?? []),
+            $service['names'] ?? [],
             (string) ($service['name'] ?? ''),
         ]);
         $service['urls'] = $this->uniqueNonEmptyStrings([
-            ...($service['urls'] ?? []),
+            $service['urls'] ?? [],
             $originalUrl,
             (string) ($service['url'] ?? ''),
         ]);
         $service['countries'] = $this->uniqueNonEmptyStrings([
-            ...($service['countries'] ?? []),
+            $service['countries'] ?? [],
             (string) ($service['country'] ?? ''),
         ]);
         $service['privacy_urls'] = $this->uniqueNonEmptyStrings([
-            ...($service['privacy_urls'] ?? []),
+            $service['privacy_urls'] ?? [],
             (string) ($service['privacy_url'] ?? ''),
         ]);
         $service['descriptions'] = $this->uniqueNonEmptyStrings([
-            ...($service['descriptions'] ?? []),
+            $service['descriptions'] ?? [],
             (string) ($service['description'] ?? ''),
         ]);
         $service['data'] = $this->uniqueNonEmptyStrings($service['data'] ?? []);
@@ -1792,14 +1792,14 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     {
         foreach (['names', 'urls', 'countries', 'privacy_urls', 'descriptions', 'data'] as $field) {
             $left[$field] = $this->uniqueNonEmptyStrings([
-                ...($left[$field] ?? []),
-                ...($right[$field] ?? []),
+                $left[$field] ?? [],
+                $right[$field] ?? [],
             ]);
         }
 
         $left['usages'] = $this->uniqueThirdPartyServiceUsages([
-            ...($left['usages'] ?? []),
-            ...($right['usages'] ?? []),
+            $left['usages'] ?? [],
+            $right['usages'] ?? [],
         ]);
 
         $leftGroup = trim((string) ($left['group'] ?? ''));
@@ -1814,15 +1814,32 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * @param array<int,mixed> $values
+     * @param mixed $values
      *
      * @return list<string>
      */
-    private function uniqueNonEmptyStrings(array $values): array
+    private function uniqueNonEmptyStrings(mixed $values): array
     {
+        if (!is_array($values)) {
+            $values = [$values];
+        }
+
         $unique = [];
 
         foreach ($values as $value) {
+            if (is_array($value)) {
+                foreach ($this->uniqueNonEmptyStrings($value) as $nestedValue) {
+                    if (!in_array($nestedValue, $unique, true)) {
+                        $unique[] = $nestedValue;
+                    }
+                }
+                continue;
+            }
+
+            if (!is_scalar($value) && !$value instanceof \Stringable) {
+                continue;
+            }
+
             $value = trim((string) $value);
             if ($value !== '' && !in_array($value, $unique, true)) {
                 $unique[] = $value;
@@ -1833,17 +1850,36 @@ class LegalNoticeFooterModule extends PrivacyPolicy
     }
 
     /**
-     * @param array<int,mixed> $usages
+     * @param mixed $usages
      *
      * @return list<array{module_name:string,module_title:string,description:string,data:list<string>}>
      */
-    private function uniqueThirdPartyServiceUsages(array $usages): array
+    private function uniqueThirdPartyServiceUsages(mixed $usages): array
     {
+        if (!is_array($usages)) {
+            return [];
+        }
+
+        if (!array_is_list($usages)) {
+            $usages = [$usages];
+        }
+
         $unique = [];
         $seen = [];
 
         foreach ($usages as $usage) {
             if (!is_array($usage)) {
+                continue;
+            }
+
+            if (array_is_list($usage)) {
+                foreach ($this->uniqueThirdPartyServiceUsages($usage) as $nestedUsage) {
+                    $key = json_encode($nestedUsage);
+                    if ($key !== false && !isset($seen[$key])) {
+                        $seen[$key] = true;
+                        $unique[] = $nestedUsage;
+                    }
+                }
                 continue;
             }
 
@@ -1968,7 +2004,18 @@ class LegalNoticeFooterModule extends PrivacyPolicy
                 continue;
             }
 
-            foreach ($moduleNotices['third_party_services'] ?? [] as $service) {
+            $thirdPartyServices = $moduleNotices['third_party_services'] ?? [];
+            if (is_array($thirdPartyServices)
+                && !array_is_list($thirdPartyServices)
+                && (array_key_exists('name', $thirdPartyServices) || array_key_exists('url', $thirdPartyServices))) {
+                $thirdPartyServices = [$thirdPartyServices];
+            }
+
+            if (!is_array($thirdPartyServices)) {
+                $thirdPartyServices = [];
+            }
+
+            foreach ($thirdPartyServices as $service) {
                 if (is_array($service)) {
                     $normalized = $this->normalizedThirdPartyService(
                         $service,
@@ -1982,12 +2029,8 @@ class LegalNoticeFooterModule extends PrivacyPolicy
                 }
             }
 
-            foreach ($moduleNotices['security_measures'] ?? [] as $measure) {
-                $measure = trim((string) $measure);
-
-                if ($measure !== '') {
-                    $notices['security_measures'][] = $measure;
-                }
+            foreach ($this->uniqueNonEmptyStrings($moduleNotices['security_measures'] ?? []) as $measure) {
+                $notices['security_measures'][] = $measure;
             }
         }
 
@@ -2032,14 +2075,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             return null;
         }
 
-        $data = [];
-        foreach ($service['data'] ?? [] as $dataCategory) {
-            $dataCategory = trim((string) $dataCategory);
-
-            if ($dataCategory !== '') {
-                $data[] = $dataCategory;
-            }
-        }
+        $data = $this->uniqueNonEmptyStrings($service['data'] ?? []);
 
         return [
             'service_id' => trim((string) ($service['service_id'] ?? '')),

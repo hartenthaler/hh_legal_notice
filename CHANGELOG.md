@@ -3,6 +3,7 @@
 ## Next release
 
 * Updated Dutch translations; thanks to TheDutchJewel.
+* Fixed a runtime error when another module supplies a single data category, security measure, or third-party service instead of a list in `privacyNotices()`.
 
 ## 2.2.6.9 - 2026-07-15
 
