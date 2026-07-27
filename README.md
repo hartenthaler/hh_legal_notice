@@ -85,13 +85,17 @@ The webtrees admin can choose if the following additional parts should be shown
 
 ### Privacy Policy
 
-The administrator can also configure the server location, hosting provider, supervisory authority,
-third-party services, and whether registered users are relatives or relatives by marriage.
+The administrator can also configure the server location, the applicable legal jurisdictions, hosting provider,
+supervisory authority, third-party services, and whether registered users are relatives or relatives by marriage.
+Several legal jurisdictions can apply simultaneously. By default, the module infers them from the configured server
+location; the administrator can override this with an explicit multi-selection. A warning then remains visible in
+the settings. Server location and applicable law remain separate concepts. See
+[`docs/legal-jurisdictions.md`](docs/legal-jurisdictions.md) for the supported jurisdictions and migration behavior.
 
-The generated privacy policy can include, depending on the configuration and server location:
+The generated privacy policy can include, depending on the configuration and applicable legal jurisdictions:
 * a named competent supervisory authority with URL
-* references to German, European, or no specific regional data-protection law
-* legal bases for processing under the GDPR where EU law applies
+* independent references to EU/EEA data-protection law and to supported national law in Germany, Austria, or Switzerland
+* legal bases for processing under the GDPR where EU/EEA law is selected
 * configurable research purpose wording for family research, one-name studies, local family books, farmstead research, thematic research, migration research, community research, or webtrees and genealogical test data
 * when the optional `hh-family-trees-list` module is enabled and exposes its public research-purpose API, the settings page shows the configured purposes grouped by frequency together with the corresponding family-tree names
 * data protection contact information referring to the provider named in the legal notice
@@ -101,7 +105,7 @@ The generated privacy policy can include, depending on the configuration and ser
 * information about the long-term preservation of genealogical data as historically relevant material
 * information about special categories of genealogical personal data and their protection period after death
 * optional consumer dispute resolution notice for websites based on German law
-* additional third-party services can be configured by the administrator using service name, URL, and optional country of service provision. If the website is subject to EU data-protection law and a configured service is provided from outside the European Union, the generated privacy policy can include a third-country-transfer notice.
+* additional third-party services can be configured by the administrator using service name, URL, and optional country of service provision. If EU/EEA data-protection law is selected and a configured service is provided from outside the European Economic Area, the generated privacy policy can include a third-country-transfer notice.
 * the privacy-policy page can also include information from other installed modules. Compatible modules can expose a public `privacyNotices(): array` method with third-party services and security measures. The complete contract for supplying modules, field definitions, translation guidance, and a PHP example are documented in [`docs/privacy-notices-contract.md`](docs/privacy-notices-contract.md). This is used, for example, by `hh_source_transcription` for external transcription providers such as Transkribus or Discourse. Active webtrees map providers and map links can also be detected and listed as third-party services.
 
 

@@ -59,6 +59,10 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
  * @var string                  $privacyPolicyManualDate manually configured privacy policy reference date
  *
  * @var string                  $hostingCountry         country of the webtrees server location
+ * @var string                  $legalJurisdictionMode  automatic inference or manual selection
+ * @var array<string,string>    $availableLegalJurisdictions supported legal jurisdictions and their labels
+ * @var list<string>            $inferredLegalJurisdictions legal jurisdictions inferred from the server location
+ * @var list<string>            $selectedLegalJurisdictions jurisdictions selected in the form
  * @var string                  $hostingCompanyName     hosting service company name
  * @var string                  $hostingCompanyUrl      hosting service link
  * @var string                  $hostingPrivacyNotice   hosting service link to privacy notice
@@ -653,7 +657,70 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
                 <?= I18N::translate('Country of the webtrees server location') ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
-                <input class="form-control" id="hostingCountry" name="hostingCountry" type="text" value="<?= $hostingCountry ?>">
+                <input class="form-control" id="hostingCountry" name="hostingCountry" type="text" value="<?= e($hostingCountry) ?>">
+            </div>
+        </div>
+
+        <h4><?= I18N::translate('Applicable legal jurisdictions') ?></h4>
+
+        <div class="row">
+            <label class="col-sm-3 col-form-label wt-page-options-label">
+                <?= I18N::translate('How should the applicable legal jurisdictions be determined?') ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <?= view('components/radios-inline', [
+                    'id' => 'legalJurisdictionMode',
+                    'name' => 'legalJurisdictionMode',
+                    'options' => [
+                        'automatic' => I18N::translate('Infer from the server location'),
+                        'manual' => I18N::translate('Select manually'),
+                    ],
+                    'selected' => $legalJurisdictionMode,
+                ]) ?>
+                <p class="small text-muted">
+                    <?= I18N::translate('The server location remains factual hosting information. It is used as the default for legal jurisdictions only while automatic inference is selected.') ?>
+                </p>
+            </div>
+        </div>
+
+        <div class="hh-legal-notice-input-setting <?= $legalJurisdictionMode === 'automatic' ? '' : 'd-none' ?>" data-dependent-on-input="legalJurisdictionMode" data-dependent-value="automatic">
+            <div class="row">
+                <div class="col-sm-3 wt-page-options-label">
+                    <?= I18N::translate('Automatically inferred legal jurisdictions') ?>
+                </div>
+                <div class="col-sm-9 wt-page-options-value">
+                    <?php if ($inferredLegalJurisdictions === []) : ?>
+                        <p><?= I18N::translate('No module-specific legal jurisdiction can be inferred from the configured server location.') ?></p>
+                    <?php else : ?>
+                        <ul class="mb-0">
+                            <?php foreach ($inferredLegalJurisdictions as $jurisdiction) : ?>
+                                <li><?= e($availableLegalJurisdictions[$jurisdiction]) ?></li>
+                            <?php endforeach ?>
+                        </ul>
+                    <?php endif ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="hh-legal-notice-input-setting <?= $legalJurisdictionMode === 'manual' ? '' : 'd-none' ?>" data-dependent-on-input="legalJurisdictionMode" data-dependent-value="manual">
+            <div class="alert alert-warning" role="alert">
+                <?= I18N::translate('The manual selection overrides the legal jurisdictions inferred from the server location. Verify that every legal jurisdiction applicable to this website is selected.') ?>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 wt-page-options-label">
+                    <?= I18N::translate('Legal jurisdictions') ?>
+                </div>
+                <div class="col-sm-9 wt-page-options-value">
+                    <?php foreach ($availableLegalJurisdictions as $jurisdiction => $label) : ?>
+                        <div class="form-check">
+                            <input class="form-check-input" id="legalJurisdiction-<?= e($jurisdiction) ?>" name="legalJurisdictions[]" type="checkbox" value="<?= e($jurisdiction) ?>" <?= in_array($jurisdiction, $selectedLegalJurisdictions, true) ? 'checked' : '' ?>>
+                            <label class="form-check-label" for="legalJurisdiction-<?= e($jurisdiction) ?>"><?= e($label) ?></label>
+                        </div>
+                    <?php endforeach ?>
+                    <p class="small text-muted">
+                        <?= I18N::translate('Several jurisdictions may apply at the same time, for example European Union law and German national law.') ?>
+                    </p>
+                </div>
             </div>
         </div>
 

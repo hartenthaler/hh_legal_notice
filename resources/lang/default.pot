@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Legal Notice for webtrees 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-18 18:10+0200\n"
+"POT-Creation-Date: 2026-07-27 09:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -266,6 +266,62 @@ msgstr ""
 #: src/LegalNoticeSupport.php:147
 msgctxt "heading"
 msgid "Purpose"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:2582
+msgid "European Union / European Economic Area (GDPR)"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:2583
+msgid "Germany (national law)"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:2584
+msgid "Austria (national law)"
+msgstr ""
+
+#: LegalNoticeFooterModule.php:2585
+msgid "Switzerland (national law)"
+msgstr ""
+
+#: resources/views/settings.phtml:664
+msgid "Applicable legal jurisdictions"
+msgstr ""
+
+#: resources/views/settings.phtml:668
+msgid "How should the applicable legal jurisdictions be determined?"
+msgstr ""
+
+#: resources/views/settings.phtml:675
+msgid "Infer from the server location"
+msgstr ""
+
+#: resources/views/settings.phtml:676
+msgid "Select manually"
+msgstr ""
+
+#: resources/views/settings.phtml:681
+msgid "The server location remains factual hosting information. It is used as the default for legal jurisdictions only while automatic inference is selected."
+msgstr ""
+
+#: resources/views/settings.phtml:689
+msgid "Automatically inferred legal jurisdictions"
+msgstr ""
+
+#: resources/views/settings.phtml:693
+msgid "No module-specific legal jurisdiction can be inferred from the configured server location."
+msgstr ""
+
+#: resources/views/settings.phtml:707
+msgid "The manual selection overrides the legal jurisdictions inferred from the server location. Verify that every legal jurisdiction applicable to this website is selected."
+msgstr ""
+
+#: resources/views/settings.phtml:711
+msgid "Legal jurisdictions"
+msgstr ""
+
+#: resources/views/settings.phtml:721
+msgid "Several jurisdictions may apply at the same time, for example European Union law and German national law."
 msgstr ""
 
 #: src/LegalNoticeSupport.php:148
@@ -1487,7 +1543,7 @@ msgid "Data transfer to third countries"
 msgstr ""
 
 #: resources/views/page/sections/third-party-services.phtml:173
-msgid "Some third-party services are provided from countries outside the European Union."
+msgid "Some third-party services are provided from countries outside the European Economic Area."
 msgstr ""
 
 #: resources/views/page/sections/third-party-services.phtml:174

@@ -5,9 +5,9 @@ use Fisharebest\Webtrees\I18N;
 ?>
 
     <h2><?= e($legalNoticeTitle) ?></h2>
-    <?php if ($legalNoticeLawReference !== ''): ?>
+    <?php foreach ($legalNoticeLawReferences as $legalNoticeLawReference): ?>
         <p><?= e($legalNoticeLawReference) ?></p>
-    <?php endif ?>
+    <?php endforeach ?>
 
     <h4 class="hh-legal-notice-page-heading"><?= e($legalNoticeHead1) ?></h4>
 
