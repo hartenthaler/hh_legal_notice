@@ -67,6 +67,7 @@ use Fisharebest\Webtrees\Validator;
 use Fisharebest\Webtrees\View;
 use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 use Illuminate\Database\Capsule\Manager as DB;
+use Illuminate\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
@@ -1635,6 +1636,19 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingStartDate'          => $this->hostingStartDate(),
             'hostingEndDate'            => $this->hostingEndDate(),
         ]);
+    }
+
+    /**
+     * Find active tracking modules without relying on the visibility of the
+     * corresponding method in the webtrees Core privacy-policy module.
+     *
+     * @return Collection<int,ModuleAnalyticsInterface>
+     */
+    protected function analyticsModules(Tree $tree, UserInterface $user): Collection
+    {
+        return $this->moduleService
+            ->findByComponent(ModuleAnalyticsInterface::class, $tree, $user)
+            ->filter(static fn (ModuleAnalyticsInterface $module): bool => $module->isTracker());
     }
 
     /**

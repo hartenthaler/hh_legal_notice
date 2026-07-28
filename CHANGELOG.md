@@ -8,6 +8,7 @@
 * Decoupled regional legal wording, national legal-notice references, and EU/EEA third-country-transfer checks from the factual server location.
 * Added clearer privacy-policy information about genealogical data sources, GEDCOM as a machine-readable export format, retention, personal data breach notifications, and configured additional protection for minors.
 * Documented which statements and jurisdiction groupings from the rewritten webtrees Core privacy policy are intentionally not adopted.
+* Added a module-owned analytics lookup to remain compatible when the inherited Core helper becomes private.
 
 ## 2.2.6.9 - 2026-07-15
 
