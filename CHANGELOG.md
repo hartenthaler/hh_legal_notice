@@ -2,6 +2,7 @@
 
 ## Next release
 
+* Further updated Dutch translations; thanks to TheDutchJewel.
 * Updated Dutch translations; thanks to TheDutchJewel.
 * Fixed a runtime error when another module supplies a single data category, security measure, or third-party service instead of a list in `privacyNotices()`.
 * Added an administrator-controlled multi-select for applicable legal jurisdictions, with the server location retained as the automatic default and a warning whenever that default is overridden.
