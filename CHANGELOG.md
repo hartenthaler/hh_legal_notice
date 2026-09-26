@@ -2,6 +2,7 @@
 
 ## Next release
 
+* Added compatibility with webtrees 2.2 and 2.3 (#158, #159), including the refactored `UserService`, the 2.3 translation stream API, and the removal of the jQuery dependency from the settings page.
 * Updated Dutch translations; thanks to TheDutchJewel.
 * Fixed a runtime error when another module supplies a single data category, security measure, or third-party service instead of a list in `privacyNotices()`.
 * Added an administrator-controlled multi-select for applicable legal jurisdictions, with the server location retained as the automatic default and a warning whenever that default is overridden.

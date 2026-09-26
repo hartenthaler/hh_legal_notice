@@ -930,23 +930,38 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
 
 <?php View::push('javascript') ?>
     <script>
-        $('.wt-table-menu td.move').click(function () {
-            var row = $(this).closest('tr');
+        document.querySelectorAll('.wt-table-menu td.move').forEach(function (moveCell) {
+            moveCell.addEventListener('click', function (event) {
+                event.preventDefault();
 
-            if ($(this).hasClass('up')) {
-                row.prev().before(row);
-            } else {
-                row.next().after(row);
-            }
+                var row = moveCell.closest('tr');
+                if (!row) {
+                    return;
+                }
 
-            return false;
+                if (moveCell.classList.contains('up')) {
+                    if (row.previousElementSibling) {
+                        row.previousElementSibling.before(row);
+                    }
+                } else if (row.nextElementSibling) {
+                    row.nextElementSibling.after(row);
+                }
+            });
         });
 
         function hhLegalNoticeParentIsVisible(chapterKey) {
-            var checkbox = $('[data-controls-chapters="' + chapterKey + '"]');
+            var checkbox = Array.from(document.querySelectorAll('[data-controls-chapters]'))
+                .find(function (element) {
+                    return element.getAttribute('data-controls-chapters') === chapterKey;
+                });
+
+            if (!checkbox) {
+                return false;
+            }
+
             var parentGroup = checkbox.closest('.hh-legal-notice-dependent-chapters');
 
-            return checkbox.prop('checked') && (parentGroup.length === 0 || !parentGroup.hasClass('d-none'));
+            return checkbox.checked && (!parentGroup || !parentGroup.classList.contains('d-none'));
         }
 
         function hhLegalNoticeAnyParentIsVisible(chapterKeys) {
@@ -958,31 +973,42 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
         }
 
         function hhLegalNoticeUpdateDependentChapters() {
-            $('.hh-legal-notice-dependent-chapters').each(function () {
-                $(this).toggleClass('d-none', !hhLegalNoticeParentIsVisible($(this).data('parent-key')));
+            document.querySelectorAll('.hh-legal-notice-dependent-chapters').forEach(function (element) {
+                element.classList.toggle('d-none', !hhLegalNoticeParentIsVisible(element.getAttribute('data-parent-key')));
             });
 
-            $('.hh-legal-notice-section-setting').each(function () {
-                var dependentOnChapter = $(this).attr('data-dependent-on-chapter');
-                var dependentOnAnyChapter = $(this).attr('data-dependent-on-any-chapter');
+            document.querySelectorAll('.hh-legal-notice-section-setting').forEach(function (element) {
+                var dependentOnChapter = element.getAttribute('data-dependent-on-chapter');
+                var dependentOnAnyChapter = element.getAttribute('data-dependent-on-any-chapter');
                 var hidden = !hhLegalNoticeAnyParentIsVisible(dependentOnAnyChapter)
                     || (dependentOnChapter && !hhLegalNoticeParentIsVisible(dependentOnChapter));
 
-                $(this).toggleClass('d-none', hidden);
+                element.classList.toggle('d-none', hidden);
             });
 
-            $('.hh-legal-notice-input-setting').each(function () {
-                var inputName = $(this).attr('data-dependent-on-input');
-                var expectedValue = $(this).attr('data-dependent-value');
-                var checkedValue = $('[name="' + inputName + '"]:checked').val();
+            document.querySelectorAll('.hh-legal-notice-input-setting').forEach(function (element) {
+                var inputName = element.getAttribute('data-dependent-on-input');
+                var expectedValue = element.getAttribute('data-dependent-value');
+                var checkedInput = Array.from(document.querySelectorAll('[name]'))
+                    .find(function (input) {
+                        return input.name === inputName && input.checked;
+                    });
+                var checkedValue = checkedInput ? checkedInput.value : null;
 
-                $(this).toggleClass('d-none', checkedValue !== expectedValue);
+                element.classList.toggle('d-none', checkedValue !== expectedValue);
             });
         }
 
-        $('[data-controls-chapters]').on('change', hhLegalNoticeUpdateDependentChapters);
-        $('[data-dependent-on-input]').each(function () {
-            $('[name="' + $(this).attr('data-dependent-on-input') + '"]').on('change', hhLegalNoticeUpdateDependentChapters);
+        document.querySelectorAll('[data-controls-chapters]').forEach(function (element) {
+            element.addEventListener('change', hhLegalNoticeUpdateDependentChapters);
+        });
+        document.querySelectorAll('[data-dependent-on-input]').forEach(function (dependentElement) {
+            var inputName = dependentElement.getAttribute('data-dependent-on-input');
+            document.querySelectorAll('[name]').forEach(function (input) {
+                if (input.name === inputName) {
+                    input.addEventListener('change', hhLegalNoticeUpdateDependentChapters);
+                }
+            });
         });
         hhLegalNoticeUpdateDependentChapters();
     </script>
