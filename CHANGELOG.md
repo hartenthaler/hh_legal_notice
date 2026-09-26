@@ -3,6 +3,7 @@
 ## Next release
 
 * Added compatibility with webtrees 2.2 and 2.3 (#158, #159), including the refactored `UserService`, the 2.3 translation stream API, and the removal of the jQuery dependency from the settings page.
+* Removed the obsolete Google Charts privacy-service option and notice when running on webtrees 2.3 (#155); the setting remains available for webtrees 2.2.
 * Further updated Dutch translations; thanks to TheDutchJewel.
 * Updated Dutch translations; thanks to TheDutchJewel.
 * Fixed a runtime error when another module supplies a single data category, security measure, or third-party service instead of a list in `privacyNotices()`.
