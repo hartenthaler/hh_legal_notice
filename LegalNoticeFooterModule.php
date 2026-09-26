@@ -46,6 +46,7 @@ namespace Hartenthaler\Webtrees\Module\LegalNotice;
 use Fisharebest\Webtrees\Contracts\UserInterface;
 use Fisharebest\Webtrees\FlashMessages;
 use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\Module\ModuleFooterInterface;
@@ -53,7 +54,6 @@ use Fisharebest\Webtrees\Module\ModuleFooterTrait;
 use Fisharebest\Webtrees\Module\ModuleAnalyticsInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigTrait;
-use Fisharebest\Webtrees\Module\PrivacyPolicy;
 use Fisharebest\Webtrees\Module\ModuleMapLinkInterface;
 use Fisharebest\Webtrees\Module\ModuleMapProviderInterface;
 use Fisharebest\Webtrees\Registry;
@@ -70,7 +70,6 @@ use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use ReflectionMethod;
 use Throwable;
 
 use function class_exists;
@@ -100,7 +99,7 @@ use function fclose;
 use function fopen;
 use function view;
 
-class LegalNoticeFooterModule extends PrivacyPolicy
+class LegalNoticeFooterModule extends AbstractModule
                               implements ModuleCustomInterface, ModuleFooterInterface, ModuleConfigInterface {
     use ModuleCustomTrait;
     use ModuleFooterTrait;
@@ -426,20 +425,11 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      * constructor
      */
     public function __construct() {
-        // Resolve services through the core container. webtrees 2.3 added a
-        // required ClockInterface argument to UserService, and changed the
-        // PrivacyPolicy constructor from (ModuleService, UserService) to
-        // (ModuleService). The container and this small argument adapter
-        // keep one module version compatible with both core versions.
+        // Resolve services through the core container.  The module owns its
+        // privacy-policy implementation and therefore does not depend on the
+        // constructor or private implementation details of PrivacyPolicy.
         $this->moduleService = Registry::container()->get(ModuleService::class);
         $this->userService   = Registry::container()->get(UserService::class);
-
-        $arguments = [$this->moduleService];
-        if ((new ReflectionMethod(PrivacyPolicy::class, '__construct'))->getNumberOfParameters() > 1) {
-            $arguments[] = $this->userService;
-        }
-
-        parent::__construct(...$arguments);
     }
 
     /**
