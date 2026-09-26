@@ -64,6 +64,7 @@ use Fisharebest\Webtrees\Site;
 use Fisharebest\Webtrees\Tree;
 use Fisharebest\Webtrees\Validator;
 use Fisharebest\Webtrees\View;
+use Fisharebest\Webtrees\Webtrees;
 use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Support\Collection;
@@ -582,7 +583,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      */
     private function listOfPreferences(): array
     {
-        return [
+        $preferences = [
             'showCopyRight',
             'copyRightStartYear',
             'copyRightName',
@@ -631,9 +632,14 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingEndDate',
             'privacyPolicyDateSource',
             'privacyPolicyManualDate',
-            'showGoogleCharts',
             'additionalThirdPartyServices',
         ];
+
+        if ($this->supportsLegacyGoogleCharts()) {
+            $preferences[] = 'showGoogleCharts';
+        }
+
+        return $preferences;
     }
 
     /**
@@ -697,7 +703,7 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             $response['responsibleSex'] = 'U';
         }
 
-        if ($response['showGoogleCharts'] === '') {
+        if ($this->supportsLegacyGoogleCharts() && $response['showGoogleCharts'] === '') {
             $response['showGoogleCharts'] = '1';
         }
 
@@ -2025,7 +2031,18 @@ class LegalNoticeFooterModule extends PrivacyPolicy
 
     private function showGoogleCharts(): bool
     {
-        return $this->getPreference('showGoogleCharts', '1') !== '0' && $this->isModuleEnabled('statistics_chart');
+        return $this->supportsLegacyGoogleCharts()
+            && $this->getPreference('showGoogleCharts', '1') !== '0'
+            && $this->isModuleEnabled('statistics_chart');
+    }
+
+    /**
+     * Google Charts was used by the webtrees 2.2 statistics module. The
+     * webtrees 2.3 core no longer loads that external service.
+     */
+    private function supportsLegacyGoogleCharts(): bool
+    {
+        return preg_match('/^2\.2\./', Webtrees::VERSION) === 1;
     }
 
     private function isModuleEnabled(string $moduleName): bool

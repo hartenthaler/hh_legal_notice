@@ -850,25 +850,27 @@ use Hartenthaler\Webtrees\Module\LegalNotice\LegalNoticeSupport;
             <h4><?= I18N::translate('External services') ?></h4>
 
             <div class="row">
-                <fieldset class="form-group mb-3">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-3 wt-page-options-label">
-                            <?= I18N::translate('Should Google Charts be mentioned as an external service?') ?>
-                        </legend>
-                        <div class="col-sm-9 wt-page-options-value">
-                            <?= view('components/radios-inline', [
-                                'id' => 'showGoogleCharts',
-                                'name' => 'showGoogleCharts',
-                                'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
-                                'selected' => (int)$showGoogleCharts,
-                            ]) ?>
-                            <p class="small text-muted">
-                                <?= I18N::translate('webtrees statistics pages can load Google Charts from %s.', 'https://www.gstatic.com/charts/loader.js') ?>
-                                <?= I18N::translate('Google Charts is only listed when this option is enabled and the webtrees statistics chart module is enabled.') ?>
-                            </p>
+                <?php if (isset($showGoogleCharts)) : ?>
+                    <fieldset class="form-group mb-3">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 wt-page-options-label">
+                                <?= I18N::translate('Should Google Charts be mentioned as an external service?') ?>
+                            </legend>
+                            <div class="col-sm-9 wt-page-options-value">
+                                <?= view('components/radios-inline', [
+                                    'id' => 'showGoogleCharts',
+                                    'name' => 'showGoogleCharts',
+                                    'options' => [MoreI18N::xlate('no'), MoreI18N::xlate('yes')],
+                                    'selected' => (int)$showGoogleCharts,
+                                ]) ?>
+                                <p class="small text-muted">
+                                    <?= I18N::translate('webtrees statistics pages can load Google Charts from %s.', 'https://www.gstatic.com/charts/loader.js') ?>
+                                    <?= I18N::translate('Google Charts is only listed when this option is enabled and the webtrees statistics chart module is enabled.') ?>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </fieldset>
+                    </fieldset>
+                <?php endif ?>
 
                 <label class="col-sm-3 col-form-label wt-page-options-label" for="additionalThirdPartyServices">
                     <?= I18N::translate('Additional third-party services') ?>
