@@ -2,7 +2,7 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
-![webtrees major version](https://img.shields.io/badge/webtrees-v2.1.x-green) ![webtrees major version](https://img.shields.io/badge/webtrees-v2.2.x-green)
+![webtrees major version](https://img.shields.io/badge/webtrees-v2.2.x-green) ![webtrees major version](https://img.shields.io/badge/webtrees-v2.3.x-green)
 
 ![Latest Release](https://img.shields.io/github/v/release/hartenthaler/hh_legal_notice)
 ![Downloads](https://img.shields.io/github/downloads/hartenthaler/hh_legal_notice/total)
@@ -170,10 +170,10 @@ Screenshot of control panel details
 <a name="Requirements"></a>
 ## 📌 Requirements
 
-This module requires **webtrees** version 2.1 or 2.2.
+This module requires **webtrees** version 2.2 or 2.3.
 This module has the same requirements as [webtrees#system-requirements](https://github.com/fisharebest/webtrees#system-requirements).
 
-This module was tested with **webtrees** version 2.2.6.
+This module was tested with **webtrees** version 2.2.6 and the webtrees 2.3 development code.
 
 <a name="Installation"></a>
 ## 📥 Installation

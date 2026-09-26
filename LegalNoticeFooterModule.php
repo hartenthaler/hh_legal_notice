@@ -43,7 +43,6 @@ declare(strict_types=1);
 
 namespace Hartenthaler\Webtrees\Module\LegalNotice;
 
-use Fisharebest\Localization\Translation;
 use Fisharebest\Webtrees\Contracts\UserInterface;
 use Fisharebest\Webtrees\FlashMessages;
 use Fisharebest\Webtrees\I18N;
@@ -67,8 +66,10 @@ use Fisharebest\Webtrees\Validator;
 use Fisharebest\Webtrees\View;
 use Hartenthaler\Webtrees\Module\LegalNotice\Internationalization\MoreI18N;
 use Illuminate\Database\Capsule\Manager as DB;
+use Illuminate\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use ReflectionMethod;
 use Throwable;
 
 use function class_exists;
@@ -94,6 +95,8 @@ use function file_exists;
 use function assert;
 use function array_map;
 use function array_values;
+use function fclose;
+use function fopen;
 use function view;
 
 class LegalNoticeFooterModule extends PrivacyPolicy
@@ -422,10 +425,20 @@ class LegalNoticeFooterModule extends PrivacyPolicy
      * constructor
      */
     public function __construct() {
-        parent::__construct(
-            $this->moduleService = new ModuleService(),
-            $this->userService = new UserService()
-        );
+        // Resolve services through the core container. webtrees 2.3 added a
+        // required ClockInterface argument to UserService, and changed the
+        // PrivacyPolicy constructor from (ModuleService, UserService) to
+        // (ModuleService). The container and this small argument adapter
+        // keep one module version compatible with both core versions.
+        $this->moduleService = Registry::container()->get(ModuleService::class);
+        $this->userService   = Registry::container()->get(UserService::class);
+
+        $arguments = [$this->moduleService];
+        if ((new ReflectionMethod(PrivacyPolicy::class, '__construct'))->getNumberOfParameters() > 1) {
+            $arguments[] = $this->userService;
+        }
+
+        parent::__construct(...$arguments);
     }
 
     /**
@@ -521,11 +534,31 @@ class LegalNoticeFooterModule extends PrivacyPolicy
         $lang_dir = $this->resourcesFolder() . 'lang' . DIRECTORY_SEPARATOR;
         $file = $lang_dir . $language . '.mo';
 
-        if (file_exists($file)) {
-            return (new Translation($file))->asArray();
-        } else {
+        if (!file_exists($file)) {
             return [];
         }
+
+        // webtrees 2.3 moved the parser to its own namespace and exposes
+        // stream-based factory methods. webtrees 2.2 still uses the
+        // localization package and a filename constructor.
+        if (class_exists('Fisharebest\\Webtrees\\I18N\\Translation')) {
+            $stream = fopen($file, 'rb');
+            if ($stream === false) {
+                return [];
+            }
+
+            try {
+                return \Fisharebest\Webtrees\I18N\Translation::fromMoStream($stream)->toArray();
+            } finally {
+                fclose($stream);
+            }
+        }
+
+        if (class_exists('Fisharebest\\Localization\\Translation')) {
+            return (new \Fisharebest\Localization\Translation($file))->asArray();
+        }
+
+        return [];
     }
 
     /**
@@ -1635,6 +1668,19 @@ class LegalNoticeFooterModule extends PrivacyPolicy
             'hostingStartDate'          => $this->hostingStartDate(),
             'hostingEndDate'            => $this->hostingEndDate(),
         ]);
+    }
+
+    /**
+     * Find active tracking modules without relying on the visibility of the
+     * corresponding method in the webtrees Core privacy-policy module.
+     *
+     * @return Collection<int,ModuleAnalyticsInterface>
+     */
+    protected function analyticsModules(Tree $tree, UserInterface $user): Collection
+    {
+        return $this->moduleService
+            ->findByComponent(ModuleAnalyticsInterface::class, $tree, $user)
+            ->filter(static fn (ModuleAnalyticsInterface $module): bool => $module->isTracker());
     }
 
     /**
