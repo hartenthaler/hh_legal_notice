@@ -10,6 +10,7 @@
 * Made privacy-notice provider input tolerant of scalar values as well as the documented list format (#150).
 * Clarified in the privacy policy how the current registration agreement notice depends on the Core `SHOW_REGISTER_CAUTION` setting; the module does not claim to store an acceptance record (#143).
 * Updated Dutch translations; thanks to TheDutchJewel (#154, #157).
+* Corrected a Dutch source-string entry; thanks to TheDutchJewel (#167).
 
 ## 2.2.6.10 - 2026-09-26
 
