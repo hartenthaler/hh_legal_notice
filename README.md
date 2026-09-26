@@ -9,7 +9,7 @@
 
 This [webtrees](https://www.webtrees.net) module adds a footer link to a legal notice and privacy policy page.
 
-Current module version: **2.2.6.9**.
+Current module version: **2.2.6.10**.
 
 > [!IMPORTANT]
 > This module does not provide legal advice.
@@ -128,6 +128,17 @@ automated collection, scraping, data mining, AI-system use, technical measures a
 automated access, and copyright enforcement.
 
 <a name="WhatsNew"></a>
+## ✨ What's new in 2.2.6.10
+
+This release adds compatibility with webtrees 2.2 and 2.3. It also separates the module from the Core `PrivacyPolicy` implementation, so the module owns its privacy-policy and footer behavior.
+
+Further changes include:
+
+* the Google Charts privacy-service option is shown only where the corresponding webtrees Core version still uses Google Charts;
+* administrators can select the applicable legal jurisdictions independently of the physical server location;
+* privacy-notice integrations accept scalar values as well as the documented list format;
+* the privacy policy describes the current registration-agreement notice without claiming that webtrees stores a versioned acceptance record.
+
 ## ✨ What's new in 2.2.6.9
 
 This release improves third-party service notices and fixes the integration with `hh-family-trees-list`:
