@@ -2,6 +2,15 @@
 
 ## Next release
 
+* Added compatibility with webtrees 2.2 and 2.3 (#158, #159), including container-based `UserService` resolution, the 2.3 translation stream API, and removal of the jQuery dependency from the settings page.
+* Decoupled the module from the concrete Core `PrivacyPolicy` implementation by using `AbstractModule` and module-owned privacy-policy and footer behavior (#148).
+* Removed the obsolete Google Charts privacy-service option and notice when running on webtrees 2.3; the setting remains available for webtrees 2.2 (#155).
+* Added administrator-controlled selection of applicable legal jurisdictions, independent of the physical server location (#151).
+* Adopted clearer Core-compatible wording for genealogical data sources, GEDCOM exports, retention, breach notifications, and protection of minors (#152).
+* Made privacy-notice provider input tolerant of scalar values as well as the documented list format (#150).
+* Clarified in the privacy policy how the current registration agreement notice depends on the Core `SHOW_REGISTER_CAUTION` setting; the module does not claim to store an acceptance record (#143).
+* Updated Dutch translations; thanks to TheDutchJewel (#154, #157).
+
 ## 2.2.6.10 - 2026-09-26
 
 * Added compatibility with webtrees 2.2 and 2.3 (#158, #159), including container-based `UserService` resolution, the 2.3 translation stream API, and removal of the jQuery dependency from the settings page.
