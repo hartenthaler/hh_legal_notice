@@ -1,0 +1,18 @@
+{
+  "name": "hartenthaler/hh-legal-notice",
+  "description": "Adds a legal notice and privacy-policy page to webtrees.",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/hartenthaler/hh_legal_notice",
+  "support": {
+    "issues": "https://github.com/hartenthaler/hh_legal_notice/issues"
+  },
+  "extra": {
+    "webtrees-custom-module": {
+      "title": "Legal Notice and Privacy Policy",
+      "description": "Adds a footer link to a legal notice and privacy-policy page.",
+      "github-repo": "https://github.com/hartenthaler/hh_legal_notice",
+      "tag-prefix": "v",
+      "category": "footer"
+    }
+  }
+}
